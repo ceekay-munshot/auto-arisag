@@ -50,3 +50,4 @@ Optional columns:
 
 The dashboard only turns the registration lens on when at least two monthly points are available.
 # auto-arisag
+# auto-arisag
