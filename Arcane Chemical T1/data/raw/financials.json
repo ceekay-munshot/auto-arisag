@@ -1,0 +1,25 @@
+{
+  "currency": "INR",
+  "default_unit": "crore",
+  "metrics": [
+    {
+      "key": "revenue",
+      "label": "Revenue",
+      "unit": "crore",
+      "points": []
+    },
+    {
+      "key": "ebitda",
+      "label": "EBITDA",
+      "unit": "crore",
+      "points": []
+    },
+    {
+      "key": "pat",
+      "label": "PAT",
+      "unit": "crore",
+      "points": []
+    }
+  ]
+}
+

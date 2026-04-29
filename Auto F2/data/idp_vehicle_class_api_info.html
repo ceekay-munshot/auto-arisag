@@ -1,0 +1,476 @@
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+    
+  
+  
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+  
+    
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+<div  class="modal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>
+          CKAN Data API
+        </h3>
+      </div>
+      <div  class="modal-body">
+        <p><strong>Få tillgång till resursens data via ett webb-API med kraftfullt frågestöd.</strong>.
+        Further information in the <a href="https://docs.ckan.org/en/latest/maintaining/datastore.html#api-reference" target="_blank">main CKAN Data API and DataStore documentation</a>.</p>
+
+        Code examples:
+        
+          
+          <input class="btn-check" type="radio" name="lang-choice" id="lang-curl"
+            checked>
+          <label class="btn btn-secondary radio" for="lang-curl">
+            
+curl
+
+          </label>
+        
+          
+          <input class="btn-check" type="radio" name="lang-choice" id="lang-javascript"
+            >
+          <label class="btn btn-secondary radio" for="lang-javascript">
+            
+JavaScript
+
+          </label>
+        
+          
+          <input class="btn-check" type="radio" name="lang-choice" id="lang-powershell"
+            >
+          <label class="btn btn-secondary radio" for="lang-powershell">
+            
+PowerShell
+
+          </label>
+        
+          
+          <input class="btn-check" type="radio" name="lang-choice" id="lang-python"
+            >
+          <label class="btn btn-secondary radio" for="lang-python">
+            
+Python
+
+          </label>
+        
+          
+          <input class="btn-check" type="radio" name="lang-choice" id="lang-r"
+            >
+          <label class="btn btn-secondary radio" for="lang-r">
+            
+R
+
+          </label>
+        
+
+        <div class="accordion pt-2" id="accordion2">
+
+          
+            <div class="accordion-item">
+              <h2 class="accordion-heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-querying-post" aria-expanded="false" aria-controls="collapse-querying-post"> Frågar &raquo;</button>
+              </h2>
+              <div id="collapse-querying-post" class="accordion-collapse collapse show" aria-labelledby="collapse-querying-post" data-bs-parent="#accordion2">
+                <div class="accordion-body">
+                  <strong>Get 5 results containing "jones" in any field:</strong>
+                  
+                    
+<pre class="example-curl"><code class="language-bash"
+>curl https://ckandev.indiadataportal.com/sv/api/action/datastore_search \
+  -H"Authorization:$API_TOKEN" -d '
+{
+  "resource_id": "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+  "limit": 5,
+  "q": "jones"
+}'</code></pre>
+
+                  
+                    
+<pre class="example-javascript"><code class="language-javascript"
+>const resp = await fetch(`https://ckandev.indiadataportal.com/sv/api/action/datastore_search`, {
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json',
+        authorization: API_TOKEN
+    },
+    body: JSON.stringify({
+        resource_id: 'cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a',
+        limit: 5,
+        q: 'jones'
+    })
+})
+await resp.json()</code></pre>
+
+                  
+                    
+<pre class="example-powershell"><code class="language-powershell"
+>$json = @'
+{
+  "resource_id": "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+  "limit": 5,
+  "q": "jones"
+}
+'@
+$response = Invoke-RestMethod https://ckandev.indiadataportal.com/sv/api/action/datastore_search`
+  -Method Post -Body $json -Headers @{"Authorization"="$API_TOKEN"}
+$response.result.records</code></pre>
+
+                  
+                    
+<div class="example-python">
+  <p>
+    (using the <a href="https://github.com/ckan/ckanapi/blob/master/README.md#remoteckan">ckanapi</a> client library)
+  </p>
+  <pre><code class="language-python"
+>from ckanapi import RemoteCKAN
+
+rc = RemoteCKAN('https://ckandev.indiadataportal.com/sv/', apikey=API_TOKEN)
+result = rc.action.datastore_search(
+    resource_id="cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+    limit=5,
+    q="jones",
+)
+print(result['records'])</code></pre></div>
+
+                  
+                    
+<pre class="example-r"><code class="language-r"
+>library(httr2)
+
+req &lt;- request("https://ckandev.indiadataportal.com/sv/api/action/datastore_search")
+result &lt;- req %&gt;% 
+    req_headers(Authorization = API_TOKEN) %>% 
+    req_body_json(list(
+        resource_id = 'cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a',
+        limit = 5,
+        q = 'jones'))
+    req_perform %&gt;% 
+    resp_body_json</code></pre>
+
+                  
+
+
+                  <strong>Get results with either "watershed" or "survey" as subject and "active" as its stage:</strong>
+                  
+                    
+<pre class="example-curl"><code class="language-bash"
+>curl https://ckandev.indiadataportal.com/sv/api/action/datastore_search \
+-H"Authorization:$API_TOKEN" -d '
+{
+"resource_id": "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+  "filters": {
+    "subject": ["watershed", "survey"],
+    "stage": "active"
+  }
+}'</code></pre>
+
+                  
+                    
+<pre class="example-javascript"><code class="language-javascript"
+>const resp = await fetch(`https://ckandev.indiadataportal.com/sv/api/action/datastore_search`, {
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json',
+        authorization: API_TOKEN
+    },
+    body: JSON.stringify({resource_id: 'cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a', filters: {
+        subject: ['watershed', 'survey'],
+        stage: 'active'
+    }})})
+await resp.json()</code></pre>
+
+                  
+                    
+<pre class="example-powershell"><code class="language-powershell"
+>$json = @'
+{
+  "resource_id": "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+  "filters": {
+    "subject": ["watershed", "survey"],
+    "stage": "active"
+  }
+}
+'@
+$response = Invoke-RestMethod https://ckandev.indiadataportal.com/sv/api/action/datastore_search`
+  -Method Post -Body $json -Headers @{"Authorization"="$API_TOKEN"}
+$response.result.records</code></pre>
+
+                  
+                    
+<pre class="example-python"><code class="language-python"
+>from ckanapi import RemoteCKAN
+
+rc = RemoteCKAN('https://ckandev.indiadataportal.com/sv/', apikey=API_TOKEN)
+result = rc.action.datastore_search(
+    resource_id="cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a",
+    filters={
+      "subject": ["watershed", "survey"],
+      "stage": "active",
+    },
+)
+print(result['records'])</code></pre>
+
+                  
+                    
+<pre class="example-r"><code class="language-bash"
+>library(httr2)
+
+req &lt;- request("https://ckandev.indiadataportal.com/sv/api/action/datastore_search")
+result &lt;- req %&gt;% 
+    req_headers(Authorization = API_TOKEN) %>% 
+    req_body_json(list(
+        resource_id='cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a', 
+        filters = list(
+            subject = list("watershed", "survey"), 
+            stage = "active")))
+    req_perform %&gt;% 
+    resp_body_json</code></pre>
+
+                  
+
+                  
+                    <strong>SQL query example:</strong>
+                    
+                      
+<pre class="example-curl"><code class="language-bash"
+>curl https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql \
+  -H"Authorization:$API_TOKEN" -d @- &lt;&lt;END
+{
+  "sql": "SELECT * FROM \"cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a\" WHERE title LIKE 'jones'"
+}
+END</code></pre>
+
+                    
+                      
+<pre class="example-javascript"><code class="language-javascript"
+>const resp = await fetch(`https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql`, {
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json',
+        authorization: API_TOKEN
+    },
+    body: JSON.stringify({
+        sql: `SELECT * FROM "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a" WHERE title LIKE 'jones'`
+    })
+})
+await resp.json()</code></pre>
+
+                    
+                      
+<pre class="example-powershell"><code class="language-powershell"
+>$json = @'
+{
+  "sql": "SELECT * from \"cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a\" WHERE title LIKE 'jones'"
+}
+'@
+$response = Invoke-RestMethod https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql`
+  -Method Post -Body $json -Headers @{"Authorization"="$API_TOKEN"}
+$response.result.records</code></pre>
+
+                    
+                      
+<pre class="example-python"><code class="language-python"
+>from ckanapi import RemoteCKAN
+
+rc = RemoteCKAN('https://ckandev.indiadataportal.com/sv/', apikey=API_TOKEN)
+result = rc.action.datastore_search_sql(
+    sql="""SELECT * from "cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a" WHERE title LIKE 'jones'"""
+)
+print(result['records'])</code></pre>
+
+                    
+                      
+<pre class="example-r"><code class="language-bash"
+>library(httr2)
+
+req &lt;- request("https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql")
+result &lt;- req %&gt;% 
+    req_headers(Authorization = API_TOKEN) %&gt;% 
+    req_body_json(list(
+        sql = "SELECT * FROM \"cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a\" WHERE title LIKE 'jones'"))
+    req_perform %&gt;% 
+    resp_body_json
+</code></pre>
+
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+
+          
+            <div class="accordion-item">
+              <h2 class="accordion-heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-querying-get" aria-expanded="false" aria-controls="collapse-querying-get">Using the API with this Web Browser &raquo;</button>
+              </h2>
+              <div id="collapse-querying-get"  class="accordion-collapse collapse" aria-labelledby="collapse-querying-get" data-bs-parent="#accordion2">
+                <div class="accordion-body code-block">
+                  <p>Some API endpoints may be accessed using a GET query string.</p>
+                  <strong>Exempelfråga (första 5 svaren)</strong>
+                  <p>
+                  <code><a href="https://ckandev.indiadataportal.com/sv/api/action/datastore_search?resource_id=cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&amp;limit=5" target="_blank" rel="noreferrer">https://ckandev.indiadataportal.com/sv/api/action/datastore_search?resource_id=cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&amp;limit=5</a></code>
+                  </p>
+
+                  <strong>Exempelfråga (svar som innehåller 'jones')</strong>
+                  <p>
+                  <code><a href="https://ckandev.indiadataportal.com/sv/api/action/datastore_search?resource_id=cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&amp;q=jones" target="_blank" rel="noreferrer">https://ckandev.indiadataportal.com/sv/api/action/datastore_search?resource_id=cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&amp;q=jones</a></code>
+                  </p>
+                  
+                    
+                    
+                    <strong>Exempelfråga (via SQL-sats)</strong>
+                    <p>
+                    <code><a href="https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql?sql=SELECT * from &#34;cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&#34; WHERE title LIKE &#39;jones&#39;" target="_blank" rel="noreferrer">https://ckandev.indiadataportal.com/sv/api/action/datastore_search_sql?sql=SELECT * from &#34;cc32d3e2-7ea3-4b6b-94ab-85e57f6a0a3a&#34; WHERE title LIKE &#39;jones&#39;</a></code>
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+

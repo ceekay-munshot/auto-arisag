@@ -1,0 +1,546 @@
+const state = {
+  dashboard: null,
+  selectedPeriod: null,
+  selectedMetric: null,
+};
+
+const dom = {
+  title: document.getElementById("dashboard-title"),
+  subtitle: document.getElementById("dashboard-subtitle"),
+  buildMeta: document.getElementById("build-meta"),
+  environmentMeta: document.getElementById("environment-meta"),
+  updatePill: document.getElementById("update-pill"),
+  loadingMask: document.getElementById("loading-mask"),
+  loadingText: document.getElementById("loading-text"),
+  periodWrap: document.getElementById("period-wrap"),
+  periodSelect: document.getElementById("period-select"),
+  controlStatus: document.getElementById("control-status"),
+  profileGrid: document.getElementById("profile-grid"),
+  overviewPanel: document.getElementById("overview-panel"),
+  metricGrid: document.getElementById("metric-grid"),
+  trendPanel: document.getElementById("trend-panel"),
+  trendTitle: document.getElementById("trend-title"),
+  trendChart: document.getElementById("trend-chart"),
+  metricToggle: document.getElementById("metric-toggle"),
+  tablePanel: document.getElementById("table-panel"),
+  tableWrap: document.getElementById("table-wrap"),
+  commentaryPanel: document.getElementById("commentary-panel"),
+  commentaryList: document.getElementById("commentary-list"),
+  sourcesPanel: document.getElementById("sources-panel"),
+  sourcesList: document.getElementById("sources-list"),
+  emptyPanel: document.getElementById("empty-panel"),
+  emptyMessage: document.getElementById("empty-message"),
+};
+
+const BUILD_ID = window.__BUILD_ID__ || "dev";
+
+document.addEventListener("DOMContentLoaded", init);
+
+async function init() {
+  if (window.self !== window.top || new URLSearchParams(window.location.search).get("embed") === "1") {
+    document.body.classList.add("embed-mode");
+  }
+
+  try {
+    setLoading(true, "Loading canonical dashboard output...");
+    const response = await fetch(`./data/dashboard.json?v=${encodeURIComponent(BUILD_ID)}`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error(`Dashboard payload request failed with ${response.status}.`);
+    }
+
+    const dashboard = await response.json();
+    hydrateState(dashboard);
+    renderAll();
+  } catch (error) {
+    renderFailure(error);
+  } finally {
+    setLoading(false);
+  }
+}
+
+function hydrateState(dashboard) {
+  state.dashboard = normalizeDashboard(dashboard);
+  state.selectedPeriod = state.dashboard.available_periods[0] || null;
+  state.selectedMetric = state.dashboard.financial_series[0]?.key || null;
+}
+
+function normalizeDashboard(dashboard) {
+  return {
+    build: dashboard.build || {},
+    company: dashboard.company || {},
+    available_periods: Array.isArray(dashboard.available_periods) ? dashboard.available_periods : [],
+    financial_series: Array.isArray(dashboard.financial_series) ? dashboard.financial_series : [],
+    commentary: Array.isArray(dashboard.commentary) ? dashboard.commentary : [],
+    sources: Array.isArray(dashboard.sources) ? dashboard.sources : [],
+  };
+}
+
+function renderAll() {
+  renderHeader();
+  renderControls();
+  renderProfile();
+  renderOverview();
+  renderTrend();
+  renderTable();
+  renderCommentary();
+  renderSources();
+  renderEmptyState();
+}
+
+function renderHeader() {
+  const company = state.dashboard.company;
+  const build = state.dashboard.build;
+  const sourceCount = state.dashboard.sources.length;
+  const periodText = state.selectedPeriod ? `Selected period: ${state.selectedPeriod}.` : "No financial period is currently active.";
+
+  dom.title.textContent = company.display_name || company.company_name || "Arcane Chemical Investor Dashboard";
+  dom.subtitle.textContent =
+    company.description ||
+    `This build only shows modules backed by validated data. ${periodText} Registered sources: ${sourceCount}.`;
+
+  const generatedAt = build.generated_at ? formatDateTime(build.generated_at) : "Unknown build time";
+  dom.buildMeta.textContent = `Build ${build.build_id || BUILD_ID} • ${generatedAt}`;
+
+  const modeParts = ["Static bundle"];
+  if (company.as_of_date) {
+    modeParts.push(`As of ${company.as_of_date}`);
+  }
+  if (sourceCount) {
+    modeParts.push(`${sourceCount} source${sourceCount === 1 ? "" : "s"}`);
+  }
+  dom.environmentMeta.textContent = modeParts.join(" • ");
+}
+
+function renderControls() {
+  const periods = state.dashboard.available_periods;
+  dom.periodWrap.hidden = periods.length <= 1;
+  dom.periodSelect.innerHTML = "";
+
+  periods.forEach((period) => {
+    const option = document.createElement("option");
+    option.value = period;
+    option.textContent = period;
+    option.selected = period === state.selectedPeriod;
+    dom.periodSelect.appendChild(option);
+  });
+
+  dom.periodSelect.onchange = () => {
+    const nextPeriod = dom.periodSelect.value;
+    if (!nextPeriod || nextPeriod === state.selectedPeriod) {
+      return;
+    }
+
+    dom.updatePill.hidden = false;
+    dom.updatePill.textContent = `Applying ${nextPeriod}`;
+    dom.updatePill.classList.add("is-updating");
+
+    window.requestAnimationFrame(() => {
+      state.selectedPeriod = nextPeriod;
+      renderAll();
+      announceUpdate(`Updated dashboard to ${nextPeriod}.`, dom.overviewPanel.hidden ? "table-panel" : "overview-panel");
+    });
+  };
+
+  if (!periods.length) {
+    dom.controlStatus.textContent = "No period filter is shown because the current build has no validated time-series data yet.";
+    return;
+  }
+
+  if (periods.length === 1) {
+    dom.controlStatus.textContent = `Single validated period available: ${periods[0]}.`;
+    return;
+  }
+
+  dom.controlStatus.textContent = `Viewing ${state.selectedPeriod}. Changing the period updates the metric cards, commentary ordering, and highlighted trend state.`;
+}
+
+function renderProfile() {
+  const company = state.dashboard.company;
+  const sourceMap = getSourceMap();
+  const sourceBadges = (company.source_ids || [])
+    .map((sourceId) => sourceMap.get(sourceId))
+    .filter(Boolean)
+    .map((source) => escapeHtml(source.name))
+    .join(", ");
+
+  const description = company.description
+    ? `<p>${escapeHtml(company.description)}</p>`
+    : `<p class="profile-note">Add a sourced company description in <code>data/raw/company_profile.json</code> to replace this onboarding note.</p>`;
+
+  const infoRows = [
+    ["Ticker", company.ticker || "Not added"],
+    ["Exchange", company.exchange || "Not added"],
+    ["Website", company.website ? `<a class="source-link" href="${escapeHtml(company.website)}" target="_blank" rel="noreferrer">Open site</a>` : "Not added"],
+    ["Location", company.location || "Not added"],
+    ["Sector", company.sector || "Not added"],
+    ["Coverage date", company.as_of_date || "Not added"],
+    ["Profile sources", sourceBadges || "Not linked"],
+  ];
+
+  dom.profileGrid.innerHTML = `
+    <article class="profile-card">${description}</article>
+    <div class="info-list">
+      ${infoRows
+        .map(
+          ([label, value]) => `
+            <div class="info-row">
+              <span class="info-label">${escapeHtml(label)}</span>
+              <span class="info-value">${value}</span>
+            </div>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderOverview() {
+  const metrics = getMetricsForSelectedPeriod();
+  dom.overviewPanel.hidden = metrics.length === 0;
+
+  if (!metrics.length) {
+    dom.metricGrid.innerHTML = "";
+    return;
+  }
+
+  const sourceMap = getSourceMap();
+  dom.metricGrid.innerHTML = metrics
+    .map((metric) => {
+      const source = metric.source_id ? sourceMap.get(metric.source_id) : null;
+      const comparison = metric.previous_value != null
+        ? `vs ${escapeHtml(metric.previous_period || "prior period")}: ${escapeHtml(formatNumber(metric.previous_value, metric.unit, state.dashboard.company.currency))}`
+        : "No prior comparable period in this build";
+      const sourceText = source ? source.name : "Source not linked";
+
+      return `
+        <article class="metric-card">
+          <p class="metric-label">${escapeHtml(metric.label)}</p>
+          <p class="metric-value">${escapeHtml(formatNumber(metric.value, metric.unit, state.dashboard.company.currency))}</p>
+          <p class="metric-meta">${comparison}</p>
+          <p class="metric-meta">${escapeHtml(sourceText)}${metric.as_of_date ? ` • ${escapeHtml(metric.as_of_date)}` : ""}</p>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderTrend() {
+  const series = state.dashboard.financial_series.filter((item) => item.points.length > 1);
+  dom.trendPanel.hidden = series.length === 0;
+
+  if (!series.length) {
+    dom.metricToggle.innerHTML = "";
+    dom.trendChart.innerHTML = "";
+    return;
+  }
+
+  if (!series.some((item) => item.key === state.selectedMetric)) {
+    state.selectedMetric = series[0].key;
+  }
+
+  dom.metricToggle.innerHTML = series
+    .map(
+      (item) => `
+        <button
+          class="segment-btn ${item.key === state.selectedMetric ? "is-active" : ""}"
+          type="button"
+          data-metric-key="${escapeHtml(item.key)}"
+          role="tab"
+          aria-selected="${item.key === state.selectedMetric ? "true" : "false"}"
+        >
+          ${escapeHtml(item.label)}
+        </button>
+      `,
+    )
+    .join("");
+
+  Array.from(dom.metricToggle.querySelectorAll("[data-metric-key]")).forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextMetric = button.getAttribute("data-metric-key");
+      if (!nextMetric || nextMetric === state.selectedMetric) {
+        return;
+      }
+      state.selectedMetric = nextMetric;
+      renderTrend();
+      announceUpdate(`Switched chart to ${button.textContent}.`, "trend-panel", false);
+    });
+  });
+
+  const active = series.find((item) => item.key === state.selectedMetric) || series[0];
+  dom.trendTitle.textContent = `${active.label} Trend`;
+
+  const numericValues = active.points.map((point) => point.value).filter((value) => typeof value === "number" && Number.isFinite(value));
+  const hasNegative = active.points.some((point) => point.value < 0);
+  const maxMagnitude = Math.max(...numericValues.map((value) => Math.abs(value)), 1);
+
+  dom.trendChart.innerHTML = `
+    <div class="chart-frame">
+      <div class="chart-bars">
+        ${active.points
+          .map((point) => {
+            const height = point.value === 0 ? 0 : Math.max(14, Math.round((Math.abs(point.value) / maxMagnitude) * 120));
+            const selected = point.period === state.selectedPeriod;
+            const barTitle = escapeHtml(`${point.period}: ${formatNumber(point.value, active.unit, state.dashboard.company.currency)}`);
+            const positiveBar = point.value > 0
+              ? `<div class="bar ${selected ? "is-selected" : ""}" style="height: ${height}px" title="${barTitle}"></div>`
+              : "";
+            const negativeBar = point.value < 0
+              ? `<div class="bar is-negative ${selected ? "is-selected" : ""}" style="height: ${height}px" title="${barTitle}"></div>`
+              : "";
+            const zeroMarker = point.value === 0
+              ? `<div class="bar-zero" title="${barTitle}"></div>`
+              : "";
+
+            return `
+              <div class="bar-column">
+                <div class="bar-value">${escapeHtml(formatNumber(point.value, active.unit, state.dashboard.company.currency))}</div>
+                <div class="bar-track ${hasNegative ? "" : "no-negative"}">
+                  <div class="bar-zone bar-zone-top">${positiveBar}</div>
+                  <div class="bar-axis"></div>
+                  <div class="bar-zone bar-zone-bottom">${negativeBar || zeroMarker || positiveBar}</div>
+                </div>
+                <div class="bar-label">${escapeHtml(point.period)}</div>
+              </div>
+            `;
+          })
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderTable() {
+  const periods = state.dashboard.available_periods;
+  const series = state.dashboard.financial_series;
+  dom.tablePanel.hidden = periods.length === 0 || series.length === 0;
+
+  if (dom.tablePanel.hidden) {
+    dom.tableWrap.innerHTML = "";
+    return;
+  }
+
+  dom.tableWrap.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          ${periods.map((period) => `<th>${escapeHtml(period)}</th>`).join("")}
+        </tr>
+      </thead>
+      <tbody>
+        ${series
+          .map((metric) => {
+            const cells = periods
+              .map((period) => {
+                const point = metric.points.find((entry) => entry.period === period);
+                return `<td>${point ? escapeHtml(formatNumber(point.value, metric.unit, state.dashboard.company.currency)) : "—"}</td>`;
+              })
+              .join("");
+
+            return `
+              <tr>
+                <td><strong>${escapeHtml(metric.label)}</strong></td>
+                ${cells}
+              </tr>
+            `;
+          })
+          .join("")}
+      </tbody>
+    </table>
+  `;
+}
+
+function renderCommentary() {
+  const commentary = [...state.dashboard.commentary];
+  dom.commentaryPanel.hidden = commentary.length === 0;
+
+  if (!commentary.length) {
+    dom.commentaryList.innerHTML = "";
+    return;
+  }
+
+  commentary.sort((left, right) => {
+    if (left.period === state.selectedPeriod && right.period !== state.selectedPeriod) {
+      return -1;
+    }
+    if (left.period !== state.selectedPeriod && right.period === state.selectedPeriod) {
+      return 1;
+    }
+    return 0;
+  });
+
+  const sourceMap = getSourceMap();
+  dom.commentaryList.innerHTML = commentary
+    .map((item) => {
+      const source = item.source_id ? sourceMap.get(item.source_id) : null;
+      const parts = [item.period, item.as_of_date, source?.name].filter(Boolean);
+
+      return `
+        <article class="commentary-card">
+          <h3 class="commentary-title">${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.summary)}</p>
+          <p class="commentary-meta">${escapeHtml(parts.join(" • ") || "Source context not linked")}</p>
+          ${item.caveat ? `<p class="commentary-meta">${escapeHtml(item.caveat)}</p>` : ""}
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderSources() {
+  const sources = state.dashboard.sources;
+  dom.sourcesPanel.hidden = sources.length === 0;
+
+  if (!sources.length) {
+    dom.sourcesList.innerHTML = "";
+    return;
+  }
+
+  dom.sourcesList.innerHTML = sources
+    .map((source) => {
+      const meta = [source.type, source.latest_period, source.refresh_date].filter(Boolean).join(" • ");
+
+      return `
+        <article class="source-card">
+          <h3 class="source-title">${escapeHtml(source.name || source.id)}</h3>
+          <p>${source.url ? `<a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">Open source</a>` : "URL not added"}</p>
+          <p class="source-note">${escapeHtml(meta || "No source metadata yet")}</p>
+          ${source.note ? `<p class="source-note">${escapeHtml(source.note)}</p>` : ""}
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderEmptyState() {
+  const hasRealModules = [
+    !dom.overviewPanel.hidden,
+    !dom.trendPanel.hidden,
+    !dom.tablePanel.hidden,
+    !dom.commentaryPanel.hidden,
+    !dom.sourcesPanel.hidden,
+  ].some(Boolean);
+
+  dom.emptyPanel.hidden = hasRealModules;
+
+  if (hasRealModules) {
+    dom.emptyMessage.textContent = "";
+    return;
+  }
+
+  dom.emptyMessage.innerHTML = `
+    <div class="empty-card">
+      <p>This build is working, but it does not yet have enough validated source data to render investor modules truthfully.</p>
+      <p class="source-note">Populate <code>data/raw/financials.json</code>, <code>data/raw/commentary.json</code>, and <code>data/raw/sources.json</code>, then rerun the builder.</p>
+    </div>
+  `;
+}
+
+function renderFailure(error) {
+  dom.title.textContent = "Dashboard Build Failed to Load";
+  dom.subtitle.textContent = "The static shell loaded, but the canonical JSON payload did not.";
+  dom.buildMeta.textContent = `Build ${BUILD_ID}`;
+  dom.environmentMeta.textContent = "Check dist/data/dashboard.json and the local HTTP server.";
+  dom.periodWrap.hidden = true;
+  dom.controlStatus.textContent = error?.message || "Unknown load error";
+  dom.profileGrid.innerHTML = `
+    <article class="empty-card">
+      <p>${escapeHtml(error?.message || "Unknown error")}</p>
+      <p class="source-note">If you opened the file directly in the browser, serve the project over HTTP instead.</p>
+    </article>
+  `;
+  dom.overviewPanel.hidden = true;
+  dom.trendPanel.hidden = true;
+  dom.tablePanel.hidden = true;
+  dom.commentaryPanel.hidden = true;
+  dom.sourcesPanel.hidden = true;
+  dom.emptyPanel.hidden = true;
+}
+
+function getMetricsForSelectedPeriod() {
+  return state.dashboard.financial_series
+    .map((series) => {
+      const currentIndex = series.points.findIndex((point) => point.period === state.selectedPeriod);
+      if (currentIndex === -1) {
+        return null;
+      }
+
+      const currentPoint = series.points[currentIndex];
+      const previousPoint = series.points[currentIndex + 1] || null;
+      return {
+        key: series.key,
+        label: series.label,
+        unit: series.unit,
+        value: currentPoint.value,
+        source_id: currentPoint.source_id,
+        as_of_date: currentPoint.as_of_date,
+        previous_value: previousPoint?.value ?? null,
+        previous_period: previousPoint?.period ?? null,
+      };
+    })
+    .filter(Boolean);
+}
+
+function getSourceMap() {
+  return new Map(state.dashboard.sources.map((source) => [source.id, source]));
+}
+
+function setLoading(isLoading, message = "Loading...") {
+  dom.loadingText.textContent = message;
+  dom.loadingMask.classList.toggle("is-hidden", !isLoading);
+  dom.loadingMask.setAttribute("aria-busy", isLoading ? "true" : "false");
+}
+
+function announceUpdate(message, panelId, scrollIntoView = true) {
+  dom.updatePill.hidden = false;
+  dom.updatePill.textContent = message;
+  dom.updatePill.classList.remove("is-updating");
+
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.classList.remove("is-updated");
+    void panel.offsetWidth;
+    panel.classList.add("is-updated");
+
+    if (scrollIntoView && !isMostlyInViewport(panel)) {
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+}
+
+function isMostlyInViewport(element) {
+  const bounds = element.getBoundingClientRect();
+  return bounds.top >= 0 && bounds.top < window.innerHeight * 0.45;
+}
+
+function formatNumber(value, unit, currency) {
+  const suffix = unit ? ` ${unit}` : "";
+  const prefix = currency && currency !== "INR" ? `${currency} ` : currency === "INR" ? "INR " : "";
+  return `${prefix}${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 }).format(value)}${suffix}`;
+}
+
+function formatDateTime(isoString) {
+  const date = new Date(isoString);
+  if (Number.isNaN(date.getTime())) {
+    return isoString;
+  }
+  return new Intl.DateTimeFormat("en-IN", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}

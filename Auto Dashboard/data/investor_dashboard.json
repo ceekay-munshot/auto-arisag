@@ -1,0 +1,3253 @@
+{
+  "generated_at": "2026-03-26T08:25:30.305971+00:00",
+  "as_of_date": "2026-03-25",
+  "title": "India Auto Demand Monitor",
+  "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
+  "summary": {
+    "cards": [
+      {
+        "id": "latest_retail",
+        "label": "Latest Retail",
+        "value": 2409362,
+        "display": "24.09 lakh",
+        "change": "+25.62% YoY",
+        "detail": "-11.50% MoM | FADA Feb 2026",
+        "tone": "primary"
+      },
+      {
+        "id": "latest_ev_penetration",
+        "label": "Derived EV Penetration",
+        "value": 8.05,
+        "display": "8.1%",
+        "change": "1.94 lakh EV retail units",
+        "detail": "Derived from FADA category fuel mix; excludes low-confidence categories.",
+        "tone": "good"
+      },
+      {
+        "id": "strongest_segment",
+        "label": "Strongest Segment",
+        "value": 36.35,
+        "display": "Tractors",
+        "change": "+36.35% YoY",
+        "detail": "0.89 lakh in Feb 2026",
+        "tone": "warm"
+      },
+      {
+        "id": "pv_inventory",
+        "label": "PV Inventory",
+        "value": 28.0,
+        "display": "27-29 days",
+        "change": "FADA dealer channel view",
+        "detail": "Healthy improvement from 53-55 days in Oct 2025 to 27-29 days now.",
+        "tone": "neutral"
+      },
+      {
+        "id": "pv_retail_vs_wholesale",
+        "label": "PV Retail / Wholesale",
+        "value": 94.5,
+        "display": "94.5%",
+        "change": "-22,937 unit gap",
+        "detail": "Retail from FADA vs wholesale from SIAM; channel timing still matters.",
+        "tone": "neutral"
+      },
+      {
+        "id": "dealer_outlook",
+        "label": "Dealer Growth View",
+        "value": 75.51,
+        "display": "75.5%",
+        "change": "Expect growth next month",
+        "detail": "67.3% expect growth over the next three months.",
+        "tone": "good"
+      }
+    ],
+    "source_badges": [
+      {
+        "source": "FADA",
+        "status": "active",
+        "module": "Retail",
+        "last_updated": "2026-03-05",
+        "detail": "Vehicle Retail Data collated as on 02.03.26 in collaboration with Ministry of Road Transport & Highways, Government of India and gathered from 1,459 out of 1,464 RTOs. Telangana figures are excluded.",
+        "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+      },
+      {
+        "source": "SIAM",
+        "status": "active",
+        "module": "Wholesale",
+        "last_updated": "2026-03-13",
+        "detail": "Monthly performance page provides production totals and domestic sales for PV, 2W and 3W. SIAM notes that BMW, Mercedes, JLR and Volvo Auto data are excluded from regular PV reporting, with Tata Motors domestic PV data included only in the monthly note.",
+        "url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603"
+      },
+      {
+        "source": "ACMA",
+        "status": "active",
+        "module": "Components",
+        "last_updated": "2025-07-08",
+        "detail": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries.",
+        "url": "https://www.acma.in/uploads/press-release/Press%20Release%20FY25.pdf"
+      }
+    ],
+    "active_module_count": 3,
+    "hidden_modules": []
+  },
+  "filters": {
+    "months": [
+      {
+        "id": "2025-10",
+        "label": "Oct 2025"
+      },
+      {
+        "id": "2025-11",
+        "label": "Nov 2025"
+      },
+      {
+        "id": "2025-12",
+        "label": "Dec 2025"
+      },
+      {
+        "id": "2026-01",
+        "label": "Jan 2026"
+      },
+      {
+        "id": "2026-02",
+        "label": "Feb 2026"
+      }
+    ],
+    "window_options": [
+      {
+        "id": "3m",
+        "label": "Last 3 months",
+        "count": 3
+      },
+      {
+        "id": "5m",
+        "label": "Last 5 months",
+        "count": 5
+      },
+      {
+        "id": "all",
+        "label": "All available",
+        "count": 5
+      }
+    ],
+    "default_window": "5m",
+    "categories": [
+      {
+        "id": "TOTAL",
+        "label": "Total Market"
+      },
+      {
+        "id": "PV",
+        "label": "Passenger Vehicles"
+      },
+      {
+        "id": "2W",
+        "label": "Two-Wheelers"
+      },
+      {
+        "id": "3W",
+        "label": "Three-Wheelers"
+      },
+      {
+        "id": "CV",
+        "label": "Commercial Vehicles"
+      },
+      {
+        "id": "TRACTOR",
+        "label": "Tractors"
+      },
+      {
+        "id": "CE",
+        "label": "Construction Equipment"
+      }
+    ],
+    "fuels": [
+      {
+        "id": "EV",
+        "label": "EV"
+      },
+      {
+        "id": "Hybrid",
+        "label": "Hybrid"
+      },
+      {
+        "id": "CNG / LPG",
+        "label": "CNG / LPG"
+      },
+      {
+        "id": "Petrol / Ethanol",
+        "label": "Petrol / Ethanol"
+      },
+      {
+        "id": "Diesel",
+        "label": "Diesel"
+      },
+      {
+        "id": "Hydrogen",
+        "label": "Hydrogen"
+      }
+    ],
+    "lenses": [
+      {
+        "id": "all",
+        "label": "All lenses"
+      },
+      {
+        "id": "retail",
+        "label": "Retail"
+      },
+      {
+        "id": "wholesale",
+        "label": "Wholesale"
+      },
+      {
+        "id": "components",
+        "label": "Components"
+      },
+      {
+        "id": "ev",
+        "label": "EV"
+      }
+    ],
+    "companies": [
+      {
+        "id": "Action Construction Equipment",
+        "label": "Action Construction Equipment",
+        "categories": [
+          "CE"
+        ],
+        "lens": [
+          "retail"
+        ]
+      },
+      {
+        "id": "Amara Raja Energy & Mobility",
+        "label": "Amara Raja Energy & Mobility",
+        "categories": [
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev",
+          "components"
+        ]
+      },
+      {
+        "id": "Ashok Leyland",
+        "label": "Ashok Leyland",
+        "categories": [
+          "CV"
+        ],
+        "lens": [
+          "retail"
+        ]
+      },
+      {
+        "id": "Atul Auto",
+        "label": "Atul Auto",
+        "categories": [
+          "3W"
+        ],
+        "lens": [
+          "retail",
+          "ev"
+        ]
+      },
+      {
+        "id": "Bajaj Auto",
+        "label": "Bajaj Auto",
+        "categories": [
+          "2W",
+          "3W"
+        ],
+        "lens": [
+          "retail",
+          "ev"
+        ]
+      },
+      {
+        "id": "Bharat Forge",
+        "label": "Bharat Forge",
+        "categories": [
+          "CV",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "components"
+        ]
+      },
+      {
+        "id": "Eicher Motors",
+        "label": "Eicher Motors",
+        "categories": [
+          "2W",
+          "TRACTOR",
+          "CV"
+        ],
+        "lens": [
+          "retail"
+        ]
+      },
+      {
+        "id": "Escorts Kubota",
+        "label": "Escorts Kubota",
+        "categories": [
+          "TRACTOR",
+          "CE"
+        ],
+        "lens": [
+          "retail"
+        ]
+      },
+      {
+        "id": "Exide Industries",
+        "label": "Exide Industries",
+        "categories": [
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev",
+          "components"
+        ]
+      },
+      {
+        "id": "Greaves Cotton",
+        "label": "Greaves Cotton",
+        "categories": [
+          "2W",
+          "3W",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev",
+          "components"
+        ]
+      },
+      {
+        "id": "Hero MotoCorp",
+        "label": "Hero MotoCorp",
+        "categories": [
+          "2W"
+        ],
+        "lens": [
+          "retail"
+        ]
+      },
+      {
+        "id": "Hyundai Motor India",
+        "label": "Hyundai Motor India",
+        "categories": [
+          "PV"
+        ],
+        "lens": [
+          "retail",
+          "wholesale"
+        ]
+      },
+      {
+        "id": "JBM Auto",
+        "label": "JBM Auto",
+        "categories": [
+          "CV",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev",
+          "components"
+        ]
+      },
+      {
+        "id": "Mahindra & Mahindra",
+        "label": "Mahindra & Mahindra",
+        "categories": [
+          "PV",
+          "3W",
+          "CV",
+          "TRACTOR"
+        ],
+        "lens": [
+          "retail",
+          "ev"
+        ]
+      },
+      {
+        "id": "Maruti Suzuki",
+        "label": "Maruti Suzuki",
+        "categories": [
+          "PV",
+          "CV"
+        ],
+        "lens": [
+          "retail",
+          "wholesale"
+        ]
+      },
+      {
+        "id": "Olectra Greentech",
+        "label": "Olectra Greentech",
+        "categories": [
+          "CV",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev"
+        ]
+      },
+      {
+        "id": "Samvardhana Motherson",
+        "label": "Samvardhana Motherson",
+        "categories": [
+          "PV",
+          "CV",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "components"
+        ]
+      },
+      {
+        "id": "Sona BLW Precision Forgings",
+        "label": "Sona BLW Precision Forgings",
+        "categories": [
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "ev",
+          "components"
+        ]
+      },
+      {
+        "id": "TVS Motor",
+        "label": "TVS Motor",
+        "categories": [
+          "2W",
+          "3W"
+        ],
+        "lens": [
+          "retail",
+          "ev"
+        ]
+      },
+      {
+        "id": "Tata Motors",
+        "label": "Tata Motors",
+        "categories": [
+          "PV",
+          "CV"
+        ],
+        "lens": [
+          "retail",
+          "wholesale",
+          "ev"
+        ]
+      },
+      {
+        "id": "Uno Minda",
+        "label": "Uno Minda",
+        "categories": [
+          "PV",
+          "2W",
+          "EV_SUPPLY"
+        ],
+        "lens": [
+          "components"
+        ]
+      }
+    ]
+  },
+  "modules": {
+    "retail": {
+      "available": true,
+      "title": "Retail Pulse",
+      "source_meta": {
+        "name": "FADA",
+        "latest_month": "2026-02",
+        "latest_release_date": "2026-03-05",
+        "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+        "note": "Vehicle Retail Data collated as on 02.03.26 in collaboration with Ministry of Road Transport & Highways, Government of India and gathered from 1,459 out of 1,464 RTOs. Telangana figures are excluded."
+      },
+      "latest_month": "2026-02",
+      "months": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "source_url": "https://fada.in/images/press-release/1690d68d7a2e6cFADA%20releases%20October%202025%20%26%2042-Days%20Festive%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2025-11-07",
+          "total_units": 4023923,
+          "total_mom_pct": 120.21,
+          "total_yoy_pct": 40.53,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 557373,
+              "mom_pct": 86.18,
+              "yoy_pct": 11.35,
+              "share_pct": 13.85
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 3149846,
+              "mom_pct": 144.6,
+              "yoy_pct": 51.76,
+              "share_pct": 78.28
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 129517,
+              "mom_pct": 31.0,
+              "yoy_pct": 5.43,
+              "share_pct": 3.22
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 107841,
+              "mom_pct": 49.52,
+              "yoy_pct": 17.69,
+              "share_pct": 2.68
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 73577,
+              "mom_pct": 13.57,
+              "yoy_pct": 14.22,
+              "share_pct": 1.83
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5769,
+              "mom_pct": 29.41,
+              "yoy_pct": -30.49,
+              "share_pct": 0.14
+            }
+          ]
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "source_url": "https://fada.in/images/press-release/1693661428b2e7FADA%20releases%20November%202025%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2025-12-07",
+          "total_units": 3300832,
+          "total_mom_pct": -17.97,
+          "total_yoy_pct": 2.14,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 394152,
+              "mom_pct": -28.88,
+              "yoy_pct": 19.71,
+              "share_pct": 11.94
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 2546184,
+              "mom_pct": -19.16,
+              "yoy_pct": -3.1,
+              "share_pct": 77.14
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 133951,
+              "mom_pct": 3.42,
+              "yoy_pct": 23.67,
+              "share_pct": 4.06
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 94935,
+              "mom_pct": -14.46,
+              "yoy_pct": 19.94,
+              "share_pct": 2.88
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 126033,
+              "mom_pct": 71.29,
+              "yoy_pct": 56.55,
+              "share_pct": 3.82
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5577,
+              "mom_pct": -3.33,
+              "yoy_pct": -16.51,
+              "share_pct": 0.17
+            }
+          ]
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "source_url": "https://fada.in/images/press-release/1695cc82c07602FADA%20releases%20CY%202025%20and%20December%202025%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-01-06",
+          "total_units": 2028821,
+          "total_mom_pct": -38.54,
+          "total_yoy_pct": 14.63,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 379671,
+              "mom_pct": -4.24,
+              "yoy_pct": 26.64,
+              "share_pct": 18.71
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1316891,
+              "mom_pct": -48.28,
+              "yoy_pct": 9.5,
+              "share_pct": 64.91
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 127772,
+              "mom_pct": -4.61,
+              "yoy_pct": 36.1,
+              "share_pct": 6.3
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 83666,
+              "mom_pct": -9.65,
+              "yoy_pct": 24.6,
+              "share_pct": 4.12
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 115001,
+              "mom_pct": -8.75,
+              "yoy_pct": 15.8,
+              "share_pct": 5.67
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5820,
+              "mom_pct": 4.36,
+              "yoy_pct": -18.54,
+              "share_pct": 0.29
+            }
+          ]
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "source_url": "https://fada.in/images/press-release/1698aa6afacdf0FADA%20releases%20January%202026%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-02-10",
+          "total_units": 2722558,
+          "total_mom_pct": 34.19,
+          "total_yoy_pct": 17.61,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 513475,
+              "mom_pct": 35.24,
+              "yoy_pct": 7.22,
+              "share_pct": 18.86
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1852870,
+              "mom_pct": 40.7,
+              "yoy_pct": 20.82,
+              "share_pct": 68.06
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 127134,
+              "mom_pct": -0.5,
+              "yoy_pct": 18.8,
+              "share_pct": 4.67
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 107486,
+              "mom_pct": 28.47,
+              "yoy_pct": 15.07,
+              "share_pct": 3.95
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 114759,
+              "mom_pct": -0.21,
+              "yoy_pct": 22.89,
+              "share_pct": 4.22
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 6834,
+              "mom_pct": 17.42,
+              "yoy_pct": -21.09,
+              "share_pct": 0.25
+            }
+          ]
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-03-05",
+          "total_units": 2409362,
+          "total_mom_pct": -11.5,
+          "total_yoy_pct": 25.62,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 394768,
+              "mom_pct": -23.12,
+              "yoy_pct": 26.12,
+              "share_pct": 16.38
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1700505,
+              "mom_pct": -8.22,
+              "yoy_pct": 25.02,
+              "share_pct": 70.58
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 117130,
+              "mom_pct": -7.87,
+              "yoy_pct": 24.39,
+              "share_pct": 4.86
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 100820,
+              "mom_pct": -6.2,
+              "yoy_pct": 28.89,
+              "share_pct": 4.18
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 89418,
+              "mom_pct": -22.08,
+              "yoy_pct": 36.35,
+              "share_pct": 3.71
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 6721,
+              "mom_pct": -1.65,
+              "yoy_pct": -1.22,
+              "share_pct": 0.28
+            }
+          ]
+        }
+      ],
+      "category_cards": [
+        {
+          "category": "PV",
+          "label": "Passenger Vehicles",
+          "units": 394768,
+          "mom_pct": -23.12,
+          "yoy_pct": 26.12,
+          "share_pct": 16.38,
+          "listed_companies": [
+            "Hyundai Motor India",
+            "Mahindra & Mahindra",
+            "Maruti Suzuki",
+            "Samvardhana Motherson",
+            "Tata Motors",
+            "Uno Minda"
+          ]
+        },
+        {
+          "category": "2W",
+          "label": "Two-Wheelers",
+          "units": 1700505,
+          "mom_pct": -8.22,
+          "yoy_pct": 25.02,
+          "share_pct": 70.58,
+          "listed_companies": [
+            "Bajaj Auto",
+            "Eicher Motors",
+            "Greaves Cotton",
+            "Hero MotoCorp",
+            "TVS Motor",
+            "Uno Minda"
+          ]
+        },
+        {
+          "category": "3W",
+          "label": "Three-Wheelers",
+          "units": 117130,
+          "mom_pct": -7.87,
+          "yoy_pct": 24.39,
+          "share_pct": 4.86,
+          "listed_companies": [
+            "Atul Auto",
+            "Bajaj Auto",
+            "Greaves Cotton",
+            "Mahindra & Mahindra",
+            "TVS Motor"
+          ]
+        },
+        {
+          "category": "CV",
+          "label": "Commercial Vehicles",
+          "units": 100820,
+          "mom_pct": -6.2,
+          "yoy_pct": 28.89,
+          "share_pct": 4.18,
+          "listed_companies": [
+            "Ashok Leyland",
+            "Bharat Forge",
+            "Eicher Motors",
+            "JBM Auto",
+            "Mahindra & Mahindra",
+            "Maruti Suzuki",
+            "Olectra Greentech",
+            "Samvardhana Motherson",
+            "Tata Motors"
+          ]
+        },
+        {
+          "category": "TRACTOR",
+          "label": "Tractors",
+          "units": 89418,
+          "mom_pct": -22.08,
+          "yoy_pct": 36.35,
+          "share_pct": 3.71,
+          "listed_companies": [
+            "Eicher Motors",
+            "Escorts Kubota",
+            "Mahindra & Mahindra"
+          ]
+        },
+        {
+          "category": "CE",
+          "label": "Construction Equipment",
+          "units": 6721,
+          "mom_pct": -1.65,
+          "yoy_pct": -1.22,
+          "share_pct": 0.28,
+          "listed_companies": [
+            "Action Construction Equipment",
+            "Escorts Kubota"
+          ]
+        }
+      ],
+      "latest_mix": [
+        {
+          "category": "2W",
+          "label": "Two-Wheelers",
+          "share_pct": 70.58
+        },
+        {
+          "category": "PV",
+          "label": "Passenger Vehicles",
+          "share_pct": 16.38
+        },
+        {
+          "category": "3W",
+          "label": "Three-Wheelers",
+          "share_pct": 4.86
+        },
+        {
+          "category": "CV",
+          "label": "Commercial Vehicles",
+          "share_pct": 4.18
+        },
+        {
+          "category": "TRACTOR",
+          "label": "Tractors",
+          "share_pct": 3.71
+        },
+        {
+          "category": "CE",
+          "label": "Construction Equipment",
+          "share_pct": 0.28
+        }
+      ],
+      "ev_penetration_series": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "overall_ev_units": 234061,
+          "overall_ev_pct": 5.82,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 4.56,
+              "ev_units": 143633
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 54.51,
+              "ev_units": 70600
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 3.24,
+              "ev_units": 18059
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 1.64,
+              "ev_units": 1769
+            }
+          ]
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "overall_ev_units": 217237,
+          "overall_ev_pct": 6.58,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 4.594,
+              "ev_units": 116972
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 62.49,
+              "ev_units": 83706
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 3.77,
+              "ev_units": 14860
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 1.79,
+              "ev_units": 1699
+            }
+          ]
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "overall_ev_units": 202729,
+          "overall_ev_pct": 9.99,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 7.4,
+              "ev_units": 97450
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 69.12,
+              "ev_units": 88316
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 3.95,
+              "ev_units": 14997
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 2.35,
+              "ev_units": 1966
+            }
+          ]
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "overall_ev_units": 219179,
+          "overall_ev_pct": 8.05,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 6.63,
+              "ev_units": 122845
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 59.61,
+              "ev_units": 75785
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 3.6,
+              "ev_units": 18485
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 1.92,
+              "ev_units": 2064
+            }
+          ]
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "overall_ev_units": 193921,
+          "overall_ev_pct": 8.05,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 6.57,
+              "ev_units": 111723
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 56.7,
+              "ev_units": 66413
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 3.48,
+              "ev_units": 13738
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 2.03,
+              "ev_units": 2047
+            }
+          ]
+        }
+      ],
+      "fuel_mix_latest": [
+        {
+          "category": "PV",
+          "label": "Passenger Vehicles",
+          "fuels": [
+            {
+              "fuel": "EV",
+              "share_pct": 3.48
+            },
+            {
+              "fuel": "Hybrid",
+              "share_pct": 8.19
+            },
+            {
+              "fuel": "CNG / LPG",
+              "share_pct": 23.45
+            },
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 46.08
+            },
+            {
+              "fuel": "Diesel",
+              "share_pct": 18.8
+            }
+          ]
+        },
+        {
+          "category": "2W",
+          "label": "Two-Wheelers",
+          "fuels": [
+            {
+              "fuel": "EV",
+              "share_pct": 6.57
+            },
+            {
+              "fuel": "CNG / LPG",
+              "share_pct": 0.09
+            },
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 93.34
+            }
+          ]
+        },
+        {
+          "category": "3W",
+          "label": "Three-Wheelers",
+          "fuels": [
+            {
+              "fuel": "EV",
+              "share_pct": 56.7
+            },
+            {
+              "fuel": "CNG / LPG",
+              "share_pct": 28.28
+            },
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 0.39
+            },
+            {
+              "fuel": "Diesel",
+              "share_pct": 14.64
+            }
+          ]
+        },
+        {
+          "category": "CV",
+          "label": "Commercial Vehicles",
+          "fuels": [
+            {
+              "fuel": "EV",
+              "share_pct": 2.03
+            },
+            {
+              "fuel": "Hybrid",
+              "share_pct": 0.02
+            },
+            {
+              "fuel": "CNG / LPG",
+              "share_pct": 11.04
+            },
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 3.4
+            },
+            {
+              "fuel": "Diesel",
+              "share_pct": 83.5
+            }
+          ]
+        },
+        {
+          "category": "TRACTOR",
+          "label": "Tractors",
+          "fuels": [
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 0.0
+            },
+            {
+              "fuel": "Diesel",
+              "share_pct": 99.99
+            }
+          ]
+        },
+        {
+          "category": "CE",
+          "label": "Construction Equipment",
+          "fuels": [
+            {
+              "fuel": "Diesel",
+              "share_pct": 100.0
+            }
+          ]
+        }
+      ],
+      "inventory_trend": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "days_low": 53,
+          "days_high": 55,
+          "days_mid": 54.0
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "days_low": 44,
+          "days_high": 46,
+          "days_mid": 45.0
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "days_low": 37,
+          "days_high": 39,
+          "days_mid": 38.0
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "days_low": 32,
+          "days_high": 34,
+          "days_mid": 33.0
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "days_low": 27,
+          "days_high": 29,
+          "days_mid": 28.0
+        }
+      ],
+      "dealer_expectation_trend": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "next_month_growth_pct": 64.34,
+          "next_three_months_growth_pct": 69.58
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "next_month_growth_pct": 63.93,
+          "next_three_months_growth_pct": 74.29
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "next_month_growth_pct": 70.48,
+          "next_three_months_growth_pct": 74.91
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "next_month_growth_pct": 72.56,
+          "next_three_months_growth_pct": 79.7
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "next_month_growth_pct": 75.51,
+          "next_three_months_growth_pct": 67.35
+        }
+      ],
+      "latest_oem_tables": {
+        "2W": {
+          "category": "2W",
+          "label": "Two-Wheelers",
+          "rows": [
+            {
+              "oem": "Hero MotoCorp",
+              "units": 457826,
+              "share_pct": 26.92,
+              "prior_units": 386703,
+              "prior_share_pct": 28.43,
+              "share_change_pp": -1.51,
+              "unit_growth_pct": 18.39,
+              "listed_companies": [
+                "Hero MotoCorp"
+              ]
+            },
+            {
+              "oem": "Honda Motorcycle & Scooter India",
+              "units": 431253,
+              "share_pct": 25.36,
+              "prior_units": 329857,
+              "prior_share_pct": 24.25,
+              "share_change_pp": 1.11,
+              "unit_growth_pct": 30.74,
+              "listed_companies": []
+            },
+            {
+              "oem": "TVS Motor",
+              "units": 333935,
+              "share_pct": 19.64,
+              "prior_units": 254599,
+              "prior_share_pct": 18.72,
+              "share_change_pp": 0.92,
+              "unit_growth_pct": 31.16,
+              "listed_companies": [
+                "TVS Motor"
+              ]
+            },
+            {
+              "oem": "Bajaj Auto",
+              "units": 180846,
+              "share_pct": 10.63,
+              "prior_units": 154205,
+              "prior_share_pct": 11.34,
+              "share_change_pp": -0.71,
+              "unit_growth_pct": 17.28,
+              "listed_companies": [
+                "Bajaj Auto"
+              ]
+            },
+            {
+              "oem": "Suzuki Motorcycle India",
+              "units": 94398,
+              "share_pct": 5.55,
+              "prior_units": 77292,
+              "prior_share_pct": 5.68,
+              "share_change_pp": -0.13,
+              "unit_growth_pct": 22.13,
+              "listed_companies": []
+            },
+            {
+              "oem": "Royal Enfield",
+              "units": 91216,
+              "share_pct": 5.36,
+              "prior_units": 71974,
+              "prior_share_pct": 5.29,
+              "share_change_pp": 0.07,
+              "unit_growth_pct": 26.73,
+              "listed_companies": [
+                "Eicher Motors"
+              ]
+            },
+            {
+              "oem": "India Yamaha Motor",
+              "units": 60967,
+              "share_pct": 3.59,
+              "prior_units": 46327,
+              "prior_share_pct": 3.41,
+              "share_change_pp": 0.18,
+              "unit_growth_pct": 31.6,
+              "listed_companies": []
+            },
+            {
+              "oem": "Ather Energy",
+              "units": 20584,
+              "share_pct": 1.21,
+              "prior_units": 11978,
+              "prior_share_pct": 0.88,
+              "share_change_pp": 0.33,
+              "unit_growth_pct": 71.85,
+              "listed_companies": []
+            },
+            {
+              "oem": "Ola Electric",
+              "units": 3968,
+              "share_pct": 0.23,
+              "prior_units": 8675,
+              "prior_share_pct": 0.64,
+              "share_change_pp": -0.41,
+              "unit_growth_pct": -54.26,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 8787,
+              "share_pct": 0.52,
+              "prior_units": 8301,
+              "prior_share_pct": 0.61,
+              "share_change_pp": -0.09,
+              "unit_growth_pct": 5.85,
+              "listed_companies": []
+            }
+          ]
+        },
+        "3W": {
+          "category": "3W",
+          "label": "Three-Wheelers",
+          "rows": [
+            {
+              "oem": "Bajaj Auto",
+              "units": 44556,
+              "share_pct": 38.04,
+              "prior_units": 34659,
+              "prior_share_pct": 36.81,
+              "share_change_pp": 1.23,
+              "unit_growth_pct": 28.56,
+              "listed_companies": [
+                "Bajaj Auto"
+              ]
+            },
+            {
+              "oem": "Piaggio Vehicles",
+              "units": 8812,
+              "share_pct": 7.52,
+              "prior_units": 6656,
+              "prior_share_pct": 7.07,
+              "share_change_pp": 0.45,
+              "unit_growth_pct": 32.39,
+              "listed_companies": []
+            },
+            {
+              "oem": "Mahindra & Mahindra",
+              "units": 8637,
+              "share_pct": 7.37,
+              "prior_units": 6504,
+              "prior_share_pct": 6.91,
+              "share_change_pp": 0.46,
+              "unit_growth_pct": 32.8,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "Mahindra Last Mile Mobility",
+              "units": 8514,
+              "share_pct": 7.27,
+              "prior_units": 6485,
+              "prior_share_pct": 6.89,
+              "share_change_pp": 0.38,
+              "unit_growth_pct": 31.29,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "TVS Motor",
+              "units": 5201,
+              "share_pct": 4.44,
+              "prior_units": 2429,
+              "prior_share_pct": 2.58,
+              "share_change_pp": 1.86,
+              "unit_growth_pct": 114.12,
+              "listed_companies": [
+                "TVS Motor"
+              ]
+            },
+            {
+              "oem": "Atul Auto",
+              "units": 3140,
+              "share_pct": 2.68,
+              "prior_units": 2327,
+              "prior_share_pct": 2.47,
+              "share_change_pp": 0.21,
+              "unit_growth_pct": 34.94,
+              "listed_companies": [
+                "Atul Auto"
+              ]
+            },
+            {
+              "oem": "YC Electric Vehicle",
+              "units": 1952,
+              "share_pct": 1.67,
+              "prior_units": 3373,
+              "prior_share_pct": 3.58,
+              "share_change_pp": -1.91,
+              "unit_growth_pct": -42.13,
+              "listed_companies": []
+            },
+            {
+              "oem": "Saera Electric Auto",
+              "units": 1573,
+              "share_pct": 1.34,
+              "prior_units": 2075,
+              "prior_share_pct": 2.2,
+              "share_change_pp": -0.86,
+              "unit_growth_pct": -24.19,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 38983,
+              "share_pct": 33.28,
+              "prior_units": 33429,
+              "prior_share_pct": 35.5,
+              "share_change_pp": -2.22,
+              "unit_growth_pct": 16.61,
+              "listed_companies": []
+            }
+          ]
+        },
+        "PV": {
+          "category": "PV",
+          "label": "Passenger Vehicles",
+          "rows": [
+            {
+              "oem": "Maruti Suzuki",
+              "units": 154095,
+              "share_pct": 39.03,
+              "prior_units": 120010,
+              "prior_share_pct": 38.34,
+              "share_change_pp": 0.69,
+              "unit_growth_pct": 28.4,
+              "listed_companies": [
+                "Maruti Suzuki"
+              ]
+            },
+            {
+              "oem": "Tata Motors",
+              "units": 56447,
+              "share_pct": 14.3,
+              "prior_units": 39502,
+              "prior_share_pct": 12.62,
+              "share_change_pp": 1.68,
+              "unit_growth_pct": 42.9,
+              "listed_companies": [
+                "Tata Motors"
+              ]
+            },
+            {
+              "oem": "Mahindra & Mahindra",
+              "units": 53281,
+              "share_pct": 13.5,
+              "prior_units": 42414,
+              "prior_share_pct": 13.55,
+              "share_change_pp": -0.05,
+              "unit_growth_pct": 25.62,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "Hyundai Motor India",
+              "units": 45615,
+              "share_pct": 11.55,
+              "prior_units": 39368,
+              "prior_share_pct": 12.58,
+              "share_change_pp": -1.03,
+              "unit_growth_pct": 15.87,
+              "listed_companies": [
+                "Hyundai Motor India"
+              ]
+            },
+            {
+              "oem": "Toyota Kirloskar Motor",
+              "units": 26392,
+              "share_pct": 6.69,
+              "prior_units": 23283,
+              "prior_share_pct": 7.44,
+              "share_change_pp": -0.75,
+              "unit_growth_pct": 13.35,
+              "listed_companies": []
+            },
+            {
+              "oem": "Kia India",
+              "units": 25031,
+              "share_pct": 6.34,
+              "prior_units": 19479,
+              "prior_share_pct": 6.22,
+              "share_change_pp": 0.12,
+              "unit_growth_pct": 28.5,
+              "listed_companies": []
+            },
+            {
+              "oem": "Skoda Auto Volkswagen Group",
+              "units": 7615,
+              "share_pct": 1.93,
+              "prior_units": 6777,
+              "prior_share_pct": 2.17,
+              "share_change_pp": -0.24,
+              "unit_growth_pct": 12.37,
+              "listed_companies": []
+            },
+            {
+              "oem": "Honda Cars India",
+              "units": 4774,
+              "share_pct": 1.21,
+              "prior_units": 5354,
+              "prior_share_pct": 1.71,
+              "share_change_pp": -0.5,
+              "unit_growth_pct": -10.83,
+              "listed_companies": []
+            },
+            {
+              "oem": "JSW MG Motor India",
+              "units": 4548,
+              "share_pct": 1.15,
+              "prior_units": 4846,
+              "prior_share_pct": 1.55,
+              "share_change_pp": -0.4,
+              "unit_growth_pct": -6.15,
+              "listed_companies": []
+            },
+            {
+              "oem": "Renault India",
+              "units": 3248,
+              "share_pct": 0.82,
+              "prior_units": 2547,
+              "prior_share_pct": 0.81,
+              "share_change_pp": 0.01,
+              "unit_growth_pct": 27.52,
+              "listed_companies": []
+            },
+            {
+              "oem": "Nissan Motor India",
+              "units": 1622,
+              "share_pct": 0.41,
+              "prior_units": 1747,
+              "prior_share_pct": 0.56,
+              "share_change_pp": -0.15,
+              "unit_growth_pct": -7.16,
+              "listed_companies": []
+            },
+            {
+              "oem": "Mercedes-Benz Group",
+              "units": 1371,
+              "share_pct": 0.35,
+              "prior_units": 1306,
+              "prior_share_pct": 0.42,
+              "share_change_pp": -0.07,
+              "unit_growth_pct": 4.98,
+              "listed_companies": []
+            },
+            {
+              "oem": "BMW India",
+              "units": 1216,
+              "share_pct": 0.31,
+              "prior_units": 1208,
+              "prior_share_pct": 0.39,
+              "share_change_pp": -0.08,
+              "unit_growth_pct": 0.66,
+              "listed_companies": []
+            },
+            {
+              "oem": "Jaguar Land Rover India",
+              "units": 478,
+              "share_pct": 0.12,
+              "prior_units": 515,
+              "prior_share_pct": 0.16,
+              "share_change_pp": -0.04,
+              "unit_growth_pct": -7.18,
+              "listed_companies": []
+            },
+            {
+              "oem": "BYD India",
+              "units": 306,
+              "share_pct": 0.08,
+              "prior_units": 278,
+              "prior_share_pct": 0.09,
+              "share_change_pp": -0.01,
+              "unit_growth_pct": 10.07,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 5921,
+              "share_pct": 1.5,
+              "prior_units": 3052,
+              "prior_share_pct": 0.98,
+              "share_change_pp": 0.52,
+              "unit_growth_pct": 94.0,
+              "listed_companies": []
+            }
+          ]
+        },
+        "CV": {
+          "category": "CV",
+          "label": "Commercial Vehicles",
+          "rows": [
+            {
+              "oem": "Tata Motors",
+              "units": 35900,
+              "share_pct": 35.61,
+              "prior_units": 27184,
+              "prior_share_pct": 34.75,
+              "share_change_pp": 0.86,
+              "unit_growth_pct": 32.06,
+              "listed_companies": [
+                "Tata Motors"
+              ]
+            },
+            {
+              "oem": "Mahindra Group",
+              "units": 27014,
+              "share_pct": 26.79,
+              "prior_units": 21168,
+              "prior_share_pct": 27.06,
+              "share_change_pp": -0.27,
+              "unit_growth_pct": 27.62,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "Ashok Leyland Group",
+              "units": 18619,
+              "share_pct": 18.47,
+              "prior_units": 14606,
+              "prior_share_pct": 18.67,
+              "share_change_pp": -0.2,
+              "unit_growth_pct": 27.48,
+              "listed_companies": [
+                "Ashok Leyland"
+              ]
+            },
+            {
+              "oem": "VE Commercial Vehicles",
+              "units": 8263,
+              "share_pct": 8.2,
+              "prior_units": 6356,
+              "prior_share_pct": 8.13,
+              "share_change_pp": 0.07,
+              "unit_growth_pct": 30.0,
+              "listed_companies": [
+                "Eicher Motors"
+              ]
+            },
+            {
+              "oem": "Maruti Suzuki",
+              "units": 4489,
+              "share_pct": 4.45,
+              "prior_units": 3679,
+              "prior_share_pct": 4.7,
+              "share_change_pp": -0.25,
+              "unit_growth_pct": 22.02,
+              "listed_companies": [
+                "Maruti Suzuki"
+              ]
+            },
+            {
+              "oem": "Daimler India Commercial Vehicles",
+              "units": 2389,
+              "share_pct": 2.37,
+              "prior_units": 1713,
+              "prior_share_pct": 2.19,
+              "share_change_pp": 0.18,
+              "unit_growth_pct": 39.46,
+              "listed_companies": []
+            },
+            {
+              "oem": "Force Motors",
+              "units": 2097,
+              "share_pct": 2.08,
+              "prior_units": 2002,
+              "prior_share_pct": 2.56,
+              "share_change_pp": -0.48,
+              "unit_growth_pct": 4.75,
+              "listed_companies": []
+            },
+            {
+              "oem": "SML Isuzu",
+              "units": 1066,
+              "share_pct": 1.06,
+              "prior_units": 993,
+              "prior_share_pct": 1.27,
+              "share_change_pp": -0.21,
+              "unit_growth_pct": 7.35,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 983,
+              "share_pct": 0.98,
+              "prior_units": 518,
+              "prior_share_pct": 0.66,
+              "share_change_pp": 0.32,
+              "unit_growth_pct": 89.77,
+              "listed_companies": []
+            }
+          ]
+        },
+        "TRACTOR": {
+          "category": "TRACTOR",
+          "label": "Tractors",
+          "rows": [
+            {
+              "oem": "Mahindra Tractors",
+              "units": 21471,
+              "share_pct": 24.01,
+              "prior_units": 15519,
+              "prior_share_pct": 23.66,
+              "share_change_pp": 0.35,
+              "unit_growth_pct": 38.35,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "Swaraj",
+              "units": 16897,
+              "share_pct": 18.9,
+              "prior_units": 12751,
+              "prior_share_pct": 19.44,
+              "share_change_pp": -0.54,
+              "unit_growth_pct": 32.52,
+              "listed_companies": [
+                "Mahindra & Mahindra"
+              ]
+            },
+            {
+              "oem": "International Tractors",
+              "units": 11564,
+              "share_pct": 12.93,
+              "prior_units": 8351,
+              "prior_share_pct": 12.73,
+              "share_change_pp": 0.2,
+              "unit_growth_pct": 38.47,
+              "listed_companies": []
+            },
+            {
+              "oem": "Escorts Kubota",
+              "units": 10125,
+              "share_pct": 11.32,
+              "prior_units": 6582,
+              "prior_share_pct": 10.04,
+              "share_change_pp": 1.28,
+              "unit_growth_pct": 53.83,
+              "listed_companies": [
+                "Escorts Kubota"
+              ]
+            },
+            {
+              "oem": "TAFE",
+              "units": 8892,
+              "share_pct": 9.94,
+              "prior_units": 6580,
+              "prior_share_pct": 10.03,
+              "share_change_pp": -0.09,
+              "unit_growth_pct": 35.14,
+              "listed_companies": []
+            },
+            {
+              "oem": "John Deere India",
+              "units": 6673,
+              "share_pct": 7.46,
+              "prior_units": 5057,
+              "prior_share_pct": 7.71,
+              "share_change_pp": -0.25,
+              "unit_growth_pct": 31.96,
+              "listed_companies": []
+            },
+            {
+              "oem": "Eicher Tractors",
+              "units": 5546,
+              "share_pct": 6.2,
+              "prior_units": 4092,
+              "prior_share_pct": 6.24,
+              "share_change_pp": -0.04,
+              "unit_growth_pct": 35.53,
+              "listed_companies": []
+            },
+            {
+              "oem": "CNH Industrial",
+              "units": 4158,
+              "share_pct": 4.65,
+              "prior_units": 2691,
+              "prior_share_pct": 4.1,
+              "share_change_pp": 0.55,
+              "unit_growth_pct": 54.52,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 4092,
+              "share_pct": 4.58,
+              "prior_units": 3956,
+              "prior_share_pct": 6.03,
+              "share_change_pp": -1.45,
+              "unit_growth_pct": 3.44,
+              "listed_companies": []
+            }
+          ]
+        },
+        "CE": {
+          "category": "CE",
+          "label": "Construction Equipment",
+          "rows": [
+            {
+              "oem": "JCB India",
+              "units": 3377,
+              "share_pct": 50.25,
+              "prior_units": 3150,
+              "prior_share_pct": 46.3,
+              "share_change_pp": 3.95,
+              "unit_growth_pct": 7.21,
+              "listed_companies": []
+            },
+            {
+              "oem": "Action Construction Equipment",
+              "units": 699,
+              "share_pct": 10.4,
+              "prior_units": 850,
+              "prior_share_pct": 12.49,
+              "share_change_pp": -2.09,
+              "unit_growth_pct": -17.76,
+              "listed_companies": [
+                "Action Construction Equipment"
+              ]
+            },
+            {
+              "oem": "Ajax Engineering",
+              "units": 470,
+              "share_pct": 6.99,
+              "prior_units": 469,
+              "prior_share_pct": 6.89,
+              "share_change_pp": 0.1,
+              "unit_growth_pct": 0.21,
+              "listed_companies": []
+            },
+            {
+              "oem": "Escorts Kubota CE",
+              "units": 443,
+              "share_pct": 6.59,
+              "prior_units": 427,
+              "prior_share_pct": 6.28,
+              "share_change_pp": 0.31,
+              "unit_growth_pct": 3.75,
+              "listed_companies": [
+                "Escorts Kubota"
+              ]
+            },
+            {
+              "oem": "Bull Machines",
+              "units": 223,
+              "share_pct": 3.32,
+              "prior_units": 179,
+              "prior_share_pct": 2.63,
+              "share_change_pp": 0.69,
+              "unit_growth_pct": 24.58,
+              "listed_companies": []
+            },
+            {
+              "oem": "CNH Construction Equipment",
+              "units": 176,
+              "share_pct": 2.62,
+              "prior_units": 178,
+              "prior_share_pct": 2.62,
+              "share_change_pp": 0.0,
+              "unit_growth_pct": -1.12,
+              "listed_companies": []
+            },
+            {
+              "oem": "Tata Hitachi",
+              "units": 170,
+              "share_pct": 2.53,
+              "prior_units": 190,
+              "prior_share_pct": 2.79,
+              "share_change_pp": -0.26,
+              "unit_growth_pct": -10.53,
+              "listed_companies": []
+            },
+            {
+              "oem": "Caterpillar India",
+              "units": 145,
+              "share_pct": 2.16,
+              "prior_units": 133,
+              "prior_share_pct": 1.95,
+              "share_change_pp": 0.21,
+              "unit_growth_pct": 9.02,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 704,
+              "share_pct": 10.47,
+              "prior_units": 901,
+              "prior_share_pct": 13.24,
+              "share_change_pp": -2.77,
+              "unit_growth_pct": -21.86,
+              "listed_companies": []
+            }
+          ]
+        }
+      },
+      "latest_subsegments": {
+        "3W": [
+          {
+            "label": "E-rickshaw passenger",
+            "units": 34848,
+            "mom_pct": -21.61,
+            "yoy_pct": 7.75
+          },
+          {
+            "label": "E-rickshaw goods",
+            "units": 7268,
+            "mom_pct": -5.07,
+            "yoy_pct": 13.9
+          },
+          {
+            "label": "3W goods",
+            "units": 14335,
+            "mom_pct": 0.96,
+            "yoy_pct": 32.34
+          },
+          {
+            "label": "3W passenger",
+            "units": 60572,
+            "mom_pct": -0.21,
+            "yoy_pct": 36.01
+          },
+          {
+            "label": "3W personal",
+            "units": 107,
+            "mom_pct": -12.3,
+            "yoy_pct": 50.7
+          }
+        ],
+        "CV": [
+          {
+            "label": "LCV",
+            "units": 57547,
+            "mom_pct": -12.15,
+            "yoy_pct": 24.39
+          },
+          {
+            "label": "MCV",
+            "units": 8089,
+            "mom_pct": 5.77,
+            "yoy_pct": 39.54
+          },
+          {
+            "label": "HCV",
+            "units": 35127,
+            "mom_pct": 2.45,
+            "yoy_pct": 34.74
+          },
+          {
+            "label": "Others",
+            "units": 57,
+            "mom_pct": 23.91,
+            "yoy_pct": -35.96
+          }
+        ]
+      },
+      "latest_channel_pulse": {
+        "inventory_days_pv": "27-29",
+        "growth_expectation_next_month_pct": 75.51,
+        "growth_expectation_next_three_months_pct": 67.35,
+        "liquidity_good_pct": 54.59,
+        "sentiment_good_pct": 58.67,
+        "bullets": [
+          "February 2026 was the best-ever February for 2W, 3W, CV, PV, tractors and total retail.",
+          "Rural demand stayed strong, especially in tractors and passenger vehicles.",
+          "PV inventory reduced further toward the healthy 21-day benchmark, indicating better wholesale-retail alignment.",
+          "Dealer sentiment for March remained cautiously optimistic, supported by festivals and year-end buying."
+        ],
+        "urban_rural_growth": [
+          {
+            "category": "2W",
+            "urban_mom_pct": -9.49,
+            "urban_yoy_pct": 28.96,
+            "rural_mom_pct": -7.23,
+            "rural_yoy_pct": 22.16
+          },
+          {
+            "category": "3W",
+            "urban_mom_pct": -6.11,
+            "urban_yoy_pct": 13.2,
+            "rural_mom_pct": -9.25,
+            "rural_yoy_pct": 35.28
+          },
+          {
+            "category": "PV",
+            "urban_mom_pct": -22.92,
+            "urban_yoy_pct": 21.12,
+            "rural_mom_pct": -23.41,
+            "rural_yoy_pct": 34.21
+          },
+          {
+            "category": "CV",
+            "urban_mom_pct": -6.84,
+            "urban_yoy_pct": 25.78,
+            "rural_mom_pct": -5.54,
+            "rural_yoy_pct": 32.21
+          },
+          {
+            "category": "TRACTOR",
+            "urban_mom_pct": -29.35,
+            "urban_yoy_pct": 30.55,
+            "rural_mom_pct": -20.3,
+            "rural_yoy_pct": 37.68
+          },
+          {
+            "category": "CE",
+            "urban_mom_pct": -4.18,
+            "urban_yoy_pct": -4.52,
+            "rural_mom_pct": 0.46,
+            "rural_yoy_pct": 1.57
+          },
+          {
+            "category": "TOTAL",
+            "urban_mom_pct": -12.82,
+            "urban_yoy_pct": 26.12,
+            "rural_mom_pct": -10.38,
+            "rural_yoy_pct": 25.21
+          }
+        ]
+      },
+      "latest_snapshot": {
+        "total_units": 2409362,
+        "total_yoy_pct": 25.62,
+        "total_mom_pct": -11.5,
+        "ev_penetration_pct": 8.05,
+        "ev_units": 193921,
+        "top_category_yoy": {
+          "category": "TRACTOR",
+          "label": "Tractors",
+          "units": 89418,
+          "mom_pct": -22.08,
+          "yoy_pct": 36.35,
+          "share_pct": 3.71
+        },
+        "bottom_category_yoy": {
+          "category": "CE",
+          "label": "Construction Equipment",
+          "units": 6721,
+          "mom_pct": -1.65,
+          "yoy_pct": -1.22,
+          "share_pct": 0.28
+        },
+        "inventory_days": {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "days_low": 27,
+          "days_high": 29,
+          "days_mid": 28.0
+        },
+        "monthly_lookup": {
+          "2025-10": {
+            "month": "2025-10",
+            "label": "Oct 2025",
+            "source_url": "https://fada.in/images/press-release/1690d68d7a2e6cFADA%20releases%20October%202025%20%26%2042-Days%20Festive%20Vehicle%20Retail%20Data.pdf",
+            "release_date": "2025-11-07",
+            "total_units": 4023923,
+            "total_mom_pct": 120.21,
+            "total_yoy_pct": 40.53,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 557373,
+                "mom_pct": 86.18,
+                "yoy_pct": 11.35,
+                "share_pct": 13.85
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 3149846,
+                "mom_pct": 144.6,
+                "yoy_pct": 51.76,
+                "share_pct": 78.28
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 129517,
+                "mom_pct": 31.0,
+                "yoy_pct": 5.43,
+                "share_pct": 3.22
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 107841,
+                "mom_pct": 49.52,
+                "yoy_pct": 17.69,
+                "share_pct": 2.68
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 73577,
+                "mom_pct": 13.57,
+                "yoy_pct": 14.22,
+                "share_pct": 1.83
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 5769,
+                "mom_pct": 29.41,
+                "yoy_pct": -30.49,
+                "share_pct": 0.14
+              }
+            ]
+          },
+          "2025-11": {
+            "month": "2025-11",
+            "label": "Nov 2025",
+            "source_url": "https://fada.in/images/press-release/1693661428b2e7FADA%20releases%20November%202025%20Vehicle%20Retail%20Data.pdf",
+            "release_date": "2025-12-07",
+            "total_units": 3300832,
+            "total_mom_pct": -17.97,
+            "total_yoy_pct": 2.14,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 394152,
+                "mom_pct": -28.88,
+                "yoy_pct": 19.71,
+                "share_pct": 11.94
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 2546184,
+                "mom_pct": -19.16,
+                "yoy_pct": -3.1,
+                "share_pct": 77.14
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 133951,
+                "mom_pct": 3.42,
+                "yoy_pct": 23.67,
+                "share_pct": 4.06
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 94935,
+                "mom_pct": -14.46,
+                "yoy_pct": 19.94,
+                "share_pct": 2.88
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 126033,
+                "mom_pct": 71.29,
+                "yoy_pct": 56.55,
+                "share_pct": 3.82
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 5577,
+                "mom_pct": -3.33,
+                "yoy_pct": -16.51,
+                "share_pct": 0.17
+              }
+            ]
+          },
+          "2025-12": {
+            "month": "2025-12",
+            "label": "Dec 2025",
+            "source_url": "https://fada.in/images/press-release/1695cc82c07602FADA%20releases%20CY%202025%20and%20December%202025%20Vehicle%20Retail%20Data.pdf",
+            "release_date": "2026-01-06",
+            "total_units": 2028821,
+            "total_mom_pct": -38.54,
+            "total_yoy_pct": 14.63,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 379671,
+                "mom_pct": -4.24,
+                "yoy_pct": 26.64,
+                "share_pct": 18.71
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1316891,
+                "mom_pct": -48.28,
+                "yoy_pct": 9.5,
+                "share_pct": 64.91
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 127772,
+                "mom_pct": -4.61,
+                "yoy_pct": 36.1,
+                "share_pct": 6.3
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 83666,
+                "mom_pct": -9.65,
+                "yoy_pct": 24.6,
+                "share_pct": 4.12
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 115001,
+                "mom_pct": -8.75,
+                "yoy_pct": 15.8,
+                "share_pct": 5.67
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 5820,
+                "mom_pct": 4.36,
+                "yoy_pct": -18.54,
+                "share_pct": 0.29
+              }
+            ]
+          },
+          "2026-01": {
+            "month": "2026-01",
+            "label": "Jan 2026",
+            "source_url": "https://fada.in/images/press-release/1698aa6afacdf0FADA%20releases%20January%202026%20Vehicle%20Retail%20Data.pdf",
+            "release_date": "2026-02-10",
+            "total_units": 2722558,
+            "total_mom_pct": 34.19,
+            "total_yoy_pct": 17.61,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 513475,
+                "mom_pct": 35.24,
+                "yoy_pct": 7.22,
+                "share_pct": 18.86
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1852870,
+                "mom_pct": 40.7,
+                "yoy_pct": 20.82,
+                "share_pct": 68.06
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 127134,
+                "mom_pct": -0.5,
+                "yoy_pct": 18.8,
+                "share_pct": 4.67
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 107486,
+                "mom_pct": 28.47,
+                "yoy_pct": 15.07,
+                "share_pct": 3.95
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 114759,
+                "mom_pct": -0.21,
+                "yoy_pct": 22.89,
+                "share_pct": 4.22
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 6834,
+                "mom_pct": 17.42,
+                "yoy_pct": -21.09,
+                "share_pct": 0.25
+              }
+            ]
+          },
+          "2026-02": {
+            "month": "2026-02",
+            "label": "Feb 2026",
+            "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+            "release_date": "2026-03-05",
+            "total_units": 2409362,
+            "total_mom_pct": -11.5,
+            "total_yoy_pct": 25.62,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 394768,
+                "mom_pct": -23.12,
+                "yoy_pct": 26.12,
+                "share_pct": 16.38
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1700505,
+                "mom_pct": -8.22,
+                "yoy_pct": 25.02,
+                "share_pct": 70.58
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 117130,
+                "mom_pct": -7.87,
+                "yoy_pct": 24.39,
+                "share_pct": 4.86
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 100820,
+                "mom_pct": -6.2,
+                "yoy_pct": 28.89,
+                "share_pct": 4.18
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 89418,
+                "mom_pct": -22.08,
+                "yoy_pct": 36.35,
+                "share_pct": 3.71
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 6721,
+                "mom_pct": -1.65,
+                "yoy_pct": -1.22,
+                "share_pct": 0.28
+              }
+            ]
+          }
+        },
+        "latest_categories": {
+          "PV": {
+            "category": "PV",
+            "label": "Passenger Vehicles",
+            "units": 394768,
+            "mom_pct": -23.12,
+            "yoy_pct": 26.12,
+            "share_pct": 16.38
+          },
+          "2W": {
+            "category": "2W",
+            "label": "Two-Wheelers",
+            "units": 1700505,
+            "mom_pct": -8.22,
+            "yoy_pct": 25.02,
+            "share_pct": 70.58
+          },
+          "3W": {
+            "category": "3W",
+            "label": "Three-Wheelers",
+            "units": 117130,
+            "mom_pct": -7.87,
+            "yoy_pct": 24.39,
+            "share_pct": 4.86
+          },
+          "CV": {
+            "category": "CV",
+            "label": "Commercial Vehicles",
+            "units": 100820,
+            "mom_pct": -6.2,
+            "yoy_pct": 28.89,
+            "share_pct": 4.18
+          },
+          "TRACTOR": {
+            "category": "TRACTOR",
+            "label": "Tractors",
+            "units": 89418,
+            "mom_pct": -22.08,
+            "yoy_pct": 36.35,
+            "share_pct": 3.71
+          },
+          "CE": {
+            "category": "CE",
+            "label": "Construction Equipment",
+            "units": 6721,
+            "mom_pct": -1.65,
+            "yoy_pct": -1.22,
+            "share_pct": 0.28
+          }
+        }
+      }
+    },
+    "registration": {
+      "available": false,
+      "title": "Registration Lens",
+      "hidden_reason": "No validated Vahan import found in data/vahan."
+    },
+    "wholesale": {
+      "available": true,
+      "title": "Wholesale Lens",
+      "source_meta": {
+        "name": "SIAM",
+        "latest_month": "2026-02",
+        "latest_release_date": "2026-03-13",
+        "url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
+        "note": "Monthly performance page provides production totals and domestic sales for PV, 2W and 3W. SIAM notes that BMW, Mercedes, JLR and Volvo Auto data are excluded from regular PV reporting, with Tata Motors domestic PV data included only in the monthly note."
+      },
+      "latest_month": "2026-02",
+      "months": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "release_date": "2025-11-14",
+          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=592",
+          "production_total": 2801412,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 460739,
+              "yoy_pct": 17.2
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 2210727,
+              "yoy_pct": 2.1
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 81288,
+              "yoy_pct": 5.9
+            }
+          ],
+          "domestic_total": 2752754
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "release_date": "2025-12-12",
+          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=48&pgidtrail=50&pid=593",
+          "production_total": 2943456,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 412405,
+              "yoy_pct": 18.7
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1944475,
+              "yoy_pct": 21.2
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 71999,
+              "yoy_pct": 21.3
+            }
+          ],
+          "domestic_total": 2428879
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "release_date": "2026-01-13",
+          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=595",
+          "production_total": 2633506,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 399216,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1541036,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 61924,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 2002176
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "release_date": "2026-02-13",
+          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=597",
+          "production_total": 2927394,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 449616,
+              "yoy_pct": 12.6
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1925603,
+              "yoy_pct": 26.2
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 75725,
+              "yoy_pct": 30.2
+            }
+          ],
+          "domestic_total": 2450944
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "release_date": "2026-03-13",
+          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
+          "production_total": 2864612,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 417705,
+              "yoy_pct": 10.6
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1871406,
+              "yoy_pct": 35.2
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 74573,
+              "yoy_pct": 29.0
+            }
+          ],
+          "domestic_total": 2363684
+        }
+      ],
+      "latest_snapshot": {
+        "month": "2026-02",
+        "label": "Feb 2026",
+        "release_date": "2026-03-13",
+        "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
+        "production_total": 2864612,
+        "domestic_sales": [
+          {
+            "category": "PV",
+            "label": "Passenger Vehicles",
+            "units": 417705,
+            "yoy_pct": 10.6
+          },
+          {
+            "category": "2W",
+            "label": "Two-Wheelers",
+            "units": 1871406,
+            "yoy_pct": 35.2
+          },
+          {
+            "category": "3W",
+            "label": "Three-Wheelers",
+            "units": 74573,
+            "yoy_pct": 29.0
+          }
+        ],
+        "domestic_total": 2363684
+      },
+      "retail_vs_wholesale": [
+        {
+          "category": "PV",
+          "label": "Passenger Vehicles",
+          "retail_units": 394768,
+          "wholesale_units": 417705,
+          "gap_units": -22937,
+          "ratio_pct": 94.5
+        },
+        {
+          "category": "2W",
+          "label": "Two-Wheelers",
+          "retail_units": 1700505,
+          "wholesale_units": 1871406,
+          "gap_units": -170901,
+          "ratio_pct": 90.9
+        }
+      ],
+      "quarter_summary": {
+        "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=595",
+        "production_total": 8836517,
+        "domestic_sales": {
+          "PV": {
+            "units": 1276073,
+            "yoy_pct": 20.6
+          },
+          "CV": {
+            "units": 290085,
+            "yoy_pct": 21.5
+          },
+          "3W": {
+            "units": 215211,
+            "yoy_pct": 14.0
+          },
+          "2W": {
+            "units": 5696238,
+            "yoy_pct": 16.9
+          }
+        }
+      },
+      "calendar_year_summary": {
+        "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=595",
+        "domestic_sales": {
+          "PV": {
+            "units": 4489717,
+            "yoy_pct": 5.0
+          },
+          "CV": {
+            "units": 1027877,
+            "yoy_pct": 7.7
+          },
+          "3W": {
+            "units": 788429,
+            "yoy_pct": 8.2
+          },
+          "2W": {
+            "units": 20500639,
+            "yoy_pct": 4.9
+          }
+        }
+      }
+    },
+    "components": {
+      "available": true,
+      "title": "Components",
+      "source_meta": {
+        "name": "ACMA",
+        "period": "FY2024-25",
+        "latest_release_date": "2025-07-08",
+        "url": "https://www.acma.in/uploads/press-release/Press%20Release%20FY25.pdf",
+        "note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
+      },
+      "headline": "Indian auto component industry clocks turnover of Rs 6.73 lakh crore in FY25.",
+      "metrics": [
+        {
+          "label": "Industry turnover",
+          "value": "Rs 6.73 lakh crore",
+          "delta": "+9.6% YoY"
+        },
+        {
+          "label": "OEM supplies",
+          "value": "Rs 5.70 lakh crore",
+          "delta": "+10% YoY"
+        },
+        {
+          "label": "Exports",
+          "value": "USD 22.9 billion",
+          "delta": "+8.0% YoY"
+        },
+        {
+          "label": "Imports",
+          "value": "USD 22.4 billion",
+          "delta": "+7.3% YoY"
+        },
+        {
+          "label": "Trade surplus",
+          "value": "USD 453 million",
+          "delta": "vs USD 300 million in FY24"
+        },
+        {
+          "label": "Aftermarket",
+          "value": "Rs 99,948 crore",
+          "delta": "+6% YoY"
+        }
+      ],
+      "insights": [
+        "Domestic OEM demand remained the largest growth driver, supported by about 8% growth in vehicle production.",
+        "Exports stayed healthy despite geopolitical disruptions, with North America still the largest market and Asia the fastest-growing region.",
+        "Aftermarket demand stayed firm on a larger used-vehicle base, formalisation of repairs, and rising e-commerce penetration.",
+        "ACMA specifically flags rare-earth magnet availability as a strategic watchpoint for EV and mobility manufacturing."
+      ],
+      "listed_beneficiaries": [
+        {
+          "company": "Tata Motors",
+          "summary": "Key listed proxy for PV, CV and electric passenger vehicles.",
+          "categories": [
+            "PV",
+            "CV"
+          ]
+        },
+        {
+          "company": "Mahindra & Mahindra",
+          "summary": "Diversified exposure across UVs, LCVs, 3W last-mile mobility and tractors.",
+          "categories": [
+            "PV",
+            "3W",
+            "CV",
+            "TRACTOR"
+          ]
+        },
+        {
+          "company": "TVS Motor",
+          "summary": "Broad 2W exposure plus 3W participation and e-2W optionality.",
+          "categories": [
+            "2W",
+            "3W"
+          ]
+        },
+        {
+          "company": "Bajaj Auto",
+          "summary": "Strong listed proxy for both motorcycles and 3W passenger/goods demand.",
+          "categories": [
+            "2W",
+            "3W"
+          ]
+        },
+        {
+          "company": "Atul Auto",
+          "summary": "Listed 3W niche exposure with potential benefit from last-mile demand.",
+          "categories": [
+            "3W"
+          ]
+        },
+        {
+          "company": "Exide Industries",
+          "summary": "Battery beneficiary from EV penetration and replacement demand.",
+          "categories": [
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Amara Raja Energy & Mobility",
+          "summary": "Battery and energy-storage proxy with EV transition leverage.",
+          "categories": [
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Sona BLW Precision Forgings",
+          "summary": "EV drivetrain content proxy tied to electrification mix gains.",
+          "categories": [
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Bharat Forge",
+          "summary": "CV cycle plus component export and EV platform optionality.",
+          "categories": [
+            "CV",
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Uno Minda",
+          "summary": "Broad content supplier across lighting, switches and new mobility programs.",
+          "categories": [
+            "PV",
+            "2W",
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Samvardhana Motherson",
+          "summary": "Large diversified component export proxy with OEM cycle sensitivity.",
+          "categories": [
+            "PV",
+            "CV",
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "JBM Auto",
+          "summary": "Bus and electric mobility exposure with public transport optionality.",
+          "categories": [
+            "CV",
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Olectra Greentech",
+          "summary": "Electric bus proxy rather than broad auto demand beta.",
+          "categories": [
+            "CV",
+            "EV_SUPPLY"
+          ]
+        },
+        {
+          "company": "Greaves Cotton",
+          "summary": "Small but relevant e-mobility and last-mile ecosystem proxy.",
+          "categories": [
+            "2W",
+            "3W",
+            "EV_SUPPLY"
+          ]
+        }
+      ]
+    }
+  },
+  "insights": [
+    {
+      "title": "Segment speed",
+      "body": "Tractors were the fastest-growing retail category in Feb 2026 at +36.35% YoY, while Construction Equipment stayed weakest at -1.22% YoY.",
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "title": "OEM share shifts",
+      "body": "In PV retail, Tata Motors gained the most share at +1.68 pp YoY, while Hyundai Motor India lost -1.03 pp. In 2W, the biggest gainer was Honda Motorcycle & Scooter India at +1.11 pp, while Hero MotoCorp was the sharpest loser at -1.51 pp.",
+      "tags": [
+        "retail",
+        "oem"
+      ]
+    },
+    {
+      "title": "Retail vs wholesale",
+      "body": "PV retail ran at 94.5% of wholesale in February 2026, versus 90.9% for 2W. The tighter PV ratio sits alongside FADA's 27-29 day inventory signal, suggesting channel conditions have improved materially.",
+      "tags": [
+        "retail",
+        "wholesale"
+      ]
+    },
+    {
+      "title": "EV transition",
+      "body": "Derived EV penetration in February 2026 was 8.05% of retail volume. The strongest EV mix remains in Three-Wheelers at 56.70%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
+      "tags": [
+        "ev"
+      ]
+    },
+    {
+      "title": "Component read-across",
+      "body": "ACMA's FY25 review still points to a healthy ancillary backdrop: OEM supplies grew 10% YoY, exports grew 8%, and aftermarket grew 6%. That supports continued interest in export-capable, value-added suppliers even if near-term OEM mix shifts month to month.",
+      "tags": [
+        "components"
+      ]
+    }
+  ],
+  "company_map": [
+    {
+      "company": "Action Construction Equipment",
+      "summary": "Construction equipment demand proxy within official FADA data.",
+      "categories": [
+        "CE"
+      ],
+      "category_labels": [
+        "Construction Equipment"
+      ],
+      "lens": [
+        "retail"
+      ]
+    },
+    {
+      "company": "Amara Raja Energy & Mobility",
+      "summary": "Battery and energy-storage proxy with EV transition leverage.",
+      "categories": [
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev",
+        "components"
+      ]
+    },
+    {
+      "company": "Ashok Leyland",
+      "summary": "Pure-play listed CV proxy with MHCV and bus exposure.",
+      "categories": [
+        "CV"
+      ],
+      "category_labels": [
+        "Commercial Vehicles"
+      ],
+      "lens": [
+        "retail"
+      ]
+    },
+    {
+      "company": "Atul Auto",
+      "summary": "Listed 3W niche exposure with potential benefit from last-mile demand.",
+      "categories": [
+        "3W"
+      ],
+      "category_labels": [
+        "Three-Wheelers"
+      ],
+      "lens": [
+        "retail",
+        "ev"
+      ]
+    },
+    {
+      "company": "Bajaj Auto",
+      "summary": "Strong listed proxy for both motorcycles and 3W passenger/goods demand.",
+      "categories": [
+        "2W",
+        "3W"
+      ],
+      "category_labels": [
+        "Two-Wheelers",
+        "Three-Wheelers"
+      ],
+      "lens": [
+        "retail",
+        "ev"
+      ]
+    },
+    {
+      "company": "Bharat Forge",
+      "summary": "CV cycle plus component export and EV platform optionality.",
+      "categories": [
+        "CV",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Commercial Vehicles",
+        "EV supply chain"
+      ],
+      "lens": [
+        "components"
+      ]
+    },
+    {
+      "company": "Eicher Motors",
+      "summary": "Royal Enfield and VECV make it useful for premium 2W and CV cycles.",
+      "categories": [
+        "2W",
+        "TRACTOR",
+        "CV"
+      ],
+      "category_labels": [
+        "Two-Wheelers",
+        "Tractors",
+        "Commercial Vehicles"
+      ],
+      "lens": [
+        "retail"
+      ]
+    },
+    {
+      "company": "Escorts Kubota",
+      "summary": "Direct listed play on tractors and construction equipment demand.",
+      "categories": [
+        "TRACTOR",
+        "CE"
+      ],
+      "category_labels": [
+        "Tractors",
+        "Construction Equipment"
+      ],
+      "lens": [
+        "retail"
+      ]
+    },
+    {
+      "company": "Exide Industries",
+      "summary": "Battery beneficiary from EV penetration and replacement demand.",
+      "categories": [
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev",
+        "components"
+      ]
+    },
+    {
+      "company": "Greaves Cotton",
+      "summary": "Small but relevant e-mobility and last-mile ecosystem proxy.",
+      "categories": [
+        "2W",
+        "3W",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Two-Wheelers",
+        "Three-Wheelers",
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev",
+        "components"
+      ]
+    },
+    {
+      "company": "Hero MotoCorp",
+      "summary": "Largest listed 2W retail proxy in commuter motorcycles and scooters.",
+      "categories": [
+        "2W"
+      ],
+      "category_labels": [
+        "Two-Wheelers"
+      ],
+      "lens": [
+        "retail"
+      ]
+    },
+    {
+      "company": "Hyundai Motor India",
+      "summary": "Important listed PV benchmark for compact SUVs and premium hatchbacks.",
+      "categories": [
+        "PV"
+      ],
+      "category_labels": [
+        "Passenger Vehicles"
+      ],
+      "lens": [
+        "retail",
+        "wholesale"
+      ]
+    },
+    {
+      "company": "JBM Auto",
+      "summary": "Bus and electric mobility exposure with public transport optionality.",
+      "categories": [
+        "CV",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Commercial Vehicles",
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev",
+        "components"
+      ]
+    },
+    {
+      "company": "Mahindra & Mahindra",
+      "summary": "Diversified exposure across UVs, LCVs, 3W last-mile mobility and tractors.",
+      "categories": [
+        "PV",
+        "3W",
+        "CV",
+        "TRACTOR"
+      ],
+      "category_labels": [
+        "Passenger Vehicles",
+        "Three-Wheelers",
+        "Commercial Vehicles",
+        "Tractors"
+      ],
+      "lens": [
+        "retail",
+        "ev"
+      ]
+    },
+    {
+      "company": "Maruti Suzuki",
+      "summary": "Mass-market PV leader with a smaller LCV presence in retail data.",
+      "categories": [
+        "PV",
+        "CV"
+      ],
+      "category_labels": [
+        "Passenger Vehicles",
+        "Commercial Vehicles"
+      ],
+      "lens": [
+        "retail",
+        "wholesale"
+      ]
+    },
+    {
+      "company": "Olectra Greentech",
+      "summary": "Electric bus proxy rather than broad auto demand beta.",
+      "categories": [
+        "CV",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Commercial Vehicles",
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev"
+      ]
+    },
+    {
+      "company": "Samvardhana Motherson",
+      "summary": "Large diversified component export proxy with OEM cycle sensitivity.",
+      "categories": [
+        "PV",
+        "CV",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Passenger Vehicles",
+        "Commercial Vehicles",
+        "EV supply chain"
+      ],
+      "lens": [
+        "components"
+      ]
+    },
+    {
+      "company": "Sona BLW Precision Forgings",
+      "summary": "EV drivetrain content proxy tied to electrification mix gains.",
+      "categories": [
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "EV supply chain"
+      ],
+      "lens": [
+        "ev",
+        "components"
+      ]
+    },
+    {
+      "company": "TVS Motor",
+      "summary": "Broad 2W exposure plus 3W participation and e-2W optionality.",
+      "categories": [
+        "2W",
+        "3W"
+      ],
+      "category_labels": [
+        "Two-Wheelers",
+        "Three-Wheelers"
+      ],
+      "lens": [
+        "retail",
+        "ev"
+      ]
+    },
+    {
+      "company": "Tata Motors",
+      "summary": "Key listed proxy for PV, CV and electric passenger vehicles.",
+      "categories": [
+        "PV",
+        "CV"
+      ],
+      "category_labels": [
+        "Passenger Vehicles",
+        "Commercial Vehicles"
+      ],
+      "lens": [
+        "retail",
+        "wholesale",
+        "ev"
+      ]
+    },
+    {
+      "company": "Uno Minda",
+      "summary": "Broad content supplier across lighting, switches and new mobility programs.",
+      "categories": [
+        "PV",
+        "2W",
+        "EV_SUPPLY"
+      ],
+      "category_labels": [
+        "Passenger Vehicles",
+        "Two-Wheelers",
+        "EV supply chain"
+      ],
+      "lens": [
+        "components"
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "status": "ok",
+      "message": "FADA retail month continuity validated."
+    },
+    {
+      "status": "ok",
+      "message": "SIAM wholesale month continuity validated."
+    },
+    {
+      "status": "warning",
+      "message": "Registration lens hidden because no validated Vahan import was found."
+    }
+  ],
+  "chart_colors": {
+    "TOTAL": "#f4b06d",
+    "PV": "#8ad8c7",
+    "2W": "#7ca4ff",
+    "3W": "#f28b61",
+    "CV": "#cab0ff",
+    "TRACTOR": "#d7c46f",
+    "CE": "#9aa4b2",
+    "EV": "#54d3a1",
+    "Hybrid": "#c9d971",
+    "CNG / LPG": "#6bc3ff",
+    "Petrol / Ethanol": "#f3c98b",
+    "Diesel": "#6f7f95",
+    "Hydrogen": "#bfcaf5"
+  }
+}

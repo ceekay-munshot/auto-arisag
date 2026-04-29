@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arcane Chemical Investor Dashboard</title>
+    <meta name="description" content="Investor dashboard build for Arcane Chemical. Data-backed modules are shown only when validated source data is available.">
+    <link rel="stylesheet" href="./assets/app.css?v=20260328112204">
+    <script>
+      window.__BUILD_ID__ = "20260328112204";
+    </script>
+  </head>
+  <body>
+    <div class="page-glow page-glow-a" aria-hidden="true"></div>
+    <div class="page-glow page-glow-b" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <header class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Investor Dashboard</p>
+          <h1 id="dashboard-title">Arcane Chemical Investor Dashboard</h1>
+          <p id="dashboard-subtitle" class="hero-subtitle">This build only shows modules backed by validated data. No financial period is currently active. Registered sources: 0.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-chip" id="build-meta">Build 20260328112204 • 28 Mar 2026, 04:52 pm</div>
+          <div class="meta-chip" id="environment-meta">Static bundle</div>
+          <div class="meta-chip" id="update-pill" hidden="">Waiting for change</div>
+        </div>
+      </header>
+
+      <section class="control-bar" id="control-bar" aria-label="Dashboard controls">
+        <div class="control-wrap" id="period-wrap" hidden="">
+          <label class="control-label" for="period-select">Period</label>
+          <select id="period-select"></select>
+        </div>
+        <div class="control-status" id="control-status">No period filter is shown because the current build has no validated time-series data yet.</div>
+      </section>
+
+      <main class="content-grid" id="main-content">
+        <section class="panel panel-profile" id="profile-panel">
+          <div class="panel-header">
+            <p class="panel-kicker">Company</p>
+            <h2>Profile</h2>
+          </div>
+          <div class="profile-grid" id="profile-grid">
+    <article class="profile-card"><p class="profile-note">Add a sourced company description in <code>data/raw/company_profile.json</code> to replace this onboarding note.</p></article>
+    <div class="info-list">
+      
+            <div class="info-row">
+              <span class="info-label">Ticker</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Exchange</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Website</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Location</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Sector</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Coverage date</span>
+              <span class="info-value">Not added</span>
+            </div>
+          
+            <div class="info-row">
+              <span class="info-label">Profile sources</span>
+              <span class="info-value">Not linked</span>
+            </div>
+          
+    </div>
+  </div>
+        </section>
+
+        <section class="panel" id="overview-panel" hidden="">
+          <div class="panel-header">
+            <p class="panel-kicker">Current Selection</p>
+            <h2>Key Metrics</h2>
+          </div>
+          <div class="metric-grid" id="metric-grid"></div>
+        </section>
+
+        <section class="panel panel-trend" id="trend-panel" hidden="">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Trend</p>
+              <h2 id="trend-title">Financial Trend</h2>
+            </div>
+            <div class="segmented-control" id="metric-toggle" role="tablist" aria-label="Metric selector"></div>
+          </div>
+          <div id="trend-chart" class="trend-chart"></div>
+        </section>
+
+        <section class="panel" id="table-panel" hidden="">
+          <div class="panel-header">
+            <p class="panel-kicker">Structured View</p>
+            <h2>Financial Table</h2>
+          </div>
+          <div id="table-wrap" class="table-wrap"></div>
+        </section>
+
+        <section class="panel" id="commentary-panel" hidden="">
+          <div class="panel-header">
+            <p class="panel-kicker">Context</p>
+            <h2>Source-Linked Commentary</h2>
+          </div>
+          <div class="commentary-list" id="commentary-list"></div>
+        </section>
+
+        <section class="panel" id="sources-panel" hidden="">
+          <div class="panel-header">
+            <p class="panel-kicker">Audit Trail</p>
+            <h2>Sources</h2>
+          </div>
+          <div class="sources-list" id="sources-list"></div>
+        </section>
+
+        <section class="panel panel-empty" id="empty-panel">
+          <div class="panel-header">
+            <p class="panel-kicker">Build Status</p>
+            <h2>Dashboard Awaiting Validated Inputs</h2>
+          </div>
+          <div id="empty-message" class="empty-message">
+    <div class="empty-card">
+      <p>This build is working, but it does not yet have enough validated source data to render investor modules truthfully.</p>
+      <p class="source-note">Populate <code>data/raw/financials.json</code>, <code>data/raw/commentary.json</code>, and <code>data/raw/sources.json</code>, then rerun the builder.</p>
+    </div>
+  </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="loading-mask is-hidden" id="loading-mask" aria-live="polite" aria-busy="false">
+      <div class="loading-card">
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="loading-text">Loading...</p>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript-banner">
+        JavaScript is required because the dashboard renders from the canonical JSON build output.
+      </div>
+    </noscript>
+
+    <script type="module" src="./assets/app.js?v=20260328112204"></script>
+  
+
+</body></html>

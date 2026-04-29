@@ -1,0 +1,1 @@
+{"query":"SELECT \"year\", SUM(\"value\") AS total FROM \"gp_hzE0qJslsJ1r\" WHERE \"maker\" = 'HERO MOTOCORP LTD' GROUP BY \"year\" ORDER BY \"year\" DESC LIMIT 3"}

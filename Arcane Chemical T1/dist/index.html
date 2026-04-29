@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archean Chemical Industries Limited Research Dashboard</title>
+    <meta
+      name="description"
+      content="Institutional Archean research dashboard covering bromine, industrial salt, operating assets, trade exposure, scenarios and source-backed methodology."
+    >
+    <link rel="stylesheet" href="./assets/app.css?v=20260416115524">
+    <script>
+      window.__BUILD_ID__ = "20260416115524";
+    </script>
+  </head>
+  <body>
+    <div class="page-gradient page-gradient-a" aria-hidden="true"></div>
+    <div class="page-gradient page-gradient-b" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Buy-Side Research</p>
+          <h1 id="brand-title">Archean Research Dashboard</h1>
+          <p class="brand-copy" id="brand-copy">Loading latest build...</p>
+        </div>
+        <nav class="sidebar-nav" id="sidebar-nav" aria-label="Primary navigation"></nav>
+        <div class="sidebar-footer">
+          <div class="meta-pill" id="source-stamp">Source registry loading</div>
+          <div class="meta-pill" id="build-stamp">Build loading</div>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Archean Chemical Industries Limited</p>
+            <h2 id="hero-title">Institutional dashboard loading</h2>
+            <div class="hero-text" id="hero-text">
+              Building the latest source-backed operating view...
+            </div>
+            <div class="hero-updates" id="hero-updates"></div>
+          </div>
+          <div class="hero-metrics" id="hero-metrics"></div>
+        </header>
+
+        <section class="toolbar">
+          <div class="toolbar-status" id="toolbar-status">Waiting for dashboard payload...</div>
+          <div class="toolbar-actions">
+            <select id="scenario-select" aria-label="Scenario preset"></select>
+            <button class="secondary-button" id="live-refresh" type="button" hidden>Refresh live data</button>
+            <button class="secondary-button" id="download-all" type="button">Export key CSVs</button>
+          </div>
+        </section>
+
+        <main class="page-container" id="page-container"></main>
+      </div>
+    </div>
+
+    <div class="source-modal is-hidden" id="source-modal" aria-hidden="true">
+      <div class="source-modal__backdrop" data-source-close></div>
+      <div class="source-modal__panel" role="dialog" aria-modal="true" aria-labelledby="source-modal-title">
+        <div class="source-modal__head">
+          <div>
+            <p class="subtle-label">Source Viewer</p>
+            <h3 id="source-modal-title">Source</h3>
+          </div>
+          <button class="secondary-button" id="source-modal-close" type="button">Close</button>
+        </div>
+        <div class="source-modal__body" id="source-modal-body"></div>
+      </div>
+    </div>
+
+    <div class="loading-mask" id="loading-mask" aria-live="polite" aria-busy="true">
+      <div class="loading-card">
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="loading-text">Loading Archean dashboard...</p>
+      </div>
+    </div>
+
+    <script src="./assets/echarts.min.js?v=20260416115524"></script>
+    <script src="./assets/app.js?v=20260416115524"></script>
+  </body>
+</html>
