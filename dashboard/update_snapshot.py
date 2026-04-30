@@ -578,17 +578,23 @@ def parse_fada_oem_annexure_tables(pages: list[str], current: dict, month_id: st
         "PV": ("PV OEM", "Passenger Vehicle OEM"),
         "TRACTOR": ("Tractor OEM",),
     }
-    # Prefer the monthly annexure (e.g. "Market Share Data for Mar'26") over the
-    # FY annexure ("Market Share Data for FY'26"). Fall back to the FY block
-    # only if no monthly block is found in the PDF.
+    # December and March releases include cumulative annexures (CY / FY) right
+    # next to the actual monthly annexure. Match the monthly heading
+    # specifically — "OEM wise Market Share Data for Dec'25" — so we land on
+    # the monthly page, not the cumulative one.
+    monthly_heading_re = re.compile(
+        r"OEM wise Market Share Data for "
+        r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)['’]?\d{2}\b",
+        re.IGNORECASE,
+    )
     monthly_pages = [
-        index for index, text in enumerate(pages)
-        if "OEM wise Market Share Data for" in text and "FY'" not in text and "FY ’" not in text
+        index for index, text in enumerate(pages) if monthly_heading_re.search(text)
     ]
 
     def find_page(markers: tuple[str, ...]) -> str | None:
-        # Restrict the search to pages after the first monthly-annexure heading
-        # when one exists; otherwise fall back to scanning all pages.
+        # Prefer pages at or after the first monthly annexure heading; otherwise
+        # fall back to any page that mentions the marker, and finally accept
+        # nothing if the PDF really doesn't carry that category's annexure.
         candidate_indices = range(monthly_pages[0], len(pages)) if monthly_pages else range(len(pages))
         for index in candidate_indices:
             text = pages[index]
