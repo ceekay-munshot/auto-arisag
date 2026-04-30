@@ -535,6 +535,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 217854, "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/january/maruti-suzuki-sales-in-december"},
             {"month": "2026-01", "units": 236963, "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/february/maruti-suzuki-sales-in-january-2026"},
             {"month": "2026-02", "units": 213995, "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-sales-in-february-2026"},
+            {"month": "2026-03", "units": 225251, "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/april/maruti-suzuki-sales-in-march-2026-and-fy-2025-26"},
         ],
     },
     "Mahindra & Mahindra": {
@@ -547,6 +548,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 86090, "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-50946-suvs-and-86090-total-vehicle-sales-in-december-2025"},
             {"month": "2026-01", "units": 104309, "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-63510-SUVs-and-104309-total-vehicle-sales-in-january-2026"},
             {"month": "2026-02", "units": 97177, "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60018-suvs-and-97177-total-vehicle-sales-in-february-2026"},
+            {"month": "2026-03", "units": 99969, "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60272-suvs-and-99969-total-vehicle-sales-in-march-2026"},
         ],
     },
     "Hero MotoCorp": {
@@ -559,6 +561,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 456479, "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/reports-and-polices/fillings-and-reports/press-releases/2025-2026/StxintimationPR01012026.pdf"},
             {"month": "2026-01", "units": 557871, "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/january-pdfs/press_release_records_26_percent_dispatch_growth_with_5.58_lakh_units_sold_in_january_2026.pdf"},
             {"month": "2026-02", "units": 558216, "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/march-pdfs/press_release_hero_motocorp_february_2026_sales_march_1_2026.pdf"},
+            {"month": "2026-03", "units": 598198, "source_url": "https://www.heromotocorp.com/en-in/company/newsroom/press-release-news-and-media.html"},
         ],
     },
     "TVS Motor": {
@@ -571,6 +574,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 481389, "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-highest-ever-sales-revenue-profits-q3fy26"},
             {"month": "2026-01", "units": 511766, "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-29-percent-january-2026"},
             {"month": "2026-02", "units": 529308, "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-31-percent-in-february-2026"},
+            {"month": "2026-03", "units": 519358, "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-25-percent-march-2026"},
         ],
     },
     "Bajaj Auto": {
@@ -583,6 +587,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 369809, "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-dec-2025.pdf"},
             {"month": "2026-01", "units": 477422, "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"},
             {"month": "2026-02", "units": 448259, "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"},
+            {"month": "2026-03", "units": 445377, "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"},
         ],
     },
     "Hyundai Motor India": {
@@ -603,6 +608,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 103574, "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/eml-monthly-sales-december-2025.pdf"},
             {"month": "2026-01", "units": 104322, "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-january-2026.pdf"},
             {"month": "2026-02", "units": 100905, "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-february-2026.pdf"},
+            {"month": "2026-03", "units": 112334, "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-march-2026.pdf"},
         ],
     },
     "Tata Motors": {
@@ -613,6 +619,7 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 42508, "source_url": "https://cv.tatamotors.com/news/tata-motors-delivers-strong-sales"},
             {"month": "2026-01", "units": 41549, "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-total-sales-of-41549-commercial-vehicle-units-in-january-2026"},
             {"month": "2026-02", "units": 42940, "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-32%25-growth-yoy-with-total-sales-of-42940-commercial-vehicle-units-in-february-2026"},
+            {"month": "2026-03", "units": 47976, "source_url": "https://cv.tatamotors.com/news/tata-motors-records-17-percent-growth-in-commercial-vehicle-sales-in-march-2026"},
         ],
     },
     "Ashok Leyland": {
