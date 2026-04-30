@@ -567,22 +567,47 @@ def parse_fada_pdf_header(pages: list[str]) -> tuple[str, str]:
 
 
 def parse_fada_oem_annexure_tables(pages: list[str], current: dict, month_id: str, source_url: str) -> dict[str, dict]:
-    page_map = {
-        "2W": 18,
-        "3W": 19,
-        "CV": 20,
-        "CE": 21,
-        "PV": 22,
-        "TRACTOR": 23,
+    # Older FADA PDFs are shorter than the FY-closing March release, so a
+    # hard-coded page index fails for back-dated months. Scan every page for
+    # each category's OEM annexure heading and use whichever page matches.
+    category_markers = {
+        "2W": ("Two-Wheeler OEM",),
+        "3W": ("Three-Wheeler OEM",),
+        "CV": ("Commercial Vehicle OEM",),
+        "CE": ("Construction Equipment OEM",),
+        "PV": ("PV OEM", "Passenger Vehicle OEM"),
+        "TRACTOR": ("Tractor OEM",),
     }
+    # Prefer the monthly annexure (e.g. "Market Share Data for Mar'26") over the
+    # FY annexure ("Market Share Data for FY'26"). Fall back to the FY block
+    # only if no monthly block is found in the PDF.
+    monthly_pages = [
+        index for index, text in enumerate(pages)
+        if "OEM wise Market Share Data for" in text and "FY'" not in text and "FY ’" not in text
+    ]
+
+    def find_page(markers: tuple[str, ...]) -> str | None:
+        # Restrict the search to pages after the first monthly-annexure heading
+        # when one exists; otherwise fall back to scanning all pages.
+        candidate_indices = range(monthly_pages[0], len(pages)) if monthly_pages else range(len(pages))
+        for index in candidate_indices:
+            text = pages[index]
+            if any(marker in text for marker in markers):
+                return text
+        for index in range(len(pages)):
+            text = pages[index]
+            if any(marker in text for marker in markers):
+                return text
+        return None
+
     current_tables = current.get("latest_oem_tables") or {}
     result: dict[str, dict] = {}
-    for category, page_number in page_map.items():
-        raw_text = pages[page_number - 1]
+    for category, markers in category_markers.items():
+        raw_text = find_page(markers)
         previous_rows = current_tables.get(category) or []
         if isinstance(previous_rows, dict):
             previous_rows = previous_rows.get("rows") or []
-        rows = parse_fada_oem_page(category, raw_text, previous_rows)
+        rows = parse_fada_oem_page(category, raw_text, previous_rows) if raw_text else []
         result[category] = {
             "category": category,
             "label": fada_category_label(category),
