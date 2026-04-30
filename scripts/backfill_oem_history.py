@@ -53,26 +53,37 @@ TRACKED_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
 # unlocks a full 5-year history, which is plenty for the Y tab and 5Y CAGR.
 MAX_HISTORY_MONTHS = 60
 
-# FADA listing pages — try in order until one returns PDF anchors.
-FADA_INDEX_URLS = (
-    "https://fada.in/research.html",
-    "https://fada.in/press-releases.html",
-    "https://www.fada.in/research.html",
-    "https://www.fada.in/press-releases.html",
-)
+# FADA listing pages — left empty by default because the legacy paths we
+# tried (research.html, press-releases.html) all return 404. The latest
+# monthly URL still lands in candidate_urls() via source_snapshot.json's
+# fada.monthly_series, so this fallback is only useful if FADA publishes a
+# real listing in future. Drop a path here when one is found.
+FADA_INDEX_URLS: tuple[str, ...] = ()
 
-# Wayback Machine's CDX index. The API returns one row per snapshot of any
-# URL matching the wildcard, so a single call recovers every FADA monthly
-# retail PDF the Internet Archive has ever crawled. We collapse by urlkey to
-# get one row per unique PDF and filter to PDFs only.
+# Wayback Machine's CDX index. The API only handles literal URL prefixes (no
+# wildcards in the middle of the path), so we ask for every snapshot under
+# fada.in/images/press-release/ and filter for "Vehicle Retail Data" in code.
+# collapse=urlkey gives one row per unique URL; statuscode:200 + mimetype:pdf
+# remove broken redirects and HTML error pages.
 WAYBACK_CDX_URL = (
     "https://web.archive.org/cdx/search/cdx"
-    "?url=fada.in/images/press-release/*Vehicle%20Retail%20Data*"
+    "?url=fada.in/images/press-release/"
     "&matchType=prefix"
     "&output=json"
-    "&limit=600"
+    "&limit=4000"
     "&filter=mimetype:application/pdf"
     "&filter=statuscode:200"
+    "&collapse=urlkey"
+)
+WAYBACK_CDX_DOMAIN_URL = (
+    "https://web.archive.org/cdx/search/cdx"
+    "?url=fada.in"
+    "&matchType=domain"
+    "&output=json"
+    "&limit=4000"
+    "&filter=mimetype:application/pdf"
+    "&filter=statuscode:200"
+    "&filter=urlkey:.*Vehicle.*Retail.*Data.*"
     "&collapse=urlkey"
 )
 
@@ -153,39 +164,55 @@ def discover_via_fada_listing() -> dict[str, str]:
     return {}
 
 
-def discover_via_wayback() -> dict[str, str]:
-    """Pull every snapshot of fada.in/images/press-release/*Vehicle Retail Data*
-    pdf that Internet Archive has crawled. This is the only reliable path to
-    multi-year monthly history because FADA itself doesn't keep an archive
-    page."""
+def _wayback_query(query_url: str, label: str) -> dict[str, str]:
     discovered: dict[str, str] = {}
     try:
-        response = requests.get(WAYBACK_CDX_URL, headers=HTML_HEADERS, timeout=TIMEOUT, allow_redirects=True)
+        response = requests.get(query_url, headers=HTML_HEADERS, timeout=TIMEOUT, allow_redirects=True)
         response.raise_for_status()
         rows = response.json()
     except Exception as exc:
-        print(f"  wayback discovery failed: {exc}", flush=True)
+        print(f"  wayback ({label}) failed: {exc}", flush=True)
         return discovered
-    if not isinstance(rows, list) or len(rows) < 2:
+    if not isinstance(rows, list):
+        print(f"  wayback ({label}) returned non-list payload", flush=True)
+        return discovered
+    if len(rows) < 2:
+        print(f"  wayback ({label}) returned 0 rows", flush=True)
         return discovered
     columns = rows[0]
     try:
         original_idx = columns.index("original")
     except ValueError:
         original_idx = 2
+    examined = 0
     for row in rows[1:]:
         try:
             original = row[original_idx]
         except (IndexError, TypeError):
             continue
-        if "Vehicle%20Retail%20Data" not in original.replace(" ", "%20"):
+        examined += 1
+        if "vehicle" not in original.lower() or "retail" not in original.lower():
             continue
         url = normalize_pdf_url(original)
         month_id = parse_month_from_url(url)
         if not month_id:
             continue
         discovered.setdefault(month_id, url)
-    print(f"  wayback: {len(discovered)} unique monthly PDFs in Internet Archive", flush=True)
+    print(
+        f"  wayback ({label}): examined {examined} rows, found {len(discovered)} retail-data PDFs",
+        flush=True,
+    )
+    return discovered
+
+
+def discover_via_wayback() -> dict[str, str]:
+    """Pull every monthly retail PDF Internet Archive has crawled for FADA.
+    Tries a path-prefix query first, then falls back to a domain-wide query
+    if that comes up dry. Always logs an outcome so future debugging is easy."""
+    discovered: dict[str, str] = {}
+    discovered.update(_wayback_query(WAYBACK_CDX_URL, "press-release prefix"))
+    if not discovered:
+        discovered.update(_wayback_query(WAYBACK_CDX_DOMAIN_URL, "domain match"))
     return discovered
 
 
