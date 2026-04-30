@@ -1991,6 +1991,7 @@ def build_periodized_oem_table_from_history(
 
         u1 = lookup_units(1, oem)
         u3 = lookup_units(3, oem)
+        u6 = lookup_units(6, oem)
         u12 = lookup_units(12, oem) or prior_units
 
         rows.append(
@@ -2000,6 +2001,7 @@ def build_periodized_oem_table_from_history(
                 "mom_pct": _safe_pct_change(units, u1),
                 "yoy_pct": row.get("unit_growth_pct"),
                 "growth_3m_pct": _safe_pct_change(units, u3),
+                "growth_6m_pct": _safe_pct_change(units, u6),
                 "cagr_12m_pct": _safe_cagr(units, u12, 1),
                 "share_pct": row.get("share_pct"),
                 "share_change_pp": row.get("share_change_pp"),
@@ -2030,6 +2032,7 @@ def build_periodized_oem_table_from_history(
                 {"key": "mom_pct", "label": "MoM%", "type": "pct"},
                 {"key": "yoy_pct", "label": "YoY%", "type": "pct"},
                 {"key": "growth_3m_pct", "label": "3M Growth", "type": "pct"},
+                {"key": "growth_6m_pct", "label": "6M Growth", "type": "pct"},
                 {"key": "cagr_12m_pct", "label": "12M CAGR", "type": "pct"},
                 {"key": "share_pct", "label": "Current Market Share", "type": "pct"},
                 {"key": "share_change_pp", "label": "Share Chg", "type": "pp"},
