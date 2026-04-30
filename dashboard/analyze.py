@@ -1489,6 +1489,21 @@ def build_summary(
     inventory = retail_snapshot["inventory_days"]
     pv_compare = next(item for item in wholesale["retail_vs_wholesale"] if item["category"] == "PV")
 
+    inventory_first = retail["inventory_trend"][0]
+    inventory_detail = (
+        f"Improved from {inventory_first['days_low']}-{inventory_first['days_high']} days in "
+        f"{inventory_first['label']} to {format_inventory_range(inventory)} now."
+    )
+    retail_month_label = month_label(retail["latest_month"])
+    wholesale_month_label = month_label(wholesale["latest_month"])
+    if retail["latest_month"] == wholesale["latest_month"]:
+        rw_detail = f"FADA {retail_month_label} retail vs SIAM {wholesale_month_label} wholesale."
+    else:
+        rw_detail = (
+            f"FADA {retail_month_label} retail vs SIAM {wholesale_month_label} wholesale "
+            "— SIAM is one cycle behind, so this gap mixes months."
+        )
+
     cards = [
         {
             "id": "latest_retail",
@@ -1496,7 +1511,7 @@ def build_summary(
             "value": retail_snapshot["total_units"],
             "display": format_lakh(retail_snapshot["total_units"]),
             "change": f"{retail_snapshot['total_yoy_pct']:+.2f}% YoY",
-            "detail": f"{retail_snapshot['total_mom_pct']:+.2f}% MoM | FADA {month_label(retail['latest_month'])}",
+            "detail": f"{retail_snapshot['total_mom_pct']:+.2f}% MoM | FADA {retail_month_label}",
             "tone": "primary",
         },
         {
@@ -1505,7 +1520,10 @@ def build_summary(
             "value": ev_snapshot["overall_ev_pct"],
             "display": format_pct(ev_snapshot["overall_ev_pct"]),
             "change": f"{format_lakh(ev_snapshot['overall_ev_units'])} EV retail units",
-            "detail": "Derived from FADA category fuel mix; excludes low-confidence categories.",
+            "detail": (
+                "EV units summed from FADA's 2W/3W/PV/CV fuel-mix shares (tractors and CE "
+                "have negligible EV share); denominator is total retail."
+            ),
             "tone": "good",
         },
         {
@@ -1514,16 +1532,16 @@ def build_summary(
             "value": best_segment["yoy_pct"],
             "display": best_segment["label"],
             "change": f"{best_segment['yoy_pct']:+.2f}% YoY",
-            "detail": f"{format_lakh(best_segment['units'])} in {month_label(retail['latest_month'])}",
+            "detail": f"{format_lakh(best_segment['units'])} in {retail_month_label}",
             "tone": "warm",
         },
         {
             "id": "pv_inventory",
             "label": "PV Inventory",
             "value": inventory["days_mid"],
-            "display": f"{inventory['days_low']}-{inventory['days_high']} days",
+            "display": format_inventory_range(inventory),
             "change": "FADA dealer channel view",
-            "detail": "Healthy improvement from 53-55 days in Oct 2025 to 27-29 days now.",
+            "detail": inventory_detail,
             "tone": "neutral",
         },
         {
@@ -1532,7 +1550,7 @@ def build_summary(
             "value": pv_compare["ratio_pct"],
             "display": format_pct(pv_compare["ratio_pct"]),
             "change": f"{pv_compare['gap_units']:+,} unit gap",
-            "detail": "Retail from FADA vs wholesale from SIAM; channel timing still matters.",
+            "detail": rw_detail,
             "tone": "neutral",
         },
         {
@@ -1688,10 +1706,20 @@ def build_investor_insights(
     ev_snapshot = retail["ev_penetration_series"][-1]
     ev_leader = max(ev_snapshot["by_category"], key=lambda item: item["ev_share_pct"])
 
+    retail_month = month_label(retail["latest_month"])
+    inventory_latest = retail["latest_snapshot"]["inventory_days"]
+    inventory_signal = format_inventory_range(inventory_latest)
+    if retail["latest_month"] == wholesale["latest_month"]:
+        rw_period_phrase = f"in {retail_month}"
+    else:
+        rw_period_phrase = (
+            f"with FADA {retail_month} retail over SIAM {month_label(wholesale['latest_month'])} wholesale"
+        )
+
     insights = [
         {
             "title": "Segment speed",
-            "body": f"{fastest['label']} were the fastest-growing retail category in {month_label(retail['latest_month'])} at {fastest['yoy_pct']:+.2f}% YoY, while {slowest['label']} stayed weakest at {slowest['yoy_pct']:+.2f}% YoY.",
+            "body": f"{fastest['label']} were the fastest-growing retail category in {retail_month} at {fastest['yoy_pct']:+.2f}% YoY, while {slowest['label']} stayed weakest at {slowest['yoy_pct']:+.2f}% YoY.",
             "tags": ["retail"],
         },
         {
@@ -1701,12 +1729,12 @@ def build_investor_insights(
         },
         {
             "title": "Retail vs wholesale",
-            "body": f"PV retail ran at {pv_compare['ratio_pct']:.1f}% of wholesale in February 2026, versus {two_w_compare['ratio_pct']:.1f}% for 2W. The tighter PV ratio sits alongside FADA's 27-29 day inventory signal, suggesting channel conditions have improved materially.",
+            "body": f"PV retail ran at {pv_compare['ratio_pct']:.1f}% of wholesale {rw_period_phrase}, versus {two_w_compare['ratio_pct']:.1f}% for 2W. The tighter PV ratio sits alongside FADA's {inventory_signal} inventory signal, suggesting channel conditions have improved materially.",
             "tags": ["retail", "wholesale"],
         },
         {
             "title": "EV transition",
-            "body": f"Derived EV penetration in February 2026 was {ev_snapshot['overall_ev_pct']:.2f}% of retail volume. The strongest EV mix remains in {ev_leader['label']} at {ev_leader['ev_share_pct']:.2f}%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
+            "body": f"Derived EV penetration in {retail_month} was {ev_snapshot['overall_ev_pct']:.2f}% of retail volume. The strongest EV mix remains in {ev_leader['label']} at {ev_leader['ev_share_pct']:.2f}%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
             "tags": ["ev"],
         },
         {
@@ -1776,6 +1804,13 @@ def format_lakh(value: float | int) -> str:
 
 def format_pct(value: float | int) -> str:
     return f"{value:.1f}%"
+
+
+def format_inventory_range(inventory: dict[str, Any]) -> str:
+    low, high = inventory["days_low"], inventory["days_high"]
+    if low == high:
+        return f"~{low} days"
+    return f"{low}-{high} days"
 
 
 def table_rows(table: dict[str, Any]) -> list[dict[str, Any]]:
