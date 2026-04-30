@@ -2504,52 +2504,6 @@ function renderUnifiedOemTable(segment) {
   return renderUnifiedEvTable(segment.dataset);
 }
 
-function findCompanyTrendForRow(row) {
-  const trends = asArray(dashboardData.modules.retail?.company_unit_trends);
-  if (!trends.length) {
-    return null;
-  }
-  const candidates = asArray(row.listed_companies);
-  if (!candidates.length) {
-    return null;
-  }
-  for (const candidate of candidates) {
-    const match = trends.find((trend) => trend.company === candidate);
-    if (match) {
-      return match;
-    }
-  }
-  return null;
-}
-
-function inlineSparkline(values, color = "#c26c3a") {
-  const numeric = values.map((value) => Number(value)).filter((value) => Number.isFinite(value));
-  if (numeric.length < 2) {
-    return '<span class="oem-sparkline-empty">–</span>';
-  }
-  const min = Math.min(...numeric);
-  const max = Math.max(...numeric);
-  const range = max - min || 1;
-  const width = 96;
-  const height = 28;
-  const stepX = numeric.length > 1 ? width / (numeric.length - 1) : 0;
-  const points = numeric.map((value, index) => {
-    const x = index * stepX;
-    const y = height - 4 - ((value - min) / range) * (height - 8);
-    return `${x.toFixed(1)},${y.toFixed(1)}`;
-  });
-  const last = points[points.length - 1].split(",");
-  const first = numeric[0];
-  const lastValue = numeric[numeric.length - 1];
-  const direction = lastValue >= first ? "up" : "down";
-  return `
-    <svg class="oem-sparkline" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-direction="${direction}" aria-hidden="true">
-      <polyline fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" points="${points.join(" ")}"></polyline>
-      <circle cx="${last[0]}" cy="${last[1]}" r="2" fill="${color}"></circle>
-    </svg>
-  `;
-}
-
 function renderUnifiedFadaFlatTable(category, table) {
   const rows = asArray(table.rows);
   const periodLabelText = table.source_meta?.latest_label
@@ -2557,17 +2511,6 @@ function renderUnifiedFadaFlatTable(category, table) {
     || dashboardData.modules.retail?.latest_month
     || "";
   const key = `unified-oem-${slugify(category)}`;
-  const enrichedRows = rows.map((row) => {
-    const trend = findCompanyTrendForRow(row);
-    if (!trend) {
-      return { ...row, trend_sparkline: '<span class="oem-sparkline-empty" title="No listed-company series available">–</span>' };
-    }
-    const series = asArray(trend.series).slice(-6);
-    const values = series.map((point) => Number(point.units));
-    const lastLabel = series.at(-1)?.label || "";
-    const titleAttr = `${trend.label}: ${series.map((point) => `${point.label} ${formatUnits(point.units)}`).join(" · ")}`;
-    return { ...row, trend_sparkline: `<span class="oem-sparkline-cell" title="${titleAttr}">${inlineSparkline(values)}<small>${lastLabel}</small></span>` };
-  });
   registerDownload(
     key,
     `fada_${category.toLowerCase()}_oem_table.csv`,
@@ -2586,20 +2529,19 @@ function renderUnifiedFadaFlatTable(category, table) {
     <div class="oem-table-frame">
       <div class="oem-table-heading">
         <h3>${label}${periodLabelText ? ` · ${periodLabelText}` : ""}</h3>
-        <p class="table-note">FADA YoY market share annexure. Sparkline shows the listed company's last 6 months of company-reported sales when an OEM maps to a tracked listed company.</p>
+        <p class="table-note">FADA YoY market share annexure. Current units shown against same month prior year.</p>
       </div>
       ${renderTable(
         key,
         [
           { key: "oem", label: "OEM" },
           { key: "units", label: "Current units", type: "int" },
-          { key: "trend_sparkline", label: "Trend (6M)", type: "html", sortable: false },
           { key: "prior_units", label: "Prior-year units", type: "int" },
           { key: "share_pct", label: "Share", type: "pct" },
           { key: "share_change_pp", label: "Share Δ", type: "pp" },
           { key: "unit_growth_pct", label: "YoY", type: "pct" },
         ],
-        enrichedRows,
+        rows,
         "oem-unified-table",
         { key: "units", dir: "desc" },
       )}
