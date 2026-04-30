@@ -16,6 +16,7 @@ const state = {
   evCategory: "TOTAL",
   evPeriod: "M",
   evOemSegment: "E2W",
+  oemSegment: "PV",
   liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
   sorts: {},
 };
@@ -1068,6 +1069,7 @@ function render() {
   setupEvTrendExplorer();
   setupEvOemTracker();
   setupLiveOemTrackers();
+  setupOemSection();
   setupSorts();
   setupCompanyMapCards();
   setupDownloads();
@@ -1422,7 +1424,7 @@ function renderRetailSection() {
       <div class="section-divider"></div>
       ${renderChannelPulse()}
       <div class="section-divider"></div>
-      ${renderOemTables()}
+      ${renderOemSection()}
     </section>
   `;
 }
@@ -1551,7 +1553,6 @@ function renderEvSection() {
             }).join("")}
           </div>
         </div>
-        ${renderEvOemTracker()}
       </div>
     </div>
   `;
@@ -2126,6 +2127,297 @@ function renderChannelPulse() {
       ${cards.join("")}
     </div>
   `;
+}
+
+function oemSegmentCatalog() {
+  const tables = dashboardData.modules.retail?.latest_oem_tables || {};
+  const fadaCategories = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"];
+  const fada = fadaCategories
+    .filter((category) => tables[category])
+    .map((category) => ({
+      id: category,
+      group: "fada",
+      kind: "fada",
+      label: labelForCategory(category) || category,
+      table: tables[category],
+    }));
+  const ev = evOemTrackerDatasets().map((dataset) => ({
+    id: dataset.id,
+    group: "ev",
+    kind: "ev",
+    label: dataset.label,
+    dataset,
+  }));
+  return [...fada, ...ev];
+}
+
+function activeOemSegment(segments) {
+  return segments.find((segment) => segment.id === state.oemSegment) || segments[0];
+}
+
+function renderOemSegmentChips(segments, activeId) {
+  const renderChip = (segment) => `
+    <button
+      class="oem-chip${segment.id === activeId ? " is-active" : ""}"
+      data-oem-segment="${segment.id}"
+      type="button"
+    >${segment.label}</button>
+  `;
+  const fadaChips = segments.filter((segment) => segment.group === "fada").map(renderChip).join("");
+  const evChips = segments.filter((segment) => segment.group === "ev").map(renderChip).join("");
+  return `
+    <div class="oem-chip-row">
+      <div class="oem-chip-group">
+        <span class="oem-chip-group-label">FADA retail</span>
+        <div class="oem-chip-group-items">${fadaChips}</div>
+      </div>
+      ${evChips ? `
+        <div class="oem-chip-group">
+          <span class="oem-chip-group-label">EV trade tracker</span>
+          <div class="oem-chip-group-items">${evChips}</div>
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
+
+function renderUnifiedOemTable(segment) {
+  if (segment.kind === "fada") {
+    const table = segment.table;
+    if (table.mode === "vahan_live" || table.mode === "periodized") {
+      return renderUnifiedFadaPeriodizedTable(segment.id, table);
+    }
+    return renderUnifiedFadaFlatTable(segment.id, table);
+  }
+  return renderUnifiedEvTable(segment.dataset);
+}
+
+function renderUnifiedFadaFlatTable(category, table) {
+  const rows = asArray(table.rows);
+  const periodLabelText = table.source_meta?.latest_label
+    || dashboardData.modules.retail?.source_meta?.latest_month
+    || dashboardData.modules.retail?.latest_month
+    || "";
+  const key = `unified-oem-${slugify(category)}`;
+  registerDownload(
+    key,
+    `fada_${category.toLowerCase()}_oem_table.csv`,
+    ["oem", "units", "prior_units", "share_pct", "share_change_pp", "unit_growth_pct"],
+    rows.map((row) => ({
+      oem: row.oem,
+      units: row.units,
+      prior_units: row.prior_units,
+      share_pct: row.share_pct,
+      share_change_pp: row.share_change_pp,
+      unit_growth_pct: row.unit_growth_pct,
+    })),
+  );
+  const label = table.label || labelForCategory(category) || category;
+  return `
+    <div class="oem-table-frame">
+      <div class="oem-table-heading">
+        <h3>${label}${periodLabelText ? ` · ${periodLabelText}` : ""}</h3>
+        <p class="table-note">YoY market share annexure from FADA. Current units shown against same month prior year.</p>
+      </div>
+      ${renderTable(
+        key,
+        [
+          { key: "oem", label: "OEM" },
+          { key: "units", label: "Current units", type: "int" },
+          { key: "prior_units", label: "Prior-year units", type: "int" },
+          { key: "share_pct", label: "Share", type: "pct" },
+          { key: "share_change_pp", label: "Share Δ", type: "pp" },
+          { key: "unit_growth_pct", label: "YoY", type: "pct" },
+        ],
+        rows,
+        "oem-unified-table",
+        { key: "units", dir: "desc" },
+      )}
+    </div>
+  `;
+}
+
+function renderUnifiedFadaPeriodizedTable(category, table) {
+  const periods = asObject(table.periods);
+  const selectedPeriodId = state.liveOemPeriods[category] || table.default_period || Object.keys(periods)[0] || "M";
+  const selectedPeriod = asObject(periods[selectedPeriodId] || periods[table.default_period] || periods.M || Object.values(periods)[0]);
+  const periodId = selectedPeriod.id || selectedPeriodId || "M";
+  const periodRows = asArray(selectedPeriod.rows);
+  const columns = asArray(selectedPeriod.columns);
+  const key = `unified-oem-${slugify(category)}-${periodId.toLowerCase()}`;
+  const sourceName = table.source_meta?.name || "FADA";
+  const downloadPrefix = slugify(sourceName || "oem");
+  registerDownload(
+    key,
+    `${downloadPrefix}_${slugify(category)}_oem_${periodId.toLowerCase()}.csv`,
+    columns.map((column) => column.key),
+    periodRows,
+  );
+  const availablePeriods = ["M", "Q", "Y"].filter((period) => periods[period]);
+  const label = table.label || labelForCategory(category) || category;
+  return `
+    <div class="oem-table-frame">
+      <div class="oem-table-heading">
+        <h3>${label}${selectedPeriod.period_label ? ` · ${selectedPeriod.period_label}` : ""}</h3>
+        ${availablePeriods.length > 1 ? `
+          <div class="oem-period-switch">
+            ${availablePeriods.map((period) => `
+              <button
+                class="oem-period-button${state.liveOemPeriods[category] === period ? " is-active" : ""}"
+                data-live-oem-category="${category}"
+                data-live-oem-period="${period}"
+                type="button"
+              >${period}</button>
+            `).join("")}
+          </div>
+        ` : ""}
+      </div>
+      ${renderTable(key, columns, periodRows, "oem-unified-table", { key: "current_units", dir: "desc" })}
+      ${selectedPeriod.note ? `<p class="table-note">${selectedPeriod.note}</p>` : ""}
+    </div>
+  `;
+}
+
+function renderUnifiedEvTable(dataset) {
+  const key = `unified-oem-${slugify(dataset.id)}`;
+  const columns = [
+    { key: "oem", label: "OEM" },
+    { key: "units", label: "Units", type: "int" },
+    { key: "prior_units", label: dataset.compare_label, type: "int" },
+    { key: "share_pct", label: "Share", type: "pct" },
+    { key: "growth_pct", label: dataset.growth_label, type: "pct" },
+  ];
+  registerDownload(
+    key,
+    `ev_oem_tracker_${slugify(dataset.label)}.csv`,
+    ["oem", "units", "prior_units", "share_pct", "growth_pct"],
+    dataset.rows.map((row) => ({
+      oem: row.oem,
+      units: row.units,
+      prior_units: row.prior_units,
+      share_pct: row.share_pct,
+      growth_pct: row.growth_pct,
+    })),
+  );
+  return `
+    <div class="oem-table-frame">
+      <div class="oem-table-heading">
+        <h3>${dataset.label} · ${dataset.latest_month}</h3>
+        <p class="table-note">${dataset.note}</p>
+      </div>
+      ${renderTable(key, columns, dataset.rows, "oem-unified-table", { key: "units", dir: "desc" })}
+    </div>
+  `;
+}
+
+function renderUnifiedCompanySpotlight() {
+  const trends = asArray(dashboardData.modules.retail?.company_unit_trends);
+  if (!trends.length) {
+    return "";
+  }
+  const visibleTrends = state.company === "all"
+    ? trends
+    : trends.filter((item) => item.company === state.company);
+  if (!visibleTrends.length) {
+    return "";
+  }
+  const selected = visibleTrends.find((item) => item.company === state.companyTrend) || visibleTrends[0];
+  const series = asArray(selected.series).slice(-6);
+  const latestPoint = series.at(-1);
+  registerDownload(
+    "company-unit-trend",
+    `${selected.company.toLowerCase().replace(/[^a-z0-9]+/g, "_")}_company_units.csv`,
+    ["month", "label", "units", "source_url"],
+    series.map((point) => ({
+      month: point.month,
+      label: point.label,
+      units: point.units,
+      source_url: point.source_url,
+    })),
+  );
+  return `
+    <div class="oem-spotlight">
+      <div class="oem-spotlight-head">
+        <div>
+          <p class="small-label">Listed-company spotlight</p>
+          <h3>${selected.label}</h3>
+          <p class="table-note">${selected.concept}</p>
+        </div>
+        <div class="oem-spotlight-controls">
+          <select class="filter-select" data-company-trend>
+            ${visibleTrends.map((item) => `
+              <option value="${item.company}" ${item.company === selected.company ? "selected" : ""}>${item.label}</option>
+            `).join("")}
+          </select>
+          ${latestPoint?.source_url ? renderSourceAction(latestPoint.source_url, "Latest filing") : ""}
+        </div>
+      </div>
+      <div class="chart-frame compact">
+        ${lineChart(
+          series.map((point) => point.label),
+          [{ label: selected.label, color: dashboardData.chart_colors.TOTAL, values: series.map((point) => point.units) }],
+          axisFormat,
+          formatUnits,
+        )}
+      </div>
+    </div>
+  `;
+}
+
+function renderOemSection() {
+  const segments = oemSegmentCatalog();
+  if (!segments.length) {
+    return "";
+  }
+  if (!segments.some((segment) => segment.id === state.oemSegment)) {
+    state.oemSegment = segments[0].id;
+  }
+  const active = activeOemSegment(segments);
+  const sourceUrl = active.kind === "fada"
+    ? (active.table?.source_meta?.url || dashboardData.modules.retail?.source_meta?.url)
+    : active.dataset?.source_url;
+  const sourceName = active.kind === "fada"
+    ? (active.table?.source_meta?.name || dashboardData.modules.retail?.source_meta?.name || "FADA")
+    : (active.dataset?.source_name || "Source");
+  const downloadKey = active.kind === "fada"
+    ? (active.table?.mode === "vahan_live" || active.table?.mode === "periodized"
+        ? `unified-oem-${slugify(active.id)}-${(state.liveOemPeriods[active.id] || active.table.default_period || "M").toLowerCase()}`
+        : `unified-oem-${slugify(active.id)}`)
+    : `unified-oem-${slugify(active.id)}`;
+
+  return `
+    <div id="section-oem-tracker" class="oem-section section-anchor">
+      <div class="oem-section-head">
+        <div>
+          <p class="section-kicker">OEM Tracker</p>
+          <h2>One leaderboard for every retail segment</h2>
+          <p class="section-subtitle">FADA's monthly OEM annexure for ICE-led categories, plus the most recent EV trade tracker for electric segments. Pick a chip to switch view.</p>
+        </div>
+        <div class="oem-section-actions">
+          ${sourceUrl ? `<a class="oem-source-pill" href="${sourceUrl}" target="_blank" rel="noopener">${sourceName} · view source</a>` : ""}
+          <button class="button" data-download-key="${downloadKey}">Download CSV</button>
+        </div>
+      </div>
+      ${renderOemSegmentChips(segments, active.id)}
+      <div class="oem-section-body">
+        ${renderUnifiedOemTable(active)}
+        ${renderUnifiedCompanySpotlight()}
+      </div>
+    </div>
+  `;
+}
+
+function setupOemSection() {
+  document.querySelectorAll("[data-oem-segment]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-oem-segment");
+      if (!value || value === state.oemSegment) {
+        return;
+      }
+      state.oemSegment = value;
+      render();
+    });
+  });
 }
 
 function renderOemTables() {
