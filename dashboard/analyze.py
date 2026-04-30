@@ -51,9 +51,19 @@ def build_payload(
     summary = build_summary(retail, wholesale, components, registration, state_registration, official_ev, source_health)
     filters = build_filters(retail, wholesale, registration)
 
+    # as_of_date should follow the freshest active source rather than relying on
+    # source_snapshot.as_of_date, which only ticks when refresh_snapshot decides
+    # something changed (so it lags whenever the cron sees no new data).
+    as_of_candidates = [
+        retail.get("source_meta", {}).get("latest_release_date"),
+        wholesale.get("source_meta", {}).get("latest_release_date"),
+        snapshot.get("as_of_date"),
+    ]
+    as_of_value = max(filter(None, as_of_candidates), default=snapshot.get("as_of_date"))
+
     return {
         "generated_at": datetime.now(UTC).isoformat(),
-        "as_of_date": snapshot["as_of_date"],
+        "as_of_date": as_of_value,
         "title": "India Auto Demand Monitor",
         "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
         "summary": summary,
