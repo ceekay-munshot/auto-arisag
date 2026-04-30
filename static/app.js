@@ -2456,6 +2456,29 @@ function oemSegmentCatalog() {
       label: labelForCategory(category) || category,
       table: tables[category],
     }));
+  // When the Parivahan Vahan refresh has populated EV maker data, surface
+  // those segments via the same periodized renderer as FADA. The labels stay
+  // distinct (EV 2W / EV 4W / EV 3W / EV CV) so visitors can tell the data
+  // source apart at a glance.
+  const liveEvSegments = [
+    { id: "E2W", label: "EV 2W (Vahan)" },
+    { id: "EPV", label: "EV 4W (Vahan)" },
+    { id: "E3W", label: "EV 3W (Vahan)" },
+    { id: "ECV", label: "EV CV (Vahan)" },
+  ];
+  const liveEv = liveEvSegments
+    .filter((segment) => tables[segment.id])
+    .map((segment) => ({
+      id: segment.id,
+      group: "live-ev",
+      kind: "fada", // same renderer path; vahan_live tables share the periodized shape
+      label: segment.label,
+      table: tables[segment.id],
+    }));
+  // Curated trade-press EV trackers (E2W from Autocar Pro, E4W from RushLane,
+  // E-3W Goods from EVReporter, E-Bus from Sustainable Bus). These stay as
+  // single-month leaderboards; Vahan-backed chips above are the periodized
+  // companions.
   const ev = evOemTrackerDatasets().map((dataset) => ({
     id: dataset.id,
     group: "ev",
@@ -2463,7 +2486,7 @@ function oemSegmentCatalog() {
     label: dataset.label,
     dataset,
   }));
-  return [...fada, ...ev];
+  return [...fada, ...liveEv, ...ev];
 }
 
 function activeOemSegment(segments) {
@@ -2479,6 +2502,7 @@ function renderOemSegmentChips(segments, activeId) {
     >${segment.label}</button>
   `;
   const fadaChips = segments.filter((segment) => segment.group === "fada").map(renderChip).join("");
+  const liveEvChips = segments.filter((segment) => segment.group === "live-ev").map(renderChip).join("");
   const evChips = segments.filter((segment) => segment.group === "ev").map(renderChip).join("");
   return `
     <div class="oem-chip-row">
@@ -2486,6 +2510,12 @@ function renderOemSegmentChips(segments, activeId) {
         <span class="oem-chip-group-label">FADA retail</span>
         <div class="oem-chip-group-items">${fadaChips}</div>
       </div>
+      ${liveEvChips ? `
+        <div class="oem-chip-group">
+          <span class="oem-chip-group-label">Live Vahan EV</span>
+          <div class="oem-chip-group-items">${liveEvChips}</div>
+        </div>
+      ` : ""}
       ${evChips ? `
         <div class="oem-chip-group">
           <span class="oem-chip-group-label">EV trade tracker</span>
