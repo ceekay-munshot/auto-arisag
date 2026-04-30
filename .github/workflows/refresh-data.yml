@@ -34,17 +34,17 @@ jobs:
       - name: Refresh dashboard data
         run: python -u build_dashboard.py --refresh-live
 
-      - name: Backfill PV OEM history
-        # Idempotent — only fetches PDFs for months not already in
-        # data/pv_oem_history.json. After the first successful run this is
-        # essentially a no-op until a new monthly URL appears in
-        # data/source_snapshot.json.
-        run: python -u scripts/backfill_pv_oem_history.py
+      - name: Backfill OEM history (all categories)
+        # Idempotent — only fetches PDFs for months that don't yet have rows
+        # for every tracked category in data/oem_history.json. After the first
+        # successful run this is essentially a no-op until a new monthly URL
+        # appears in data/source_snapshot.json.
+        run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
-      - name: Rebuild dashboard with PV history
-        # The backfill may have added new months, so rebuild so the
-        # periodized PV table picks them up.
+      - name: Rebuild dashboard with OEM history
+        # The backfill may have added new months, so rebuild so the periodized
+        # OEM tables (PV / 2W / 3W / CV / Tractor / CE) pick them up.
         run: python -u build_dashboard.py
 
       - name: Sync investor_dashboard.json into dist/
@@ -59,7 +59,7 @@ jobs:
           # data/investor_dashboard.json always re-renders generated_at, so we
           # can't trust its diff on its own.
           set -e
-          git add data/source_snapshot.json data/news_snapshot.json data/pv_oem_history.json
+          git add data/source_snapshot.json data/news_snapshot.json data/oem_history.json
           if git diff --staged --quiet; then
             echo "No source-data changes detected; skipping commit."
             echo "commit=false" >> "$GITHUB_OUTPUT"
