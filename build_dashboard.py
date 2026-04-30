@@ -26,6 +26,12 @@ def main() -> None:
         updated = sum(1 for item in source_updates if item.get("updated"))
         warnings = sum(1 for item in source_updates if item.get("status") == "warning")
         print(f"Live refresh checked {len(source_updates)} sources, updated {updated}, warnings {warnings}.")
+        for item in source_updates:
+            status = (item.get("status") or "?").upper()
+            source = item.get("source") or "unknown"
+            updated_flag = "+" if item.get("updated") else " "
+            message = item.get("message") or ""
+            print(f"  [{status}] {updated_flag} {source}: {message}", flush=True)
     else:
         payload = build_dashboard(args.output)
     print(f"Wrote dashboard with {payload['summary']['active_module_count']} active modules to {args.output}")
