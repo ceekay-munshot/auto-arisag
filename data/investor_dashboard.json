@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:31:02.159890+00:00",
+  "generated_at": "2026-04-30T10:51:54.765441+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -1364,565 +1364,817 @@
         "2W": {
           "category": "2W",
           "label": "Two-Wheelers",
-          "rows": [
-            {
-              "oem": "Hero MotoCorp",
-              "units": 541857,
-              "share_pct": 27.77,
-              "prior_units": 436598,
-              "prior_share_pct": 28.8,
-              "share_change_pp": -1.03,
-              "unit_growth_pct": 24.11,
-              "listed_companies": [
-                "Hero MotoCorp"
-              ]
-            },
-            {
-              "oem": "Honda Motorcycle & Scooter India",
-              "units": 475313,
-              "share_pct": 24.36,
-              "prior_units": 357548,
-              "prior_share_pct": 23.58,
-              "share_change_pp": 0.78,
-              "unit_growth_pct": 32.94,
-              "listed_companies": []
-            },
-            {
-              "oem": "TVS Motor",
-              "units": 374602,
-              "share_pct": 19.2,
-              "prior_units": 276276,
-              "prior_share_pct": 18.22,
-              "share_change_pp": 0.98,
-              "unit_growth_pct": 35.59,
-              "listed_companies": [
-                "TVS Motor"
-              ]
-            },
-            {
-              "oem": "Bajaj Auto",
-              "units": 216253,
-              "share_pct": 11.08,
-              "prior_units": 171866,
-              "prior_share_pct": 11.34,
-              "share_change_pp": -0.26,
-              "unit_growth_pct": 25.83,
-              "listed_companies": [
-                "Bajaj Auto"
-              ]
-            },
-            {
-              "oem": "Suzuki Motorcycle India",
-              "units": 98412,
-              "share_pct": 5.04,
-              "prior_units": 84955,
-              "prior_share_pct": 5.6,
-              "share_change_pp": -0.56,
-              "unit_growth_pct": 15.84,
-              "listed_companies": []
-            },
-            {
-              "oem": "Royal Enfield",
-              "units": 96510,
-              "share_pct": 4.95,
-              "prior_units": 77560,
-              "prior_share_pct": 5.12,
-              "share_change_pp": -0.17,
-              "unit_growth_pct": 24.43,
-              "listed_companies": [
-                "Eicher Motors"
-              ]
-            },
-            {
-              "oem": "India Yamaha Motor",
-              "units": 65705,
-              "share_pct": 3.37,
-              "prior_units": 48320,
-              "prior_share_pct": 3.19,
-              "share_change_pp": 0.18,
-              "unit_growth_pct": 35.98,
-              "listed_companies": []
-            },
-            {
-              "oem": "Ather Energy",
-              "units": 35736,
-              "share_pct": 1.83,
-              "prior_units": 15650,
-              "prior_share_pct": 1.03,
-              "share_change_pp": 0.8,
-              "unit_growth_pct": 128.35,
-              "listed_companies": []
-            },
-            {
-              "oem": "Ola Electric",
-              "units": 10118,
-              "share_pct": 0.52,
-              "prior_units": 23634,
-              "prior_share_pct": 1.56,
-              "share_change_pp": -1.04,
-              "unit_growth_pct": -57.19,
-              "listed_companies": []
-            },
-            {
-              "oem": "Greaves Electric Mobility",
-              "units": 7965,
-              "share_pct": 0.41,
-              "prior_units": 5648,
-              "prior_share_pct": 0.37,
-              "share_change_pp": 0.04,
-              "unit_growth_pct": 41.02,
-              "listed_companies": []
-            },
-            {
-              "oem": "Classic Legends",
-              "units": 4617,
-              "share_pct": 0.24,
-              "prior_units": 2324,
-              "prior_share_pct": 0.15,
-              "share_change_pp": 0.09,
-              "unit_growth_pct": 98.67,
-              "listed_companies": []
-            },
-            {
-              "oem": "River Mobility",
-              "units": 4149,
-              "share_pct": 0.21,
-              "prior_units": 802,
-              "prior_share_pct": 0.05,
-              "share_change_pp": 0.16,
-              "unit_growth_pct": 417.33,
-              "listed_companies": []
-            },
-            {
-              "oem": "BGauss Auto",
-              "units": 3680,
-              "share_pct": 0.19,
-              "prior_units": 2591,
-              "prior_share_pct": 0.17,
-              "share_change_pp": 0.02,
-              "unit_growth_pct": 42.03,
-              "listed_companies": []
-            },
-            {
-              "oem": "Piaggio Vehicles",
-              "units": 3122,
-              "share_pct": 0.16,
-              "prior_units": 2333,
-              "prior_share_pct": 0.15,
-              "share_change_pp": 0.01,
-              "unit_growth_pct": 33.82,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 12967,
-              "share_pct": 0.66,
-              "prior_units": 10045,
-              "prior_share_pct": 0.66,
-              "share_change_pp": 0.0,
-              "unit_growth_pct": 29.09,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Hero MotoCorp",
+                  "current_units": 541857,
+                  "mom_pct": 18.35,
+                  "yoy_pct": 24.11,
+                  "growth_3m_pct": 86.32,
+                  "cagr_12m_pct": 24.11,
+                  "share_pct": 27.77,
+                  "share_change_pp": -1.03,
+                  "listed_companies": [
+                    "Hero MotoCorp"
+                  ]
+                },
+                {
+                  "oem": "Honda Motorcycle & Scooter India",
+                  "current_units": 475313,
+                  "mom_pct": 10.22,
+                  "yoy_pct": 32.94,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": 32.94,
+                  "share_pct": 24.36,
+                  "share_change_pp": 0.78,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "TVS Motor",
+                  "current_units": 374602,
+                  "mom_pct": 12.18,
+                  "yoy_pct": 35.59,
+                  "growth_3m_pct": 40.98,
+                  "cagr_12m_pct": 35.59,
+                  "share_pct": 19.2,
+                  "share_change_pp": 0.98,
+                  "listed_companies": [
+                    "TVS Motor"
+                  ]
+                },
+                {
+                  "oem": "Bajaj Auto",
+                  "current_units": 216253,
+                  "mom_pct": 19.58,
+                  "yoy_pct": 25.83,
+                  "growth_3m_pct": 56.69,
+                  "cagr_12m_pct": 25.83,
+                  "share_pct": 11.08,
+                  "share_change_pp": -0.26,
+                  "listed_companies": [
+                    "Bajaj Auto"
+                  ]
+                },
+                {
+                  "oem": "Suzuki Motorcycle India",
+                  "current_units": 98412,
+                  "mom_pct": 4.25,
+                  "yoy_pct": 15.84,
+                  "growth_3m_pct": 22.93,
+                  "cagr_12m_pct": 15.84,
+                  "share_pct": 5.04,
+                  "share_change_pp": -0.56,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Royal Enfield",
+                  "current_units": 96510,
+                  "mom_pct": 5.8,
+                  "yoy_pct": 24.43,
+                  "growth_3m_pct": 17.61,
+                  "cagr_12m_pct": 24.43,
+                  "share_pct": 4.95,
+                  "share_change_pp": -0.17,
+                  "listed_companies": [
+                    "Eicher Motors"
+                  ]
+                },
+                {
+                  "oem": "India Yamaha Motor",
+                  "current_units": 65705,
+                  "mom_pct": 7.77,
+                  "yoy_pct": 35.98,
+                  "growth_3m_pct": 20.86,
+                  "cagr_12m_pct": 35.98,
+                  "share_pct": 3.37,
+                  "share_change_pp": 0.18,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Ather Energy",
+                  "current_units": 35736,
+                  "mom_pct": 73.61,
+                  "yoy_pct": 128.35,
+                  "growth_3m_pct": 109.5,
+                  "cagr_12m_pct": 128.35,
+                  "share_pct": 1.83,
+                  "share_change_pp": 0.8,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Ola Electric",
+                  "current_units": 10118,
+                  "mom_pct": 154.99,
+                  "yoy_pct": -57.19,
+                  "growth_3m_pct": 12.16,
+                  "cagr_12m_pct": -57.19,
+                  "share_pct": 0.52,
+                  "share_change_pp": -1.04,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Greaves Electric Mobility",
+                  "current_units": 7965,
+                  "mom_pct": 68.61,
+                  "yoy_pct": 41.02,
+                  "growth_3m_pct": 67.65,
+                  "cagr_12m_pct": 41.02,
+                  "share_pct": 0.41,
+                  "share_change_pp": 0.04,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Classic Legends",
+                  "current_units": 4617,
+                  "mom_pct": 3.33,
+                  "yoy_pct": 98.67,
+                  "growth_3m_pct": 23.19,
+                  "cagr_12m_pct": 98.67,
+                  "share_pct": 0.24,
+                  "share_change_pp": 0.09,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "River Mobility",
+                  "current_units": 4149,
+                  "mom_pct": 83.99,
+                  "yoy_pct": 417.33,
+                  "growth_3m_pct": 131.01,
+                  "cagr_12m_pct": 417.33,
+                  "share_pct": 0.21,
+                  "share_change_pp": 0.16,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "BGauss Auto",
+                  "current_units": 3680,
+                  "mom_pct": 52.63,
+                  "yoy_pct": 42.03,
+                  "growth_3m_pct": 68.19,
+                  "cagr_12m_pct": 42.03,
+                  "share_pct": 0.19,
+                  "share_change_pp": 0.02,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Piaggio Vehicles",
+                  "current_units": 3122,
+                  "mom_pct": 8.89,
+                  "yoy_pct": 33.82,
+                  "growth_3m_pct": 29.17,
+                  "cagr_12m_pct": 33.82,
+                  "share_pct": 0.16,
+                  "share_change_pp": 0.01,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 12967,
+                  "mom_pct": 47.57,
+                  "yoy_pct": 29.09,
+                  "growth_3m_pct": 47.79,
+                  "cagr_12m_pct": 29.09,
+                  "share_pct": 0.66,
+                  "share_change_pp": 0.0,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         },
         "3W": {
           "category": "3W",
           "label": "Three-Wheelers",
-          "rows": [
-            {
-              "oem": "Bajaj Auto",
-              "units": 41162,
-              "share_pct": 37.5,
-              "prior_units": 33844,
-              "prior_share_pct": 34.07,
-              "share_change_pp": 3.43,
-              "unit_growth_pct": 21.62,
-              "listed_companies": [
-                "Bajaj Auto"
-              ]
-            },
-            {
-              "oem": "Mahindra & Mahindra",
-              "units": 9963,
-              "share_pct": 9.08,
-              "prior_units": 7362,
-              "prior_share_pct": 7.41,
-              "share_change_pp": 1.67,
-              "unit_growth_pct": 35.33,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Piaggio Vehicles",
-              "units": 8643,
-              "share_pct": 7.87,
-              "prior_units": 7075,
-              "prior_share_pct": 7.12,
-              "share_change_pp": 0.75,
-              "unit_growth_pct": 22.16,
-              "listed_companies": []
-            },
-            {
-              "oem": "TVS Motor",
-              "units": 5543,
-              "share_pct": 5.05,
-              "prior_units": 2954,
-              "prior_share_pct": 2.97,
-              "share_change_pp": 2.08,
-              "unit_growth_pct": 87.64,
-              "listed_companies": [
-                "TVS Motor"
-              ]
-            },
-            {
-              "oem": "Atul Auto",
-              "units": 3022,
-              "share_pct": 2.75,
-              "prior_units": 2446,
-              "prior_share_pct": 2.46,
-              "share_change_pp": 0.29,
-              "unit_growth_pct": 23.55,
-              "listed_companies": [
-                "Atul Auto"
-              ]
-            },
-            {
-              "oem": "YC Electric Vehicle",
-              "units": 1927,
-              "share_pct": 1.76,
-              "prior_units": 3450,
-              "prior_share_pct": 3.47,
-              "share_change_pp": -1.71,
-              "unit_growth_pct": -44.14,
-              "listed_companies": []
-            },
-            {
-              "oem": "Dilli Electric Auto",
-              "units": 1604,
-              "share_pct": 1.46,
-              "prior_units": 1734,
-              "prior_share_pct": 1.75,
-              "share_change_pp": -0.29,
-              "unit_growth_pct": -7.5,
-              "listed_companies": []
-            },
-            {
-              "oem": "Saera Electric Auto",
-              "units": 1439,
-              "share_pct": 1.31,
-              "prior_units": 2231,
-              "prior_share_pct": 2.25,
-              "share_change_pp": -0.94,
-              "unit_growth_pct": -35.5,
-              "listed_companies": []
-            },
-            {
-              "oem": "J. S. Auto",
-              "units": 1099,
-              "share_pct": 1.0,
-              "prior_units": 1108,
-              "prior_share_pct": 1.12,
-              "share_change_pp": -0.12,
-              "unit_growth_pct": -0.81,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 35375,
-              "share_pct": 32.22,
-              "prior_units": 37121,
-              "prior_share_pct": 37.37,
-              "share_change_pp": -5.15,
-              "unit_growth_pct": -4.7,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Bajaj Auto",
+                  "current_units": 41162,
+                  "mom_pct": -7.62,
+                  "yoy_pct": 21.62,
+                  "growth_3m_pct": 16.91,
+                  "cagr_12m_pct": 21.62,
+                  "share_pct": 37.5,
+                  "share_change_pp": 3.43,
+                  "listed_companies": [
+                    "Bajaj Auto"
+                  ]
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 9963,
+                  "mom_pct": 15.35,
+                  "yoy_pct": 35.33,
+                  "growth_3m_pct": 14.77,
+                  "cagr_12m_pct": 35.33,
+                  "share_pct": 9.08,
+                  "share_change_pp": 1.67,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "Piaggio Vehicles",
+                  "current_units": 8643,
+                  "mom_pct": -1.92,
+                  "yoy_pct": 22.16,
+                  "growth_3m_pct": 14.72,
+                  "cagr_12m_pct": 22.16,
+                  "share_pct": 7.87,
+                  "share_change_pp": 0.75,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "TVS Motor",
+                  "current_units": 5543,
+                  "mom_pct": 6.58,
+                  "yoy_pct": 87.64,
+                  "growth_3m_pct": 9.01,
+                  "cagr_12m_pct": 87.64,
+                  "share_pct": 5.05,
+                  "share_change_pp": 2.08,
+                  "listed_companies": [
+                    "TVS Motor"
+                  ]
+                },
+                {
+                  "oem": "Atul Auto",
+                  "current_units": 3022,
+                  "mom_pct": -3.76,
+                  "yoy_pct": 23.55,
+                  "growth_3m_pct": 13.06,
+                  "cagr_12m_pct": 23.55,
+                  "share_pct": 2.75,
+                  "share_change_pp": 0.29,
+                  "listed_companies": [
+                    "Atul Auto"
+                  ]
+                },
+                {
+                  "oem": "YC Electric Vehicle",
+                  "current_units": 1927,
+                  "mom_pct": -1.28,
+                  "yoy_pct": -44.14,
+                  "growth_3m_pct": -34.85,
+                  "cagr_12m_pct": -44.14,
+                  "share_pct": 1.76,
+                  "share_change_pp": -1.71,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Dilli Electric Auto",
+                  "current_units": 1604,
+                  "mom_pct": 0.82,
+                  "yoy_pct": -7.5,
+                  "growth_3m_pct": -26.05,
+                  "cagr_12m_pct": -7.5,
+                  "share_pct": 1.46,
+                  "share_change_pp": -0.29,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Saera Electric Auto",
+                  "current_units": 1439,
+                  "mom_pct": -8.52,
+                  "yoy_pct": -35.5,
+                  "growth_3m_pct": -23.54,
+                  "cagr_12m_pct": -35.5,
+                  "share_pct": 1.31,
+                  "share_change_pp": -0.94,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "J. S. Auto",
+                  "current_units": 1099,
+                  "mom_pct": null,
+                  "yoy_pct": -0.81,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -0.81,
+                  "share_pct": 1.0,
+                  "share_change_pp": -0.12,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 35375,
+                  "mom_pct": -9.26,
+                  "yoy_pct": -4.7,
+                  "growth_3m_pct": -23.47,
+                  "cagr_12m_pct": -4.7,
+                  "share_pct": 32.22,
+                  "share_change_pp": -5.15,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         },
         "CV": {
           "category": "CV",
           "label": "Commercial Vehicles",
-          "rows": [
-            {
-              "oem": "Tata Motors",
-              "units": 36380,
-              "share_pct": 35.48,
-              "prior_units": 30732,
-              "prior_share_pct": 34.5,
-              "share_change_pp": 0.98,
-              "unit_growth_pct": 18.38,
-              "listed_companies": [
-                "Tata Motors"
-              ]
-            },
-            {
-              "oem": "Mahindra Group",
-              "units": 26898,
-              "share_pct": 26.23,
-              "prior_units": 24168,
-              "prior_share_pct": 27.13,
-              "share_change_pp": -0.9,
-              "unit_growth_pct": 11.3,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Ashok Leyland Group",
-              "units": 19384,
-              "share_pct": 18.9,
-              "prior_units": 16616,
-              "prior_share_pct": 18.66,
-              "share_change_pp": 0.24,
-              "unit_growth_pct": 16.66,
-              "listed_companies": [
-                "Ashok Leyland"
-              ]
-            },
-            {
-              "oem": "VE Commercial Vehicles",
-              "units": 8417,
-              "share_pct": 8.21,
-              "prior_units": 6877,
-              "prior_share_pct": 7.72,
-              "share_change_pp": 0.49,
-              "unit_growth_pct": 22.39,
-              "listed_companies": [
-                "Eicher Motors"
-              ]
-            },
-            {
-              "oem": "Maruti Suzuki",
-              "units": 4561,
-              "share_pct": 4.45,
-              "prior_units": 3949,
-              "prior_share_pct": 4.43,
-              "share_change_pp": 0.02,
-              "unit_growth_pct": 15.5,
-              "listed_companies": [
-                "Maruti Suzuki"
-              ]
-            },
-            {
-              "oem": "Force Motors",
-              "units": 2142,
-              "share_pct": 2.09,
-              "prior_units": 2987,
-              "prior_share_pct": 3.35,
-              "share_change_pp": -1.26,
-              "unit_growth_pct": -28.29,
-              "listed_companies": []
-            },
-            {
-              "oem": "Daimler India Commercial Vehicles",
-              "units": 2130,
-              "share_pct": 2.08,
-              "prior_units": 1872,
-              "prior_share_pct": 2.1,
-              "share_change_pp": -0.02,
-              "unit_growth_pct": 13.78,
-              "listed_companies": []
-            },
-            {
-              "oem": "SML Isuzu",
-              "units": 1368,
-              "share_pct": 1.33,
-              "prior_units": 1220,
-              "prior_share_pct": 1.37,
-              "share_change_pp": -0.04,
-              "unit_growth_pct": 12.13,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 1256,
-              "share_pct": 1.22,
-              "prior_units": 646,
-              "prior_share_pct": 0.73,
-              "share_change_pp": 0.49,
-              "unit_growth_pct": 94.43,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Tata Motors",
+                  "current_units": 36380,
+                  "mom_pct": 1.34,
+                  "yoy_pct": 18.38,
+                  "growth_3m_pct": 23.07,
+                  "cagr_12m_pct": 18.38,
+                  "share_pct": 35.48,
+                  "share_change_pp": 0.98,
+                  "listed_companies": [
+                    "Tata Motors"
+                  ]
+                },
+                {
+                  "oem": "Mahindra Group",
+                  "current_units": 26898,
+                  "mom_pct": -0.43,
+                  "yoy_pct": 11.3,
+                  "growth_3m_pct": 18.15,
+                  "cagr_12m_pct": 11.3,
+                  "share_pct": 26.23,
+                  "share_change_pp": -0.9,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "Ashok Leyland Group",
+                  "current_units": 19384,
+                  "mom_pct": 4.11,
+                  "yoy_pct": 16.66,
+                  "growth_3m_pct": 27.21,
+                  "cagr_12m_pct": 16.66,
+                  "share_pct": 18.9,
+                  "share_change_pp": 0.24,
+                  "listed_companies": [
+                    "Ashok Leyland"
+                  ]
+                },
+                {
+                  "oem": "VE Commercial Vehicles",
+                  "current_units": 8417,
+                  "mom_pct": 1.86,
+                  "yoy_pct": 22.39,
+                  "growth_3m_pct": 24.94,
+                  "cagr_12m_pct": 22.39,
+                  "share_pct": 8.21,
+                  "share_change_pp": 0.49,
+                  "listed_companies": [
+                    "Eicher Motors"
+                  ]
+                },
+                {
+                  "oem": "Maruti Suzuki",
+                  "current_units": 4561,
+                  "mom_pct": 1.6,
+                  "yoy_pct": 15.5,
+                  "growth_3m_pct": 13.91,
+                  "cagr_12m_pct": 15.5,
+                  "share_pct": 4.45,
+                  "share_change_pp": 0.02,
+                  "listed_companies": [
+                    "Maruti Suzuki"
+                  ]
+                },
+                {
+                  "oem": "Force Motors",
+                  "current_units": 2142,
+                  "mom_pct": 2.15,
+                  "yoy_pct": -28.29,
+                  "growth_3m_pct": 32.8,
+                  "cagr_12m_pct": -28.29,
+                  "share_pct": 2.09,
+                  "share_change_pp": -1.26,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Daimler India Commercial Vehicles",
+                  "current_units": 2130,
+                  "mom_pct": -10.84,
+                  "yoy_pct": 13.78,
+                  "growth_3m_pct": 19.66,
+                  "cagr_12m_pct": 13.78,
+                  "share_pct": 2.08,
+                  "share_change_pp": -0.02,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "SML Isuzu",
+                  "current_units": 1368,
+                  "mom_pct": 28.33,
+                  "yoy_pct": 12.13,
+                  "growth_3m_pct": 49.02,
+                  "cagr_12m_pct": 12.13,
+                  "share_pct": 1.33,
+                  "share_change_pp": -0.04,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 1256,
+                  "mom_pct": 27.77,
+                  "yoy_pct": 94.43,
+                  "growth_3m_pct": 19.62,
+                  "cagr_12m_pct": 94.43,
+                  "share_pct": 1.22,
+                  "share_change_pp": 0.49,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         },
         "CE": {
           "category": "CE",
           "label": "Construction Equipment",
-          "rows": [
-            {
-              "oem": "JCB India",
-              "units": 3420,
-              "share_pct": 49.52,
-              "prior_units": 3642,
-              "prior_share_pct": 44.21,
-              "share_change_pp": 5.31,
-              "unit_growth_pct": -6.1,
-              "listed_companies": []
-            },
-            {
-              "oem": "Action Construction Equipment",
-              "units": 715,
-              "share_pct": 10.35,
-              "prior_units": 1040,
-              "prior_share_pct": 12.62,
-              "share_change_pp": -2.27,
-              "unit_growth_pct": -31.25,
-              "listed_companies": [
-                "Action Construction Equipment"
-              ]
-            },
-            {
-              "oem": "Ajax Engineering",
-              "units": 460,
-              "share_pct": 6.66,
-              "prior_units": 675,
-              "prior_share_pct": 8.19,
-              "share_change_pp": -1.53,
-              "unit_growth_pct": -31.85,
-              "listed_companies": []
-            },
-            {
-              "oem": "Escorts Kubota CE",
-              "units": 451,
-              "share_pct": 6.53,
-              "prior_units": 505,
-              "prior_share_pct": 6.13,
-              "share_change_pp": 0.4,
-              "unit_growth_pct": -10.69,
-              "listed_companies": [
-                "Escorts Kubota"
-              ]
-            },
-            {
-              "oem": "Bull Machines",
-              "units": 227,
-              "share_pct": 3.29,
-              "prior_units": 247,
-              "prior_share_pct": 3.0,
-              "share_change_pp": 0.29,
-              "unit_growth_pct": -8.1,
-              "listed_companies": []
-            },
-            {
-              "oem": "Tata Hitachi",
-              "units": 188,
-              "share_pct": 2.72,
-              "prior_units": 210,
-              "prior_share_pct": 2.55,
-              "share_change_pp": 0.17,
-              "unit_growth_pct": -10.48,
-              "listed_companies": []
-            },
-            {
-              "oem": "CNH Construction Equipment",
-              "units": 167,
-              "share_pct": 2.42,
-              "prior_units": 245,
-              "prior_share_pct": 2.97,
-              "share_change_pp": -0.55,
-              "unit_growth_pct": -31.84,
-              "listed_companies": []
-            },
-            {
-              "oem": "Caterpillar India",
-              "units": 133,
-              "share_pct": 1.93,
-              "prior_units": 199,
-              "prior_share_pct": 2.42,
-              "share_change_pp": -0.49,
-              "unit_growth_pct": -33.17,
-              "listed_companies": []
-            },
-            {
-              "oem": "Schwing Stetter",
-              "units": 124,
-              "share_pct": 1.8,
-              "prior_units": 112,
-              "prior_share_pct": 1.36,
-              "share_change_pp": 0.44,
-              "unit_growth_pct": 10.71,
-              "listed_companies": []
-            },
-            {
-              "oem": "All Terrain Crane",
-              "units": 123,
-              "share_pct": 1.78,
-              "prior_units": 129,
-              "prior_share_pct": 1.57,
-              "share_change_pp": 0.21,
-              "unit_growth_pct": -4.65,
-              "listed_companies": []
-            },
-            {
-              "oem": "Mahindra & Mahindra",
-              "units": 78,
-              "share_pct": 1.13,
-              "prior_units": 133,
-              "prior_share_pct": 1.61,
-              "share_change_pp": -0.48,
-              "unit_growth_pct": -41.35,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Indo Farm Equipment",
-              "units": 75,
-              "share_pct": 1.09,
-              "prior_units": 88,
-              "prior_share_pct": 1.07,
-              "share_change_pp": 0.02,
-              "unit_growth_pct": -14.77,
-              "listed_companies": []
-            },
-            {
-              "oem": "Doosan Bobcat India",
-              "units": 72,
-              "share_pct": 1.04,
-              "prior_units": 55,
-              "prior_share_pct": 0.67,
-              "share_change_pp": 0.37,
-              "unit_growth_pct": 30.91,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 673,
-              "share_pct": 9.75,
-              "prior_units": 958,
-              "prior_share_pct": 11.63,
-              "share_change_pp": -1.88,
-              "unit_growth_pct": -29.75,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "JCB India",
+                  "current_units": 3420,
+                  "mom_pct": 1.27,
+                  "yoy_pct": -6.1,
+                  "growth_3m_pct": 11.15,
+                  "cagr_12m_pct": -6.1,
+                  "share_pct": 49.52,
+                  "share_change_pp": 5.31,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Action Construction Equipment",
+                  "current_units": 715,
+                  "mom_pct": 2.29,
+                  "yoy_pct": -31.25,
+                  "growth_3m_pct": 21.39,
+                  "cagr_12m_pct": -31.25,
+                  "share_pct": 10.35,
+                  "share_change_pp": -2.27,
+                  "listed_companies": [
+                    "Action Construction Equipment"
+                  ]
+                },
+                {
+                  "oem": "Ajax Engineering",
+                  "current_units": 460,
+                  "mom_pct": -2.13,
+                  "yoy_pct": -31.85,
+                  "growth_3m_pct": 12.75,
+                  "cagr_12m_pct": -31.85,
+                  "share_pct": 6.66,
+                  "share_change_pp": -1.53,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Escorts Kubota CE",
+                  "current_units": 451,
+                  "mom_pct": 1.81,
+                  "yoy_pct": -10.69,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -10.69,
+                  "share_pct": 6.53,
+                  "share_change_pp": 0.4,
+                  "listed_companies": [
+                    "Escorts Kubota"
+                  ]
+                },
+                {
+                  "oem": "Bull Machines",
+                  "current_units": 227,
+                  "mom_pct": 1.79,
+                  "yoy_pct": -8.1,
+                  "growth_3m_pct": 112.15,
+                  "cagr_12m_pct": -8.1,
+                  "share_pct": 3.29,
+                  "share_change_pp": 0.29,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Tata Hitachi",
+                  "current_units": 188,
+                  "mom_pct": 10.59,
+                  "yoy_pct": -10.48,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -10.48,
+                  "share_pct": 2.72,
+                  "share_change_pp": 0.17,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "CNH Construction Equipment",
+                  "current_units": 167,
+                  "mom_pct": -5.11,
+                  "yoy_pct": -31.84,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -31.84,
+                  "share_pct": 2.42,
+                  "share_change_pp": -0.55,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Caterpillar India",
+                  "current_units": 133,
+                  "mom_pct": -8.28,
+                  "yoy_pct": -33.17,
+                  "growth_3m_pct": 52.87,
+                  "cagr_12m_pct": -33.17,
+                  "share_pct": 1.93,
+                  "share_change_pp": -0.49,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Schwing Stetter",
+                  "current_units": 124,
+                  "mom_pct": 22.77,
+                  "yoy_pct": 10.71,
+                  "growth_3m_pct": 87.88,
+                  "cagr_12m_pct": 10.71,
+                  "share_pct": 1.8,
+                  "share_change_pp": 0.44,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "All Terrain Crane",
+                  "current_units": 123,
+                  "mom_pct": 68.49,
+                  "yoy_pct": -4.65,
+                  "growth_3m_pct": 10.81,
+                  "cagr_12m_pct": -4.65,
+                  "share_pct": 1.78,
+                  "share_change_pp": 0.21,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 78,
+                  "mom_pct": 13.04,
+                  "yoy_pct": -41.35,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -41.35,
+                  "share_pct": 1.13,
+                  "share_change_pp": -0.48,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "Indo Farm Equipment",
+                  "current_units": 75,
+                  "mom_pct": null,
+                  "yoy_pct": -14.77,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": -14.77,
+                  "share_pct": 1.09,
+                  "share_change_pp": 0.02,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Doosan Bobcat India",
+                  "current_units": 72,
+                  "mom_pct": null,
+                  "yoy_pct": 30.91,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": 30.91,
+                  "share_pct": 1.04,
+                  "share_change_pp": 0.37,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 673,
+                  "mom_pct": -4.4,
+                  "yoy_pct": -29.75,
+                  "growth_3m_pct": 13.11,
+                  "cagr_12m_pct": -29.75,
+                  "share_pct": 9.75,
+                  "share_change_pp": -1.88,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly Construction Equipment OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         },
         "PV": {
@@ -2209,110 +2461,170 @@
         "TRACTOR": {
           "category": "TRACTOR",
           "label": "Tractors",
-          "rows": [
-            {
-              "oem": "Mahindra Tractors",
-              "units": 19652,
-              "share_pct": 23.94,
-              "prior_units": 17593,
-              "prior_share_pct": 23.76,
-              "share_change_pp": 0.18,
-              "unit_growth_pct": 11.7,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Swaraj",
-              "units": 16007,
-              "share_pct": 19.5,
-              "prior_units": 14355,
-              "prior_share_pct": 19.39,
-              "share_change_pp": 0.11,
-              "unit_growth_pct": 11.51,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "International Tractors",
-              "units": 10194,
-              "share_pct": 12.42,
-              "prior_units": 9266,
-              "prior_share_pct": 12.52,
-              "share_change_pp": -0.1,
-              "unit_growth_pct": 10.02,
-              "listed_companies": []
-            },
-            {
-              "oem": "Escorts Kubota",
-              "units": 8926,
-              "share_pct": 10.87,
-              "prior_units": 7688,
-              "prior_share_pct": 10.38,
-              "share_change_pp": 0.49,
-              "unit_growth_pct": 16.1,
-              "listed_companies": [
-                "Escorts Kubota"
-              ]
-            },
-            {
-              "oem": "TAFE",
-              "units": 8489,
-              "share_pct": 10.34,
-              "prior_units": 7067,
-              "prior_share_pct": 9.55,
-              "share_change_pp": 0.79,
-              "unit_growth_pct": 20.12,
-              "listed_companies": []
-            },
-            {
-              "oem": "John Deere India",
-              "units": 6460,
-              "share_pct": 7.87,
-              "prior_units": 5910,
-              "prior_share_pct": 7.98,
-              "share_change_pp": -0.11,
-              "unit_growth_pct": 9.31,
-              "listed_companies": []
-            },
-            {
-              "oem": "Eicher Tractors",
-              "units": 4661,
-              "share_pct": 5.68,
-              "prior_units": 4551,
-              "prior_share_pct": 6.15,
-              "share_change_pp": -0.47,
-              "unit_growth_pct": 2.42,
-              "listed_companies": []
-            },
-            {
-              "oem": "CNH Industrial",
-              "units": 3931,
-              "share_pct": 4.79,
-              "prior_units": 3025,
-              "prior_share_pct": 4.09,
-              "share_change_pp": 0.7,
-              "unit_growth_pct": 29.95,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 3760,
-              "share_pct": 4.58,
-              "prior_units": 4577,
-              "prior_share_pct": 6.18,
-              "share_change_pp": -1.6,
-              "unit_growth_pct": -17.85,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Mahindra Tractors",
+                  "current_units": 19652,
+                  "mom_pct": -8.47,
+                  "yoy_pct": 11.7,
+                  "growth_3m_pct": -33.33,
+                  "cagr_12m_pct": 11.7,
+                  "share_pct": 23.94,
+                  "share_change_pp": 0.18,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "Swaraj",
+                  "current_units": 16007,
+                  "mom_pct": -5.27,
+                  "yoy_pct": 11.51,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": 11.51,
+                  "share_pct": 19.5,
+                  "share_change_pp": 0.11,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "International Tractors",
+                  "current_units": 10194,
+                  "mom_pct": -11.85,
+                  "yoy_pct": 10.02,
+                  "growth_3m_pct": -26.84,
+                  "cagr_12m_pct": 10.02,
+                  "share_pct": 12.42,
+                  "share_change_pp": -0.1,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Escorts Kubota",
+                  "current_units": 8926,
+                  "mom_pct": -11.84,
+                  "yoy_pct": 16.1,
+                  "growth_3m_pct": null,
+                  "cagr_12m_pct": 16.1,
+                  "share_pct": 10.87,
+                  "share_change_pp": 0.49,
+                  "listed_companies": [
+                    "Escorts Kubota"
+                  ]
+                },
+                {
+                  "oem": "TAFE",
+                  "current_units": 8489,
+                  "mom_pct": -4.53,
+                  "yoy_pct": 20.12,
+                  "growth_3m_pct": -26.07,
+                  "cagr_12m_pct": 20.12,
+                  "share_pct": 10.34,
+                  "share_change_pp": 0.79,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "John Deere India",
+                  "current_units": 6460,
+                  "mom_pct": -3.19,
+                  "yoy_pct": 9.31,
+                  "growth_3m_pct": -23.55,
+                  "cagr_12m_pct": 9.31,
+                  "share_pct": 7.87,
+                  "share_change_pp": -0.11,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Eicher Tractors",
+                  "current_units": 4661,
+                  "mom_pct": -15.96,
+                  "yoy_pct": 2.42,
+                  "growth_3m_pct": -32.54,
+                  "cagr_12m_pct": 2.42,
+                  "share_pct": 5.68,
+                  "share_change_pp": -0.47,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "CNH Industrial",
+                  "current_units": 3931,
+                  "mom_pct": -5.46,
+                  "yoy_pct": 29.95,
+                  "growth_3m_pct": -20.12,
+                  "cagr_12m_pct": 29.95,
+                  "share_pct": 4.79,
+                  "share_change_pp": 0.7,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 3760,
+                  "mom_pct": -8.11,
+                  "yoy_pct": -17.85,
+                  "growth_3m_pct": -16.8,
+                  "cagr_12m_pct": -17.85,
+                  "share_pct": 4.58,
+                  "share_change_pp": -1.6,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly Tractors OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         }
       },
@@ -10804,7 +11116,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-04-30T08:45:03.674556+00:00",
+    "generated_at": "2026-04-30T10:51:18.106951+00:00",
     "window_days": 45,
     "group_count": 5,
     "item_count": 19,
@@ -11080,14 +11392,15 @@
             ]
           },
           {
-            "title": "ChargeZone and TATA.ev launch Mega Charging Hub on Mumbai\u2013Pune Expressway",
-            "url": "https://evreporter.com/chargezone-and-tata-ev-launch-mega-charging-hub-on-mumbai-pune-expressway",
-            "summary": "The post ChargeZone and TATA.ev launch Mega Charging Hub on Mumbai\u2013Pune Expressway appeared first at EVreporter on EVreporter . ChargeZone and TATA.ev have announced the launch of a co-branded Mega Charging Hub at Khalapur on the Mumbai\u2013Pune Expressway. The The post ChargeZone and TATA.ev launch Mega Charging Hub on Mumbai\u2013Pune Expressway appeared first at EVreporter on EVreporter .",
+            "title": "Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999",
+            "url": "https://evreporter.com/oben-electric-launches-rorr-evo-electric-motorcycle-at-%e2%82%b999999",
+            "summary": "The post Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999 appeared first at EVreporter on EVreporter . Oben Electric, a Bengaluru-based electric motorcycle manufacturer, has launched the Rorr EVO electric motorcycle at an introductory price of \u20b999,999 The post Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999 appeared first at EVreporter on EVreporter .",
             "source": "EVReporter",
-            "published_at": "2026-04-29T06:13:21+00:00",
-            "published_display": "29 Apr 2026",
+            "published_at": "2026-04-30T10:24:33+00:00",
+            "published_display": "30 Apr 2026",
             "importance_score": 8,
             "segment_tags": [
+              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
@@ -11168,7 +11481,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 1,
-      "unmapped_articles": 40,
+      "unmapped_articles": 41,
       "filtered_low_signal": 1,
       "kept_articles": 68
     }
