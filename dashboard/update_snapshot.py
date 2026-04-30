@@ -387,11 +387,35 @@ def parse_siam_release(html: str, source_url: str) -> dict:
 
 
 def detect_siam_month(html: str) -> str | None:
-    match = re.search(r"Monthly Performance:\s*([A-Za-z]+)\s+(\d{4})", compact_text(html), flags=re.IGNORECASE)
-    if not match:
-        return None
-    month_name, year_text = match.groups()
-    return to_month_id(month_name, int(year_text))
+    text = compact_text(html)
+    # Old listing format: "Monthly Performance: February 2026"
+    match = re.search(r"Monthly Performance:\s*([A-Za-z]+)\s+(\d{4})", text, flags=re.IGNORECASE)
+    if match:
+        month_name, year_text = match.groups()
+        return to_month_id(month_name, int(year_text))
+    # Newer listing format: "Auto Industry Performance of February-2026"
+    match = re.search(
+        r"Auto Industry Performance of\s+([A-Za-z]+)[-\s]+(\d{4})",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if match:
+        month_name, year_text = match.groups()
+        if month_name.lower() in MONTH_LOOKUP:
+            return to_month_id(month_name, int(year_text))
+    # SIAM sometimes bundles March into a Q4 release ("Auto Industry Performance
+    # of Q4 (Jan- March 2026) & FY 2025-26"); treat the closing month as the
+    # latest monthly cadence.
+    match = re.search(
+        r"Auto Industry Performance of[^<]{0,80}?[(\-]\s*([A-Za-z]+)\s+(\d{4})",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if match:
+        month_name, year_text = match.groups()
+        if month_name.lower() in MONTH_LOOKUP:
+            return to_month_id(month_name, int(year_text))
+    return None
 
 
 def parse_acma_releases(html: str) -> list[dict]:
