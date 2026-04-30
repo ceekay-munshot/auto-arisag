@@ -2145,7 +2145,7 @@ function renderEvTrendExplorer() {
           </select>
         </label>
         <div class="state-segment-switch" role="tablist" aria-label="EV trend periods">
-          ${["M", "Q", "Y"].map((period) => `
+          ${["M", "Q"].map((period) => `
             <button
               type="button"
               class="button ${state.evPeriod === period ? "button-primary" : ""}"
