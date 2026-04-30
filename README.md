@@ -13,7 +13,7 @@ The build deliberately hides weak modules. If a source is missing or not robust 
 
 ## Current source boundary
 
-- `FADA`: latest structured retail snapshot is wired through `Feb 2026`
+- `FADA`: latest structured retail snapshot is wired through `Mar 2026`
 - `SIAM`: latest structured wholesale snapshot is wired through `Feb 2026`
 - `ACMA`: latest structured component snapshot is `FY2024-25`
 - `Vahan`: auto-hidden unless you place validated CSV files in `data/vahan/`

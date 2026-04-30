@@ -1078,6 +1078,26 @@ def upsert_fada_ev_share_series(records: list[dict], month_id: str, monthly_fuel
 
 def parse_fada_oem_page(category: str, text: str, previous_rows: list[dict]) -> list[dict]:
     canonical_lookup = {normalize_oem_key(item["oem"]): item["oem"] for item in previous_rows}
+
+    # The "Others" / "Others including EV" row is title-case in FADA's PDF, so the
+    # uppercase-only OEM regex below cannot capture it. Pull it out first and strip
+    # it from the text — otherwise the trailing "EV" gets matched by the main regex
+    # and becomes a phantom OEM named "Ev".
+    others_pattern = re.compile(
+        r"\bOthers(?:\s+[Ii]ncluding\s+EV)?\s+([-\d,]+)\s+([\d.]+)%\s+([-\d,]+)\s+([\d.]+)%"
+    )
+    others_row: dict | None = None
+    others_match = others_pattern.search(text)
+    if others_match:
+        others_row = {
+            "oem": "Others",
+            "units": parse_indian_number(others_match.group(1)),
+            "share_pct": float(others_match.group(2)),
+            "prior_units": parse_indian_number(others_match.group(3)),
+            "prior_share_pct": float(others_match.group(4)),
+        }
+        text = text[: others_match.start()] + text[others_match.end() :]
+
     row_pattern = re.compile(r"([A-Z0-9&().,'/\- ]+?)\s+([-\d,]+)\s+([\d.]+)%\s+([-\d,]+)\s+([\d.]+)%")
     parsed = []
     seen = set()
@@ -1101,6 +1121,9 @@ def parse_fada_oem_page(category: str, text: str, previous_rows: list[dict]) -> 
                 "prior_share_pct": float(match.group(5)),
             }
         )
+
+    if others_row and "Others" not in seen:
+        parsed.append(others_row)
     return parsed
 
 
@@ -1128,8 +1151,11 @@ def map_fada_oem_name(category: str, raw_name: str, canonical_lookup: dict[str, 
         },
         "3W": {
             "BAJAJ AUTO LTD": "Bajaj Auto",
+            # FADA's 3W annexure lists Mahindra & Mahindra as a parent group whose
+            # sub-rows are MAHINDRA LAST MILE MOBILITY LTD and a 34-unit M&M leaf.
+            # The parent total already includes both, so drop the child rows.
             "MAHINDRA & MAHINDRA LIMITED": "Mahindra & Mahindra",
-            "MAHINDRA LAST MILE MOBILITY LTD": "Mahindra Last Mile Mobility",
+            "MAHINDRA LAST MILE MOBILITY LTD": None,
             "PIAGGIO VEHICLES PVT LTD": "Piaggio Vehicles",
             "TVS MOTOR COMPANY LTD": "TVS Motor",
             "ATUL AUTO LTD": "Atul Auto",

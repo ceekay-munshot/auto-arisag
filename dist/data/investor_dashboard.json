@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T12:52:43.280221+00:00",
+  "generated_at": "2026-04-30T07:32:08.379516+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -20,7 +20,7 @@
         "value": 10.38,
         "display": "10.4%",
         "change": "2.80 lakh EV retail units",
-        "detail": "Derived from FADA category fuel mix; excludes low-confidence categories.",
+        "detail": "EV units summed from FADA's 2W/3W/PV/CV fuel-mix shares (tractors and CE have negligible EV share); denominator is total retail.",
         "tone": "good"
       },
       {
@@ -36,9 +36,9 @@
         "id": "pv_inventory",
         "label": "PV Inventory",
         "value": 28.0,
-        "display": "28-28 days",
+        "display": "~28 days",
         "change": "FADA dealer channel view",
-        "detail": "Healthy improvement from 53-55 days in Oct 2025 to 27-29 days now.",
+        "detail": "Improved from 53-55 days in Oct 2025 to ~28 days now.",
         "tone": "neutral"
       },
       {
@@ -47,7 +47,7 @@
         "value": 105.4,
         "display": "105.4%",
         "change": "+22,439 unit gap",
-        "detail": "Retail from FADA vs wholesale from SIAM; channel timing still matters.",
+        "detail": "FADA Mar 2026 retail vs SIAM Feb 2026 wholesale \u2014 SIAM is one cycle behind, so this gap mixes months.",
         "tone": "neutral"
       },
       {
@@ -1514,7 +1514,7 @@
               "listed_companies": []
             },
             {
-              "oem": "Ev",
+              "oem": "Others",
               "units": 12967,
               "share_pct": 0.66,
               "prior_units": 10045,
@@ -1556,18 +1556,6 @@
               "prior_share_pct": 7.41,
               "share_change_pp": 1.67,
               "unit_growth_pct": 35.33,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Mahindra Last Mile Mobility",
-              "units": 9929,
-              "share_pct": 9.04,
-              "prior_units": 7328,
-              "prior_share_pct": 7.38,
-              "share_change_pp": 1.66,
-              "unit_growth_pct": 35.49,
               "listed_companies": [
                 "Mahindra & Mahindra"
               ]
@@ -1647,7 +1635,7 @@
               "listed_companies": []
             },
             {
-              "oem": "Ev",
+              "oem": "Others",
               "units": 35375,
               "share_pct": 32.22,
               "prior_units": 37121,
@@ -1757,6 +1745,16 @@
               "prior_share_pct": 1.37,
               "share_change_pp": -0.04,
               "unit_growth_pct": 12.13,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 1256,
+              "share_pct": 1.22,
+              "prior_units": 646,
+              "prior_share_pct": 0.73,
+              "share_change_pp": 0.49,
+              "unit_growth_pct": 94.43,
               "listed_companies": []
             }
           ],
@@ -1906,6 +1904,16 @@
               "prior_share_pct": 0.67,
               "share_change_pp": 0.37,
               "unit_growth_pct": 30.91,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 673,
+              "share_pct": 9.75,
+              "prior_units": 958,
+              "prior_share_pct": 11.63,
+              "share_change_pp": -1.88,
+              "unit_growth_pct": -29.75,
               "listed_companies": []
             }
           ],
@@ -2219,6 +2227,19 @@
                   "cagr_24m_pct": null,
                   "share_pct": 0.09,
                   "share_change_pp": -0.03,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 2530,
+                  "mom_pct": null,
+                  "yoy_pct": -62.79,
+                  "growth_3m_pct": null,
+                  "growth_12m_pct": null,
+                  "cagr_12m_pct": null,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.57,
+                  "share_change_pp": -1.31,
                   "listed_companies": []
                 }
               ],
@@ -2544,6 +2565,20 @@
                   "share_pct": 0.09,
                   "share_change_pp": -0.03,
                   "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 2530,
+                  "qoq_pct": null,
+                  "yoy_pct": -62.79,
+                  "growth_2q_pct": null,
+                  "growth_4q_pct": null,
+                  "cagr_4q_pct": null,
+                  "cagr_8q_pct": null,
+                  "cagr_12q_pct": null,
+                  "share_pct": 0.57,
+                  "share_change_pp": -1.31,
+                  "listed_companies": []
                 }
               ],
               "note": "The quarterly PV view keeps the current validated FADA OEM retail ranking in place and exposes the requested quarter-window schema. Quarter-window growth fields will populate as we add structured OEM history from the public source chain."
@@ -2822,6 +2857,18 @@
                   "cagr_5y_pct": null,
                   "share_pct": 0.09,
                   "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 2530,
+                  "yoy_pct": -62.79,
+                  "growth_3y_pct": null,
+                  "growth_5y_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_3y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.57,
+                  "listed_companies": []
                 }
               ],
               "note": "The yearly PV view keeps the latest validated FADA OEM retail table as the anchor while reserving long-horizon growth columns for structured OEM history. This avoids inventing annual growth where the current snapshot does not yet carry a validated multi-year OEM series."
@@ -2924,6 +2971,16 @@
               "prior_share_pct": 4.09,
               "share_change_pp": 0.7,
               "unit_growth_pct": 29.95,
+              "listed_companies": []
+            },
+            {
+              "oem": "Others",
+              "units": 3760,
+              "share_pct": 4.58,
+              "prior_units": 4577,
+              "prior_share_pct": 6.18,
+              "share_change_pp": -1.6,
+              "unit_growth_pct": -17.85,
               "listed_companies": []
             }
           ],
@@ -9944,7 +10001,7 @@
     },
     {
       "title": "Retail vs wholesale",
-      "body": "PV retail ran at 105.4% of wholesale in February 2026, versus 104.3% for 2W. The tighter PV ratio sits alongside FADA's 27-29 day inventory signal, suggesting channel conditions have improved materially.",
+      "body": "PV retail ran at 105.4% of wholesale with FADA Mar 2026 retail over SIAM Feb 2026 wholesale, versus 104.3% for 2W. The tighter PV ratio sits alongside FADA's ~28 days inventory signal, suggesting channel conditions have improved materially.",
       "tags": [
         "retail",
         "wholesale"
@@ -9952,7 +10009,7 @@
     },
     {
       "title": "EV transition",
-      "body": "Derived EV penetration in February 2026 was 10.38% of retail volume. The strongest EV mix remains in Three-Wheelers at 57.89%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
+      "body": "Derived EV penetration in Mar 2026 was 10.38% of retail volume. The strongest EV mix remains in Three-Wheelers at 57.89%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
       "tags": [
         "ev"
       ]
