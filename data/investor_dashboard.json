@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T07:32:08.379516+00:00",
+  "generated_at": "2026-04-30T08:03:54.286632+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -5023,9 +5023,9 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Pink Sheet",
-          "latest_release_date": "2026-03-01",
-          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-March-2026.pdf",
-          "note": "Annual averages for 2022 to 2025 plus the latest visible February 2026 quote. Iron ore is shown as a steel-input proxy for auto materials."
+          "latest_release_date": "2026-04-02",
+          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-April-2026.pdf",
+          "note": "Annual averages for 2022 to 2025 plus monthly quotes for Feb 2026 and Mar 2026. Metals and iron ore use the IMF\u2013World Bank monthly series (PALUMUSDM, PCOPPUSDM, PNICKUSDM, PLEADUSDM, PIORECRUSDM via FRED); rubber TSR20 uses converging public TSR20 observations. Iron ore is shown as a steel-input proxy for auto materials."
         },
         "materials": [
           {
@@ -5058,11 +5058,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 3065
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 3373
               }
             ],
-            "latest_value": 3065,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": 13.31
+            "latest_value": 3373,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": 24.7
           },
           {
             "id": "copper",
@@ -5094,11 +5099,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 12951
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 12529
               }
             ],
-            "latest_value": 12951,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": 46.8
+            "latest_value": 12529,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": 42.02
           },
           {
             "id": "nickel",
@@ -5130,11 +5140,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 15635
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 17076
               }
             ],
-            "latest_value": 15635,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": -39.48
+            "latest_value": 17076,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": -33.9
           },
           {
             "id": "lead",
@@ -5166,11 +5181,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 1948
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 1878
               }
             ],
-            "latest_value": 1948,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": -9.4
+            "latest_value": 1878,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": -12.65
           },
           {
             "id": "natural_rubber",
@@ -5202,11 +5222,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 1.93
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 1.92
               }
             ],
-            "latest_value": 1.93,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": 25.32
+            "latest_value": 1.92,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": 24.68
           },
           {
             "id": "iron_ore",
@@ -5238,11 +5263,16 @@
                 "period": "2026-02",
                 "label": "Feb 2026",
                 "value": 98.8
+              },
+              {
+                "period": "2026-03",
+                "label": "Mar 2026",
+                "value": 107.6
               }
             ],
-            "latest_value": 98.8,
-            "latest_period": "Feb 2026",
-            "change_since_base_pct": -18.55
+            "latest_value": 107.6,
+            "latest_period": "Mar 2026",
+            "change_since_base_pct": -11.29
           }
         ],
         "companies": [
@@ -5285,11 +5315,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -5321,11 +5356,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -5357,11 +5397,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               }
             ],
             "category_labels": [
@@ -5409,11 +5454,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               },
               {
                 "id": "nickel",
@@ -5445,11 +5495,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "copper",
@@ -5481,11 +5536,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "aluminum",
@@ -5517,11 +5577,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               }
             ],
             "category_labels": [
@@ -5569,11 +5634,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -5605,11 +5675,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -5641,11 +5716,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -5677,11 +5757,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -5729,11 +5814,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -5765,11 +5855,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -5801,11 +5896,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "lead",
@@ -5837,11 +5937,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               }
             ],
             "category_labels": [
@@ -5889,11 +5994,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -5925,11 +6035,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -5961,11 +6076,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "lead",
@@ -5997,11 +6117,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               }
             ],
             "category_labels": [
@@ -6050,11 +6175,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -6086,11 +6216,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -6122,11 +6257,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -6158,11 +6298,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -6211,11 +6356,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -6247,11 +6397,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -6283,11 +6438,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -6319,11 +6479,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -6373,11 +6538,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -6409,11 +6579,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -6445,11 +6620,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -6481,11 +6661,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -6534,11 +6719,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               },
               {
                 "id": "nickel",
@@ -6570,11 +6760,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "copper",
@@ -6606,11 +6801,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "aluminum",
@@ -6642,11 +6842,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               }
             ],
             "category_labels": [
@@ -6694,11 +6899,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "aluminum",
@@ -6730,11 +6940,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "natural_rubber",
@@ -6766,11 +6981,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               },
               {
                 "id": "nickel",
@@ -6802,11 +7022,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               }
             ],
             "category_labels": [
@@ -6856,11 +7081,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -6892,11 +7122,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -6928,11 +7163,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -6964,11 +7204,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -7016,11 +7261,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -7052,11 +7302,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -7088,11 +7343,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -7124,11 +7384,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -7176,11 +7441,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -7212,11 +7482,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -7248,11 +7523,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "iron_ore",
@@ -7284,11 +7564,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               }
             ],
             "category_labels": [
@@ -7337,11 +7622,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -7373,11 +7663,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -7409,11 +7704,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "lead",
@@ -7445,11 +7745,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               }
             ],
             "category_labels": [
@@ -7500,11 +7805,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -7536,11 +7846,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -7572,11 +7887,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -7608,11 +7928,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -7661,11 +7986,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -7697,11 +8027,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -7733,11 +8068,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "iron_ore",
@@ -7769,11 +8109,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               }
             ],
             "category_labels": [
@@ -7822,11 +8167,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -7858,11 +8208,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -7894,11 +8249,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -7930,11 +8290,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
@@ -7984,11 +8349,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -8020,11 +8390,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -8056,11 +8431,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "iron_ore",
@@ -8092,11 +8472,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               }
             ],
             "category_labels": [
@@ -8144,11 +8529,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -8180,11 +8570,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -8216,11 +8611,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "lead",
@@ -8252,11 +8652,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               }
             ],
             "category_labels": [
@@ -8305,11 +8710,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "nickel",
@@ -8341,11 +8751,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 15635
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 17076
                   }
                 ],
-                "latest_value": 15635,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -39.48
+                "latest_value": 17076,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -33.9
               },
               {
                 "id": "aluminum",
@@ -8377,11 +8792,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "lead",
@@ -8413,11 +8833,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1948
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1878
                   }
                 ],
-                "latest_value": 1948,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -9.4
+                "latest_value": 1878,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -12.65
               }
             ],
             "category_labels": [
@@ -8466,11 +8891,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 98.8
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 107.6
                   }
                 ],
-                "latest_value": 98.8,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": -18.55
+                "latest_value": 107.6,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": -11.29
               },
               {
                 "id": "aluminum",
@@ -8502,11 +8932,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 3065
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 3373
                   }
                 ],
-                "latest_value": 3065,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 13.31
+                "latest_value": 3373,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.7
               },
               {
                 "id": "copper",
@@ -8538,11 +8973,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 12951
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 12529
                   }
                 ],
-                "latest_value": 12951,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 46.8
+                "latest_value": 12529,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 42.02
               },
               {
                 "id": "natural_rubber",
@@ -8574,11 +9014,16 @@
                     "period": "2026-02",
                     "label": "Feb 2026",
                     "value": 1.93
+                  },
+                  {
+                    "period": "2026-03",
+                    "label": "Mar 2026",
+                    "value": 1.92
                   }
                 ],
-                "latest_value": 1.93,
-                "latest_period": "Feb 2026",
-                "change_since_base_pct": 25.32
+                "latest_value": 1.92,
+                "latest_period": "Mar 2026",
+                "change_since_base_pct": 24.68
               }
             ],
             "category_labels": [
