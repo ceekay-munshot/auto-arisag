@@ -19,6 +19,21 @@ const state = {
   oemSegment: "PV",
   liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
   sorts: {},
+  activeTab: "overview",
+};
+
+const SECTION_TO_TAB = {
+  "section-retail": "retail",
+  "section-ev": "retail",
+  "section-ev-trend": "retail",
+  "section-ev-oem-tracker": "retail",
+  "section-oem-tracker": "retail",
+  "section-channel-pulse": "retail",
+  "section-registration": "retail",
+  "section-wholesale": "wholesale",
+  "section-components": "wholesale",
+  "section-company-map": "companies",
+  "company-drilldown": "companies",
 };
 const refreshState = {
   loading: false,
@@ -1033,6 +1048,87 @@ function setupChartTooltips() {
   });
 }
 
+function tabDefinitions() {
+  return [
+    {
+      id: "overview",
+      label: "Overview",
+      render: () => [
+        renderSourceVisibility(),
+        renderInsightsSection(),
+      ].join(""),
+    },
+    {
+      id: "retail",
+      label: "Retail · OEM · EV",
+      render: () => [
+        visibleModule("retail") ? renderRetailSection() : "",
+        dashboardData.modules.registration.available && visibleModule("registration") ? renderRegistrationSection() : "",
+      ].join(""),
+    },
+    {
+      id: "wholesale",
+      label: "Wholesale & Components",
+      render: () => [
+        visibleModule("wholesale") ? renderWholesaleSection() : "",
+        visibleModule("components") ? renderComponentsSection() : "",
+      ].join(""),
+    },
+    {
+      id: "companies",
+      label: "Companies",
+      render: () => renderCompanySection(),
+    },
+  ];
+}
+
+function activeTabDefinition() {
+  const tabs = tabDefinitions();
+  return tabs.find((tab) => tab.id === state.activeTab) || tabs[0];
+}
+
+function renderTabBar(activeId) {
+  const tabs = tabDefinitions();
+  return `
+    <nav class="tab-bar" aria-label="Dashboard sections">
+      ${tabs.map((tab) => `
+        <button
+          class="tab-button${tab.id === activeId ? " is-active" : ""}"
+          data-tab="${tab.id}"
+          type="button"
+        >${tab.label}</button>
+      `).join("")}
+    </nav>
+  `;
+}
+
+function setupTabBar() {
+  document.querySelectorAll("[data-tab]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-tab");
+      if (!value || value === state.activeTab) {
+        return;
+      }
+      state.activeTab = value;
+      pendingScrollTarget = null;
+      render();
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  });
+}
+
+function ensureActiveTabForSection(sectionId) {
+  if (!sectionId) {
+    return;
+  }
+  const targetTab = SECTION_TO_TAB[sectionId];
+  if (targetTab && targetTab !== state.activeTab) {
+    state.activeTab = targetTab;
+  }
+}
+
 function render() {
   downloadRegistry.clear();
   syncStateToAvailableOptions();
@@ -1045,20 +1141,20 @@ function render() {
   syncCompanySegmentTrendExplorer();
   syncEvTrendExplorer();
   syncLiveOemTrackers();
+  if (pendingScrollTarget) {
+    ensureActiveTabForSection(pendingScrollTarget);
+  }
+  const activeTab = activeTabDefinition();
   const app = document.getElementById("app");
   app.innerHTML = [
     renderHero(),
     renderFilters(),
-    renderSourceVisibility(),
-    visibleModule("retail") ? renderRetailSection() : "",
-    dashboardData.modules.registration.available && visibleModule("registration") ? renderRegistrationSection() : "",
-    visibleModule("wholesale") ? renderWholesaleSection() : "",
-    visibleModule("components") ? renderComponentsSection() : "",
-    renderInsightsSection(),
-    renderCompanySection(),
+    renderTabBar(activeTab.id),
+    activeTab.render(),
   ].join("");
 
   setupFilters();
+  setupTabBar();
   setupNewsPicker();
   setupCompanyTrendPicker();
   setupRefreshAction();
