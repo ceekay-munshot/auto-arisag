@@ -23,15 +23,15 @@ const state = {
 };
 
 const SECTION_TO_TAB = {
-  "section-retail": "retail",
-  "section-ev": "retail",
-  "section-ev-trend": "retail",
-  "section-ev-oem-tracker": "retail",
-  "section-oem-tracker": "retail",
-  "section-channel-pulse": "retail",
-  "section-registration": "retail",
+  "section-retail": "retail-trend",
+  "section-ev": "retail-ev",
+  "section-ev-trend": "retail-ev",
+  "section-ev-oem-tracker": "oem-tracker",
+  "section-oem-tracker": "oem-tracker",
+  "section-channel-pulse": "channel-pulse",
+  "section-registration": "registration",
   "section-wholesale": "wholesale",
-  "section-components": "wholesale",
+  "section-components": "components",
   "section-company-map": "companies",
   "company-drilldown": "companies",
 };
@@ -1049,56 +1049,104 @@ function setupChartTooltips() {
 }
 
 function tabDefinitions() {
+  const registrationAvailable = !!dashboardData.modules.registration?.available;
   return [
     {
       id: "overview",
       label: "Overview",
+      group: "Top",
       render: () => [
         renderSourceVisibility(),
         renderInsightsSection(),
       ].join(""),
     },
     {
-      id: "retail",
-      label: "Retail · OEM · EV",
-      render: () => [
-        visibleModule("retail") ? renderRetailSection() : "",
-        dashboardData.modules.registration.available && visibleModule("registration") ? renderRegistrationSection() : "",
-      ].join(""),
+      id: "retail-trend",
+      label: "Retail trend",
+      group: "Retail",
+      render: () => visibleModule("retail") ? renderRetailTrendOnly() : "",
+    },
+    {
+      id: "retail-ev",
+      label: "EV penetration",
+      group: "Retail",
+      render: () => visibleModule("retail") ? renderEvTab() : "",
+    },
+    {
+      id: "channel-pulse",
+      label: "Channel pulse",
+      group: "Retail",
+      render: () => visibleModule("retail") ? renderChannelPulseTab() : "",
+    },
+    {
+      id: "oem-tracker",
+      label: "OEM tracker",
+      group: "Retail",
+      render: () => visibleModule("retail") ? renderOemSection() : "",
+    },
+    {
+      id: "registration",
+      label: "Vahan registrations",
+      group: "Retail",
+      hidden: !registrationAvailable,
+      render: () => registrationAvailable && visibleModule("registration") ? renderRegistrationSection() : "",
     },
     {
       id: "wholesale",
-      label: "Wholesale & Components",
-      render: () => [
-        visibleModule("wholesale") ? renderWholesaleSection() : "",
-        visibleModule("components") ? renderComponentsSection() : "",
-      ].join(""),
+      label: "Wholesale (SIAM)",
+      group: "Industry",
+      render: () => visibleModule("wholesale") ? renderWholesaleSection() : "",
+    },
+    {
+      id: "components",
+      label: "Components & raw materials",
+      group: "Industry",
+      render: () => visibleModule("components") ? renderComponentsSection() : "",
     },
     {
       id: "companies",
       label: "Companies",
+      group: "Industry",
       render: () => renderCompanySection(),
     },
   ];
 }
 
+function visibleTabs() {
+  return tabDefinitions().filter((tab) => !tab.hidden);
+}
+
 function activeTabDefinition() {
-  const tabs = tabDefinitions();
+  const tabs = visibleTabs();
   return tabs.find((tab) => tab.id === state.activeTab) || tabs[0];
 }
 
-function renderTabBar(activeId) {
-  const tabs = tabDefinitions();
+function renderSideNav(activeId) {
+  const tabs = visibleTabs();
+  const groups = [];
+  tabs.forEach((tab) => {
+    const group = groups.find((g) => g.label === tab.group);
+    if (group) {
+      group.tabs.push(tab);
+    } else {
+      groups.push({ label: tab.group || "Other", tabs: [tab] });
+    }
+  });
   return `
-    <nav class="tab-bar" aria-label="Dashboard sections">
-      ${tabs.map((tab) => `
-        <button
-          class="tab-button${tab.id === activeId ? " is-active" : ""}"
-          data-tab="${tab.id}"
-          type="button"
-        >${tab.label}</button>
+    <aside class="side-nav" aria-label="Dashboard sections">
+      ${groups.map((group) => `
+        <div class="side-nav-group">
+          <p class="side-nav-group-label">${group.label}</p>
+          ${group.tabs.map((tab) => `
+            <button
+              class="side-nav-item${tab.id === activeId ? " is-active" : ""}"
+              data-tab="${tab.id}"
+              type="button"
+            >${tab.label}</button>
+          `).join("")}
+        </div>
       `).join("")}
-    </nav>
+    </aside>
   `;
 }
 
@@ -1113,7 +1161,12 @@ function setupTabBar() {
       pendingScrollTarget = null;
       render();
       requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        const content = document.querySelector(".dashboard-content");
+        if (content) {
+          content.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
       });
     });
   });
@@ -1149,8 +1202,10 @@ function render() {
   app.innerHTML = [
     renderHero(),
     renderFilters(),
-    renderTabBar(activeTab.id),
-    activeTab.render(),
+    `<div class="dashboard-body">
+       ${renderSideNav(activeTab.id)}
+       <main class="dashboard-content">${activeTab.render()}</main>
+     </div>`,
   ].join("");
 
   setupFilters();
@@ -1381,6 +1436,167 @@ function renderSourceVisibility() {
           </article>
         `).join("")}
       </div>
+    </section>
+  `;
+}
+
+function renderRetailTrendOnly() {
+  const retail = dashboardData.modules.retail;
+  const months = sliceMonths(retail.months);
+  const allowed = allowedCategories();
+  const companyFocused = state.company !== "all";
+  const visibleCategories = retail.category_cards.filter((item) => item.category !== "TOTAL" && allowed.includes(item.category));
+  const strongest = visibleCategories.length
+    ? visibleCategories.reduce((best, item) => (item.yoy_pct > best.yoy_pct ? item : best), visibleCategories[0])
+    : retail.latest_snapshot?.top_category_yoy;
+  const weakest = visibleCategories.length
+    ? visibleCategories.reduce((worst, item) => (item.yoy_pct < worst.yoy_pct ? item : worst), visibleCategories[0])
+    : retail.latest_snapshot?.bottom_category_yoy;
+  const chosenCategories = state.category === "TOTAL"
+    ? [
+        ...(companyFocused ? [] : ["TOTAL"]),
+        ...retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category),
+      ]
+    : [state.category];
+
+  const trendSeries = chosenCategories
+    .filter((category) => category === "TOTAL" || retail.category_cards.some((item) => item.category === category))
+    .map((category) => {
+      if (category === "TOTAL") {
+        return {
+          label: "Total retail",
+          color: dashboardData.chart_colors.TOTAL,
+          values: months.map((item) => item.total_units),
+        };
+      }
+      return {
+        label: labelForCategory(category),
+        color: dashboardData.chart_colors[category],
+        values: months.map((item) => item.categories.find((entry) => entry.category === category)?.units || 0),
+      };
+    });
+
+  registerDownload(
+    "retail-trend",
+    "fada_retail_trend.csv",
+    [
+      "month",
+      "total_units",
+      "PV_units",
+      "2W_units",
+      "3W_units",
+      "CV_units",
+      "TRACTOR_units",
+      "CE_units",
+    ],
+    months.map((item) => ({
+      month: item.month,
+      total_units: item.total_units,
+      PV_units: item.categories.find((entry) => entry.category === "PV")?.units || 0,
+      "2W_units": item.categories.find((entry) => entry.category === "2W")?.units || 0,
+      "3W_units": item.categories.find((entry) => entry.category === "3W")?.units || 0,
+      CV_units: item.categories.find((entry) => entry.category === "CV")?.units || 0,
+      TRACTOR_units: item.categories.find((entry) => entry.category === "TRACTOR")?.units || 0,
+      CE_units: item.categories.find((entry) => entry.category === "CE")?.units || 0,
+    })),
+  );
+
+  return `
+    <section id="section-retail" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Retail Pulse</p>
+          <h2>FADA retail momentum and category mix</h2>
+        </div>
+        <p class="section-subtitle">${retail.source_meta.note}</p>
+      </div>
+      <div class="panel-grid two">
+        <div class="chart-card">
+          <div class="chart-title-row">
+            <div>
+              <p class="small-label">Monthly trend</p>
+              <h3>${companyFocused ? "Retail momentum in company-linked categories" : "Retail momentum by category"}</h3>
+            </div>
+            <div class="button-row">
+              ${renderSourceAction(retail.source_meta.url)}
+              <button class="button" data-download-key="retail-trend">Download CSV</button>
+            </div>
+          </div>
+          <div class="chart-frame">
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits)}
+          </div>
+          <div class="chart-legend">
+            ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title-row">
+            <div>
+              <p class="small-label">Latest month mix</p>
+              <h3>Where the retail mix sits now</h3>
+            </div>
+          </div>
+          <div class="stack-list">
+            ${retail.latest_mix
+              .filter((item) => item.category !== "TOTAL")
+              .filter((item) => activeCategoryFilter() === "TOTAL" || item.category === activeCategoryFilter())
+              .filter((item) => allowed.includes(item.category))
+              .map((item) => stackRow(item.label, item.share_pct, item.share_pct, dashboardData.chart_colors[item.category]))
+              .join("")}
+          </div>
+          <div class="mini-insight-grid">
+            <div class="mini-insight">
+              <span class="small-label">Fastest YoY</span>
+              <strong>${strongest?.label || "-"}</strong>
+              <p>${strongest ? formatSigned(strongest.yoy_pct) : "n.m."}</p>
+            </div>
+            <div class="mini-insight">
+              <span class="small-label">Softest YoY</span>
+              <strong>${weakest?.label || "-"}</strong>
+              <p>${weakest ? formatSigned(weakest.yoy_pct) : "n.m."}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="panel-grid three category-card-grid">
+        ${retail.category_cards
+          .filter((item) => item.category !== "TOTAL")
+          .filter((item) => activeCategoryFilter() === "TOTAL" || item.category === activeCategoryFilter())
+          .filter((item) => allowed.includes(item.category))
+          .map(renderCategoryCard)
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderEvTab() {
+  return `
+    <section id="section-retail-ev" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Retail Pulse</p>
+          <h2>EV penetration and fuel mix</h2>
+        </div>
+        <p class="section-subtitle">Derived EV share from FADA's monthly category fuel mix.</p>
+      </div>
+      ${renderEvSection()}
+    </section>
+  `;
+}
+
+function renderChannelPulseTab() {
+  return `
+    <section id="section-channel-pulse" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Retail Pulse</p>
+          <h2>Channel pulse and dealer survey</h2>
+        </div>
+        <p class="section-subtitle">FADA's monthly dealer survey: liquidity, sentiment, growth expectations, and the urban-rural split.</p>
+      </div>
+      ${renderChannelPulse()}
     </section>
   `;
 }
