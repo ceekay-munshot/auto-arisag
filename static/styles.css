@@ -1483,16 +1483,12 @@ th:hover {
 }
 
 .oem-section-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  align-items: start;
 }
 
 @media (max-width: 960px) {
-  .oem-section-body {
-    grid-template-columns: minmax(0, 1fr);
-  }
   .oem-chip-group + .oem-chip-group {
     border-left: 0;
     padding-left: 0;
