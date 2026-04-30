@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T09:37:59.733886+00:00",
+  "generated_at": "2026-04-30T10:13:23.257975+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -1928,212 +1928,330 @@
         "PV": {
           "category": "PV",
           "label": "Passenger Vehicles",
-          "rows": [
-            {
-              "oem": "Maruti Suzuki",
-              "units": 172814,
-              "share_pct": 39.26,
-              "prior_units": 134406,
-              "prior_share_pct": 37.1,
-              "share_change_pp": 2.16,
-              "unit_growth_pct": 28.58,
-              "listed_companies": [
-                "Maruti Suzuki"
-              ]
-            },
-            {
-              "oem": "Tata Motors",
-              "units": 65784,
-              "share_pct": 14.95,
-              "prior_units": 49721,
-              "prior_share_pct": 13.72,
-              "share_change_pp": 1.23,
-              "unit_growth_pct": 32.31,
-              "listed_companies": [
-                "Tata Motors"
-              ]
-            },
-            {
-              "oem": "Mahindra & Mahindra",
-              "units": 61029,
-              "share_pct": 13.87,
-              "prior_units": 49211,
-              "prior_share_pct": 13.58,
-              "share_change_pp": 0.29,
-              "unit_growth_pct": 24.01,
-              "listed_companies": [
-                "Mahindra & Mahindra"
-              ]
-            },
-            {
-              "oem": "Hyundai Motor India",
-              "units": 48791,
-              "share_pct": 11.09,
-              "prior_units": 44007,
-              "prior_share_pct": 12.15,
-              "share_change_pp": -1.06,
-              "unit_growth_pct": 10.87,
-              "listed_companies": [
-                "Hyundai Motor India"
-              ]
-            },
-            {
-              "oem": "Kia India",
-              "units": 28108,
-              "share_pct": 6.39,
-              "prior_units": 22833,
-              "prior_share_pct": 6.3,
-              "share_change_pp": 0.09,
-              "unit_growth_pct": 23.1,
-              "listed_companies": []
-            },
-            {
-              "oem": "Toyota Kirloskar Motor",
-              "units": 27533,
-              "share_pct": 6.26,
-              "prior_units": 25348,
-              "prior_share_pct": 7.0,
-              "share_change_pp": -0.74,
-              "unit_growth_pct": 8.62,
-              "listed_companies": []
-            },
-            {
-              "oem": "Skoda Auto Volkswagen Group",
-              "units": 8765,
-              "share_pct": 1.99,
-              "prior_units": 9504,
-              "prior_share_pct": 2.62,
-              "share_change_pp": -0.63,
-              "unit_growth_pct": -7.78,
-              "listed_companies": []
-            },
-            {
-              "oem": "JSW MG Motor India",
-              "units": 6269,
-              "share_pct": 1.42,
-              "prior_units": 5567,
-              "prior_share_pct": 1.54,
-              "share_change_pp": -0.12,
-              "unit_growth_pct": 12.61,
-              "listed_companies": []
-            },
-            {
-              "oem": "Honda Cars India",
-              "units": 5528,
-              "share_pct": 1.26,
-              "prior_units": 5146,
-              "prior_share_pct": 1.42,
-              "share_change_pp": -0.16,
-              "unit_growth_pct": 7.42,
-              "listed_companies": []
-            },
-            {
-              "oem": "Renault India",
-              "units": 3594,
-              "share_pct": 0.82,
-              "prior_units": 2652,
-              "prior_share_pct": 0.73,
-              "share_change_pp": 0.09,
-              "unit_growth_pct": 35.52,
-              "listed_companies": []
-            },
-            {
-              "oem": "Nissan Motor India",
-              "units": 2544,
-              "share_pct": 0.58,
-              "prior_units": 1806,
-              "prior_share_pct": 0.5,
-              "share_change_pp": 0.08,
-              "unit_growth_pct": 40.86,
-              "listed_companies": []
-            },
-            {
-              "oem": "BMW India",
-              "units": 1580,
-              "share_pct": 0.36,
-              "prior_units": 1384,
-              "prior_share_pct": 0.38,
-              "share_change_pp": -0.02,
-              "unit_growth_pct": 14.16,
-              "listed_companies": []
-            },
-            {
-              "oem": "Mercedes-Benz Group",
-              "units": 1448,
-              "share_pct": 0.33,
-              "prior_units": 1644,
-              "prior_share_pct": 0.45,
-              "share_change_pp": -0.12,
-              "unit_growth_pct": -11.92,
-              "listed_companies": []
-            },
-            {
-              "oem": "Force Motors",
-              "units": 1312,
-              "share_pct": 0.3,
-              "prior_units": 593,
-              "prior_share_pct": 0.16,
-              "share_change_pp": 0.14,
-              "unit_growth_pct": 121.25,
-              "listed_companies": []
-            },
-            {
-              "oem": "Stellantis Group",
-              "units": 971,
-              "share_pct": 0.22,
-              "prior_units": 663,
-              "prior_share_pct": 0.18,
-              "share_change_pp": 0.04,
-              "unit_growth_pct": 46.46,
-              "listed_companies": []
-            },
-            {
-              "oem": "VinFast Auto India",
-              "units": 691,
-              "share_pct": 0.16,
-              "prior_units": 0,
-              "prior_share_pct": 0.0,
-              "share_change_pp": 0.16,
-              "unit_growth_pct": null,
-              "listed_companies": []
-            },
-            {
-              "oem": "Jaguar Land Rover India",
-              "units": 439,
-              "share_pct": 0.1,
-              "prior_units": 567,
-              "prior_share_pct": 0.16,
-              "share_change_pp": -0.06,
-              "unit_growth_pct": -22.57,
-              "listed_companies": []
-            },
-            {
-              "oem": "BYD India",
-              "units": 414,
-              "share_pct": 0.09,
-              "prior_units": 452,
-              "prior_share_pct": 0.12,
-              "share_change_pp": -0.03,
-              "unit_growth_pct": -8.41,
-              "listed_companies": []
-            },
-            {
-              "oem": "Others",
-              "units": 2530,
-              "share_pct": 0.57,
-              "prior_units": 6800,
-              "prior_share_pct": 1.88,
-              "share_change_pp": -1.31,
-              "unit_growth_pct": -62.79,
-              "listed_companies": []
+          "mode": "periodized",
+          "default_period": "M",
+          "periods": {
+            "M": {
+              "id": "M",
+              "label": "Monthly",
+              "period_label": "Mar 2026",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "Current Units",
+                  "type": "int"
+                },
+                {
+                  "key": "mom_pct",
+                  "label": "MoM%",
+                  "type": "pct"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_3m_pct",
+                  "label": "3M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "growth_12m_pct",
+                  "label": "12M Growth",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_12m_pct",
+                  "label": "12M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_24m_pct",
+                  "label": "24M CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "Current Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Maruti Suzuki",
+                  "current_units": 172814,
+                  "mom_pct": 12.15,
+                  "yoy_pct": 28.58,
+                  "growth_3m_pct": -90.33,
+                  "growth_12m_pct": 28.58,
+                  "cagr_12m_pct": 28.58,
+                  "cagr_24m_pct": null,
+                  "share_pct": 39.26,
+                  "share_change_pp": 2.16,
+                  "listed_companies": [
+                    "Maruti Suzuki"
+                  ]
+                },
+                {
+                  "oem": "Tata Motors",
+                  "current_units": 65784,
+                  "mom_pct": 16.54,
+                  "yoy_pct": 32.31,
+                  "growth_3m_pct": -88.41,
+                  "growth_12m_pct": 32.31,
+                  "cagr_12m_pct": 32.31,
+                  "cagr_24m_pct": null,
+                  "share_pct": 14.95,
+                  "share_change_pp": 1.23,
+                  "listed_companies": [
+                    "Tata Motors"
+                  ]
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 61029,
+                  "mom_pct": 14.54,
+                  "yoy_pct": 24.01,
+                  "growth_3m_pct": -89.7,
+                  "growth_12m_pct": 24.01,
+                  "cagr_12m_pct": 24.01,
+                  "cagr_24m_pct": null,
+                  "share_pct": 13.87,
+                  "share_change_pp": 0.29,
+                  "listed_companies": [
+                    "Mahindra & Mahindra"
+                  ]
+                },
+                {
+                  "oem": "Hyundai Motor India",
+                  "current_units": 48791,
+                  "mom_pct": 6.96,
+                  "yoy_pct": 10.87,
+                  "growth_3m_pct": -91.28,
+                  "growth_12m_pct": 10.87,
+                  "cagr_12m_pct": 10.87,
+                  "cagr_24m_pct": null,
+                  "share_pct": 11.09,
+                  "share_change_pp": -1.06,
+                  "listed_companies": [
+                    "Hyundai Motor India"
+                  ]
+                },
+                {
+                  "oem": "Kia India",
+                  "current_units": 28108,
+                  "mom_pct": 12.29,
+                  "yoy_pct": 23.1,
+                  "growth_3m_pct": -89.15,
+                  "growth_12m_pct": 23.1,
+                  "cagr_12m_pct": 23.1,
+                  "cagr_24m_pct": null,
+                  "share_pct": 6.39,
+                  "share_change_pp": 0.09,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Toyota Kirloskar Motor",
+                  "current_units": 27533,
+                  "mom_pct": 4.32,
+                  "yoy_pct": 8.62,
+                  "growth_3m_pct": -91.41,
+                  "growth_12m_pct": 8.62,
+                  "cagr_12m_pct": 8.62,
+                  "cagr_24m_pct": null,
+                  "share_pct": 6.26,
+                  "share_change_pp": -0.74,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Skoda Auto Volkswagen Group",
+                  "current_units": 8765,
+                  "mom_pct": 15.1,
+                  "yoy_pct": -7.78,
+                  "growth_3m_pct": -91.91,
+                  "growth_12m_pct": -7.78,
+                  "cagr_12m_pct": -7.78,
+                  "cagr_24m_pct": null,
+                  "share_pct": 1.99,
+                  "share_change_pp": -0.63,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "JSW MG Motor India",
+                  "current_units": 6269,
+                  "mom_pct": 37.84,
+                  "yoy_pct": 12.61,
+                  "growth_3m_pct": -90.45,
+                  "growth_12m_pct": 12.61,
+                  "cagr_12m_pct": 12.61,
+                  "cagr_24m_pct": null,
+                  "share_pct": 1.42,
+                  "share_change_pp": -0.12,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Honda Cars India",
+                  "current_units": 5528,
+                  "mom_pct": 15.79,
+                  "yoy_pct": 7.42,
+                  "growth_3m_pct": -91.17,
+                  "growth_12m_pct": 7.42,
+                  "cagr_12m_pct": 7.42,
+                  "cagr_24m_pct": null,
+                  "share_pct": 1.26,
+                  "share_change_pp": -0.16,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Renault India",
+                  "current_units": 3594,
+                  "mom_pct": 10.65,
+                  "yoy_pct": 35.52,
+                  "growth_3m_pct": -90.13,
+                  "growth_12m_pct": 35.52,
+                  "cagr_12m_pct": 35.52,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.82,
+                  "share_change_pp": 0.09,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Nissan Motor India",
+                  "current_units": 2544,
+                  "mom_pct": 56.84,
+                  "yoy_pct": 40.86,
+                  "growth_3m_pct": -88.37,
+                  "growth_12m_pct": 40.86,
+                  "cagr_12m_pct": 40.86,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.58,
+                  "share_change_pp": 0.08,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "BMW India",
+                  "current_units": 1580,
+                  "mom_pct": 29.93,
+                  "yoy_pct": 14.16,
+                  "growth_3m_pct": -90.56,
+                  "growth_12m_pct": 14.16,
+                  "cagr_12m_pct": 14.16,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.36,
+                  "share_change_pp": -0.02,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Mercedes-Benz Group",
+                  "current_units": 1448,
+                  "mom_pct": 5.62,
+                  "yoy_pct": -11.92,
+                  "growth_3m_pct": -91.97,
+                  "growth_12m_pct": -11.92,
+                  "cagr_12m_pct": -11.92,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.33,
+                  "share_change_pp": -0.12,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Force Motors",
+                  "current_units": 1312,
+                  "mom_pct": -7.28,
+                  "yoy_pct": 121.25,
+                  "growth_3m_pct": -82.8,
+                  "growth_12m_pct": 121.25,
+                  "cagr_12m_pct": 121.25,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.3,
+                  "share_change_pp": 0.14,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Stellantis Group",
+                  "current_units": 971,
+                  "mom_pct": -3.77,
+                  "yoy_pct": 46.46,
+                  "growth_3m_pct": -90.91,
+                  "growth_12m_pct": 46.46,
+                  "cagr_12m_pct": 46.46,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.22,
+                  "share_change_pp": 0.04,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "VinFast Auto India",
+                  "current_units": 691,
+                  "mom_pct": 79.95,
+                  "yoy_pct": null,
+                  "growth_3m_pct": null,
+                  "growth_12m_pct": null,
+                  "cagr_12m_pct": null,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.16,
+                  "share_change_pp": 0.16,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Jaguar Land Rover India",
+                  "current_units": 439,
+                  "mom_pct": -8.16,
+                  "yoy_pct": -22.57,
+                  "growth_3m_pct": -92.42,
+                  "growth_12m_pct": -22.57,
+                  "cagr_12m_pct": -22.57,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.1,
+                  "share_change_pp": -0.06,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "BYD India",
+                  "current_units": 414,
+                  "mom_pct": 35.29,
+                  "yoy_pct": -8.41,
+                  "growth_3m_pct": -92.34,
+                  "growth_12m_pct": -8.41,
+                  "cagr_12m_pct": -8.41,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.09,
+                  "share_change_pp": -0.03,
+                  "listed_companies": []
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 2530,
+                  "mom_pct": -57.27,
+                  "yoy_pct": -62.79,
+                  "growth_3m_pct": -91.67,
+                  "growth_12m_pct": -62.79,
+                  "cagr_12m_pct": -62.79,
+                  "cagr_24m_pct": null,
+                  "share_pct": 0.57,
+                  "share_change_pp": -1.31,
+                  "listed_companies": []
+                }
+              ],
+              "note": "Computed from FADA's monthly PV OEM annexure across 6 months (2025-10 \u2192 2026-03). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             }
-          ],
+          },
           "source_meta": {
             "name": "FADA",
             "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
             "latest_month": "2026-03",
             "latest_label": "Mar 2026",
-            "note": "Official FADA OEM annexure from the latest monthly retail PDF."
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history."
           }
         },
         "TRACTOR": {
