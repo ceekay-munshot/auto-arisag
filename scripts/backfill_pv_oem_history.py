@@ -6,18 +6,19 @@ and 24M CAGR. The latest FADA annexure only carries the latest month plus
 the same month one year prior, so we have to walk back through individual
 monthly PDFs to build a per-OEM monthly history.
 
-Run via the `Backfill PV OEM history` GitHub Actions workflow
-(workflow_dispatch) — local sandbox networks cannot reach FADA. The
-script is idempotent: months already in pv_oem_history.json are skipped
-unless their source URL changed.
+Run via the `Refresh dashboard data` GitHub Actions workflow — local
+sandbox networks cannot reach FADA. The script is idempotent: months
+already in pv_oem_history.json are skipped unless their source URL
+changed.
 """
 from __future__ import annotations
 
 import json
 import sys
-import urllib.error
-import urllib.request
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
+
+import requests
 
 # Allow running from repo root with `python scripts/backfill_pv_oem_history.py`.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -31,11 +32,16 @@ from dashboard.update_snapshot import (  # noqa: E402  (sys.path tweak above)
 
 HISTORY_PATH = Path("data/pv_oem_history.json")
 SNAPSHOT_PATH = Path("data/source_snapshot.json")
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0 Safari/537.36"
-)
 TIMEOUT = 30
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0 Safari/537.36"
+    ),
+    "Accept": "application/pdf,*/*;q=0.8",
+    "Accept-Language": "en-IN,en;q=0.9",
+    "Referer": "https://fada.in/research.html",
+}
 
 # Older FADA PDFs that aren't in source_snapshot.json. Add new pairs here when
 # you need to extend the backfill window — for example, Mar 2024 unlocks the
@@ -45,10 +51,34 @@ ADDITIONAL_PDF_URLS: list[tuple[str, str]] = [
 ]
 
 
+def host_variants(url: str) -> list[str]:
+    """FADA hosts the same PDFs at fada.in and www.fada.in. Some hashes only
+    serve from one of the two. Try whichever the URL specifies first, then the
+    sibling host as a fallback."""
+    parts = urlsplit(url)
+    candidates = [url]
+    if parts.netloc == "fada.in":
+        alt = urlunsplit((parts.scheme, "www.fada.in", parts.path, parts.query, parts.fragment))
+        candidates.append(alt)
+    elif parts.netloc == "www.fada.in":
+        alt = urlunsplit((parts.scheme, "fada.in", parts.path, parts.query, parts.fragment))
+        candidates.append(alt)
+    return candidates
+
+
 def fetch_pdf(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-        return response.read()
+    last_error: Exception | None = None
+    for candidate in host_variants(url):
+        try:
+            response = requests.get(candidate, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
+            response.raise_for_status()
+            if not response.content.startswith(b"%PDF"):
+                raise RuntimeError(f"response is not a PDF (first bytes: {response.content[:20]!r})")
+            return response.content
+        except Exception as exc:
+            last_error = exc
+            continue
+    raise RuntimeError(f"all hosts failed for {url}: {last_error}")
 
 
 def load_history() -> dict:
@@ -104,17 +134,17 @@ def main() -> int:
         if existing and existing.get("source_url") == url:
             print(f"  {month_id}: already in history, skipping")
             continue
-        print(f"  {month_id}: fetching")
+        print(f"  {month_id}: fetching {url}", flush=True)
         try:
             pdf_bytes = fetch_pdf(url)
-        except urllib.error.URLError as exc:
-            print(f"  {month_id}: fetch failed ({exc})", file=sys.stderr)
+        except Exception as exc:
+            print(f"  {month_id}: fetch failed ({exc})", file=sys.stderr, flush=True)
             failed += 1
             continue
         try:
             pages = extract_pdf_pages(pdf_bytes)
         except Exception as exc:
-            print(f"  {month_id}: pdf parse failed ({exc})", file=sys.stderr)
+            print(f"  {month_id}: pdf parse failed ({exc})", file=sys.stderr, flush=True)
             failed += 1
             continue
         try:
@@ -124,12 +154,12 @@ def main() -> int:
         try:
             tables = parse_fada_oem_annexure_tables(pages, fada_snapshot, detected_month, url)
         except Exception as exc:
-            print(f"  {month_id}: oem parse failed ({exc})", file=sys.stderr)
+            print(f"  {month_id}: oem parse failed ({exc})", file=sys.stderr, flush=True)
             failed += 1
             continue
         pv_rows = (tables.get("PV") or {}).get("rows") or []
         if not pv_rows:
-            print(f"  {month_id}: no PV rows parsed", file=sys.stderr)
+            print(f"  {month_id}: no PV rows parsed", file=sys.stderr, flush=True)
             failed += 1
             continue
         existing_by_month[detected_month] = {
@@ -139,6 +169,7 @@ def main() -> int:
             "rows": pv_rows,
         }
         added += 1
+        print(f"  {month_id}: {len(pv_rows)} PV rows added", flush=True)
 
     out = {
         "months": [existing_by_month[k] for k in sorted(existing_by_month)],
