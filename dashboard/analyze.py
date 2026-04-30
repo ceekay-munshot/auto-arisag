@@ -213,13 +213,10 @@ def build_retail_module(
             **({"source_meta": table_meta["source_meta"]} if table_meta.get("source_meta") else {}),
         }
 
-    pv_source_meta = latest_oem_tables["PV"].get("source_meta", {})
-    latest_oem_tables["PV"] = build_periodized_fada_oem_table(
-        "PV",
-        latest_oem_tables["PV"]["rows"],
-        pv_source_meta.get("latest_month") or fada["latest_month"],
-        pv_source_meta.get("url") or fada["source_url"],
-    )
+    # PV stays in the same flat-table format as the other categories. Until we
+    # backfill multi-month FADA OEM history, the periodized PV table just shows
+    # "n.m." for every column except YoY and share Δ — better to keep parity
+    # with 2W / 3W / CV / Tractor / CE.
 
     for live_category in ["2W", "3W", "CV", "TRACTOR", "CE", "E2W", "E3W", "EPV", "ECV"]:
         live_table = build_live_vahan_oem_table(vahan_oem_cache, live_category, validations)

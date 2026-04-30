@@ -1699,3 +1699,50 @@ th:hover {
     padding-top: 10px;
   }
 }
+
+/* Inline trend sparkline inside the OEM table */
+.oem-sparkline-cell {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  line-height: 1;
+}
+
+.oem-sparkline-cell small {
+  color: var(--muted);
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.oem-sparkline {
+  display: block;
+}
+
+.oem-sparkline[data-direction="up"] polyline {
+  stroke: var(--teal);
+}
+
+.oem-sparkline[data-direction="up"] circle {
+  fill: var(--teal);
+}
+
+.oem-sparkline[data-direction="down"] polyline {
+  stroke: var(--accent);
+}
+
+.oem-sparkline[data-direction="down"] circle {
+  fill: var(--accent);
+}
+
+.oem-sparkline-empty {
+  color: rgba(102, 118, 135, 0.55);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.th-static {
+  cursor: default;
+  user-select: none;
+}
