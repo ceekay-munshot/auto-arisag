@@ -1,15 +1,14 @@
-"""Fetch historical FADA monthly PDFs and extract PV OEM rows into
-data/pv_oem_history.json.
+"""Fetch historical FADA monthly PDFs and extract every category's OEM rows
+into data/oem_history.json.
 
-The dashboard's PV OEM table needs MoM%, 3M growth, 12M growth, 12M CAGR
-and 24M CAGR. The latest FADA annexure only carries the latest month plus
-the same month one year prior, so we have to walk back through individual
-monthly PDFs to build a per-OEM monthly history.
+The dashboard's periodized OEM tables (one per category) need real MoM%,
+3M growth, 12M CAGR. The latest FADA annexure only carries the latest
+month plus the same month one year prior, so we walk back through
+individual monthly PDFs to build a per-OEM monthly history per category.
 
 Run via the `Refresh dashboard data` GitHub Actions workflow — local
 sandbox networks cannot reach FADA. The script is idempotent: months
-already in pv_oem_history.json are skipped unless their source URL
-changed.
+already in oem_history.json are skipped unless their source URL changed.
 """
 from __future__ import annotations
 
@@ -30,7 +29,8 @@ from dashboard.update_snapshot import (  # noqa: E402  (sys.path tweak above)
 )
 
 
-HISTORY_PATH = Path("data/pv_oem_history.json")
+HISTORY_PATH = Path("data/oem_history.json")
+LEGACY_PV_HISTORY_PATH = Path("data/pv_oem_history.json")
 SNAPSHOT_PATH = Path("data/source_snapshot.json")
 TIMEOUT = 30
 HEADERS = {
@@ -42,6 +42,7 @@ HEADERS = {
     "Accept-Language": "en-IN,en;q=0.9",
     "Referer": "https://fada.in/research.html",
 }
+TRACKED_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
 
 # Older FADA PDFs that aren't in source_snapshot.json. Add new pairs here when
 # you need to extend the backfill window — for example, Mar 2024 unlocks the
@@ -84,10 +85,20 @@ def fetch_pdf(url: str) -> bytes:
 def load_history() -> dict:
     if HISTORY_PATH.exists():
         try:
-            return json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+            payload = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+            if isinstance(payload, dict) and isinstance(payload.get("categories"), dict):
+                return payload
         except json.JSONDecodeError:
             pass
-    return {"months": []}
+    if LEGACY_PV_HISTORY_PATH.exists():
+        try:
+            legacy = json.loads(LEGACY_PV_HISTORY_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            legacy = {}
+        months = legacy.get("months") if isinstance(legacy, dict) else None
+        if isinstance(months, list):
+            return {"categories": {"PV": {"months": months}}}
+    return {"categories": {}}
 
 
 def save_history(history: dict) -> None:
@@ -123,16 +134,30 @@ def main() -> int:
     fada_snapshot = snapshot.get("fada", {})
 
     history = load_history()
-    existing_by_month = {item["month"]: item for item in history.get("months", []) if item.get("month")}
+    categories: dict[str, dict] = dict(history.get("categories") or {})
+    by_category: dict[str, dict[str, dict]] = {}
+    for category in TRACKED_CATEGORIES:
+        bucket = categories.get(category) or {"months": []}
+        by_category[category] = {
+            item["month"]: item for item in (bucket.get("months") or []) if item.get("month")
+        }
 
     targets = candidate_urls()
     added = 0
     failed = 0
+    skipped = 0
 
     for month_id, url in sorted(targets):
-        existing = existing_by_month.get(month_id)
-        if existing and existing.get("source_url") == url:
-            print(f"  {month_id}: already in history, skipping")
+        # Skip the fetch only when every tracked category already has a record
+        # for this month/url combo. Otherwise we re-fetch so any newly tracked
+        # category can be filled in.
+        already_complete = all(
+            by_category[cat].get(month_id, {}).get("source_url") == url
+            for cat in TRACKED_CATEGORIES
+        )
+        if already_complete:
+            print(f"  {month_id}: all categories already in history, skipping")
+            skipped += 1
             continue
         print(f"  {month_id}: fetching {url}", flush=True)
         try:
@@ -157,28 +182,39 @@ def main() -> int:
             print(f"  {month_id}: oem parse failed ({exc})", file=sys.stderr, flush=True)
             failed += 1
             continue
-        pv_rows = (tables.get("PV") or {}).get("rows") or []
-        if not pv_rows:
-            print(f"  {month_id}: no PV rows parsed", file=sys.stderr, flush=True)
+        landed: list[str] = []
+        for category in TRACKED_CATEGORIES:
+            cat_rows = (tables.get(category) or {}).get("rows") or []
+            if not cat_rows:
+                continue
+            by_category[category][detected_month] = {
+                "month": detected_month,
+                "release_date": release_date,
+                "source_url": url,
+                "rows": cat_rows,
+            }
+            landed.append(f"{category}:{len(cat_rows)}")
+        if not landed:
+            print(f"  {month_id}: no rows parsed in any tracked category", file=sys.stderr, flush=True)
             failed += 1
             continue
-        existing_by_month[detected_month] = {
-            "month": detected_month,
-            "release_date": release_date,
-            "source_url": url,
-            "rows": pv_rows,
-        }
         added += 1
-        print(f"  {month_id}: {len(pv_rows)} PV rows added", flush=True)
+        print(f"  {month_id}: {' '.join(landed)} rows added", flush=True)
 
     out = {
-        "months": [existing_by_month[k] for k in sorted(existing_by_month)],
+        "categories": {
+            category: {"months": [by_category[category][k] for k in sorted(by_category[category])]}
+            for category in TRACKED_CATEGORIES
+            if by_category[category]
+        }
     }
     save_history(out)
-    print(
-        f"\nWrote {HISTORY_PATH} with {len(out['months'])} months (added {added}, failed {failed}, "
-        f"skipped {len(targets) - added - failed})"
+    summary = ", ".join(
+        f"{cat}={len(out['categories'].get(cat, {}).get('months') or [])}m"
+        for cat in TRACKED_CATEGORIES
+        if cat in out["categories"]
     )
+    print(f"\nWrote {HISTORY_PATH} (added {added}, failed {failed}, skipped {skipped}). Counts: {summary}")
     return 0 if failed == 0 else 2
 
 

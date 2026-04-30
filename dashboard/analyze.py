@@ -215,15 +215,21 @@ def build_retail_module(
             **({"source_meta": table_meta["source_meta"]} if table_meta.get("source_meta") else {}),
         }
 
-    pv_history = load_pv_oem_history()
-    if pv_history and len(pv_history) >= 2:
-        pv_source_meta = latest_oem_tables["PV"].get("source_meta", {})
-        latest_oem_tables["PV"] = build_periodized_pv_oem_table_from_history(
-            "PV",
-            latest_oem_tables["PV"]["rows"],
-            pv_history,
-            pv_source_meta.get("latest_month") or fada["latest_month"],
-            pv_source_meta.get("url") or fada["source_url"],
+    history_by_category = load_oem_history()
+    for fada_category in ("PV", "2W", "3W", "CV", "TRACTOR", "CE"):
+        category_history = history_by_category.get(fada_category) or []
+        if len(category_history) < 2:
+            continue
+        category_table = latest_oem_tables.get(fada_category)
+        if not category_table:
+            continue
+        cat_source_meta = category_table.get("source_meta", {})
+        latest_oem_tables[fada_category] = build_periodized_oem_table_from_history(
+            fada_category,
+            category_table.get("rows") or [],
+            category_history,
+            cat_source_meta.get("latest_month") or fada["latest_month"],
+            cat_source_meta.get("url") or fada["source_url"],
         )
 
     for live_category in ["2W", "3W", "CV", "TRACTOR", "CE", "E2W", "E3W", "EPV", "ECV"]:
@@ -1795,20 +1801,37 @@ def month_offset(month: str, delta_months: int) -> str:
     return f"{total // 12:04d}-{(total % 12) + 1:02d}"
 
 
-PV_OEM_HISTORY_PATH = Path("data/pv_oem_history.json")
+OEM_HISTORY_PATH = Path("data/oem_history.json")
+LEGACY_PV_HISTORY_PATH = Path("data/pv_oem_history.json")
 
 
-def load_pv_oem_history() -> list[dict[str, Any]]:
-    if not PV_OEM_HISTORY_PATH.exists():
-        return []
-    try:
-        payload = json.loads(PV_OEM_HISTORY_PATH.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return []
-    months = payload.get("months") if isinstance(payload, dict) else None
-    if not isinstance(months, list):
-        return []
-    return [item for item in months if isinstance(item, dict) and item.get("month")]
+def load_oem_history() -> dict[str, list[dict[str, Any]]]:
+    """Return {category: [month_record, ...]} from data/oem_history.json. Falls
+    back to the legacy PV-only file if the unified file isn't there yet so we
+    don't lose the PV history during the schema migration."""
+    if OEM_HISTORY_PATH.exists():
+        try:
+            payload = json.loads(OEM_HISTORY_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+        categories = payload.get("categories") if isinstance(payload, dict) else None
+        if isinstance(categories, dict):
+            return {
+                category: [
+                    item for item in (categories.get(category) or {}).get("months") or []
+                    if isinstance(item, dict) and item.get("month")
+                ]
+                for category in categories
+            }
+    if LEGACY_PV_HISTORY_PATH.exists():
+        try:
+            payload = json.loads(LEGACY_PV_HISTORY_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+        months = payload.get("months") if isinstance(payload, dict) else None
+        if isinstance(months, list):
+            return {"PV": [item for item in months if isinstance(item, dict) and item.get("month")]}
+    return {}
 
 
 def _safe_pct_change(current: float | int | None, prior: float | int | None) -> float | None:
@@ -1837,16 +1860,16 @@ def _safe_cagr(current: float | int | None, prior: float | int | None, periods: 
     return round(((current_value / prior_value) ** (1 / periods) - 1) * 100, 2)
 
 
-def build_periodized_pv_oem_table_from_history(
+def build_periodized_oem_table_from_history(
     category: str,
     latest_rows: list[dict[str, Any]],
     history: list[dict[str, Any]],
     latest_month: str,
     source_url: str | None,
 ) -> dict[str, Any]:
-    """Build a periodized PV OEM table whose growth columns are computed from
-    real monthly OEM history rather than left as n.m. Currently exposes the
-    monthly view; quarterly/yearly come once we have richer history."""
+    """Build a periodized OEM table whose growth columns are computed from real
+    monthly OEM history rather than left as n.m. Same shape regardless of
+    category (PV / 2W / 3W / CV / Tractor / CE)."""
     history_by_month = {
         item["month"]: {row["oem"]: row for row in item.get("rows") or []}
         for item in history
@@ -1883,11 +1906,12 @@ def build_periodized_pv_oem_table_from_history(
         )
 
     available_months = sorted(history_by_month.keys())
+    category_label = CATEGORY_LABELS.get(category, category)
     coverage_note = (
-        f"Computed from FADA's monthly PV OEM annexure across {len(available_months)} months "
+        f"Computed from FADA's monthly {category_label} OEM annexure across {len(available_months)} months "
         f"({available_months[0]} → {available_months[-1]}). Some columns may be n.m. for OEMs "
         "that didn't exist in the comparison month."
-    ) if available_months else "PV OEM annexure history pending; add months via the backfill workflow."
+    ) if available_months else f"{category_label} OEM annexure history pending; add months via the backfill workflow."
 
     return {
         "category": category,

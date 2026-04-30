@@ -16,59 +16,90 @@ from .update_snapshot import refresh_snapshot
 from .vahan_oem import read_vahan_oem_cache, refresh_vahan_oem_cache
 
 
-PV_OEM_HISTORY_PATH = Path("data/pv_oem_history.json")
+OEM_HISTORY_PATH = Path("data/oem_history.json")
+LEGACY_PV_HISTORY_PATH = Path("data/pv_oem_history.json")
+TRACKED_OEM_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
 
 
-def upsert_pv_oem_history(snapshot: dict) -> None:
-    """Append the latest FADA PV OEM rows to pv_oem_history.json so the
-    periodized PV table grows month-by-month even between full backfills."""
-    fada = snapshot.get("fada") or {}
-    pv_table = (fada.get("latest_oem_tables") or {}).get("PV") or {}
-    rows = pv_table.get("rows") or []
-    month_id = pv_table.get("source_meta", {}).get("latest_month") or fada.get("oem_latest_month") or fada.get("latest_month")
-    source_url = pv_table.get("source_meta", {}).get("url") or fada.get("oem_source_url") or fada.get("source_url")
-    release_date = fada.get("oem_latest_release_date") or fada.get("latest_release_date") or ""
-    if not month_id or not rows:
-        return
-
-    history: dict
-    if PV_OEM_HISTORY_PATH.exists():
+def _load_oem_history() -> dict:
+    if OEM_HISTORY_PATH.exists():
         try:
-            history = json.loads(PV_OEM_HISTORY_PATH.read_text(encoding="utf-8"))
+            payload = json.loads(OEM_HISTORY_PATH.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
-            history = {"months": []}
-    else:
-        history = {"months": []}
+            payload = {}
+        if isinstance(payload, dict) and isinstance(payload.get("categories"), dict):
+            return payload
+    # First-time migration: lift the legacy PV file into the new shape.
+    if LEGACY_PV_HISTORY_PATH.exists():
+        try:
+            legacy = json.loads(LEGACY_PV_HISTORY_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            legacy = {}
+        months = legacy.get("months") if isinstance(legacy, dict) else None
+        if isinstance(months, list):
+            return {"categories": {"PV": {"months": months}}}
+    return {"categories": {}}
 
-    months = list(history.get("months") or [])
-    by_month = {item["month"]: item for item in months if item.get("month")}
-    existing = by_month.get(month_id)
-    new_record = {
-        "month": month_id,
-        "release_date": release_date,
-        "source_url": source_url,
-        "rows": [
-            {
-                "oem": row.get("oem"),
-                "units": row.get("units"),
-                "share_pct": row.get("share_pct"),
-                "prior_units": row.get("prior_units"),
-                "prior_share_pct": row.get("prior_share_pct"),
-            }
-            for row in rows
-        ],
-    }
-    if existing == new_record:
+
+def upsert_oem_history(snapshot: dict) -> None:
+    """Append the latest FADA OEM rows for every tracked category into the
+    unified data/oem_history.json so the periodized OEM tables stay current
+    month-by-month even between full backfills."""
+    fada = snapshot.get("fada") or {}
+    tables = fada.get("latest_oem_tables") or {}
+    fallback_url = fada.get("oem_source_url") or fada.get("source_url")
+    fallback_month = fada.get("oem_latest_month") or fada.get("latest_month")
+    release_date = fada.get("oem_latest_release_date") or fada.get("latest_release_date") or ""
+
+    history = _load_oem_history()
+    categories = dict(history.get("categories") or {})
+    changed = False
+
+    for category in TRACKED_OEM_CATEGORIES:
+        table = tables.get(category) or {}
+        rows = table.get("rows") or []
+        if not rows:
+            continue
+        meta = table.get("source_meta") or {}
+        month_id = meta.get("latest_month") or fallback_month
+        source_url = meta.get("url") or fallback_url
+        if not month_id:
+            continue
+        record = {
+            "month": month_id,
+            "release_date": release_date,
+            "source_url": source_url,
+            "rows": [
+                {
+                    "oem": row.get("oem"),
+                    "units": row.get("units"),
+                    "share_pct": row.get("share_pct"),
+                    "prior_units": row.get("prior_units"),
+                    "prior_share_pct": row.get("prior_share_pct"),
+                }
+                for row in rows
+            ],
+        }
+        bucket = categories.setdefault(category, {"months": []})
+        months = list(bucket.get("months") or [])
+        by_month = {item["month"]: item for item in months if item.get("month")}
+        if by_month.get(month_id) == record:
+            continue
+        by_month[month_id] = record
+        bucket["months"] = [by_month[key] for key in sorted(by_month)]
+        categories[category] = bucket
+        changed = True
+
+    if not changed:
         return
-    by_month[month_id] = new_record
-    out = {"months": [by_month[k] for k in sorted(by_month)]}
-    PV_OEM_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
-    PV_OEM_HISTORY_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    out = {"categories": categories}
+    OEM_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OEM_HISTORY_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def build_dashboard(output_path: Path) -> dict:
     snapshot = json.loads(DATA_SNAPSHOT_PATH.read_text(encoding="utf-8"))
-    upsert_pv_oem_history(snapshot)
+    upsert_oem_history(snapshot)
     news_snapshot = read_news_snapshot()
     vahan_oem_cache = read_vahan_oem_cache(output_path.parent / "vahan_oem_live.json")
     vahan_result = collect_vahan_imports(output_path.parent / "vahan")
