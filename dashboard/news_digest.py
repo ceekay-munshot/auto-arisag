@@ -137,6 +137,18 @@ def refresh_news_snapshot(snapshot_path: Path = NEWS_SNAPSHOT_PATH) -> tuple[dic
     digest = build_news_digest(normalized_articles, source_audit, normalization_audit)
 
     if digest["available"]:
+        cached = read_news_snapshot(snapshot_path)
+        if cached.get("available") and _same_articles(cached, digest):
+            return cached, {
+                "source": "Live News",
+                "status": "ok",
+                "updated": False,
+                "latest_value": cached.get("generated_at"),
+                "message": (
+                    f"Live news refresh found no new articles; kept existing snapshot with "
+                    f"{cached.get('item_count', 0)} items."
+                ),
+            }
         snapshot_path.parent.mkdir(parents=True, exist_ok=True)
         snapshot_path.write_text(json.dumps(digest, indent=2), encoding="utf-8")
         return digest, {
@@ -164,6 +176,22 @@ def refresh_news_snapshot(snapshot_path: Path = NEWS_SNAPSHOT_PATH) -> tuple[dic
         "latest_value": None,
         "message": "Live news refresh did not produce enough validated segment news, so the news panel stays hidden.",
     }
+
+
+def _same_articles(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    """Return True when two news digests contain the exact same set of articles."""
+    return _article_keys(left) == _article_keys(right)
+
+
+def _article_keys(digest: dict[str, Any]) -> set[tuple[str, str]]:
+    keys: set[tuple[str, str]] = set()
+    for group in digest.get("groups") or []:
+        group_id = str(group.get("id") or "")
+        for item in group.get("items") or []:
+            url = str(item.get("url") or "")
+            if url:
+                keys.add((group_id, url))
+    return keys
 
 
 def build_news_digest(
