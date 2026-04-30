@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T16:11:18.796917+00:00",
+  "generated_at": "2026-04-30T16:24:05.936055+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -12285,7 +12285,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-04-30T11:49:13.583857+00:00",
+    "generated_at": "2026-04-30T16:21:27.265899+00:00",
     "window_days": 45,
     "group_count": 5,
     "item_count": 20,
@@ -12519,22 +12519,6 @@
             ]
           },
           {
-            "title": "Hyundai Motor India launches updated Ioniq 5 at \u20b955.7 lakh",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-motor-india-launches-updated-ioniq-5-at-55-7-lakh/130578973",
-            "summary": "The revised model now comes with an 84.0 kWh battery, offering an ARAI-certified range of up to 690 km.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-04-28T11:42:13+00:00",
-            "published_display": "28 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Epsilon Launches Gen III LFP Cathode Material, Targeting US Battery Supply Chains",
             "url": "https://www.autocarpro.in/NEWS/epsilon-launches-gen-iii-lfp-cathode-material-targeting-us-battery-supply-chains-132267",
             "summary": "Epsilon Cathode Active Materials (ECAM) announced on April 27 the commercial development of its third-generation lithium iron phosphate (LFP) cathode material, claiming performance metrics that place it alongside Chinese-produced alternatives that have long held a near-monopoly in the global LFP supply chain. The announcement marks one of the few instances of a non-Chinese company bringing high-energy-density LFP...",
@@ -12549,6 +12533,23 @@
               "Product / Launch",
               "Supply Chain / Components",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Epsilon CAM unveils Gen III LFP battery material, targets global EV supply chain shift",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/epsilon-cam-unveils-gen-iii-lfp-battery-material-targets-global-ev-supply-chain-shift/130556853",
+            "summary": "Epsilon CAM\u2019s new Gen III LFP cathode material could strengthen alternative battery supply chains as global automakers seek non-Chinese sources for EV components.",
+            "source": "ET Auto Components",
+            "published_at": "2026-04-27T14:05:02+00:00",
+            "published_display": "27 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -12665,7 +12666,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
+      "unmapped_articles": 45,
       "filtered_low_signal": 1,
       "kept_articles": 69
     }
