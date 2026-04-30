@@ -2,7 +2,9 @@ from __future__ import annotations
 
 from collections import defaultdict
 from datetime import UTC, datetime
+import json
 import math
+from pathlib import Path
 from typing import Any
 
 from .config import (
@@ -213,10 +215,16 @@ def build_retail_module(
             **({"source_meta": table_meta["source_meta"]} if table_meta.get("source_meta") else {}),
         }
 
-    # PV stays in the same flat-table format as the other categories. Until we
-    # backfill multi-month FADA OEM history, the periodized PV table just shows
-    # "n.m." for every column except YoY and share Δ — better to keep parity
-    # with 2W / 3W / CV / Tractor / CE.
+    pv_history = load_pv_oem_history()
+    if pv_history and len(pv_history) >= 2:
+        pv_source_meta = latest_oem_tables["PV"].get("source_meta", {})
+        latest_oem_tables["PV"] = build_periodized_pv_oem_table_from_history(
+            "PV",
+            latest_oem_tables["PV"]["rows"],
+            pv_history,
+            pv_source_meta.get("latest_month") or fada["latest_month"],
+            pv_source_meta.get("url") or fada["source_url"],
+        )
 
     for live_category in ["2W", "3W", "CV", "TRACTOR", "CE", "E2W", "E3W", "EPV", "ECV"]:
         live_table = build_live_vahan_oem_table(vahan_oem_cache, live_category, validations)
@@ -1779,6 +1787,145 @@ def mapped_companies_for_category(category: str) -> list[str]:
 
 def month_label(month: str) -> str:
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+
+
+def month_offset(month: str, delta_months: int) -> str:
+    parsed = datetime.strptime(month, "%Y-%m")
+    total = parsed.year * 12 + (parsed.month - 1) + delta_months
+    return f"{total // 12:04d}-{(total % 12) + 1:02d}"
+
+
+PV_OEM_HISTORY_PATH = Path("data/pv_oem_history.json")
+
+
+def load_pv_oem_history() -> list[dict[str, Any]]:
+    if not PV_OEM_HISTORY_PATH.exists():
+        return []
+    try:
+        payload = json.loads(PV_OEM_HISTORY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    months = payload.get("months") if isinstance(payload, dict) else None
+    if not isinstance(months, list):
+        return []
+    return [item for item in months if isinstance(item, dict) and item.get("month")]
+
+
+def _safe_pct_change(current: float | int | None, prior: float | int | None) -> float | None:
+    if current is None or prior is None:
+        return None
+    try:
+        prior_value = float(prior)
+        current_value = float(current)
+    except (TypeError, ValueError):
+        return None
+    if not prior_value:
+        return None
+    return round((current_value / prior_value - 1) * 100, 2)
+
+
+def _safe_cagr(current: float | int | None, prior: float | int | None, periods: int) -> float | None:
+    if current is None or prior is None or periods <= 0:
+        return None
+    try:
+        prior_value = float(prior)
+        current_value = float(current)
+    except (TypeError, ValueError):
+        return None
+    if prior_value <= 0 or current_value <= 0:
+        return None
+    return round(((current_value / prior_value) ** (1 / periods) - 1) * 100, 2)
+
+
+def build_periodized_pv_oem_table_from_history(
+    category: str,
+    latest_rows: list[dict[str, Any]],
+    history: list[dict[str, Any]],
+    latest_month: str,
+    source_url: str | None,
+) -> dict[str, Any]:
+    """Build a periodized PV OEM table whose growth columns are computed from
+    real monthly OEM history rather than left as n.m. Currently exposes the
+    monthly view; quarterly/yearly come once we have richer history."""
+    history_by_month = {
+        item["month"]: {row["oem"]: row for row in item.get("rows") or []}
+        for item in history
+        if item.get("month")
+    }
+
+    def lookup_units(month_back: int, oem: str) -> int | None:
+        target = month_offset(latest_month, -month_back)
+        record = history_by_month.get(target, {}).get(oem)
+        return record.get("units") if record else None
+
+    rows: list[dict[str, Any]] = []
+    for row in latest_rows:
+        oem = row["oem"]
+        units = row.get("units")
+        prior_units = row.get("prior_units")
+
+        u1 = lookup_units(1, oem)
+        u3 = lookup_units(3, oem)
+        u12 = lookup_units(12, oem) or prior_units
+        u24 = lookup_units(24, oem)
+
+        rows.append(
+            {
+                "oem": oem,
+                "current_units": units,
+                "mom_pct": _safe_pct_change(units, u1),
+                "yoy_pct": row.get("unit_growth_pct"),
+                "growth_3m_pct": _safe_pct_change(units, u3),
+                "growth_12m_pct": _safe_pct_change(units, u12),
+                "cagr_12m_pct": _safe_cagr(units, u12, 1),
+                "cagr_24m_pct": _safe_cagr(units, u24, 2),
+                "share_pct": row.get("share_pct"),
+                "share_change_pp": row.get("share_change_pp"),
+                "listed_companies": row.get("listed_companies", []),
+            }
+        )
+
+    available_months = sorted(history_by_month.keys())
+    coverage_note = (
+        f"Computed from FADA's monthly PV OEM annexure across {len(available_months)} months "
+        f"({available_months[0]} → {available_months[-1]}). Some columns may be n.m. for OEMs "
+        "that didn't exist in the comparison month."
+    ) if available_months else "PV OEM annexure history pending; add months via the backfill workflow."
+
+    return {
+        "category": category,
+        "label": CATEGORY_LABELS.get(category, category),
+        "mode": "periodized",
+        "default_period": "M",
+        "periods": {
+            "M": {
+                "id": "M",
+                "label": "Monthly",
+                "period_label": month_label(latest_month),
+                "columns": [
+                    {"key": "oem", "label": "OEM"},
+                    {"key": "current_units", "label": "Current Units", "type": "int"},
+                    {"key": "mom_pct", "label": "MoM%", "type": "pct"},
+                    {"key": "yoy_pct", "label": "YoY%", "type": "pct"},
+                    {"key": "growth_3m_pct", "label": "3M Growth", "type": "pct"},
+                    {"key": "growth_12m_pct", "label": "12M Growth", "type": "pct"},
+                    {"key": "cagr_12m_pct", "label": "12M CAGR", "type": "pct"},
+                    {"key": "cagr_24m_pct", "label": "24M CAGR", "type": "pct"},
+                    {"key": "share_pct", "label": "Current Market Share", "type": "pct"},
+                    {"key": "share_change_pp", "label": "Share Chg", "type": "pp"},
+                ],
+                "rows": rows,
+                "note": coverage_note,
+            },
+        },
+        "source_meta": {
+            "name": "FADA",
+            "url": source_url,
+            "latest_month": latest_month,
+            "latest_label": month_label(latest_month),
+            "note": "Periodized growth metrics computed from FADA's monthly OEM annexure history.",
+        },
+    }
 
 
 def quarter_key(month: str) -> str:

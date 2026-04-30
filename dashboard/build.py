@@ -16,8 +16,59 @@ from .update_snapshot import refresh_snapshot
 from .vahan_oem import read_vahan_oem_cache, refresh_vahan_oem_cache
 
 
+PV_OEM_HISTORY_PATH = Path("data/pv_oem_history.json")
+
+
+def upsert_pv_oem_history(snapshot: dict) -> None:
+    """Append the latest FADA PV OEM rows to pv_oem_history.json so the
+    periodized PV table grows month-by-month even between full backfills."""
+    fada = snapshot.get("fada") or {}
+    pv_table = (fada.get("latest_oem_tables") or {}).get("PV") or {}
+    rows = pv_table.get("rows") or []
+    month_id = pv_table.get("source_meta", {}).get("latest_month") or fada.get("oem_latest_month") or fada.get("latest_month")
+    source_url = pv_table.get("source_meta", {}).get("url") or fada.get("oem_source_url") or fada.get("source_url")
+    release_date = fada.get("oem_latest_release_date") or fada.get("latest_release_date") or ""
+    if not month_id or not rows:
+        return
+
+    history: dict
+    if PV_OEM_HISTORY_PATH.exists():
+        try:
+            history = json.loads(PV_OEM_HISTORY_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            history = {"months": []}
+    else:
+        history = {"months": []}
+
+    months = list(history.get("months") or [])
+    by_month = {item["month"]: item for item in months if item.get("month")}
+    existing = by_month.get(month_id)
+    new_record = {
+        "month": month_id,
+        "release_date": release_date,
+        "source_url": source_url,
+        "rows": [
+            {
+                "oem": row.get("oem"),
+                "units": row.get("units"),
+                "share_pct": row.get("share_pct"),
+                "prior_units": row.get("prior_units"),
+                "prior_share_pct": row.get("prior_share_pct"),
+            }
+            for row in rows
+        ],
+    }
+    if existing == new_record:
+        return
+    by_month[month_id] = new_record
+    out = {"months": [by_month[k] for k in sorted(by_month)]}
+    PV_OEM_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PV_OEM_HISTORY_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
 def build_dashboard(output_path: Path) -> dict:
     snapshot = json.loads(DATA_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    upsert_pv_oem_history(snapshot)
     news_snapshot = read_news_snapshot()
     vahan_oem_cache = read_vahan_oem_cache(output_path.parent / "vahan_oem_live.json")
     vahan_result = collect_vahan_imports(output_path.parent / "vahan")
