@@ -4,6 +4,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 import json
 import math
+import re
 from pathlib import Path
 from typing import Any
 
@@ -1860,6 +1861,80 @@ def _safe_cagr(current: float | int | None, prior: float | int | None, periods: 
     return round(((current_value / prior_value) ** (1 / periods) - 1) * 100, 2)
 
 
+_OEM_HEADER_BLEED_RE = re.compile(
+    r"^\s*[\)\(,]+\s*"  # leading ) or , from a previous column
+    r"(?:[A-Za-z]{2,9}|CY|FY)['’]?\d{2,4}\s+",  # then like Mar'24 / Jun23 / CY'23
+    re.IGNORECASE,
+)
+# Rows whose OEM name still references CY or FY after the leading punctuation
+# came from cumulative annexures (calendar / fiscal year) leaking into a
+# monthly PDF parse — the units are annual totals, not monthly. Drop them
+# rather than try to canonicalise.
+_OEM_CUMULATIVE_TAG_RE = re.compile(
+    r"^\s*[\)\(,]*\s*(?:CY|FY)['’]?\d{2,4}\b",
+    re.IGNORECASE,
+)
+_OEM_CORPORATE_SUFFIX_RE = re.compile(
+    r"\s+(?:India\s+)?(?:\(P\)\s+)?(?:Pvt\.?\s+|Private\s+)?(?:Ltd\.?|Limited)$",
+    re.IGNORECASE,
+)
+_OEM_GROUP_SUFFIX_RE = re.compile(r"\s+(Group)$", re.IGNORECASE)
+
+
+def _is_cumulative_oem_row(raw: str) -> bool:
+    return bool(raw) and bool(_OEM_CUMULATIVE_TAG_RE.match(raw))
+
+
+def _strip_oem_noise(raw: str) -> str:
+    if not raw:
+        return ""
+    cleaned = _OEM_HEADER_BLEED_RE.sub("", raw)
+    cleaned = re.sub(r"^\s*[\)\(,]+\s*", "", cleaned)  # any leftover punctuation
+    cleaned = _OEM_CORPORATE_SUFFIX_RE.sub("", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+def _build_oem_canonicalizer(canonical_names: list[str]):
+    """Return a function that maps a possibly-noisy OEM string to one of the
+    canonical names (taken from the latest month's rows). Falls back to the
+    cleaned-but-unmatched name when no canonical fits, so we never silently
+    merge two distinct OEMs together."""
+    canonical_index = {}
+    for name in canonical_names:
+        if not name:
+            continue
+        cleaned = _strip_oem_noise(name).lower()
+        if cleaned:
+            canonical_index.setdefault(cleaned, name)
+
+    longest_canonical = sorted(canonical_index.keys(), key=len, reverse=True)
+
+    def canonicalize(raw: str) -> str:
+        if not raw:
+            return raw
+        cleaned = _strip_oem_noise(raw)
+        if not cleaned:
+            return raw
+        cleaned_lower = cleaned.lower()
+        if cleaned_lower in canonical_index:
+            return canonical_index[cleaned_lower]
+        # Substring match — longest canonical first to avoid "Mahindra" matching
+        # "Mahindra & Mahindra" when the row really is "Mahindra Group" etc.
+        for canonical_lower in longest_canonical:
+            # Word-boundary check: canonical_lower must appear as a contiguous
+            # block, separated by non-alphanumerics on either side, so that
+            # "tata" doesn't match "Tata Hitachi Construction" when both
+            # "Tata Motors" and "Tata Hitachi" are in canonical.
+            if (
+                canonical_lower in cleaned_lower
+                and len(canonical_lower) >= 4  # avoid 3-letter false positives
+            ):
+                return canonical_index[canonical_lower]
+        return cleaned
+
+    return canonicalize
+
+
 def build_periodized_oem_table_from_history(
     category: str,
     latest_rows: list[dict[str, Any]],
@@ -1870,16 +1945,43 @@ def build_periodized_oem_table_from_history(
     """Build a periodized OEM table whose growth columns are computed from real
     monthly OEM history rather than left as n.m. Same shape regardless of
     category (PV / 2W / 3W / CV / Tractor / CE)."""
-    history_by_month = {
-        item["month"]: {row["oem"]: row for row in item.get("rows") or []}
-        for item in history
-        if item.get("month")
-    }
+    canonicalize = _build_oem_canonicalizer([row["oem"] for row in latest_rows if row.get("oem")])
+    # 3x the largest current-month OEM is a generous monthly ceiling. Anything
+    # above that is almost certainly a CY/FY annexure leaked into the monthly
+    # parse (e.g. Honda Dec 2024 row of 4.8M = full-year retail).
+    latest_max_units = max(
+        (int(row.get("units") or 0) for row in latest_rows if row.get("units") is not None),
+        default=0,
+    )
+    max_monthly_units = latest_max_units * 3 if latest_max_units else None
+
+    # Re-key every month's rows by canonical OEM name so older PDFs with
+    # column-header bleed (`) Jan'24 Maruti Suzuki India Ltd`) merge back into
+    # the proper canonical bucket. When two raw rows canonicalize to the same
+    # OEM, sum their units — that handles split-rows in older annexures too.
+    history_by_month: dict[str, dict[str, int]] = {}
+    for item in history:
+        month = item.get("month")
+        if not month:
+            continue
+        per_oem: dict[str, int] = {}
+        for row in item.get("rows") or []:
+            raw = row.get("oem")
+            units = row.get("units")
+            if not raw or units is None:
+                continue
+            if _is_cumulative_oem_row(raw):
+                continue  # CY/FY annexure leaked into a monthly parse — drop
+            units_int = int(units)
+            if max_monthly_units and units_int > max_monthly_units:
+                continue  # implausibly high monthly value — also a CY/FY leak
+            canonical = canonicalize(raw)
+            per_oem[canonical] = per_oem.get(canonical, 0) + units_int
+        history_by_month[month] = per_oem
 
     def lookup_units(month_back: int, oem: str) -> int | None:
         target = month_offset(latest_month, -month_back)
-        record = history_by_month.get(target, {}).get(oem)
-        return record.get("units") if record else None
+        return history_by_month.get(target, {}).get(oem)
 
     rows: list[dict[str, Any]] = []
     for row in latest_rows:
@@ -1913,8 +2015,12 @@ def build_periodized_oem_table_from_history(
         "that didn't exist in the comparison month."
     ) if available_months else f"{category_label} OEM annexure history pending; add months via the backfill workflow."
 
-    quarter_period = build_quarterly_period(category, history, latest_month)
-    yearly_period = build_yearly_period(category, history, latest_month)
+    quarter_period = build_quarterly_period(
+        category, history, latest_month, canonicalize=canonicalize, max_monthly_units=max_monthly_units
+    )
+    yearly_period = build_yearly_period(
+        category, history, latest_month, canonicalize=canonicalize, max_monthly_units=max_monthly_units
+    )
 
     periods: dict[str, Any] = {
         "M": {
@@ -1976,11 +2082,16 @@ def build_quarterly_period(
     category: str,
     history: list[dict[str, Any]],
     latest_month: str,
+    *,
+    canonicalize=None,
+    max_monthly_units: int | None = None,
 ) -> dict[str, Any] | None:
     """Aggregate monthly OEM history into Indian fiscal-year quarters and emit
     a Q view with QoQ%, 4Q YoY (= same quarter previous FY), and quarterly
     market share. Returns None when we don't have at least one complete
     quarter of history."""
+    if canonicalize is None:
+        canonicalize = lambda value: value
     months_by_id = {item["month"]: item for item in history if item.get("month")}
     # Group months into FY quarters; only count quarters where all 3 months are present.
     quarters: dict[str, dict[str, Any]] = {}
@@ -1999,11 +2110,17 @@ def build_quarterly_period(
         oem_totals: dict[str, int] = {}
         for month_id in bucket["months"]:
             for row in months_by_id[month_id].get("rows") or []:
-                oem = row.get("oem")
+                raw_oem = row.get("oem")
                 units = row.get("units")
-                if not oem or units is None:
+                if not raw_oem or units is None:
                     continue
-                oem_totals[oem] = oem_totals.get(oem, 0) + int(units)
+                if _is_cumulative_oem_row(raw_oem):
+                    continue
+                units_int = int(units)
+                if max_monthly_units and units_int > max_monthly_units:
+                    continue
+                oem = canonicalize(raw_oem)
+                oem_totals[oem] = oem_totals.get(oem, 0) + units_int
         if not oem_totals:
             continue
         complete_quarters[q_key] = {
@@ -2099,11 +2216,18 @@ def build_yearly_period(
     category: str,
     history: list[dict[str, Any]],
     latest_month: str,
+    *,
+    min_months: int = 10,
+    canonicalize=None,
+    max_monthly_units: int | None = None,
 ) -> dict[str, Any] | None:
     """Aggregate monthly OEM history into Indian fiscal years and emit a Y view
     with FY units, YoY%, 2Y CAGR, 5Y CAGR, FY market share, and share Δ vs
-    prior FY. Only fully-complete fiscal years (12 months in history) count,
-    so a half-finished FY never poisons the math."""
+    prior FY. FYs with at least `min_months` of history are kept; partial FYs
+    are annualised (raw_total * 12 / months) so YoY ratios stay comparable.
+    The coverage note flags how many months feed each FY."""
+    if canonicalize is None:
+        canonicalize = lambda value: value
     months_by_id = {item["month"]: item for item in history if item.get("month")}
     fy_buckets: dict[int, list[str]] = {}
     for month_id in sorted(months_by_id):
@@ -2112,37 +2236,60 @@ def build_yearly_period(
             continue
         fy_buckets.setdefault(fy, []).append(month_id)
 
-    complete_fy: dict[int, dict[str, Any]] = {}
+    eligible_fy: dict[int, dict[str, Any]] = {}
     for fy_year, months in fy_buckets.items():
-        if len(months) != 12:
+        months_count = len(months)
+        if months_count < min_months:
             continue
         oem_totals: dict[str, int] = {}
         for month_id in months:
             for row in months_by_id[month_id].get("rows") or []:
-                oem = row.get("oem")
+                raw_oem = row.get("oem")
                 units = row.get("units")
-                if not oem or units is None:
+                if not raw_oem or units is None:
                     continue
-                oem_totals[oem] = oem_totals.get(oem, 0) + int(units)
+                if _is_cumulative_oem_row(raw_oem):
+                    continue
+                units_int = int(units)
+                if max_monthly_units and units_int > max_monthly_units:
+                    continue
+                oem = canonicalize(raw_oem)
+                oem_totals[oem] = oem_totals.get(oem, 0) + units_int
         if not oem_totals:
             continue
-        complete_fy[fy_year] = {
+        scale = 12 / months_count if months_count else 1
+        if months_count == 12:
+            annualised = dict(oem_totals)
+        else:
+            annualised = {oem: int(round(units * scale)) for oem, units in oem_totals.items()}
+        eligible_fy[fy_year] = {
             "fy": fy_year,
             "label": fy_label(fy_year),
             "months": months,
-            "oem_units": oem_totals,
-            "category_total": sum(oem_totals.values()),
+            "months_count": months_count,
+            "oem_raw_units": oem_totals,
+            "oem_units": annualised,
+            "category_total": sum(annualised.values()),
+            "category_total_raw": sum(oem_totals.values()),
+            "is_partial": months_count != 12,
         }
 
-    if not complete_fy:
+    if not eligible_fy:
         return None
 
-    sorted_fy = sorted(complete_fy.keys())
+    sorted_fy = sorted(eligible_fy.keys())
     current_fy = sorted_fy[-1]
-    current = complete_fy[current_fy]
-    prev = complete_fy.get(current_fy - 1)
-    fy2 = complete_fy.get(current_fy - 2)
-    fy5 = complete_fy.get(current_fy - 5)
+    current = eligible_fy[current_fy]
+    prev = eligible_fy.get(current_fy - 1)
+    fy2 = eligible_fy.get(current_fy - 2)
+    fy5 = eligible_fy.get(current_fy - 5)
+
+    def coverage_label(bucket: dict[str, Any] | None) -> str:
+        if not bucket:
+            return ""
+        if not bucket["is_partial"]:
+            return "12/12 mo"
+        return f"{bucket['months_count']}/12 mo · annualised"
 
     rows: list[dict[str, Any]] = []
     for oem, units in sorted(current["oem_units"].items(), key=lambda item: -item[1]):
@@ -2168,7 +2315,17 @@ def build_yearly_period(
             }
         )
 
-    note_parts = [f"FY-roll-up of FADA monthly OEM annexures across {len(sorted_fy)} complete fiscal year(s)"]
+    coverage_summary = ", ".join(
+        f"{eligible_fy[fy]['label']} {eligible_fy[fy]['months_count']}/12"
+        for fy in sorted_fy
+    )
+    parts = [f"FY-roll-up of FADA monthly OEM annexures across {len(sorted_fy)} fiscal year(s): {coverage_summary}"]
+    partial_present = any(eligible_fy[fy]["is_partial"] for fy in sorted_fy)
+    if partial_present:
+        parts.append(
+            "Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays "
+            "comparable; numbers will firm up as missing months land via the backfill workflow."
+        )
     pending = []
     if not prev:
         pending.append("YoY")
@@ -2177,16 +2334,20 @@ def build_yearly_period(
     if not fy5:
         pending.append("5Y CAGR")
     if pending:
-        note_parts.append("pending until older history lands: " + ", ".join(pending))
-    note = "; ".join(note_parts) + "."
+        parts.append("pending until older history lands: " + ", ".join(pending))
+    note = "; ".join(parts) + "."
+
+    period_label = current["label"]
+    if current["is_partial"]:
+        period_label = f"{period_label} ({coverage_label(current)})"
 
     return {
         "id": "Y",
         "label": "Yearly",
-        "period_label": current["label"],
+        "period_label": period_label,
         "columns": [
             {"key": "oem", "label": "OEM"},
-            {"key": "current_units", "label": "FY Units", "type": "int"},
+            {"key": "current_units", "label": "FY Units (annualised)", "type": "int"},
             {"key": "yoy_pct", "label": "YoY%", "type": "pct"},
             {"key": "cagr_2y_pct", "label": "2Y CAGR", "type": "pct"},
             {"key": "cagr_5y_pct", "label": "5Y CAGR", "type": "pct"},
