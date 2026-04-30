@@ -2018,9 +2018,6 @@ def build_periodized_oem_table_from_history(
     quarter_period = build_quarterly_period(
         category, history, latest_month, canonicalize=canonicalize, max_monthly_units=max_monthly_units
     )
-    yearly_period = build_yearly_period(
-        category, history, latest_month, canonicalize=canonicalize, max_monthly_units=max_monthly_units
-    )
 
     periods: dict[str, Any] = {
         "M": {
@@ -2043,8 +2040,6 @@ def build_periodized_oem_table_from_history(
     }
     if quarter_period:
         periods["Q"] = quarter_period
-    if yearly_period:
-        periods["Y"] = yearly_period
 
     return {
         "category": category,
