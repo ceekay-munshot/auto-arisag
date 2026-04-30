@@ -1225,10 +1225,10 @@
   },
   "siam": {
     "source_name": "SIAM",
-    "latest_month": "2026-02",
-    "latest_release_date": "2026-03-13",
-    "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
-    "coverage_note": "1 BMW, Mercedes, JLR, Tata Motors & Volvo Auto data are not available.",
+    "latest_month": "2026-03",
+    "latest_release_date": "2026-04-14",
+    "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
+    "coverage_note": "March 2026 figures sourced from the SIAM Q4 (Jan-Mar 2026) & FY 2025-26 release; production total is bundled at Q4 / FY level rather than monthly so the monthly figure is left at 0 for Mar 2026.",
     "monthly_series": [
       {
         "month": "2025-10",
@@ -1327,6 +1327,26 @@
           "2W": {
             "units": 1871406,
             "yoy_pct": 35.2
+          }
+        }
+      },
+      {
+        "month": "2026-03",
+        "release_date": "2026-04-14",
+        "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
+        "production_total": 0,
+        "domestic_sales": {
+          "PV": {
+            "units": 442460,
+            "yoy_pct": 16.0
+          },
+          "3W": {
+            "units": 76273,
+            "yoy_pct": 21.4
+          },
+          "2W": {
+            "units": 1976128,
+            "yoy_pct": 19.3
           }
         }
       }

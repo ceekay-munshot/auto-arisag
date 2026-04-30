@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T15:52:10.284533+00:00",
+  "generated_at": "2026-04-30T16:03:50.064012+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -44,10 +44,10 @@
       {
         "id": "pv_retail_vs_wholesale",
         "label": "PV Retail / Wholesale",
-        "value": 105.4,
-        "display": "105.4%",
-        "change": "+22,439 unit gap",
-        "detail": "FADA Mar 2026 retail vs SIAM Feb 2026 wholesale \u2014 SIAM is one cycle behind, so this gap mixes months.",
+        "value": 99.5,
+        "display": "99.5%",
+        "change": "-2,316 unit gap",
+        "detail": "FADA Mar 2026 retail vs SIAM Mar 2026 wholesale.",
         "tone": "neutral"
       },
       {
@@ -73,9 +73,9 @@
         "source": "SIAM",
         "status": "active",
         "module": "Wholesale",
-        "last_updated": "2026-03-13",
-        "detail": "1 BMW, Mercedes, JLR, Tata Motors & Volvo Auto data are not available.",
-        "url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603"
+        "last_updated": "2026-04-14",
+        "detail": "March 2026 figures sourced from the SIAM Q4 (Jan-Mar 2026) & FY 2025-26 release; production total is bundled at Q4 / FY level rather than monthly so the monthly figure is left at 0 for Mar 2026.",
+        "url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605"
       },
       {
         "source": "ACMA",
@@ -5391,12 +5391,12 @@
       "title": "Wholesale Lens",
       "source_meta": {
         "name": "SIAM",
-        "latest_month": "2026-02",
-        "latest_release_date": "2026-03-13",
-        "url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
-        "note": "1 BMW, Mercedes, JLR, Tata Motors & Volvo Auto data are not available."
+        "latest_month": "2026-03",
+        "latest_release_date": "2026-04-14",
+        "url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
+        "note": "March 2026 figures sourced from the SIAM Q4 (Jan-Mar 2026) & FY 2025-26 release; production total is bundled at Q4 / FY level rather than monthly so the monthly figure is left at 0 for Mar 2026."
       },
-      "latest_month": "2026-02",
+      "latest_month": "2026-03",
       "months": [
         {
           "month": "2025-10",
@@ -5537,52 +5537,80 @@
             }
           ],
           "domestic_total": 2363684
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "release_date": "2026-04-14",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
+          "production_total": 0,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 442460,
+              "yoy_pct": 16.0
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1976128,
+              "yoy_pct": 19.3
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 76273,
+              "yoy_pct": 21.4
+            }
+          ],
+          "domestic_total": 2494861
         }
       ],
       "latest_snapshot": {
-        "month": "2026-02",
-        "label": "Feb 2026",
-        "release_date": "2026-03-13",
-        "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
-        "production_total": 2864612,
+        "month": "2026-03",
+        "label": "Mar 2026",
+        "release_date": "2026-04-14",
+        "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
+        "production_total": 0,
         "domestic_sales": [
           {
             "category": "PV",
             "label": "Passenger Vehicles",
-            "units": 417705,
-            "yoy_pct": 10.6
+            "units": 442460,
+            "yoy_pct": 16.0
           },
           {
             "category": "2W",
             "label": "Two-Wheelers",
-            "units": 1871406,
-            "yoy_pct": 35.2
+            "units": 1976128,
+            "yoy_pct": 19.3
           },
           {
             "category": "3W",
             "label": "Three-Wheelers",
-            "units": 74573,
-            "yoy_pct": 29.0
+            "units": 76273,
+            "yoy_pct": 21.4
           }
         ],
-        "domestic_total": 2363684
+        "domestic_total": 2494861
       },
       "retail_vs_wholesale": [
         {
           "category": "PV",
           "label": "Passenger Vehicles",
           "retail_units": 440144,
-          "wholesale_units": 417705,
-          "gap_units": 22439,
-          "ratio_pct": 105.4
+          "wholesale_units": 442460,
+          "gap_units": -2316,
+          "ratio_pct": 99.5
         },
         {
           "category": "2W",
           "label": "Two-Wheelers",
           "retail_units": 1951006,
-          "wholesale_units": 1871406,
-          "gap_units": 79600,
-          "ratio_pct": 104.3
+          "wholesale_units": 1976128,
+          "gap_units": -25122,
+          "ratio_pct": 98.7
         }
       ],
       "quarter_summary": {
@@ -11222,7 +11250,7 @@
     },
     {
       "title": "Retail vs wholesale",
-      "body": "PV retail ran at 105.4% of wholesale with FADA Mar 2026 retail over SIAM Feb 2026 wholesale, versus 104.3% for 2W. The tighter PV ratio sits alongside FADA's ~28 days inventory signal, suggesting channel conditions have improved materially.",
+      "body": "PV retail ran at 99.5% of wholesale in Mar 2026, versus 98.7% for 2W. The tighter PV ratio sits alongside FADA's ~28 days inventory signal, suggesting channel conditions have improved materially.",
       "tags": [
         "retail",
         "wholesale"
