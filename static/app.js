@@ -3858,13 +3858,31 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter) {
   const innerWidth = width - pad.left - pad.right;
   const innerHeight = height - pad.top - pad.bottom;
   const allValues = activeSeries.flatMap((item) => item.values).filter((value) => value !== null && value !== undefined);
-  const max = Math.max(...allValues, 1);
+  const rawMax = allValues.length ? Math.max(...allValues) : 1;
+  const rawMin = allValues.length ? Math.min(...allValues) : 0;
+  // When all values sit in a narrow band well above zero (e.g. monthly OEM sales
+  // ~150-240k), zooming in on the band makes month-to-month volatility visible.
+  // When the data spans most of [0, max] or crosses zero, keep the axis anchored
+  // at zero so absolute scale stays honest.
+  let yMin;
+  let yMax;
+  const span = rawMax - rawMin;
+  const tightenable = rawMin > 0 && span > 0 && span / rawMax < 0.5;
+  if (tightenable) {
+    const padding = span * 0.18;
+    yMin = Math.max(0, rawMin - padding);
+    yMax = rawMax + padding;
+  } else {
+    yMin = Math.min(0, rawMin);
+    yMax = Math.max(rawMax, 1);
+  }
+  const yRange = yMax - yMin || 1;
   const steps = 4;
   const xLabelStep = labels.length > 10 ? Math.ceil(labels.length / 6) : 1;
 
   const gridLines = Array.from({ length: steps + 1 }, (_, index) => {
     const y = pad.top + (innerHeight / steps) * index;
-    const value = max - (max / steps) * index;
+    const value = yMax - (yRange / steps) * index;
     return `
       <g>
         <line x1="${pad.left}" x2="${width - pad.right}" y1="${y}" y2="${y}" stroke="rgba(20,39,62,0.10)" />
@@ -3884,7 +3902,8 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter) {
   const lines = activeSeries.map((item) => {
     const points = item.values.map((value, index) => {
       const x = pad.left + (innerWidth / Math.max(item.values.length - 1, 1)) * index;
-      const y = pad.top + innerHeight - (Number(value || 0) / max) * innerHeight;
+      const numericValue = Number(value || 0);
+      const y = pad.top + innerHeight - ((numericValue - yMin) / yRange) * innerHeight;
       return { x, y, value, label: labels[index] };
     });
     const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
