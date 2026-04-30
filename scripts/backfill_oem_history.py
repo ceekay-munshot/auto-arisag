@@ -49,9 +49,9 @@ HTML_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 TRACKED_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
-# Cap the discovery window so the workflow runs in a reasonable time. 30 months
-# is enough for the 24M CAGR + a buffer.
-MAX_HISTORY_MONTHS = 30
+# Cap the discovery window so the workflow runs in a reasonable time. 60 months
+# unlocks a full 5-year history, which is plenty for the Y tab and 5Y CAGR.
+MAX_HISTORY_MONTHS = 60
 
 # FADA listing pages — try in order until one returns PDF anchors.
 FADA_INDEX_URLS = (
@@ -59,6 +59,21 @@ FADA_INDEX_URLS = (
     "https://fada.in/press-releases.html",
     "https://www.fada.in/research.html",
     "https://www.fada.in/press-releases.html",
+)
+
+# Wayback Machine's CDX index. The API returns one row per snapshot of any
+# URL matching the wildcard, so a single call recovers every FADA monthly
+# retail PDF the Internet Archive has ever crawled. We collapse by urlkey to
+# get one row per unique PDF and filter to PDFs only.
+WAYBACK_CDX_URL = (
+    "https://web.archive.org/cdx/search/cdx"
+    "?url=fada.in/images/press-release/*Vehicle%20Retail%20Data*"
+    "&matchType=prefix"
+    "&output=json"
+    "&limit=600"
+    "&filter=mimetype:application/pdf"
+    "&filter=statuscode:200"
+    "&collapse=urlkey"
 )
 
 PDF_URL_RE = re.compile(
@@ -116,9 +131,9 @@ def parse_month_from_url(url: str) -> str | None:
     return f"{year:04d}-{month_number:02d}"
 
 
-def discover_fada_pdf_urls() -> list[tuple[str, str]]:
-    """Walk FADA's listing pages and return (month_id, url) pairs for every
-    monthly retail PDF found."""
+def discover_via_fada_listing() -> dict[str, str]:
+    """Fall-back path: scrape FADA's own listing page. Usually only the latest
+    6-12 months."""
     discovered: dict[str, str] = {}
     for index_url in FADA_INDEX_URLS:
         html = fetch_html(index_url)
@@ -132,10 +147,59 @@ def discover_fada_pdf_urls() -> list[tuple[str, str]]:
                 continue
             discovered.setdefault(month_id, url)
         if discovered:
-            print(f"  discovery: {len(discovered)} monthly retail PDFs found via {index_url}", flush=True)
-            return list(discovered.items())
-    print("  discovery: no FADA index URL returned PDFs", flush=True)
-    return []
+            print(f"  fada listing: {len(discovered)} PDFs via {index_url}", flush=True)
+            return discovered
+    print("  fada listing: no PDFs found", flush=True)
+    return {}
+
+
+def discover_via_wayback() -> dict[str, str]:
+    """Pull every snapshot of fada.in/images/press-release/*Vehicle Retail Data*
+    pdf that Internet Archive has crawled. This is the only reliable path to
+    multi-year monthly history because FADA itself doesn't keep an archive
+    page."""
+    discovered: dict[str, str] = {}
+    try:
+        response = requests.get(WAYBACK_CDX_URL, headers=HTML_HEADERS, timeout=TIMEOUT, allow_redirects=True)
+        response.raise_for_status()
+        rows = response.json()
+    except Exception as exc:
+        print(f"  wayback discovery failed: {exc}", flush=True)
+        return discovered
+    if not isinstance(rows, list) or len(rows) < 2:
+        return discovered
+    columns = rows[0]
+    try:
+        original_idx = columns.index("original")
+    except ValueError:
+        original_idx = 2
+    for row in rows[1:]:
+        try:
+            original = row[original_idx]
+        except (IndexError, TypeError):
+            continue
+        if "Vehicle%20Retail%20Data" not in original.replace(" ", "%20"):
+            continue
+        url = normalize_pdf_url(original)
+        month_id = parse_month_from_url(url)
+        if not month_id:
+            continue
+        discovered.setdefault(month_id, url)
+    print(f"  wayback: {len(discovered)} unique monthly PDFs in Internet Archive", flush=True)
+    return discovered
+
+
+def discover_fada_pdf_urls() -> list[tuple[str, str]]:
+    """Combine Wayback (deep history) with FADA's own listing (current month)
+    and return (month_id, url) pairs covering as much history as possible."""
+    discovered: dict[str, str] = {}
+    discovered.update(discover_via_wayback())
+    # FADA listing usually only adds the latest month or two on top of what
+    # Wayback already has, but let it overwrite Wayback urls — those come from
+    # FADA directly so they're guaranteed to still resolve.
+    for month_id, url in discover_via_fada_listing().items():
+        discovered[month_id] = url
+    return list(discovered.items())
 
 
 def within_window(month_id: str, latest_month: str | None, max_months: int) -> bool:

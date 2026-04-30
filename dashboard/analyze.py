@@ -1914,6 +1914,7 @@ def build_periodized_oem_table_from_history(
     ) if available_months else f"{category_label} OEM annexure history pending; add months via the backfill workflow."
 
     quarter_period = build_quarterly_period(category, history, latest_month)
+    yearly_period = build_yearly_period(category, history, latest_month)
 
     periods: dict[str, Any] = {
         "M": {
@@ -1936,6 +1937,8 @@ def build_periodized_oem_table_from_history(
     }
     if quarter_period:
         periods["Q"] = quarter_period
+    if yearly_period:
+        periods["Y"] = yearly_period
 
     return {
         "category": category,
@@ -2076,6 +2079,123 @@ def _offset_quarter(q_key: str, delta: int) -> str:
     total = fy * 4 + (q - 1) + delta
     new_fy, new_q_zero = divmod(total, 4)
     return f"FY{new_fy}-Q{new_q_zero + 1}"
+
+
+def fy_year_for_month(month_id: str) -> int | None:
+    """Map a calendar month-id (YYYY-MM) to its Indian fiscal year (FYxxxx
+    where xxxx is the calendar year of the closing March)."""
+    try:
+        parsed = datetime.strptime(month_id, "%Y-%m")
+    except ValueError:
+        return None
+    return parsed.year + 1 if parsed.month >= 4 else parsed.year
+
+
+def fy_label(fy_year: int) -> str:
+    return f"FY{fy_year % 100:02d}"
+
+
+def build_yearly_period(
+    category: str,
+    history: list[dict[str, Any]],
+    latest_month: str,
+) -> dict[str, Any] | None:
+    """Aggregate monthly OEM history into Indian fiscal years and emit a Y view
+    with FY units, YoY%, 2Y CAGR, 5Y CAGR, FY market share, and share Δ vs
+    prior FY. Only fully-complete fiscal years (12 months in history) count,
+    so a half-finished FY never poisons the math."""
+    months_by_id = {item["month"]: item for item in history if item.get("month")}
+    fy_buckets: dict[int, list[str]] = {}
+    for month_id in sorted(months_by_id):
+        fy = fy_year_for_month(month_id)
+        if fy is None:
+            continue
+        fy_buckets.setdefault(fy, []).append(month_id)
+
+    complete_fy: dict[int, dict[str, Any]] = {}
+    for fy_year, months in fy_buckets.items():
+        if len(months) != 12:
+            continue
+        oem_totals: dict[str, int] = {}
+        for month_id in months:
+            for row in months_by_id[month_id].get("rows") or []:
+                oem = row.get("oem")
+                units = row.get("units")
+                if not oem or units is None:
+                    continue
+                oem_totals[oem] = oem_totals.get(oem, 0) + int(units)
+        if not oem_totals:
+            continue
+        complete_fy[fy_year] = {
+            "fy": fy_year,
+            "label": fy_label(fy_year),
+            "months": months,
+            "oem_units": oem_totals,
+            "category_total": sum(oem_totals.values()),
+        }
+
+    if not complete_fy:
+        return None
+
+    sorted_fy = sorted(complete_fy.keys())
+    current_fy = sorted_fy[-1]
+    current = complete_fy[current_fy]
+    prev = complete_fy.get(current_fy - 1)
+    fy2 = complete_fy.get(current_fy - 2)
+    fy5 = complete_fy.get(current_fy - 5)
+
+    rows: list[dict[str, Any]] = []
+    for oem, units in sorted(current["oem_units"].items(), key=lambda item: -item[1]):
+        prev_units = (prev or {}).get("oem_units", {}).get(oem)
+        fy2_units = (fy2 or {}).get("oem_units", {}).get(oem)
+        fy5_units = (fy5 or {}).get("oem_units", {}).get(oem)
+        share = round(units / current["category_total"] * 100, 2) if current["category_total"] else None
+        share_prev = (
+            round(prev["oem_units"].get(oem, 0) / prev["category_total"] * 100, 2)
+            if prev and prev["category_total"]
+            else None
+        )
+        share_chg = round(share - share_prev, 2) if share is not None and share_prev is not None else None
+        rows.append(
+            {
+                "oem": oem,
+                "current_units": units,
+                "yoy_pct": _safe_pct_change(units, prev_units),
+                "cagr_2y_pct": _safe_cagr(units, fy2_units, 2),
+                "cagr_5y_pct": _safe_cagr(units, fy5_units, 5),
+                "share_pct": share,
+                "share_change_pp": share_chg,
+            }
+        )
+
+    note_parts = [f"FY-roll-up of FADA monthly OEM annexures across {len(sorted_fy)} complete fiscal year(s)"]
+    pending = []
+    if not prev:
+        pending.append("YoY")
+    if not fy2:
+        pending.append("2Y CAGR")
+    if not fy5:
+        pending.append("5Y CAGR")
+    if pending:
+        note_parts.append("pending until older history lands: " + ", ".join(pending))
+    note = "; ".join(note_parts) + "."
+
+    return {
+        "id": "Y",
+        "label": "Yearly",
+        "period_label": current["label"],
+        "columns": [
+            {"key": "oem", "label": "OEM"},
+            {"key": "current_units", "label": "FY Units", "type": "int"},
+            {"key": "yoy_pct", "label": "YoY%", "type": "pct"},
+            {"key": "cagr_2y_pct", "label": "2Y CAGR", "type": "pct"},
+            {"key": "cagr_5y_pct", "label": "5Y CAGR", "type": "pct"},
+            {"key": "share_pct", "label": "FY Market Share", "type": "pct"},
+            {"key": "share_change_pp", "label": "Share Chg vs prior FY", "type": "pp"},
+        ],
+        "rows": rows,
+        "note": note,
+    }
 
 
 def quarter_key(month: str) -> str:
