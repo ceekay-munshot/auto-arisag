@@ -59,7 +59,13 @@ jobs:
           # data/investor_dashboard.json always re-renders generated_at, so we
           # can't trust its diff on its own.
           set -e
-          git add data/source_snapshot.json data/news_snapshot.json data/oem_history.json
+          # Stage every signal file that exists; missing files are tolerated
+          # because Vahan / news refreshes can legitimately produce nothing.
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/vahan_oem_live.json; do
+            if [ -f "$path" ]; then
+              git add "$path"
+            fi
+          done
           if git diff --staged --quiet; then
             echo "No source-data changes detected; skipping commit."
             echo "commit=false" >> "$GITHUB_OUTPUT"
