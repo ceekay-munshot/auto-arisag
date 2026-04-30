@@ -407,8 +407,13 @@ def build_components_module(acma: dict[str, Any]) -> dict[str, Any]:
 def build_raw_material_price_module() -> dict[str, Any]:
     world_bank_url = (
         "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/"
-        "related/CMO-Pink-Sheet-March-2026.pdf"
+        "related/CMO-Pink-Sheet-April-2026.pdf"
     )
+    # Mar 2026 monthly averages: aluminum / copper / nickel / lead / iron ore values
+    # are FRED's IMF–World Bank-aligned monthly series (PALUMUSDM, PCOPPUSDM,
+    # PNICKUSDM, PLEADUSDM, PIORECRUSDM). Natural rubber TSR20 USD/kg is estimated
+    # from converging public TSR20 observations; FRED's PRUBBUSDM tracks RSS3 in
+    # cents/lb so it's not a direct substitute.
     materials = [
         {
             "id": "aluminum",
@@ -421,6 +426,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 2419},
                 {"period": "2025", "label": "2025", "value": 2632},
                 {"period": "2026-02", "label": "Feb 2026", "value": 3065},
+                {"period": "2026-03", "label": "Mar 2026", "value": 3373},
             ],
         },
         {
@@ -434,6 +440,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 9142},
                 {"period": "2025", "label": "2025", "value": 9947},
                 {"period": "2026-02", "label": "Feb 2026", "value": 12951},
+                {"period": "2026-03", "label": "Mar 2026", "value": 12529},
             ],
         },
         {
@@ -447,6 +454,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 16814},
                 {"period": "2025", "label": "2025", "value": 15091},
                 {"period": "2026-02", "label": "Feb 2026", "value": 15635},
+                {"period": "2026-03", "label": "Mar 2026", "value": 17076},
             ],
         },
         {
@@ -460,6 +468,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 2053},
                 {"period": "2025", "label": "2025", "value": 1975},
                 {"period": "2026-02", "label": "Feb 2026", "value": 1948},
+                {"period": "2026-03", "label": "Mar 2026", "value": 1878},
             ],
         },
         {
@@ -473,6 +482,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 1.75},
                 {"period": "2025", "label": "2025", "value": 1.77},
                 {"period": "2026-02", "label": "Feb 2026", "value": 1.93},
+                {"period": "2026-03", "label": "Mar 2026", "value": 1.92},
             ],
         },
         {
@@ -486,6 +496,7 @@ def build_raw_material_price_module() -> dict[str, Any]:
                 {"period": "2024", "label": "2024", "value": 109.4},
                 {"period": "2025", "label": "2025", "value": 100.2},
                 {"period": "2026-02", "label": "Feb 2026", "value": 98.8},
+                {"period": "2026-03", "label": "Mar 2026", "value": 107.6},
             ],
         },
     ]
@@ -554,11 +565,13 @@ def build_raw_material_price_module() -> dict[str, Any]:
         "default_company": "Tata Motors",
         "source_meta": {
             "name": "World Bank Pink Sheet",
-            "latest_release_date": "2026-03-01",
+            "latest_release_date": "2026-04-02",
             "url": world_bank_url,
             "note": (
-                "Annual averages for 2022 to 2025 plus the latest visible February 2026 quote. "
-                "Iron ore is shown as a steel-input proxy for auto materials."
+                "Annual averages for 2022 to 2025 plus monthly quotes for Feb 2026 and Mar 2026. "
+                "Metals and iron ore use the IMF–World Bank monthly series (PALUMUSDM, PCOPPUSDM, "
+                "PNICKUSDM, PLEADUSDM, PIORECRUSDM via FRED); rubber TSR20 uses converging public "
+                "TSR20 observations. Iron ore is shown as a steel-input proxy for auto materials."
             ),
         },
         "materials": enriched_materials,
