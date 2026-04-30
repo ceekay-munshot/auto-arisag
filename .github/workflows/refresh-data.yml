@@ -29,10 +29,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pypdf openpyxl
+          pip install pypdf openpyxl requests
 
       - name: Refresh dashboard data
-        run: python build_dashboard.py --refresh-live
+        run: python -u build_dashboard.py --refresh-live
 
       - name: Sync investor_dashboard.json into dist/
         run: |
