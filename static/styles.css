@@ -1606,3 +1606,62 @@ th:hover {
 .oem-spotlight-controls .filter-select {
   min-width: 160px;
 }
+
+/* Top-level tab bar */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px;
+  margin: 14px 0 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 6px 24px rgba(24, 34, 49, 0.06);
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  backdrop-filter: blur(6px);
+}
+
+.tab-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 140ms ease, background 140ms ease, transform 140ms ease;
+}
+
+.tab-button:hover {
+  color: var(--accent);
+}
+
+.tab-button.is-active {
+  background: var(--deep);
+  color: #f7f1e4;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(20, 39, 62, 0.22);
+}
+
+@media (max-width: 720px) {
+  .tab-bar {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    border-radius: 18px;
+    padding: 6px;
+  }
+  .tab-button {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+}
