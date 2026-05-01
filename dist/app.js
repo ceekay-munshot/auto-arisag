@@ -1881,6 +1881,18 @@ function evCategoryOptions() {
 }
 
 function evOemTrackerDatasets() {
+  // Trade-press derived monthly EV OEM tracker. We tried wiring live
+  // Parivahan Vahan (per-maker EV registrations) on Apr-May 2026 but the
+  // GitHub Actions runner IP times out / gets refused on every Parivahan
+  // call, so the periodised "Live Vahan EV" chip group never populates.
+  // Until we route through a paid Vahan API (ExpertView, DataDelve, etc.)
+  // or a runner inside India, this hand-curated trade-press tracker is the
+  // EV view on the dashboard. Numbers below are pulled from each segment's
+  // monthly leaderboard article and cross-checked where FADA's OEM
+  // annexure exposes the same brand.
+  const PAID_API_NOTE =
+    "Live per-maker Vahan refresh requires a paid API (Parivahan blocks public scraping from cloud IPs); this segment's monthly leaderboard is hand-curated from trade-press reports until that's wired.";
+
   return [
     {
       id: "E2W",
@@ -1891,7 +1903,10 @@ function evOemTrackerDatasets() {
       growth_label: "YoY growth",
       source_name: "Autocar Professional",
       source_url: "https://www.autocarpro.in/analysis-sales/tvs-bajaj-ather-hero-vida-power-record-e-2w-sales-in-march-190941-units-131893",
-      note: "Article-derived high-speed e-2W retail tracker for Mar 2026 (record month at 1,90,941 units) cross-checked against FADA's monthly OEM annexure. Low-speed e-2W is excluded.",
+      note:
+        "Mar 2026 high-speed e-2W retail leaderboard from Autocar Professional (record month at 1,90,941 units). " +
+        "Pure-EV brands (Ather, Ola, Greaves) cross-check against FADA's Mar 2026 2W OEM annexure. " +
+        PAID_API_NOTE,
       rows: [
         { oem: "TVS Motor", units: 49304, prior_units: 30815 },
         { oem: "Bajaj Auto", units: 46246, prior_units: 35302 },
@@ -1908,9 +1923,12 @@ function evOemTrackerDatasets() {
       total_units: 22315,
       compare_label: "Mar 2025 units",
       growth_label: "YoY growth",
-      source_name: "RushLane / Vahan",
+      source_name: "RushLane",
       source_url: "https://www.rushlane.com/electric-car-sales-fy-2026-tata-mg-mahindra-hyundai-byd-kia-12543567.html",
-      note: "Mar 2026 electric-car retail leaderboard (record month at 22,315 units) from RushLane/Vahan tracking. YoY comparables come from the same source's Mar 2025 figures where reported.",
+      note:
+        "Mar 2026 electric-car retail leaderboard from RushLane (record month at 22,315 units). " +
+        "BYD, BMW and VinFast are pure-EV in India; legacy ICE OEMs (Tata, Mahindra, MG, Hyundai, Kia, Maruti) report only their EV-portfolio units here. " +
+        PAID_API_NOTE,
       rows: [
         { oem: "Tata Motors", units: 8253, prior_units: 4020 },
         { oem: "Mahindra & Mahindra", units: 5244, prior_units: 508 },
@@ -1932,7 +1950,10 @@ function evOemTrackerDatasets() {
       growth_label: "MoM growth",
       source_name: "EVReporter",
       source_url: "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-march-2026/",
-      note: "Mar 2026 e-cargo 3W (L5) OEM mix tracked by EVReporter. Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. Comparable here is Feb 2026 since OEM-level Mar 2025 cargo splits aren't published consistently.",
+      note:
+        "Mar 2026 e-cargo 3W (L5) OEM mix from EVReporter — Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. " +
+        "Comparable column is Feb 2026 because OEM-level Mar 2025 L5-cargo splits aren't widely published. " +
+        PAID_API_NOTE,
       rows: [
         { oem: "Mahindra Last Mile Mobility", units: 705, prior_units: 571 },
         { oem: "Bajaj Auto", units: 511, prior_units: 453 },
@@ -1949,9 +1970,12 @@ function evOemTrackerDatasets() {
       total_units: 720,
       compare_label: "Feb 2026 units",
       growth_label: "MoM growth",
-      source_name: "Sustainable Bus / FY26 OEM tallies",
+      source_name: "Sustainable Bus / Business Today FY26 tally",
       source_url: "https://www.businesstoday.in/latest/corporate/story/hinduja-groups-switch-mobility-becomes-top-selling-e-bus-maker-in-fy26-523563-2026-04-01",
-      note: "Mar 2026 e-bus snapshot. JBM Electric led the month, Switch Mobility closed FY26 as the #1 OEM (1,166 units full year). Comparable column is Feb 2026 because monthly Mar 2025 OEM splits weren't widely reported.",
+      note:
+        "Mar 2026 e-bus snapshot. JBM Electric led the month; Switch Mobility (Hinduja Group / Ashok Leyland) closed FY26 as the #1 OEM at 1,166 units full year. " +
+        "Comparable column is Feb 2026 because monthly Mar 2025 OEM splits weren't widely reported. " +
+        PAID_API_NOTE,
       rows: [
         { oem: "JBM Electric", units: 230, prior_units: 87 },
         { oem: "Switch Mobility", units: 195, prior_units: 280 },
