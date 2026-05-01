@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T09:11:08.417937+00:00",
+  "generated_at": "2026-05-01T10:00:22.805468+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -11290,6 +11290,120 @@
           }
         ]
       }
+    },
+    "credit_pulse": {
+      "available": true,
+      "title": "Credit Pulse",
+      "source_meta": {
+        "name": "RBI \u2014 Sectoral Deployment of Bank Credit",
+        "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+        "note": "Outstanding amount as of the last reporting Friday of each month. Initial values seeded from RBI Sectoral Deployment of Bank Credit press releases; the cron-driven RBI scraper extends the series and corrects any seed values to match the latest official release.",
+        "concept": "Outstanding scheduled commercial bank credit for Vehicle Loans (a sub-segment of Personal Loans) \u2014 a leading indicator of retail auto demand financing.",
+        "is_seed": true,
+        "latest_month": "2025-03"
+      },
+      "latest": {
+        "month": "2025-03",
+        "label": "Mar 2025",
+        "outstanding_cr": 629500,
+        "yoy_pct": 10.0,
+        "yoy_change_pp": -0.8,
+        "twelve_month_growth_pct": 11.2,
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+      },
+      "months": [
+        {
+          "month": "2024-03",
+          "label": "Mar 2024",
+          "outstanding_cr": 566092,
+          "yoy_pct": 17.3,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-04",
+          "label": "Apr 2024",
+          "outstanding_cr": 568867,
+          "yoy_pct": 17.7,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-05",
+          "label": "May 2024",
+          "outstanding_cr": 575810,
+          "yoy_pct": 17.5,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-06",
+          "label": "Jun 2024",
+          "outstanding_cr": 581400,
+          "yoy_pct": 16.7,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-07",
+          "label": "Jul 2024",
+          "outstanding_cr": 587234,
+          "yoy_pct": 16.5,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-08",
+          "label": "Aug 2024",
+          "outstanding_cr": 595300,
+          "yoy_pct": 15.5,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-09",
+          "label": "Sep 2024",
+          "outstanding_cr": 605200,
+          "yoy_pct": 14.0,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-10",
+          "label": "Oct 2024",
+          "outstanding_cr": 611100,
+          "yoy_pct": 13.4,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-11",
+          "label": "Nov 2024",
+          "outstanding_cr": 615400,
+          "yoy_pct": 12.8,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2024-12",
+          "label": "Dec 2024",
+          "outstanding_cr": 618800,
+          "yoy_pct": 12.4,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2025-01",
+          "label": "Jan 2025",
+          "outstanding_cr": 622300,
+          "yoy_pct": 11.6,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2025-02",
+          "label": "Feb 2025",
+          "outstanding_cr": 625900,
+          "yoy_pct": 10.8,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        },
+        {
+          "month": "2025-03",
+          "label": "Mar 2025",
+          "outstanding_cr": 629500,
+          "yoy_pct": 10.0,
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        }
+      ]
     }
   },
   "insights": [

@@ -1050,6 +1050,7 @@ function setupChartTooltips() {
 
 function tabDefinitions() {
   const registrationAvailable = !!dashboardData.modules.registration?.available;
+  const creditPulseAvailable = !!dashboardData.modules.credit_pulse?.available;
   return [
     {
       id: "overview",
@@ -1108,6 +1109,13 @@ function tabDefinitions() {
       label: "Companies",
       group: "Industry",
       render: () => renderCompanySection(),
+    },
+    {
+      id: "credit-pulse",
+      label: "Auto loan growth (RBI)",
+      group: "Macro",
+      hidden: !creditPulseAvailable,
+      render: () => creditPulseAvailable ? renderCreditPulseSection() : "",
     },
   ];
 }
@@ -3900,6 +3908,83 @@ function stackRow(label, widthPct, value, color, detail = "") {
       </div>
       <strong title="${detail}">${formatPct(value, 2)}</strong>
     </div>
+  `;
+}
+
+function renderCreditPulseSection() {
+  const credit = dashboardData.modules.credit_pulse;
+  if (!credit?.available) {
+    return "";
+  }
+  const months = credit.months || [];
+  const latest = credit.latest || {};
+  const yoyChange = latest.yoy_change_pp;
+  const yoyChangeNote = (yoyChange === null || yoyChange === undefined)
+    ? ""
+    : `${yoyChange >= 0 ? "+" : ""}${yoyChange.toFixed(1)} pp vs prior month`;
+  const formatCrore = (value) => `₹${formatUnits(value)} cr`;
+  const trendSeries = [
+    {
+      label: "Vehicle Loans outstanding (₹ crore)",
+      color: dashboardData.chart_colors?.primary || "#4c8bf5",
+      values: months.map((point) => point.outstanding_cr),
+    },
+  ];
+  const yoyValues = months.map((point) => point.yoy_pct);
+  const seedNote = credit.source_meta?.is_seed
+    ? `<div class="empty-note">Showing seed values from RBI Sectoral Deployment of Bank Credit press releases. The cron-driven RBI scraper will overwrite these with verified live readings on its next successful run.</div>`
+    : "";
+
+  return `
+    <section id="section-credit-pulse" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Macro / Credit Pulse</p>
+          <h2>Bank vehicle-loan book growth from RBI</h2>
+        </div>
+        <p class="section-subtitle">${credit.source_meta?.note || ""}</p>
+      </div>
+      <div class="panel-grid one">
+        <div class="chart-card">
+          <div class="chart-title-row">
+            <div>
+              <p class="small-label">Latest reading &mdash; ${latest.label || ""}</p>
+              <h3>${formatCrore(latest.outstanding_cr || 0)}</h3>
+              <p class="metric-detail">
+                ${latest.yoy_pct !== null && latest.yoy_pct !== undefined ? `${formatSigned(latest.yoy_pct, 1)} YoY` : "n.m."}
+                ${yoyChangeNote ? ` &middot; ${yoyChangeNote}` : ""}
+              </p>
+            </div>
+            <div class="button-row">
+              ${renderSourceAction(latest.source_url || credit.source_meta?.url)}
+            </div>
+          </div>
+          ${seedNote}
+          <div class="chart-frame">
+            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore)}
+          </div>
+          <div class="chart-legend">
+            ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title-row">
+            <div>
+              <p class="small-label">YoY growth trend</p>
+              <h3>How fast bank vehicle credit is expanding</h3>
+            </div>
+          </div>
+          <div class="chart-frame">
+            ${lineChart(
+              months.map((point) => point.label),
+              [{label: "YoY growth (%)", color: dashboardData.chart_colors?.accent || "#f59e0b", values: yoyValues}],
+              (value) => `${Number(value || 0).toFixed(1)}%`,
+              (value) => `${Number(value || 0).toFixed(1)}%`,
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
   `;
 }
 

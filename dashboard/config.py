@@ -521,6 +521,7 @@ MODULE_TITLES = {
     "registration": "Registration Lens",
     "wholesale": "Wholesale Lens",
     "components": "Components",
+    "credit_pulse": "Credit Pulse",
     "insights": "What Matters",
 }
 
