@@ -2026,6 +2026,68 @@ th:hover {
   color: var(--deep);
 }
 
+/* Share-of-bank-lending gauge (Credit Pulse tab) */
+.share-gauge {
+  margin: 18px 0 6px;
+}
+
+.share-gauge-track {
+  position: relative;
+  height: 24px;
+  background: linear-gradient(90deg, rgba(76, 116, 199, 0.06), rgba(76, 116, 199, 0.10));
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  overflow: visible;
+}
+
+.share-gauge-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, #4c8bf5, #6aa2ff);
+  border-radius: 999px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  transition: width 0.3s ease;
+}
+
+.share-gauge-marker {
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 36px;
+  background: var(--deep);
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.share-gauge-marker::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid var(--deep);
+}
+
+.share-gauge-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.74rem;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.share-gauge-tick {
+  position: relative;
+  text-align: center;
+}
+
 /* Premium / Paid Data tab */
 .premium-summary-row {
   display: grid;

@@ -4042,6 +4042,7 @@ function renderCreditPulseSection() {
     ? ""
     : `${yoyChange >= 0 ? "+" : ""}${yoyChange.toFixed(1)} pp vs prior month`;
   const formatCrore = (value) => `₹${formatUnits(value)} cr`;
+  const formatLakhCr = (value) => `₹${(value / 100000).toFixed(2)} lakh crore`;
   const trendSeries = [
     {
       label: "Vehicle Loans outstanding (₹ crore)",
@@ -4056,7 +4057,7 @@ function renderCreditPulseSection() {
       values: months.map((point) => point.yoy_pct),
     },
     {
-      label: "Total non-food bank credit YoY %",
+      label: "Total bank lending YoY %",
       color: dashboardData.chart_colors?.accent || "#f59e0b",
       values: months.map((point) => point.non_food_yoy_pct),
     },
@@ -4068,25 +4069,38 @@ function renderCreditPulseSection() {
   const sharePct = latest.share_pct;
   const spreadPp = latest.spread_pp;
   const spreadColor = (spreadPp ?? 0) >= 0 ? "#10b981" : "#ef4444";
-  const shareGaugeWidth = Math.max(0, Math.min(100, (sharePct || 0) * 10));
 
   const renderShareGauge = () => {
     if (sharePct === null || sharePct === undefined) {
       return "";
     }
+    const fillPct = Math.max(0, Math.min(100, sharePct * 10));  // 0-10% maps to 0-100% bar width
+    const ticks = [0, 2, 4, 6, 8, 10];
     return `
       <div class="chart-card">
         <div class="chart-title-row">
           <div>
-            <p class="small-label">Share of total bank credit &mdash; ${latest.label || ""}</p>
+            <p class="small-label">Auto's share of total bank lending &mdash; ${latest.label || ""}</p>
             <h3>${sharePct.toFixed(2)}%</h3>
-            <p class="metric-detail">Vehicle loans as a share of non-food bank credit (${formatCrore(latest.non_food_total_cr || 0)} total)</p>
+            <p class="metric-detail">
+              ₹${sharePct.toFixed(2)} of every ₹100 banks have lent across India goes to vehicle finance.
+              Total bank lending: ${formatLakhCr(latest.non_food_total_cr || 0)}.
+            </p>
           </div>
         </div>
-        <div class="stack-bar" style="margin-top:12px;">
-          <div class="stack-segment" style="width:${shareGaugeWidth}%;background:${dashboardData.chart_colors?.primary || "#4c8bf5"};"></div>
+        <div class="share-gauge">
+          <div class="share-gauge-track">
+            <div class="share-gauge-fill" style="width:${fillPct}%;"></div>
+            <div class="share-gauge-marker" style="left:${fillPct}%;" title="${sharePct.toFixed(2)}%"></div>
+          </div>
+          <div class="share-gauge-ticks">
+            ${ticks.map((t) => `<span class="share-gauge-tick">${t}%</span>`).join("")}
+          </div>
         </div>
-        <p class="metric-detail" style="margin-top:8px;">Bar scaled 0&ndash;10% of total non-food bank credit. Vehicle loans typically run between 3% and 4%.</p>
+        <p class="metric-detail" style="margin-top:10px;">
+          Healthy range historically sits between 3% and 4%.
+          A drift higher = banks getting more "auto-heavy"; a drift lower = auto losing share to other lending.
+        </p>
       </div>
     `;
   };
@@ -4100,11 +4114,11 @@ function renderCreditPulseSection() {
       <div class="chart-card">
         <div class="chart-title-row">
           <div>
-            <p class="small-label">Vehicle vs total credit growth</p>
+            <p class="small-label">Vehicle vs total bank lending growth</p>
             <h3 style="color:${spreadColor};">${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)} pp</h3>
             <p class="metric-detail">
               Vehicle loans growing ${formatSigned(latest.yoy_pct, 1)} YoY,
-              ${direction} the ${formatSigned(latest.non_food_yoy_pct, 1)} pace of total non-food bank credit.
+              ${direction} the ${formatSigned(latest.non_food_yoy_pct, 1)} pace of total bank lending.
             </p>
           </div>
         </div>
@@ -4151,8 +4165,8 @@ function renderCreditPulseSection() {
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
-              <p class="small-label">YoY growth: vehicle loans vs total bank credit</p>
-              <h3>Is auto credit running hotter or cooler than the broader book?</h3>
+              <p class="small-label">YoY growth: vehicle loans vs total bank lending</p>
+              <h3>Is auto credit running hotter or cooler than the broader lending market?</h3>
             </div>
           </div>
           <div class="chart-frame">
