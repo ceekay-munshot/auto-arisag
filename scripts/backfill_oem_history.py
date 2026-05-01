@@ -49,9 +49,10 @@ HTML_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 TRACKED_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
-# Cap the discovery window so the workflow runs in a reasonable time. 60 months
-# unlocks a full 5-year history, which is plenty for the Y tab and 5Y CAGR.
-MAX_HISTORY_MONTHS = 60
+# Cap the discovery window so the workflow runs in a reasonable time. 120 months
+# unlocks a full 10-year history. Older PDFs may use a different annexure layout
+# and quietly fail to parse — that's fine, they're logged and skipped.
+MAX_HISTORY_MONTHS = 120
 
 # FADA listing pages — left empty by default because the legacy paths we
 # tried (research.html, press-releases.html) all return 404. The latest

@@ -25,6 +25,119 @@ from .config import (
 )
 
 
+SIAM_HISTORY_PATH = Path("data/siam_history.json")
+COMPANY_HISTORY_PATH = Path("data/company_unit_history.json")
+
+
+def _load_siam_history() -> list[dict[str, Any]]:
+    """Return the augmented monthly SIAM rows on disk (if any). The backfill
+    workflow writes this file; locally it may simply not exist yet."""
+    if not SIAM_HISTORY_PATH.exists():
+        return []
+    try:
+        payload = json.loads(SIAM_HISTORY_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    months = payload.get("months") if isinstance(payload, dict) else None
+    if not isinstance(months, list):
+        return []
+    return [item for item in months if isinstance(item, dict) and item.get("month")]
+
+
+def _load_company_history() -> dict[str, list[dict[str, Any]]]:
+    """Return ``{company_name: [series_point, ...]}`` from disk. Each list is
+    sorted by month and is merged into ``COMPANY_UNIT_TRENDS[name]["series"]``
+    at render time. Snapshot/static rows always win for the same month."""
+    if not COMPANY_HISTORY_PATH.exists():
+        return {}
+    try:
+        payload = json.loads(COMPANY_HISTORY_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    raw = payload.get("companies") if isinstance(payload, dict) else None
+    if not isinstance(raw, dict):
+        return {}
+    out: dict[str, list[dict[str, Any]]] = {}
+    for company, series in raw.items():
+        if not isinstance(series, list):
+            continue
+        out[company] = [
+            point for point in series
+            if isinstance(point, dict) and (point.get("month") or point.get("label"))
+        ]
+    return out
+
+
+def _merge_siam_history(siam_snapshot: dict[str, Any]) -> dict[str, Any]:
+    """Return a copy of ``siam_snapshot`` whose ``monthly_series`` is the
+    union of (a) what the snapshot already carries and (b) what the historical
+    backfill wrote. Snapshot rows win for any month present in both."""
+    history = _load_siam_history()
+    if not history:
+        return siam_snapshot
+    merged = dict(siam_snapshot)
+    by_month: dict[str, dict[str, Any]] = {row["month"]: row for row in history}
+    for row in siam_snapshot.get("monthly_series") or []:
+        by_month[row["month"]] = row
+    merged["monthly_series"] = sorted(by_month.values(), key=lambda item: item["month"])
+    return merged
+
+
+def _merge_company_series(
+    company: str,
+    static_series: list[dict[str, Any]],
+    history_series: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Merge static (config-baked) company series with history rows from disk.
+    Static rows win for a given month; otherwise history is appended. Sorted
+    by month for monthly entries; quarterly/labelled entries are kept in their
+    original order."""
+    by_key: dict[str, dict[str, Any]] = {}
+    has_month = False
+    for point in static_series:
+        key = point.get("month") or point.get("label")
+        if not key:
+            continue
+        by_key[key] = point
+        if "month" in point:
+            has_month = True
+    for point in history_series:
+        key = point.get("month") or point.get("label")
+        if not key or key in by_key:
+            continue
+        by_key[key] = point
+        if "month" in point:
+            has_month = True
+    if not has_month:
+        return list(by_key.values())
+    return sorted(by_key.values(), key=lambda item: item.get("month") or item.get("label") or "")
+
+
+def _build_company_unit_trends() -> list[dict[str, Any]]:
+    history = _load_company_history()
+    out: list[dict[str, Any]] = []
+    for company, details in COMPANY_UNIT_TRENDS.items():
+        merged = _merge_company_series(company, details["series"], history.get(company, []))
+        out.append(
+            {
+                "company": company,
+                "label": details["label"],
+                "concept": details["concept"],
+                "source_name": details["source_name"],
+                "series": [
+                    {
+                        "month": point["month"] if "month" in point else point["label"],
+                        "label": point["label"] if "label" in point else month_label(point["month"]),
+                        "units": point["units"],
+                        "source_url": point["source_url"],
+                    }
+                    for point in merged
+                ],
+            }
+        )
+    return out
+
+
 def build_payload(
     snapshot: dict[str, Any],
     source_health: list[dict[str, Any]],
@@ -41,7 +154,8 @@ def build_payload(
     validations: list[dict[str, str]] = []
 
     retail = build_retail_module(snapshot["fada"], validations, vahan_oem_cache)
-    wholesale = build_wholesale_module(snapshot["siam"], retail, validations)
+    siam_with_history = _merge_siam_history(snapshot["siam"])
+    wholesale = build_wholesale_module(siam_with_history, retail, validations)
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -287,24 +401,7 @@ def build_retail_module(
         "dealer_expectation_trend": expectation_trend,
         "latest_oem_tables": latest_oem_tables,
         "latest_subsegments": fada["latest_subsegments"],
-        "company_unit_trends": [
-            {
-                "company": company,
-                "label": details["label"],
-                "concept": details["concept"],
-                "source_name": details["source_name"],
-                "series": [
-                    {
-                        "month": point["month"] if "month" in point else point["label"],
-                        "label": point["label"] if "label" in point else month_label(point["month"]),
-                        "units": point["units"],
-                        "source_url": point["source_url"],
-                    }
-                    for point in details["series"]
-                ],
-            }
-            for company, details in COMPANY_UNIT_TRENDS.items()
-        ],
+        "company_unit_trends": _build_company_unit_trends(),
         "latest_channel_pulse": {
             **fada["latest_commentary"],
             "urban_rural_growth": fada["latest_urban_rural_growth"],

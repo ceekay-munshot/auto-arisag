@@ -42,9 +42,23 @@ jobs:
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
-      - name: Rebuild dashboard with OEM history
-        # The backfill may have added new months, so rebuild so the periodized
-        # OEM tables (PV / 2W / 3W / CV / Tractor / CE) pick them up.
+      - name: Backfill SIAM wholesale history
+        # Idempotent — walks Wayback for SIAM detail pages and fills
+        # data/siam_history.json with parseable monthly volumes.
+        run: python -u scripts/backfill_siam_history.py
+        continue-on-error: true
+
+      - name: Backfill listed-OEM company history
+        # Idempotent — discovers monthly company press releases via Wayback
+        # and fills data/company_unit_history.json. Snapshot/static rows in
+        # dashboard/config.py always win for the same month.
+        run: python -u scripts/backfill_company_history.py
+        continue-on-error: true
+
+      - name: Rebuild dashboard with OEM/SIAM/company history
+        # The backfills may have added new months, so rebuild so the periodized
+        # OEM tables, the SIAM trend chart, and the listed-company spotlight
+        # all pick them up.
         run: python -u build_dashboard.py
 
       - name: Sync investor_dashboard.json into dist/
@@ -61,7 +75,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/vahan_oem_live.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/vahan_oem_live.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi
