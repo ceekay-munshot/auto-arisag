@@ -1729,6 +1729,31 @@ th:hover {
   width: 100%;
   padding: 32px 36px 28px;
   position: relative;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  display: flex;
+  flex-direction: column;
+}
+
+.explainer-modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.explainer-modal::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.explainer-modal::-webkit-scrollbar-thumb {
+  background: rgba(20, 39, 62, 0.18);
+  border-radius: 999px;
+  border: 2px solid var(--panel-strong);
+}
+
+.explainer-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 39, 62, 0.32);
 }
 
 .explainer-modal h2 {
@@ -1782,9 +1807,11 @@ th:hover {
 }
 
 .explainer-close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
+  position: sticky;
+  top: 0;
+  align-self: flex-end;
+  margin: -8px -16px 0 0;
+  margin-bottom: -34px;
   appearance: none;
   border: 1px solid var(--line-strong);
   background: #fffdfa;
@@ -1796,6 +1823,8 @@ th:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
+  flex-shrink: 0;
 }
 
 .explainer-footer {
