@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T06:29:42.477630+00:00",
+  "generated_at": "2026-05-01T09:11:08.417937+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -4170,6 +4170,66 @@
           "concept": "Company-reported monthly total three-wheeler sales (domestic + exports)",
           "source_name": "Atul Auto sales updates",
           "series": [
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 2733,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2024/12/BSEnseSalesPerformanceAugust2024.pdf"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 2378,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/02/Letter_SalesPerformance_BSE_NSE_January2025.pdf"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 2360,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/03/Letter_SalesPerformance_BSE_NSE_February2025.pdf"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 3391,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/04/Letter_SalesPerformance_BSE_NSE_March2025_signed.pdf"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 1427,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/05/Signed_Letter_SalesPerformance_BSE_NSE_April2025.pdf"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 2357,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/06/Letter_SalesPerformance_BSE_NSE_May2025.pdf"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 2511,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/07/Letter_SalesPerformance_BSE_NSE_June2025.pdf"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 2500,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/08/Letter_SalesPerformance_BSE_NSE_July2025.pdf"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 2601,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/09/Letter_SalesPerformance_BSE_NSE_August2025.pdf"
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "units": 2802,
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/12/SignedLetter_SalesPerformance_BSE_NSE_November2025.pdf"
+            },
             {
               "month": "2025-12",
               "label": "Dec 2025",
@@ -12285,9 +12345,9 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-01T06:17:48.085009+00:00",
+    "generated_at": "2026-05-01T08:19:22.347421+00:00",
     "window_days": 45,
-    "group_count": 5,
+    "group_count": 4,
     "item_count": 18,
     "groups": [
       {
@@ -12308,6 +12368,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Renault Group India moves NCLT for approval of restructuring plan",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-group-india-seeks-nclt-approval-for-strategic-restructuring-plan/130624932",
+            "summary": "The proposed plan separates powertrain manufacturing into a dedicated entity while integrating vehicle manufacturing and sales under a unified structure.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-04-30T06:05:18+00:00",
+            "published_display": "30 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -12343,6 +12419,45 @@
             ]
           },
           {
+            "title": "Tata Motors PV Sales April 2026 At 59k \u2013 Grows 31% YoY",
+            "url": "https://www.rushlane.com/tata-motors-pv-sales-april-2026-at-59k-grows-31-yoy-12545548.html",
+            "summary": "The company recorded total PV sales of 59,701 units and CV sales of 34,833 units, taking combined volumes to 94,534 units for the month. The post Tata Motors PV Sales April 2026 At 59k \u2013 Grows 31% YoY appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-01T07:59:09+00:00",
+            "published_display": "01 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cv",
+        "label": "Commercial Vehicles",
+        "items": [
+          {
+            "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
+            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
+            "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
+            "source": "ET Auto Commercial Vehicles",
+            "published_at": "2026-04-24T05:40:51+00:00",
+            "published_display": "24 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Mahindra Sales April 2026 Grows 7.65% YoY \u2013 56,331 SUVs Sold",
             "url": "https://www.rushlane.com/mahindra-sales-april-2026-grows-7-65-yoy-56331-suvs-sold-12545527.html",
             "summary": "Mahindra has reported a strong start to FY2027, with growth across its automotive, commercial vehicle and farm equipment businesses The post Mahindra Sales April 2026 Grows 7.65% YoY \u2013 56,331 SUVs Sold appeared first on RushLane .",
@@ -12358,64 +12473,6 @@
               "General"
             ]
           },
-          {
-            "title": "Hyundai India posts highest-ever April domestic sales at 51,902 units, up 17%",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-india-achieves-record-april-sales-of-51902-vehicles-up-17-year-on-year/130670235",
-            "summary": "Exports stood at 13,708 units, while the all-new Venue recorded its highest-ever monthly domestic sales of 12,420 units.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-01T05:30:21+00:00",
-            "published_display": "01 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2w",
-        "label": "Two-Wheelers",
-        "items": [
-          {
-            "title": "Bajaj Pulsar NS400Z 349cc Launch Price Rs 1.8 L \u2013 Rs 24.5k Savings Over Older P400",
-            "url": "https://www.rushlane.com/bajaj-pulsar-ns400z-349cc-launch-price-rs-1-8-l-rs-24-5k-12545492.html",
-            "summary": "Bajaj Auto has launched an updated version of its flagship naked motorcycle, Pulsar NS400Z, now powered by a 349cc engine The post Bajaj Pulsar NS400Z 349cc Launch Price Rs 1.8 L \u2013 Rs 24.5k Savings Over Older P400 appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-04-30T11:41:36+00:00",
-            "published_display": "30 Apr 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "New Oben Rorr Evo Electric Motorcycle Launch Price Rs 99,999 \u2013 Introductory",
-            "url": "https://www.rushlane.com/new-oben-rorr-evo-electric-motorcycle-launch-price-rs-99999-12545469.html",
-            "summary": "Oben Electric has launched their new Rorr Evo electric motorcycle in India, introducing it at an introductory price of Rs 99,999 (ex-sh) for the first 10,000 customers The post New Oben Rorr Evo Electric Motorcycle Launch Price Rs 99,999 \u2013 Introductory appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-04-30T08:16:38+00:00",
-            "published_display": "30 Apr 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "cv",
-        "label": "Commercial Vehicles",
-        "items": [
           {
             "title": "Dhoot Transmission acquires two- and three-wheeler electronics supplier Multilink",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/dhoot-transmission-acquires-two-and-three-wheeler-electronics-supplier-multilink/130571614",
@@ -12439,6 +12496,22 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "MG Motor Sales April 2026 Records 3.24% YoY Growth \u2013 Windsor, Hector, Comet, ZS EV",
+            "url": "https://www.rushlane.com/mg-motor-sales-april-2026-records-3-24-yoy-growth-windsor-hector-comet-zs-ev-12545543.html",
+            "summary": "MG Motor sales for the month of April 2026 stood at 6,018 units and the company confirmed the launch of Majestor SUV this month The post MG Motor Sales April 2026 Records 3.24% YoY Growth \u2013 Windsor, Hector, Comet, ZS EV appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-01T07:41:49+00:00",
+            "published_display": "01 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Upcoming Cars May 2026 In India \u2013 Sierra EV, City, ZR-V, Majestor, Ebella",
             "url": "https://www.rushlane.com/upcoming-cars-may-2026-in-india-sierra-ev-city-zr-v-majestor-ebella-12545525.html",
@@ -12486,38 +12559,20 @@
             ]
           },
           {
-            "title": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/chinese-ev-battery-maker-catl-launches-5-billion-hong-kong-share-sale/130554917",
-            "summary": "CATL has launched a roughly $5 billion share sale in Hong Kong, aiming to capitalize on its strong stock performance and secure funding for global expansion.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-27T12:41:34+00:00",
+            "title": "Epsilon Launches Gen III LFP Cathode Material, Targeting US Battery Supply Chains",
+            "url": "https://www.autocarpro.in/NEWS/epsilon-launches-gen-iii-lfp-cathode-material-targeting-us-battery-supply-chains-132267",
+            "summary": "Epsilon Cathode Active Materials (ECAM) announced on April 27 the commercial development of its third-generation lithium iron phosphate (LFP) cathode material, claiming performance metrics that place it alongside Chinese-produced alternatives that have long held a near-monopoly in the global LFP supply chain. The announcement marks one of the few instances of a non-Chinese company bringing high-energy-density LFP...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-04-27T19:01:27+00:00",
             "published_display": "27 Apr 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
               "Product / Launch",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
-            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
-            "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
-            "source": "ET Auto Commercial Vehicles",
-            "published_at": "2026-04-24T05:40:51+00:00",
-            "published_display": "24 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           }
         ]
@@ -12526,6 +12581,24 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "Exclusive: Rocklink Sees \u20b9300 Crore India Recycling Revenue Opportunity in 5 Years",
+            "url": "https://www.autocarpro.in/NEWS/exclusive-rocklink-sees-\u20b9300-crore-india-recycling-revenue-opportunity-in-5-years-132230",
+            "summary": "German recycling firm Rocklink is targeting \u20b9250 crore to \u20b9300 crore in revenue from its India operations over the next five years, following the commissioning of its first integrated recycling facility in the country. The company has invested around \u20b930 crore in the Sikandrabad, Uttar Pradesh-based plant, which will process lithium-ion batteries, rare earth magnets and metal-bearing industrial waste as part of it...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-04-24T11:23:32+00:00",
+            "published_display": "24 Apr 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999",
             "url": "https://evreporter.com/oben-electric-launches-rorr-evo-electric-motorcycle-at-%e2%82%b999999",
@@ -12562,6 +12635,23 @@
             ]
           },
           {
+            "title": "AMNS India Commissions Automotive Steel Production Line at Hazira Plant",
+            "url": "https://www.autocarpro.in/NEWS/amns-india-commissions-automotive-steel-production-line-at-hazira-plant-132340",
+            "summary": "ArcelorMittal Nippon Steel India on April 30 inaugurated a new Pickling Line and Tandem Cold Mill (PLTCM) at its Hazira facility in Gujarat, adding 2 million tonnes per annum of capacity to its automotive steel operations. The unit was inaugurated by Keiichi Ono and will produce cold-rolled base steel for automotive applications, including Advanced High Strength Steel (AHSS), galvanised (GI), galvannealed (GA), an...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-04-30T18:43:51+00:00",
+            "published_display": "30 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Tsuyo Manufacturing secures two EV motor patents; strengthens India\u2019s powertrain R&D capabilities",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-advances-ev-technology-with-new-patents-in-india/130626410",
             "summary": "The new patents cover a non-magnetic bridge synchronous reluctance motor and a fault-tolerant five-phase permanent magnet motor with dual inverter control.",
@@ -12577,39 +12667,6 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Renault Group India moves NCLT for approval of restructuring plan",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-group-india-seeks-nclt-approval-for-strategic-restructuring-plan/130624932",
-            "summary": "The proposed plan separates powertrain manufacturing into a dedicated entity while integrating vehicle manufacturing and sales under a unified structure.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-04-30T06:05:18+00:00",
-            "published_display": "30 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Epsilon CAM unveils Gen III LFP battery material, targets global EV supply chain shift",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/epsilon-cam-unveils-gen-iii-lfp-battery-material-targets-global-ev-supply-chain-shift/130556853",
-            "summary": "Epsilon CAM\u2019s new Gen III LFP cathode material could strengthen alternative battery supply chains as global automakers seek non-Chinese sources for EV components.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-27T14:05:02+00:00",
-            "published_display": "27 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
           }
         ]
       }
@@ -12618,23 +12675,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
+      "Autocar Professional Components",
       "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "Autocar Professional Components"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 27,
+      "unmapped_articles": 42,
       "filtered_low_signal": 1,
-      "kept_articles": 49
+      "kept_articles": 69
     }
   },
   "qa": [
