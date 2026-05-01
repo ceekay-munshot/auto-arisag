@@ -1510,7 +1510,7 @@ function renderRetailTrendOnly() {
         </div>
         <p class="section-subtitle">${retail.source_meta.note}</p>
       </div>
-      <div class="panel-grid two">
+      <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
@@ -1671,7 +1671,7 @@ function renderRetailSection() {
         </div>
         <p class="section-subtitle">${retail.source_meta.note}</p>
       </div>
-      <div class="panel-grid two">
+      <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
@@ -2458,7 +2458,7 @@ function renderChannelPulse() {
   }
 
   return `
-    <div class="panel-grid two channel-grid">
+    <div class="panel-grid one channel-grid">
       ${cards.join("")}
     </div>
   `;
@@ -3027,7 +3027,7 @@ function renderRegistrationSection() {
         </div>
         <p class="section-subtitle">${registration.source_meta.note}</p>
       </div>
-      <div class="panel-grid two">
+      <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
@@ -3105,7 +3105,7 @@ function renderWholesaleSection() {
         </div>
         <p class="section-subtitle">${wholesale.source_meta.note}</p>
       </div>
-      <div class="panel-grid two">
+      <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
