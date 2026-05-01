@@ -20,6 +20,7 @@ const state = {
   liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
   sorts: {},
   activeTab: "overview",
+  creditPulseExplainerOpen: false,
 };
 
 const SECTION_TO_TAB = {
@@ -1214,6 +1215,7 @@ function render() {
        ${renderSideNav(activeTab.id)}
        <main class="dashboard-content">${activeTab.render()}</main>
      </div>`,
+    renderCreditPulseExplainerModal(),
   ].join("");
 
   setupFilters();
@@ -1233,6 +1235,7 @@ function render() {
   setupCompanyMapCards();
   setupDownloads();
   setupChartTooltips();
+  setupCreditPulseExplainer();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -4000,8 +4003,11 @@ function renderCreditPulseSection() {
           <p class="section-kicker">Macro / Credit Pulse</p>
           <h2>Bank vehicle-loan book growth from RBI</h2>
         </div>
-        <p class="section-subtitle">${credit.source_meta?.note || ""}</p>
+        <div class="button-row">
+          <button class="button button-explain" data-action="open-credit-explainer">Explain this tab</button>
+        </div>
       </div>
+      <p class="section-subtitle">${credit.source_meta?.note || ""}</p>
       <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
@@ -4049,6 +4055,132 @@ function renderCreditPulseSection() {
       </div>
     </section>
   `;
+}
+
+function renderCreditPulseExplainerModal() {
+  if (!state.creditPulseExplainerOpen) {
+    return "";
+  }
+  const credit = dashboardData.modules.credit_pulse;
+  if (!credit?.available) {
+    return "";
+  }
+  const latest = credit.latest || {};
+  const months = credit.months || [];
+  const formatCrore = (value) => `₹${formatUnits(value)} cr`;
+  const formatLakhCr = (value) => `₹${(value / 100000).toFixed(2)} lakh crore`;
+  const yoyText = (value) => (value === null || value === undefined ? "n.m." : `${value.toFixed(1)}%`);
+
+  const spreadPp = latest.spread_pp;
+  const spreadDirection = spreadPp >= 0 ? "above" : "below";
+  const spreadVerb = spreadPp >= 0 ? "leading" : "lagging";
+  const spreadHighlightClass = spreadPp >= 0 ? "highlight-pos" : "highlight-neg";
+  const spreadAbsText = spreadPp === null || spreadPp === undefined
+    ? "n.m."
+    : `${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)} pp`;
+
+  const olderWithSpread = months
+    .filter((p) => p.yoy_pct !== null && p.yoy_pct !== undefined && p.non_food_yoy_pct !== null && p.non_food_yoy_pct !== undefined)
+    .map((p) => ({ ...p, spread: p.yoy_pct - p.non_food_yoy_pct }));
+  const earliest = olderWithSpread[0];
+  const inflectionNote = earliest
+    ? `Twelve to eighteen months ago (around ${earliest.label}), this same spread was ${earliest.spread >= 0 ? "+" : ""}${earliest.spread.toFixed(1)} pp — meaning vehicle credit was ${earliest.spread >= 0 ? "leading" : "lagging"} the broader cycle. Today it sits at <span class="highlight ${spreadHighlightClass}">${spreadAbsText}</span>, a clean ${earliest.spread < 0 && spreadPp >= 0 ? "bullish inflection" : "trend continuation"} for auto demand.`
+    : "";
+
+  const sharePct = latest.share_pct;
+  const shareText = sharePct === null || sharePct === undefined
+    ? "n.m."
+    : `${sharePct.toFixed(2)}%`;
+
+  return `
+    <div class="explainer-overlay" data-action="close-credit-explainer">
+      <div class="explainer-modal" role="dialog" aria-modal="true" aria-labelledby="credit-explainer-title">
+        <button class="explainer-close" data-action="close-credit-explainer" aria-label="Close">×</button>
+        <p class="small-label">Credit Pulse · Reading guide</p>
+        <h2 id="credit-explainer-title">What this tab is telling you (${latest.label || "latest"})</h2>
+
+        <div class="explainer-section">
+          <h3>1. What the numbers actually are</h3>
+          <p>
+            <strong>Vehicle Loans outstanding</strong> is the total amount India's scheduled commercial banks have lent for vehicle purchases — sub-segment of "Personal Loans" in RBI's Sectoral Deployment of Bank Credit release.
+            Latest reading: <span class="highlight">${formatCrore(latest.outstanding_cr || 0)}</span> as of the last reporting Friday in ${latest.label || ""}.
+          </p>
+          <p>
+            <strong>Non-food bank credit</strong> is the entire bank lending engine to the productive economy (agriculture, industry, services, personal loans). RBI carves out FCI food procurement loans, leaving the meaningful "what banks lent to everyone else" total.
+            Latest reading: <span class="highlight">${formatLakhCr(latest.non_food_total_cr || 0)}</span>.
+          </p>
+        </div>
+
+        <div class="explainer-section">
+          <h3>2. Why an auto-investor cares about both</h3>
+          <p>
+            Saying "vehicle loans grew ${yoyText(latest.yoy_pct)} YoY" alone has no anchor — every credit segment can grow in a hot economy.
+            The benchmark question is: <em>is auto credit running hotter or cooler than the rest of the lending cycle?</em> That's what the spread answers.
+          </p>
+          <p>
+            Three things the comparison reveals:
+          </p>
+          <p>
+            • <strong>Demand-side signal.</strong> Vehicle credit growth above total credit growth = consumers are leaning into auto purchases. Below = they're pulling back even when banks are lending elsewhere.
+          </p>
+          <p>
+            • <strong>Stress / concentration gauge.</strong> The share of vehicle loans within total non-food credit (currently <span class="highlight">${shareText}</span>) tells you how "auto-heavy" the banking system is — useful for tracking whether the next NPL cycle will hit auto disproportionately.
+          </p>
+          <p>
+            • <strong>Cross-check on FADA / SIAM.</strong> Retail registrations can swing on month-end policy changes. Bank credit is harder to fake — if vehicle credit is decelerating, demand is cooling regardless of what registrations say.
+          </p>
+        </div>
+
+        <div class="explainer-section">
+          <h3>3. What this month's data is telling you</h3>
+          <p>
+            In <span class="highlight">${latest.label || ""}</span>, vehicle loans grew <span class="highlight">${yoyText(latest.yoy_pct)}</span> YoY, against
+            non-food bank credit at <span class="highlight">${yoyText(latest.non_food_yoy_pct)}</span>.
+            That's a spread of <span class="highlight ${spreadHighlightClass}">${spreadAbsText}</span> — vehicle credit is <strong>${spreadVerb}</strong> the broader lending cycle by that margin.
+          </p>
+          ${inflectionNote ? `<p>${inflectionNote}</p>` : ""}
+          <p>
+            Practical takeaway: ${spreadPp >= 1
+              ? "auto-demand momentum is firming up faster than the rest of the credit market — supportive backdrop for listed PV/2W/CV plays."
+              : (spreadPp <= -1
+                ? "auto credit is decelerating relative to the broader market — caution flag on near-term retail demand."
+                : "auto credit is broadly tracking the rest of the lending cycle — no near-term signal in either direction.")}
+          </p>
+        </div>
+
+        <p class="explainer-footer">
+          Source: <a href="${credit.source_meta?.url || "#"}" target="_blank" rel="noopener">RBI — Sectoral Deployment of Bank Credit</a>.
+          Data through ${latest.label || ""} (last reporting Friday: ${latest.month ? latest.month : ""}).
+        </p>
+      </div>
+    </div>
+  `;
+}
+
+function setupCreditPulseExplainer() {
+  document.querySelectorAll("[data-action=\"open-credit-explainer\"]").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.creditPulseExplainerOpen = true;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action=\"close-credit-explainer\"]").forEach((node) => {
+    node.addEventListener("click", (event) => {
+      if (event.target === node) {
+        state.creditPulseExplainerOpen = false;
+        render();
+      }
+    });
+  });
+  if (state.creditPulseExplainerOpen && !window.__creditExplainerEscBound) {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && state.creditPulseExplainerOpen) {
+        state.creditPulseExplainerOpen = false;
+        render();
+      }
+    });
+    window.__creditExplainerEscBound = true;
+  }
 }
 
 function lineChart(labels, series, formatter, tooltipFormatter = formatter) {
