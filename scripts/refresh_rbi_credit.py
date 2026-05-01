@@ -1,30 +1,41 @@
 """Refresh RBI Vehicle Loans + Non-food Bank Credit data into
-``data/rbi_credit.json`` by walking RBI's official "Data on Sectoral
-Deployment of Bank Credit" listing.
+``data/rbi_credit.json`` by guessing the exact Excel attachment URL each
+month.
 
-Path the script follows (mirrors what a human does):
+Why URL guessing instead of scraping the listing
+================================================
 
-    1. GET https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx
-       This page lists every monthly release as a row with a date heading
-       (e.g. "Apr 30, 2026") followed by a press-release link
-       ("Sectoral Deployment of Bank Credit – March 2026" pointing to
-       BS_PressReleaseDisplay.aspx?prid=NNNNN).
+RBI's "Data on Sectoral Deployment of Bank Credit" listing page
+(``Data_Sectoral_Deployment.aspx``) uses a server-side ASP.NET form that
+injects the press-release links via JavaScript after page load. From a
+non-browser HTTP client the static HTML returns a stub with zero
+``BS_PressReleaseDisplay.aspx?prid=N`` anchors, so any regex-based
+listing scraper finds nothing.
 
-    2. For each release whose reference month is not already in
-       ``data/rbi_credit.json``, GET the detail page and find the link
-       to "Statements I and II" — that's an .xlsx file
-       (typically ``/upload/PressReleases/Excel/SIBCS<DDMMYYYY>.xlsx``).
+The Excel attachments themselves, however, follow a totally stable URL
+pattern:
 
-    3. Download the Excel and read Statement 1 ("Deployment of Gross
-       Bank Credit by Major Sectors"). Two rows matter to us:
-         - ``III. Non-food Credit`` (top of the statement)
-         - ``4.7 Vehicle Loans`` (under Personal Loans)
-       The rightmost "Outstanding as on" column is the current month
-       observation; the rightmost YoY% column is the printed YoY growth.
+    https://rbi.org.in/upload/PressReleases/Excel/SIBCS<DDMMYYYY>.xlsx
 
-    4. Append a row ``{month, as_of_date, outstanding_cr, yoy_pct,
-       non_food_total_cr, non_food_yoy_pct, source_url}`` and save.
-       Idempotent.
+Where DDMMYYYY is the publication date — always the **last 1–3 working
+days of the next month** after the reference month. Examples:
+
+    Mar 2026 reference data → published 30-Apr-2026 → SIBCS30042026.xlsx
+    Feb 2026 reference data → published 30-Mar-2026 → SIBCS30032026.xlsx
+    Jan 2026 reference data → published 27-Feb-2026 → SIBCS27022026.xlsx
+
+So instead of scraping the broken listing, this script:
+
+    1. Walks the last MAX_LOOKBACK_MONTHS reference months.
+    2. For each month not already in ``data/rbi_credit.json``, generates
+       up to 7 candidate publication dates (last 7 working days of the
+       next month) and tries each Excel URL in turn.
+    3. The first 200 OK with a valid ``.xlsx`` body wins.
+    4. Parses the Excel with ``openpyxl`` — Statement 1 row 4.7 (Vehicle
+       Loans) and row III (Non-food Credit). Layout-tolerant — no
+       hard-coded row indices.
+
+Idempotent: skips months already verified from rbi.org.in.
 
 Run via the GitHub Actions cron — sandbox networks cannot reach RBI.
 """
@@ -32,14 +43,12 @@ Run via the GitHub Actions cron — sandbox networks cannot reach RBI.
 from __future__ import annotations
 
 import calendar
-import html
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from io import BytesIO
 from pathlib import Path
-from urllib.parse import urljoin
 
 import requests
 from openpyxl import load_workbook
@@ -53,125 +62,88 @@ from dashboard.update_snapshot import (  # noqa: E402
 
 
 HISTORY_PATH = Path("data/rbi_credit.json")
+EXCEL_URL_TEMPLATE = "https://rbi.org.in/upload/PressReleases/Excel/SIBCS{ddmmyyyy}.xlsx"
 LISTING_URL = "https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx"
+MAX_LOOKBACK_MONTHS = 24  # try the last 24 months of reference data
+CANDIDATE_DAYS_PER_MONTH = 7  # try last 7 working days of publication month
 TIMEOUT = 60
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0 Safari/537.36"
     ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-IN,en;q=0.9",
-}
-EXCEL_HEADERS = {
-    **HEADERS,
     "Accept": (
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,"
         "application/vnd.ms-excel,*/*;q=0.8"
     ),
+    "Accept-Language": "en-IN,en;q=0.9",
+    "Referer": "https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx",
 }
 
-# Step 1: pick every <a> whose href points at a press release (prid=N).
-# We capture (href, inner_html) and decode the inner text afterwards. This
-# is far more robust than trying to anchor the title inside the same regex
-# because RBI sometimes wraps the title in nested font/span tags or uses
-# HTML entities (`&ndash;`) for the dash.
-PRESS_RELEASE_ANCHOR_RE = re.compile(
-    r'<a[^>]+href="([^"]*BS_PressReleaseDisplay\.aspx\?[^"]*?prid=\d+[^"]*)"[^>]*>'
-    r"(.*?)</a>",
-    re.IGNORECASE | re.DOTALL,
-)
 
-# Step 2: out of the anchor texts, pull the (month, year) from the title.
-SDBC_TITLE_RE = re.compile(
-    r"Sectoral\s+Deployment\s+of\s+Bank\s+Credit\b"
-    r"[^A-Za-z]{1,8}"  # tolerate any combination of dashes / spaces / punctuation
-    r"(January|February|March|April|May|June|July|August|September|October|November|December)"
-    r"[\s,]*(\d{4})",
-    re.IGNORECASE,
-)
+def _candidate_publication_dates(reference_month: str) -> list[date]:
+    """Return up to CANDIDATE_DAYS_PER_MONTH dates to try for the given
+    reference month, ordered most-likely first.
 
-# Detail page → first .xlsx attachment. RBI labels the link "Statements
-# I and II" but we just match the file extension to be tolerant of label
-# changes.
-EXCEL_HREF_RE = re.compile(
-    r'<a[^>]+href="([^"]+\.xlsx)"',
-    re.IGNORECASE,
-)
-
-
-def _fetch_html(url: str) -> str | None:
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
-        response.raise_for_status()
-        return response.text
-    except Exception as exc:
-        print(f"  fetch html failed {url}: {exc}", flush=True)
-        return None
+    RBI publishes the SDBC release on the last 1–3 *working* days of the
+    next month after the reference month. We yield the last
+    CANDIDATE_DAYS_PER_MONTH weekdays of the publication month, latest
+    first.
+    """
+    year, month = (int(part) for part in reference_month.split("-"))
+    pub_month = month + 1
+    pub_year = year
+    if pub_month > 12:
+        pub_month = 1
+        pub_year += 1
+    last_day = calendar.monthrange(pub_year, pub_month)[1]
+    candidates: list[date] = []
+    cur = date(pub_year, pub_month, last_day)
+    seen = 0
+    while seen < CANDIDATE_DAYS_PER_MONTH and cur.month == pub_month:
+        if cur.weekday() < 5:  # Mon-Fri
+            candidates.append(cur)
+            seen += 1
+        cur -= timedelta(days=1)
+    return candidates
 
 
-def _fetch_excel(url: str) -> bytes | None:
-    try:
-        response = requests.get(url, headers=EXCEL_HEADERS, timeout=TIMEOUT, allow_redirects=True)
-        response.raise_for_status()
-        if not response.content:
-            return None
-        # OOXML magic bytes (zip archive). Helps us reject HTML error pages
-        # served with a 200 status code.
-        if not response.content.startswith(b"PK"):
-            print(f"  {url}: not an xlsx (first bytes: {response.content[:8]!r})", flush=True)
-            return None
-        return response.content
-    except Exception as exc:
-        print(f"  fetch excel failed {url}: {exc}", flush=True)
-        return None
-
-
-def _anchor_text(inner_html: str) -> str:
-    """Strip nested tags and decode HTML entities so we can match the
-    title with a plain regex."""
-    text = re.sub(r"<[^>]+>", " ", inner_html)
-    text = html.unescape(text)
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def _discover_releases(listing_html: str) -> list[tuple[str, str]]:
-    """Return ``[(month_id, detail_url), ...]`` for every release the
-    listing page advertises. ``month_id`` is the *reference* month (e.g.
-    Mar 2026 for the release titled "March 2026" that drops in Apr 2026)."""
-    out: list[tuple[str, str]] = []
-    seen: set[str] = set()
-    anchors = PRESS_RELEASE_ANCHOR_RE.findall(listing_html)
-    print(f"  press-release anchors found: {len(anchors)}", flush=True)
-    for relative_href, inner in anchors:
-        text = _anchor_text(inner)
-        match = SDBC_TITLE_RE.search(text)
-        if not match:
-            continue
-        month_name, year_text = match.groups()
-        try:
-            month_id = to_month_id(month_name, int(year_text))
-        except ValueError:
-            continue
-        detail_url = urljoin(LISTING_URL, relative_href)
-        if detail_url in seen:
-            continue
-        seen.add(detail_url)
-        out.append((month_id, detail_url))
-    if not out and anchors:
-        # Surface the first few anchor texts so the workflow log tells us
-        # exactly why our title regex didn't match (encoding shift, layout
-        # change, etc.) without needing another round-trip.
-        sample = [_anchor_text(inner)[:120] for _, inner in anchors[:8]]
-        print(f"  no SDBC titles matched. First anchor texts: {sample}", flush=True)
+def _target_months(today: date | None = None) -> list[str]:
+    """Return reference months YYYY-MM going back MAX_LOOKBACK_MONTHS,
+    starting from the previous calendar month (since the current month's
+    data isn't published yet)."""
+    today = today or date.today()
+    out: list[str] = []
+    year, month = today.year, today.month - 1
+    if month <= 0:
+        month += 12
+        year -= 1
+    for _ in range(MAX_LOOKBACK_MONTHS):
+        out.append(f"{year:04d}-{month:02d}")
+        month -= 1
+        if month <= 0:
+            month += 12
+            year -= 1
     return out
 
 
-def _excel_attachment_url(detail_html: str, detail_url: str) -> str | None:
-    match = EXCEL_HREF_RE.search(detail_html)
-    if not match:
+def _try_fetch_excel(url: str) -> bytes | None:
+    """Single GET attempt. Returns bytes only when the response is a
+    valid OOXML zip (PK magic). Suppresses 404 noise — RBI returns 404
+    for every wrong-date guess and we make many of those by design."""
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
+    except Exception as exc:
+        print(f"    {url}: connection error ({exc})", flush=True)
         return None
-    return urljoin(detail_url, match.group(1))
+    if response.status_code == 404:
+        return None
+    if response.status_code != 200:
+        print(f"    {url}: HTTP {response.status_code}", flush=True)
+        return None
+    if not response.content or not response.content.startswith(b"PK"):
+        return None
+    return response.content
 
 
 _VEHICLE_LABEL_RE = re.compile(r"(?:^|\s)(?:4\.7\.?\s*)?Vehicle\s+Loans?\b", re.IGNORECASE)
@@ -180,17 +152,7 @@ _NON_FOOD_LABEL_RE = re.compile(r"(?:III\.?\s*)?Non[-\s]?food\s+Credit\b", re.IG
 
 def _parse_excel(content: bytes) -> dict[str, float | int | None] | None:
     """Pull (vehicle_outstanding, vehicle_yoy, non_food_outstanding,
-    non_food_yoy) from the Excel workbook's "Statement 1" sheet.
-
-    Implementation notes:
-      - We avoid hard-coded row indices because RBI tweaks layout slightly
-        between years. Instead we scan column A for the labels we want and
-        then read rightmost-numeric "Outstanding as on" + rightmost YoY%
-        cells in the same row.
-      - "Outstanding as on" cells are large integers (Rs. crore).
-      - "Variation (Year-on-Year) %" cells are floats with one decimal,
-        usually < 100.
-    """
+    non_food_yoy) from the Excel workbook's "Statement 1" sheet."""
     workbook = load_workbook(BytesIO(content), data_only=True, read_only=True)
     statement_sheet = None
     for name in workbook.sheetnames:
@@ -250,18 +212,6 @@ def _last_outstanding_and_yoy(row: list) -> tuple[int | None, float | None]:
     return outstanding, yoy
 
 
-def _last_reporting_friday(month_id: str) -> str:
-    """Return ISO date of the last Friday of ``month_id``. Used as a
-    reasonable ``as_of_date`` fallback when we can't read the actual
-    reporting Friday from the spreadsheet header."""
-    year, month = (int(part) for part in month_id.split("-"))
-    last_day = calendar.monthrange(year, month)[1]
-    cur = datetime(year, month, last_day)
-    while cur.weekday() != 4:  # 4 = Friday
-        cur = cur.replace(day=cur.day - 1)
-    return cur.strftime("%Y-%m-%d")
-
-
 def _load_history() -> dict:
     if HISTORY_PATH.exists():
         try:
@@ -284,64 +234,68 @@ def _save_history(payload: dict) -> None:
     HISTORY_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def main() -> int:
-    listing_html = _fetch_html(LISTING_URL)
-    if not listing_html:
-        print("RBI listing fetch failed; nothing to update.", file=sys.stderr)
-        return 1
-    print(f"RBI listing: HTML length {len(listing_html)} chars", flush=True)
-    releases = _discover_releases(listing_html)
-    if not releases:
-        # Last-ditch breadcrumb: dump the first ~600 chars of body so we
-        # can eyeball whether RBI returned a real listing or some
-        # interstitial / error page.
-        snippet = re.sub(r"\s+", " ", listing_html)[:600]
-        print(f"  listing snippet: {snippet}", flush=True)
-        print("RBI listing returned 0 releases.", file=sys.stderr)
-        return 1
-    print(f"RBI listing: discovered {len(releases)} releases", flush=True)
+def _is_already_verified(record: dict | None) -> bool:
+    if not record:
+        return False
+    src = record.get("source_url", "")
+    return src.startswith("https://rbi.org.in/upload/PressReleases/Excel/")
 
+
+def main() -> int:
     history = _load_history()
     by_month: dict[str, dict] = {row["month"]: row for row in history.get("series", []) if row.get("month")}
+
+    target_months = _target_months()
+    print(
+        f"RBI scraper: trying {len(target_months)} reference months "
+        f"({target_months[-1]} → {target_months[0]})",
+        flush=True,
+    )
 
     added = 0
     refreshed = 0
     skipped = 0
-    parse_failed = 0
+    not_yet_published = 0
 
-    for month_id, detail_url in releases:
+    for month_id in target_months:
         existing = by_month.get(month_id)
-        if existing and existing.get("source_url", "").startswith("https://www.rbi.org.in"):
+        if _is_already_verified(existing):
             skipped += 1
             continue
-        detail_html = _fetch_html(detail_url)
-        if not detail_html:
-            continue
-        excel_url = _excel_attachment_url(detail_html, detail_url)
-        if not excel_url:
-            print(f"  {month_id}: no .xlsx attachment found at {detail_url}", flush=True)
-            parse_failed += 1
-            continue
-        excel_bytes = _fetch_excel(excel_url)
-        if not excel_bytes:
-            parse_failed += 1
-            continue
-        parsed = _parse_excel(excel_bytes)
-        if not parsed or not parsed.get("vehicle_outstanding_cr"):
-            print(f"  {month_id}: workbook parsed but Vehicle Loans row missing", flush=True)
-            parse_failed += 1
+
+        candidate_dates = _candidate_publication_dates(month_id)
+        successful_url: str | None = None
+        excel_bytes: bytes | None = None
+        for pub_date in candidate_dates:
+            ddmmyyyy = pub_date.strftime("%d%m%Y")
+            url = EXCEL_URL_TEMPLATE.format(ddmmyyyy=ddmmyyyy)
+            content = _try_fetch_excel(url)
+            if content is not None:
+                successful_url = url
+                excel_bytes = content
+                break
+
+        if not excel_bytes or not successful_url:
+            not_yet_published += 1
+            print(f"  {month_id}: no Excel found at any of {len(candidate_dates)} candidate URLs", flush=True)
             continue
 
+        parsed = _parse_excel(excel_bytes)
+        if not parsed or not parsed.get("vehicle_outstanding_cr"):
+            print(f"  {month_id}: workbook downloaded but Vehicle Loans row missing — {successful_url}", flush=True)
+            continue
+
+        as_of_date = _last_reporting_friday(month_id)
         record = {
             "month": month_id,
-            "as_of_date": _last_reporting_friday(month_id),
+            "as_of_date": as_of_date,
             "outstanding_cr": parsed["vehicle_outstanding_cr"],
             "yoy_pct": parsed["vehicle_yoy_pct"],
             "non_food_total_cr": parsed["non_food_total_cr"],
             "non_food_yoy_pct": parsed["non_food_yoy_pct"],
-            "source_url": detail_url,
+            "source_url": successful_url,
         }
-        if existing and existing == record:
+        if existing == record:
             continue
         if existing:
             refreshed += 1
@@ -350,12 +304,12 @@ def main() -> int:
         by_month[month_id] = record
         print(
             f"  {month_id}: VL ₹{record['outstanding_cr']:,} cr ({record['yoy_pct']}% YoY), "
-            f"NF ₹{record['non_food_total_cr']:,} cr ({record['non_food_yoy_pct']}% YoY)",
+            f"NF ₹{record['non_food_total_cr']:,} cr ({record['non_food_yoy_pct']}% YoY) "
+            f"← {successful_url}",
             flush=True,
         )
 
     history["series"] = [by_month[k] for k in sorted(by_month)]
-    history["source_url"] = LISTING_URL
     if added or refreshed:
         history["is_seed"] = False
         history["coverage_note"] = (
@@ -365,12 +319,26 @@ def main() -> int:
     _save_history(history)
 
     print(
-        f"\nWrote {HISTORY_PATH} (added {added}, refreshed {refreshed}, "
-        f"skipped {skipped}, parse_failed {parse_failed}). "
+        f"\nWrote {HISTORY_PATH}: added {added}, refreshed {refreshed}, "
+        f"skipped (already verified) {skipped}, "
+        f"not published yet {not_yet_published}. "
         f"Total months: {len(history['series'])}",
         flush=True,
     )
-    return 0 if (added + refreshed) > 0 or parse_failed == 0 else 2
+    # Exit 0 even when no months are added — most cron runs will find nothing
+    # new because RBI publishes once a month. Exit non-zero only if we never
+    # had any verified data in the file at all (genuine failure state).
+    return 0 if (added + refreshed + skipped) > 0 else 2
+
+
+def _last_reporting_friday(month_id: str) -> str:
+    """Return ISO date of the last Friday of ``month_id``."""
+    year, month = (int(part) for part in month_id.split("-"))
+    last_day = calendar.monthrange(year, month)[1]
+    cur = datetime(year, month, last_day)
+    while cur.weekday() != 4:  # 4 = Friday
+        cur -= timedelta(days=1)
+    return cur.strftime("%Y-%m-%d")
 
 
 if __name__ == "__main__":
