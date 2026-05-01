@@ -1802,69 +1802,65 @@ function renderEvSection() {
   );
 
   return `
-    <div id="section-ev" class="panel-grid two section-anchor">
-      <div class="panel-grid one">
-        <div class="chart-card">
-          <div class="chart-title-row">
-            <div>
-              <p class="small-label">EV dashboard</p>
-              <h3>Derived EV penetration from official retail fuel mix</h3>
-            </div>
-            <div class="button-row">
-              <button class="button" data-download-key="ev-trend">Download CSV</button>
-            </div>
+    <div id="section-ev" class="panel-grid one section-anchor">
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">EV dashboard</p>
+            <h3>Derived EV penetration from official retail fuel mix</h3>
           </div>
-          <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2))}
+          <div class="button-row">
+            <button class="button" data-download-key="ev-trend">Download CSV</button>
           </div>
-          <div class="chart-legend">
-            ${evSeries.map((series) => legendItem(series.label, series.color)).join("")}
-          </div>
-          <p class="legend-note">Caveat: this is a retail fuel-mix derivation from FADA, not a Vahan registration series.</p>
         </div>
-        ${stateRegistration.available ? `
-          <div class="chart-card">
-            ${renderStateRegistrationExplorer()}
-          </div>
-        ` : ""}
-        <div id="section-ev-trend" class="chart-card section-anchor">
-          ${renderEvTrendExplorer()}
+        <div class="chart-frame">
+          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2))}
         </div>
+        <div class="chart-legend">
+          ${evSeries.map((series) => legendItem(series.label, series.color)).join("")}
+        </div>
+        <p class="legend-note">Caveat: this is a retail fuel-mix derivation from FADA, not a Vahan registration series.</p>
       </div>
-      <div class="panel-grid one">
-        <div class="chart-card">
-          <div class="chart-title-row">
-            <div>
-              <p class="small-label">Latest fuel mix</p>
-              <h3>${selectedFuel ? `${selectedFuel} share by category` : "Fuel split in the latest retail month"}</h3>
-            </div>
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Latest fuel mix</p>
+            <h3>${selectedFuel ? `${selectedFuel} share by category` : "Fuel split in the latest retail month"}</h3>
           </div>
-          <div class="fuel-list">
-            ${latestMix.map((category) => {
-              const fuels = selectedFuel
-                ? category.fuels.filter((item) => item.fuel === selectedFuel)
-                : category.fuels;
-              return `
-                <div class="info-card">
-                  <div class="info-card-head">
-                    <div>
-                      <p class="small-label">${category.label}</p>
-                      <h3>${selectedFuel ? selectedFuel : "Fuel mix"}</h3>
-                    </div>
-                  </div>
-                  <div class="fuel-list">
-                    ${fuels.map((fuel) => `
-                      <div class="fuel-row">
-                        <span>${fuel.fuel}</span>
-                        <strong>${formatPct(fuel.share_pct, 2)}</strong>
-                      </div>
-                    `).join("")}
+        </div>
+        <div class="fuel-list">
+          ${latestMix.map((category) => {
+            const fuels = selectedFuel
+              ? category.fuels.filter((item) => item.fuel === selectedFuel)
+              : category.fuels;
+            return `
+              <div class="info-card">
+                <div class="info-card-head">
+                  <div>
+                    <p class="small-label">${category.label}</p>
+                    <h3>${selectedFuel ? selectedFuel : "Fuel mix"}</h3>
                   </div>
                 </div>
-              `;
-            }).join("")}
-          </div>
+                <div class="fuel-list">
+                  ${fuels.map((fuel) => `
+                    <div class="fuel-row">
+                      <span>${fuel.fuel}</span>
+                      <strong>${formatPct(fuel.share_pct, 2)}</strong>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            `;
+          }).join("")}
         </div>
+      </div>
+      ${stateRegistration.available ? `
+        <div class="chart-card">
+          ${renderStateRegistrationExplorer()}
+        </div>
+      ` : ""}
+      <div id="section-ev-trend" class="chart-card section-anchor">
+        ${renderEvTrendExplorer()}
       </div>
     </div>
   `;
