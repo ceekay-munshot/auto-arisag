@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T17:30:49.294135+00:00",
+  "generated_at": "2026-05-01T18:49:18.921117+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -11627,6 +11627,133 @@
           "non_food_yoy_pct": 15.9,
           "share_pct": 3.47,
           "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+        }
+      ]
+    },
+    "premium_data": {
+      "available": true,
+      "title": "Premium Data Sources",
+      "summary": {
+        "total": 5,
+        "blocked": 1,
+        "partial": 1,
+        "not_integrated": 3
+      },
+      "sources": [
+        {
+          "id": "vahan-paid",
+          "name": "Vahan / Parivahan Analytics API",
+          "tier": "Government \u00b7 NIC",
+          "tagline": "The single biggest unlock \u2014 turns four currently-disabled dashboard tabs into live feeds.",
+          "status": "blocked",
+          "status_label": "Blocked from cloud runners",
+          "color": "red",
+          "currently_unlocks": [
+            "Vahan retail registrations (state-wise)",
+            "State-wise Vahan registrations",
+            "Vahan EV registrations (live, state + RTO)",
+            "EV trade tracker (live, currently hardcoded Mar 2026)"
+          ],
+          "what_you_get": [
+            "Daily / monthly registrations at state, RTO and PIN-code level",
+            "Vehicle class \u00d7 fuel type matrix (PV / 2W / 3W / CV / Tractor / CE \u00d7 Petrol / Diesel / EV / CNG / Hybrid)",
+            "OEM \u00d7 model registrations with verified VIN-level audit trail",
+            "Same dataset MoRTH / SIAM / FADA all reconcile against"
+          ],
+          "cost": "\u20b925,000 \u2013 \u20b92,00,000 / year",
+          "cost_note": "Tiered by call volume and granularity. Contact NIC Vahan Help Desk.",
+          "cta_label": "Vahan analytics",
+          "cta_url": "https://analytics.parivahan.gov.in/analytics/"
+        },
+        {
+          "id": "ev-trade-paid",
+          "name": "Department of Commerce EV Trade Data",
+          "tier": "Government \u00b7 DGFT",
+          "tagline": "Live HSN-code monthly EV import / export figures \u2014 the source for the EV trade tracker tile.",
+          "status": "partial",
+          "status_label": "Currently hardcoded",
+          "color": "amber",
+          "currently_unlocks": [
+            "EV trade tracker (replaces the static Mar 2026 snapshot with live monthly updates)"
+          ],
+          "what_you_get": [
+            "Monthly export and import volumes + USD value at HSN-8 granularity",
+            "Country-wise trade splits (top 20 destinations)",
+            "Lithium-ion cell, motor, BMS and full-vehicle line items"
+          ],
+          "cost": "\u20b935,000 \u2013 \u20b91,50,000 / year",
+          "cost_note": "DGFT ICEGATE bulk-data subscription, billed per HSN bucket.",
+          "cta_label": "DGFT data subscription",
+          "cta_url": "https://www.dgft.gov.in/CP/?opt=ft-data"
+        },
+        {
+          "id": "jato",
+          "name": "JATO Dynamics \u2014 India",
+          "tier": "Industry \u00b7 Subscription",
+          "tagline": "Model-level pricing, specs and configuration data; the spine of any \"price index\" or \"feature index\" view.",
+          "status": "absent",
+          "status_label": "Not yet integrated",
+          "color": "blue",
+          "currently_unlocks": [
+            "Model-launch tracker (planned)",
+            "Price elasticity & MSRP index (planned)",
+            "Feature-set comparison tooling (planned)"
+          ],
+          "what_you_get": [
+            "OEM \u00d7 model \u00d7 variant master with MSRP, ex-showroom, on-road",
+            "Spec sheets (engine, dimensions, ADAS features, safety ratings)",
+            "Daily incentive / discount tracking per dealer geography"
+          ],
+          "cost": "$10,000 \u2013 $50,000 / year",
+          "cost_note": "Approx. \u20b98\u201340 lakh. Tier depends on data depth.",
+          "cta_label": "JATO India",
+          "cta_url": "https://www.jato.com/india/"
+        },
+        {
+          "id": "polk",
+          "name": "S&P Global Mobility (Polk)",
+          "tier": "Industry \u00b7 Enterprise",
+          "tagline": "The institutional benchmark for verified registrations + forecasting.",
+          "status": "absent",
+          "status_label": "Not yet integrated",
+          "color": "purple",
+          "currently_unlocks": [
+            "Independent cross-check on FADA retail",
+            "Model-level OEM market-share tooling",
+            "5-year forecast overlay on every monthly chart"
+          ],
+          "what_you_get": [
+            "Verified VIN-anchored registrations covering 95%+ of India PV / CV",
+            "Monthly market-share at OEM, brand and model level",
+            "Production forecasts (LMC Automotive merge) by plant and platform"
+          ],
+          "cost": "$25,000 \u2013 $100,000 / year",
+          "cost_note": "Approx. \u20b920\u201380 lakh. Enterprise-only.",
+          "cta_label": "S&P Mobility",
+          "cta_url": "https://www.spglobal.com/mobility/en/products/automotive-data.html"
+        },
+        {
+          "id": "crisil",
+          "name": "CRISIL & ICRA \u2014 Auto Sector Reports",
+          "tier": "Research \u00b7 Credit Agencies",
+          "tagline": "Quarterly outlook, OEM credit watch, and segment-level demand forecasts.",
+          "status": "absent",
+          "status_label": "Not yet integrated",
+          "color": "teal",
+          "currently_unlocks": [
+            "Credit-agency outlook badge on each OEM tab",
+            "Sector-level upgrade / downgrade alerts",
+            "Forward-looking volume guidance overlays"
+          ],
+          "what_you_get": [
+            "Quarterly Auto Industry Outlook PDF (segment + OEM commentary)",
+            "Credit ratings & outlook changes for listed OEMs / ancillaries",
+            "Monthly view-points and short notes on sector themes (EV, premium, exports)"
+          ],
+          "cost": "\u20b93,00,000 \u2013 \u20b910,00,000 / year",
+          "cost_note": "Per-report \u20b950K\u20132L; annual seats from ~\u20b93L.",
+          "cta_label": "CRISIL Research",
+          "cta_url": "https://www.crisil.com/en/home/our-businesses/india-research.html"
         }
       ]
     }
