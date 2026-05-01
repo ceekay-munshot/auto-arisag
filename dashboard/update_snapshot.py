@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 from io import BytesIO
@@ -458,6 +459,12 @@ def select_acma_market_release(releases: list[dict]) -> dict | None:
     return None
 
 
+def _curl_binary() -> str:
+    """Return the name of the curl binary to invoke. Plain `curl` on Linux/mac;
+    `curl.exe` on Windows where the original author was running this."""
+    return "curl.exe" if os.name == "nt" else "curl"
+
+
 def fetch_text(url: str, timeout: int = 20) -> tuple[str, str]:
     normalized_url = normalize_request_url(url)
     request = Request(normalized_url, headers=DEFAULT_HEADERS)
@@ -468,7 +475,7 @@ def fetch_text(url: str, timeout: int = 20) -> tuple[str, str]:
             return text, response.geturl()
     except Exception:
         command = [
-            "curl.exe",
+            _curl_binary(),
             "--silent",
             "--show-error",
             "--location",
@@ -497,7 +504,7 @@ def fetch_binary(url: str, timeout: int = 60) -> tuple[bytes, str]:
             return response.read(), response.geturl()
     except Exception:
         command = [
-            "curl.exe",
+            _curl_binary(),
             "--silent",
             "--show-error",
             "--location",

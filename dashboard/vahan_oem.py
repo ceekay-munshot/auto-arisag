@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 from dataclasses import dataclass
@@ -384,7 +385,7 @@ class VahanOemClient:
         timeout: int,
     ) -> bytes:
         command = [
-            "curl.exe",
+            "curl.exe" if os.name == "nt" else "curl",
             "--silent",
             "--show-error",
             "--location",
