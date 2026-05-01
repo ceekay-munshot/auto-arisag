@@ -1704,3 +1704,115 @@ th:hover {
   cursor: default;
   user-select: none;
 }
+
+/* Explainer modal: click "Explain" to open a prose interpretation of the
+   Credit Pulse numbers. */
+.explainer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 27, 36, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 60px 24px;
+  overflow-y: auto;
+}
+
+.explainer-modal {
+  background: var(--panel-strong);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  max-width: 720px;
+  width: 100%;
+  padding: 32px 36px 28px;
+  position: relative;
+}
+
+.explainer-modal h2 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  color: var(--deep);
+}
+
+.explainer-modal .small-label {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin: 0 0 18px;
+}
+
+.explainer-section {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.explainer-section h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--deep);
+}
+
+.explainer-section p {
+  margin: 0 0 10px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.explainer-section .highlight {
+  background: var(--accent-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--deep);
+}
+
+.explainer-section .highlight-pos {
+  background: rgba(47, 137, 125, 0.14);
+  color: #1d5a4f;
+}
+
+.explainer-section .highlight-neg {
+  background: rgba(204, 67, 67, 0.12);
+  color: #8a2727;
+}
+
+.explainer-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  appearance: none;
+  border: 1px solid var(--line-strong);
+  background: #fffdfa;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explainer-footer {
+  margin-top: 22px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+
+.button-explain {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.14), rgba(47, 137, 125, 0.08));
+  border-color: rgba(47, 137, 125, 0.3);
+  color: #1d5a4f;
+  font-weight: 600;
+}
+
+.button-explain:hover {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.22), rgba(47, 137, 125, 0.14));
+}
