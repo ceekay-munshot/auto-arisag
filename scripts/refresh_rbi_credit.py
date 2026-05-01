@@ -78,6 +78,16 @@ VEHICLE_YOY_RE = re.compile(
     flags=re.IGNORECASE | re.DOTALL,
 )
 
+# Total non-food bank credit row uses one of two phrasings depending on era.
+NON_FOOD_ROW_RE = re.compile(
+    r"Non[-\s]?food\s+(?:Bank\s+)?Credit\s*</[a-zA-Z]+>(?:\s|<[^>]+>)*?([\d,\.]+)\s*</[a-zA-Z]+>(?:\s|<[^>]+>)*?([\d,\.]+)",
+    flags=re.IGNORECASE,
+)
+NON_FOOD_YOY_RE = re.compile(
+    r"Non[-\s]?food\s+(?:Bank\s+)?Credit(?:.*?)(?:Growth|Y[-\s]?o[-\s]?Y)[^%]*?([0-9]+\.\d+)\s*%",
+    flags=re.IGNORECASE | re.DOTALL,
+)
+
 
 def _fetch_html(url: str) -> str | None:
     try:
@@ -116,24 +126,32 @@ def _detect_month_from_html(html: str) -> str | None:
     return None
 
 
-def _parse_vehicle_loans(html: str) -> tuple[int | None, float | None]:
-    """Return (outstanding_cr, yoy_pct) parsed from the SDBC HTML table.
-    Both pieces are best-effort — RBI table layouts shift slightly between
-    years, so callers must tolerate a None on either field."""
+def _parse_row(html: str, row_pattern: re.Pattern, yoy_pattern: re.Pattern) -> tuple[int | None, float | None]:
+    """Generic helper: pick the second outstanding number (current month) and
+    the YoY growth percent for a given line item. Both pieces are best-effort
+    — RBI table layouts shift between years."""
     outstanding = None
     yoy = None
-    row_match = VEHICLE_LOANS_ROW_RE.search(html)
+    row_match = row_pattern.search(html)
     if row_match:
         # The table typically has prior-month-end and current-month-end
-        # outstanding side by side. We want the latter (later in the row).
+        # outstanding side by side. We want the latter.
         outstanding = parse_indian_number(row_match.group(2))
-    yoy_match = VEHICLE_YOY_RE.search(html)
+    yoy_match = yoy_pattern.search(html)
     if yoy_match:
         try:
             yoy = float(yoy_match.group(1))
         except ValueError:
             yoy = None
     return outstanding, yoy
+
+
+def _parse_vehicle_loans(html: str) -> tuple[int | None, float | None]:
+    return _parse_row(html, VEHICLE_LOANS_ROW_RE, VEHICLE_YOY_RE)
+
+
+def _parse_non_food_credit(html: str) -> tuple[int | None, float | None]:
+    return _parse_row(html, NON_FOOD_ROW_RE, NON_FOOD_YOY_RE)
 
 
 def _load_history() -> dict:
@@ -196,10 +214,13 @@ def main() -> int:
             parse_failed += 1
             print(f"  {detail_url} ({month_id}): vehicle loans row not found", flush=True)
             continue
+        non_food_total, non_food_yoy = _parse_non_food_credit(html)
         record = {
             "month": month_id,
             "outstanding_cr": outstanding,
             "yoy_pct": yoy,
+            "non_food_total_cr": non_food_total,
+            "non_food_yoy_pct": non_food_yoy,
             "source_url": detail_url,
         }
         existing = by_month.get(month_id)

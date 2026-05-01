@@ -515,16 +515,23 @@ def build_credit_pulse_module() -> dict[str, Any]:
     if not series:
         return {"available": False, "title": MODULE_TITLES["credit_pulse"], "reason": "rbi_credit.json has no rows"}
 
-    months = [
-        {
-            "month": row["month"],
-            "label": month_label(row["month"]),
-            "outstanding_cr": row["outstanding_cr"],
-            "yoy_pct": row.get("yoy_pct"),
-            "source_url": row.get("source_url") or payload.get("source_url"),
-        }
-        for row in series
-    ]
+    months = []
+    for row in series:
+        veh = row["outstanding_cr"]
+        nf = row.get("non_food_total_cr")
+        share_pct = round(veh / nf * 100, 2) if veh and nf else None
+        months.append(
+            {
+                "month": row["month"],
+                "label": month_label(row["month"]),
+                "outstanding_cr": veh,
+                "yoy_pct": row.get("yoy_pct"),
+                "non_food_total_cr": nf,
+                "non_food_yoy_pct": row.get("non_food_yoy_pct"),
+                "share_pct": share_pct,
+                "source_url": row.get("source_url") or payload.get("source_url"),
+            }
+        )
 
     latest = months[-1]
     prior_yoy = next((m["yoy_pct"] for m in reversed(months[:-1]) if m["yoy_pct"] is not None), None)
@@ -536,6 +543,12 @@ def build_credit_pulse_module() -> dict[str, Any]:
     twelve_month_growth_pct = (
         round((latest["outstanding_cr"] - twelve_months_ago["outstanding_cr"]) / twelve_months_ago["outstanding_cr"] * 100, 1)
         if twelve_months_ago["outstanding_cr"]
+        else None
+    )
+
+    spread_pp = (
+        round(latest["yoy_pct"] - latest["non_food_yoy_pct"], 1)
+        if latest["yoy_pct"] is not None and latest.get("non_food_yoy_pct") is not None
         else None
     )
 
@@ -557,6 +570,10 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "yoy_pct": latest["yoy_pct"],
             "yoy_change_pp": yoy_change_pp,
             "twelve_month_growth_pct": twelve_month_growth_pct,
+            "non_food_total_cr": latest.get("non_food_total_cr"),
+            "non_food_yoy_pct": latest.get("non_food_yoy_pct"),
+            "share_pct": latest.get("share_pct"),
+            "spread_pp": spread_pp,
             "source_url": latest["source_url"],
         },
         "months": months,
