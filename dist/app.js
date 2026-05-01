@@ -4067,90 +4067,110 @@ function renderCreditPulseExplainerModal() {
   }
   const latest = credit.latest || {};
   const months = credit.months || [];
-  const formatCrore = (value) => `₹${formatUnits(value)} cr`;
-  const formatLakhCr = (value) => `₹${(value / 100000).toFixed(2)} lakh crore`;
-  const yoyText = (value) => (value === null || value === undefined ? "n.m." : `${value.toFixed(1)}%`);
+
+  const formatLakhCr = (value) => `₹${(value / 100000).toFixed(2)} L cr`;
+  const yoyText = (value) => (value === null || value === undefined ? "—" : `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`);
 
   const spreadPp = latest.spread_pp;
-  const spreadDirection = spreadPp >= 0 ? "above" : "below";
-  const spreadVerb = spreadPp >= 0 ? "leading" : "lagging";
-  const spreadHighlightClass = spreadPp >= 0 ? "highlight-pos" : "highlight-neg";
-  const spreadAbsText = spreadPp === null || spreadPp === undefined
-    ? "n.m."
-    : `${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)} pp`;
+  const sharePct = latest.share_pct;
+  const isPos = spreadPp >= 0;
+  const spreadAbs = spreadPp === null || spreadPp === undefined
+    ? "—"
+    : `${isPos ? "+" : ""}${spreadPp.toFixed(1)} pp`;
 
   const olderWithSpread = months
     .filter((p) => p.yoy_pct !== null && p.yoy_pct !== undefined && p.non_food_yoy_pct !== null && p.non_food_yoy_pct !== undefined)
-    .map((p) => ({ ...p, spread: p.yoy_pct - p.non_food_yoy_pct }));
-  const earliest = olderWithSpread[0];
-  const inflectionNote = earliest
-    ? `Twelve to eighteen months ago (around ${earliest.label}), this same spread was ${earliest.spread >= 0 ? "+" : ""}${earliest.spread.toFixed(1)} pp — meaning vehicle credit was ${earliest.spread >= 0 ? "leading" : "lagging"} the broader cycle. Today it sits at <span class="highlight ${spreadHighlightClass}">${spreadAbsText}</span>, a clean ${earliest.spread < 0 && spreadPp >= 0 ? "bullish inflection" : "trend continuation"} for auto demand.`
-    : "";
+    .map((p) => ({ label: p.label, spread: p.yoy_pct - p.non_food_yoy_pct }));
+  const oldest = olderWithSpread[0];
 
-  const sharePct = latest.share_pct;
-  const shareText = sharePct === null || sharePct === undefined
-    ? "n.m."
-    : `${sharePct.toFixed(2)}%`;
+  // Position markers on the spread bar. Bar maps -5pp -> 0%, +5pp -> 100%.
+  const spreadToPct = (pp) => Math.max(2, Math.min(98, 50 + (pp / 5) * 50));
+  const oldPct = oldest ? spreadToPct(oldest.spread) : null;
+  const newPct = spreadPp !== null && spreadPp !== undefined ? spreadToPct(spreadPp) : null;
+
+  const takeawayClass = spreadPp >= 1 ? "takeaway-pos" : (spreadPp <= -1 ? "takeaway-neg" : "");
+  const takeawayHeadline = spreadPp >= 1
+    ? "Auto credit is running HOT"
+    : (spreadPp <= -1 ? "Auto credit is running COOL" : "Auto credit tracking the broader cycle");
+  const takeawayBody = spreadPp >= 1
+    ? `Banks are lending to vehicle buyers <strong>${spreadAbs} faster</strong> than to everyone else combined. That's a bullish demand signal — consumers are choosing to buy, not just window-shop.`
+    : (spreadPp <= -1
+      ? `Banks are lending to vehicle buyers <strong>${spreadAbs}</strong> versus the rest of the economy. Consumers are pulling back on auto even when broader credit is healthy — caution flag for near-term sales.`
+      : "Vehicle credit is moving in line with overall bank credit. No bullish or bearish edge from this signal right now.");
+
+  const inflectionNarrative = oldest && Math.sign(oldest.spread) !== Math.sign(spreadPp || 0)
+    ? `<strong>Big shift:</strong> spread flipped from ${oldest.spread >= 0 ? "+" : ""}${oldest.spread.toFixed(1)} pp to ${spreadAbs} in 12 months — that's the inflection your client wants to see.`
+    : `Spread has held in the same direction over the last 12 months.`;
 
   return `
     <div class="explainer-overlay" data-action="close-credit-explainer">
       <div class="explainer-modal" role="dialog" aria-modal="true" aria-labelledby="credit-explainer-title">
         <button class="explainer-close" data-action="close-credit-explainer" aria-label="Close">×</button>
-        <p class="small-label">Credit Pulse · Reading guide</p>
-        <h2 id="credit-explainer-title">What this tab is telling you (${latest.label || "latest"})</h2>
+        <p class="small-label">Credit Pulse · Quick read</p>
+        <h2 id="credit-explainer-title">${latest.label || "Latest"} — ${takeawayHeadline}</h2>
 
-        <div class="explainer-section">
-          <h3>1. What the numbers actually are</h3>
-          <p>
-            <strong>Vehicle Loans outstanding</strong> is the total amount India's scheduled commercial banks have lent for vehicle purchases — sub-segment of "Personal Loans" in RBI's Sectoral Deployment of Bank Credit release.
-            Latest reading: <span class="highlight">${formatCrore(latest.outstanding_cr || 0)}</span> as of the last reporting Friday in ${latest.label || ""}.
-          </p>
-          <p>
-            <strong>Non-food bank credit</strong> is the entire bank lending engine to the productive economy (agriculture, industry, services, personal loans). RBI carves out FCI food procurement loans, leaving the meaningful "what banks lent to everyone else" total.
-            Latest reading: <span class="highlight">${formatLakhCr(latest.non_food_total_cr || 0)}</span>.
-          </p>
+        <div class="explainer-kpi-row">
+          <div class="explainer-kpi">
+            <p class="kpi-label">Vehicle loans</p>
+            <p class="kpi-value">${formatLakhCr(latest.outstanding_cr || 0)}</p>
+            <p class="kpi-detail">Total outstanding</p>
+          </div>
+          <div class="explainer-kpi ${isPos ? "kpi-pos" : "kpi-neg"}">
+            <p class="kpi-label">Vehicle YoY</p>
+            <p class="kpi-value">${yoyText(latest.yoy_pct)}</p>
+            <p class="kpi-detail">vs ${yoyText(latest.non_food_yoy_pct)} for total credit</p>
+          </div>
+          <div class="explainer-kpi ${isPos ? "kpi-pos" : "kpi-neg"}">
+            <p class="kpi-label">Spread</p>
+            <p class="kpi-value">${spreadAbs}</p>
+            <p class="kpi-detail">${isPos ? "Auto leading" : "Auto lagging"}</p>
+          </div>
         </div>
 
-        <div class="explainer-section">
-          <h3>2. Why an auto-investor cares about both</h3>
-          <p>
-            Saying "vehicle loans grew ${yoyText(latest.yoy_pct)} YoY" alone has no anchor — every credit segment can grow in a hot economy.
-            The benchmark question is: <em>is auto credit running hotter or cooler than the rest of the lending cycle?</em> That's what the spread answers.
-          </p>
-          <p>
-            Three things the comparison reveals:
-          </p>
-          <p>
-            • <strong>Demand-side signal.</strong> Vehicle credit growth above total credit growth = consumers are leaning into auto purchases. Below = they're pulling back even when banks are lending elsewhere.
-          </p>
-          <p>
-            • <strong>Stress / concentration gauge.</strong> The share of vehicle loans within total non-food credit (currently <span class="highlight">${shareText}</span>) tells you how "auto-heavy" the banking system is — useful for tracking whether the next NPL cycle will hit auto disproportionately.
-          </p>
-          <p>
-            • <strong>Cross-check on FADA / SIAM.</strong> Retail registrations can swing on month-end policy changes. Bank credit is harder to fake — if vehicle credit is decelerating, demand is cooling regardless of what registrations say.
-          </p>
+        ${oldPct !== null && newPct !== null ? `
+        <div class="spread-bar-block">
+          <p class="small-label">How the spread moved over 12 months</p>
+          <div class="spread-bar">
+            <div class="center-line"></div>
+            <div class="marker marker-old" style="left:${oldPct}%;" title="${oldest.label}: ${oldest.spread >= 0 ? "+" : ""}${oldest.spread.toFixed(1)} pp"></div>
+            <div class="marker marker-new" style="left:${newPct}%;" title="${latest.label}: ${spreadAbs}"></div>
+          </div>
+          <div class="spread-bar-labels">
+            <span class="end-neg">−5 pp · auto lagging</span>
+            <span>0 pp · in-line</span>
+            <span class="end-pos">+5 pp · auto leading</span>
+          </div>
+          <div class="spread-bar-narrative">
+            <span class="anchor">
+              <strong style="color:#8a2727;">${oldest.spread >= 0 ? "+" : ""}${oldest.spread.toFixed(1)} pp</strong>
+              <span class="kpi-detail" style="margin:0;">${oldest.label}</span>
+            </span>
+            <span class="arrow">→</span>
+            <span class="anchor">
+              <strong style="color:#1d5a4f;">${spreadAbs}</strong>
+              <span class="kpi-detail" style="margin:0;">${latest.label}</span>
+            </span>
+          </div>
+          <p class="kpi-detail" style="margin-top:10px;">${inflectionNarrative}</p>
+        </div>
+        ` : ""}
+
+        <div class="takeaway-box ${takeawayClass}">
+          <h3>What this means in plain English</h3>
+          <p>${takeawayBody}</p>
         </div>
 
-        <div class="explainer-section">
-          <h3>3. What this month's data is telling you</h3>
-          <p>
-            In <span class="highlight">${latest.label || ""}</span>, vehicle loans grew <span class="highlight">${yoyText(latest.yoy_pct)}</span> YoY, against
-            non-food bank credit at <span class="highlight">${yoyText(latest.non_food_yoy_pct)}</span>.
-            That's a spread of <span class="highlight ${spreadHighlightClass}">${spreadAbsText}</span> — vehicle credit is <strong>${spreadVerb}</strong> the broader lending cycle by that margin.
-          </p>
-          ${inflectionNote ? `<p>${inflectionNote}</p>` : ""}
-          <p>
-            Practical takeaway: ${spreadPp >= 1
-              ? "auto-demand momentum is firming up faster than the rest of the credit market — supportive backdrop for listed PV/2W/CV plays."
-              : (spreadPp <= -1
-                ? "auto credit is decelerating relative to the broader market — caution flag on near-term retail demand."
-                : "auto credit is broadly tracking the rest of the lending cycle — no near-term signal in either direction.")}
-          </p>
-        </div>
+        <p class="small-label" style="margin-top:18px;">Why we even track this on an auto dashboard</p>
+        <ul class="checklist">
+          <li><strong>Real demand check.</strong> Banks won't lend if buyers don't show up. Loan growth ${isPos ? "above" : "below"} the rest of the economy ${isPos ? "confirms" : "undercuts"} the demand story.</li>
+          <li><strong>Reality check on dealer reports.</strong> FADA / SIAM numbers can wobble on month-end push. Bank credit is harder to fake — useful triangulation.</li>
+          <li><strong>Sector exposure.</strong> Vehicle loans = <strong>${sharePct === null || sharePct === undefined ? "—" : sharePct.toFixed(2) + "%"}</strong> of total bank lending. Watch this drift to spot when the system gets auto-heavy.</li>
+        </ul>
 
         <p class="explainer-footer">
-          Source: <a href="${credit.source_meta?.url || "#"}" target="_blank" rel="noopener">RBI — Sectoral Deployment of Bank Credit</a>.
-          Data through ${latest.label || ""} (last reporting Friday: ${latest.month ? latest.month : ""}).
+          Source: <a href="${credit.source_meta?.url || "#"}" target="_blank" rel="noopener">RBI — Sectoral Deployment of Bank Credit</a>
+          · Data through ${latest.label || ""}
+          · Total bank lending: ${formatLakhCr(latest.non_food_total_cr || 0)}
         </p>
       </div>
     </div>
