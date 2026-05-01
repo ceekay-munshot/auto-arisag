@@ -27,6 +27,7 @@ from .config import (
 
 SIAM_HISTORY_PATH = Path("data/siam_history.json")
 COMPANY_HISTORY_PATH = Path("data/company_unit_history.json")
+RBI_CREDIT_PATH = Path("data/rbi_credit.json")
 
 
 def _load_siam_history() -> list[dict[str, Any]]:
@@ -156,6 +157,7 @@ def build_payload(
     retail = build_retail_module(snapshot["fada"], validations, vahan_oem_cache)
     siam_with_history = _merge_siam_history(snapshot["siam"])
     wholesale = build_wholesale_module(siam_with_history, retail, validations)
+    credit_pulse = build_credit_pulse_module()
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -190,6 +192,7 @@ def build_payload(
             "official_ev": official_ev,
             "wholesale": wholesale,
             "components": components,
+            "credit_pulse": credit_pulse,
         },
         "insights": insights,
         "company_map": build_company_map(),
@@ -490,6 +493,73 @@ def build_wholesale_module(
         "retail_vs_wholesale": retail_vs_wholesale,
         "quarter_summary": siam["q3_2025_26"],
         "calendar_year_summary": siam["cy_2025"],
+    }
+
+
+def build_credit_pulse_module() -> dict[str, Any]:
+    """RBI Vehicle Loans outstanding — a leading indicator of retail auto demand
+    financing. Reads ``data/rbi_credit.json`` (seeded + extended by
+    ``scripts/refresh_rbi_credit.py``). When the file is missing or empty the
+    module reports ``available=False`` and the Credit Pulse tab hides itself."""
+    if not RBI_CREDIT_PATH.exists():
+        return {"available": False, "title": MODULE_TITLES["credit_pulse"], "reason": "rbi_credit.json not present"}
+    try:
+        payload = json.loads(RBI_CREDIT_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"available": False, "title": MODULE_TITLES["credit_pulse"], "reason": "rbi_credit.json is malformed"}
+
+    series = sorted(
+        (row for row in (payload.get("series") or []) if row.get("month") and row.get("outstanding_cr") is not None),
+        key=lambda row: row["month"],
+    )
+    if not series:
+        return {"available": False, "title": MODULE_TITLES["credit_pulse"], "reason": "rbi_credit.json has no rows"}
+
+    months = [
+        {
+            "month": row["month"],
+            "label": month_label(row["month"]),
+            "outstanding_cr": row["outstanding_cr"],
+            "yoy_pct": row.get("yoy_pct"),
+            "source_url": row.get("source_url") or payload.get("source_url"),
+        }
+        for row in series
+    ]
+
+    latest = months[-1]
+    prior_yoy = next((m["yoy_pct"] for m in reversed(months[:-1]) if m["yoy_pct"] is not None), None)
+    yoy_change_pp = (
+        round(latest["yoy_pct"] - prior_yoy, 1) if latest["yoy_pct"] is not None and prior_yoy is not None else None
+    )
+
+    twelve_months_ago = months[-13] if len(months) >= 13 else months[0]
+    twelve_month_growth_pct = (
+        round((latest["outstanding_cr"] - twelve_months_ago["outstanding_cr"]) / twelve_months_ago["outstanding_cr"] * 100, 1)
+        if twelve_months_ago["outstanding_cr"]
+        else None
+    )
+
+    return {
+        "available": True,
+        "title": MODULE_TITLES["credit_pulse"],
+        "source_meta": {
+            "name": payload.get("source_name", "RBI"),
+            "url": payload.get("source_url"),
+            "note": payload.get("coverage_note", ""),
+            "concept": payload.get("concept", ""),
+            "is_seed": bool(payload.get("is_seed", False)),
+            "latest_month": latest["month"],
+        },
+        "latest": {
+            "month": latest["month"],
+            "label": latest["label"],
+            "outstanding_cr": latest["outstanding_cr"],
+            "yoy_pct": latest["yoy_pct"],
+            "yoy_change_pp": yoy_change_pp,
+            "twelve_month_growth_pct": twelve_month_growth_pct,
+            "source_url": latest["source_url"],
+        },
+        "months": months,
     }
 
 

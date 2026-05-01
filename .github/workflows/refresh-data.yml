@@ -55,6 +55,13 @@ jobs:
         run: python -u scripts/backfill_company_history.py
         continue-on-error: true
 
+      - name: Refresh RBI vehicle-loan credit pulse
+        # Walks RBI's Sectoral Deployment of Bank Credit press releases for
+        # any month newer than what data/rbi_credit.json already carries,
+        # parses the Vehicle Loans line, and refreshes the file. Idempotent.
+        run: python -u scripts/refresh_rbi_credit.py
+        continue-on-error: true
+
       - name: Rebuild dashboard with OEM/SIAM/company history
         # The backfills may have added new months, so rebuild so the periodized
         # OEM tables, the SIAM trend chart, and the listed-company spotlight
@@ -75,7 +82,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/vahan_oem_live.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/vahan_oem_live.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi
