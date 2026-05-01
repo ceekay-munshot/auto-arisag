@@ -481,7 +481,14 @@ def fetch_text(url: str, timeout: int = 20) -> tuple[str, str]:
             "--location",
             "--compressed",
             "--max-time",
-            str(timeout),
+            str(max(timeout, 60)),
+            "--connect-timeout",
+            "20",
+            "--retry",
+            "2",
+            "--retry-delay",
+            "5",
+            "--retry-connrefused",
         ]
         for key, value in DEFAULT_HEADERS.items():
             command.extend(["-H", f"{key}: {value}"])
@@ -510,7 +517,14 @@ def fetch_binary(url: str, timeout: int = 60) -> tuple[bytes, str]:
             "--location",
             "--compressed",
             "--max-time",
-            str(timeout),
+            str(max(timeout, 60)),
+            "--connect-timeout",
+            "20",
+            "--retry",
+            "2",
+            "--retry-delay",
+            "5",
+            "--retry-connrefused",
         ]
         for key, value in DEFAULT_HEADERS.items():
             command.extend(["-H", f"{key}: {value}"])

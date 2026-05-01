@@ -227,11 +227,11 @@ class VahanOemClient:
 
     def _boot(self) -> None:
         try:
-            html = self._get_text(VAHAN_REPORT_URL, headers=self.headers, timeout=30)
+            html = self._get_text(VAHAN_REPORT_URL, headers=self.headers, timeout=90)
         except Exception:
             self.transport = "curl"
             self.cookie_jar_path = Path(tempfile.NamedTemporaryFile(prefix="vahan_cookies_", suffix=".txt", delete=False).name)
-            html = self._get_text(VAHAN_REPORT_URL, headers=self.headers, timeout=30)
+            html = self._get_text(VAHAN_REPORT_URL, headers=self.headers, timeout=90)
         self.view_state = self._extract_view_state_from_html(html)
         self.action_url = self._extract_form_action(html)
         self._post_partial(
@@ -391,7 +391,14 @@ class VahanOemClient:
             "--location",
             "--compressed",
             "--max-time",
-            str(timeout),
+            str(max(timeout, 90)),  # Parivahan from cloud IPs is slow; give it room
+            "--connect-timeout",
+            "30",
+            "--retry",
+            "2",
+            "--retry-delay",
+            "5",
+            "--retry-connrefused",
         ]
         if self.cookie_jar_path:
             command.extend(["-b", str(self.cookie_jar_path), "-c", str(self.cookie_jar_path)])
