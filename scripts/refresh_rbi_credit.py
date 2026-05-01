@@ -32,6 +32,7 @@ Run via the GitHub Actions cron — sandbox networks cannot reach RBI.
 from __future__ import annotations
 
 import calendar
+import html
 import json
 import re
 import sys
@@ -70,16 +71,24 @@ EXCEL_HEADERS = {
     ),
 }
 
-# Listing-page link: "Sectoral Deployment of Bank Credit – March 2026" →
-# BS_PressReleaseDisplay.aspx?prid=62660. The dash is sometimes a hyphen
-# (-), sometimes an en-dash (–) and occasionally a non-breaking variant.
-LISTING_LINK_RE = re.compile(
-    r'<a[^>]+href="([^"]*BS_PressReleaseDisplay\.aspx\?prid=\d+[^"]*)"[^>]*>'
-    r'\s*Sectoral\s+Deployment\s+of\s+Bank\s+Credit\s*'
-    r"[–—‐\-]\s*"
-    r"(January|February|March|April|May|June|July|August|September|October|November|December)"
-    r"\s+(\d{4})\s*</a>",
+# Step 1: pick every <a> whose href points at a press release (prid=N).
+# We capture (href, inner_html) and decode the inner text afterwards. This
+# is far more robust than trying to anchor the title inside the same regex
+# because RBI sometimes wraps the title in nested font/span tags or uses
+# HTML entities (`&ndash;`) for the dash.
+PRESS_RELEASE_ANCHOR_RE = re.compile(
+    r'<a[^>]+href="([^"]*BS_PressReleaseDisplay\.aspx\?[^"]*?prid=\d+[^"]*)"[^>]*>'
+    r"(.*?)</a>",
     re.IGNORECASE | re.DOTALL,
+)
+
+# Step 2: out of the anchor texts, pull the (month, year) from the title.
+SDBC_TITLE_RE = re.compile(
+    r"Sectoral\s+Deployment\s+of\s+Bank\s+Credit\b"
+    r"[^A-Za-z]{1,8}"  # tolerate any combination of dashes / spaces / punctuation
+    r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+    r"[\s,]*(\d{4})",
+    re.IGNORECASE,
 )
 
 # Detail page → first .xlsx attachment. RBI labels the link "Statements
@@ -118,19 +127,43 @@ def _fetch_excel(url: str) -> bytes | None:
         return None
 
 
+def _anchor_text(inner_html: str) -> str:
+    """Strip nested tags and decode HTML entities so we can match the
+    title with a plain regex."""
+    text = re.sub(r"<[^>]+>", " ", inner_html)
+    text = html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def _discover_releases(listing_html: str) -> list[tuple[str, str]]:
     """Return ``[(month_id, detail_url), ...]`` for every release the
     listing page advertises. ``month_id`` is the *reference* month (e.g.
     Mar 2026 for the release titled "March 2026" that drops in Apr 2026)."""
     out: list[tuple[str, str]] = []
-    for match in LISTING_LINK_RE.finditer(listing_html):
-        relative_href, month_name, year_text = match.groups()
+    seen: set[str] = set()
+    anchors = PRESS_RELEASE_ANCHOR_RE.findall(listing_html)
+    print(f"  press-release anchors found: {len(anchors)}", flush=True)
+    for relative_href, inner in anchors:
+        text = _anchor_text(inner)
+        match = SDBC_TITLE_RE.search(text)
+        if not match:
+            continue
+        month_name, year_text = match.groups()
         try:
             month_id = to_month_id(month_name, int(year_text))
         except ValueError:
             continue
         detail_url = urljoin(LISTING_URL, relative_href)
+        if detail_url in seen:
+            continue
+        seen.add(detail_url)
         out.append((month_id, detail_url))
+    if not out and anchors:
+        # Surface the first few anchor texts so the workflow log tells us
+        # exactly why our title regex didn't match (encoding shift, layout
+        # change, etc.) without needing another round-trip.
+        sample = [_anchor_text(inner)[:120] for _, inner in anchors[:8]]
+        print(f"  no SDBC titles matched. First anchor texts: {sample}", flush=True)
     return out
 
 
@@ -256,8 +289,14 @@ def main() -> int:
     if not listing_html:
         print("RBI listing fetch failed; nothing to update.", file=sys.stderr)
         return 1
+    print(f"RBI listing: HTML length {len(listing_html)} chars", flush=True)
     releases = _discover_releases(listing_html)
     if not releases:
+        # Last-ditch breadcrumb: dump the first ~600 chars of body so we
+        # can eyeball whether RBI returned a real listing or some
+        # interstitial / error page.
+        snippet = re.sub(r"\s+", " ", listing_html)[:600]
+        print(f"  listing snippet: {snippet}", flush=True)
         print("RBI listing returned 0 releases.", file=sys.stderr)
         return 1
     print(f"RBI listing: discovered {len(releases)} releases", flush=True)
