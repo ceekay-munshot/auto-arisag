@@ -2025,3 +2025,254 @@ th:hover {
 .checklist li strong {
   color: var(--deep);
 }
+
+/* Premium / Paid Data tab */
+.premium-summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 28px;
+}
+
+.premium-summary-tile {
+  background: var(--bg-ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.premium-summary-tile .kpi-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.premium-summary-tile .kpi-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--deep);
+  line-height: 1.1;
+}
+
+.premium-summary-tile .kpi-detail {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 960px) {
+  .premium-summary-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .premium-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.premium-card {
+  position: relative;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(20, 39, 62, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(20, 39, 62, 0.09);
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--card-accent, var(--accent));
+}
+
+.premium-card.premium-tone-red { --card-accent: linear-gradient(90deg, #cc4343, #d97757); }
+.premium-card.premium-tone-amber { --card-accent: linear-gradient(90deg, #d99547, #b9912c); }
+.premium-card.premium-tone-blue { --card-accent: linear-gradient(90deg, #4c74c7, #5a8fdc); }
+.premium-card.premium-tone-purple { --card-accent: linear-gradient(90deg, #7a4cc7, #b076e8); }
+.premium-card.premium-tone-teal { --card-accent: linear-gradient(90deg, #2f897d, #3fb0a0); }
+
+.premium-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.premium-card-tier {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.premium-card-status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.premium-tone-red .premium-card-status {
+  background: rgba(204, 67, 67, 0.12);
+  color: #8a2727;
+  border: 1px solid rgba(204, 67, 67, 0.3);
+}
+
+.premium-tone-amber .premium-card-status {
+  background: rgba(217, 149, 71, 0.14);
+  color: #8a5a1a;
+  border: 1px solid rgba(217, 149, 71, 0.36);
+}
+
+.premium-tone-blue .premium-card-status {
+  background: rgba(76, 116, 199, 0.12);
+  color: #2a4a8e;
+  border: 1px solid rgba(76, 116, 199, 0.3);
+}
+
+.premium-tone-purple .premium-card-status {
+  background: rgba(122, 76, 199, 0.12);
+  color: #4d2d80;
+  border: 1px solid rgba(122, 76, 199, 0.3);
+}
+
+.premium-tone-teal .premium-card-status {
+  background: rgba(47, 137, 125, 0.14);
+  color: #1d5a4f;
+  border: 1px solid rgba(47, 137, 125, 0.32);
+}
+
+.premium-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--deep);
+  line-height: 1.25;
+}
+
+.premium-card-tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.premium-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.premium-card-section .small-label {
+  margin: 0;
+}
+
+.premium-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.premium-chip {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-soft);
+  border: 1px solid rgba(194, 108, 58, 0.22);
+  color: #6a3a1a;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.premium-tone-red .premium-chip { background: rgba(204, 67, 67, 0.08); border-color: rgba(204, 67, 67, 0.22); color: #8a2727; }
+.premium-tone-amber .premium-chip { background: rgba(217, 149, 71, 0.10); border-color: rgba(217, 149, 71, 0.28); color: #8a5a1a; }
+.premium-tone-blue .premium-chip { background: rgba(76, 116, 199, 0.08); border-color: rgba(76, 116, 199, 0.22); color: #2a4a8e; }
+.premium-tone-purple .premium-chip { background: rgba(122, 76, 199, 0.08); border-color: rgba(122, 76, 199, 0.22); color: #4d2d80; }
+.premium-tone-teal .premium-chip { background: rgba(47, 137, 125, 0.10); border-color: rgba(47, 137, 125, 0.28); color: #1d5a4f; }
+
+.premium-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.premium-bullets li {
+  margin-bottom: 4px;
+}
+
+.premium-card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.premium-cost {
+  flex: 1;
+  min-width: 0;
+}
+
+.premium-cost-value {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.premium-cost-note {
+  margin: 3px 0 0;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+.premium-cta {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  padding: 9px 14px;
+  text-decoration: none;
+}
+
+.premium-tone-red .premium-summary-tile.premium-tone-red,
+.premium-summary-tile.premium-tone-red {
+  background: linear-gradient(180deg, rgba(204, 67, 67, 0.08), rgba(204, 67, 67, 0.02));
+  border-color: rgba(204, 67, 67, 0.28);
+}
+
+.premium-summary-tile.premium-tone-amber {
+  background: linear-gradient(180deg, rgba(217, 149, 71, 0.10), rgba(217, 149, 71, 0.02));
+  border-color: rgba(217, 149, 71, 0.32);
+}
+
+.premium-summary-tile.premium-tone-blue {
+  background: linear-gradient(180deg, rgba(76, 116, 199, 0.08), rgba(76, 116, 199, 0.02));
+  border-color: rgba(76, 116, 199, 0.28);
+}

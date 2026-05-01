@@ -1052,6 +1052,7 @@ function setupChartTooltips() {
 function tabDefinitions() {
   const registrationAvailable = !!dashboardData.modules.registration?.available;
   const creditPulseAvailable = !!dashboardData.modules.credit_pulse?.available;
+  const premiumDataAvailable = !!dashboardData.modules.premium_data?.available;
   return [
     {
       id: "overview",
@@ -1117,6 +1118,13 @@ function tabDefinitions() {
       group: "Macro",
       hidden: !creditPulseAvailable,
       render: () => creditPulseAvailable ? renderCreditPulseSection() : "",
+    },
+    {
+      id: "premium-data",
+      label: "Premium data sources",
+      group: "Data",
+      hidden: !premiumDataAvailable,
+      render: () => premiumDataAvailable ? renderPremiumDataSection() : "",
     },
   ];
 }
@@ -3911,6 +3919,114 @@ function stackRow(label, widthPct, value, color, detail = "") {
       </div>
       <strong title="${detail}">${formatPct(value, 2)}</strong>
     </div>
+  `;
+}
+
+function renderPremiumDataSection() {
+  const module_ = dashboardData.modules.premium_data;
+  if (!module_?.available) {
+    return "";
+  }
+  const summary = module_.summary || {};
+  const sources = module_.sources || [];
+
+  const statusToTone = {
+    blocked: { label: "Blocked from cloud runners", tone: "premium-tone-red" },
+    partial: { label: "Partially live", tone: "premium-tone-amber" },
+    absent: { label: "Not yet integrated", tone: "premium-tone-blue" },
+  };
+
+  const renderCard = (src) => {
+    const toneClass = `premium-tone-${src.color || "blue"}`;
+    const status = statusToTone[src.status] || { label: src.status_label || "—", tone: toneClass };
+    return `
+      <article class="premium-card ${toneClass}">
+        <header class="premium-card-head">
+          <div class="premium-card-tier">${src.tier || ""}</div>
+          <div class="premium-card-status ${status.tone}">${src.status_label || status.label}</div>
+        </header>
+        <h3 class="premium-card-title">${src.name}</h3>
+        <p class="premium-card-tagline">${src.tagline || ""}</p>
+
+        ${(src.currently_unlocks && src.currently_unlocks.length) ? `
+          <div class="premium-card-section">
+            <p class="small-label">Unlocks on this dashboard</p>
+            <div class="premium-chip-row">
+              ${src.currently_unlocks.map((item) => `<span class="premium-chip">${item}</span>`).join("")}
+            </div>
+          </div>
+        ` : ""}
+
+        ${(src.what_you_get && src.what_you_get.length) ? `
+          <div class="premium-card-section">
+            <p class="small-label">What you get</p>
+            <ul class="premium-bullets">
+              ${src.what_you_get.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+          </div>
+        ` : ""}
+
+        <footer class="premium-card-foot">
+          <div class="premium-cost">
+            <p class="small-label">Indicative cost</p>
+            <p class="premium-cost-value">${src.cost || "—"}</p>
+            ${src.cost_note ? `<p class="premium-cost-note">${src.cost_note}</p>` : ""}
+          </div>
+          ${src.cta_url ? `
+            <a class="button button-primary premium-cta" href="${src.cta_url}" target="_blank" rel="noopener">
+              ${src.cta_label || "Get access"} ↗
+            </a>
+          ` : ""}
+        </footer>
+      </article>
+    `;
+  };
+
+  return `
+    <section id="section-premium-data" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Premium / Paid Data</p>
+          <h2>Sources we don't yet feed live</h2>
+        </div>
+        <p class="section-subtitle">
+          What's locked behind a paid subscription, and what each one would unlock on this dashboard
+          if it were funded. Costs are indicative ranges, not quotes.
+        </p>
+      </div>
+
+      <div class="premium-summary-row">
+        <div class="premium-summary-tile premium-tone-red">
+          <p class="kpi-label">Tabs blocked today</p>
+          <p class="kpi-value">${summary.blocked || 0}</p>
+          <p class="kpi-detail">Disabled due to source paywall / runner block</p>
+        </div>
+        <div class="premium-summary-tile premium-tone-amber">
+          <p class="kpi-label">Partially live</p>
+          <p class="kpi-value">${summary.partial || 0}</p>
+          <p class="kpi-detail">Hardcoded snapshot, not auto-refreshing</p>
+        </div>
+        <div class="premium-summary-tile premium-tone-blue">
+          <p class="kpi-label">Future enhancements</p>
+          <p class="kpi-value">${summary.not_integrated || 0}</p>
+          <p class="kpi-detail">Sources we'd add with a paid subscription</p>
+        </div>
+        <div class="premium-summary-tile">
+          <p class="kpi-label">Total sources catalogued</p>
+          <p class="kpi-value">${summary.total || sources.length}</p>
+          <p class="kpi-detail">India auto demand + macro context coverage</p>
+        </div>
+      </div>
+
+      <div class="premium-grid">
+        ${sources.map(renderCard).join("")}
+      </div>
+
+      <p class="explainer-footer" style="margin-top:18px;">
+        Want to activate one of these? Send the corresponding source URL on the right and I'll wire the
+        scraper / SDK into the daily refresh workflow within one PR.
+      </p>
+    </section>
   `;
 }
 

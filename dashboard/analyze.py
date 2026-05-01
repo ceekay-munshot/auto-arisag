@@ -16,6 +16,7 @@ from .config import (
     LISTED_COMPANY_MAP,
     MODULE_TITLES,
     OEM_TO_LISTED,
+    PREMIUM_DATA_SOURCES,
     RETAIL_CATEGORY_ORDER,
     COMPANY_UNIT_TRENDS,
     VAHAN_STATE_SOURCE_URL,
@@ -158,6 +159,7 @@ def build_payload(
     siam_with_history = _merge_siam_history(snapshot["siam"])
     wholesale = build_wholesale_module(siam_with_history, retail, validations)
     credit_pulse = build_credit_pulse_module()
+    premium_data = build_premium_data_module()
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -193,6 +195,7 @@ def build_payload(
             "wholesale": wholesale,
             "components": components,
             "credit_pulse": credit_pulse,
+            "premium_data": premium_data,
         },
         "insights": insights,
         "company_map": build_company_map(),
@@ -577,6 +580,27 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "source_url": latest["source_url"],
         },
         "months": months,
+    }
+
+
+def build_premium_data_module() -> dict[str, Any]:
+    """Static catalogue of premium / paid data sources that aren't yet wired
+    into the dashboard. Surfaced as its own tab so clients see what would
+    unlock if they fund a paid feed."""
+    sources = list(PREMIUM_DATA_SOURCES)
+    blocked = sum(1 for src in sources if src.get("status") == "blocked")
+    partial = sum(1 for src in sources if src.get("status") == "partial")
+    not_integrated = sum(1 for src in sources if src.get("status") == "absent")
+    return {
+        "available": True,
+        "title": MODULE_TITLES["premium_data"],
+        "summary": {
+            "total": len(sources),
+            "blocked": blocked,
+            "partial": partial,
+            "not_integrated": not_integrated,
+        },
+        "sources": sources,
     }
 
 
