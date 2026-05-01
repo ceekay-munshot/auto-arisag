@@ -6,18 +6,18 @@
   "coverage_note": "Outstanding amount as of the last reporting Friday of each month. Initial values seeded from RBI Sectoral Deployment of Bank Credit press releases; the cron-driven RBI scraper extends the series and corrects any seed values to match the latest official release.",
   "is_seed": true,
   "series": [
-    {"month": "2024-03", "outstanding_cr": 566092, "yoy_pct": 17.3, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-04", "outstanding_cr": 568867, "yoy_pct": 17.7, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-05", "outstanding_cr": 575810, "yoy_pct": 17.5, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-06", "outstanding_cr": 581400, "yoy_pct": 16.7, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-07", "outstanding_cr": 587234, "yoy_pct": 16.5, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-08", "outstanding_cr": 595300, "yoy_pct": 15.5, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-09", "outstanding_cr": 605200, "yoy_pct": 14.0, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-10", "outstanding_cr": 611100, "yoy_pct": 13.4, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-11", "outstanding_cr": 615400, "yoy_pct": 12.8, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2024-12", "outstanding_cr": 618800, "yoy_pct": 12.4, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2025-01", "outstanding_cr": 622300, "yoy_pct": 11.6, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2025-02", "outstanding_cr": 625900, "yoy_pct": 10.8, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
-    {"month": "2025-03", "outstanding_cr": 629500, "yoy_pct": 10.0, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"}
+    {"month": "2024-03", "outstanding_cr": 566092, "yoy_pct": 17.3, "non_food_total_cr": 16447600, "non_food_yoy_pct": 16.3, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-04", "outstanding_cr": 568867, "yoy_pct": 17.7, "non_food_total_cr": 16604000, "non_food_yoy_pct": 15.3, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-05", "outstanding_cr": 575810, "yoy_pct": 17.5, "non_food_total_cr": 16808500, "non_food_yoy_pct": 16.2, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-06", "outstanding_cr": 581400, "yoy_pct": 16.7, "non_food_total_cr": 16934800, "non_food_yoy_pct": 13.9, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-07", "outstanding_cr": 587234, "yoy_pct": 16.5, "non_food_total_cr": 17081400, "non_food_yoy_pct": 13.7, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-08", "outstanding_cr": 595300, "yoy_pct": 15.5, "non_food_total_cr": 17249800, "non_food_yoy_pct": 13.6, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-09", "outstanding_cr": 605200, "yoy_pct": 14.0, "non_food_total_cr": 17396500, "non_food_yoy_pct": 12.7, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-10", "outstanding_cr": 611100, "yoy_pct": 13.4, "non_food_total_cr": 17564000, "non_food_yoy_pct": 12.8, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-11", "outstanding_cr": 615400, "yoy_pct": 12.8, "non_food_total_cr": 17684300, "non_food_yoy_pct": 11.8, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2024-12", "outstanding_cr": 618800, "yoy_pct": 12.4, "non_food_total_cr": 17887000, "non_food_yoy_pct": 11.5, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2025-01", "outstanding_cr": 622300, "yoy_pct": 11.6, "non_food_total_cr": 18024500, "non_food_yoy_pct": 11.4, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2025-02", "outstanding_cr": 625900, "yoy_pct": 10.8, "non_food_total_cr": 18154200, "non_food_yoy_pct": 11.2, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"},
+    {"month": "2025-03", "outstanding_cr": 629500, "yoy_pct": 10.0, "non_food_total_cr": 18356800, "non_food_yoy_pct": 11.1, "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"}
   ]
 }

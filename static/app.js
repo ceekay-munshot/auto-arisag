@@ -3930,10 +3930,68 @@ function renderCreditPulseSection() {
       values: months.map((point) => point.outstanding_cr),
     },
   ];
-  const yoyValues = months.map((point) => point.yoy_pct);
+  const yoyComparisonSeries = [
+    {
+      label: "Vehicle loans YoY %",
+      color: dashboardData.chart_colors?.primary || "#4c8bf5",
+      values: months.map((point) => point.yoy_pct),
+    },
+    {
+      label: "Total non-food bank credit YoY %",
+      color: dashboardData.chart_colors?.accent || "#f59e0b",
+      values: months.map((point) => point.non_food_yoy_pct),
+    },
+  ];
   const seedNote = credit.source_meta?.is_seed
     ? `<div class="empty-note">Showing seed values from RBI Sectoral Deployment of Bank Credit press releases. The cron-driven RBI scraper will overwrite these with verified live readings on its next successful run.</div>`
     : "";
+
+  const sharePct = latest.share_pct;
+  const spreadPp = latest.spread_pp;
+  const spreadColor = (spreadPp ?? 0) >= 0 ? "#10b981" : "#ef4444";
+  const shareGaugeWidth = Math.max(0, Math.min(100, (sharePct || 0) * 10));
+
+  const renderShareGauge = () => {
+    if (sharePct === null || sharePct === undefined) {
+      return "";
+    }
+    return `
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Share of total bank credit &mdash; ${latest.label || ""}</p>
+            <h3>${sharePct.toFixed(2)}%</h3>
+            <p class="metric-detail">Vehicle loans as a share of non-food bank credit (${formatCrore(latest.non_food_total_cr || 0)} total)</p>
+          </div>
+        </div>
+        <div class="stack-bar" style="margin-top:12px;">
+          <div class="stack-segment" style="width:${shareGaugeWidth}%;background:${dashboardData.chart_colors?.primary || "#4c8bf5"};"></div>
+        </div>
+        <p class="metric-detail" style="margin-top:8px;">Bar scaled 0&ndash;10% of total non-food bank credit. Vehicle loans typically run between 3% and 4%.</p>
+      </div>
+    `;
+  };
+
+  const renderSpreadCard = () => {
+    if (spreadPp === null || spreadPp === undefined) {
+      return "";
+    }
+    const direction = spreadPp >= 0 ? "above" : "below";
+    return `
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Vehicle vs total credit growth</p>
+            <h3 style="color:${spreadColor};">${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)} pp</h3>
+            <p class="metric-detail">
+              Vehicle loans growing ${formatSigned(latest.yoy_pct, 1)} YoY,
+              ${direction} the ${formatSigned(latest.non_food_yoy_pct, 1)} pace of total non-food bank credit.
+            </p>
+          </div>
+        </div>
+      </div>
+    `;
+  };
 
   return `
     <section id="section-credit-pulse" class="section panel section-anchor">
@@ -3967,22 +4025,27 @@ function renderCreditPulseSection() {
             ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
           </div>
         </div>
+        ${renderSpreadCard()}
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
-              <p class="small-label">YoY growth trend</p>
-              <h3>How fast bank vehicle credit is expanding</h3>
+              <p class="small-label">YoY growth: vehicle loans vs total bank credit</p>
+              <h3>Is auto credit running hotter or cooler than the broader book?</h3>
             </div>
           </div>
           <div class="chart-frame">
             ${lineChart(
               months.map((point) => point.label),
-              [{label: "YoY growth (%)", color: dashboardData.chart_colors?.accent || "#f59e0b", values: yoyValues}],
+              yoyComparisonSeries,
               (value) => `${Number(value || 0).toFixed(1)}%`,
               (value) => `${Number(value || 0).toFixed(1)}%`,
             )}
           </div>
+          <div class="chart-legend">
+            ${yoyComparisonSeries.map((s) => legendItem(s.label, s.color)).join("")}
+          </div>
         </div>
+        ${renderShareGauge()}
       </div>
     </section>
   `;
