@@ -22,6 +22,7 @@ const state = {
   activeTab: "overview",
   creditPulseExplainerOpen: false,
   searchQuery: "",
+  printAllTabs: false,
 };
 
 const SECTION_TO_TAB = {
@@ -921,26 +922,173 @@ function scrollToPendingSection() {
 
 function setupDownloads() {
   document.querySelectorAll("[data-download-key]").forEach((node) => {
-    node.addEventListener("click", () => {
+    node.addEventListener("click", async () => {
       const record = downloadRegistry.get(node.dataset.downloadKey);
-      if (!record) {
-        return;
+      if (!record) return;
+      const originalText = node.textContent;
+      node.textContent = "Preparing…";
+      node.disabled = true;
+      try {
+        await downloadAsXlsx(record);
+      } catch (err) {
+        console.warn("XLSX download failed, falling back to CSV", err);
+        downloadAsCsv(record);
+      } finally {
+        node.textContent = originalText;
+        node.disabled = false;
       }
-      const header = record.columns.join(",");
-      const rows = record.rows.map((row) =>
-        record.columns
-          .map((column) => csvEscape(row[column]))
-          .join(",")
-      );
-      const blob = new Blob([[header, ...rows].join("\n")], { type: "text/csv;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = record.filename;
-      link.click();
-      URL.revokeObjectURL(url);
     });
   });
+}
+
+let _excelJsLoader = null;
+function ensureExcelJs() {
+  if (window.ExcelJS) return Promise.resolve(window.ExcelJS);
+  if (_excelJsLoader) return _excelJsLoader;
+  _excelJsLoader = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js";
+    script.async = true;
+    script.onload = () => resolve(window.ExcelJS);
+    script.onerror = (e) => {
+      _excelJsLoader = null;
+      reject(e);
+    };
+    document.head.appendChild(script);
+  });
+  return _excelJsLoader;
+}
+
+async function downloadAsXlsx(record) {
+  const ExcelJS = await ensureExcelJs();
+  const wb = new ExcelJS.Workbook();
+  wb.creator = "auto-arisag dashboard";
+  wb.created = new Date();
+
+  const sheetTitle = record.filename.replace(/\.(csv|xlsx)$/i, "").slice(0, 31);
+  const ws = wb.addWorksheet(sheetTitle, {
+    properties: { tabColor: { argb: "FFC26C3A" } },
+    views: [{ showGridLines: false }],
+  });
+
+  const colCount = record.columns.length;
+
+  // Row 1 — title
+  ws.mergeCells(1, 1, 1, colCount);
+  const titleCell = ws.getCell(1, 1);
+  titleCell.value = `India Auto Demand Monitor — ${sheetTitle}`;
+  titleCell.font = { bold: true, size: 18, color: { argb: "FF14273E" } };
+  titleCell.alignment = { vertical: "middle", horizontal: "left", indent: 1 };
+  ws.getRow(1).height = 30;
+
+  // Row 2 — generated stamp
+  ws.mergeCells(2, 1, 2, colCount);
+  const subCell = ws.getCell(2, 1);
+  const today = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
+  subCell.value = `Generated ${today} · auto-arisag.dashboard · Source-linked rows`;
+  subCell.font = { italic: true, size: 10, color: { argb: "FF667687" } };
+  subCell.alignment = { vertical: "middle", horizontal: "left", indent: 1 };
+
+  // Row 3 — accent strip
+  ws.mergeCells(3, 1, 3, colCount);
+  ws.getCell(3, 1).fill = { type: "pattern", pattern: "solid", fgColor: { argb: "FFC26C3A" } };
+  ws.getRow(3).height = 4;
+
+  // Row 4 — header row
+  const headerRow = ws.addRow(record.columns);
+  headerRow.eachCell((cell) => {
+    cell.font = { bold: true, color: { argb: "FFF7F1E4" }, size: 11 };
+    cell.fill = { type: "pattern", pattern: "solid", fgColor: { argb: "FF14273E" } };
+    cell.alignment = { vertical: "middle", horizontal: "center", wrapText: true };
+    cell.border = {
+      top: { style: "thin", color: { argb: "FF14273E" } },
+      bottom: { style: "medium", color: { argb: "FFC26C3A" } },
+    };
+  });
+  headerRow.height = 24;
+
+  // Detect YoY / growth / change columns for colour coding
+  const yoyColIdxs = record.columns
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => /yoy|growth|chang|delta|mom/i.test(String(c)))
+    .map(({ i }) => i);
+  // Detect numeric columns for right-alignment + number format
+  const isNumericColumn = record.columns.map((col) =>
+    record.rows.some((r) => typeof r[col] === "number" && Number.isFinite(r[col])),
+  );
+
+  // Data rows
+  record.rows.forEach((row, rowIdx) => {
+    const dataRow = ws.addRow(record.columns.map((col) => row[col]));
+    const zebraFill = rowIdx % 2 === 0 ? "FFFBF6EB" : "FFFFFDFA";
+    dataRow.eachCell({ includeEmpty: true }, (cell, colNumber) => {
+      const colIdx = colNumber - 1;
+      cell.fill = { type: "pattern", pattern: "solid", fgColor: { argb: zebraFill } };
+      cell.border = {
+        bottom: { style: "thin", color: { argb: "FFE5DFD0" } },
+      };
+      if (isNumericColumn[colIdx]) {
+        cell.alignment = { horizontal: "right", vertical: "middle" };
+        if (yoyColIdxs.includes(colIdx)) {
+          cell.numFmt = '+0.0"%";-0.0"%";0.0"%"';
+        } else {
+          cell.numFmt = "#,##0.##";
+        }
+      } else {
+        cell.alignment = { horizontal: "left", vertical: "middle", indent: 1 };
+      }
+      // Colour-code YoY cells by sign
+      if (yoyColIdxs.includes(colIdx) && typeof cell.value === "number") {
+        if (cell.value > 0) {
+          cell.font = { color: { argb: "FF1D5A4F" }, bold: true };
+        } else if (cell.value < 0) {
+          cell.font = { color: { argb: "FF8A2727" }, bold: true };
+        }
+      }
+    });
+  });
+
+  // Column widths — fit-to-content with sane min/max.
+  ws.columns.forEach((col, i) => {
+    const header = record.columns[i];
+    const maxLen = Math.max(
+      String(header || "").length,
+      ...record.rows.map((r) => String(r[header] ?? "").length),
+    );
+    col.width = Math.max(8, Math.min(maxLen + 4, 36));
+  });
+
+  // Freeze header row.
+  ws.views = [{ showGridLines: false, state: "frozen", ySplit: 4 }];
+
+  // Auto-filter on the data range.
+  const lastRow = record.rows.length + 4;
+  ws.autoFilter = { from: { row: 4, column: 1 }, to: { row: lastRow, column: colCount } };
+
+  const buffer = await wb.xlsx.writeBuffer();
+  const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = record.filename.replace(/\.csv$/i, ".xlsx");
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function downloadAsCsv(record) {
+  const header = record.columns.join(",");
+  const rows = record.rows.map((row) =>
+    record.columns
+      .map((column) => csvEscape(row[column]))
+      .join(","),
+  );
+  const blob = new Blob([[header, ...rows].join("\n")], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = record.filename;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 function csvEscape(value) {
@@ -1001,21 +1149,30 @@ function setupRefreshAction() {
 function setupExportPdfAction() {
   document.querySelectorAll("[data-action='export-pdf']").forEach((node) => {
     node.addEventListener("click", () => {
-      // Stash a friendly file name. The browser print dialog uses this as
-      // the suggested PDF file name on Chrome/Edge.
-      const tabLabel = activeTabDefinition()?.label || "dashboard";
-      const safeLabel = tabLabel.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
       const today = new Date().toISOString().slice(0, 10);
       const prevTitle = document.title;
-      document.title = `auto-arisag-${safeLabel}-${today}`;
-      // Print stylesheet uses attr(data-print-date) for the footer.
+      document.title = `auto-arisag-investor-deck-${today}`;
       document.body.setAttribute("data-print-date", today);
-      try {
+      // Flip into "print all tabs" mode so the PDF includes every tab in
+      // one continuous handout, then restore once the dialog closes.
+      state.printAllTabs = true;
+      render();
+      // Give the browser one frame to lay out the print view before
+      // opening the dialog.
+      requestAnimationFrame(() => {
+        const cleanup = () => {
+          state.printAllTabs = false;
+          render();
+          document.title = prevTitle;
+          window.removeEventListener("afterprint", cleanup);
+        };
+        window.addEventListener("afterprint", cleanup);
         window.print();
-      } finally {
-        // Restore original title once the print dialog closes.
-        setTimeout(() => { document.title = prevTitle; }, 500);
-      }
+        // Safety net for browsers that don't fire afterprint.
+        setTimeout(() => {
+          if (state.printAllTabs) cleanup();
+        }, 2000);
+      });
     });
   });
 }
@@ -1365,6 +1522,35 @@ function freshnessLevel(isoDate) {
   return { tone, days };
 }
 
+function renderAllTabsForPrint() {
+  // Render every visible tab one after another, each on its own page,
+  // with a section header. Preserves the active tab's state so the
+  // dashboard renders identically when state.printAllTabs flips back.
+  const tabs = visibleTabs();
+  const today = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
+  const sections = tabs.map((tab, i) => {
+    return `
+      <section class="print-section ${i > 0 ? "print-page-break" : ""}">
+        <header class="print-section-head">
+          <span class="print-section-kicker">${tab.group || "Section"}</span>
+          <h1 class="print-section-title">${tab.label}</h1>
+          ${renderActiveTabFreshness(tab.id)}
+        </header>
+        ${tab.render()}
+      </section>
+    `;
+  });
+  return `
+    <section class="print-cover">
+      <p class="print-cover-eyebrow">Institutional Auto Dashboard</p>
+      <h1 class="print-cover-title">${dashboardData.title || "India Auto Demand Monitor"}</h1>
+      <p class="print-cover-lede">${dashboardData.subtitle || ""}</p>
+      <p class="print-cover-meta">Investor handout · Generated ${today} · Data through ${dashboardData.as_of_date || ""}</p>
+    </section>
+    ${sections.join("")}
+  `;
+}
+
 function renderActiveTabFreshness(tabId) {
   const meta = tabSourceMeta(tabId);
   if (!meta || !meta.releaseDate) return "";
@@ -1480,10 +1666,12 @@ function render() {
     renderMacroOverlayStrip(),
     renderMarketInsightsRibbon(),
     renderFilters(),
-    `<div class="dashboard-body">
-       ${renderSideNav(activeTab.id)}
-       <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
-     </div>`,
+    state.printAllTabs
+      ? `<main class="dashboard-content print-all-tabs">${renderAllTabsForPrint()}</main>`
+      : `<div class="dashboard-body">
+           ${renderSideNav(activeTab.id)}
+           <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
+         </div>`,
     renderCreditPulseExplainerModal(),
   ].join("");
 
@@ -2062,7 +2250,7 @@ function renderRetailTrendOnly() {
             </div>
             <div class="button-row">
               ${renderSourceAction(retail.source_meta.url)}
-              <button class="button" data-download-key="retail-trend">Download CSV</button>
+              <button class="button" data-download-key="retail-trend">Download Excel</button>
             </div>
           </div>
           <div class="chart-frame">
@@ -2223,7 +2411,7 @@ function renderRetailSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(retail.source_meta.url)}
-              <button class="button" data-download-key="retail-trend">Download CSV</button>
+              <button class="button" data-download-key="retail-trend">Download Excel</button>
             </div>
           </div>
           <div class="chart-frame">
@@ -2353,7 +2541,7 @@ function renderEvSection() {
             <h3>Derived EV penetration from official retail fuel mix</h3>
           </div>
           <div class="button-row">
-            <button class="button" data-download-key="ev-trend">Download CSV</button>
+            <button class="button" data-download-key="ev-trend">Download Excel</button>
           </div>
         </div>
         <div class="chart-frame">
@@ -2574,7 +2762,7 @@ function renderEvOemTracker() {
         </div>
         <div class="button-row">
           ${renderSourceAction(selected.source_url)}
-          <button class="button" data-download-key="ev-oem-tracker">Download CSV</button>
+          <button class="button" data-download-key="ev-oem-tracker">Download Excel</button>
         </div>
       </div>
       <label class="filter-field compact">
@@ -2698,7 +2886,7 @@ function renderEvTrendExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(retail.source_meta.url)}
-          <button class="button" data-download-key="ev-category-trend">Download CSV</button>
+          <button class="button" data-download-key="ev-category-trend">Download Excel</button>
         </div>
       </div>
       <div class="state-explorer-controls">
@@ -2785,7 +2973,7 @@ function renderStateRegistrationExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(module.source_meta.url)}
-          <button class="button" data-download-key="state-registration-trend">Download CSV</button>
+          <button class="button" data-download-key="state-registration-trend">Download Excel</button>
         </div>
       </div>
       <div class="state-explorer-controls">
@@ -3303,7 +3491,7 @@ function renderOemSection() {
         </div>
         <div class="oem-section-actions">
           ${sourceUrl ? `<a class="oem-source-pill" href="${sourceUrl}" target="_blank" rel="noopener">${sourceName} · view source</a>` : ""}
-          <button class="button" data-download-key="${downloadKey}">Download CSV</button>
+          <button class="button" data-download-key="${downloadKey}">Download Excel</button>
         </div>
       </div>
       ${renderOemSegmentChips(segments, active.id)}
@@ -3466,7 +3654,7 @@ function renderCompanyUnitTrend() {
           </div>
           <div class="button-row">
             ${latestPoint?.source_url ? renderSourceAction(latestPoint.source_url, "Latest source") : ""}
-            <button class="button" data-download-key="company-unit-trend">Download CSV</button>
+            <button class="button" data-download-key="company-unit-trend">Download Excel</button>
           </div>
         </div>
         <div class="company-trend-toolbar">
@@ -3538,7 +3726,7 @@ function renderOemTable(category, table) {
         </div>
         <div class="button-row">
           ${renderSourceAction(dashboardData.modules.retail?.source_meta?.url)}
-          <button class="button" data-download-key="${key}">Download CSV</button>
+          <button class="button" data-download-key="${key}">Download Excel</button>
         </div>
       </div>
       ${renderTable(
@@ -3601,7 +3789,7 @@ function renderLiveOemTable(category, table) {
             { url: table.source_meta?.url, label: "Primary source" },
             { url: table.source_meta?.validation_url, label: "Validation export" },
           ])}
-          <button class="button" data-download-key="${key}">Download CSV</button>
+          <button class="button" data-download-key="${key}">Download Excel</button>
         </div>
       </div>
       <div class="table-toolbar cv-oem-toolbar">
@@ -3653,7 +3841,7 @@ function renderRegistrationSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(registration.source_meta.url)}
-              <button class="button" data-download-key="vahan-registration">Download CSV</button>
+              <button class="button" data-download-key="vahan-registration">Download Excel</button>
             </div>
           </div>
           <div class="chart-frame">
@@ -3731,7 +3919,7 @@ function renderWholesaleSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(wholesale.source_meta.url)}
-              <button class="button" data-download-key="siam-wholesale">Download CSV</button>
+              <button class="button" data-download-key="siam-wholesale">Download Excel</button>
             </div>
           </div>
           <div class="chart-frame">
@@ -3919,7 +4107,7 @@ function renderSegmentShareExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(sourceUrl)}
-          <button class="button" data-download-key="segment-share-explorer">Download CSV</button>
+          <button class="button" data-download-key="segment-share-explorer">Download Excel</button>
         </div>
       </div>
         <div class="state-explorer-controls">
@@ -4009,7 +4197,7 @@ function renderRawMaterialExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(module.source_meta.url)}
-          <button class="button" data-download-key="raw-material-${slugify(selected.company)}">Download CSV</button>
+          <button class="button" data-download-key="raw-material-${slugify(selected.company)}">Download Excel</button>
         </div>
       </div>
       <div class="state-explorer-controls explorer-controls">
@@ -4091,7 +4279,7 @@ function renderCompanyExposureTrendExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceActions(selected.sources)}
-          <button class="button" data-download-key="company-segment-${slugify(selected.company)}">Download CSV</button>
+          <button class="button" data-download-key="company-segment-${slugify(selected.company)}">Download Excel</button>
         </div>
       </div>
       <div class="state-explorer-controls explorer-controls">
