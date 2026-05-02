@@ -2607,6 +2607,110 @@ th:hover {
   }
 }
 
+/* Listed-OEM stock chip — shows live price + 1D/1W/1M alongside the
+   listed-company spotlight. */
+.stock-chip {
+  background: linear-gradient(180deg, #ffffff 0%, #fbf6eb 100%);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stock-chip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-chip-ticker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(20, 39, 62, 0.06);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.stock-chip-link {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 0 4px;
+}
+
+.stock-chip-link:hover {
+  color: var(--accent);
+}
+
+.stock-chip-price {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--deep);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.stock-chip-changes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.stock-chip-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  flex: 1;
+  min-width: 56px;
+}
+
+.stock-chip-pill-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.stock-chip-pill-value {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.stock-tone-positive {
+  background: rgba(47, 137, 125, 0.10);
+  border: 1px solid rgba(47, 137, 125, 0.28);
+}
+.stock-tone-positive .stock-chip-pill-value { color: #1d5a4f; }
+
+.stock-tone-negative {
+  background: rgba(204, 67, 67, 0.08);
+  border: 1px solid rgba(204, 67, 67, 0.28);
+}
+.stock-tone-negative .stock-chip-pill-value { color: #8a2727; }
+
+.stock-tone-neutral {
+  background: rgba(20, 39, 62, 0.04);
+  border: 1px solid rgba(20, 39, 62, 0.10);
+}
+.stock-tone-neutral .stock-chip-pill-value { color: var(--muted); }
+
+/* Make company-trend-toolbar wrap so the stock chip drops below the
+   selector + meta on narrow screens. */
+.company-trend-toolbar {
+  flex-wrap: wrap;
+}
+
 /* Top-of-page market insights ribbon */
 .insight-ribbon {
   margin: 0 0 18px;
