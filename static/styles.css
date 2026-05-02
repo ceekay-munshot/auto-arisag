@@ -2486,6 +2486,161 @@ th:hover {
   }
 }
 
+/* Top-of-page search bar — filters tabs / companies / categories / metrics */
+.search-bar-strip {
+  margin: 0 0 14px;
+  position: relative;
+}
+
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fffdfa;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 10px 18px;
+  box-shadow: 0 4px 14px rgba(20, 39, 62, 0.05);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-bar-inner:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(194, 108, 58, 0.18), 0 6px 18px rgba(20, 39, 62, 0.08);
+}
+
+.search-icon {
+  font-size: 0.95rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--text);
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-clear {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.search-clear:hover {
+  background: var(--accent-soft);
+  color: var(--deep);
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(20, 39, 62, 0.15);
+  padding: 8px;
+  max-height: 420px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.search-group {
+  padding: 6px 0;
+}
+
+.search-group + .search-group {
+  border-top: 1px solid var(--line);
+}
+
+.search-group-label {
+  margin: 0 0 4px;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font: inherit;
+  color: var(--text);
+}
+
+.search-result:hover,
+.search-result:focus-visible {
+  background: var(--accent-soft);
+  outline: none;
+}
+
+.search-result-type {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(194, 108, 58, 0.12);
+  padding: 3px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.search-result-label {
+  font-weight: 600;
+  color: var(--deep);
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-group {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-empty {
+  padding: 14px 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* Macro overlay strip — petrol / diesel / repo rate / USD-INR */
 .macro-strip {
   margin: 0 0 14px;
