@@ -3340,6 +3340,39 @@ function renderOemTables() {
   `;
 }
 
+function renderStockSparkline(closes) {
+  // Inline SVG sparkline. Returns "" when there aren't enough data points
+  // to draw a meaningful line (typically pre-cron-run state).
+  if (!Array.isArray(closes) || closes.length < 4) return "";
+  const W = 200;
+  const H = 36;
+  const PAD = 2;
+  const min = Math.min(...closes);
+  const max = Math.max(...closes);
+  const range = (max - min) || 1;
+  const innerW = W - PAD * 2;
+  const innerH = H - PAD * 2;
+  const points = closes.map((v, i) => {
+    const x = PAD + (i / (closes.length - 1)) * innerW;
+    const y = PAD + innerH - ((v - min) / range) * innerH;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  const trendPositive = closes[closes.length - 1] >= closes[0];
+  const stroke = trendPositive ? "#1d5a4f" : "#8a2727";
+  const fill = trendPositive ? "rgba(47,137,125,0.16)" : "rgba(204,67,67,0.12)";
+  // Build a closed polygon for the area fill (sparkline + bottom edge).
+  const lastX = PAD + innerW;
+  const baselineY = H - PAD;
+  const areaPath = `M ${PAD},${baselineY} L ${points.join(" ")} L ${lastX.toFixed(1)},${baselineY} Z`;
+  const linePath = `M ${points.join(" L ")}`;
+  return `
+    <svg class="stock-chip-spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+      <path d="${areaPath}" fill="${fill}" stroke="none" />
+      <path d="${linePath}" fill="none" stroke="${stroke}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  `;
+}
+
 function renderStockChip(companyName) {
   const stocks = dashboardData.oem_stocks;
   if (!stocks?.available) return "";
@@ -3353,6 +3386,7 @@ function renderStockChip(companyName) {
   const tone = (v) => (v === null || v === undefined ? "neutral" : (v >= 0 ? "positive" : "negative"));
   const fmtPrice = (v) => v == null ? "—" : v.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const exchange = stocks.exchange || "NSE";
+  const sparkline = renderStockSparkline(stock.closes_30d);
   return `
     <div class="stock-chip">
       <div class="stock-chip-head">
@@ -3360,6 +3394,7 @@ function renderStockChip(companyName) {
         <a class="stock-chip-link" href="${stock.yahoo_url || "#"}" target="_blank" rel="noopener" title="View on Yahoo Finance">↗</a>
       </div>
       <p class="stock-chip-price">₹${fmtPrice(stock.price)}</p>
+      ${sparkline ? `<div class="stock-chip-spark-wrap" title="Last 30 trading days">${sparkline}</div>` : ""}
       <div class="stock-chip-changes">
         <span class="stock-chip-pill stock-tone-${tone(stock.change_1d_pct)}">
           <span class="stock-chip-pill-label">1D</span>
