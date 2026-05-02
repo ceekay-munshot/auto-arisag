@@ -1218,6 +1218,7 @@ function render() {
   const app = document.getElementById("app");
   app.innerHTML = [
     renderHero(),
+    renderMarketInsightsRibbon(),
     renderFilters(),
     `<div class="dashboard-body">
        ${renderSideNav(activeTab.id)}
@@ -1244,6 +1245,7 @@ function render() {
   setupDownloads();
   setupChartTooltips();
   setupCreditPulseExplainer();
+  setupMarketInsightsRibbon();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -4305,6 +4307,57 @@ function renderCreditPulseExplainerModal() {
       </div>
     </div>
   `;
+}
+
+function renderMarketInsightsRibbon() {
+  const cards = dashboardData.market_insights || [];
+  if (!cards.length) {
+    return "";
+  }
+  const renderCard = (card) => {
+    const tone = card.tone || "neutral";
+    const tabAttr = card.tab_id ? `data-target-tab="${card.tab_id}"` : "";
+    const anchorAttr = card.section_anchor ? `data-target-anchor="${card.section_anchor}"` : "";
+    return `
+      <button class="insight-ribbon-card insight-tone-${tone}" ${tabAttr} ${anchorAttr}>
+        <span class="insight-ribbon-icon" aria-hidden="true">${card.icon || ""}</span>
+        <span class="insight-ribbon-body">
+          <span class="insight-ribbon-kicker">${card.kicker || ""}</span>
+          <span class="insight-ribbon-value">${card.value || ""}</span>
+          <span class="insight-ribbon-narrative">${card.narrative || ""}</span>
+        </span>
+      </button>
+    `;
+  };
+  return `
+    <section class="insight-ribbon" aria-label="Market insights summary">
+      <p class="insight-ribbon-title">
+        <span class="insight-ribbon-pulse" aria-hidden="true"></span>
+        Live market signals — auto-generated from this month's data
+      </p>
+      <div class="insight-ribbon-grid">
+        ${cards.map(renderCard).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function setupMarketInsightsRibbon() {
+  document.querySelectorAll(".insight-ribbon-card").forEach((node) => {
+    node.addEventListener("click", () => {
+      const tabId = node.getAttribute("data-target-tab");
+      const anchor = node.getAttribute("data-target-anchor");
+      if (anchor) {
+        pendingScrollTarget = anchor;
+      }
+      if (tabId && tabId !== state.activeTab) {
+        state.activeTab = tabId;
+        render();
+      } else if (anchor) {
+        scrollToPendingSection();
+      }
+    });
+  });
 }
 
 function setupCreditPulseExplainer() {

@@ -166,6 +166,7 @@ def build_payload(
     segment_share = build_segment_share_module(segment_market_rows, segment_market_message, segment_market_meta, validations)
     official_ev = build_official_ev_module(ev_preview_rows, validations)
     insights = build_investor_insights(retail, wholesale, components, registration)
+    market_insights = build_market_insights(retail, wholesale, credit_pulse)
     summary = build_summary(retail, wholesale, components, registration, state_registration, official_ev, source_health)
     filters = build_filters(retail, wholesale, registration)
 
@@ -197,6 +198,7 @@ def build_payload(
             "credit_pulse": credit_pulse,
             "premium_data": premium_data,
         },
+        "market_insights": market_insights,
         "insights": insights,
         "company_map": build_company_map(),
         "news": news_snapshot or {"available": False, "groups": [], "generated_at": None},
@@ -1925,6 +1927,167 @@ def build_company_map() -> list[dict[str, Any]]:
         }
         for company, details in sorted(LISTED_COMPANY_MAP.items())
     ]
+
+
+def build_market_insights(
+    retail: dict[str, Any],
+    wholesale: dict[str, Any],
+    credit_pulse: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Distil the core dashboard data into 4-6 punchy headline cards for
+    the top-of-page insights ribbon. Each card is computed deterministically
+    from numbers already in the modules so it auto-refreshes with each cron
+    run."""
+    cards: list[dict[str, Any]] = []
+    snap = retail.get("latest_snapshot", {}) if retail else {}
+    latest_month = retail.get("latest_month", "") if retail else ""
+
+    # 1. Demand winner — highest YoY category in this month's retail.
+    top_cat = snap.get("top_category_yoy")
+    if top_cat:
+        yoy = top_cat.get("yoy_pct")
+        if yoy is not None:
+            cards.append({
+                "icon": "📈",
+                "tone": "positive" if yoy >= 0 else "negative",
+                "kicker": "Demand winner",
+                "value": f"{top_cat['category']} {yoy:+.1f}%",
+                "narrative": (
+                    f"{top_cat.get('label', top_cat['category'])} leads retail growth "
+                    f"this month at {yoy:+.1f}% YoY — strongest category by some distance."
+                ),
+                "section_anchor": "section-retail",
+                "tab_id": "retail-trend",
+            })
+
+    # 2. Demand laggard — lowest YoY category. Tone is negative when growth
+    # is actually negative; otherwise neutral so we don't paint a +1% laggard
+    # as a crisis.
+    bottom_cat = snap.get("bottom_category_yoy")
+    if bottom_cat:
+        yoy = bottom_cat.get("yoy_pct")
+        if yoy is not None:
+            tone = "negative" if yoy < 0 else ("neutral" if yoy < 5 else "positive")
+            cards.append({
+                "icon": "📉" if yoy < 0 else "⚖️",
+                "tone": tone,
+                "kicker": "Demand laggard",
+                "value": f"{bottom_cat['category']} {yoy:+.1f}%",
+                "narrative": (
+                    f"{bottom_cat.get('label', bottom_cat['category'])} is the weakest spot "
+                    f"at {yoy:+.1f}% YoY — flag if this persists for two more months."
+                ),
+                "section_anchor": "section-retail",
+                "tab_id": "retail-trend",
+            })
+
+    # 3. EV pulse — change in overall EV penetration vs ~6 months ago. Falls
+    # back to vs-prior-month when only short history is available.
+    ev_series = retail.get("ev_penetration_series", []) if retail else []
+    if ev_series and len(ev_series) >= 2:
+        latest_ev = ev_series[-1]
+        ref_index = max(0, len(ev_series) - 7)  # 6 months back if available
+        ref_ev = ev_series[ref_index]
+        latest_pct = latest_ev.get("overall_ev_pct")
+        ref_pct = ref_ev.get("overall_ev_pct")
+        if latest_pct is not None and ref_pct is not None:
+            delta_pp = round(latest_pct - ref_pct, 2)
+            window = "6 mo" if ref_index < len(ev_series) - 1 else "1 mo"
+            cards.append({
+                "icon": "⚡",
+                "tone": "positive" if delta_pp > 0 else ("negative" if delta_pp < 0 else "neutral"),
+                "kicker": "EV penetration",
+                "value": f"{latest_pct:.1f}%",
+                "narrative": (
+                    f"EV share of retail at {latest_pct:.1f}% in {latest_ev.get('label', latest_month)}. "
+                    f"{('Up' if delta_pp >= 0 else 'Down')} "
+                    f"{abs(delta_pp):.2f} pp over the last {window}."
+                ),
+                "section_anchor": "section-ev",
+                "tab_id": "retail-ev",
+            })
+
+    # 4. Credit pulse — current spread + direction (uses pre-computed value).
+    credit_latest = credit_pulse.get("latest", {}) if credit_pulse else {}
+    spread_pp = credit_latest.get("spread_pp")
+    if spread_pp is not None:
+        if spread_pp >= 1:
+            tone, verb = "positive", "leading"
+        elif spread_pp <= -1:
+            tone, verb = "negative", "lagging"
+        else:
+            tone, verb = "neutral", "tracking"
+        cards.append({
+            "icon": "💰",
+            "tone": tone,
+            "kicker": "Auto-credit pulse",
+            "value": f"{spread_pp:+.1f} pp",
+            "narrative": (
+                f"Vehicle loans growing at {credit_latest.get('yoy_pct', 0):.1f}% YoY, "
+                f"{verb} total bank lending at {credit_latest.get('non_food_yoy_pct', 0):.1f}%. "
+                f"Demand-side signal is "
+                + ("bullish." if tone == "positive" else ("bearish." if tone == "negative" else "neutral."))
+            ),
+            "section_anchor": "section-credit-pulse",
+            "tab_id": "credit-pulse",
+        })
+
+    # 5. Inventory pulse — flags risky levels at dealer end (FADA inventory
+    # days_mid). Healthy band is 21–30 days; stress > 35.
+    inventory = snap.get("inventory_days") if snap else None
+    if inventory and isinstance(inventory, dict):
+        days_mid = inventory.get("days_mid")
+        days_low = inventory.get("days_low")
+        days_high = inventory.get("days_high")
+        if days_mid is not None:
+            if days_mid > 35:
+                tone, verb = "negative", "elevated — destock pressure"
+            elif days_mid < 21:
+                tone, verb = "neutral", "lean — limited buffer for demand spikes"
+            else:
+                tone, verb = "positive", "in healthy band"
+            range_text = (
+                f"{int(days_low)}-{int(days_high)} days" if days_low and days_high else f"{int(days_mid)} days"
+            )
+            cards.append({
+                "icon": "🏬",
+                "tone": tone,
+                "kicker": "Dealer inventory",
+                "value": f"{int(days_mid)} days",
+                "narrative": (
+                    f"FADA reports PV stock at dealers running {range_text} — {verb}. "
+                    "Healthy operating band is 21–30 days."
+                ),
+                "section_anchor": "section-channel-pulse",
+                "tab_id": "channel-pulse",
+            })
+
+    # 6. Channel pulse — retail vs wholesale gap. Negative ratio < 95% means
+    # wholesale is outpacing retail (channel destocking risk).
+    rvw = wholesale.get("retail_vs_wholesale", []) if wholesale else []
+    pv_row = next((row for row in rvw if row.get("category") == "PV"), None)
+    if pv_row and pv_row.get("ratio_pct") is not None:
+        ratio = pv_row["ratio_pct"]
+        if ratio >= 102:
+            tone, headline = "positive", "Retail > wholesale"
+            narrative = "Dealers selling faster than factories are dispatching — clean inventory drawdown."
+        elif ratio <= 95:
+            tone, headline = "negative", "Wholesale > retail"
+            narrative = "Factories are outshipping dealer offtake — channel inventory building. Watch next month."
+        else:
+            tone, headline = "neutral", "In sync"
+            narrative = "Wholesale tracking retail within 5% — channel stable."
+        cards.append({
+            "icon": "🔁",
+            "tone": tone,
+            "kicker": "Channel balance (PV)",
+            "value": f"{ratio:.1f}%",
+            "narrative": f"{headline}. {narrative}",
+            "section_anchor": "section-wholesale",
+            "tab_id": "wholesale",
+        })
+
+    return cards
 
 
 def build_investor_insights(

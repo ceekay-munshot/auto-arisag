@@ -2088,6 +2088,138 @@ th:hover {
   text-align: center;
 }
 
+/* Top-of-page market insights ribbon */
+.insight-ribbon {
+  margin: 0 0 18px;
+  padding: 18px 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 39, 62, 0.96) 0%,
+    rgba(28, 50, 76, 0.94) 50%,
+    rgba(35, 62, 92, 0.92) 100%);
+  border: 1px solid rgba(20, 39, 62, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 36px rgba(20, 39, 62, 0.18);
+  color: #f7f1e4;
+}
+
+.insight-ribbon-title {
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(247, 241, 228, 0.78);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insight-ribbon-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  animation: ribbon-pulse 1.6s ease-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes ribbon-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+.insight-ribbon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.insight-ribbon-card {
+  appearance: none;
+  background: rgba(255, 253, 248, 0.06);
+  border: 1px solid rgba(247, 241, 228, 0.1);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  color: #f7f1e4;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  font: inherit;
+}
+
+.insight-ribbon-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 253, 248, 0.12);
+  border-color: rgba(247, 241, 228, 0.22);
+}
+
+.insight-ribbon-card:focus-visible {
+  outline: 2px solid #f7f1e4;
+  outline-offset: 2px;
+}
+
+.insight-ribbon-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.insight-ribbon-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.insight-ribbon-kicker {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 228, 0.7);
+}
+
+.insight-ribbon-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #f7f1e4;
+}
+
+.insight-ribbon-narrative {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(247, 241, 228, 0.78);
+}
+
+/* Tone-specific accents on the value strip */
+.insight-tone-positive .insight-ribbon-value {
+  color: #4ade80;
+}
+
+.insight-tone-negative .insight-ribbon-value {
+  color: #f87171;
+}
+
+.insight-tone-neutral .insight-ribbon-value {
+  color: #fcd34d;
+}
+
+@media (max-width: 720px) {
+  .insight-ribbon {
+    padding: 14px 16px;
+  }
+  .insight-ribbon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Premium / Paid Data tab */
 .premium-summary-row {
   display: grid;
