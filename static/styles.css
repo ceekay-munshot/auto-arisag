@@ -2088,6 +2088,113 @@ th:hover {
   text-align: center;
 }
 
+/* Per-tab freshness pill (sits at top of dashboard-content) */
+.freshness-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  border: 1px solid;
+  background: #fffdfa;
+  max-width: 100%;
+}
+
+.freshness-pill .freshness-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.freshness-pill-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.freshness-pill-label {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.freshness-pill-text strong {
+  color: var(--deep);
+  font-weight: 700;
+}
+
+.freshness-pill-relative {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.freshness-pill-fresh {
+  border-color: rgba(47, 137, 125, 0.32);
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.10), rgba(47, 137, 125, 0.04));
+  color: #1d5a4f;
+}
+.freshness-pill-fresh .freshness-dot {
+  background: #2f897d;
+  box-shadow: 0 0 0 0 rgba(47, 137, 125, 0.6);
+  animation: dot-pulse 1.6s ease-out infinite;
+}
+
+.freshness-pill-aging {
+  border-color: rgba(76, 116, 199, 0.32);
+  background: linear-gradient(180deg, rgba(76, 116, 199, 0.10), rgba(76, 116, 199, 0.04));
+  color: #2a4a8e;
+}
+.freshness-pill-aging .freshness-dot { background: #4c74c7; }
+
+.freshness-pill-stale {
+  border-color: rgba(217, 149, 71, 0.4);
+  background: linear-gradient(180deg, rgba(217, 149, 71, 0.12), rgba(217, 149, 71, 0.04));
+  color: #8a5a1a;
+}
+.freshness-pill-stale .freshness-dot { background: #d99547; }
+
+.freshness-pill-critical {
+  border-color: rgba(204, 67, 67, 0.4);
+  background: linear-gradient(180deg, rgba(204, 67, 67, 0.10), rgba(204, 67, 67, 0.03));
+  color: #8a2727;
+}
+.freshness-pill-critical .freshness-dot { background: #cc4343; }
+
+@keyframes dot-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(47, 137, 125, 0.55); }
+  70% { box-shadow: 0 0 0 6px rgba(47, 137, 125, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(47, 137, 125, 0); }
+}
+
+/* Side-nav freshness dot */
+.side-nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.side-nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.side-nav-dot.dot-fresh    { background: #2f897d; }
+.side-nav-dot.dot-aging    { background: #4c74c7; }
+.side-nav-dot.dot-stale    { background: #d99547; }
+.side-nav-dot.dot-critical { background: #cc4343; }
+
+.side-nav-item-label {
+  flex: 1;
+  text-align: left;
+}
+
 /* Top-of-page market insights ribbon */
 .insight-ribbon {
   margin: 0 0 18px;

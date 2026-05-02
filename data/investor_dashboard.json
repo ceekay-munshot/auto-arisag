@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T13:02:16.870462+00:00",
+  "generated_at": "2026-05-02T14:54:22.334738+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -81,9 +81,9 @@
         "source": "ACMA",
         "status": "active",
         "module": "Components",
-        "last_updated": "2025-07-08",
+        "last_updated": "2026-01-14",
         "detail": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries.",
-        "url": "https://www.acma.in/uploads/press-release/Press%20Release%20FY25.pdf"
+        "url": "https://www.acma.in/press-release.php"
       }
     ],
     "active_module_count": 3,
@@ -6040,49 +6040,50 @@
       "title": "Components",
       "source_meta": {
         "name": "ACMA",
-        "period": "FY2024-25",
-        "latest_release_date": "2025-07-08",
-        "url": "https://www.acma.in/uploads/press-release/Press%20Release%20FY25.pdf",
+        "period": "H1 FY2025-26",
+        "latest_release_date": "2026-01-14",
+        "url": "https://www.acma.in/press-release.php",
         "note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
       },
-      "headline": "Indian auto component industry clocks turnover of Rs 6.73 lakh crore in FY25.",
+      "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 \u2014 steady demand despite a swing into trade deficit.",
       "metrics": [
         {
           "label": "Industry turnover",
-          "value": "Rs 6.73 lakh crore",
-          "delta": "+9.6% YoY"
+          "value": "Rs 3.56 lakh crore",
+          "delta": "+6.8% YoY"
         },
         {
           "label": "OEM supplies",
-          "value": "Rs 5.70 lakh crore",
-          "delta": "+10% YoY"
-        },
-        {
-          "label": "Exports",
-          "value": "USD 22.9 billion",
-          "delta": "+8.0% YoY"
-        },
-        {
-          "label": "Imports",
-          "value": "USD 22.4 billion",
+          "value": "Rs 3.04 lakh crore",
           "delta": "+7.3% YoY"
         },
         {
-          "label": "Trade surplus",
-          "value": "USD 453 million",
-          "delta": "vs USD 300 million in FY24"
+          "label": "Exports",
+          "value": "USD 12.1 billion",
+          "delta": "+9.3% YoY"
+        },
+        {
+          "label": "Imports",
+          "value": "USD 12.3 billion",
+          "delta": "+12.5% YoY"
+        },
+        {
+          "label": "Trade balance",
+          "value": "USD -180 million (deficit)",
+          "delta": "vs USD +150 million surplus in H1 FY25"
         },
         {
           "label": "Aftermarket",
-          "value": "Rs 99,948 crore",
-          "delta": "+6% YoY"
+          "value": "Rs 53,160 crore",
+          "delta": "+9% YoY"
         }
       ],
       "insights": [
-        "Domestic OEM demand remained the largest growth driver, supported by about 8% growth in vehicle production.",
-        "Exports stayed healthy despite geopolitical disruptions, with North America still the largest market and Asia the fastest-growing region.",
-        "Aftermarket demand stayed firm on a larger used-vehicle base, formalisation of repairs, and rising e-commerce penetration.",
-        "ACMA specifically flags rare-earth magnet availability as a strategic watchpoint for EV and mobility manufacturing."
+        "Industry growth slowed from 9.6% (FY25) to 6.8% (H1 FY26) on softer global demand and selective domestic moderation.",
+        "OEM demand still leads, with passenger vehicles and LCVs the strongest contributors.",
+        "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves \u2014 supports the larger-vehicle-parc thesis.",
+        "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports \u2014 an early warning for ancillary cap-ex priorities.",
+        "EV components now contribute 4.6% of total OEM supplies as electrification accelerates."
       ],
       "listed_beneficiaries": [
         {
