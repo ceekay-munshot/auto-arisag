@@ -1,0 +1,54 @@
+{
+  "as_of_date": "2026-05-02",
+  "source_note": "Hand-curated baseline. Cron-driven scraper extends with daily updates.",
+  "indicators": [
+    {
+      "id": "petrol_delhi",
+      "label": "Petrol (Delhi)",
+      "value": 95.41,
+      "unit": "₹/L",
+      "delta_value": 0.0,
+      "delta_label": "Unchanged in last week",
+      "delta_tone": "neutral",
+      "context": "Daily retail selling price set by OMCs (IOC / BPCL / HPCL). Tracks fuel-affordability backdrop for ICE 2W and PV demand.",
+      "source_name": "PPAC daily price sheet",
+      "source_url": "https://ppac.gov.in/prices/daily-prices"
+    },
+    {
+      "id": "diesel_delhi",
+      "label": "Diesel (Delhi)",
+      "value": 87.67,
+      "unit": "₹/L",
+      "delta_value": 0.0,
+      "delta_label": "Unchanged in last week",
+      "delta_tone": "neutral",
+      "context": "Diesel powers ~70% of CV demand. Price changes ripple through freight rates and CV operator economics within 4-6 weeks.",
+      "source_name": "PPAC daily price sheet",
+      "source_url": "https://ppac.gov.in/prices/daily-prices"
+    },
+    {
+      "id": "repo_rate",
+      "label": "RBI repo rate",
+      "value": 5.50,
+      "unit": "%",
+      "delta_value": -0.25,
+      "delta_label": "−25 bps in last MPC (Apr 2026)",
+      "delta_tone": "positive",
+      "context": "Direct driver of vehicle-loan EMI. A 25-bps cut typically translates to ₹150-200/month lower EMI on a ₹10-lakh PV loan within 2-3 cycles.",
+      "source_name": "RBI Monetary Policy Committee",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+    },
+    {
+      "id": "usd_inr",
+      "label": "USD / INR",
+      "value": 84.32,
+      "unit": "₹",
+      "delta_value": 0.18,
+      "delta_label": "+0.18 in last week",
+      "delta_tone": "negative",
+      "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
+      "source_name": "RBI Reference Rate",
+      "source_url": "https://www.rbi.org.in/Scripts/ReferenceRateArchive.aspx"
+    }
+  ]
+}

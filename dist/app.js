@@ -136,6 +136,24 @@ const METRIC_EXPLAINERS = {
     body: "Component sales to the replacement / repair / accessory market. Driven by the on-road vehicle parc, formalisation of repair, and e-commerce channels.",
   },
 
+  // Macro overlay strip
+  "macro.petrol_delhi": {
+    title: "Petrol price (Delhi)",
+    body: "Daily retail selling price set by oil marketing companies. Direct driver of fuel-affordability for ICE 2W and PV demand. Price spikes typically dent 2W retail growth within 2 months.",
+  },
+  "macro.diesel_delhi": {
+    title: "Diesel price (Delhi)",
+    body: "Daily retail selling price for diesel — fuel for ~70% of CV demand. Price changes ripple into freight rates and CV operator economics within 4-6 weeks.",
+  },
+  "macro.repo_rate": {
+    title: "RBI repo rate",
+    body: "The benchmark interest rate the RBI charges banks. Direct driver of vehicle-loan EMI. Each 25-bps cut typically lowers EMI on a ₹10-lakh PV loan by ₹150-200/month within 2-3 cycles.",
+  },
+  "macro.usd_inr": {
+    title: "USD / INR",
+    body: "Spot exchange rate. INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressures EV BOM and premium-PV margins.",
+  },
+
   // Festive Pulse
   "festive.window_total": {
     title: "Festive window total",
@@ -1421,6 +1439,7 @@ function render() {
   const app = document.getElementById("app");
   app.innerHTML = [
     renderHero(),
+    renderMacroOverlayStrip(),
     renderMarketInsightsRibbon(),
     renderFilters(),
     `<div class="dashboard-body">
@@ -1453,6 +1472,42 @@ function render() {
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
+}
+
+function renderMacroOverlayStrip() {
+  const macro = dashboardData.macro_indicators;
+  if (!macro?.available) return "";
+  const asOf = macro.as_of_date
+    ? new Date(macro.as_of_date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })
+    : "";
+  const renderTile = (ind) => {
+    const tone = ind.delta_tone || "neutral";
+    const explainKey = `macro.${ind.id}`;
+    return `
+      <article class="macro-tile macro-tone-${tone}" data-explain="${explainKey}" tabindex="0">
+        <p class="macro-label">${ind.label}</p>
+        <p class="macro-value">
+          <span class="macro-number">${ind.value}</span>
+          <span class="macro-unit">${ind.unit || ""}</span>
+        </p>
+        <p class="macro-delta">${ind.delta_label || ""}</p>
+      </article>
+    `;
+  };
+  return `
+    <section class="macro-strip" aria-label="Macro context">
+      <div class="macro-strip-inner">
+        <p class="macro-strip-title">
+          <span class="macro-strip-pulse" aria-hidden="true"></span>
+          Macro context
+          ${asOf ? `<span class="macro-strip-asof">as of ${asOf}</span>` : ""}
+        </p>
+        <div class="macro-strip-grid">
+          ${macro.indicators.map(renderTile).join("")}
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 function renderHero() {

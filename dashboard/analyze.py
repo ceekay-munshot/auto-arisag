@@ -30,6 +30,7 @@ from .config import (
 SIAM_HISTORY_PATH = Path("data/siam_history.json")
 COMPANY_HISTORY_PATH = Path("data/company_unit_history.json")
 RBI_CREDIT_PATH = Path("data/rbi_credit.json")
+MACRO_INDICATORS_PATH = Path("data/macro_indicators.json")
 
 
 def _load_siam_history() -> list[dict[str, Any]]:
@@ -162,6 +163,7 @@ def build_payload(
     credit_pulse = build_credit_pulse_module()
     premium_data = build_premium_data_module()
     festive_pulse = build_festive_pulse_module(retail)
+    macro_indicators = build_macro_indicators_module()
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -201,6 +203,7 @@ def build_payload(
             "premium_data": premium_data,
             "festive_pulse": festive_pulse,
         },
+        "macro_indicators": macro_indicators,
         "market_insights": market_insights,
         "insights": insights,
         "company_map": build_company_map(),
@@ -585,6 +588,27 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "source_url": latest["source_url"],
         },
         "months": months,
+    }
+
+
+def build_macro_indicators_module() -> dict[str, Any]:
+    """Macro overlay strip: petrol / diesel / repo / USD-INR. Hand-curated
+    baseline today; the scraper at scripts/refresh_macro.py extends it
+    with daily reads on the cron."""
+    if not MACRO_INDICATORS_PATH.exists():
+        return {"available": False}
+    try:
+        payload = json.loads(MACRO_INDICATORS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"available": False}
+    indicators = payload.get("indicators") or []
+    if not indicators:
+        return {"available": False}
+    return {
+        "available": True,
+        "as_of_date": payload.get("as_of_date"),
+        "source_note": payload.get("source_note", ""),
+        "indicators": indicators,
     }
 
 
