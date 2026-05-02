@@ -62,6 +62,18 @@ jobs:
         run: python -u scripts/refresh_rbi_credit.py
         continue-on-error: true
 
+      - name: Refresh macro indicators (USD/INR + fuel)
+        # Live USD/INR from Yahoo Finance, fuel prices from Goodreturns.
+        # Repo rate is preserved (manual update on RBI MPC announcements).
+        run: python -u scripts/refresh_macro.py
+        continue-on-error: true
+
+      - name: Refresh listed-OEM stock prices
+        # Yahoo Finance daily closes for every NSE-listed OEM in
+        # data/oem_stocks.json; computes 1D/1W/1M deltas.
+        run: python -u scripts/refresh_stocks.py
+        continue-on-error: true
+
       - name: Rebuild dashboard with OEM/SIAM/company history
         # The backfills may have added new months, so rebuild so the periodized
         # OEM tables, the SIAM trend chart, and the listed-company spotlight
@@ -82,7 +94,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/vahan_oem_live.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/vahan_oem_live.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi
