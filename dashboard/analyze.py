@@ -31,6 +31,7 @@ SIAM_HISTORY_PATH = Path("data/siam_history.json")
 COMPANY_HISTORY_PATH = Path("data/company_unit_history.json")
 RBI_CREDIT_PATH = Path("data/rbi_credit.json")
 MACRO_INDICATORS_PATH = Path("data/macro_indicators.json")
+OEM_STOCKS_PATH = Path("data/oem_stocks.json")
 
 
 def _load_siam_history() -> list[dict[str, Any]]:
@@ -164,6 +165,7 @@ def build_payload(
     premium_data = build_premium_data_module()
     festive_pulse = build_festive_pulse_module(retail)
     macro_indicators = build_macro_indicators_module()
+    oem_stocks = build_oem_stocks_module()
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -204,6 +206,7 @@ def build_payload(
             "festive_pulse": festive_pulse,
         },
         "macro_indicators": macro_indicators,
+        "oem_stocks": oem_stocks,
         "market_insights": market_insights,
         "insights": insights,
         "company_map": build_company_map(),
@@ -588,6 +591,28 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "source_url": latest["source_url"],
         },
         "months": months,
+    }
+
+
+def build_oem_stocks_module() -> dict[str, Any]:
+    """Listed-OEM stock prices keyed by company name. Hand-curated baseline
+    today; cron-driven Yahoo Finance scraper to come."""
+    if not OEM_STOCKS_PATH.exists():
+        return {"available": False}
+    try:
+        payload = json.loads(OEM_STOCKS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"available": False}
+    stocks = payload.get("stocks") or {}
+    if not stocks:
+        return {"available": False}
+    return {
+        "available": True,
+        "as_of_date": payload.get("as_of_date"),
+        "currency": payload.get("currency", "INR"),
+        "exchange": payload.get("exchange", "NSE"),
+        "source_note": payload.get("source_note", ""),
+        "stocks": stocks,
     }
 
 

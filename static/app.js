@@ -3093,6 +3093,44 @@ function renderOemTables() {
   `;
 }
 
+function renderStockChip(companyName) {
+  const stocks = dashboardData.oem_stocks;
+  if (!stocks?.available) return "";
+  const stock = stocks.stocks?.[companyName];
+  if (!stock) return "";
+  const fmtPct = (v) => {
+    if (v === null || v === undefined) return "—";
+    const sign = v >= 0 ? "+" : "";
+    return `${sign}${v.toFixed(2)}%`;
+  };
+  const tone = (v) => (v === null || v === undefined ? "neutral" : (v >= 0 ? "positive" : "negative"));
+  const fmtPrice = (v) => v == null ? "—" : v.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const exchange = stocks.exchange || "NSE";
+  return `
+    <div class="stock-chip">
+      <div class="stock-chip-head">
+        <span class="stock-chip-ticker">${exchange}: ${stock.ticker || "—"}</span>
+        <a class="stock-chip-link" href="${stock.yahoo_url || "#"}" target="_blank" rel="noopener" title="View on Yahoo Finance">↗</a>
+      </div>
+      <p class="stock-chip-price">₹${fmtPrice(stock.price)}</p>
+      <div class="stock-chip-changes">
+        <span class="stock-chip-pill stock-tone-${tone(stock.change_1d_pct)}">
+          <span class="stock-chip-pill-label">1D</span>
+          <span class="stock-chip-pill-value">${fmtPct(stock.change_1d_pct)}</span>
+        </span>
+        <span class="stock-chip-pill stock-tone-${tone(stock.change_1w_pct)}">
+          <span class="stock-chip-pill-label">1W</span>
+          <span class="stock-chip-pill-value">${fmtPct(stock.change_1w_pct)}</span>
+        </span>
+        <span class="stock-chip-pill stock-tone-${tone(stock.change_1m_pct)}">
+          <span class="stock-chip-pill-label">1M</span>
+          <span class="stock-chip-pill-value">${fmtPct(stock.change_1m_pct)}</span>
+        </span>
+      </div>
+    </div>
+  `;
+}
+
 function renderCompanyUnitTrend() {
   const trends = asArray(dashboardData.modules.retail?.company_unit_trends);
   if (!trends.length) {
@@ -3148,6 +3186,7 @@ function renderCompanyUnitTrend() {
             <strong>${selected.label}</strong>
             <p class="table-note">${selected.concept}</p>
           </div>
+          ${renderStockChip(selected.label)}
         </div>
         <div class="chart-frame compact">
           ${lineChart(
