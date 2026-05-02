@@ -23,6 +23,7 @@ const state = {
   creditPulseExplainerOpen: false,
   searchQuery: "",
   printAllTabs: false,
+  companyMapShownCount: 3,
 };
 
 const SECTION_TO_TAB = {
@@ -1696,6 +1697,7 @@ function render() {
   setupExplainerTooltips();
   setupSearchBar();
   setupExportPdfAction();
+  setupCompanyMapPagination();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -4486,6 +4488,9 @@ function renderCompanySection() {
     ? dashboardData.company_map
     : dashboardData.company_map.filter((item) => item.company === state.company);
   const activeCompany = cards.find((item) => item.company === state.companyMapFocus) || cards[0];
+  const shownCount = state.companyMapShownCount || 3;
+  const visible = cards.slice(0, shownCount);
+  const remaining = Math.max(0, cards.length - visible.length);
 
   return `
     ${renderStockSnapshotPanel()}
@@ -4495,10 +4500,10 @@ function renderCompanySection() {
           <p class="section-kicker">Listed Company Mapping</p>
           <h2>How the demand data maps back to public-market names</h2>
         </div>
-        <p class="section-subtitle">Mappings stay directional and only appear where the linkage is meaningful.</p>
+        <p class="section-subtitle">Mappings stay directional and only appear where the linkage is meaningful. Showing ${visible.length} of ${cards.length} companies.</p>
       </div>
       <div class="company-grid">
-        ${cards.map((item) => `
+        ${visible.map((item) => `
           <article class="insight-card company-map-card ${item.company === activeCompany?.company ? "active" : ""}" data-company-map-card="${item.company}">
             <div class="insight-head">
               <div>
@@ -4512,9 +4517,42 @@ function renderCompanySection() {
           </article>
         `).join("")}
       </div>
+      ${remaining > 0 ? `
+        <div class="company-map-toolbar">
+          <button class="button button-primary" data-action="company-map-more">
+            Show ${Math.min(3, remaining)} more <span aria-hidden="true">+</span>
+          </button>
+          ${remaining > 3 ? `<button class="button" data-action="company-map-show-all">Show all (${cards.length})</button>` : ""}
+        </div>
+      ` : (cards.length > 3 ? `
+        <div class="company-map-toolbar">
+          <button class="button" data-action="company-map-collapse">Collapse to 3</button>
+        </div>
+      ` : "")}
       ${activeCompany ? renderCompanyDrilldown(activeCompany) : ""}
     </section>
   `;
+}
+
+function setupCompanyMapPagination() {
+  document.querySelectorAll("[data-action='company-map-more']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.companyMapShownCount = (state.companyMapShownCount || 3) + 3;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='company-map-show-all']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.companyMapShownCount = 9999;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='company-map-collapse']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.companyMapShownCount = 3;
+      render();
+    });
+  });
 }
 
 function companyMarketShareRows(company) {
