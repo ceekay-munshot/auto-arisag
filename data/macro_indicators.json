@@ -1,6 +1,6 @@
 {
   "as_of_date": "2026-05-02",
-  "source_note": "Hand-curated baseline. Cron-driven scraper extends with daily updates.",
+  "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
   "indicators": [
     {
       "id": "petrol_delhi",
@@ -29,7 +29,7 @@
     {
       "id": "repo_rate",
       "label": "RBI repo rate",
-      "value": 5.50,
+      "value": 5.5,
       "unit": "%",
       "delta_value": -0.25,
       "delta_label": "−25 bps in last MPC (Apr 2026)",
@@ -41,14 +41,14 @@
     {
       "id": "usd_inr",
       "label": "USD / INR",
-      "value": 84.32,
+      "value": 94.88,
       "unit": "₹",
-      "delta_value": 0.18,
-      "delta_label": "+0.18 in last week",
+      "delta_value": 0.1209,
+      "delta_label": "+0.67% in last week (Yahoo Finance)",
       "delta_tone": "negative",
       "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
-      "source_name": "RBI Reference Rate",
-      "source_url": "https://www.rbi.org.in/Scripts/ReferenceRateArchive.aspx"
+      "source_name": "Yahoo Finance — USDINR=X",
+      "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/"
     }
   ]
 }
