@@ -1312,6 +1312,8 @@ const TAB_SOURCE_MAP = {
   "wholesale": "wholesale",
   "components": "components",
   "credit-pulse": "credit_pulse",
+  // Festive Pulse aggregates FADA retail months, so its freshness mirrors retail.
+  "festive-pulse": "retail",
 };
 
 function tabSourceMeta(tabId) {
@@ -1327,10 +1329,22 @@ function tabSourceMeta(tabId) {
     || meta.latest_month
     || (mod.latest && mod.latest.label)
     || (mod.latest_month);
+  // Build an ISO date for the freshness helper. Most modules carry a real
+  // release_date; for Credit Pulse we have to derive it from the latest
+  // month's `as_of_date` (the actual reporting Friday) or, failing that,
+  // synthesize the last day of the latest month.
+  const monthToIsoEnd = (m) => {
+    if (!m || !/^\d{4}-\d{2}$/.test(m)) return null;
+    const [y, mo] = m.split("-").map(Number);
+    return new Date(y, mo, 0).toISOString().slice(0, 10);
+  };
   const releaseDate =
     meta.latest_release_date
     || meta.release_date
-    || (mod.latest && mod.latest.as_of_date);
+    || (mod.latest && mod.latest.as_of_date)
+    || monthToIsoEnd(meta.latest_month)
+    || (mod.months && mod.months.length && mod.months[mod.months.length - 1].as_of_date)
+    || (mod.months && mod.months.length && monthToIsoEnd(mod.months[mod.months.length - 1].month));
   return {
     source: meta.name || meta.source_name || "",
     periodLabel: periodLabel || "",
