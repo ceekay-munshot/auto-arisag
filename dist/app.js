@@ -42,6 +42,120 @@ const refreshState = {
   tone: "neutral",
 };
 let pendingScrollTarget = null;
+
+// Plain-English explainers attached to metric elements via data-explain="<key>".
+// Each entry maps to {title, body} surfaced by the global hover tooltip
+// (setupExplainerTooltips). New metrics: just add a key here and slap
+// data-explain on the rendered element — no other wiring needed.
+const METRIC_EXPLAINERS = {
+  // Hero summary cards
+  "summary.latest_retail": {
+    title: "Latest retail registrations",
+    body: "Total vehicles registered with RTOs across India this month, as reported by FADA dealer associations. The cleanest measure of actual buyer demand — captured at the dealership counter, not at the factory gate.",
+  },
+  "summary.latest_ev_penetration": {
+    title: "Derived EV penetration",
+    body: "Electric vehicles as a share of total monthly retail registrations, computed across all categories. Tracks how fast India is electrifying the road — moves slowly month-to-month, faster across years.",
+  },
+  "summary.strongest_segment": {
+    title: "Strongest category this month",
+    body: "The retail category (PV / 2W / 3W / CV / Tractor / CE) with the highest YoY growth this month. Tells you where demand momentum is concentrated right now.",
+  },
+  "summary.pv_inventory": {
+    title: "PV dealer inventory",
+    body: "Days of unsold passenger-vehicle stock at dealer lots, as reported by FADA. Healthy band is 21–30 days. Above 35 = destocking pressure on OEMs and risk of discounting; below 20 = lean stock that limits ability to capture demand spikes.",
+  },
+  "summary.pv_retail_vs_wholesale": {
+    title: "PV retail vs wholesale",
+    body: "Ratio of FADA retail (consumer purchases) to SIAM wholesale (factory dispatches to dealers). Below 95% = wholesale outpacing retail = channel inventory building. Above 105% = drawdown / clean restock.",
+  },
+  "summary.dealer_outlook": {
+    title: "Dealer growth view",
+    body: "FADA's monthly survey of how dealers expect the next month's demand to evolve. A leading sentiment indicator captured at the front lines of the auto retail channel.",
+  },
+
+  // Insights ribbon
+  "ribbon.demand_winner": {
+    title: "Demand winner",
+    body: "The category with the highest YoY growth this month from FADA's retail data. Identifies which segment is leading the cycle.",
+  },
+  "ribbon.demand_laggard": {
+    title: "Demand laggard",
+    body: "The slowest-growing category this month. Negative readings flag potential structural weakness if they persist for 2-3 months in a row.",
+  },
+  "ribbon.ev_penetration": {
+    title: "EV penetration trend",
+    body: "Latest overall EV share of retail registrations, plus the change in percentage points over the last 6 months. Captures whether electrification is accelerating, plateauing, or reversing.",
+  },
+  "ribbon.credit_pulse": {
+    title: "Auto-credit pulse",
+    body: "Spread between vehicle-loan YoY growth and total bank-credit YoY growth (RBI). Positive ≥ +1pp = banks lending to auto faster than the rest of the economy = bullish demand. Negative ≤ -1pp = bearish.",
+  },
+  "ribbon.dealer_inventory": {
+    title: "Dealer inventory health",
+    body: "FADA-reported PV inventory at dealer lots. 21-30 days = healthy operating band. >35 = elevated, requires destocking. <20 = lean, limited ability to satisfy spikes.",
+  },
+  "ribbon.channel_balance": {
+    title: "PV channel balance",
+    body: "Retail/wholesale ratio for passenger vehicles. The ratio tells you whether dealers are selling faster than factories ship (clean drawdown) or slower (inventory build).",
+  },
+
+  // Credit Pulse tab
+  "credit.outstanding": {
+    title: "Vehicle Loans outstanding",
+    body: "Total amount India's scheduled commercial banks have lent for vehicle purchases as of the last reporting Friday of the month. From RBI's Sectoral Deployment of Bank Credit release.",
+  },
+  "credit.yoy": {
+    title: "Vehicle loans YoY",
+    body: "Year-on-year growth rate in outstanding vehicle loans, as printed by RBI in the Sectoral Deployment release.",
+  },
+  "credit.spread": {
+    title: "Credit spread (vehicle vs total)",
+    body: "Difference in YoY growth rates between vehicle loans and total bank lending. Positive = auto credit running hotter than the broader economy = bullish demand signal. Negative = lagging.",
+  },
+  "credit.share": {
+    title: "Auto's share of total bank lending",
+    body: "Vehicle loans as a percentage of total non-food bank credit. Historically sits between 3% and 4%. Drift higher = banks getting more 'auto-heavy'; drift lower = auto losing share to other lending segments.",
+  },
+
+  // Components / ACMA
+  "components.industry_turnover": {
+    title: "Auto-component industry turnover",
+    body: "Total value of components produced by India's auto-component industry over the period. Captures the back-end of the auto ecosystem feeding OEMs domestically and exports globally.",
+  },
+  "components.oem_supplies": {
+    title: "OEM supplies",
+    body: "Component value sold to OEMs (vehicle manufacturers) — tracks how well component-makers are riding the OEM demand cycle.",
+  },
+  "components.exports": {
+    title: "Auto-component exports",
+    body: "USD value of components shipped overseas. North America and Europe are the largest markets. Reflects India's competitiveness in the global auto supply chain.",
+  },
+  "components.aftermarket": {
+    title: "Aftermarket sales",
+    body: "Component sales to the replacement / repair / accessory market. Driven by the on-road vehicle parc, formalisation of repair, and e-commerce channels.",
+  },
+
+  // Festive Pulse
+  "festive.window_total": {
+    title: "Festive window total",
+    body: "Aggregate vehicle retail registrations during the Sep–Nov festive months — captures Onam through Diwali. The single most important demand window for Indian auto each year.",
+  },
+  "festive.peak_yoy": {
+    title: "Peak festive month YoY",
+    body: "Year-on-year retail change for the strongest festive month (typically October when Dhanteras/Diwali fall). FADA's pre-computed YoY% printed in the monthly press release.",
+  },
+
+  // Wholesale / SIAM
+  "wholesale.production_total": {
+    title: "Total production",
+    body: "Total monthly vehicle production by SIAM-member OEMs, summed across PV, 2W, 3W, CV. Factory-end view of supply.",
+  },
+  "wholesale.domestic_total": {
+    title: "Domestic dispatches",
+    body: "Vehicles dispatched from factory to domestic dealers in the month. Lags retail by ~2-3 weeks; the gap to retail signals inventory building or drawdown.",
+  },
+};
 const downloadRegistry = new Map();
 let tooltipNode = null;
 
@@ -1053,6 +1167,7 @@ function tabDefinitions() {
   const registrationAvailable = !!dashboardData.modules.registration?.available;
   const creditPulseAvailable = !!dashboardData.modules.credit_pulse?.available;
   const premiumDataAvailable = !!dashboardData.modules.premium_data?.available;
+  const festivePulseAvailable = !!dashboardData.modules.festive_pulse?.available;
   return [
     {
       id: "overview",
@@ -1118,6 +1233,13 @@ function tabDefinitions() {
       group: "Macro",
       hidden: !creditPulseAvailable,
       render: () => creditPulseAvailable ? renderCreditPulseSection() : "",
+    },
+    {
+      id: "festive-pulse",
+      label: "Festive Pulse",
+      group: "Macro",
+      hidden: !festivePulseAvailable,
+      render: () => festivePulseAvailable ? renderFestivePulseSection() : "",
     },
     {
       id: "premium-data",
@@ -1327,6 +1449,7 @@ function render() {
   setupChartTooltips();
   setupCreditPulseExplainer();
   setupMarketInsightsRibbon();
+  setupExplainerTooltips();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -1446,8 +1569,10 @@ function renderHeroNews() {
 
 function renderSummaryCard(card) {
   const tone = card?.tone || "neutral";
+  const explainKey = card?.id ? `summary.${card.id}` : null;
+  const explainAttr = explainKey && METRIC_EXPLAINERS[explainKey] ? `data-explain="${explainKey}" tabindex="0"` : "";
   return `
-    <article class="summary-card ${tone}">
+    <article class="summary-card ${tone}" ${explainAttr}>
       <div class="table-toolbar">
         <p class="small-label">${card?.label || ""}</p>
         ${renderSourceAction(summarySourceUrl(card?.id))}
@@ -3626,16 +3751,25 @@ function renderComponentsSection() {
         <p class="section-subtitle">${components.source_meta.note}</p>
       </div>
       <div class="panel-grid three components-metric-grid">
-        ${components.metrics.map((metric) => `
-          <article class="info-card">
-            <div class="info-card-head">
-              <p class="small-label">${metric.label}</p>
-              ${renderSourceAction(components.source_meta.url)}
-            </div>
-            <h3 class="summary-value">${metric.value}</h3>
-            <p class="metric-detail">${metric.delta}</p>
-          </article>
-        `).join("")}
+        ${components.metrics.map((metric) => {
+          const slug = String(metric.label).toLowerCase();
+          let key = null;
+          if (slug.includes("turnover")) key = "components.industry_turnover";
+          else if (slug.includes("oem")) key = "components.oem_supplies";
+          else if (slug.includes("export")) key = "components.exports";
+          else if (slug.includes("aftermarket")) key = "components.aftermarket";
+          const explainAttr = key ? `data-explain="${key}" tabindex="0"` : "";
+          return `
+            <article class="info-card" ${explainAttr}>
+              <div class="info-card-head">
+                <p class="small-label">${metric.label}</p>
+                ${renderSourceAction(components.source_meta.url)}
+              </div>
+              <h3 class="summary-value">${metric.value}</h3>
+              <p class="metric-detail">${metric.delta}</p>
+            </article>
+          `;
+        }).join("")}
       </div>
       <div class="section-divider"></div>
       ${segmentShare.available ? `
@@ -4005,6 +4139,188 @@ function stackRow(label, widthPct, value, color, detail = "") {
   `;
 }
 
+function renderFestivePulseSection() {
+  const fp = dashboardData.modules.festive_pulse;
+  if (!fp?.available) return "";
+  const latestYear = fp.latest_year;
+  const calendar = fp.festival_calendar || {};
+  const today = new Date();
+  const todayIso = today.toISOString().slice(0, 10);
+
+  const festivalToneClass = {
+    peak: "festival-tone-peak",
+    national: "festival-tone-national",
+    regional: "festival-tone-regional",
+  };
+
+  const renderFestivalRow = (festival) => {
+    const isPast = festival.date < todayIso;
+    const isUpcoming = festival.date >= todayIso;
+    const tone = festivalToneClass[festival.tone] || "festival-tone-national";
+    const dateObj = new Date(festival.date);
+    const datePretty = dateObj.toLocaleDateString("en-IN", { month: "short", day: "numeric", year: "numeric" });
+    const status = isPast ? "Past" : "Upcoming";
+    return `
+      <tr class="festival-row ${isUpcoming ? "is-upcoming" : "is-past"}">
+        <td><span class="festival-pip ${tone}"></span>${festival.name}</td>
+        <td><strong>${datePretty}</strong></td>
+        <td>${festival.region}</td>
+        <td><span class="festival-status">${status}</span></td>
+      </tr>
+    `;
+  };
+
+  const renderCalendarYearTable = (year) => {
+    const festivals = (calendar[year] || []).slice().sort((a, b) => a.date.localeCompare(b.date));
+    if (!festivals.length) return "";
+    return `
+      <div class="festival-year-block">
+        <h4>${year} festive calendar</h4>
+        <table class="festival-table">
+          <thead>
+            <tr>
+              <th>Festival</th>
+              <th>Date</th>
+              <th>Region</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${festivals.map(renderFestivalRow).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  };
+
+  // Bar chart of festive-window totals per year
+  const yearChart = (() => {
+    if (!fp.years || fp.years.length < 1) return "";
+    const max = Math.max(...fp.years.map((y) => y.total_units || 0));
+    return `
+      <div class="festive-year-chart">
+        ${fp.years.map((y) => {
+          const pct = max ? (y.total_units / max) * 100 : 0;
+          const isLatest = y.year === (latestYear?.year || "");
+          return `
+            <div class="festive-year-bar">
+              <div class="festive-year-bar-label">${y.year}</div>
+              <div class="festive-year-bar-track">
+                <div class="festive-year-bar-fill ${isLatest ? "is-latest" : ""}" style="width:${pct}%;"></div>
+                <span class="festive-year-bar-value">${formatUnits(y.total_units)} units</span>
+              </div>
+              <div class="festive-year-bar-meta">${y.month_count} mo${y.month_count > 1 ? "s" : ""} covered</div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+  })();
+
+  // Per-category festive YoY
+  const catYoy = fp.category_yoy || [];
+  const catYoyBlock = catYoy.length
+    ? `
+      <div class="chart-card" data-explain-block>
+        <p class="small-label">Category breakdown — ${latestYear?.year || ""} vs prior year</p>
+        <table class="festive-cat-table">
+          <thead>
+            <tr><th>Category</th><th>Festive units</th><th>YoY</th></tr>
+          </thead>
+          <tbody>
+            ${catYoy.map((c) => {
+              const tone = c.yoy_pct === null ? "" : (c.yoy_pct >= 0 ? "is-pos" : "is-neg");
+              const yoyText = c.yoy_pct === null ? "n.m." : `${c.yoy_pct >= 0 ? "+" : ""}${c.yoy_pct.toFixed(1)}%`;
+              return `<tr class="${tone}"><td>${c.label}</td><td>${formatUnits(c.units)}</td><td><strong>${yoyText}</strong></td></tr>`;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+    `
+    : "";
+
+  // Latest year monthly breakdown
+  const monthlyRows = (latestYear?.monthly_rows || []).map((r) => {
+    const yoy = r.total_yoy_pct;
+    const tone = yoy === null || yoy === undefined ? "" : (yoy >= 0 ? "is-pos" : "is-neg");
+    const yoyText = yoy === null || yoy === undefined ? "—" : `${yoy >= 0 ? "+" : ""}${yoy.toFixed(1)}%`;
+    return `<tr class="${tone}"><td>${r.label}</td><td>${formatUnits(r.total_units)}</td><td><strong>${yoyText}</strong></td></tr>`;
+  }).join("");
+
+  const peakYoy = latestYear?.peak_month_yoy_pct;
+  const peakTone = peakYoy === null || peakYoy === undefined ? "neutral" : (peakYoy >= 0 ? "positive" : "negative");
+  const peakClass = `kpi-${peakTone}`;
+
+  return `
+    <section id="section-festive-pulse" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Macro / Festive Pulse</p>
+          <h2>Indian auto demand during the festive window</h2>
+        </div>
+        <p class="section-subtitle">${fp.window_label || ""} — captures Onam, Navratri, Dussehra, Dhanteras and Diwali driven retail.</p>
+      </div>
+
+      <div class="festive-hero-grid">
+        <article class="festive-hero-card" data-explain="festive.window_total" tabindex="0">
+          <p class="small-label">Festive window total — ${latestYear?.year || ""}</p>
+          <p class="festive-hero-value">${formatUnits(latestYear?.total_units || 0)}</p>
+          <p class="metric-detail">vehicles registered across India over ${latestYear?.month_count || 0} festive month${(latestYear?.month_count || 0) > 1 ? "s" : ""} (${(latestYear?.month_labels || []).join(", ")})</p>
+        </article>
+        <article class="festive-hero-card ${peakClass}" data-explain="festive.peak_yoy" tabindex="0">
+          <p class="small-label">Peak festive month YoY — ${latestYear?.peak_month_label || ""}</p>
+          <p class="festive-hero-value">${peakYoy === null || peakYoy === undefined ? "—" : (peakYoy >= 0 ? "+" : "") + peakYoy.toFixed(1) + "%"}</p>
+          <p class="metric-detail">FADA-reported retail change vs same month one year ago</p>
+        </article>
+        <article class="festive-hero-card">
+          <p class="small-label">Festivals tracked</p>
+          <p class="festive-hero-value">${(calendar[String(today.getFullYear())] || []).length}</p>
+          <p class="metric-detail">major retail-driving festivals on the ${today.getFullYear()} calendar</p>
+        </article>
+      </div>
+
+      ${fp.narrative ? `<p class="festive-narrative">${fp.narrative}</p>` : ""}
+
+      <div class="panel-grid one">
+        ${monthlyRows ? `
+          <div class="chart-card">
+            <p class="small-label">Per-month retail in ${latestYear?.year || ""} festive window</p>
+            <table class="festive-month-table">
+              <thead>
+                <tr><th>Month</th><th>Total retail</th><th>YoY %</th></tr>
+              </thead>
+              <tbody>
+                ${monthlyRows}
+              </tbody>
+            </table>
+          </div>
+        ` : ""}
+
+        ${yearChart ? `
+          <div class="chart-card">
+            <p class="small-label">Year-on-year festive window totals</p>
+            ${yearChart}
+            <p class="metric-detail" style="margin-top:10px;">Bars compare the Sep–Nov retail window each year. Snapshots earlier than ${(latestYear?.year || "")} carry partial-month coverage; the chart will deepen as cron picks up older releases.</p>
+          </div>
+        ` : ""}
+
+        ${catYoyBlock}
+
+        <div class="chart-card">
+          <p class="small-label">Festival calendar</p>
+          <p class="metric-detail">Hindu calendar-based festivals shift ~10–15 days year over year. <strong>Dhanteras and Diwali</strong> are the single biggest car &amp; 2W buying days each year. <span class="festival-pip festival-tone-peak"></span> = retail peak day, <span class="festival-pip festival-tone-national"></span> = pan-India, <span class="festival-pip festival-tone-regional"></span> = regional.</p>
+          <div class="festival-year-grid">
+            ${[String(today.getFullYear()), String(today.getFullYear() + 1), String(today.getFullYear() - 1)]
+              .filter((y) => calendar[y])
+              .map(renderCalendarYearTable)
+              .join("")}
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 function renderPremiumDataSection() {
   const module_ = dashboardData.modules.premium_data;
   if (!module_?.available) {
@@ -4162,7 +4478,7 @@ function renderCreditPulseSection() {
     return `
       <div class="chart-card">
         <div class="chart-title-row">
-          <div>
+          <div data-explain="credit.share" tabindex="0">
             <p class="small-label">Auto's share of total bank lending &mdash; ${latest.label || ""}</p>
             <h3>${sharePct.toFixed(2)}%</h3>
             <p class="metric-detail">
@@ -4196,7 +4512,7 @@ function renderCreditPulseSection() {
     return `
       <div class="chart-card">
         <div class="chart-title-row">
-          <div>
+          <div data-explain="credit.spread" tabindex="0">
             <p class="small-label">Vehicle vs total bank lending growth</p>
             <h3 style="color:${spreadColor};">${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)} pp</h3>
             <p class="metric-detail">
@@ -4224,7 +4540,7 @@ function renderCreditPulseSection() {
       <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
-            <div>
+            <div data-explain="credit.outstanding" tabindex="0">
               <p class="small-label">Latest reading &mdash; ${latest.label || ""}</p>
               <h3>${formatCrore(latest.outstanding_cr || 0)}</h3>
               <p class="metric-detail">
@@ -4395,12 +4711,22 @@ function renderMarketInsightsRibbon() {
   if (!cards.length) {
     return "";
   }
+  const ribbonExplainKey = {
+    "Demand winner": "ribbon.demand_winner",
+    "Demand laggard": "ribbon.demand_laggard",
+    "EV penetration": "ribbon.ev_penetration",
+    "Auto-credit pulse": "ribbon.credit_pulse",
+    "Dealer inventory": "ribbon.dealer_inventory",
+    "Channel balance (PV)": "ribbon.channel_balance",
+  };
   const renderCard = (card) => {
     const tone = card.tone || "neutral";
     const tabAttr = card.tab_id ? `data-target-tab="${card.tab_id}"` : "";
     const anchorAttr = card.section_anchor ? `data-target-anchor="${card.section_anchor}"` : "";
+    const explainKey = ribbonExplainKey[card.kicker];
+    const explainAttr = explainKey ? `data-explain="${explainKey}"` : "";
     return `
-      <button class="insight-ribbon-card insight-tone-${tone}" ${tabAttr} ${anchorAttr}>
+      <button class="insight-ribbon-card insight-tone-${tone}" ${tabAttr} ${anchorAttr} ${explainAttr}>
         <span class="insight-ribbon-icon" aria-hidden="true">${card.icon || ""}</span>
         <span class="insight-ribbon-body">
           <span class="insight-ribbon-kicker">${card.kicker || ""}</span>
@@ -4438,6 +4764,72 @@ function setupMarketInsightsRibbon() {
         scrollToPendingSection();
       }
     });
+  });
+}
+
+// Singleton tooltip used by setupExplainerTooltips. Wires hover/focus on
+// any element with `data-explain="<key>"` (key looked up in
+// METRIC_EXPLAINERS) and shows a styled popover with the explanation.
+function _ensureExplainerTooltipNode() {
+  let node = document.getElementById("explainer-tooltip");
+  if (node) return node;
+  node = document.createElement("div");
+  node.id = "explainer-tooltip";
+  node.className = "metric-tooltip";
+  node.setAttribute("role", "tooltip");
+  node.style.display = "none";
+  document.body.appendChild(node);
+  return node;
+}
+
+function _showExplainerTooltip(target, explainer) {
+  const node = _ensureExplainerTooltipNode();
+  node.innerHTML = `
+    <p class="metric-tooltip-title">${explainer.title || ""}</p>
+    <p class="metric-tooltip-body">${explainer.body || ""}</p>
+  `;
+  node.style.display = "block";
+  // Position: prefer above the target, but flip below if too close to top.
+  const rect = target.getBoundingClientRect();
+  const tipRect = node.getBoundingClientRect();
+  const margin = 10;
+  let top = rect.top + window.scrollY - tipRect.height - margin;
+  if (top < window.scrollY + 16) {
+    top = rect.bottom + window.scrollY + margin;
+  }
+  let left = rect.left + window.scrollX + rect.width / 2 - tipRect.width / 2;
+  const maxLeft = window.scrollX + window.innerWidth - tipRect.width - 16;
+  const minLeft = window.scrollX + 16;
+  if (left < minLeft) left = minLeft;
+  if (left > maxLeft) left = maxLeft;
+  node.style.top = `${top}px`;
+  node.style.left = `${left}px`;
+}
+
+function _hideExplainerTooltip() {
+  const node = document.getElementById("explainer-tooltip");
+  if (node) node.style.display = "none";
+}
+
+function setupExplainerTooltips() {
+  document.querySelectorAll("[data-explain]").forEach((target) => {
+    const key = target.getAttribute("data-explain");
+    const explainer = METRIC_EXPLAINERS[key];
+    if (!explainer) return;
+    target.classList.add("has-explainer");
+    let showTimer = null;
+    const onEnter = () => {
+      clearTimeout(showTimer);
+      showTimer = setTimeout(() => _showExplainerTooltip(target, explainer), 250);
+    };
+    const onLeave = () => {
+      clearTimeout(showTimer);
+      _hideExplainerTooltip();
+    };
+    target.addEventListener("mouseenter", onEnter);
+    target.addEventListener("mouseleave", onLeave);
+    target.addEventListener("focus", onEnter);
+    target.addEventListener("blur", onLeave);
   });
 }
 
