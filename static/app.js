@@ -4215,6 +4215,71 @@ function renderInsightsSection() {
   `;
 }
 
+function renderStockSnapshotPanel() {
+  const stocks = dashboardData.oem_stocks;
+  if (!stocks?.available) return "";
+  const entries = Object.entries(stocks.stocks || {});
+  if (!entries.length) return "";
+  const exchange = stocks.exchange || "NSE";
+  const asOf = stocks.as_of_date
+    ? new Date(stocks.as_of_date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })
+    : "";
+
+  const fmtPct = (v) => {
+    if (v === null || v === undefined) return "—";
+    return `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+  };
+  const tone = (v) => (v === null || v === undefined ? "neutral" : (v >= 0 ? "positive" : "negative"));
+  const fmtPrice = (v) => v == null || !v ? "—" : v.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  const renderCard = ([company, stock]) => {
+    const sparkline = renderStockSparkline(stock.closes_30d);
+    return `
+      <article class="stock-snapshot-card">
+        <header class="stock-snapshot-head">
+          <div>
+            <p class="stock-snapshot-company">${company}</p>
+            <p class="stock-snapshot-ticker">${exchange}: ${stock.ticker || "—"}</p>
+          </div>
+          <a class="stock-chip-link" href="${stock.yahoo_url || "#"}" target="_blank" rel="noopener" title="View on Yahoo Finance">↗</a>
+        </header>
+        <p class="stock-snapshot-price">₹${fmtPrice(stock.price)}</p>
+        ${sparkline ? `<div class="stock-snapshot-spark-wrap">${sparkline}</div>` : '<div class="stock-snapshot-spark-empty">Sparkline lands after next live refresh</div>'}
+        <div class="stock-chip-changes">
+          <span class="stock-chip-pill stock-tone-${tone(stock.change_1d_pct)}">
+            <span class="stock-chip-pill-label">1D</span>
+            <span class="stock-chip-pill-value">${fmtPct(stock.change_1d_pct)}</span>
+          </span>
+          <span class="stock-chip-pill stock-tone-${tone(stock.change_1w_pct)}">
+            <span class="stock-chip-pill-label">1W</span>
+            <span class="stock-chip-pill-value">${fmtPct(stock.change_1w_pct)}</span>
+          </span>
+          <span class="stock-chip-pill stock-tone-${tone(stock.change_1m_pct)}">
+            <span class="stock-chip-pill-label">1M</span>
+            <span class="stock-chip-pill-value">${fmtPct(stock.change_1m_pct)}</span>
+          </span>
+        </div>
+        ${stock.note ? `<p class="stock-snapshot-note">${stock.note}</p>` : ""}
+      </article>
+    `;
+  };
+
+  return `
+    <section id="section-stock-snapshot" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Listed-OEM Stock Snapshot</p>
+          <h2>Live NSE prices for every company tracked on this dashboard</h2>
+        </div>
+        <p class="section-subtitle">${stocks.source_note || ""}${asOf ? ` · As of ${asOf}` : ""}</p>
+      </div>
+      <div class="stock-snapshot-grid">
+        ${entries.map(renderCard).join("")}
+      </div>
+    </section>
+  `;
+}
+
 function renderCompanySection() {
   const cards = state.company === "all"
     ? dashboardData.company_map
@@ -4222,6 +4287,7 @@ function renderCompanySection() {
   const activeCompany = cards.find((item) => item.company === state.companyMapFocus) || cards[0];
 
   return `
+    ${renderStockSnapshotPanel()}
     <section id="section-company-map" class="section panel section-anchor">
       <div class="panel-header">
         <div>
