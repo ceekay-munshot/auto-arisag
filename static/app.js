@@ -1526,16 +1526,36 @@ function _buildSearchIndex() {
       keywords: `${label} ${id}`.toLowerCase(),
     });
   });
-  // Companies (from listed map)
-  const companies = Object.keys(dashboardData.company_map || {});
-  companies.forEach((company) => {
+  // Companies. company_map is a list of {company, summary, ...} objects
+  // built by analyze.build_company_map. Also pull from company_unit_trends
+  // and the explicit OEM tracker rows so monthly-only companies (e.g.
+  // Atul Auto) are reachable too.
+  const seenCompanies = new Set();
+  const pushCompany = (company, hint = "Listed OEM") => {
+    if (!company || seenCompanies.has(company)) return;
+    seenCompanies.add(company);
     idx.push({
       type: "Company",
       label: company,
-      group: "Listed OEM",
+      group: hint,
       action: { kind: "company", name: company },
       keywords: company.toLowerCase(),
     });
+  };
+  const map = dashboardData.company_map;
+  if (Array.isArray(map)) {
+    map.forEach((entry) => pushCompany(entry?.company, "Listed OEM"));
+  } else if (map && typeof map === "object") {
+    Object.keys(map).forEach((c) => pushCompany(c, "Listed OEM"));
+  }
+  asArray(dashboardData.modules.retail?.company_unit_trends).forEach((t) =>
+    pushCompany(t.label || t.company, "Listed OEM"),
+  );
+  // Stock-listed tickers (Yahoo) — surface the ticker too for ⌘-K-style
+  // searches like "TVSMOTOR" or "BAJAJ-AUTO".
+  const stocks = dashboardData.oem_stocks?.stocks || {};
+  Object.entries(stocks).forEach(([company, info]) => {
+    pushCompany(company, info?.ticker ? `NSE: ${info.ticker}` : "Listed OEM");
   });
   // Metrics — every explainer key becomes a search target.
   Object.entries(METRIC_EXPLAINERS).forEach(([key, exp]) => {
