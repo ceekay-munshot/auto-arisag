@@ -285,12 +285,22 @@
       ]
     },
     "Tata Motors": {
-      "ticker": "TATAMOTORS",
+      "ticker": "TMPV",
       "price": 782.45,
-      "change_1d_pct": -0.85,
-      "change_1w_pct": -1.95,
-      "change_1m_pct": 3.1,
-      "yahoo_url": "https://finance.yahoo.com/quote/TATAMOTORS.NS/"
+      "change_1d_pct": null,
+      "change_1w_pct": null,
+      "change_1m_pct": null,
+      "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
+      "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV)."
+    },
+    "Tata Motors CV": {
+      "ticker": "TMCV",
+      "price": 0,
+      "change_1d_pct": null,
+      "change_1w_pct": null,
+      "change_1m_pct": null,
+      "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
+      "note": "Tata Motors Commercial Vehicles — listed Nov 2025 as a separate entity post-demerger."
     },
     "Ashok Leyland": {
       "ticker": "ASHOKLEY",
