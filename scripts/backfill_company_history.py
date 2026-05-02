@@ -518,14 +518,25 @@ def fetch_bajaj() -> list[dict]:
     return rows
 
 
+# Active adapters. As of 2026-05, only these three produce data via Wayback
+# CDX consistently:
+#   - TVS Motor       (~18 months of history)
+#   - Mahindra & Mahindra (~4 months, slug-embedded volumes)
+#   - Atul Auto       (~10 months)
+#
+# The five commented-out adapters below were retired because Wayback
+# returned 0 parseable releases per run, churning workflow time for no
+# gain. They stay in the file (just unwired) so the discovery code can be
+# re-enabled by uncommenting if any of these companies' Wayback footprint
+# improves later, or if we get paid feeds.
 COMPANY_FETCHERS = {
-    "Maruti Suzuki": fetch_maruti,
+    # "Maruti Suzuki": fetch_maruti,            # disabled (URL guess fails for old months)
     "Mahindra & Mahindra": fetch_mahindra_auto,
-    "Hero MotoCorp": fetch_hero,
+    # "Hero MotoCorp": fetch_hero,              # disabled (slug filter too strict)
     "TVS Motor": fetch_tvs,
-    "Bajaj Auto": fetch_bajaj,
-    "Eicher Motors": fetch_eicher,
-    "Tata Motors": fetch_tata_motors_cv,
+    # "Bajaj Auto": fetch_bajaj,                # disabled (Wayback returns nothing)
+    # "Eicher Motors": fetch_eicher,            # disabled (Wayback returns nothing)
+    # "Tata Motors": fetch_tata_motors_cv,      # disabled (cv.tatamotors.com slug shift)
     "Atul Auto": fetch_atul_auto,
 }
 

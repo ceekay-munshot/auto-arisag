@@ -4,6 +4,10 @@ on:
   schedule:
     # Three times a day at 8:30 AM, 2:30 PM and 8:30 PM IST.
     # IST = UTC + 05:30, so subtract 05:30: 03:00, 09:00, 15:00 UTC.
+    # Note: the heavy "Backfill OEM history" step only runs on the 09:00 UTC
+    # tick (2:30 PM IST) — it lines up with FADA's typical publication time,
+    # and skipping it on the other two ticks shaves 5–8 minutes off those
+    # runs. Lighter scrapers (RBI / macro / stocks) still fire on every tick.
     - cron: '0 3,9,15 * * *'
   workflow_dispatch:
 
@@ -39,19 +43,26 @@ jobs:
         # for every tracked category in data/oem_history.json. After the first
         # successful run this is essentially a no-op until a new monthly URL
         # appears in data/source_snapshot.json.
+        # Restricted to the 09:00 UTC (2:30 PM IST) tick to save 5–8 min on
+        # the other two daily runs. workflow_dispatch (manual) always runs it.
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
-      - name: Backfill SIAM wholesale history
-        # Idempotent — walks Wayback for SIAM detail pages and fills
-        # data/siam_history.json with parseable monthly volumes.
-        run: python -u scripts/backfill_siam_history.py
-        continue-on-error: true
+      # SIAM history backfill removed 2026-05 — Wayback CDX consistently
+      # returns 0 parseable releases, so the step churned for ~3-5 min per
+      # run with nothing to show for it. The snapshot file
+      # data/siam_history.json is preserved and still surfaces in the
+      # dashboard. Re-enable here if SIAM ever becomes scrape-able again.
 
       - name: Backfill listed-OEM company history
         # Idempotent — discovers monthly company press releases via Wayback
         # and fills data/company_unit_history.json. Snapshot/static rows in
         # dashboard/config.py always win for the same month.
+        # As of 2026-05 only TVS Motor / M&M / Atul Auto adapters produce
+        # data; the other 5 are commented out in COMPANY_FETCHERS.
+        # Restricted to the 09:00 UTC tick to keep the lighter ticks fast.
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
         run: python -u scripts/backfill_company_history.py
         continue-on-error: true
 
