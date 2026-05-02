@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T05:48:40.663238+00:00",
+  "generated_at": "2026-05-02T13:02:16.870462+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -11884,6 +11884,62 @@
       ]
     }
   },
+  "market_insights": [
+    {
+      "icon": "\ud83d\udcc8",
+      "tone": "positive",
+      "kicker": "Demand winner",
+      "value": "2W +28.7%",
+      "narrative": "Two-Wheelers leads retail growth this month at +28.7% YoY \u2014 strongest category by some distance.",
+      "section_anchor": "section-retail",
+      "tab_id": "retail-trend"
+    },
+    {
+      "icon": "\ud83d\udcc9",
+      "tone": "negative",
+      "kicker": "Demand laggard",
+      "value": "CE -16.2%",
+      "narrative": "Construction Equipment is the weakest spot at -16.2% YoY \u2014 flag if this persists for two more months.",
+      "section_anchor": "section-retail",
+      "tab_id": "retail-trend"
+    },
+    {
+      "icon": "\u26a1",
+      "tone": "positive",
+      "kicker": "EV penetration",
+      "value": "10.4%",
+      "narrative": "EV share of retail at 10.4% in Mar 2026. Up 4.56 pp over the last 6 mo.",
+      "section_anchor": "section-ev",
+      "tab_id": "retail-ev"
+    },
+    {
+      "icon": "\ud83d\udcb0",
+      "tone": "positive",
+      "kicker": "Auto-credit pulse",
+      "value": "+2.7 pp",
+      "narrative": "Vehicle loans growing at 18.6% YoY, leading total bank lending at 15.9%. Demand-side signal is bullish.",
+      "section_anchor": "section-credit-pulse",
+      "tab_id": "credit-pulse"
+    },
+    {
+      "icon": "\ud83c\udfec",
+      "tone": "positive",
+      "kicker": "Dealer inventory",
+      "value": "28 days",
+      "narrative": "FADA reports PV stock at dealers running 28-28 days \u2014 in healthy band. Healthy operating band is 21\u201330 days.",
+      "section_anchor": "section-channel-pulse",
+      "tab_id": "channel-pulse"
+    },
+    {
+      "icon": "\ud83d\udd01",
+      "tone": "neutral",
+      "kicker": "Channel balance (PV)",
+      "value": "99.5%",
+      "narrative": "In sync. Wholesale tracking retail within 5% \u2014 channel stable.",
+      "section_anchor": "section-wholesale",
+      "tab_id": "wholesale"
+    }
+  ],
   "insights": [
     {
       "title": "Segment speed",
