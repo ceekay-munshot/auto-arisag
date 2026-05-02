@@ -1662,7 +1662,6 @@ function render() {
   const app = document.getElementById("app");
   app.innerHTML = [
     renderHero(),
-    renderSearchBar(),
     renderMacroOverlayStrip(),
     renderMarketInsightsRibbon(),
     renderFilters(),
