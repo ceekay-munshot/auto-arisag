@@ -998,6 +998,28 @@ function setupRefreshAction() {
   });
 }
 
+function setupExportPdfAction() {
+  document.querySelectorAll("[data-action='export-pdf']").forEach((node) => {
+    node.addEventListener("click", () => {
+      // Stash a friendly file name. The browser print dialog uses this as
+      // the suggested PDF file name on Chrome/Edge.
+      const tabLabel = activeTabDefinition()?.label || "dashboard";
+      const safeLabel = tabLabel.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      const today = new Date().toISOString().slice(0, 10);
+      const prevTitle = document.title;
+      document.title = `auto-arisag-${safeLabel}-${today}`;
+      // Print stylesheet uses attr(data-print-date) for the footer.
+      document.body.setAttribute("data-print-date", today);
+      try {
+        window.print();
+      } finally {
+        // Restore original title once the print dialog closes.
+        setTimeout(() => { document.title = prevTitle; }, 500);
+      }
+    });
+  });
+}
+
 function setupStateRegistrationExplorer() {
   const picker = document.querySelector("[data-registration-state]");
   if (picker) {
@@ -1472,6 +1494,7 @@ function render() {
   setupMarketInsightsRibbon();
   setupExplainerTooltips();
   setupSearchBar();
+  setupExportPdfAction();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -1722,6 +1745,9 @@ function renderHero() {
         <div class="hero-toolbar">
           <button class="button button-primary hero-refresh" data-action="refresh" ${refreshState.loading ? "disabled" : ""}>
             ${refreshState.loading ? '<span class="button-loader" aria-hidden="true"></span> Refreshing...' : "Refresh Data"}
+          </button>
+          <button class="button button-export-pdf" data-action="export-pdf" title="Export the active tab as a PDF">
+            <span aria-hidden="true">📄</span> Export PDF
           </button>
           <p class="hero-status ${refreshState.tone}">${refreshState.message}</p>
         </div>
