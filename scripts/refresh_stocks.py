@@ -34,12 +34,16 @@ HEADERS = {
 }
 YAHOO_CHART_URL = (
     "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
-    "?interval=1d&range=3mo&includePrePost=false"
+    "?interval=1d&range=2y&includePrePost=false"
 )
 
 
-def _fetch_closes(yahoo_ticker: str) -> list[float]:
-    """Return chronological close-price series for a Yahoo ticker."""
+def _fetch_daily(yahoo_ticker: str) -> list[dict]:
+    """Return chronological [{date: 'YYYY-MM-DD', close: float}, ...] for
+    the last ~2 years of trading days. Two years of history lets the
+    Festive Pulse tab compute year-over-year festive-window returns
+    without another scrape."""
+    from datetime import datetime as _dt
     url = YAHOO_CHART_URL.format(ticker=quote(yahoo_ticker, safe=""))
     try:
         response = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
@@ -50,11 +54,26 @@ def _fetch_closes(yahoo_ticker: str) -> list[float]:
         return []
     try:
         result = payload["chart"]["result"][0]
+        timestamps = result["timestamp"]
         closes = result["indicators"]["quote"][0]["close"]
-        return [c for c in closes if c is not None]
     except (KeyError, IndexError, TypeError) as exc:
         print(f"  yahoo parse failed for {yahoo_ticker}: {exc}", flush=True)
         return []
+    out = []
+    for ts, close in zip(timestamps, closes):
+        if close is None:
+            continue
+        out.append({
+            "date": _dt.utcfromtimestamp(ts).strftime("%Y-%m-%d"),
+            "close": round(float(close), 2),
+        })
+    return out
+
+
+def _fetch_closes(yahoo_ticker: str) -> list[float]:
+    """Backward-compat wrapper used by the existing 1D/1W/1M delta path.
+    Returns just the close numbers extracted from _fetch_daily."""
+    return [d["close"] for d in _fetch_daily(yahoo_ticker)]
 
 
 def _delta_pct(closes: list[float], lookback: int) -> float | None:
@@ -90,14 +109,16 @@ def main() -> int:
         if not ticker:
             continue
         yahoo = _yahoo_ticker(ticker)
-        closes = _fetch_closes(yahoo)
-        if not closes:
+        daily = _fetch_daily(yahoo)
+        if not daily:
             failed += 1
             continue
+        closes = [d["close"] for d in daily]
         latest = closes[-1]
-        # Last 30 trading days of closes for the inline sparkline. Rounded
-        # to 2dp so the JSON stays compact.
+        # Last 30 trading days of closes for the inline sparkline.
         sparkline = [round(c, 2) for c in closes[-30:]]
+        # 2-year daily series so the Festive Pulse tab can compute
+        # year-on-year festive-window (Sep–Nov) returns client-side.
         new_info = {
             **info,
             "price": round(latest, 2),
@@ -105,6 +126,7 @@ def main() -> int:
             "change_1w_pct": _delta_pct(closes, 5),  # ~5 trading days
             "change_1m_pct": _delta_pct(closes, 21),  # ~21 trading days
             "closes_30d": sparkline,
+            "daily_closes": daily,  # [{date, close}, ...]
             "yahoo_url": f"https://finance.yahoo.com/quote/{yahoo}/",
         }
         if new_info != info:

@@ -751,10 +751,124 @@ def build_festive_pulse_module(retail: dict[str, Any]) -> dict[str, Any]:
         "yoy_window_pct": yoy_window_pct,
         "category_yoy": category_yoy,
         "narrative": " ".join(narrative_bits) if narrative_bits else "",
+        "next_festival": _build_next_festival(),
+        "oem_leaderboard": _build_festive_oem_leaderboard(),
         "source_meta": {
             "name": "FADA retail (Sep–Nov festive aggregation)",
             "url": retail.get("source_meta", {}).get("url"),
         },
+    }
+
+
+def _build_next_festival() -> dict[str, Any] | None:
+    """Pull the next upcoming peak-tier festival from the calendar.
+    Auto-advances past whichever festival has just passed."""
+    today_iso = datetime.now(UTC).date().isoformat()
+    candidates: list[dict[str, Any]] = []
+    for festivals in FESTIVE_CALENDAR.values():
+        for f in festivals:
+            if f.get("date", "") >= today_iso:
+                candidates.append(f)
+    candidates.sort(key=lambda f: f.get("date", ""))
+    # Prefer Dhanteras / Diwali (peak tier) — they're the demand peak days.
+    peaks = [f for f in candidates if f.get("tone") == "peak"]
+    if peaks:
+        return peaks[0]
+    return candidates[0] if candidates else None
+
+
+def _build_festive_oem_leaderboard() -> dict[str, Any]:
+    """For each tracked category, return the top-N OEMs by Sep–Nov YoY
+    growth in the most recent festive year for which we have data on both
+    sides of the comparison.
+
+    Pulled from oem_history.json which the cron extends every month, so
+    this leaderboard auto-recomputes when the latest festive months land.
+    """
+    history = load_oem_history()
+    if not history:
+        return {"available": False}
+
+    out_categories: list[dict[str, Any]] = []
+    for category in ("PV", "2W", "3W", "CV", "TRACTOR"):
+        months = history.get(category) or []
+        if not months:
+            continue
+        # Build lookup {month: {oem: units}}
+        per_month: dict[str, dict[str, int]] = {}
+        for record in months:
+            m = record.get("month")
+            if not m:
+                continue
+            per_month.setdefault(m, {})
+            for row in record.get("rows") or []:
+                oem = row.get("oem") or row.get("listed_company")
+                if not oem:
+                    continue
+                per_month[m][oem] = per_month[m].get(oem, 0) + (row.get("units") or 0)
+
+        # Aggregate Sep+Oct+Nov per year per OEM.
+        per_year_oem: dict[int, dict[str, int]] = {}
+        for m, oem_units in per_month.items():
+            year, mon = int(m[:4]), int(m[5:7])
+            if mon not in (9, 10, 11):
+                continue
+            per_year_oem.setdefault(year, {})
+            for oem, units in oem_units.items():
+                per_year_oem[year][oem] = per_year_oem[year].get(oem, 0) + units
+
+        # Find the most recent year that has BOTH a complete festive window
+        # AND a prior-year festive window for YoY computation.
+        sorted_years = sorted(per_year_oem.keys(), reverse=True)
+        best_year = None
+        for y in sorted_years:
+            if (y - 1) in per_year_oem:
+                best_year = y
+                break
+        if best_year is None:
+            continue
+
+        cur = per_year_oem[best_year]
+        prev = per_year_oem[best_year - 1]
+        rows = []
+        for oem, units in cur.items():
+            prior = prev.get(oem)
+            if not prior or prior < 100:  # filter noise / new entrants with no comparable
+                continue
+            yoy_pct = round((units - prior) / prior * 100, 1)
+            # Skip implausible swings (>+200% or <-80%) — almost always
+            # indicate prior-year data was partial in the FADA annexure.
+            if yoy_pct > 200 or yoy_pct < -80:
+                continue
+            rows.append({
+                "oem": oem,
+                "units": units,
+                "prior_units": prior,
+                "yoy_pct": yoy_pct,
+            })
+        # Filter out tiny OEMs (< 0.5% share of category festive total).
+        cat_total = sum(r["units"] for r in rows) or 1
+        rows = [r for r in rows if r["units"] / cat_total >= 0.005]
+        rows.sort(key=lambda r: r["yoy_pct"], reverse=True)
+        # Top 5 winners + bottom 3 laggards.
+        winners = rows[:5]
+        laggards = rows[-3:][::-1] if len(rows) > 5 else []
+        out_categories.append({
+            "category": category,
+            "label": CATEGORY_LABELS.get(category, category),
+            "year": best_year,
+            "prior_year": best_year - 1,
+            "winners": winners,
+            "laggards": laggards,
+        })
+
+    return {
+        "available": bool(out_categories),
+        "categories": out_categories,
+        "note": (
+            "Top OEMs by Sep–Nov retail growth versus the same window one year prior. "
+            "Sourced from FADA OEM annexures — auto-updates each cron run as new festive months land."
+        ),
     }
 
 
