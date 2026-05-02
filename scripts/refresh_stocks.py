@@ -95,12 +95,16 @@ def main() -> int:
             failed += 1
             continue
         latest = closes[-1]
+        # Last 30 trading days of closes for the inline sparkline. Rounded
+        # to 2dp so the JSON stays compact.
+        sparkline = [round(c, 2) for c in closes[-30:]]
         new_info = {
             **info,
             "price": round(latest, 2),
             "change_1d_pct": _delta_pct(closes, 1),
             "change_1w_pct": _delta_pct(closes, 5),  # ~5 trading days
             "change_1m_pct": _delta_pct(closes, 21),  # ~21 trading days
+            "closes_30d": sparkline,
             "yahoo_url": f"https://finance.yahoo.com/quote/{yahoo}/",
         }
         if new_info != info:
