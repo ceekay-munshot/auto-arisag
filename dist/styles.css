@@ -2914,6 +2914,15 @@ th:hover {
   border-left: 3px solid var(--gold);
 }
 
+/* Listed-company mapping pagination toolbar */
+.company-map-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
 .stock-chip-spark {
   width: 100%;
   height: 100%;
