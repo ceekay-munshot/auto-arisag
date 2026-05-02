@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T14:54:22.334738+00:00",
+  "generated_at": "2026-05-02T15:13:26.235039+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -11883,6 +11883,498 @@
           "cta_url": "https://www.crisil.com/en/home/our-businesses/india-research.html"
         }
       ]
+    },
+    "festive_pulse": {
+      "available": true,
+      "title": "Festive Pulse",
+      "window_label": "Sep \u2013 Nov (FADA festive window)",
+      "festival_calendar": {
+        "2024": [
+          {
+            "name": "Onam",
+            "date": "2024-09-15",
+            "region": "Kerala",
+            "tone": "regional"
+          },
+          {
+            "name": "Ganesh Chaturthi",
+            "date": "2024-09-07",
+            "region": "Maharashtra / Karnataka",
+            "tone": "regional"
+          },
+          {
+            "name": "Navratri (start)",
+            "date": "2024-10-03",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Dussehra",
+            "date": "2024-10-12",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Karva Chauth",
+            "date": "2024-10-20",
+            "region": "North India",
+            "tone": "regional"
+          },
+          {
+            "name": "Dhanteras",
+            "date": "2024-10-29",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Diwali",
+            "date": "2024-10-31",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Bhai Dooj",
+            "date": "2024-11-03",
+            "region": "North / West India",
+            "tone": "regional"
+          }
+        ],
+        "2025": [
+          {
+            "name": "Akshaya Tritiya",
+            "date": "2025-04-30",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Onam",
+            "date": "2025-09-05",
+            "region": "Kerala",
+            "tone": "regional"
+          },
+          {
+            "name": "Ganesh Chaturthi",
+            "date": "2025-08-27",
+            "region": "Maharashtra / Karnataka",
+            "tone": "regional"
+          },
+          {
+            "name": "Navratri (start)",
+            "date": "2025-09-22",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Dussehra",
+            "date": "2025-10-02",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Karva Chauth",
+            "date": "2025-10-10",
+            "region": "North India",
+            "tone": "regional"
+          },
+          {
+            "name": "Dhanteras",
+            "date": "2025-10-18",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Diwali",
+            "date": "2025-10-20",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Bhai Dooj",
+            "date": "2025-10-23",
+            "region": "North / West India",
+            "tone": "regional"
+          }
+        ],
+        "2026": [
+          {
+            "name": "Akshaya Tritiya",
+            "date": "2026-04-19",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Ganesh Chaturthi",
+            "date": "2026-08-15",
+            "region": "Maharashtra / Karnataka",
+            "tone": "regional"
+          },
+          {
+            "name": "Onam",
+            "date": "2026-08-26",
+            "region": "Kerala",
+            "tone": "regional"
+          },
+          {
+            "name": "Navratri (start)",
+            "date": "2026-09-12",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Dussehra",
+            "date": "2026-09-21",
+            "region": "Pan-India",
+            "tone": "national"
+          },
+          {
+            "name": "Karva Chauth",
+            "date": "2026-10-29",
+            "region": "North India",
+            "tone": "regional"
+          },
+          {
+            "name": "Dhanteras",
+            "date": "2026-11-06",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Diwali",
+            "date": "2026-11-08",
+            "region": "Pan-India",
+            "tone": "peak"
+          },
+          {
+            "name": "Bhai Dooj",
+            "date": "2026-11-11",
+            "region": "North / West India",
+            "tone": "regional"
+          }
+        ]
+      },
+      "years": [
+        {
+          "year": "2025",
+          "month_count": 2,
+          "months_covered": [
+            "2025-10",
+            "2025-11"
+          ],
+          "month_labels": [
+            "Oct 2025",
+            "Nov 2025"
+          ],
+          "total_units": 7324755,
+          "peak_month_label": "Nov 2025",
+          "peak_month_yoy_pct": 2.14,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 5696030
+            },
+            {
+              "category": "PV",
+              "units": 951525
+            },
+            {
+              "category": "3W",
+              "units": 263468
+            },
+            {
+              "category": "CV",
+              "units": 202776
+            },
+            {
+              "category": "TRACTOR",
+              "units": 199610
+            },
+            {
+              "category": "CE",
+              "units": 11346
+            }
+          ],
+          "monthly_rows": [
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "total_units": 4023923,
+              "total_yoy_pct": 40.53,
+              "total_mom_pct": 120.21,
+              "categories": [
+                {
+                  "category": "PV",
+                  "label": "Passenger Vehicles",
+                  "units": 557373,
+                  "mom_pct": 86.18,
+                  "yoy_pct": 11.35,
+                  "share_pct": 13.85
+                },
+                {
+                  "category": "2W",
+                  "label": "Two-Wheelers",
+                  "units": 3149846,
+                  "mom_pct": 144.6,
+                  "yoy_pct": 51.76,
+                  "share_pct": 78.28
+                },
+                {
+                  "category": "3W",
+                  "label": "Three-Wheelers",
+                  "units": 129517,
+                  "mom_pct": 31.0,
+                  "yoy_pct": 5.43,
+                  "share_pct": 3.22
+                },
+                {
+                  "category": "CV",
+                  "label": "Commercial Vehicles",
+                  "units": 107841,
+                  "mom_pct": 49.52,
+                  "yoy_pct": 17.69,
+                  "share_pct": 2.68
+                },
+                {
+                  "category": "TRACTOR",
+                  "label": "Tractors",
+                  "units": 73577,
+                  "mom_pct": 13.57,
+                  "yoy_pct": 14.22,
+                  "share_pct": 1.83
+                },
+                {
+                  "category": "CE",
+                  "label": "Construction Equipment",
+                  "units": 5769,
+                  "mom_pct": 29.41,
+                  "yoy_pct": -30.49,
+                  "share_pct": 0.14
+                }
+              ]
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "total_units": 3300832,
+              "total_yoy_pct": 2.14,
+              "total_mom_pct": -17.97,
+              "categories": [
+                {
+                  "category": "PV",
+                  "label": "Passenger Vehicles",
+                  "units": 394152,
+                  "mom_pct": -28.88,
+                  "yoy_pct": 19.71,
+                  "share_pct": 11.94
+                },
+                {
+                  "category": "2W",
+                  "label": "Two-Wheelers",
+                  "units": 2546184,
+                  "mom_pct": -19.16,
+                  "yoy_pct": -3.1,
+                  "share_pct": 77.14
+                },
+                {
+                  "category": "3W",
+                  "label": "Three-Wheelers",
+                  "units": 133951,
+                  "mom_pct": 3.42,
+                  "yoy_pct": 23.67,
+                  "share_pct": 4.06
+                },
+                {
+                  "category": "CV",
+                  "label": "Commercial Vehicles",
+                  "units": 94935,
+                  "mom_pct": -14.46,
+                  "yoy_pct": 19.94,
+                  "share_pct": 2.88
+                },
+                {
+                  "category": "TRACTOR",
+                  "label": "Tractors",
+                  "units": 126033,
+                  "mom_pct": 71.29,
+                  "yoy_pct": 56.55,
+                  "share_pct": 3.82
+                },
+                {
+                  "category": "CE",
+                  "label": "Construction Equipment",
+                  "units": 5577,
+                  "mom_pct": -3.33,
+                  "yoy_pct": -16.51,
+                  "share_pct": 0.17
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "latest_year": {
+        "year": "2025",
+        "month_count": 2,
+        "months_covered": [
+          "2025-10",
+          "2025-11"
+        ],
+        "month_labels": [
+          "Oct 2025",
+          "Nov 2025"
+        ],
+        "total_units": 7324755,
+        "peak_month_label": "Nov 2025",
+        "peak_month_yoy_pct": 2.14,
+        "categories": [
+          {
+            "category": "2W",
+            "units": 5696030
+          },
+          {
+            "category": "PV",
+            "units": 951525
+          },
+          {
+            "category": "3W",
+            "units": 263468
+          },
+          {
+            "category": "CV",
+            "units": 202776
+          },
+          {
+            "category": "TRACTOR",
+            "units": 199610
+          },
+          {
+            "category": "CE",
+            "units": 11346
+          }
+        ],
+        "monthly_rows": [
+          {
+            "month": "2025-10",
+            "label": "Oct 2025",
+            "total_units": 4023923,
+            "total_yoy_pct": 40.53,
+            "total_mom_pct": 120.21,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 557373,
+                "mom_pct": 86.18,
+                "yoy_pct": 11.35,
+                "share_pct": 13.85
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 3149846,
+                "mom_pct": 144.6,
+                "yoy_pct": 51.76,
+                "share_pct": 78.28
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 129517,
+                "mom_pct": 31.0,
+                "yoy_pct": 5.43,
+                "share_pct": 3.22
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 107841,
+                "mom_pct": 49.52,
+                "yoy_pct": 17.69,
+                "share_pct": 2.68
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 73577,
+                "mom_pct": 13.57,
+                "yoy_pct": 14.22,
+                "share_pct": 1.83
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 5769,
+                "mom_pct": 29.41,
+                "yoy_pct": -30.49,
+                "share_pct": 0.14
+              }
+            ]
+          },
+          {
+            "month": "2025-11",
+            "label": "Nov 2025",
+            "total_units": 3300832,
+            "total_yoy_pct": 2.14,
+            "total_mom_pct": -17.97,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 394152,
+                "mom_pct": -28.88,
+                "yoy_pct": 19.71,
+                "share_pct": 11.94
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 2546184,
+                "mom_pct": -19.16,
+                "yoy_pct": -3.1,
+                "share_pct": 77.14
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 133951,
+                "mom_pct": 3.42,
+                "yoy_pct": 23.67,
+                "share_pct": 4.06
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 94935,
+                "mom_pct": -14.46,
+                "yoy_pct": 19.94,
+                "share_pct": 2.88
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 126033,
+                "mom_pct": 71.29,
+                "yoy_pct": 56.55,
+                "share_pct": 3.82
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 5577,
+                "mom_pct": -3.33,
+                "yoy_pct": -16.51,
+                "share_pct": 0.17
+              }
+            ]
+          }
+        ]
+      },
+      "yoy_window_pct": null,
+      "category_yoy": [],
+      "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories.",
+      "source_meta": {
+        "name": "FADA retail (Sep\u2013Nov festive aggregation)",
+        "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf"
+      }
     }
   },
   "market_insights": [

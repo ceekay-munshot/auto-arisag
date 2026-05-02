@@ -523,7 +523,48 @@ MODULE_TITLES = {
     "components": "Components",
     "credit_pulse": "Credit Pulse",
     "premium_data": "Premium Data Sources",
+    "festive_pulse": "Festive Pulse",
     "insights": "What Matters",
+}
+
+# Hand-curated calendar of the major retail-driving Indian festivals each
+# year. Indian auto demand is heavily festive-led — Dhanteras and Diwali in
+# particular are the single biggest car / 2W buying days. Dates shift every
+# year because they follow the Hindu lunar calendar; we maintain three
+# years of context (prior, current, next) so the dashboard can show timing.
+FESTIVE_CALENDAR = {
+    "2024": [
+        {"name": "Onam", "date": "2024-09-15", "region": "Kerala", "tone": "regional"},
+        {"name": "Ganesh Chaturthi", "date": "2024-09-07", "region": "Maharashtra / Karnataka", "tone": "regional"},
+        {"name": "Navratri (start)", "date": "2024-10-03", "region": "Pan-India", "tone": "national"},
+        {"name": "Dussehra", "date": "2024-10-12", "region": "Pan-India", "tone": "national"},
+        {"name": "Karva Chauth", "date": "2024-10-20", "region": "North India", "tone": "regional"},
+        {"name": "Dhanteras", "date": "2024-10-29", "region": "Pan-India", "tone": "peak"},
+        {"name": "Diwali", "date": "2024-10-31", "region": "Pan-India", "tone": "peak"},
+        {"name": "Bhai Dooj", "date": "2024-11-03", "region": "North / West India", "tone": "regional"},
+    ],
+    "2025": [
+        {"name": "Akshaya Tritiya", "date": "2025-04-30", "region": "Pan-India", "tone": "national"},
+        {"name": "Onam", "date": "2025-09-05", "region": "Kerala", "tone": "regional"},
+        {"name": "Ganesh Chaturthi", "date": "2025-08-27", "region": "Maharashtra / Karnataka", "tone": "regional"},
+        {"name": "Navratri (start)", "date": "2025-09-22", "region": "Pan-India", "tone": "national"},
+        {"name": "Dussehra", "date": "2025-10-02", "region": "Pan-India", "tone": "national"},
+        {"name": "Karva Chauth", "date": "2025-10-10", "region": "North India", "tone": "regional"},
+        {"name": "Dhanteras", "date": "2025-10-18", "region": "Pan-India", "tone": "peak"},
+        {"name": "Diwali", "date": "2025-10-20", "region": "Pan-India", "tone": "peak"},
+        {"name": "Bhai Dooj", "date": "2025-10-23", "region": "North / West India", "tone": "regional"},
+    ],
+    "2026": [
+        {"name": "Akshaya Tritiya", "date": "2026-04-19", "region": "Pan-India", "tone": "national"},
+        {"name": "Ganesh Chaturthi", "date": "2026-08-15", "region": "Maharashtra / Karnataka", "tone": "regional"},
+        {"name": "Onam", "date": "2026-08-26", "region": "Kerala", "tone": "regional"},
+        {"name": "Navratri (start)", "date": "2026-09-12", "region": "Pan-India", "tone": "national"},
+        {"name": "Dussehra", "date": "2026-09-21", "region": "Pan-India", "tone": "national"},
+        {"name": "Karva Chauth", "date": "2026-10-29", "region": "North India", "tone": "regional"},
+        {"name": "Dhanteras", "date": "2026-11-06", "region": "Pan-India", "tone": "peak"},
+        {"name": "Diwali", "date": "2026-11-08", "region": "Pan-India", "tone": "peak"},
+        {"name": "Bhai Dooj", "date": "2026-11-11", "region": "North / West India", "tone": "regional"},
+    ],
 }
 
 PREMIUM_DATA_SOURCES = [

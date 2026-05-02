@@ -13,6 +13,7 @@ from .config import (
     CATEGORY_ORDER,
     CHART_COLORS,
     FUEL_ORDER,
+    FESTIVE_CALENDAR,
     LISTED_COMPANY_MAP,
     MODULE_TITLES,
     OEM_TO_LISTED,
@@ -160,6 +161,7 @@ def build_payload(
     wholesale = build_wholesale_module(siam_with_history, retail, validations)
     credit_pulse = build_credit_pulse_module()
     premium_data = build_premium_data_module()
+    festive_pulse = build_festive_pulse_module(retail)
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -197,6 +199,7 @@ def build_payload(
             "components": components,
             "credit_pulse": credit_pulse,
             "premium_data": premium_data,
+            "festive_pulse": festive_pulse,
         },
         "market_insights": market_insights,
         "insights": insights,
@@ -582,6 +585,127 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "source_url": latest["source_url"],
         },
         "months": months,
+    }
+
+
+def build_festive_pulse_module(retail: dict[str, Any]) -> dict[str, Any]:
+    """Festive Pulse module — surfaces auto-retail performance during the
+    Sep–Nov festive window (Dhanteras / Diwali season) plus an annotated
+    festival calendar so investors can see the timing context.
+
+    Source: FADA monthly retail data already on the retail module. We
+    aggregate Sep + Oct + Nov per year to form a "festive window" total
+    and pull FADA's pre-computed YoY% off the Oct release (the peak
+    festive month) for the headline number.
+    """
+    if not retail or not retail.get("available"):
+        return {"available": False, "title": MODULE_TITLES["festive_pulse"]}
+
+    months = retail.get("months", []) or []
+    festive_months_by_year: dict[str, list[dict[str, Any]]] = {}
+    for record in months:
+        month_id = record.get("month")
+        if not month_id:
+            continue
+        year_part, month_part = month_id[:4], month_id[5:7]
+        if month_part not in {"09", "10", "11"}:
+            continue
+        festive_months_by_year.setdefault(year_part, []).append(record)
+
+    year_summaries: list[dict[str, Any]] = []
+    for year in sorted(festive_months_by_year.keys()):
+        rows = sorted(festive_months_by_year[year], key=lambda r: r["month"])
+        total_units = sum(r.get("total_units", 0) for r in rows)
+        category_totals: dict[str, int] = {}
+        for r in rows:
+            for c in r.get("categories", []) or []:
+                category_totals[c["category"]] = category_totals.get(c["category"], 0) + (c.get("units") or 0)
+        # Use the latest festive month present this year for headline YoY%.
+        latest_row = rows[-1]
+        peak_yoy = latest_row.get("total_yoy_pct")
+        peak_label = latest_row.get("label", latest_row["month"])
+        year_summaries.append({
+            "year": year,
+            "month_count": len(rows),
+            "months_covered": [r["month"] for r in rows],
+            "month_labels": [r.get("label", r["month"]) for r in rows],
+            "total_units": total_units,
+            "peak_month_label": peak_label,
+            "peak_month_yoy_pct": peak_yoy,
+            "categories": [
+                {"category": k, "units": v}
+                for k, v in sorted(category_totals.items(), key=lambda kv: -kv[1])
+            ],
+            "monthly_rows": [
+                {
+                    "month": r["month"],
+                    "label": r.get("label", r["month"]),
+                    "total_units": r.get("total_units", 0),
+                    "total_yoy_pct": r.get("total_yoy_pct"),
+                    "total_mom_pct": r.get("total_mom_pct"),
+                    "categories": r.get("categories", []),
+                }
+                for r in rows
+            ],
+        })
+
+    latest_year = year_summaries[-1] if year_summaries else None
+
+    # YoY at the festive-window level: only valid when both years carry the
+    # same months so we don't compare a 1-month sample to a 3-month sample.
+    yoy_window_pct = None
+    if len(year_summaries) >= 2:
+        cur = year_summaries[-1]
+        prior = year_summaries[-2]
+        if cur["month_count"] == prior["month_count"] and prior["total_units"]:
+            yoy_window_pct = round(
+                (cur["total_units"] - prior["total_units"]) / prior["total_units"] * 100,
+                1,
+            )
+
+    # Per-category YoY (latest year vs prior year).
+    category_yoy: list[dict[str, Any]] = []
+    if len(year_summaries) >= 2:
+        prior = {c["category"]: c["units"] for c in year_summaries[-2]["categories"]}
+        for c in year_summaries[-1]["categories"]:
+            prev = prior.get(c["category"], 0)
+            yoy = round((c["units"] - prev) / prev * 100, 1) if prev else None
+            category_yoy.append({
+                "category": c["category"],
+                "label": CATEGORY_LABELS.get(c["category"], c["category"]),
+                "units": c["units"],
+                "yoy_pct": yoy,
+            })
+
+    narrative_bits: list[str] = []
+    if latest_year and latest_year.get("peak_month_yoy_pct") is not None:
+        narrative_bits.append(
+            f"Peak festive month {latest_year['peak_month_label']} retail grew "
+            f"{latest_year['peak_month_yoy_pct']:+.1f}% YoY across all categories."
+        )
+    if yoy_window_pct is not None:
+        narrative_bits.append(
+            f"Sep–Nov festive window total grew {yoy_window_pct:+.1f}% versus the same period last year."
+        )
+    elif len(year_summaries) >= 2:
+        narrative_bits.append(
+            f"Sep–Nov coverage incomplete in earlier years — multi-year comparison not yet meaningful."
+        )
+
+    return {
+        "available": bool(year_summaries),
+        "title": MODULE_TITLES["festive_pulse"],
+        "window_label": "Sep – Nov (FADA festive window)",
+        "festival_calendar": FESTIVE_CALENDAR,
+        "years": year_summaries,
+        "latest_year": latest_year,
+        "yoy_window_pct": yoy_window_pct,
+        "category_yoy": category_yoy,
+        "narrative": " ".join(narrative_bits) if narrative_bits else "",
+        "source_meta": {
+            "name": "FADA retail (Sep–Nov festive aggregation)",
+            "url": retail.get("source_meta", {}).get("url"),
+        },
     }
 
 

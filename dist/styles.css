@@ -2195,6 +2195,297 @@ th:hover {
   text-align: left;
 }
 
+/* Universal explainer tooltip — singleton element appended to body. */
+.metric-tooltip {
+  position: absolute;
+  z-index: 2000;
+  max-width: 320px;
+  background: #14273e;
+  color: #f7f1e4;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(247, 241, 228, 0.15);
+  padding: 12px 14px;
+  box-shadow: 0 16px 36px rgba(20, 39, 62, 0.35);
+  font-size: 0.83rem;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+.metric-tooltip-title {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 228, 0.7);
+}
+
+.metric-tooltip-body {
+  margin: 0;
+  color: #f7f1e4;
+}
+
+/* Affordance: anything decorated with [data-explain] gets a subtle dotted
+   underline-style outline on focus, plus a "?" badge on hover so the user
+   knows it's tappable for more context. */
+.has-explainer {
+  cursor: help;
+  position: relative;
+  outline: none;
+}
+
+.has-explainer:focus-visible {
+  box-shadow: 0 0 0 3px rgba(76, 116, 199, 0.32);
+  border-radius: 6px;
+}
+
+.has-explainer::after {
+  content: "?";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(20, 39, 62, 0.06);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid rgba(20, 39, 62, 0.1);
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+  pointer-events: none;
+}
+
+.has-explainer:hover::after,
+.has-explainer:focus-visible::after {
+  opacity: 1;
+  background: rgba(76, 116, 199, 0.12);
+  color: var(--deep);
+  border-color: rgba(76, 116, 199, 0.32);
+}
+
+/* Special case: the insight ribbon cards have their own dark background,
+   so the "?" badge needs a light tint to read against them. */
+.insight-ribbon-card.has-explainer::after {
+  background: rgba(247, 241, 228, 0.08);
+  color: rgba(247, 241, 228, 0.6);
+  border-color: rgba(247, 241, 228, 0.2);
+}
+
+.insight-ribbon-card.has-explainer:hover::after,
+.insight-ribbon-card.has-explainer:focus-visible::after {
+  background: rgba(247, 241, 228, 0.18);
+  color: #f7f1e4;
+  border-color: rgba(247, 241, 228, 0.4);
+}
+
+/* Festive Pulse tab */
+.festive-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 14px 0 18px;
+}
+
+.festive-hero-card {
+  background: var(--bg-ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  position: relative;
+}
+
+.festive-hero-card.kpi-positive {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.10), rgba(47, 137, 125, 0.02));
+  border-color: rgba(47, 137, 125, 0.32);
+}
+.festive-hero-card.kpi-positive .festive-hero-value { color: #1d5a4f; }
+
+.festive-hero-card.kpi-negative {
+  background: linear-gradient(180deg, rgba(204, 67, 67, 0.08), rgba(204, 67, 67, 0.02));
+  border-color: rgba(204, 67, 67, 0.32);
+}
+.festive-hero-card.kpi-negative .festive-hero-value { color: #8a2727; }
+
+.festive-hero-card .small-label {
+  margin: 0 0 6px;
+}
+
+.festive-hero-value {
+  margin: 0 0 4px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--deep);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.festive-hero-card .metric-detail {
+  margin: 6px 0 0;
+}
+
+.festive-narrative {
+  margin: 0 0 18px;
+  padding: 14px 18px;
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Festive year-on-year bar list */
+.festive-year-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.festive-year-bar {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) 130px;
+  align-items: center;
+  gap: 12px;
+}
+
+.festive-year-bar-label {
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.festive-year-bar-track {
+  position: relative;
+  height: 28px;
+  background: rgba(20, 39, 62, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.festive-year-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, rgba(76, 116, 199, 0.4), rgba(76, 116, 199, 0.7));
+  transition: width 0.3s ease;
+}
+
+.festive-year-bar-fill.is-latest {
+  background: linear-gradient(90deg, var(--accent), #d97757);
+}
+
+.festive-year-bar-value {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--deep);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.festive-year-bar-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* Festival tables (calendar + month + cat-yoy) */
+.festive-month-table,
+.festive-cat-table,
+.festival-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.92rem;
+}
+
+.festive-month-table th,
+.festive-cat-table th,
+.festival-table th {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.festive-month-table td,
+.festive-cat-table td,
+.festival-table td {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+.festive-month-table tr.is-pos td:last-child strong,
+.festive-cat-table tr.is-pos td:last-child strong { color: #1d5a4f; }
+.festive-month-table tr.is-neg td:last-child strong,
+.festive-cat-table tr.is-neg td:last-child strong { color: #8a2727; }
+
+.festival-pip {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.festival-tone-peak { background: linear-gradient(135deg, #c26c3a, #d97757); }
+.festival-tone-national { background: #4c74c7; }
+.festival-tone-regional { background: #b9912c; }
+
+.festival-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(20, 39, 62, 0.05);
+  color: var(--muted);
+}
+
+.festival-row.is-upcoming .festival-status {
+  background: rgba(47, 137, 125, 0.14);
+  color: #1d5a4f;
+}
+
+.festival-row.is-past {
+  opacity: 0.78;
+}
+
+.festival-year-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.festival-year-block h4 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--deep);
+}
+
+@media (max-width: 800px) {
+  .festive-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .festive-year-bar {
+    grid-template-columns: 50px minmax(0, 1fr);
+  }
+  .festive-year-bar-meta {
+    display: none;
+  }
+}
+
 /* Top-of-page market insights ribbon */
 .insight-ribbon {
   margin: 0 0 18px;
