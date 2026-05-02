@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:30:47.746601+00:00",
+  "generated_at": "2026-05-02T18:20:48.680846+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -12401,6 +12401,250 @@
       "yoy_window_pct": null,
       "category_yoy": [],
       "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories.",
+      "next_festival": {
+        "name": "Dhanteras",
+        "date": "2026-11-06",
+        "region": "Pan-India",
+        "tone": "peak"
+      },
+      "oem_leaderboard": {
+        "available": true,
+        "categories": [
+          {
+            "category": "2W",
+            "label": "Two-Wheelers",
+            "year": 2025,
+            "prior_year": 2024,
+            "winners": [
+              {
+                "oem": "Greaves Electric Mobility",
+                "units": 17664,
+                "prior_units": 11227,
+                "yoy_pct": 57.3
+              },
+              {
+                "oem": "Royal Enfield",
+                "units": 337430,
+                "prior_units": 246147,
+                "yoy_pct": 37.1
+              },
+              {
+                "oem": "TVS Motor",
+                "units": 1249756,
+                "prior_units": 994197,
+                "yoy_pct": 25.7
+              },
+              {
+                "oem": "Suzuki Motorcycle India",
+                "units": 317695,
+                "prior_units": 272621,
+                "yoy_pct": 16.5
+              },
+              {
+                "oem": "India Yamaha Motor",
+                "units": 211387,
+                "prior_units": 186484,
+                "yoy_pct": 13.4
+              }
+            ],
+            "laggards": [
+              {
+                "oem": "Bajaj Auto",
+                "units": 137224,
+                "prior_units": 676143,
+                "yoy_pct": -79.7
+              },
+              {
+                "oem": "Ola Electric",
+                "units": 37821,
+                "prior_units": 95534,
+                "yoy_pct": -60.4
+              },
+              {
+                "oem": "Honda Motorcycle & Scooter India",
+                "units": 1144590,
+                "prior_units": 1208813,
+                "yoy_pct": -5.3
+              }
+            ]
+          },
+          {
+            "category": "3W",
+            "label": "Three-Wheelers",
+            "year": 2025,
+            "prior_year": 2024,
+            "winners": [
+              {
+                "oem": "TVS Motor",
+                "units": 15201,
+                "prior_units": 6597,
+                "yoy_pct": 130.4
+              },
+              {
+                "oem": "Mahindra & Mahindra",
+                "units": 33256,
+                "prior_units": 22878,
+                "yoy_pct": 45.4
+              },
+              {
+                "oem": "Atul Auto",
+                "units": 9447,
+                "prior_units": 7906,
+                "yoy_pct": 19.5
+              },
+              {
+                "oem": "Others",
+                "units": 122030,
+                "prior_units": 114306,
+                "yoy_pct": 6.8
+              },
+              {
+                "oem": "Piaggio Vehicles",
+                "units": 24671,
+                "prior_units": 25662,
+                "yoy_pct": -3.9
+              }
+            ],
+            "laggards": [
+              {
+                "oem": "Mini Metro Ev L.L.P",
+                "units": 1384,
+                "prior_units": 3786,
+                "yoy_pct": -63.4
+              },
+              {
+                "oem": "YC Electric Vehicle",
+                "units": 10164,
+                "prior_units": 12404,
+                "yoy_pct": -18.1
+              },
+              {
+                "oem": "Dilli Electric Auto",
+                "units": 5477,
+                "prior_units": 6529,
+                "yoy_pct": -16.1
+              }
+            ]
+          },
+          {
+            "category": "CV",
+            "label": "Commercial Vehicles",
+            "year": 2025,
+            "prior_year": 2024,
+            "winners": [
+              {
+                "oem": "Force Motors",
+                "units": 5523,
+                "prior_units": 3989,
+                "yoy_pct": 38.5
+              },
+              {
+                "oem": "Mahindra Group",
+                "units": 86539,
+                "prior_units": 69481,
+                "yoy_pct": 24.6
+              },
+              {
+                "oem": "VE Commercial Vehicles",
+                "units": 21068,
+                "prior_units": 18561,
+                "yoy_pct": 13.5
+              },
+              {
+                "oem": "Maruti Suzuki",
+                "units": 13866,
+                "prior_units": 12387,
+                "yoy_pct": 11.9
+              },
+              {
+                "oem": "Ashok Leyland Group",
+                "units": 45205,
+                "prior_units": 41115,
+                "yoy_pct": 9.9
+              }
+            ],
+            "laggards": [
+              {
+                "oem": "Daimler India Commercial Vehicles",
+                "units": 4765,
+                "prior_units": 4985,
+                "yoy_pct": -4.4
+              },
+              {
+                "oem": "SML Isuzu",
+                "units": 2719,
+                "prior_units": 2495,
+                "yoy_pct": 9.0
+              },
+              {
+                "oem": "Ashok Leyland Group",
+                "units": 45205,
+                "prior_units": 41115,
+                "yoy_pct": 9.9
+              }
+            ]
+          },
+          {
+            "category": "TRACTOR",
+            "label": "Tractors",
+            "year": 2025,
+            "prior_year": 2024,
+            "winners": [
+              {
+                "oem": "Others",
+                "units": 11378,
+                "prior_units": 7718,
+                "yoy_pct": 47.4
+              },
+              {
+                "oem": "CNH Industrial",
+                "units": 11928,
+                "prior_units": 8223,
+                "yoy_pct": 45.1
+              },
+              {
+                "oem": "John Deere India",
+                "units": 20526,
+                "prior_units": 16709,
+                "yoy_pct": 22.8
+              },
+              {
+                "oem": "TAFE",
+                "units": 31117,
+                "prior_units": 25435,
+                "yoy_pct": 22.3
+              },
+              {
+                "oem": "International Tractors",
+                "units": 32376,
+                "prior_units": 26957,
+                "yoy_pct": 20.1
+              }
+            ],
+            "laggards": [
+              {
+                "oem": "Swaraj",
+                "units": 24926,
+                "prior_units": 36934,
+                "yoy_pct": -32.5
+              },
+              {
+                "oem": "Escorts Kubota",
+                "units": 14590,
+                "prior_units": 19751,
+                "yoy_pct": -26.1
+              },
+              {
+                "oem": "Eicher Tractors",
+                "units": 15426,
+                "prior_units": 13052,
+                "yoy_pct": 18.2
+              }
+            ]
+          }
+        ],
+        "note": "Top OEMs by Sep\u2013Nov retail growth versus the same window one year prior. Sourced from FADA OEM annexures \u2014 auto-updates each cron run as new festive months land."
+      },
       "source_meta": {
         "name": "FADA retail (Sep\u2013Nov festive aggregation)",
         "url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf"
@@ -12750,12 +12994,22 @@
         ]
       },
       "Tata Motors": {
-        "ticker": "TATAMOTORS",
+        "ticker": "TMPV",
         "price": 782.45,
-        "change_1d_pct": -0.85,
-        "change_1w_pct": -1.95,
-        "change_1m_pct": 3.1,
-        "yahoo_url": "https://finance.yahoo.com/quote/TATAMOTORS.NS/"
+        "change_1d_pct": null,
+        "change_1w_pct": null,
+        "change_1m_pct": null,
+        "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
+        "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV)."
+      },
+      "Tata Motors CV": {
+        "ticker": "TMCV",
+        "price": 0,
+        "change_1d_pct": null,
+        "change_1w_pct": null,
+        "change_1m_pct": null,
+        "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
+        "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger."
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",

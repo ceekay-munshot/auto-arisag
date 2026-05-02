@@ -4820,6 +4820,202 @@ function stackRow(label, widthPct, value, color, detail = "") {
   `;
 }
 
+function renderFestiveCountdown(festival) {
+  if (!festival || !festival.date) return "";
+  const target = new Date(festival.date + "T00:00:00");
+  const now = new Date();
+  const msPerDay = 86400000;
+  const daysUntil = Math.max(0, Math.ceil((target - now) / msPerDay));
+  const datePretty = target.toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const isImminent = daysUntil <= 30;
+  const tone = isImminent ? "is-imminent" : "is-future";
+  return `
+    <div class="festive-countdown ${tone}">
+      <div class="festive-countdown-icon" aria-hidden="true">🪔</div>
+      <div class="festive-countdown-body">
+        <p class="small-label">Next major festival</p>
+        <h3 class="festive-countdown-name">${festival.name}</h3>
+        <p class="festive-countdown-date">${datePretty} · ${festival.region}</p>
+      </div>
+      <div class="festive-countdown-counter">
+        <p class="festive-countdown-number">${daysUntil}</p>
+        <p class="festive-countdown-unit">${daysUntil === 1 ? "day to go" : "days to go"}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderFestiveOemLeaderboard(lb) {
+  if (!lb || !lb.available || !lb.categories?.length) return "";
+  const renderCategory = (cat) => {
+    const winners = (cat.winners || []).map((r) => `
+      <tr>
+        <td>${r.oem}</td>
+        <td class="num">${formatUnits(r.units)}</td>
+        <td class="num"><strong class="leader-yoy-pos">+${r.yoy_pct.toFixed(1)}%</strong></td>
+      </tr>
+    `).join("");
+    const laggards = (cat.laggards || []).map((r) => `
+      <tr>
+        <td>${r.oem}</td>
+        <td class="num">${formatUnits(r.units)}</td>
+        <td class="num"><strong class="${r.yoy_pct >= 0 ? "leader-yoy-pos" : "leader-yoy-neg"}">${r.yoy_pct >= 0 ? "+" : ""}${r.yoy_pct.toFixed(1)}%</strong></td>
+      </tr>
+    `).join("");
+    return `
+      <div class="leaderboard-cat">
+        <p class="leaderboard-cat-head"><strong>${cat.label}</strong> · Sep–Nov ${cat.year} vs ${cat.prior_year}</p>
+        <p class="leaderboard-sub">🏆 Winners</p>
+        <table class="leaderboard-table">
+          <thead><tr><th>OEM</th><th class="num">Festive units</th><th class="num">YoY</th></tr></thead>
+          <tbody>${winners || `<tr><td colspan="3" class="empty">No winners with comparable history.</td></tr>`}</tbody>
+        </table>
+        ${laggards ? `
+          <p class="leaderboard-sub">⚠️ Laggards</p>
+          <table class="leaderboard-table">
+            <thead><tr><th>OEM</th><th class="num">Festive units</th><th class="num">YoY</th></tr></thead>
+            <tbody>${laggards}</tbody>
+          </table>
+        ` : ""}
+      </div>
+    `;
+  };
+  return `
+    <div class="chart-card">
+      <p class="small-label">OEM festive leaderboard</p>
+      <h3 style="margin:6px 0 12px;">Who won (and lost) the festive demand cycle</h3>
+      <p class="metric-detail" style="margin-bottom:14px;">${lb.note || ""}</p>
+      <div class="leaderboard-grid">
+        ${lb.categories.map(renderCategory).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function _festivePeriodReturn(daily, year) {
+  // Compute Sep 1 → Nov 30 return for the given year from a daily series.
+  // Returns null when either bookend is missing.
+  if (!Array.isArray(daily) || !daily.length) return null;
+  const sepStart = `${year}-09-01`;
+  const novEnd = `${year}-11-30`;
+  // First close on/after sepStart
+  const startEntry = daily.find((d) => d.date >= sepStart);
+  // Last close on/before novEnd
+  let endEntry = null;
+  for (let i = daily.length - 1; i >= 0; i--) {
+    if (daily[i].date <= novEnd && daily[i].date >= sepStart) {
+      endEntry = daily[i];
+      break;
+    }
+  }
+  if (!startEntry || !endEntry || !startEntry.close || endEntry.date <= startEntry.date) return null;
+  return {
+    start_date: startEntry.date,
+    end_date: endEntry.date,
+    start_close: startEntry.close,
+    end_close: endEntry.close,
+    return_pct: ((endEntry.close - startEntry.close) / startEntry.close) * 100,
+  };
+}
+
+function _nonFestiveReturn(daily, year) {
+  // Total return outside the Sep–Nov festive window for the given year.
+  // Computed as full-year return minus the festive component.
+  if (!Array.isArray(daily) || !daily.length) return null;
+  const yearStart = `${year}-01-01`;
+  const yearEnd = `${year}-12-31`;
+  const startEntry = daily.find((d) => d.date >= yearStart);
+  let endEntry = null;
+  for (let i = daily.length - 1; i >= 0; i--) {
+    if (daily[i].date <= yearEnd && daily[i].date >= yearStart) {
+      endEntry = daily[i];
+      break;
+    }
+  }
+  if (!startEntry || !endEntry || endEntry.date <= startEntry.date) return null;
+  // Non-festive proxy: Jan-Aug return + Dec return (Sep-Nov stripped out).
+  // Approximate via year-return minus festive-return when both are available.
+  const fest = _festivePeriodReturn(daily, year);
+  if (!fest) return null;
+  const yearReturnPct = ((endEntry.close - startEntry.close) / startEntry.close) * 100;
+  // Compounded subtraction
+  const yearMul = 1 + yearReturnPct / 100;
+  const festMul = 1 + fest.return_pct / 100;
+  if (festMul <= 0) return null;
+  const nonFestMul = yearMul / festMul;
+  return {
+    return_pct: (nonFestMul - 1) * 100,
+  };
+}
+
+function renderFestiveStockPerf() {
+  const stocks = dashboardData.oem_stocks;
+  if (!stocks?.available) return "";
+  const entries = Object.entries(stocks.stocks || {}).filter(([_, s]) => Array.isArray(s.daily_closes) && s.daily_closes.length > 60);
+  if (!entries.length) {
+    return `
+      <div class="chart-card">
+        <p class="small-label">Listed-OEM stock performance during festive</p>
+        <h3 style="margin:6px 0 8px;">Did the market price in festive demand?</h3>
+        <p class="metric-detail">Daily-close history not yet populated. The cron-driven Yahoo Finance scraper saves a 2-year daily series on its next successful run, after which festive-window returns appear here automatically.</p>
+      </div>
+    `;
+  }
+  // Compute for the most recent completed festive year covered by the data.
+  const today = new Date();
+  const festiveYear = today.getMonth() >= 11 || today.getMonth() === 0 ? today.getFullYear() : today.getFullYear() - 1;
+  const rows = entries.map(([company, stock]) => {
+    const fest = _festivePeriodReturn(stock.daily_closes, festiveYear);
+    const nonFest = _nonFestiveReturn(stock.daily_closes, festiveYear);
+    return { company, ticker: stock.ticker, fest, nonFest };
+  }).filter((r) => r.fest);
+  if (!rows.length) {
+    return `
+      <div class="chart-card">
+        <p class="small-label">Listed-OEM stock performance during festive ${festiveYear}</p>
+        <p class="metric-detail">Daily history doesn't yet cover the Sep–Nov ${festiveYear} window. Will populate after the next cron run.</p>
+      </div>
+    `;
+  }
+  rows.sort((a, b) => (b.fest?.return_pct || 0) - (a.fest?.return_pct || 0));
+  const fmtPct = (v) => v === null || v === undefined ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
+  const tone = (v) => (v === null || v === undefined ? "" : (v >= 0 ? "leader-yoy-pos" : "leader-yoy-neg"));
+  return `
+    <div class="chart-card">
+      <p class="small-label">Listed-OEM stock performance · Festive ${festiveYear} (Sep–Nov)</p>
+      <h3 style="margin:6px 0 8px;">Did the market price in festive demand?</h3>
+      <p class="metric-detail" style="margin-bottom:12px;">Stock return during the Sep–Nov festive window vs the rest of the calendar year. Pulled from Yahoo Finance — refreshes every cron run.</p>
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Ticker</th>
+            <th class="num">Festive return</th>
+            <th class="num">Non-festive return</th>
+            <th class="num">Outperformance</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows.map((r) => {
+            const fest = r.fest?.return_pct;
+            const nonFest = r.nonFest?.return_pct;
+            const outper = (fest !== null && fest !== undefined && nonFest !== null && nonFest !== undefined) ? fest - nonFest : null;
+            return `
+              <tr>
+                <td><strong>${r.company}</strong></td>
+                <td>${r.ticker}</td>
+                <td class="num"><strong class="${tone(fest)}">${fmtPct(fest)}</strong></td>
+                <td class="num">${fmtPct(nonFest)}</td>
+                <td class="num"><strong class="${tone(outper)}">${fmtPct(outper)}</strong></td>
+              </tr>
+            `;
+          }).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderFestivePulseSection() {
   const fp = dashboardData.modules.festive_pulse;
   if (!fp?.available) return "";
@@ -4942,6 +5138,8 @@ function renderFestivePulseSection() {
         <p class="section-subtitle">${fp.window_label || ""} — captures Onam, Navratri, Dussehra, Dhanteras and Diwali driven retail.</p>
       </div>
 
+      ${renderFestiveCountdown(fp.next_festival)}
+
       <div class="festive-hero-grid">
         <article class="festive-hero-card" data-explain="festive.window_total" tabindex="0">
           <p class="small-label">Festive window total — ${latestYear?.year || ""}</p>
@@ -4986,6 +5184,10 @@ function renderFestivePulseSection() {
         ` : ""}
 
         ${catYoyBlock}
+
+        ${renderFestiveOemLeaderboard(fp.oem_leaderboard)}
+
+        ${renderFestiveStockPerf()}
 
         <div class="chart-card">
           <p class="small-label">Festival calendar</p>

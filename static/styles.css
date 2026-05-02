@@ -2923,6 +2923,149 @@ th:hover {
   flex-wrap: wrap;
 }
 
+/* Festive countdown widget */
+.festive-countdown {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  margin: 0 0 18px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #fff3df 0%, #fbe6c4 100%);
+  border: 1px solid rgba(194, 108, 58, 0.32);
+  box-shadow: 0 8px 22px rgba(20, 39, 62, 0.06);
+}
+
+.festive-countdown.is-imminent {
+  background: linear-gradient(135deg, #ffe9d1 0%, #f7c896 100%);
+  border-color: rgba(194, 108, 58, 0.5);
+}
+
+.festive-countdown-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.festive-countdown-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.festive-countdown-name {
+  margin: 4px 0;
+  font-size: 1.4rem;
+  color: var(--deep);
+  letter-spacing: -0.01em;
+}
+
+.festive-countdown-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.festive-countdown-counter {
+  flex-shrink: 0;
+  text-align: center;
+  background: #fffdfa;
+  border: 1px solid rgba(194, 108, 58, 0.32);
+  border-radius: var(--radius-md);
+  padding: 12px 22px;
+  min-width: 110px;
+}
+
+.festive-countdown-number {
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.festive-countdown-unit {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .festive-countdown {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* OEM leaderboard + stock-perf tables */
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.leaderboard-cat {
+  background: var(--bg-ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.leaderboard-cat-head {
+  margin: 0 0 10px;
+  color: var(--deep);
+  font-size: 0.95rem;
+}
+
+.leaderboard-sub {
+  margin: 12px 0 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.leaderboard-table th {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.leaderboard-table th.num,
+.leaderboard-table td.num {
+  text-align: right;
+}
+
+.leaderboard-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid rgba(20, 39, 62, 0.06);
+  color: var(--text);
+}
+
+.leaderboard-table td.empty {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.leader-yoy-pos { color: #1d5a4f; }
+.leader-yoy-neg { color: #8a2727; }
+
 .stock-chip-spark {
   width: 100%;
   height: 100%;
