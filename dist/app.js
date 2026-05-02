@@ -21,6 +21,7 @@ const state = {
   sorts: {},
   activeTab: "overview",
   creditPulseExplainerOpen: false,
+  searchQuery: "",
 };
 
 const SECTION_TO_TAB = {
@@ -1439,6 +1440,7 @@ function render() {
   const app = document.getElementById("app");
   app.innerHTML = [
     renderHero(),
+    renderSearchBar(),
     renderMacroOverlayStrip(),
     renderMarketInsightsRibbon(),
     renderFilters(),
@@ -1469,9 +1471,208 @@ function render() {
   setupCreditPulseExplainer();
   setupMarketInsightsRibbon();
   setupExplainerTooltips();
+  setupSearchBar();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
+}
+
+function _buildSearchIndex() {
+  const idx = [];
+  // Tabs
+  visibleTabs().forEach((tab) => {
+    idx.push({
+      type: "Tab",
+      label: tab.label,
+      group: tab.group || "",
+      action: { kind: "tab", tabId: tab.id },
+      keywords: `${tab.label} ${tab.group || ""}`.toLowerCase(),
+    });
+  });
+  // Categories
+  const catLabels = {
+    TOTAL: "All categories", PV: "Passenger Vehicles", "2W": "Two-Wheelers",
+    "3W": "Three-Wheelers", CV: "Commercial Vehicles", TRACTOR: "Tractors", CE: "Construction Equipment",
+  };
+  Object.entries(catLabels).forEach(([id, label]) => {
+    idx.push({
+      type: "Category",
+      label,
+      group: id,
+      action: { kind: "category", id },
+      keywords: `${label} ${id}`.toLowerCase(),
+    });
+  });
+  // Companies (from listed map)
+  const companies = Object.keys(dashboardData.company_map || {});
+  companies.forEach((company) => {
+    idx.push({
+      type: "Company",
+      label: company,
+      group: "Listed OEM",
+      action: { kind: "company", name: company },
+      keywords: company.toLowerCase(),
+    });
+  });
+  // Metrics — every explainer key becomes a search target.
+  Object.entries(METRIC_EXPLAINERS).forEach(([key, exp]) => {
+    idx.push({
+      type: "Metric",
+      label: exp.title,
+      group: exp.body ? exp.body.slice(0, 60) + "..." : "",
+      action: { kind: "metric", key },
+      keywords: `${exp.title} ${exp.body || ""}`.toLowerCase(),
+    });
+  });
+  return idx;
+}
+
+function _runSearch(query) {
+  const q = (query || "").trim().toLowerCase();
+  if (!q) return [];
+  const idx = _buildSearchIndex();
+  const matches = idx
+    .map((entry) => {
+      let score = 0;
+      if (entry.label.toLowerCase().startsWith(q)) score += 10;
+      if (entry.label.toLowerCase().includes(q)) score += 5;
+      if (entry.keywords.includes(q)) score += 1;
+      return { entry, score };
+    })
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 12)
+    .map((r) => r.entry);
+  return matches;
+}
+
+function renderSearchBar() {
+  const q = state.searchQuery || "";
+  const results = _runSearch(q);
+  const groupedResults = results.reduce((acc, r) => {
+    (acc[r.type] = acc[r.type] || []).push(r);
+    return acc;
+  }, {});
+  const renderResult = (entry, idx) => `
+    <button class="search-result"
+            data-search-result-idx="${idx}"
+            data-search-action='${JSON.stringify(entry.action).replace(/'/g, "&apos;")}'>
+      <span class="search-result-type">${entry.type}</span>
+      <span class="search-result-label">${entry.label}</span>
+      ${entry.group ? `<span class="search-result-group">${entry.group}</span>` : ""}
+    </button>
+  `;
+  let resultIdx = 0;
+  const dropdown = q && results.length
+    ? `
+      <div class="search-dropdown">
+        ${Object.entries(groupedResults).map(([type, list]) => `
+          <div class="search-group">
+            <p class="search-group-label">${type}</p>
+            ${list.map((entry) => renderResult(entry, resultIdx++)).join("")}
+          </div>
+        `).join("")}
+      </div>
+    `
+    : (q ? `<div class="search-dropdown"><div class="search-empty">No matches for &ldquo;${q}&rdquo;</div></div>` : "");
+
+  return `
+    <section class="search-bar-strip">
+      <div class="search-bar-inner">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search companies, categories, tabs, metrics… (e.g. &ldquo;Maruti&rdquo;, &ldquo;EV&rdquo;, &ldquo;inventory&rdquo;)"
+          value="${q.replace(/"/g, "&quot;")}"
+          autocomplete="off"
+          spellcheck="false"
+          data-search-input
+        />
+        ${q ? '<button class="search-clear" data-search-clear>×</button>' : ""}
+      </div>
+      ${dropdown}
+    </section>
+  `;
+}
+
+function setupSearchBar() {
+  const input = document.querySelector("[data-search-input]");
+  if (input) {
+    // Keep focus across re-renders so typing stays smooth.
+    input.addEventListener("input", (event) => {
+      state.searchQuery = event.target.value;
+      render();
+      requestAnimationFrame(() => {
+        const next = document.querySelector("[data-search-input]");
+        if (next) {
+          next.focus();
+          // Restore caret to end of input.
+          next.setSelectionRange(next.value.length, next.value.length);
+        }
+      });
+    });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        state.searchQuery = "";
+        render();
+      }
+    });
+  }
+  document.querySelectorAll("[data-search-clear]").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.searchQuery = "";
+      render();
+    });
+  });
+  document.querySelectorAll("[data-search-action]").forEach((node) => {
+    node.addEventListener("click", () => {
+      let action;
+      try {
+        action = JSON.parse(node.getAttribute("data-search-action").replace(/&apos;/g, "'"));
+      } catch (e) {
+        return;
+      }
+      _executeSearchAction(action);
+    });
+  });
+}
+
+function _executeSearchAction(action) {
+  if (!action || !action.kind) return;
+  if (action.kind === "tab") {
+    state.activeTab = action.tabId;
+    state.searchQuery = "";
+    render();
+    return;
+  }
+  if (action.kind === "category") {
+    state.category = action.id;
+    state.searchQuery = "";
+    render();
+    return;
+  }
+  if (action.kind === "company") {
+    state.company = action.name;
+    state.companyTrend = action.name;
+    state.searchQuery = "";
+    render();
+    return;
+  }
+  if (action.kind === "metric") {
+    // Heuristic: route the metric back to the tab it belongs to.
+    const key = action.key;
+    if (key.startsWith("summary.")) state.activeTab = "overview";
+    else if (key.startsWith("ribbon.")) state.activeTab = "overview";
+    else if (key.startsWith("credit.")) state.activeTab = "credit-pulse";
+    else if (key.startsWith("components.")) state.activeTab = "components";
+    else if (key.startsWith("wholesale.")) state.activeTab = "wholesale";
+    else if (key.startsWith("festive.")) state.activeTab = "festive-pulse";
+    else if (key.startsWith("macro.")) state.activeTab = "overview";
+    state.searchQuery = "";
+    render();
+    return;
+  }
 }
 
 function renderMacroOverlayStrip() {
