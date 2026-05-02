@@ -1138,6 +1138,80 @@ function activeTabDefinition() {
   return tabs.find((tab) => tab.id === state.activeTab) || tabs[0];
 }
 
+// Map each tab to the source/module it draws from. Used by the freshness
+// pill above the tab content and the dot in the side nav.
+const TAB_SOURCE_MAP = {
+  "retail-trend": "retail",
+  "retail-ev": "retail",
+  "channel-pulse": "retail",
+  "oem-tracker": "retail",
+  "registration": "registration",
+  "wholesale": "wholesale",
+  "components": "components",
+  "credit-pulse": "credit_pulse",
+};
+
+function tabSourceMeta(tabId) {
+  const moduleKey = TAB_SOURCE_MAP[tabId];
+  if (!moduleKey) return null;
+  const mod = dashboardData.modules[moduleKey];
+  if (!mod || !mod.available) return null;
+  const meta = mod.source_meta || {};
+  // Components has a "period" not a "latest_month"; Credit Pulse uses
+  // latest_month plus a label off the latest reading. Normalize them.
+  const periodLabel =
+    meta.period
+    || meta.latest_month
+    || (mod.latest && mod.latest.label)
+    || (mod.latest_month);
+  const releaseDate =
+    meta.latest_release_date
+    || meta.release_date
+    || (mod.latest && mod.latest.as_of_date);
+  return {
+    source: meta.name || meta.source_name || "",
+    periodLabel: periodLabel || "",
+    releaseDate: releaseDate || "",
+  };
+}
+
+function freshnessLevel(isoDate) {
+  if (!isoDate) return null;
+  const d = new Date(isoDate);
+  if (Number.isNaN(d.getTime())) return null;
+  const days = Math.round((Date.now() - d.getTime()) / 86400000);
+  let tone;
+  if (days < 45) tone = "fresh";
+  else if (days < 90) tone = "aging";
+  else if (days < 180) tone = "stale";
+  else tone = "critical";
+  return { tone, days };
+}
+
+function renderActiveTabFreshness(tabId) {
+  const meta = tabSourceMeta(tabId);
+  if (!meta || !meta.releaseDate) return "";
+  const f = freshnessLevel(meta.releaseDate);
+  if (!f) return "";
+  const human = (() => {
+    if (f.days <= 1) return "released today";
+    if (f.days < 30) return `released ${f.days} days ago`;
+    const months = Math.round(f.days / 30);
+    return months <= 1 ? "released ~1 month ago" : `released ~${months} months ago`;
+  })();
+  const sourceText = meta.source ? `${meta.source} · ` : "";
+  return `
+    <div class="freshness-pill freshness-pill-${f.tone}" title="Released ${f.days} days ago">
+      <span class="freshness-dot"></span>
+      <span class="freshness-pill-text">
+        <span class="freshness-pill-label">${sourceText}Data through</span>
+        <strong>${meta.periodLabel || "—"}</strong>
+        <span class="freshness-pill-relative">· ${human}</span>
+      </span>
+    </div>
+  `;
+}
+
 function renderSideNav(activeId) {
   const tabs = visibleTabs();
   const groups = [];
@@ -1154,13 +1228,20 @@ function renderSideNav(activeId) {
       ${groups.map((group) => `
         <div class="side-nav-group">
           <p class="side-nav-group-label">${group.label}</p>
-          ${group.tabs.map((tab) => `
-            <button
-              class="side-nav-item${tab.id === activeId ? " is-active" : ""}"
-              data-tab="${tab.id}"
-              type="button"
-            >${tab.label}</button>
-          `).join("")}
+          ${group.tabs.map((tab) => {
+            const meta = tabSourceMeta(tab.id);
+            const f = meta && meta.releaseDate ? freshnessLevel(meta.releaseDate) : null;
+            const dot = f
+              ? `<span class="side-nav-dot dot-${f.tone}" title="${meta.source || tab.label} · ${meta.periodLabel || ""} · ${f.days} days old"></span>`
+              : "";
+            return `
+              <button
+                class="side-nav-item${tab.id === activeId ? " is-active" : ""}"
+                data-tab="${tab.id}"
+                type="button"
+              >${dot}<span class="side-nav-item-label">${tab.label}</span></button>
+            `;
+          }).join("")}
         </div>
       `).join("")}
     </aside>
@@ -1222,7 +1303,7 @@ function render() {
     renderFilters(),
     `<div class="dashboard-body">
        ${renderSideNav(activeTab.id)}
-       <main class="dashboard-content">${activeTab.render()}</main>
+       <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
      </div>`,
     renderCreditPulseExplainerModal(),
   ].join("");
