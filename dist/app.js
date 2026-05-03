@@ -1168,6 +1168,13 @@ function setupComparePriorToggle() {
   document.querySelectorAll("[data-action='toggle-compare-prior']").forEach((node) => {
     node.addEventListener("click", () => {
       state.compareToPriorCycle = !state.compareToPriorCycle;
+      // When the user just turned it ON, jump them to the retail trend tab
+      // so the change is visible. Otherwise the toggle does nothing they
+      // can see if they're on a different tab.
+      if (state.compareToPriorCycle && state.activeTab !== "retail-trend") {
+        state.activeTab = "retail-trend";
+        pendingScrollTarget = "section-retail";
+      }
       render();
     });
   });
@@ -2305,7 +2312,7 @@ function renderRetailTrendOnly() {
         <div class="chart-card">
           <div class="chart-title-row">
             <div>
-              <p class="small-label">Monthly trend</p>
+              <p class="small-label">Monthly trend${useExtended ? " · <span class=\"compare-on-pill\">Prior-year overlay ON</span>" : ""}</p>
               <h3>${companyFocused ? "Retail momentum in company-linked categories" : "Retail momentum by category"}</h3>
             </div>
             <div class="button-row">
@@ -2313,6 +2320,15 @@ function renderRetailTrendOnly() {
               <button class="button" data-download-key="retail-trend">Download Excel</button>
             </div>
           </div>
+          ${useExtended ? `
+            <div class="compare-banner">
+              <strong>Prior-year overlay active.</strong> Solid lines = the latest 12 months. Dashed lines = the same 12 months one calendar year earlier. Toggle off via the orange button in the hero.
+            </div>
+          ` : (state.compareToPriorCycle ? `
+            <div class="compare-banner compare-banner-warn">
+              <strong>Prior-year overlay requested but data isn't deep enough yet.</strong> The retail history file needs ≥24 months of OEM-history coverage. Cron extends it monthly — try again later.
+            </div>
+          ` : "")}
           <div class="chart-frame">
             ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
           </div>
@@ -5940,7 +5956,7 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     // opacity, and skip the data dots so they don't crowd the current line.
     const isDashed = item.dashed === true;
     const strokeAttrs = isDashed
-      ? `stroke="${item.color}" stroke-width="2" stroke-dasharray="6 4" opacity="0.55"`
+      ? `stroke="${item.color}" stroke-width="2.5" stroke-dasharray="8 5" opacity="0.78"`
       : `stroke="${item.color}" stroke-width="3"`;
     return `
       <g>
