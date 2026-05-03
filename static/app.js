@@ -46,6 +46,22 @@ const refreshState = {
 };
 let pendingScrollTarget = null;
 
+// Static calendar of Indian-auto-industry events to overlay on key time-series
+// charts (lineChart's optional 5th param). Each entry: month YYYY-MM, label,
+// and tone (festive | policy | milestone | macro). The chart only renders
+// markers for events whose month falls within its visible range — older
+// events automatically drop off as data scrolls.
+const CHART_EVENT_CALENDAR = [
+  { month: "2023-04", label: "BS-VI Phase II emissions kicks in", tone: "policy" },
+  { month: "2024-10", label: "Diwali 2024 (Oct 31) — peak festive month", tone: "festive" },
+  { month: "2024-10", label: "Hyundai Motor India IPO lists on NSE", tone: "milestone" },
+  { month: "2025-04", label: "EV PLI & PMP localisation ramp", tone: "policy" },
+  { month: "2025-10", label: "Diwali 2025 (Oct 20) — peak festive month", tone: "festive" },
+  { month: "2025-11", label: "Tata Motors demerger: TMPV + TMCV listed", tone: "milestone" },
+  { month: "2026-04", label: "RBI repo cut −25 bps (MPC, Apr 2026)", tone: "macro" },
+  { month: "2026-11", label: "Diwali 2026 (Nov 8) — peak festive month", tone: "festive" },
+];
+
 // Plain-English explainers attached to metric elements via data-explain="<key>".
 // Each entry maps to {title, body} surfaced by the global hover tooltip
 // (setupExplainerTooltips). New metrics: just add a key here and slap
@@ -2255,7 +2271,7 @@ function renderRetailTrendOnly() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits)}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -2416,7 +2432,7 @@ function renderRetailSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits)}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -2546,7 +2562,7 @@ function renderEvSection() {
           </div>
         </div>
         <div class="chart-frame">
-          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2))}
+          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2), CHART_EVENT_CALENDAR)}
         </div>
         <div class="chart-legend">
           ${evSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -3924,7 +3940,7 @@ function renderWholesaleSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits)}
+            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
           </div>
           <div class="chart-legend">
             ${series.map((item) => legendItem(item.label, item.color)).join("")}
@@ -5437,7 +5453,7 @@ function renderCreditPulseSection() {
           </div>
           ${seedNote}
           <div class="chart-frame">
-            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore)}
+            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore, CHART_EVENT_CALENDAR)}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
@@ -5742,7 +5758,7 @@ function setupCreditPulseExplainer() {
   }
 }
 
-function lineChart(labels, series, formatter, tooltipFormatter = formatter) {
+function lineChart(labels, series, formatter, tooltipFormatter = formatter, events = []) {
   const activeSeries = series.filter((item) => item.values.some((value) => value !== null && value !== undefined));
   const width = 820;
   const height = 320;
@@ -5820,6 +5836,33 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter) {
   return `
     <svg class="line-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Line chart">
       ${gridLines}
+      ${(events || []).map((event) => {
+        const matchLabel = event.month ? monthLabel(event.month) : null;
+        const idx = matchLabel ? labels.indexOf(matchLabel) : -1;
+        if (idx < 0) return "";
+        const x = pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
+        const tone = event.tone || "policy";
+        const palette = {
+          policy: "#4c74c7",
+          festive: "#c26c3a",
+          milestone: "#7a4cc7",
+          macro: "#2f897d",
+        };
+        const color = palette[tone] || palette.policy;
+        const tooltip = `${matchLabel}: ${event.label}`;
+        return `
+          <g class="chart-event-marker">
+            <line x1="${x}" x2="${x}" y1="${pad.top}" y2="${height - pad.bottom}"
+                  stroke="${color}" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.55" />
+            <circle
+              class="chart-hover-target"
+              cx="${x}" cy="${pad.top + 6}" r="6"
+              fill="${color}" stroke="#fffdfa" stroke-width="1.5"
+              data-tooltip="${escapeHtml(tooltip)}"
+            ></circle>
+          </g>
+        `;
+      }).join("")}
       ${lines}
       ${xLabels}
     </svg>

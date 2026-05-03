@@ -3066,6 +3066,18 @@ th:hover {
 .leader-yoy-pos { color: #1d5a4f; }
 .leader-yoy-neg { color: #8a2727; }
 
+/* Annotated time-series event-marker styling — circle hover targets get
+   a subtle outline so they read as clickable, hover state lifts them. */
+.chart-event-marker circle {
+  transition: r 0.12s ease, stroke-width 0.12s ease;
+  cursor: help;
+}
+
+.chart-event-marker circle:hover {
+  r: 8;
+  stroke-width: 2;
+}
+
 .stock-chip-spark {
   width: 100%;
   height: 100%;
