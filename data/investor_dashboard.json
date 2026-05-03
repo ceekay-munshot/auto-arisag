@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:56:13.827768+00:00",
+  "generated_at": "2026-05-03T17:48:29.937080+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -474,6 +474,1170 @@
       },
       "latest_month": "2026-03",
       "months": [
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "source_url": "https://fada.in/images/press-release/1690d68d7a2e6cFADA%20releases%20October%202025%20%26%2042-Days%20Festive%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2025-11-07",
+          "total_units": 4023923,
+          "total_mom_pct": 120.21,
+          "total_yoy_pct": 40.53,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 557373,
+              "mom_pct": 86.18,
+              "yoy_pct": 11.35,
+              "share_pct": 13.85
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 3149846,
+              "mom_pct": 144.6,
+              "yoy_pct": 51.76,
+              "share_pct": 78.28
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 129517,
+              "mom_pct": 31.0,
+              "yoy_pct": 5.43,
+              "share_pct": 3.22
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 107841,
+              "mom_pct": 49.52,
+              "yoy_pct": 17.69,
+              "share_pct": 2.68
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 73577,
+              "mom_pct": 13.57,
+              "yoy_pct": 14.22,
+              "share_pct": 1.83
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5769,
+              "mom_pct": 29.41,
+              "yoy_pct": -30.49,
+              "share_pct": 0.14
+            }
+          ]
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "source_url": "https://fada.in/images/press-release/1693661428b2e7FADA%20releases%20November%202025%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2025-12-07",
+          "total_units": 3300832,
+          "total_mom_pct": -17.97,
+          "total_yoy_pct": 2.14,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 394152,
+              "mom_pct": -28.88,
+              "yoy_pct": 19.71,
+              "share_pct": 11.94
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 2546184,
+              "mom_pct": -19.16,
+              "yoy_pct": -3.1,
+              "share_pct": 77.14
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 133951,
+              "mom_pct": 3.42,
+              "yoy_pct": 23.67,
+              "share_pct": 4.06
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 94935,
+              "mom_pct": -14.46,
+              "yoy_pct": 19.94,
+              "share_pct": 2.88
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 126033,
+              "mom_pct": 71.29,
+              "yoy_pct": 56.55,
+              "share_pct": 3.82
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5577,
+              "mom_pct": -3.33,
+              "yoy_pct": -16.51,
+              "share_pct": 0.17
+            }
+          ]
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "source_url": "https://fada.in/images/press-release/1695cc82c07602FADA%20releases%20CY%202025%20and%20December%202025%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-01-06",
+          "total_units": 2028821,
+          "total_mom_pct": -38.54,
+          "total_yoy_pct": 14.63,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 379671,
+              "mom_pct": -4.24,
+              "yoy_pct": 26.64,
+              "share_pct": 18.71
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1316891,
+              "mom_pct": -48.28,
+              "yoy_pct": 9.5,
+              "share_pct": 64.91
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 127772,
+              "mom_pct": -4.61,
+              "yoy_pct": 36.1,
+              "share_pct": 6.3
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 83666,
+              "mom_pct": -9.65,
+              "yoy_pct": 24.6,
+              "share_pct": 4.12
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 115001,
+              "mom_pct": -8.75,
+              "yoy_pct": 15.8,
+              "share_pct": 5.67
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 5820,
+              "mom_pct": 4.36,
+              "yoy_pct": -18.54,
+              "share_pct": 0.29
+            }
+          ]
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "source_url": "https://fada.in/images/press-release/1698aa6afacdf0FADA%20releases%20January%202026%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-02-10",
+          "total_units": 2722558,
+          "total_mom_pct": 34.19,
+          "total_yoy_pct": 17.61,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 513475,
+              "mom_pct": 35.24,
+              "yoy_pct": 7.22,
+              "share_pct": 18.86
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1852870,
+              "mom_pct": 40.7,
+              "yoy_pct": 20.82,
+              "share_pct": 68.06
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 127134,
+              "mom_pct": -0.5,
+              "yoy_pct": 18.8,
+              "share_pct": 4.67
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 107486,
+              "mom_pct": 28.47,
+              "yoy_pct": 15.07,
+              "share_pct": 3.95
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 114759,
+              "mom_pct": -0.21,
+              "yoy_pct": 22.89,
+              "share_pct": 4.22
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 6834,
+              "mom_pct": 17.42,
+              "yoy_pct": -21.09,
+              "share_pct": 0.25
+            }
+          ]
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-03-05",
+          "total_units": 2409362,
+          "total_mom_pct": -11.5,
+          "total_yoy_pct": 25.62,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 394768,
+              "mom_pct": -23.12,
+              "yoy_pct": 26.12,
+              "share_pct": 16.38
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1700505,
+              "mom_pct": -8.22,
+              "yoy_pct": 25.02,
+              "share_pct": 70.58
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 117130,
+              "mom_pct": -7.87,
+              "yoy_pct": 24.39,
+              "share_pct": 4.86
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 100820,
+              "mom_pct": -6.2,
+              "yoy_pct": 28.89,
+              "share_pct": 4.18
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 89418,
+              "mom_pct": -22.08,
+              "yoy_pct": 36.35,
+              "share_pct": 3.71
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 6721,
+              "mom_pct": -1.65,
+              "yoy_pct": -1.22,
+              "share_pct": 0.28
+            }
+          ]
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "source_url": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
+          "release_date": "2026-04-06",
+          "total_units": 2692449,
+          "total_mom_pct": 11.75,
+          "total_yoy_pct": 25.28,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 440144,
+              "mom_pct": 11.49,
+              "yoy_pct": 21.48,
+              "share_pct": 16.35
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1951006,
+              "mom_pct": 14.73,
+              "yoy_pct": 28.68,
+              "share_pct": 72.46
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 109777,
+              "mom_pct": -6.28,
+              "yoy_pct": 10.52,
+              "share_pct": 4.08
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 102536,
+              "mom_pct": 1.7,
+              "yoy_pct": 15.12,
+              "share_pct": 3.81
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 82080,
+              "mom_pct": -8.21,
+              "yoy_pct": 10.87,
+              "share_pct": 3.05
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 6906,
+              "mom_pct": 2.75,
+              "yoy_pct": -16.17,
+              "share_pct": 0.26
+            }
+          ]
+        }
+      ],
+      "months_extended": [
+        {
+          "month": "2022-01",
+          "label": "Jan 2022",
+          "total_units": 1062220,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 898587
+            },
+            {
+              "category": "CV",
+              "units": 67763
+            },
+            {
+              "category": "TRACTOR",
+              "units": 55421
+            },
+            {
+              "category": "3W",
+              "units": 40449
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2022-02",
+          "label": "Feb 2022",
+          "total_units": 1265834,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 874676
+            },
+            {
+              "category": "PV",
+              "units": 238096
+            },
+            {
+              "category": "CV",
+              "units": 63797
+            },
+            {
+              "category": "TRACTOR",
+              "units": 50304
+            },
+            {
+              "category": "3W",
+              "units": 38961
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-04",
+          "label": "Apr 2023",
+          "total_units": 1729160,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1229911
+            },
+            {
+              "category": "PV",
+              "units": 282674
+            },
+            {
+              "category": "CV",
+              "units": 85587
+            },
+            {
+              "category": "3W",
+              "units": 75153
+            },
+            {
+              "category": "TRACTOR",
+              "units": 55835
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-05",
+          "label": "May 2023",
+          "total_units": 2024246,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1493234
+            },
+            {
+              "category": "PV",
+              "units": 298873
+            },
+            {
+              "category": "3W",
+              "units": 84265
+            },
+            {
+              "category": "CV",
+              "units": 77135
+            },
+            {
+              "category": "TRACTOR",
+              "units": 70739
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-06",
+          "label": "Jun 2023",
+          "total_units": 1869186,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1310186
+            },
+            {
+              "category": "PV",
+              "units": 295299
+            },
+            {
+              "category": "TRACTOR",
+              "units": 98660
+            },
+            {
+              "category": "3W",
+              "units": 91829
+            },
+            {
+              "category": "CV",
+              "units": 73212
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-07",
+          "label": "Jul 2023",
+          "total_units": 1776423,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1228139
+            },
+            {
+              "category": "PV",
+              "units": 284064
+            },
+            {
+              "category": "3W",
+              "units": 100390
+            },
+            {
+              "category": "TRACTOR",
+              "units": 90765
+            },
+            {
+              "category": "CV",
+              "units": 73065
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-08",
+          "label": "Aug 2023",
+          "total_units": 1503527,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1254444
+            },
+            {
+              "category": "3W",
+              "units": 99940
+            },
+            {
+              "category": "CV",
+              "units": 75294
+            },
+            {
+              "category": "TRACTOR",
+              "units": 73849
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-09",
+          "label": "Sep 2023",
+          "total_units": 1882107,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1312101
+            },
+            {
+              "category": "PV",
+              "units": 332248
+            },
+            {
+              "category": "3W",
+              "units": 102462
+            },
+            {
+              "category": "CV",
+              "units": 80804
+            },
+            {
+              "category": "TRACTOR",
+              "units": 54492
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-10",
+          "label": "Oct 2023",
+          "total_units": 2120550,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1507756
+            },
+            {
+              "category": "PV",
+              "units": 353990
+            },
+            {
+              "category": "3W",
+              "units": 107665
+            },
+            {
+              "category": "CV",
+              "units": 88699
+            },
+            {
+              "category": "TRACTOR",
+              "units": 62440
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-11",
+          "label": "Nov 2023",
+          "total_units": 2493820,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 2247366
+            },
+            {
+              "category": "3W",
+              "units": 99899
+            },
+            {
+              "category": "CV",
+              "units": 84586
+            },
+            {
+              "category": "TRACTOR",
+              "units": 61969
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2023-12",
+          "label": "Dec 2023",
+          "total_units": 1990921,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1449693
+            },
+            {
+              "category": "PV",
+              "units": 293005
+            },
+            {
+              "category": "3W",
+              "units": 95455
+            },
+            {
+              "category": "TRACTOR",
+              "units": 78872
+            },
+            {
+              "category": "CV",
+              "units": 73896
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-01",
+          "label": "Jan 2024",
+          "total_units": 2127666,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1458849
+            },
+            {
+              "category": "PV",
+              "units": 393250
+            },
+            {
+              "category": "3W",
+              "units": 97688
+            },
+            {
+              "category": "CV",
+              "units": 89208
+            },
+            {
+              "category": "TRACTOR",
+              "units": 88671
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-02",
+          "label": "Feb 2024",
+          "total_units": 1699446,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1439523
+            },
+            {
+              "category": "3W",
+              "units": 94930
+            },
+            {
+              "category": "CV",
+              "units": 88367
+            },
+            {
+              "category": "TRACTOR",
+              "units": 76626
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-03",
+          "label": "Mar 2024",
+          "total_units": 2127187,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1529875
+            },
+            {
+              "category": "PV",
+              "units": 322345
+            },
+            {
+              "category": "3W",
+              "units": 105232
+            },
+            {
+              "category": "CV",
+              "units": 91289
+            },
+            {
+              "category": "TRACTOR",
+              "units": 78446
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-04",
+          "label": "Apr 2024",
+          "total_units": 2206077,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1643510
+            },
+            {
+              "category": "PV",
+              "units": 335123
+            },
+            {
+              "category": "CV",
+              "units": 90707
+            },
+            {
+              "category": "3W",
+              "units": 80112
+            },
+            {
+              "category": "TRACTOR",
+              "units": 56625
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-06",
+          "label": "Jun 2024",
+          "total_units": 1613986,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1375889
+            },
+            {
+              "category": "3W",
+              "units": 94321
+            },
+            {
+              "category": "CV",
+              "units": 72747
+            },
+            {
+              "category": "TRACTOR",
+              "units": 71029
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-07",
+          "label": "Jul 2024",
+          "total_units": 1713987,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1443463
+            },
+            {
+              "category": "3W",
+              "units": 110497
+            },
+            {
+              "category": "CV",
+              "units": 80057
+            },
+            {
+              "category": "TRACTOR",
+              "units": 79970
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-08",
+          "label": "Aug 2024",
+          "total_units": 1582446,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1338237
+            },
+            {
+              "category": "3W",
+              "units": 105478
+            },
+            {
+              "category": "CV",
+              "units": 73253
+            },
+            {
+              "category": "TRACTOR",
+              "units": 65478
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-09",
+          "label": "Sep 2024",
+          "total_units": 1447649,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1204259
+            },
+            {
+              "category": "3W",
+              "units": 106524
+            },
+            {
+              "category": "CV",
+              "units": 74324
+            },
+            {
+              "category": "TRACTOR",
+              "units": 62542
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-10",
+          "label": "Oct 2024",
+          "total_units": 2349785,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 2065095
+            },
+            {
+              "category": "3W",
+              "units": 122846
+            },
+            {
+              "category": "CV",
+              "units": 97411
+            },
+            {
+              "category": "TRACTOR",
+              "units": 64433
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-11",
+          "label": "Nov 2024",
+          "total_units": 2886776,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 2615953
+            },
+            {
+              "category": "3W",
+              "units": 108337
+            },
+            {
+              "category": "CV",
+              "units": 81967
+            },
+            {
+              "category": "TRACTOR",
+              "units": 80519
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2024-12",
+          "label": "Dec 2024",
+          "total_units": 22033836,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 18912959
+            },
+            {
+              "category": "3W",
+              "units": 1221909
+            },
+            {
+              "category": "CV",
+              "units": 1004856
+            },
+            {
+              "category": "TRACTOR",
+              "units": 894112
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-01",
+          "label": "Jan 2025",
+          "total_units": 2291621,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1525862
+            },
+            {
+              "category": "PV",
+              "units": 465920
+            },
+            {
+              "category": "3W",
+              "units": 107033
+            },
+            {
+              "category": "CV",
+              "units": 99425
+            },
+            {
+              "category": "TRACTOR",
+              "units": 93381
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-02",
+          "label": "Feb 2025",
+          "total_units": 1899196,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1353280
+            },
+            {
+              "category": "PV",
+              "units": 303398
+            },
+            {
+              "category": "3W",
+              "units": 94181
+            },
+            {
+              "category": "CV",
+              "units": 82763
+            },
+            {
+              "category": "TRACTOR",
+              "units": 65574
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-03",
+          "label": "Mar 2025",
+          "total_units": 2126988,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1508232
+            },
+            {
+              "category": "PV",
+              "units": 350603
+            },
+            {
+              "category": "3W",
+              "units": 99376
+            },
+            {
+              "category": "CV",
+              "units": 94764
+            },
+            {
+              "category": "TRACTOR",
+              "units": 74013
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-04",
+          "label": "Apr 2025",
+          "total_units": 2287952,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1686774
+            },
+            {
+              "category": "PV",
+              "units": 349939
+            },
+            {
+              "category": "3W",
+              "units": 99766
+            },
+            {
+              "category": "CV",
+              "units": 90558
+            },
+            {
+              "category": "TRACTOR",
+              "units": 60915
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-05",
+          "label": "May 2025",
+          "total_units": 2212809,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1652637
+            },
+            {
+              "category": "PV",
+              "units": 302214
+            },
+            {
+              "category": "3W",
+              "units": 104448
+            },
+            {
+              "category": "CV",
+              "units": 75615
+            },
+            {
+              "category": "TRACTOR",
+              "units": 71992
+            },
+            {
+              "category": "CE",
+              "units": 5903
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-06",
+          "label": "Jun 2025",
+          "total_units": 1705761,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1446387
+            },
+            {
+              "category": "3W",
+              "units": 100625
+            },
+            {
+              "category": "TRACTOR",
+              "units": 77214
+            },
+            {
+              "category": "CV",
+              "units": 73367
+            },
+            {
+              "category": "CE",
+              "units": 8168
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "total_units": 1825832,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1217123
+            },
+            {
+              "category": "PV",
+              "units": 328613
+            },
+            {
+              "category": "3W",
+              "units": 111426
+            },
+            {
+              "category": "TRACTOR",
+              "units": 88722
+            },
+            {
+              "category": "CV",
+              "units": 76439
+            },
+            {
+              "category": "CE",
+              "units": 3509
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "total_units": 1827337,
+          "categories": [
+            {
+              "category": "2W",
+              "units": 1287735
+            },
+            {
+              "category": "PV",
+              "units": 299369
+            },
+            {
+              "category": "3W",
+              "units": 98866
+            },
+            {
+              "category": "CV",
+              "units": 72124
+            },
+            {
+              "category": "TRACTOR",
+              "units": 64785
+            },
+            {
+              "category": "CE",
+              "units": 4458
+            }
+          ],
+          "is_aggregated_from_oem_history": true
+        },
         {
           "month": "2025-10",
           "label": "Oct 2025",

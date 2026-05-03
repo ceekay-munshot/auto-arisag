@@ -24,6 +24,7 @@ const state = {
   searchQuery: "",
   printAllTabs: false,
   companyMapShownCount: 3,
+  compareToPriorCycle: false,
 };
 
 const SECTION_TO_TAB = {
@@ -1163,6 +1164,15 @@ function setupRefreshAction() {
   });
 }
 
+function setupComparePriorToggle() {
+  document.querySelectorAll("[data-action='toggle-compare-prior']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.compareToPriorCycle = !state.compareToPriorCycle;
+      render();
+    });
+  });
+}
+
 function setupExportPdfAction() {
   document.querySelectorAll("[data-action='export-pdf']").forEach((node) => {
     node.addEventListener("click", () => {
@@ -1714,6 +1724,7 @@ function render() {
   setupSearchBar();
   setupExportPdfAction();
   setupCompanyMapPagination();
+  setupComparePriorToggle();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -1988,6 +1999,12 @@ function renderHero() {
           <button class="button button-export-pdf" data-action="export-pdf" title="Export the active tab as a PDF">
             <span aria-hidden="true">📄</span> Export PDF
           </button>
+          <button class="button ${state.compareToPriorCycle ? "button-compare-on" : "button-compare-off"}"
+                  data-action="toggle-compare-prior"
+                  title="Overlay the same 12 months from one year ago on every line chart that has the data">
+            <span aria-hidden="true">${state.compareToPriorCycle ? "✓" : "↻"}</span>
+            ${state.compareToPriorCycle ? "Comparing prior year" : "Compare to prior year"}
+          </button>
           <p class="hero-status ${refreshState.tone}">${refreshState.message}</p>
         </div>
         <div class="hero-grid">
@@ -2190,7 +2207,14 @@ function renderSourceVisibility() {
 
 function renderRetailTrendOnly() {
   const retail = dashboardData.modules.retail;
-  const months = sliceMonths(retail.months);
+  // When the user has flipped the 'Compare to prior year' toggle and we have
+  // 24+ months of aggregated history (months_extended), use the latest 12
+  // months as the visible X-axis and overlay the prior-cycle values. Falls
+  // back to the standard snapshot window otherwise.
+  const useExtended = state.compareToPriorCycle
+    && Array.isArray(retail.months_extended)
+    && retail.months_extended.length >= 24;
+  const months = useExtended ? retail.months_extended.slice(-12) : sliceMonths(retail.months);
   const allowed = allowedCategories();
   const companyFocused = state.company !== "all";
   const visibleCategories = retail.category_cards.filter((item) => item.category !== "TOTAL" && allowed.includes(item.category));
@@ -2207,21 +2231,40 @@ function renderRetailTrendOnly() {
       ]
     : [state.category];
 
+  // For prior-cycle overlay: build lookup keyed by month so we can find the
+  // same month-of-year a year earlier for any current X position.
+  const extendedLookup = useExtended
+    ? new Map(retail.months_extended.map((m) => [m.month, m]))
+    : null;
+  const valueForCategory = (record, category) => {
+    if (!record) return null;
+    if (category === "TOTAL") return record.total_units;
+    return record.categories?.find((e) => e.category === category)?.units ?? null;
+  };
+
   const trendSeries = chosenCategories
     .filter((category) => category === "TOTAL" || retail.category_cards.some((item) => item.category === category))
-    .map((category) => {
-      if (category === "TOTAL") {
-        return {
-          label: "Total retail",
-          color: dashboardData.chart_colors.TOTAL,
-          values: months.map((item) => item.total_units),
-        };
+    .flatMap((category) => {
+      const label = category === "TOTAL" ? "Total retail" : labelForCategory(category);
+      const color = category === "TOTAL" ? dashboardData.chart_colors.TOTAL : dashboardData.chart_colors[category];
+      const currentValues = months.map((item) => valueForCategory(item, category));
+      const out = [{ label, color, values: currentValues }];
+      if (useExtended && extendedLookup) {
+        const priorValues = months.map((m) => {
+          const [y, mo] = m.month.split("-");
+          const priorId = `${parseInt(y, 10) - 1}-${mo}`;
+          return valueForCategory(extendedLookup.get(priorId), category);
+        });
+        if (priorValues.some((v) => v !== null && v !== undefined)) {
+          out.push({
+            label: `${label} · prior year`,
+            color,
+            values: priorValues,
+            dashed: true,
+          });
+        }
       }
-      return {
-        label: labelForCategory(category),
-        color: dashboardData.chart_colors[category],
-        values: months.map((item) => item.categories.find((entry) => entry.category === category)?.units || 0),
-      };
+      return out;
     });
 
   registerDownload(
@@ -5884,16 +5927,25 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
 
   const lines = activeSeries.map((item) => {
     const points = item.values.map((value, index) => {
+      if (value === null || value === undefined) return null;
       const x = pad.left + (innerWidth / Math.max(item.values.length - 1, 1)) * index;
-      const numericValue = Number(value || 0);
+      const numericValue = Number(value);
       const y = pad.top + innerHeight - ((numericValue - yMin) / yRange) * innerHeight;
       return { x, y, value, label: labels[index] };
-    });
+    }).filter(Boolean);
+    if (!points.length) return "";
     const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
+    // Series with `dashed: true` are prior-year overlays for WOW 10's
+    // "Compare to prior year" toggle. Render thinner + dashed + lower
+    // opacity, and skip the data dots so they don't crowd the current line.
+    const isDashed = item.dashed === true;
+    const strokeAttrs = isDashed
+      ? `stroke="${item.color}" stroke-width="2" stroke-dasharray="6 4" opacity="0.55"`
+      : `stroke="${item.color}" stroke-width="3"`;
     return `
       <g>
-        <path d="${d}" fill="none" stroke="${item.color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-        ${points.map((point) => `
+        <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
+        ${isDashed ? "" : points.map((point) => `
           <circle cx="${point.x}" cy="${point.y}" r="4.5" fill="${item.color}" pointer-events="none"></circle>
           <circle
             class="chart-hover-target"

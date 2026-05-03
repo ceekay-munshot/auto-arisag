@@ -219,6 +219,64 @@ def build_payload(
     }
 
 
+def _build_extended_monthly_retail(snapshot_months: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return a deeper monthly retail series (latest 24+ months) by
+    aggregating ``data/oem_history.json`` into category totals per month,
+    then layering the snapshot's last 6 months on top so the most recent
+    rows always carry the snapshot's authoritative values + YoY/MoM
+    that FADA prints in each press release.
+
+    Only used by the WOW-10 'Compare to prior cycle' overlay — keeps the
+    main `retail.months` series untouched so existing rendering is
+    unaffected."""
+    history = load_oem_history()
+    if not history:
+        return list(snapshot_months)
+
+    # Aggregate {month: {category: total_units}}
+    by_month_cat: dict[str, dict[str, int]] = {}
+    for category, records in history.items():
+        for rec in records or []:
+            month_id = rec.get("month")
+            if not month_id:
+                continue
+            total = sum((row.get("units") or 0) for row in (rec.get("rows") or []))
+            if not total:
+                continue
+            by_month_cat.setdefault(month_id, {})[category] = total
+
+    snapshot_lookup = {m["month"]: m for m in snapshot_months if m.get("month")}
+
+    out: list[dict[str, Any]] = []
+    for month_id in sorted(by_month_cat.keys()):
+        # Snapshot wins for any month it covers (it has FADA's printed
+        # YoY/MoM and exact category breakdowns including very latest).
+        if month_id in snapshot_lookup:
+            out.append(snapshot_lookup[month_id])
+            continue
+        cats = by_month_cat[month_id]
+        total_units = sum(cats.values())
+        if total_units < 100_000:
+            # Filter obvious data-quality artefacts from the older
+            # OEM-annexure backfills (some early months had partial
+            # category coverage).
+            continue
+        out.append({
+            "month": month_id,
+            "label": month_label(month_id),
+            "total_units": total_units,
+            "categories": [
+                {"category": cat, "units": units}
+                for cat, units in sorted(cats.items(), key=lambda kv: -kv[1])
+            ],
+            "is_aggregated_from_oem_history": True,
+        })
+
+    # Cap to the last 36 months — anything older is too sparse for
+    # meaningful prior-cycle overlays.
+    return out[-36:]
+
+
 def build_retail_module(
     fada: dict[str, Any],
     validations: list[dict[str, str]],
@@ -402,6 +460,7 @@ def build_retail_module(
         },
         "latest_month": fada["latest_month"],
         "months": months,
+        "months_extended": _build_extended_monthly_retail(months),
         "category_cards": category_cards,
         "latest_mix": sorted(
             (
