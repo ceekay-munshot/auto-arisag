@@ -3734,6 +3734,37 @@ th:hover {
   background: linear-gradient(180deg, #d97757, var(--accent));
 }
 
+/* WOW-10 prior-year overlay status indicators on the retail chart card */
+.compare-banner {
+  margin: 8px 0 12px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  color: var(--deep);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.compare-banner-warn {
+  border-left-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.compare-on-pill {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fffdfa;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 /* ───────── Print / Export-PDF stylesheet ─────────
    Strips non-essential UI (search bar, side nav, hero toolbar, news
    panel, refresh dropdowns) and forces a clean A4 layout for the
