@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T11:30:42.167870+00:00",
+  "generated_at": "2026-05-03T15:56:13.827768+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -35562,8 +35562,24 @@
   "earnings_calendar": {
     "available": true,
     "as_of_date": "2026-05-03",
-    "source_note": "Hand-seeded with announced FY26 result dates from official IR pages. The cron-driven NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py) extends this with confirmed Q1 FY27 dates as they're announced.",
+    "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
+      {
+        "company": "Hero MotoCorp",
+        "ticker": "HEROMOTOCO",
+        "date": "2026-05-05",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HEROMOTOCO"
+      },
+      {
+        "company": "Mahindra & Mahindra",
+        "ticker": "M&M",
+        "date": "2026-05-05",
+        "period_label": "Financial Results/Dividend/Other business matters",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=M&M"
+      },
       {
         "company": "Hyundai Motor India",
         "ticker": "HYUNDAI",
@@ -35571,6 +35587,22 @@
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.hyundai.com/in/en/investor-relations/financials"
+      },
+      {
+        "company": "Bajaj Auto",
+        "ticker": "BAJAJ-AUTO",
+        "date": "2026-05-06",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=BAJAJ-AUTO"
+      },
+      {
+        "company": "Escorts Kubota",
+        "ticker": "ESCORTS",
+        "date": "2026-05-07",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ESCORTS"
       },
       {
         "company": "Ashok Leyland",
@@ -35589,6 +35621,14 @@
         "source_url": "https://investors.tatamotors.com/financials.aspx"
       },
       {
+        "company": "Tata Motors CV",
+        "ticker": "TMCV",
+        "date": "2026-05-13",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+      },
+      {
         "company": "Hero MotoCorp",
         "ticker": "HEROMOTOCO",
         "date": "2026-05-14",
@@ -35603,16 +35643,64 @@
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.eicher.in/investors/financials-and-reports/financial-results"
+      },
+      {
+        "company": "Tata Motors",
+        "ticker": "TMPV",
+        "date": "2026-05-14",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-05-16",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
       }
     ],
     "upcoming_all": [
       {
+        "company": "Hero MotoCorp",
+        "ticker": "HEROMOTOCO",
+        "date": "2026-05-05",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HEROMOTOCO"
+      },
+      {
+        "company": "Mahindra & Mahindra",
+        "ticker": "M&M",
+        "date": "2026-05-05",
+        "period_label": "Financial Results/Dividend/Other business matters",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=M&M"
+      },
+      {
         "company": "Hyundai Motor India",
         "ticker": "HYUNDAI",
         "date": "2026-05-06",
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.hyundai.com/in/en/investor-relations/financials"
+      },
+      {
+        "company": "Bajaj Auto",
+        "ticker": "BAJAJ-AUTO",
+        "date": "2026-05-06",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=BAJAJ-AUTO"
+      },
+      {
+        "company": "Escorts Kubota",
+        "ticker": "ESCORTS",
+        "date": "2026-05-07",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ESCORTS"
       },
       {
         "company": "Ashok Leyland",
@@ -35631,6 +35719,14 @@
         "source_url": "https://investors.tatamotors.com/financials.aspx"
       },
       {
+        "company": "Tata Motors CV",
+        "ticker": "TMCV",
+        "date": "2026-05-13",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+      },
+      {
         "company": "Hero MotoCorp",
         "ticker": "HEROMOTOCO",
         "date": "2026-05-14",
@@ -35645,6 +35741,22 @@
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.eicher.in/investors/financials-and-reports/financial-results"
+      },
+      {
+        "company": "Tata Motors",
+        "ticker": "TMPV",
+        "date": "2026-05-14",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-05-16",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
       },
       {
         "company": "Escorts Kubota",
@@ -35689,8 +35801,8 @@
         "source_url": "https://www.marutisuzuki.com/corporate/investor-information/financial-information"
       }
     ],
-    "next_14_count": 5,
-    "upcoming_count": 7
+    "next_14_count": 12,
+    "upcoming_count": 14
   },
   "market_insights": [
     {
@@ -36801,7 +36913,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-03T06:10:29.362202+00:00",
+    "generated_at": "2026-05-03T15:53:44.551901+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 22,
@@ -36826,21 +36938,6 @@
             ]
           },
           {
-            "title": "Honda Cars India Sales April 2026 \u2013 4,938 Units, Domestic Up 21% YoY",
-            "url": "https://www.rushlane.com/honda-cars-india-sales-april-2026-4938-units-domestic-up-21-yoy-12545601.html",
-            "summary": "Honda\u2019s domestic sales stood at 4,069 units, reflecting a strong 21.10% YoY growth over 3,360 units sold in April last year The post Honda Cars India Sales April 2026 \u2013 4,938 Units, Domestic Up 21% YoY appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-01T14:30:36+00:00",
-            "published_display": "01 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
             "title": "Engine maker Horse plans India move to supply growing small car market, says CEO",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/engine-maker-horse-plans-india-move-to-supply-growing-small-car-market-says-ceo/130527361",
             "summary": "Backed by Renault and Geely, Horse Powertrain plans to establish a presence in India, driven by rising demand for efficient 1.2L engines after tax cuts.",
@@ -36854,6 +36951,21 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Top 20 CNG Cars FY2026 \u2013 Ertiga, Dzire, WagonR, Brezza, Nexon, Punch, Victoris, Exter, Altroz, Hyryder",
+            "url": "https://www.rushlane.com/top-20-cng-cars-fy2026-ertiga-dzire-wagonr-brezza-nexon-punch-12545515.html",
+            "summary": "In FY2026, CNG-powered passenger car sales surpassed the 10 lakh units milestone, accounting for nearly 22% of total PV sales The post Top 20 CNG Cars FY2026 \u2013 Ertiga, Dzire, WagonR, Brezza, Nexon, Punch, Victoris, Exter, Altroz, Hyryder appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-03T12:10:31+00:00",
+            "published_display": "03 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -36910,21 +37022,6 @@
             ]
           },
           {
-            "title": "Honda 2W Sales April 2026 \u2013 4.84 Lakh Units, Up 15% YoY",
-            "url": "https://www.rushlane.com/honda-2w-sales-april-2026-4-84-lakh-units-up-15-yoy-12545593.html",
-            "summary": "Honda\u2019s domestic sales stood at 4.84 lakh units, marking a 14.69% YoY growth compared to 4.22 lakh units in April last year. The post Honda 2W Sales April 2026 \u2013 4.84 Lakh Units, Up 15% YoY appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-01T12:45:32+00:00",
-            "published_display": "01 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
             "title": "TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units",
             "url": "https://www.rushlane.com/tvs-motor-sales-april-2026-scooters-lead-as-bikes-decline-12545630.html",
             "summary": "Scooters have now overtaken motorcycles as the company\u2019s biggest volume driver \u2014 a notable change for TVS. The post TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units appeared first on RushLane .",
@@ -36951,6 +37048,21 @@
               "Passenger Vehicles",
               "Two-Wheelers",
               "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Suzuki 2W April 2026 Sales \u2013 Exports Outpace Domestic Growth",
+            "url": "https://www.rushlane.com/suzuki-2w-april-2026-sales-exports-outpace-domestic-growth-12545650.html",
+            "summary": "Suzuki Motorcycle India has reported total sales of 1,17,514 units in April 2026, registering a 4.04% year-on-year growth compared to 1,12,948 units sold in April 2025 The post Suzuki 2W April 2026 Sales \u2013 Exports Outpace Domestic Growth appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-03T12:26:58+00:00",
+            "published_display": "03 May 2026",
+            "importance_score": 4,
+            "segment_tags": [
+              "Two-Wheelers"
             ],
             "signal_tags": [
               "General"
@@ -37223,9 +37335,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 42,
-      "filtered_low_signal": 0,
-      "kept_articles": 70
+      "unmapped_articles": 44,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [
