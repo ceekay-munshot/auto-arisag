@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:45:23.944054+00:00",
+  "generated_at": "2026-05-03T06:13:05.707482+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -12653,7 +12653,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-02",
+    "as_of_date": "2026-05-03",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -12708,7 +12708,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-02",
+    "as_of_date": "2026-05-03",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -36668,29 +36668,43 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-02T18:42:49.211137+00:00",
+    "generated_at": "2026-05-03T06:10:29.362202+00:00",
     "window_days": 45,
-    "group_count": 5,
-    "item_count": 18,
+    "group_count": 6,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
           {
-            "title": "Renault Group India moves NCLT for approval of restructuring plan",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-group-india-seeks-nclt-approval-for-strategic-restructuring-plan/130624932",
-            "summary": "The proposed plan separates powertrain manufacturing into a dedicated entity while integrating vehicle manufacturing and sales under a unified structure.",
+            "title": "Maruti Suzuki India starts FY27 with increase in market share to 42%",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-india-achieves-42-market-share-in-fy27-with-record-sales/130727980",
+            "summary": "The company achieved record domestic sales of 1,91,122 units in April, driven by strong performance in both passenger cars and SUVs. Passenger car sales saw a substantial rise, while SUV sales surged by 141.6%.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-04-30T06:05:18+00:00",
-            "published_display": "30 Apr 2026",
+            "published_at": "2026-05-03T05:40:47+00:00",
+            "published_display": "03 May 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Components"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Honda Cars India Sales April 2026 \u2013 4,938 Units, Domestic Up 21% YoY",
+            "url": "https://www.rushlane.com/honda-cars-india-sales-april-2026-4938-units-domestic-up-21-yoy-12545601.html",
+            "summary": "Honda\u2019s domestic sales stood at 4,069 units, reflecting a strong 21.10% YoY growth over 3,360 units sold in April last year The post Honda Cars India Sales April 2026 \u2013 4,938 Units, Domestic Up 21% YoY appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-01T14:30:36+00:00",
+            "published_display": "01 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
             ]
           },
           {
@@ -36726,22 +36740,6 @@
             ]
           },
           {
-            "title": "Tata Motors PV sales surge 31% to 59,000 units in April 2026",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-passenger-vehicle-sales-rise-31-in-april-2026-driven-by-strong-ev-growth/130671968",
-            "summary": "Electric vehicle sales, including domestic and international markets, climbed 72.1 per cent to 9,150 units in April 2026, compared to 5,318 units in April 2025.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-01T08:24:18+00:00",
-            "published_display": "01 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
             "title": "Kia India clocks 27,286 unit sales in April, up 16% on Seltos boost",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-achieves-record-27286-unit-sales-in-april-2025-driven-by-seltos-success/130672237",
             "summary": "For the year to date, the automaker posted domestic sales of 111,611 units, up 13 per cent from 99,199 units in the same period last year, reflecting steady demand across its portfolio.",
@@ -36762,6 +36760,52 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "BMW Self-Balancing Enclosed Bike Patent Filed With 8-Wheel Stabiliser",
+            "url": "https://www.rushlane.com/bmw-self-balancing-enclosed-bike-patent-filed-with-8-wheel-stabiliser-12545605.html",
+            "summary": "While there have been many attempts at self-balancing tech, a mass-produced model is yet to become a reality The post BMW Self-Balancing Enclosed Bike Patent Filed With 8-Wheel Stabiliser appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-02T02:54:33+00:00",
+            "published_display": "02 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Honda 2W Sales April 2026 \u2013 4.84 Lakh Units, Up 15% YoY",
+            "url": "https://www.rushlane.com/honda-2w-sales-april-2026-4-84-lakh-units-up-15-yoy-12545593.html",
+            "summary": "Honda\u2019s domestic sales stood at 4.84 lakh units, marking a 14.69% YoY growth compared to 4.22 lakh units in April last year. The post Honda 2W Sales April 2026 \u2013 4.84 Lakh Units, Up 15% YoY appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-01T12:45:32+00:00",
+            "published_display": "01 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units",
+            "url": "https://www.rushlane.com/tvs-motor-sales-april-2026-scooters-lead-as-bikes-decline-12545630.html",
+            "summary": "Scooters have now overtaken motorcycles as the company\u2019s biggest volume driver \u2014 a notable change for TVS. The post TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-02T11:15:26+00:00",
+            "published_display": "02 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Input Costs / Commodities"
+            ]
+          },
           {
             "title": "EVs ring in new fiscal on strong note",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/evs-ring-in-new-fiscal-on-strong-note/130708976",
@@ -36842,23 +36886,6 @@
             ]
           },
           {
-            "title": "Epsilon Launches Gen III LFP Cathode Material, Targeting US Battery Supply Chains",
-            "url": "https://www.autocarpro.in/NEWS/epsilon-launches-gen-iii-lfp-cathode-material-targeting-us-battery-supply-chains-132267",
-            "summary": "Epsilon Cathode Active Materials (ECAM) announced on April 27 the commercial development of its third-generation lithium iron phosphate (LFP) cathode material, claiming performance metrics that place it alongside Chinese-produced alternatives that have long held a near-monopoly in the global LFP supply chain. The announcement marks one of the few instances of a non-Chinese company bringing high-energy-density LFP...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-04-27T19:01:27+00:00",
-            "published_display": "27 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
             "title": "Epsilon CAM unveils Gen III LFP battery material, targets global EV supply chain shift",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/epsilon-cam-unveils-gen-iii-lfp-battery-material-targets-global-ev-supply-chain-shift/130556853",
             "summary": "Epsilon CAM\u2019s new Gen III LFP cathode material could strengthen alternative battery supply chains as global automakers seek non-Chinese sources for EV components.",
@@ -36909,6 +36936,22 @@
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
+          },
+          {
+            "title": "Tata Motors PV sales surge 31% to 59,000 units in April 2026",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-passenger-vehicle-sales-rise-31-in-april-2026-driven-by-strong-ev-growth/130671968",
+            "summary": "Electric vehicle sales, including domestic and international markets, climbed 72.1 per cent to 9,150 units in April 2026, compared to 5,318 units in April 2025.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-01T08:24:18+00:00",
+            "published_display": "01 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
           }
         ]
       },
@@ -36930,24 +36973,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Horse Powertrain plans India entry, explores local manufacturing as small-car engine demand rises",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/horse-powertrain-enters-indian-market-with-local-manufacturing-plans-for-compact-engine-demand/130507257",
-            "summary": "The move comes after India\u2019s GST cut on small cars boosted demand for efficient 1.2-litre engines, creating fresh opportunities for global powertrain suppliers.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-25T03:09:46+00:00",
-            "published_display": "25 Apr 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
               "Supply Chain / Components"
             ]
           },
@@ -37002,6 +37027,47 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Epsilon Launches Gen III LFP Cathode Material, Targeting US Battery Supply Chains",
+            "url": "https://www.autocarpro.in/NEWS/epsilon-launches-gen-iii-lfp-cathode-material-targeting-us-battery-supply-chains-132267",
+            "summary": "Epsilon Cathode Active Materials (ECAM) announced on April 27 the commercial development of its third-generation lithium iron phosphate (LFP) cathode material, claiming performance metrics that place it alongside Chinese-produced alternatives that have long held a near-monopoly in the global LFP supply chain. The announcement marks one of the few instances of a non-Chinese company bringing high-energy-density LFP...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-04-27T19:01:27+00:00",
+            "published_display": "27 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "policy",
+        "label": "Policy / Regulation",
+        "items": [
+          {
+            "title": "Horse Powertrain plans India entry, explores local manufacturing as small-car engine demand rises",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/horse-powertrain-enters-indian-market-with-local-manufacturing-plans-for-compact-engine-demand/130507257",
+            "summary": "The move comes after India\u2019s GST cut on small cars boosted demand for efficient 1.2-litre engines, creating fresh opportunities for global powertrain suppliers.",
+            "source": "ET Auto Components",
+            "published_at": "2026-04-25T03:09:46+00:00",
+            "published_display": "25 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
           }
         ]
       }
@@ -37011,22 +37077,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 42,
       "filtered_low_signal": 0,
-      "kept_articles": 62
+      "kept_articles": 70
     }
   },
   "qa": [
