@@ -3709,6 +3709,31 @@ th:hover {
   background: linear-gradient(180deg, rgba(76, 116, 199, 0.22), rgba(76, 116, 199, 0.14));
 }
 
+/* WOW-10 'Compare to prior year' toggle */
+.button-compare-off {
+  background: #fffdfa;
+  border-color: var(--line-strong);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.button-compare-off:hover {
+  border-color: var(--accent);
+  color: var(--deep);
+}
+
+.button-compare-on {
+  background: linear-gradient(180deg, var(--accent), #d97757);
+  border-color: var(--accent);
+  color: #fffdfa;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(194, 108, 58, 0.32);
+}
+
+.button-compare-on:hover {
+  background: linear-gradient(180deg, #d97757, var(--accent));
+}
+
 /* ───────── Print / Export-PDF stylesheet ─────────
    Strips non-essential UI (search bar, side nav, hero toolbar, news
    panel, refresh dropdowns) and forces a clean A4 layout for the
