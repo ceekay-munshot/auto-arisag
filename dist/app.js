@@ -5976,39 +5976,41 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     `;
   }).join("");
 
+  // Events list — render BELOW the chart as a small caption strip rather
+  // than as floating dots inside the chart itself. The on-chart markers
+  // looked disconnected from the data line; the caption is cleaner.
+  const matchedEvents = (events || []).filter((event) => {
+    if (!event?.month) return false;
+    const matchLabel = monthLabel(event.month);
+    return matchLabel && labels.indexOf(matchLabel) >= 0;
+  });
+  const palette = {
+    policy: "#4c74c7",
+    festive: "#c26c3a",
+    milestone: "#7a4cc7",
+    macro: "#2f897d",
+  };
+  const eventCaption = matchedEvents.length
+    ? `<div class="chart-events-caption">
+         <span class="chart-events-caption-label">Notable events in this window:</span>
+         ${matchedEvents.map((event) => {
+           const tone = event.tone || "policy";
+           const color = palette[tone] || palette.policy;
+           return `<span class="chart-event-chip" style="--chip-color:${color};">
+             <span class="chart-event-chip-month">${monthLabel(event.month)}</span>
+             ${event.label}
+           </span>`;
+         }).join("")}
+       </div>`
+    : "";
+
   return `
     <svg class="line-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Line chart">
       ${gridLines}
-      ${(events || []).map((event) => {
-        const matchLabel = event.month ? monthLabel(event.month) : null;
-        const idx = matchLabel ? labels.indexOf(matchLabel) : -1;
-        if (idx < 0) return "";
-        const x = pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
-        const tone = event.tone || "policy";
-        const palette = {
-          policy: "#4c74c7",
-          festive: "#c26c3a",
-          milestone: "#7a4cc7",
-          macro: "#2f897d",
-        };
-        const color = palette[tone] || palette.policy;
-        const tooltip = `${matchLabel}: ${event.label}`;
-        return `
-          <g class="chart-event-marker">
-            <line x1="${x}" x2="${x}" y1="${pad.top}" y2="${height - pad.bottom}"
-                  stroke="${color}" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.55" />
-            <circle
-              class="chart-hover-target"
-              cx="${x}" cy="${pad.top + 6}" r="6"
-              fill="${color}" stroke="#fffdfa" stroke-width="1.5"
-              data-tooltip="${escapeHtml(tooltip)}"
-            ></circle>
-          </g>
-        `;
-      }).join("")}
       ${lines}
       ${xLabels}
     </svg>
+    ${eventCaption}
   `;
 }
 
