@@ -1,0 +1,86 @@
+{
+  "as_of_date": "2026-05-03",
+  "source_note": "Hand-seeded with announced FY26 result dates from official IR pages. The cron-driven NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py) extends this with confirmed Q1 FY27 dates as they're announced.",
+  "events": [
+    {
+      "company": "Hyundai Motor India",
+      "ticker": "HYUNDAI",
+      "date": "2026-05-06",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.hyundai.com/in/en/investor-relations/financials"
+    },
+    {
+      "company": "Ashok Leyland",
+      "ticker": "ASHOKLEY",
+      "date": "2026-05-09",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.ashokleyland.com/in/investors/financial-results"
+    },
+    {
+      "company": "Tata Motors",
+      "ticker": "TMPV",
+      "date": "2026-05-13",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://investors.tatamotors.com/financials.aspx"
+    },
+    {
+      "company": "Hero MotoCorp",
+      "ticker": "HEROMOTOCO",
+      "date": "2026-05-14",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.heromotocorp.com/en-in/investors/financial-information.html"
+    },
+    {
+      "company": "Eicher Motors",
+      "ticker": "EICHERMOT",
+      "date": "2026-05-14",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.eicher.in/investors/financials-and-reports/financial-results"
+    },
+    {
+      "company": "Escorts Kubota",
+      "ticker": "ESCORTS",
+      "date": "2026-05-22",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.escortskubota.com/investor/financial-results"
+    },
+    {
+      "company": "Mahindra & Mahindra",
+      "ticker": "M&M",
+      "date": "2026-05-26",
+      "period_label": "Q4 FY26 results",
+      "event_type": "earnings",
+      "source_url": "https://www.mahindra.com/investors/financial-information"
+    },
+    {
+      "company": "TVS Motor",
+      "ticker": "TVSMOTOR",
+      "date": "2026-04-30",
+      "period_label": "Q4 FY26 results (already announced)",
+      "event_type": "earnings",
+      "source_url": "https://www.tvsmotor.com/investors/financial-results"
+    },
+    {
+      "company": "Bajaj Auto",
+      "ticker": "BAJAJ-AUTO",
+      "date": "2026-04-28",
+      "period_label": "Q4 FY26 results (already announced)",
+      "event_type": "earnings",
+      "source_url": "https://www.bajajauto.com/investors/financial-results"
+    },
+    {
+      "company": "Maruti Suzuki",
+      "ticker": "MARUTI",
+      "date": "2026-04-26",
+      "period_label": "Q4 FY26 results (already announced)",
+      "event_type": "earnings",
+      "source_url": "https://www.marutisuzuki.com/corporate/investor-information/financial-information"
+    }
+  ]
+}
