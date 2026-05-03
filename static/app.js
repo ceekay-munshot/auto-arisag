@@ -4499,6 +4499,80 @@ function renderStockSnapshotPanel() {
   `;
 }
 
+function renderEarningsCalendarPanel() {
+  const ec = dashboardData.earnings_calendar;
+  if (!ec?.available) return "";
+  const next14 = ec.next_14_days || [];
+  const upcoming = ec.upcoming_all || [];
+  const recentPast = ec.recent_past || [];
+  const today = new Date();
+  const fmtDate = (iso) => {
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString("en-IN", { weekday: "short", day: "numeric", month: "short" });
+  };
+  const daysFromToday = (iso) => {
+    const d = new Date(iso + "T00:00:00");
+    return Math.round((d - today) / 86400000);
+  };
+  const renderEvent = (ev, options = {}) => {
+    const { isPast = false } = options;
+    const days = daysFromToday(ev.date);
+    const dayBadge = isPast
+      ? `${Math.abs(days)} day${Math.abs(days) === 1 ? "" : "s"} ago`
+      : days === 0 ? "Today"
+        : days === 1 ? "Tomorrow"
+          : `in ${days} day${days === 1 ? "" : "s"}`;
+    return `
+      <a class="earnings-row ${isPast ? "is-past" : days <= 3 ? "is-imminent" : ""}"
+         href="${ev.source_url || "#"}" target="_blank" rel="noopener">
+        <div class="earnings-date-cell">
+          <span class="earnings-day">${fmtDate(ev.date)}</span>
+          <span class="earnings-day-badge">${dayBadge}</span>
+        </div>
+        <div class="earnings-company-cell">
+          <span class="earnings-company-name">${ev.company}</span>
+          <span class="earnings-period">${ev.period_label}</span>
+        </div>
+        <span class="earnings-ticker">${ev.ticker || ""}</span>
+        <span class="earnings-arrow" aria-hidden="true">↗</span>
+      </a>
+    `;
+  };
+  const block = next14.length
+    ? `<p class="small-label" style="margin-top:0;">Next 14 days · ${next14.length} announcement${next14.length === 1 ? "" : "s"}</p>
+       ${next14.map((ev) => renderEvent(ev)).join("")}`
+    : `<p class="empty-note">No earnings calls scheduled in the next 14 days.</p>`;
+  const moreUpcoming = upcoming.filter((ev) => !next14.find((n) => n.company === ev.company && n.date === ev.date));
+  return `
+    <section id="section-earnings-calendar" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Earnings Calendar</p>
+          <h2>Listed-OEM result dates · ${ec.upcoming_count || 0} upcoming</h2>
+        </div>
+        <p class="section-subtitle">${ec.source_note || ""}</p>
+      </div>
+      <div class="earnings-list">${block}</div>
+      ${moreUpcoming.length ? `
+        <details class="earnings-more">
+          <summary>Show ${moreUpcoming.length} more upcoming announcement${moreUpcoming.length === 1 ? "" : "s"}</summary>
+          <div class="earnings-list" style="margin-top:10px;">
+            ${moreUpcoming.map((ev) => renderEvent(ev)).join("")}
+          </div>
+        </details>
+      ` : ""}
+      ${recentPast.length ? `
+        <details class="earnings-more">
+          <summary>Show ${recentPast.length} recent announcement${recentPast.length === 1 ? "" : "s"}</summary>
+          <div class="earnings-list" style="margin-top:10px;">
+            ${recentPast.map((ev) => renderEvent(ev, { isPast: true })).join("")}
+          </div>
+        </details>
+      ` : ""}
+    </section>
+  `;
+}
+
 function renderCompanySection() {
   const cards = state.company === "all"
     ? dashboardData.company_map
@@ -4510,6 +4584,7 @@ function renderCompanySection() {
 
   return `
     ${renderStockSnapshotPanel()}
+    ${renderEarningsCalendarPanel()}
     <section id="section-company-map" class="section panel section-anchor">
       <div class="panel-header">
         <div>

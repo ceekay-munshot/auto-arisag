@@ -32,6 +32,7 @@ COMPANY_HISTORY_PATH = Path("data/company_unit_history.json")
 RBI_CREDIT_PATH = Path("data/rbi_credit.json")
 MACRO_INDICATORS_PATH = Path("data/macro_indicators.json")
 OEM_STOCKS_PATH = Path("data/oem_stocks.json")
+EARNINGS_CALENDAR_PATH = Path("data/oem_earnings_calendar.json")
 
 
 def _load_siam_history() -> list[dict[str, Any]]:
@@ -166,6 +167,7 @@ def build_payload(
     festive_pulse = build_festive_pulse_module(retail)
     macro_indicators = build_macro_indicators_module()
     oem_stocks = build_oem_stocks_module()
+    earnings_calendar = build_earnings_calendar_module()
     components = build_components_module(snapshot["acma"])
     registration = build_registration_module(vahan_rows, validations)
     state_registration = build_state_registration_module(state_registration_rows, state_registration_message, validations)
@@ -207,6 +209,7 @@ def build_payload(
         },
         "macro_indicators": macro_indicators,
         "oem_stocks": oem_stocks,
+        "earnings_calendar": earnings_calendar,
         "market_insights": market_insights,
         "insights": insights,
         "company_map": build_company_map(),
@@ -591,6 +594,53 @@ def build_credit_pulse_module() -> dict[str, Any]:
             "source_url": latest["source_url"],
         },
         "months": months,
+    }
+
+
+def build_earnings_calendar_module() -> dict[str, Any]:
+    """Upcoming OEM earnings / board-meeting dates. Hand-seeded today;
+    cron-driven scrapers (NSE corporate filings) extend it forward."""
+    if not EARNINGS_CALENDAR_PATH.exists():
+        return {"available": False}
+    try:
+        payload = json.loads(EARNINGS_CALENDAR_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"available": False}
+    raw_events = payload.get("events") or []
+    if not raw_events:
+        return {"available": False}
+    today = datetime.now(UTC).date().isoformat()
+    fortnight = (datetime.now(UTC) + datetime.now(UTC).resolution).date()  # placeholder; reset below
+    from datetime import timedelta
+    fortnight_iso = (datetime.now(UTC).date() + timedelta(days=14)).isoformat()
+
+    upcoming = []
+    next_14 = []
+    past = []
+    for ev in raw_events:
+        d = (ev or {}).get("date")
+        if not d:
+            continue
+        if d < today:
+            past.append(ev)
+        else:
+            upcoming.append(ev)
+            if d <= fortnight_iso:
+                next_14.append(ev)
+
+    upcoming.sort(key=lambda e: e["date"])
+    next_14.sort(key=lambda e: e["date"])
+    past.sort(key=lambda e: e["date"], reverse=True)
+
+    return {
+        "available": True,
+        "as_of_date": payload.get("as_of_date"),
+        "source_note": payload.get("source_note", ""),
+        "next_14_days": next_14[:14],
+        "upcoming_all": upcoming[:30],
+        "recent_past": past[:6],
+        "next_14_count": len(next_14),
+        "upcoming_count": len(upcoming),
     }
 
 

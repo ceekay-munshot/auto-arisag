@@ -3066,6 +3066,137 @@ th:hover {
 .leader-yoy-pos { color: #1d5a4f; }
 .leader-yoy-neg { color: #8a2727; }
 
+/* Earnings calendar panel */
+.earnings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.earnings-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) 110px 24px;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.earnings-row:hover {
+  transform: translateY(-1px);
+  border-color: rgba(194, 108, 58, 0.42);
+  box-shadow: 0 6px 16px rgba(20, 39, 62, 0.06);
+}
+
+.earnings-row.is-imminent {
+  background: linear-gradient(180deg, rgba(194, 108, 58, 0.10), rgba(194, 108, 58, 0.04));
+  border-color: rgba(194, 108, 58, 0.32);
+}
+
+.earnings-row.is-past {
+  opacity: 0.62;
+  background: var(--bg-ink);
+}
+
+.earnings-date-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.earnings-day {
+  font-weight: 700;
+  color: var(--deep);
+  font-size: 0.95rem;
+}
+
+.earnings-day-badge {
+  font-size: 0.74rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.earnings-row.is-imminent .earnings-day-badge {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.earnings-company-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.earnings-company-name {
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.earnings-period {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.earnings-ticker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(20, 39, 62, 0.06);
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.earnings-arrow {
+  color: var(--muted);
+  text-align: right;
+}
+
+.earnings-row:hover .earnings-arrow {
+  color: var(--accent);
+}
+
+.earnings-more {
+  margin-top: 14px;
+}
+
+.earnings-more summary {
+  cursor: pointer;
+  padding: 8px 14px;
+  background: var(--bg-ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.earnings-more summary:hover {
+  border-color: var(--accent);
+  color: var(--deep);
+}
+
+@media (max-width: 720px) {
+  .earnings-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .earnings-arrow,
+  .earnings-ticker {
+    justify-self: start;
+  }
+}
+
 /* Annotated time-series event-marker styling — circle hover targets get
    a subtle outline so they read as clickable, hover state lifts them. */
 .chart-event-marker circle {

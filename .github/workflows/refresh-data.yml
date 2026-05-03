@@ -85,6 +85,12 @@ jobs:
         run: python -u scripts/refresh_stocks.py
         continue-on-error: true
 
+      - name: Refresh OEM earnings calendar (NSE corporate filings)
+        # Walks NSE's event-calendar API for upcoming OEM result dates.
+        # Falls back to seeded events when NSE blocks the runner.
+        run: python -u scripts/refresh_earnings_calendar.py
+        continue-on-error: true
+
       - name: Rebuild dashboard with OEM/SIAM/company history
         # The backfills may have added new months, so rebuild so the periodized
         # OEM tables, the SIAM trend chart, and the listed-company spotlight
@@ -105,7 +111,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/vahan_oem_live.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/vahan_oem_live.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi
