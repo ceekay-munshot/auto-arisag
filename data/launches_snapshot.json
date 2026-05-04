@@ -1,9 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-05-04T10:36:22.825503+00:00",
+  "generated_at": "2026-05-04T16:53:27.879109+00:00",
   "window_days": 30,
-  "item_count": 2,
+  "item_count": 4,
   "items": [
+    {
+      "title": "BMW launches M440i xDrive Convertible in India at ₹1.09 crore",
+      "summary": "The performance convertible is powered by a 3.0-litre six-cylinder petrol engine producing 374 hp and 500 Nm, and claims a 0-100 kmph time of 4.9 seconds.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-m440i-xdrive-convertible-launched-in-india-at-109-crore-specifications-and-features/130783200",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-05-04T11:17:58+00:00",
+      "published_display": "04 May 2026",
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-91812/130783200.cms"
+    },
+    {
+      "title": "Tata Motors launches new Curvv.ev variants priced from ₹16.99 lakh",
+      "summary": "The new variants have a 55-kWh battery pack offering a certified driving range of up to 502 km.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-launches-new-curvv-ev-variants-priced-from-16-99-lakh/130784371",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-05-04T10:22:10+00:00",
+      "published_display": "04 May 2026",
+      "company": "Tata Motors",
+      "tone": "pv",
+      "scope": "listed",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-29252/130784371.cms"
+    },
     {
       "title": "Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh – 55 kWh, 502 km Range",
       "summary": "Tata Curvv EV SeriesX launch price is Rs 16.99 lakh (Ex-sh), consisting of Accomplished X and Empowered X trims with 55 kWh battery pack The post Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh – 55 kWh, 502 km Range appeared first on RushLane .",
@@ -37,20 +67,20 @@
   ],
   "companies": [
     {
-      "company": "Tata Motors",
-      "tone": "pv",
-      "scope": "listed",
-      "count": 1,
-      "latest_published_at": "2026-05-04T09:04:31+00:00",
-      "latest_title": "Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh – 55 kWh, 502 km Range"
-    },
-    {
       "company": "BMW India",
       "tone": "pv",
       "scope": "tracked",
-      "count": 1,
-      "latest_published_at": "2026-05-04T04:31:51+00:00",
-      "latest_title": "BMW M440i Convertible Launch Price Rs 1.09 Cr – 374 bhp, 250 Km/h, 4.9s 0-100"
+      "count": 2,
+      "latest_published_at": "2026-05-04T11:17:58+00:00",
+      "latest_title": "BMW launches M440i xDrive Convertible in India at ₹1.09 crore"
+    },
+    {
+      "company": "Tata Motors",
+      "tone": "pv",
+      "scope": "listed",
+      "count": 2,
+      "latest_published_at": "2026-05-04T10:22:10+00:00",
+      "latest_title": "Tata Motors launches new Curvv.ev variants priced from ₹16.99 lakh"
     }
   ],
   "audit": {
