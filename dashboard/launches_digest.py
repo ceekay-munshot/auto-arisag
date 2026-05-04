@@ -147,26 +147,22 @@ MODEL_NAME_PATTERNS: list[tuple[re.Pattern[str], str]] = [
 
 # --- Launch keyword patterns ----------------------------------------------
 #
-# Superset of the news-pipeline ``Product / Launch`` signal so we don't miss
-# launches phrased with "introduces", "rolls out", "priced at", etc.
-# Matched against the article's title + summary (lowercased).
+# Restricted to phrases that signal "this is a NEW vehicle / brand / model
+# being put on sale today". Soft signals like "reveals", "unwraps", "first
+# drive", "spied testing", and "new colour" were intentionally removed —
+# those are reviews, teasers, or paint-only updates, not launches.
 LAUNCH_KEYWORDS = [
-    r"\blaunch(?:es|ed|ing)?\b",
-    r"\bunveil(?:s|ed|ing)?\b",
-    r"\bdebut(?:s|ed|ing)?\b",
-    r"\bintroduc(?:e|es|ed|ing|tion)\b",
+    r"\blaunch(?:es|ed)?\b",
+    r"\bunveil(?:s|ed)?\b",
+    r"\bdebut(?:s|ed)?\b",
+    r"\bintroduc(?:es|ed)\b",
     r"\brolls?\s+out\b",
     r"\brolled\s+out\b",
-    r"\brolling\s+out\b",
-    r"\bunwrap(?:s|ped|ping)?\b",
-    r"\breveal(?:s|ed|ing)?\b",
     r"\bgoes?\s+on\s+sale\b",
     r"\bnow\s+on\s+sale\b",
     r"\bpriced\s+at\b",
     r"\bprice\s+revealed\b",
-    r"\bex[- ]showroom\b",
-    r"\bbookings?\s+(?:open|start|begin|commence|live|now)\b",
-    r"\bopen\s+for\s+bookings?\b",
+    r"\bex[- ]showroom\s+price\b",
     r"\bdeliveries?\s+(?:begin|start|commence)\b",
     r"\bfirst\s+deliveries?\b",
     r"\bnew\s+model\b",
@@ -174,12 +170,6 @@ LAUNCH_KEYWORDS = [
     r"\bnext[- ]gen(?:eration)?\b",
     r"\bfacelift\b",
     r"\bnew\s+variant\b",
-    r"\bnew\s+colou?r\b",
-    r"\bnew\s+edition\b",
-    r"\blimited\s+edition\b",
-    r"\bspecial\s+edition\b",
-    r"\bfirst\s+drive\b",
-    r"\bspied\s+testing\b",
 ]
 LAUNCH_RE = re.compile("|".join(LAUNCH_KEYWORDS), re.IGNORECASE)
 
@@ -236,14 +226,45 @@ NEGATIVE_KEYWORDS = [
     r"\bleaked\b",
     r"\bteased\b",
     r"\bteaser\b",
-    # Reviews / road tests
-    r"\b(?:road|long[- ]term|first)\s+(?:test|ride|drive|review)\b",
+    r"\bconcept\s+(?:car|vehicle|sketch|design|study|model)?\b",
+    r"\bdesign\s+study\b",
+    r"\bprototype\b",
+    r"\bmule\b",
+    # Future-tense / speculation phrasing — the article is about a launch
+    # that hasn't happened yet ("set to launch in July", "expected to launch",
+    # "could launch", "will launch") — track when it actually drops.
+    r"\bset\s+to\s+launch\b",
+    r"\bexpected\s+to\s+launch\b",
+    r"\bcould\s+launch\b",
+    r"\bwill\s+launch\b",
+    r"\bto\s+be\s+launched\b",
+    r"\bto\s+launch\s+(?:in|next|on|by|soon|later)\b",
+    r"\blaunch\s+(?:date|timeline|window|imminent|soon|next\s+(?:month|year|week)|likely)\b",
+    r"\bahead\s+of\s+launch\b",
+    r"\bbefore\s+launch\b",
+    r"\brumou?r(?:ed|s)?\b",
+    r"\bspeculat(?:ed|ion|ions?)\b",
+    r"\b(?:delayed|postponed|cancel(?:led|ed)?|scrapped)\b",
+    # Reviews / road tests / first impressions / walk-arounds
+    r"\b(?:road|long[- ]term|first|comparison)\s+(?:test|ride|drive|review|impression|impressions?|look|peek)\b",
     r"\breview\b",
+    r"\bwalk[- ]?around\b",
+    r"\bfirst\s+impressions?\b",
+    r"\bvs\.?\s+\w+\s+\w+\s+vs\b",  # comparison articles
+    # Soft "new colour / paint / graphics" updates aren't real launches.
+    r"\bnew\s+colou?rs?\b",
+    r"\bnew\s+graphics?\b",
+    r"\bnew\s+stickers?\b",
+    r"\bdual[- ]tone\b",
     # Aftermarket / accessory products (not vehicles)
     r"\bhelmet\b",
     r"\btyres?\b",
     r"\btires?\b",
     r"\bretrofit\b",
+    r"\b(?:cng|lpg|electric)\s+kit\b",
+    r"\bconversion\s+kit\b",
+    r"\bkit\s+launch\b",
+    r"\baftermarket\b",
     r"\baccessor(?:y|ies)\b",
     # CSR / employee / community programmes
     r"\bcsr\b",
@@ -371,17 +392,23 @@ def _build_digest(
         if not LAUNCH_RE.search(title):
             continue
 
-        # Brand resolution prefers the title — the canonical headline brand
-        # — and only falls back to brand_tags / model-name patterns when the
-        # title has no brand mention. This stops "BMW M440i Convertible" from
-        # being tagged as Mercedes just because the summary name-drops both.
-        brand_def = _match_brand_in_text(title)
-        if not brand_def:
-            brand_def = _match_brand_by_model_name(title)
+        # The TITLE must also explicitly name the brand or one of its known
+        # model names — i.e. "Mahindra launches BE 6" or "BE 6 launched".
+        # An article titled merely "Launches its newest variant" has no
+        # vehicle subject in the headline and almost always isn't a launch
+        # piece worth surfacing.
+        title_brand = _match_brand_in_text(title)
+        title_model = _match_brand_by_model_name(title)
+        if not title_brand and not title_model:
+            continue
+
+        # Prefer the brand mentioned in the title; fall back to model-name
+        # resolution; only as a last resort lean on the noisier brand_tags.
+        # Stops "BMW M440i Convertible" from being tagged as Mercedes just
+        # because the summary name-drops both.
+        brand_def = title_brand or title_model
         if not brand_def:
             brand_def = _match_brand(article.get("brand_tags") or [])
-        if not brand_def:
-            brand_def = _match_brand_by_model_name(haystack)
         if not brand_def:
             continue
         url = article.get("url") or ""
