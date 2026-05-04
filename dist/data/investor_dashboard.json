@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T08:49:16.197772+00:00",
+  "generated_at": "2026-05-04T09:11:55.008471+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -5097,6 +5097,12 @@
               "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-166889-units-in-may-2021"
             },
             {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 238092,
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-by-27percent-in-june-2021"
+            },
+            {
               "month": "2021-07",
               "label": "Jul 2021",
               "units": 262728,
@@ -5179,6 +5185,12 @@
               "label": "Aug 2022",
               "units": 274313,
               "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-Grows-By-15-In-August-2022"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 332511,
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grows-by-9percent-in-september-2022"
             },
             {
               "month": "2022-11",
@@ -5283,6 +5295,12 @@
               "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-9-percent-in-july-2024"
             },
             {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 332110,
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-13-percent-august-2024"
+            },
+            {
               "month": "2024-09",
               "label": "Sep 2024",
               "units": 386955,
@@ -5293,6 +5311,12 @@
               "label": "Oct 2024",
               "units": 420610,
               "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-highest-monthly-sales-october-2024"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 352103,
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-november-2024"
             },
             {
               "month": "2024-12",
@@ -13833,8 +13857,241 @@
       }
     },
     "recent_launches": {
-      "available": false,
-      "title": "Recent Launches"
+      "available": true,
+      "title": "Recent Launches",
+      "generated_at": "2026-05-04T09:11:39.975634+00:00",
+      "window_days": 30,
+      "item_count": 11,
+      "items": [
+        {
+          "title": "Steelbird Launches SB-120 Helmet Starting at Rs 3,999",
+          "summary": "Steelbird Helmets has introduced the new SB-120 motorcycle helmet in the Indian market. The new model is priced at Rs 3,999 for the mono color variants and Rs 4,499 for models featuring decals.",
+          "url": "https://www.autocarpro.in/NEWS/steelbird-launches-sb-120-helmet-starting-at-rs-3999-132388",
+          "source": "Autocar Professional Components",
+          "published_at": "2026-05-04T11:07:24+00:00",
+          "published_display": "04 May 2026",
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": null
+        },
+        {
+          "title": "Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh \u2013 55 kWh, 502 km Range",
+          "summary": "Tata Curvv EV SeriesX launch price is Rs 16.99 lakh (Ex-sh), consisting of Accomplished X and Empowered X trims with 55 kWh battery pack The post Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh \u2013 55 kWh, 502 km Range appeared first on RushLane .",
+          "url": "https://www.rushlane.com/tata-curvv-ev-seriesx-launch-price-starts-rs-16-99-lakh-55-kwh-502-km-range-12545705.html",
+          "source": "RushLane",
+          "published_at": "2026-05-04T09:04:31+00:00",
+          "published_display": "04 May 2026",
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/tata-curvv-ev-seriesx-launch-2.jpg"
+        },
+        {
+          "title": "Nissan Gravite CNG Kit Launch Price Rs 83K \u2013 Twin Cylinder + 7 Seats",
+          "summary": "Nissan Gravite CNG kit launch price is Rs 83k, offering you the versatility of twin cylinder CNG tanks along with 7-seater capability The post Nissan Gravite CNG Kit Launch Price Rs 83K \u2013 Twin Cylinder + 7 Seats appeared first on RushLane .",
+          "url": "https://www.rushlane.com/nissan-gravite-cng-kit-launch-price-rs-83k-twin-cylinder-7-seats-12545687.html",
+          "source": "RushLane",
+          "published_at": "2026-05-04T07:55:02+00:00",
+          "published_display": "04 May 2026",
+          "company": "Nissan India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/nissan-gravite-cng-retrofit-kit-cover.jpg"
+        },
+        {
+          "title": "Nissan rolls out CNG retrofit for GRAVITE at \u20b982,999",
+          "summary": "The CNG kit has been developed and supplied by Motozen, and includes a third-party warranty of three years or 1,00,000 km on components",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/nissan-rolls-out-cng-retrofit-for-gravite-at-82999/130770069",
+          "source": "ET Auto Components",
+          "published_at": "2026-05-04T07:52:59+00:00",
+          "published_display": "04 May 2026",
+          "company": "Nissan India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Components"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-26300/130770069.cms"
+        },
+        {
+          "title": "Honda Cars Discounts May 2026 Up To Rs 2.12 Lakh \u2013 City, Amaze, Elevate",
+          "summary": "Honda Cars discounts for the month of May 2026 can go till Rs 2.12 lakh and City sedan gets highest cash benefits ahead of facelift launch The post Honda Cars Discounts May 2026 Up To Rs 2.12 Lakh \u2013 City, Amaze, Elevate appeared first on RushLane .",
+          "url": "https://www.rushlane.com/honda-cars-discounts-may-2026-up-to-rs-2-12-lakh-city-amaze-elevate-12545681.html",
+          "source": "RushLane",
+          "published_at": "2026-05-04T06:24:00+00:00",
+          "published_display": "04 May 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/honda-cars-discounts-may-2026-cover.jpg"
+        },
+        {
+          "title": "BMW M440i Convertible Launch Price Rs 1.09 Cr \u2013 374 bhp, 250 Km/h, 4.9s 0-100",
+          "summary": "BMW M440i Convertible has been launched in India at Rs 1.09 Cr (Ex-sh), undercutting its rival, Mercedes CLE Cabriolet The post BMW M440i Convertible Launch Price Rs 1.09 Cr \u2013 374 bhp, 250 Km/h, 4.9s 0-100 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/bmw-m440i-convertible-launch-price-rs-1-09-cr-374-bhp-250-km-h-4-9s-0-100-12545668.html",
+          "source": "RushLane",
+          "published_at": "2026-05-04T04:31:51+00:00",
+          "published_display": "04 May 2026",
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/bmw-m440i-convertible-launch-8.jpg"
+        },
+        {
+          "title": "2027 Hyundai Creta Renders In New Colours \u2013 Based On Latest Spy Shots",
+          "summary": "Creta has consistently remained among the top-selling SUVs in the country. Now, Hyundai has started working on the next-generation Creta The post 2027 Hyundai Creta Renders In New Colours \u2013 Based On Latest Spy Shots appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2027-hyundai-creta-renders-in-new-colours-based-on-latest-spy-shots-12545620.html",
+          "source": "RushLane",
+          "published_at": "2026-05-04T03:34:46+00:00",
+          "published_display": "04 May 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/new-gen-hyundai-creta-2027-colours-renders-spy-shots-3.jpeg"
+        },
+        {
+          "title": "Renault India April sales more than doubles to 5,413 units on Triber, Kiger boost",
+          "summary": "The recently launched Renault Duster has also contributed to demand, with deliveries beginning in the latter part of April.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-india-april-sales-more-than-doubles-to-5413-units-on-triber-kiger-boost/130673387",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-01T08:20:08+00:00",
+          "published_display": "01 May 2026",
+          "company": "Renault India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-2058759/130673387.cms"
+        },
+        {
+          "title": "Nissan India sales jump 75% to 3,203 units in April",
+          "summary": "Total sales, including exports, stood at 5,388 units, supported by demand for the All-New Nissan Gravite and continued traction for the Magnite.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/nissan-india-sales-jump-75-to-3203-units-in-april/130672566",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-01T07:25:03+00:00",
+          "published_display": "01 May 2026",
+          "company": "Nissan India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-60656/130672566.cms"
+        },
+        {
+          "title": "Hyundai India posts highest-ever April domestic sales at 51,902 units, up 17%",
+          "summary": "Exports stood at 13,708 units, while the all-new Venue recorded its highest-ever monthly domestic sales of 12,420 units.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-india-achieves-record-april-sales-of-51902-vehicles-up-17-year-on-year/130670235",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-01T05:30:21+00:00",
+          "published_display": "01 May 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-378393/130670235.cms"
+        },
+        {
+          "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
+          "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
+          "source": "ET Auto Commercial Vehicles",
+          "published_at": "2026-04-24T05:40:51+00:00",
+          "published_display": "24 Apr 2026",
+          "company": "Ashok Leyland",
+          "tone": "cv",
+          "scope": "listed",
+          "segment_tags": [
+            "Commercial Vehicles",
+            "EV"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1237037/130484747.cms"
+        }
+      ],
+      "companies": [
+        {
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-04T11:07:24+00:00",
+          "latest_title": "Steelbird Launches SB-120 Helmet Starting at Rs 3,999"
+        },
+        {
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-05-04T09:04:31+00:00",
+          "latest_title": "Tata Curvv EV SeriesX Launch Price Starts Rs 16.99 Lakh \u2013 55 kWh, 502 km Range"
+        },
+        {
+          "company": "Nissan India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 3,
+          "latest_published_at": "2026-05-04T07:55:02+00:00",
+          "latest_title": "Nissan Gravite CNG Kit Launch Price Rs 83K \u2013 Twin Cylinder + 7 Seats"
+        },
+        {
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-04T06:24:00+00:00",
+          "latest_title": "Honda Cars Discounts May 2026 Up To Rs 2.12 Lakh \u2013 City, Amaze, Elevate"
+        },
+        {
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-04T04:31:51+00:00",
+          "latest_title": "BMW M440i Convertible Launch Price Rs 1.09 Cr \u2013 374 bhp, 250 Km/h, 4.9s 0-100"
+        },
+        {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 2,
+          "latest_published_at": "2026-05-04T03:34:46+00:00",
+          "latest_title": "2027 Hyundai Creta Renders In New Colours \u2013 Based On Latest Spy Shots"
+        },
+        {
+          "company": "Renault India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-01T08:20:08+00:00",
+          "latest_title": "Renault India April sales more than doubles to 5,413 units on Triber, Kiger boost"
+        },
+        {
+          "company": "Ashok Leyland",
+          "tone": "cv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-04-24T05:40:51+00:00",
+          "latest_title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers"
+        }
+      ],
+      "source_meta": {
+        "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
+        "latest_release_date": "2026-05-04"
+      }
     }
   },
   "macro_indicators": {
@@ -13881,10 +14138,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.0,
+        "value": 95.01,
         "unit": "\u20b9",
-        "delta_value": 0.2379,
-        "delta_label": "+0.79% in last week (Yahoo Finance)",
+        "delta_value": 0.2509,
+        "delta_label": "+0.81% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -13901,10 +14158,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13499.0,
-        "change_1d_pct": 1.39,
-        "change_1w_pct": 3.46,
-        "change_1m_pct": 9.69,
+        "price": 13546.0,
+        "change_1d_pct": 1.74,
+        "change_1w_pct": 3.82,
+        "change_1m_pct": 10.08,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12972.0,
@@ -13936,7 +14193,7 @@
           12892.0,
           13257.0,
           13314.0,
-          13499.0
+          13546.0
         ],
         "daily_closes": [
           {
@@ -15913,16 +16170,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 13499.0
+            "close": 13546.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3109.6,
-        "change_1d_pct": 0.39,
-        "change_1w_pct": 2.34,
-        "change_1m_pct": 5.24,
+        "price": 3100.1,
+        "change_1d_pct": 0.08,
+        "change_1w_pct": 2.03,
+        "change_1m_pct": 4.92,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3128.9,
@@ -15954,7 +16211,7 @@
           3088.1,
           3152.3,
           3097.5,
-          3109.6
+          3100.1
         ],
         "daily_closes": [
           {
@@ -17931,16 +18188,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 3109.6
+            "close": 3100.1
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5043.5,
-        "change_1d_pct": -1.09,
-        "change_1w_pct": 1.65,
-        "change_1m_pct": -0.39,
+        "price": 5055.5,
+        "change_1d_pct": -0.85,
+        "change_1w_pct": 1.89,
+        "change_1m_pct": -0.15,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5355.0,
@@ -17972,7 +18229,7 @@
           5068.0,
           5114.5,
           5099.0,
-          5043.5
+          5055.5
         ],
         "daily_closes": [
           {
@@ -19949,16 +20206,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 5043.5
+            "close": 5055.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3460.2,
-        "change_1d_pct": -0.94,
-        "change_1w_pct": -0.8,
-        "change_1m_pct": 2.87,
+        "price": 3499.4,
+        "change_1d_pct": 0.19,
+        "change_1w_pct": 0.32,
+        "change_1m_pct": 4.03,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3492.0,
@@ -19990,7 +20247,7 @@
           3495.9,
           3553.9,
           3492.9,
-          3460.2
+          3499.4
         ],
         "daily_closes": [
           {
@@ -21967,16 +22224,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 3460.2
+            "close": 3499.4
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10141.0,
-        "change_1d_pct": 1.47,
-        "change_1w_pct": 5.9,
-        "change_1m_pct": 15.48,
+        "price": 10126.5,
+        "change_1d_pct": 1.33,
+        "change_1w_pct": 5.75,
+        "change_1m_pct": 15.32,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9110.0,
@@ -22008,7 +22265,7 @@
           9495.5,
           9543.5,
           9994.0,
-          10141.0
+          10126.5
         ],
         "daily_closes": [
           {
@@ -23985,16 +24242,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 10141.0
+            "close": 10126.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1824.0,
-        "change_1d_pct": 0.35,
-        "change_1w_pct": 2.27,
-        "change_1m_pct": 2.59,
+        "price": 1840.6,
+        "change_1d_pct": 1.27,
+        "change_1w_pct": 3.2,
+        "change_1m_pct": 3.52,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1971.2,
@@ -24026,7 +24283,7 @@
           1825.2,
           1817.4,
           1817.6,
-          1824.0
+          1840.6
         ],
         "daily_closes": [
           {
@@ -25539,16 +25796,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 1824.0
+            "close": 1840.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7188.0,
-        "change_1d_pct": 1.11,
-        "change_1w_pct": 1.08,
-        "change_1m_pct": 9.14,
+        "price": 7316.0,
+        "change_1d_pct": 2.91,
+        "change_1w_pct": 2.88,
+        "change_1m_pct": 11.08,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           6910.0,
@@ -25580,7 +25837,7 @@
           7071.5,
           7189.5,
           7109.0,
-          7188.0
+          7316.0
         ],
         "daily_closes": [
           {
@@ -27557,16 +27814,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 7188.0
+            "close": 7316.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 343.25,
-        "change_1d_pct": 0.5,
-        "change_1w_pct": -2.07,
-        "change_1m_pct": 15.88,
+        "price": 343.45,
+        "change_1d_pct": 0.56,
+        "change_1w_pct": -2.01,
+        "change_1m_pct": 15.95,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -27599,7 +27856,7 @@
           350.8,
           352.7,
           341.55,
-          343.25
+          343.45
         ],
         "daily_closes": [
           {
@@ -28132,16 +28389,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 343.25
+            "close": 343.45
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 411.6,
-        "change_1d_pct": 0.41,
-        "change_1w_pct": -3.05,
-        "change_1m_pct": 4.26,
+        "price": 409.9,
+        "change_1d_pct": 0.0,
+        "change_1w_pct": -3.45,
+        "change_1m_pct": 3.82,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -28174,7 +28431,7 @@
           418.3,
           416.95,
           409.9,
-          411.6
+          409.9
         ],
         "daily_closes": [
           {
@@ -28639,16 +28896,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 411.6
+            "close": 409.9
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 160.41,
-        "change_1d_pct": -1.04,
-        "change_1w_pct": -5.59,
-        "change_1m_pct": 4.07,
+        "price": 160.29,
+        "change_1d_pct": -1.11,
+        "change_1w_pct": -5.66,
+        "change_1m_pct": 4.0,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           176.11,
@@ -28680,7 +28937,7 @@
           167.52,
           165.73,
           162.09,
-          160.41
+          160.29
         ],
         "daily_closes": [
           {
@@ -30657,16 +30914,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 160.41
+            "close": 160.29
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3212.3,
-        "change_1d_pct": -0.9,
-        "change_1w_pct": -0.59,
-        "change_1m_pct": 17.22,
+        "price": 3201.9,
+        "change_1d_pct": -1.22,
+        "change_1w_pct": -0.91,
+        "change_1m_pct": 16.84,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3052.8,
@@ -30698,7 +30955,7 @@
           3308.6,
           3302.1,
           3241.6,
-          3212.3
+          3201.9
         ],
         "daily_closes": [
           {
@@ -32675,16 +32932,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 3212.3
+            "close": 3201.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 886.95,
-        "change_1d_pct": -0.08,
-        "change_1w_pct": -2.24,
-        "change_1m_pct": 18.43,
+        "price": 885.0,
+        "change_1d_pct": -0.3,
+        "change_1w_pct": -2.45,
+        "change_1m_pct": 18.17,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           820.9,
@@ -32716,7 +32973,7 @@
           904.25,
           899.0,
           887.65,
-          886.95
+          885.0
         ],
         "daily_closes": [
           {
@@ -34693,16 +34950,16 @@
           },
           {
             "date": "2026-05-04",
-            "close": 886.95
+            "close": 885.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 492.3,
-        "change_1d_pct": 0.82,
-        "change_1w_pct": -1.27,
-        "change_1m_pct": 28.81,
+        "price": 497.1,
+        "change_1d_pct": 1.8,
+        "change_1w_pct": -0.31,
+        "change_1m_pct": 30.06,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           411.45,
@@ -34734,7 +34991,7 @@
           485.8,
           493.4,
           488.3,
-          492.3
+          497.1
         ],
         "daily_closes": [
           {
@@ -36711,7 +36968,7 @@
           },
           {
             "date": "2026-05-04",
-            "close": 492.3
+            "close": 497.1
           }
         ]
       }
@@ -38071,10 +38328,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-04T07:00:21.047648+00:00",
+    "generated_at": "2026-05-04T08:57:14.298162+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 23,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
@@ -38143,15 +38400,16 @@
             ]
           },
           {
-            "title": "Top 20 CNG Cars FY2026 \u2013 Ertiga, Dzire, WagonR, Brezza, Nexon, Punch, Victoris, Exter, Altroz, Hyryder",
-            "url": "https://www.rushlane.com/top-20-cng-cars-fy2026-ertiga-dzire-wagonr-brezza-nexon-punch-12545515.html",
-            "summary": "In FY2026, CNG-powered passenger car sales surpassed the 10 lakh units milestone, accounting for nearly 22% of total PV sales The post Top 20 CNG Cars FY2026 \u2013 Ertiga, Dzire, WagonR, Brezza, Nexon, Punch, Victoris, Exter, Altroz, Hyryder appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-03T12:10:31+00:00",
-            "published_display": "03 May 2026",
+            "title": "BYD's sales downturn extends to eighth straight month",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byds-sales-downturn-extends-to-eighth-straight-month/130677984",
+            "summary": "Overseas sales of passenger vehicles and pickup \u200btrucks, increasingly a source of growth for BYD, jumped 35 per cent to \u200b130,000 vehicles last month, according to Reuters calculations based on a Weibo post by BYD executive Li Yunfei.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-01T12:20:03+00:00",
+            "published_display": "01 May 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles"
+              "Passenger Vehicles",
+              "Commercial Vehicles"
             ],
             "signal_tags": [
               "General"
@@ -38180,18 +38438,19 @@
             ]
           },
           {
-            "title": "TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units",
-            "url": "https://www.rushlane.com/tvs-motor-sales-april-2026-scooters-lead-as-bikes-decline-12545630.html",
-            "summary": "Scooters have now overtaken motorcycles as the company\u2019s biggest volume driver \u2014 a notable change for TVS. The post TVS Motor Sales April 2026 \u2013 Scooters Lead As Bikes Decline, Total At 4.73 Lakh Units appeared first on RushLane .",
+            "title": "Bajaj Sales April 2026 \u2013 Domestic 2.1 Lakh, Exports 2.3 Lakh",
+            "url": "https://www.rushlane.com/bajaj-sales-april-2026-domestic-2-1-lakh-exports-2-3-lakh-12545686.html",
+            "summary": "Bajaj Auto sales in April 2026 were driven by healthy growth across both two wheeler and commercial vehicles segments The post Bajaj Sales April 2026 \u2013 Domestic 2.1 Lakh, Exports 2.3 Lakh appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-05-02T11:15:26+00:00",
-            "published_display": "02 May 2026",
+            "published_at": "2026-05-04T08:37:22+00:00",
+            "published_display": "04 May 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Two-Wheelers"
+              "Two-Wheelers",
+              "Commercial Vehicles"
             ],
             "signal_tags": [
-              "Input Costs / Commodities"
+              "General"
             ]
           },
           {
@@ -38232,22 +38491,6 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
-          {
-            "title": "BYD's sales downturn extends to eighth straight month",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byds-sales-downturn-extends-to-eighth-straight-month/130677984",
-            "summary": "Overseas sales of passenger vehicles and pickup \u200btrucks, increasingly a source of growth for BYD, jumped 35 per cent to \u200b130,000 vehicles last month, according to Reuters calculations based on a Weibo post by BYD executive Li Yunfei.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-01T12:20:03+00:00",
-            "published_display": "01 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
           {
             "title": "Dhoot Transmission acquires two- and three-wheeler electronics supplier Multilink",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/dhoot-transmission-acquires-two-and-three-wheeler-electronics-supplier-multilink/130571614",
@@ -38305,23 +38548,6 @@
             ]
           },
           {
-            "title": "Epsilon CAM unveils Gen III LFP battery material, targets global EV supply chain shift",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/epsilon-cam-unveils-gen-iii-lfp-battery-material-targets-global-ev-supply-chain-shift/130556853",
-            "summary": "Epsilon CAM\u2019s new Gen III LFP cathode material could strengthen alternative battery supply chains as global automakers seek non-Chinese sources for EV components.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-27T14:05:02+00:00",
-            "published_display": "27 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/chinese-ev-battery-maker-catl-launches-5-billion-hong-kong-share-sale/130554917",
             "summary": "CATL has launched a roughly $5 billion share sale in Hong Kong, aiming to capitalize on its strong stock performance and secure funding for global expansion.",
@@ -38340,20 +38566,34 @@
             ]
           },
           {
-            "title": "Rocklink India sets up lithium-ion battery, rare earth recycling facility in UP",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/rocklink-india-launches-advanced-lithium-ion-battery-and-rare-earth-recycling-facility-in-uttar-pradesh/130458395",
-            "summary": "The plant has an initial battery recycling capacity of 10,000 tonnes per year and will add a rare earth chloride processing line with 1,500 tonnes annual capacity.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-23T05:53:14+00:00",
-            "published_display": "23 Apr 2026",
-            "importance_score": 7,
+            "title": "India\u2019s Electric Vehicle sales trend | April 2026",
+            "url": "https://evreporter.com/indias-electric-vehicle-sales-trend-april-2026",
+            "summary": "The post India\u2019s Electric Vehicle sales trend | April 2026 appeared first at EVreporter on EVreporter . Category-wise Electric Vehicle Sales, Apr 2026 | India Total Registered Electric Vehicle Sales \u2013 Apr\u201926 \u2013 2,39,014 I Mar\u201926 \u2013 The post India\u2019s Electric Vehicle sales trend | April 2026 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-05-04T08:50:59+00:00",
+            "published_display": "04 May 2026",
+            "importance_score": 6,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Upcoming JSW Chery Electric SUV Spied \u2013 4.2m Long, 69.8 kWh Battery",
+            "url": "https://www.rushlane.com/upcoming-jsw-chery-electric-suv-spied-4-2m-long-69-8-kwh-battery-12545505.html",
+            "summary": "Expected to be imported as CKD units, the iCar V23 will have largely the same profile as the model sold overseas The post Upcoming JSW Chery Electric SUV Spied \u2013 4.2m Long, 69.8 kWh Battery appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-04T07:49:46+00:00",
+            "published_display": "04 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
             ]
           },
           {
@@ -38378,23 +38618,6 @@
         "id": "components",
         "label": "Components",
         "items": [
-          {
-            "title": "Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999",
-            "url": "https://evreporter.com/oben-electric-launches-rorr-evo-electric-motorcycle-at-%e2%82%b999999",
-            "summary": "The post Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999 appeared first at EVreporter on EVreporter . Oben Electric, a Bengaluru-based electric motorcycle manufacturer, has launched the Rorr EVO electric motorcycle at an introductory price of \u20b999,999 The post Oben Electric launches Rorr EVO electric motorcycle at \u20b999,999 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-04-30T10:24:33+00:00",
-            "published_display": "30 Apr 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Exclusive: Rocklink Sees \u20b9300 Crore India Recycling Revenue Opportunity in 5 Years",
             "url": "https://www.autocarpro.in/NEWS/exclusive-rocklink-sees-\u20b9300-crore-india-recycling-revenue-opportunity-in-5-years-132230",
@@ -38463,6 +38686,23 @@
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
+          },
+          {
+            "title": "Epsilon CAM unveils Gen III LFP battery material, targets global EV supply chain shift",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/epsilon-cam-unveils-gen-iii-lfp-battery-material-targets-global-ev-supply-chain-shift/130556853",
+            "summary": "Epsilon CAM\u2019s new Gen III LFP cathode material could strengthen alternative battery supply chains as global automakers seek non-Chinese sources for EV components.",
+            "source": "ET Auto Components",
+            "published_at": "2026-04-27T14:05:02+00:00",
+            "published_display": "27 Apr 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -38509,7 +38749,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 43,
+      "unmapped_articles": 42,
       "filtered_low_signal": 2,
       "kept_articles": 68
     }
