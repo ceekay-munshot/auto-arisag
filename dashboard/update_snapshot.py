@@ -185,6 +185,26 @@ def update_fada(current: dict) -> tuple[dict, SourceUpdateResult]:
     )
 
 
+def _append_to_siam_history(record: dict) -> None:
+    """Forward-retention: append the latest SIAM release into
+    ``data/siam_history.json`` so the wholesale history naturally
+    deepens over time. Snapshot.monthly_series only carries a sliding
+    6-month window; this file keeps the full archive."""
+    path = Path("data/siam_history.json")
+    payload = {"months": []}
+    if path.exists():
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            payload = {"months": []}
+    months = payload.get("months") or []
+    by_month = {m["month"]: m for m in months if m.get("month")}
+    by_month[record["month"]] = record
+    payload["months"] = sorted(by_month.values(), key=lambda m: m["month"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
 def update_siam(current: dict) -> tuple[dict, SourceUpdateResult]:
     try:
         html, final_url = fetch_text(SIAM_LATEST_URL)
@@ -268,6 +288,7 @@ def update_siam(current: dict) -> tuple[dict, SourceUpdateResult]:
     refreshed["monthly_series"] = monthly_series
 
     if updated:
+        _append_to_siam_history(record)
         return refreshed, ok_result(
             "SIAM",
             f"Updated SIAM wholesale data to {month_label(release_month)} from the latest official release.",
@@ -275,6 +296,9 @@ def update_siam(current: dict) -> tuple[dict, SourceUpdateResult]:
             updated=True,
         )
 
+    # Even when the snapshot didn't change, keep siam_history in sync with
+    # the just-validated record so a missing-history bootstrap fills.
+    _append_to_siam_history(record)
     return refreshed, ok_result(
         "SIAM",
         f"No newer validated SIAM monthly release was found. Latest wholesale data remains {month_label(release_month)}.",
