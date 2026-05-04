@@ -35,8 +35,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install pypdf openpyxl requests
 
+      - name: Install Playwright + Chromium (Vahan scraper)
+        # Only needed by scripts/refresh_vahan_playwright.py, which runs on
+        # the heavy 09:00 UTC tick. The browser install adds ~80 MB and ~60s
+        # the first time; subsequent runs reuse the GitHub-hosted runner's
+        # cache where possible.
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
       - name: Refresh dashboard data
         run: python -u build_dashboard.py --refresh-live
+
+      - name: Refresh Vahan registrations (Playwright)
+        # Headless-Chromium drive of vahan.parivahan.gov.in/vahan4dashboard/
+        # to fetch all-India maker-wise monthly registrations for every
+        # tracked segment. Writes per-month CSVs under data/vahan/ which the
+        # analyzer's collect_vahan_imports() picks up to un-hide the
+        # registration tab. Forward-retention: each tick fetches the latest
+        # 2 months and accumulates history. Heavy step — gated to 09:00 UTC.
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        run: python -u scripts/refresh_vahan_playwright.py
+        continue-on-error: true
 
       - name: Backfill OEM history (all categories)
         # Idempotent — only fetches PDFs for months that don't yet have rows
@@ -145,6 +166,12 @@ jobs:
               git add "$path"
             fi
           done
+          # Stage every per-month Vahan CSV the Playwright scraper produced.
+          # Each file is small (~200 maker-rows × 6 segments) and grows the
+          # registration tab's history forward.
+          if [ -d data/vahan ]; then
+            git add 'data/vahan/*.csv' 2>/dev/null || true
+          fi
           if git diff --staged --quiet; then
             echo "No source-data changes detected; skipping commit."
             echo "commit=false" >> "$GITHUB_OUTPUT"
