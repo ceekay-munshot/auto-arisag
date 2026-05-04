@@ -524,6 +524,7 @@ MODULE_TITLES = {
     "credit_pulse": "Credit Pulse",
     "premium_data": "Premium Data Sources",
     "festive_pulse": "Festive Pulse",
+    "recent_launches": "Recent Launches",
     "insights": "What Matters",
 }
 
