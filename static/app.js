@@ -7,6 +7,11 @@ const state = {
   company: "all",
   companyMapFocus: null,
   newsGroup: "all",
+  // Visual chrome — both flow into <body data-theme=...> + <body data-density=...>
+  // via setupThemeAndDensity, and are persisted in the URL hash so a shared
+  // link preserves the receiver's preferred view.
+  theme: "light",
+  density: "comfortable",
   companyTrend: "all",
   // Companies overlaid on top of the spotlight chart so investors can read
   // peers (e.g. Maruti vs Tata vs M&M) on a single canvas. Stored as an
@@ -73,6 +78,45 @@ const CHART_EVENT_CALENDAR = [
   { month: "2026-04", label: "RBI repo cut −25 bps (MPC, Apr 2026)", tone: "macro" },
   { month: "2026-11", label: "Diwali 2026 (Nov 8) — peak festive month", tone: "festive" },
 ];
+
+// Build the event list to overlay on a chart. Combines the static calendar
+// with earnings-calendar dates pulled from dashboardData (aggregated to month
+// granularity since charts are monthly). When a `company` filter is passed,
+// only that company's earnings dates are surfaced — used by the spotlight
+// chart so the marker actually correlates with the line on the page.
+function buildChartEvents({ company = null } = {}) {
+  const events = [...CHART_EVENT_CALENDAR];
+  const ec = dashboardData?.earnings_calendar;
+  if (ec?.available) {
+    const allDates = [
+      ...asArray(ec.upcoming_all),
+      ...asArray(ec.recent_past),
+    ];
+    const filtered = company
+      ? allDates.filter((item) => item.company === company)
+      : allDates;
+    // Group by month so we surface one chip per month even when several
+    // OEMs report on consecutive days. Charts can only render at month
+    // granularity; bunching is the honest representation.
+    const byMonth = new Map();
+    filtered.forEach((item) => {
+      const month = `${item.date || ""}`.slice(0, 7);
+      if (!month) return;
+      if (!byMonth.has(month)) byMonth.set(month, []);
+      byMonth.get(month).push(item.company);
+    });
+    byMonth.forEach((companies, month) => {
+      const unique = [...new Set(companies)];
+      const label = unique.length === 1
+        ? `${unique[0]} earnings`
+        : unique.length <= 3
+          ? `${unique.join(", ")} earnings`
+          : `${unique.length} OEM earnings (${unique.slice(0, 2).join(", ")}, …)`;
+      events.push({ month, label, tone: "earnings" });
+    });
+  }
+  return events;
+}
 
 // Plain-English explainers attached to metric elements via data-explain="<key>".
 // Each entry maps to {title, body} surfaced by the global hover tooltip
@@ -1250,6 +1294,31 @@ function setupRefreshAction() {
   });
 }
 
+// Mirrors theme + density preferences onto <body data-...> so CSS can
+// switch the design tokens. Runs at end of every render(), and the click
+// handlers below toggle the values + persist them via the URL state.
+function applyThemeAndDensity() {
+  if (typeof document !== "undefined" && document.body) {
+    document.body.dataset.theme = state.theme || "light";
+    document.body.dataset.density = state.density || "comfortable";
+  }
+}
+
+function setupThemeAndDensity() {
+  document.querySelectorAll("[data-action='toggle-theme']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.theme = state.theme === "dark" ? "light" : "dark";
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='toggle-density']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.density = state.density === "dense" ? "comfortable" : "dense";
+      render();
+    });
+  });
+}
+
 // "Copy share link" button: serializes the current view-state into the URL
 // hash, copies the resulting URL to clipboard, and flashes the button so
 // the user knows the copy landed. Falls back gracefully when clipboard API
@@ -1877,6 +1946,8 @@ function render() {
   setupComparePriorToggle();
   setupRecentLaunchesFilter();
   setupShareLink();
+  setupThemeAndDensity();
+  applyThemeAndDensity();
   // After the DOM is in sync with state, mirror state into the URL hash so
   // any click on "Copy share link" — or any browser-level copy of the URL —
   // captures exactly what the user is looking at.
@@ -2163,6 +2234,12 @@ function renderHero() {
           </button>
           <button class="button button-share" data-action="copy-share-link" title="Copy a deep-link to the current view (tab, filters, peers, all baked in).">
             <span aria-hidden="true">🔗</span> Copy share link
+          </button>
+          <button class="button button-theme${state.theme === "dark" ? " is-active" : ""}" data-action="toggle-theme" title="Toggle dark mode — easier on the eyes for late-night reading.">
+            <span aria-hidden="true">${state.theme === "dark" ? "☀" : "☾"}</span> ${state.theme === "dark" ? "Light" : "Dark"}
+          </button>
+          <button class="button button-density${state.density === "dense" ? " is-active" : ""}" data-action="toggle-density" title="Compact layout — fewer pixels per row, more rows on screen, optimised for research desks.">
+            <span aria-hidden="true">${state.density === "dense" ? "▥" : "▤"}</span> ${state.density === "dense" ? "Roomy" : "Dense"}
           </button>
           <p class="hero-status ${refreshState.tone}">${refreshState.message}</p>
         </div>
@@ -2580,7 +2657,7 @@ function renderRetailTrendOnly() {
             </div>
           ` : "")}
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents())}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -2741,7 +2818,7 @@ function renderRetailSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents())}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -2871,7 +2948,7 @@ function renderEvSection() {
           </div>
         </div>
         <div class="chart-frame">
-          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2), CHART_EVENT_CALENDAR)}
+          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2), buildChartEvents())}
         </div>
         <div class="chart-legend">
           ${evSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -3987,6 +4064,7 @@ function renderUnifiedCompanySpotlight() {
           chartSeries,
           valueFormatter,
           tooltipFormatter,
+          buildChartEvents({ company: selected.company }),
         )}
       </div>
     </div>
@@ -4601,7 +4679,7 @@ function renderWholesaleSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits, CHART_EVENT_CALENDAR)}
+            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits, buildChartEvents())}
           </div>
           <div class="chart-legend">
             ${series.map((item) => legendItem(item.label, item.color)).join("")}
@@ -6347,7 +6425,7 @@ function renderCreditPulseSection() {
           </div>
           ${seedNote}
           <div class="chart-frame">
-            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore, CHART_EVENT_CALENDAR)}
+            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore, buildChartEvents())}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
@@ -6726,13 +6804,47 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
                   font-family="inherit">${label}</text>`;
   }).join("");
 
-  const lines = activeSeries.map((item) => {
+  // Auto-detect anomalous monthly prints using a simple z-score against the
+  // trailing 4-month window. Only flag points where |z| >= 1.8 and absolute
+  // deviation is at least ~10% of the trailing mean — keeps low-noise series
+  // (e.g. flat market shares) from getting nuisance markers.
+  const detectAnomalies = (values) => {
+    const flagged = new Set();
+    const annotations = [];
+    if (!Array.isArray(values) || values.length < 5) return { flagged, annotations };
+    for (let i = 3; i < values.length; i += 1) {
+      const v = values[i];
+      if (v === null || v === undefined || Number.isNaN(Number(v))) continue;
+      const window = values.slice(Math.max(0, i - 4), i)
+        .filter((x) => x !== null && x !== undefined && !Number.isNaN(Number(x)))
+        .map((x) => Number(x));
+      if (window.length < 3) continue;
+      const mean = window.reduce((a, b) => a + b, 0) / window.length;
+      const variance = window.reduce((a, b) => a + (b - mean) ** 2, 0) / window.length;
+      const stddev = Math.sqrt(variance);
+      if (stddev <= 0 || mean === 0) continue;
+      const z = (v - mean) / stddev;
+      const pctDeviation = Math.abs((v - mean) / mean);
+      if (Math.abs(z) >= 1.8 && pctDeviation >= 0.1) {
+        flagged.add(i);
+        annotations.push({ index: i, direction: z > 0 ? "up" : "down", z });
+      }
+    }
+    return { flagged, annotations };
+  };
+
+  const seriesAnomalyData = activeSeries.map((item) => (
+    item.dashed === true ? { flagged: new Set(), annotations: [] } : detectAnomalies(item.values)
+  ));
+
+  const lines = activeSeries.map((item, seriesIdx) => {
+    const anomalyFlags = seriesAnomalyData[seriesIdx].flagged;
     const points = item.values.map((value, index) => {
       if (value === null || value === undefined) return null;
       const x = pad.left + (innerWidth / Math.max(item.values.length - 1, 1)) * index;
       const numericValue = Number(value);
       const y = pad.top + innerHeight - ((numericValue - yMin) / yRange) * innerHeight;
-      return { x, y, value, label: labels[index] };
+      return { x, y, value, label: labels[index], isAnomaly: anomalyFlags.has(index) };
     }).filter(Boolean);
     if (!points.length) return "";
     const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
@@ -6747,6 +6859,9 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       <g>
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
         ${isDashed ? "" : points.map((point) => `
+          ${point.isAnomaly ? `
+            <circle cx="${point.x}" cy="${point.y}" r="8" fill="rgba(204,67,67,0.18)" stroke="rgba(204,67,67,0.55)" stroke-width="1.4" pointer-events="none"></circle>
+          ` : ""}
           <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
           <circle
             class="chart-hover-target"
@@ -6754,35 +6869,62 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
             cy="${point.y}"
             r="14"
             fill="transparent"
-            data-tooltip="${escapeHtml(`${item.label} | ${point.label}: ${tooltipFormatter(point.value)}`)}"
+            data-tooltip="${escapeHtml(`${item.label} | ${point.label}: ${tooltipFormatter(point.value)}${point.isAnomaly ? " · anomaly vs trailing 4-month avg" : ""}`)}"
           ></circle>
         `).join("")}
       </g>
     `;
   }).join("");
 
+  // Auto-anomalies feed the events caption strip too, so investors see a
+  // textual readout below the chart explaining which months tripped the flag.
+  const anomalyEvents = [];
+  activeSeries.forEach((item, seriesIdx) => {
+    seriesAnomalyData[seriesIdx].annotations.forEach((anno) => {
+      const monthRaw = labels[anno.index];
+      if (!monthRaw) return;
+      const direction = anno.direction === "up" ? "spike" : "drop";
+      const label = activeSeries.length > 1
+        ? `${item.label}: ${direction} (z=${anno.z >= 0 ? "+" : ""}${anno.z.toFixed(1)})`
+        : `Outlier ${direction} (z=${anno.z >= 0 ? "+" : ""}${anno.z.toFixed(1)})`;
+      anomalyEvents.push({ rawLabel: monthRaw, label, tone: "anomaly" });
+    });
+  });
+
   // Events list — render BELOW the chart as a small caption strip rather
   // than as floating dots inside the chart itself. The on-chart markers
-  // looked disconnected from the data line; the caption is cleaner.
-  const matchedEvents = (events || []).filter((event) => {
-    if (!event?.month) return false;
-    const matchLabel = monthLabel(event.month);
-    return matchLabel && labels.indexOf(matchLabel) >= 0;
-  });
+  // looked disconnected from the data line; the caption is cleaner. The
+  // strip combines static calendar events (from the `events` arg) and the
+  // auto-detected anomaly markers we just generated, so investors see one
+  // unified "what's notable about this window" readout.
+  const matchedStaticEvents = (events || [])
+    .filter((event) => {
+      if (!event?.month) return false;
+      const matchLabel = monthLabel(event.month);
+      return matchLabel && labels.indexOf(matchLabel) >= 0;
+    })
+    .map((event) => ({ resolvedLabel: monthLabel(event.month), label: event.label, tone: event.tone || "policy" }));
+  const matchedAnomalyEvents = anomalyEvents.map((event) => ({
+    resolvedLabel: event.rawLabel,
+    label: event.label,
+    tone: event.tone || "anomaly",
+  }));
+  const matchedEvents = [...matchedStaticEvents, ...matchedAnomalyEvents];
   const palette = {
     policy: "#4c74c7",
     festive: "#c26c3a",
     milestone: "#7a4cc7",
     macro: "#2f897d",
+    earnings: "#a66325",
+    anomaly: "#cc4343",
   };
   const eventCaption = matchedEvents.length
     ? `<div class="chart-events-caption">
          <span class="chart-events-caption-label">Notable events in this window:</span>
          ${matchedEvents.map((event) => {
-           const tone = event.tone || "policy";
-           const color = palette[tone] || palette.policy;
+           const color = palette[event.tone] || palette.policy;
            return `<span class="chart-event-chip" style="--chip-color:${color};">
-             <span class="chart-event-chip-month">${monthLabel(event.month)}</span>
+             <span class="chart-event-chip-month">${event.resolvedLabel}</span>
              ${event.label}
            </span>`;
          }).join("")}
@@ -6835,6 +6977,8 @@ const URL_STATE_DEFAULTS = {
   company: "all",
   companyMapFocus: null,
   newsGroup: "all",
+  theme: "light",
+  density: "comfortable",
   companyTrend: "all",
   companyTrendCompare: [],
   companyTrendIndexed: false,
