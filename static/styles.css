@@ -478,9 +478,8 @@ p {
   max-width: calc(100% - 86px);
 }
 
-.summary-card .source-button {
+.summary-card .source-icon {
   margin-left: auto;
-  flex: 0 0 auto;
   align-self: flex-start;
 }
 
@@ -1195,10 +1194,44 @@ th:hover {
   text-decoration: none;
 }
 
-.source-button {
-  padding: 7px 12px;
-  font-size: 0.8rem;
-  color: var(--muted);
+/* Source icon — replaces the old "Source" text button. Renders as a small
+   circular accent-tinted button with an external-link arrow SVG. The text
+   label lives in the title/aria-label attributes so screen readers and
+   hover tooltips still announce "Source" (or the custom label like
+   "Latest filing"). */
+.source-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--teal-soft) 100%);
+  border: 1px solid rgba(194, 108, 58, 0.35);
+  color: var(--accent);
+  text-decoration: none;
+  flex: 0 0 auto;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+}
+
+.source-icon svg {
+  display: block;
+}
+
+.source-icon:hover,
+.source-icon:focus-visible {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(194, 108, 58, 0.28);
+  outline: none;
+}
+
+.source-icon:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(194, 108, 58, 0.25);
 }
 
 .tooltip-note {
@@ -3826,6 +3859,7 @@ th:hover {
   .filters,
   .hero-toolbar,
   .source-button,
+  .source-icon,
   .button,
   .filter-card,
   .filter-grid,
