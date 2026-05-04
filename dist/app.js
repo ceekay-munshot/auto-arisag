@@ -5666,6 +5666,26 @@ function renderCreditPulseSection() {
       values: months.map((point) => point.non_food_yoy_pct),
     },
   ];
+  // The first ~12 months of the RBI series have null YoY values because
+  // they predate the start of the year-over-year baseline. Drop them from
+  // the YoY chart only so the line starts at the first month with real
+  // data — keeps the outstanding-rupee chart unchanged.
+  const yoyMonths = months.filter(
+    (point) => point.yoy_pct !== null && point.yoy_pct !== undefined &&
+               point.non_food_yoy_pct !== null && point.non_food_yoy_pct !== undefined,
+  );
+  const yoyComparisonChartSeries = [
+    {
+      label: "Vehicle loans YoY %",
+      color: dashboardData.chart_colors?.primary || "#4c8bf5",
+      values: yoyMonths.map((point) => point.yoy_pct),
+    },
+    {
+      label: "Total bank lending YoY %",
+      color: dashboardData.chart_colors?.accent || "#f59e0b",
+      values: yoyMonths.map((point) => point.non_food_yoy_pct),
+    },
+  ];
   const seedNote = credit.source_meta?.is_seed
     ? `<div class="empty-note">Showing seed values from RBI Sectoral Deployment of Bank Credit press releases. The cron-driven RBI scraper will overwrite these with verified live readings on its next successful run.</div>`
     : "";
@@ -5775,8 +5795,8 @@ function renderCreditPulseSection() {
           </div>
           <div class="chart-frame">
             ${lineChart(
-              months.map((point) => point.label),
-              yoyComparisonSeries,
+              yoyMonths.map((point) => point.label),
+              yoyComparisonChartSeries,
               (value) => `${Number(value || 0).toFixed(1)}%`,
               (value) => `${Number(value || 0).toFixed(1)}%`,
             )}
