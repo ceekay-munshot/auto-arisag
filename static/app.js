@@ -516,7 +516,14 @@ function renderSourceAction(url, label = "Source") {
   if (!url) {
     return "";
   }
-  return `<a class="button button-link source-button" href="${url}" target="_blank" rel="noreferrer">${label}</a>`;
+  const safeLabel = String(label || "Source").replace(/"/g, "&quot;");
+  return `<a class="source-icon" href="${url}" target="_blank" rel="noreferrer" title="${safeLabel}" aria-label="Open ${safeLabel.toLowerCase()} in new tab">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M14 4h6v6"></path>
+      <path d="M20 4 10 14"></path>
+      <path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+    </svg>
+  </a>`;
 }
 
 function renderSourceActions(items = []) {
