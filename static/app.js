@@ -3459,7 +3459,7 @@ function renderUnifiedFadaPeriodizedTable(category, table) {
     columns.map((column) => column.key),
     periodRows,
   );
-  const availablePeriods = ["M", "Q", "Y"].filter((period) => periods[period]);
+  const availablePeriods = ["M", "Q", "Y"].filter((period) => periods[period] && asArray(periods[period].rows).length > 0);
   const label = table.label || labelForCategory(category) || category;
   return `
     <div class="oem-table-frame">
@@ -3885,7 +3885,7 @@ function renderLiveOemTable(category, table) {
     periodRows,
   );
 
-  const availablePeriods = ["M", "Q", "Y"].filter((period) => periods[period]);
+  const availablePeriods = ["M", "Q", "Y"].filter((period) => periods[period] && asArray(periods[period].rows).length > 0);
 
   return `
     <article class="table-card">
