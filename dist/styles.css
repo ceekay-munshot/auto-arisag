@@ -28,90 +28,6 @@
                      radial-gradient(circle at top right, rgba(47, 137, 125, 0.13), transparent 28%);
 }
 
-/* Dark mode — overrides the design tokens above. Activated by
-   `body[data-theme="dark"]` (set by setupThemeAndDensity in JS). The chart
-   SVGs still draw on a white plate by design (PNG export needs that), but
-   the surrounding chrome flips to dark so reading at night isn't blinding. */
-body[data-theme="dark"] {
-  --bg: #0e141d;
-  --bg-ink: #131c28;
-  --panel: rgba(22, 30, 42, 0.88);
-  --panel-strong: rgba(28, 38, 52, 0.96);
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.18);
-  --text: #e8edf4;
-  --muted: #9ba8ba;
-  --deep: #d8e1ee;
-  --accent-soft: rgba(194, 108, 58, 0.22);
-  --teal-soft: rgba(47, 137, 125, 0.22);
-  --blue-soft: rgba(76, 116, 199, 0.22);
-  --gold-soft: rgba(185, 145, 44, 0.22);
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-  --html-bg: linear-gradient(180deg, #0a121d 0%, #0c1726 100%);
-  --html-bg-overlay: radial-gradient(circle at top left, rgba(194, 108, 58, 0.18), transparent 36%),
-                     radial-gradient(circle at top right, rgba(47, 137, 125, 0.18), transparent 30%);
-}
-
-/* Dark mode card-surface fixes: a handful of cards in the codebase use
-   hardcoded #fff / #fffdfa backgrounds rather than --panel. Override the
-   prominent ones so dark mode actually looks dark instead of a sea of
-   white panels. */
-body[data-theme="dark"] .insight-card,
-body[data-theme="dark"] .info-card,
-body[data-theme="dark"] .panel,
-body[data-theme="dark"] .chart-card,
-body[data-theme="dark"] .channel-card,
-body[data-theme="dark"] .premium-card,
-body[data-theme="dark"] .filter-strip,
-body[data-theme="dark"] .side-nav,
-body[data-theme="dark"] .hero,
-body[data-theme="dark"] .stock-snapshot-card,
-body[data-theme="dark"] .changed-col {
-  background: var(--panel-strong);
-  color: var(--text);
-  border-color: var(--line);
-}
-
-body[data-theme="dark"] .filter-select,
-body[data-theme="dark"] .search-bar-input,
-body[data-theme="dark"] input,
-body[data-theme="dark"] select,
-body[data-theme="dark"] textarea {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  border-color: var(--line-strong);
-}
-
-body[data-theme="dark"] .button {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
-  border-color: var(--line-strong);
-}
-
-body[data-theme="dark"] .button:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-body[data-theme="dark"] .background-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-body[data-theme="dark"] .chart-tooltip {
-  background: #f7f1e4;
-  color: #14273e;
-}
-
-/* The chart SVG itself stays on a white plate — required for crisp PNG
-   exports — but we wrap it in a subtle frame so it doesn't look glued onto
-   the dark surrounding card. */
-body[data-theme="dark"] .chart-frame {
-  background: #fff;
-  border-radius: var(--radius-sm);
-  padding: 10px;
-}
-
 /* Dense layout — packs rows tighter so research desks see more on screen. */
 body[data-density="dense"] {
   --row-padding-y: 4px;
@@ -4251,7 +4167,6 @@ th:hover {
   background: linear-gradient(180deg, rgba(76, 116, 199, 0.22), rgba(76, 116, 199, 0.14));
 }
 
-.button-theme,
 .button-density {
   background: rgba(20, 39, 62, 0.04);
   border-color: rgba(20, 39, 62, 0.18);
@@ -4259,47 +4174,15 @@ th:hover {
   font-weight: 600;
 }
 
-.button-theme:hover,
 .button-density:hover {
   background: rgba(20, 39, 62, 0.1);
   border-color: rgba(20, 39, 62, 0.3);
 }
 
-.button-theme.is-active,
 .button-density.is-active {
   background: linear-gradient(180deg, var(--deep), #243b58);
   border-color: var(--deep);
   color: #fdfaf2;
-}
-
-body[data-theme="dark"] .button-theme,
-body[data-theme="dark"] .button-density {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: var(--text);
-}
-
-body[data-theme="dark"] .button-theme:hover,
-body[data-theme="dark"] .button-density:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.32);
-}
-
-.button-share {
-  background: linear-gradient(180deg, rgba(47, 137, 125, 0.14), rgba(47, 137, 125, 0.06));
-  border-color: rgba(47, 137, 125, 0.32);
-  color: #1d5a4f;
-  font-weight: 600;
-}
-
-.button-share:hover {
-  background: linear-gradient(180deg, rgba(47, 137, 125, 0.22), rgba(47, 137, 125, 0.12));
-}
-
-.button-share.is-confirming {
-  background: linear-gradient(180deg, rgba(47, 137, 125, 0.9), rgba(47, 137, 125, 0.75));
-  border-color: rgba(47, 137, 125, 0.9);
-  color: #fff;
 }
 
 /* WOW-10 'Compare to prior year' toggle */

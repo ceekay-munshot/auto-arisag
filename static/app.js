@@ -7,10 +7,8 @@ const state = {
   company: "all",
   companyMapFocus: null,
   newsGroup: "all",
-  // Visual chrome — both flow into <body data-theme=...> + <body data-density=...>
-  // via setupThemeAndDensity, and are persisted in the URL hash so a shared
-  // link preserves the receiver's preferred view.
-  theme: "light",
+  // Compact / roomy table density — flows into <body data-density=...> via
+  // applyDensity, and is persisted in the URL hash.
   density: "comfortable",
   companyTrend: "all",
   // Companies overlaid on top of the spotlight chart so investors can read
@@ -1294,69 +1292,19 @@ function setupRefreshAction() {
   });
 }
 
-// Mirrors theme + density preferences onto <body data-...> so CSS can
-// switch the design tokens. Runs at end of every render(), and the click
-// handlers below toggle the values + persist them via the URL state.
-function applyThemeAndDensity() {
+// Mirrors density preference onto <body data-density=...> so CSS can
+// switch row padding / card spacing. Runs at end of every render().
+function applyDensity() {
   if (typeof document !== "undefined" && document.body) {
-    document.body.dataset.theme = state.theme || "light";
     document.body.dataset.density = state.density || "comfortable";
   }
 }
 
-function setupThemeAndDensity() {
-  document.querySelectorAll("[data-action='toggle-theme']").forEach((node) => {
-    node.addEventListener("click", () => {
-      state.theme = state.theme === "dark" ? "light" : "dark";
-      render();
-    });
-  });
+function setupDensityToggle() {
   document.querySelectorAll("[data-action='toggle-density']").forEach((node) => {
     node.addEventListener("click", () => {
       state.density = state.density === "dense" ? "comfortable" : "dense";
       render();
-    });
-  });
-}
-
-// "Copy share link" button: serializes the current view-state into the URL
-// hash, copies the resulting URL to clipboard, and flashes the button so
-// the user knows the copy landed. Falls back gracefully when clipboard API
-// is unavailable (older browsers / non-secure contexts).
-function setupShareLink() {
-  document.querySelectorAll("[data-action='copy-share-link']").forEach((node) => {
-    node.addEventListener("click", async () => {
-      serializeStateToUrl();
-      const url = window.location.href;
-      const originalLabel = node.innerHTML;
-      const flash = (text, ok = true) => {
-        node.innerHTML = `<span aria-hidden="true">${ok ? "✓" : "⚠"}</span> ${text}`;
-        node.classList.toggle("is-confirming", ok);
-        setTimeout(() => {
-          node.innerHTML = originalLabel;
-          node.classList.remove("is-confirming");
-        }, 1800);
-      };
-      try {
-        if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(url);
-          flash("Copied link");
-        } else {
-          // Fallback: select + execCommand("copy") via a transient textarea.
-          const ta = document.createElement("textarea");
-          ta.value = url;
-          ta.setAttribute("readonly", "");
-          ta.style.position = "absolute";
-          ta.style.left = "-9999px";
-          document.body.appendChild(ta);
-          ta.select();
-          const ok = document.execCommand("copy");
-          ta.remove();
-          flash(ok ? "Copied link" : "Press Ctrl-C to copy", ok);
-        }
-      } catch {
-        flash("Copy failed — URL is in the address bar", false);
-      }
     });
   });
 }
@@ -1945,12 +1893,10 @@ function render() {
   setupCompanyMapPagination();
   setupComparePriorToggle();
   setupRecentLaunchesFilter();
-  setupShareLink();
-  setupThemeAndDensity();
-  applyThemeAndDensity();
-  // After the DOM is in sync with state, mirror state into the URL hash so
-  // any click on "Copy share link" — or any browser-level copy of the URL —
-  // captures exactly what the user is looking at.
+  setupDensityToggle();
+  applyDensity();
+  // Mirror current view into the URL hash — lets users bookmark or copy
+  // the address bar to share a deep-link.
   serializeStateToUrl();
   requestAnimationFrame(() => {
     scrollToPendingSection();
@@ -2231,12 +2177,6 @@ function renderHero() {
                   title="Overlay the same 12 months from one year ago on every line chart that has the data">
             <span aria-hidden="true">${state.compareToPriorCycle ? "✓" : "↻"}</span>
             ${state.compareToPriorCycle ? "Comparing prior year" : "Compare to prior year"}
-          </button>
-          <button class="button button-share" data-action="copy-share-link" title="Copy a deep-link to the current view (tab, filters, peers, all baked in).">
-            <span aria-hidden="true">🔗</span> Copy share link
-          </button>
-          <button class="button button-theme${state.theme === "dark" ? " is-active" : ""}" data-action="toggle-theme" title="Toggle dark mode — easier on the eyes for late-night reading.">
-            <span aria-hidden="true">${state.theme === "dark" ? "☀" : "☾"}</span> ${state.theme === "dark" ? "Light" : "Dark"}
           </button>
           <button class="button button-density${state.density === "dense" ? " is-active" : ""}" data-action="toggle-density" title="Compact layout — fewer pixels per row, more rows on screen, optimised for research desks.">
             <span aria-hidden="true">${state.density === "dense" ? "▥" : "▤"}</span> ${state.density === "dense" ? "Roomy" : "Dense"}
@@ -6977,7 +6917,6 @@ const URL_STATE_DEFAULTS = {
   company: "all",
   companyMapFocus: null,
   newsGroup: "all",
-  theme: "light",
   density: "comfortable",
   companyTrend: "all",
   companyTrendCompare: [],
