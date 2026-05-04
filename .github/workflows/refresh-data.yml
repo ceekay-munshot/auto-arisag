@@ -116,6 +116,21 @@ jobs:
           mkdir -p dist/data
           cp data/investor_dashboard.json dist/data/investor_dashboard.json
 
+      - name: Sync static assets into dist/
+        # Cloudflare Pages serves dist/ exclusively (see wrangler.jsonc
+        # pages_build_output_dir). Without this step, edits to static/app.js
+        # / static/styles.css / index.html stay invisible to users until
+        # someone manually copies them. Mirror the source files here so the
+        # cron's dashboard rebuild keeps the deployed JS / CSS in lockstep
+        # with the repo. dist/ uses a flat layout (no static/ prefix), so
+        # we sed the asset paths in index.html on the way in.
+        run: |
+          set -e
+          cp static/app.js dist/app.js
+          cp static/styles.css dist/styles.css
+          # Strip the "static/" prefix so dist/index.html resolves locally.
+          sed 's|static/styles.css|styles.css|g; s|static/app.js|app.js|g' index.html > dist/index.html
+
       - name: Decide whether to commit
         id: commit_check
         run: |
@@ -133,12 +148,16 @@ jobs:
           if git diff --staged --quiet; then
             echo "No source-data changes detected; skipping commit."
             echo "commit=false" >> "$GITHUB_OUTPUT"
-            # Roll back the rebuilt JSONs so we don't leave noise behind.
-            git checkout -- data/investor_dashboard.json dist/data/investor_dashboard.json 2>/dev/null || true
+            # Roll back the rebuilt JSONs / synced assets so we don't leave
+            # noise behind on the runner working tree.
+            git checkout -- data/investor_dashboard.json dist/data/investor_dashboard.json dist/app.js dist/styles.css dist/index.html 2>/dev/null || true
           else
             echo "Source-data changes detected; will commit."
             echo "commit=true" >> "$GITHUB_OUTPUT"
             git add data/investor_dashboard.json dist/data/investor_dashboard.json
+            # Pick up any drift in dist/ static assets too so the deployed
+            # JS / CSS / HTML stays in lockstep with static/ + index.html.
+            git add dist/app.js dist/styles.css dist/index.html
           fi
 
       - name: Commit and push

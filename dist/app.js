@@ -25,6 +25,7 @@ const state = {
   printAllTabs: false,
   companyMapShownCount: 3,
   compareToPriorCycle: false,
+  launchFilterCompany: "all",
 };
 
 const SECTION_TO_TAB = {
@@ -39,6 +40,7 @@ const SECTION_TO_TAB = {
   "section-components": "components",
   "section-company-map": "companies",
   "company-drilldown": "companies",
+  "section-recent-launches": "recent-launches",
 };
 const refreshState = {
   loading: false,
@@ -1400,6 +1402,7 @@ function tabDefinitions() {
   const creditPulseAvailable = !!dashboardData.modules.credit_pulse?.available;
   const premiumDataAvailable = !!dashboardData.modules.premium_data?.available;
   const festivePulseAvailable = !!dashboardData.modules.festive_pulse?.available;
+  const recentLaunchesAvailable = !!dashboardData.modules.recent_launches?.available;
   return [
     {
       id: "overview",
@@ -1480,6 +1483,13 @@ function tabDefinitions() {
       hidden: !premiumDataAvailable,
       render: () => premiumDataAvailable ? renderPremiumDataSection() : "",
     },
+    {
+      id: "recent-launches",
+      label: "Recent launches",
+      group: "News",
+      hidden: !recentLaunchesAvailable,
+      render: () => recentLaunchesAvailable ? renderRecentLaunchesSection() : "",
+    },
   ];
 }
 
@@ -1505,6 +1515,7 @@ const TAB_SOURCE_MAP = {
   "credit-pulse": "credit_pulse",
   // Festive Pulse aggregates FADA retail months, so its freshness mirrors retail.
   "festive-pulse": "retail",
+  "recent-launches": "recent_launches",
 };
 
 function tabSourceMeta(tabId) {
@@ -1732,6 +1743,7 @@ function render() {
   setupExportPdfAction();
   setupCompanyMapPagination();
   setupComparePriorToggle();
+  setupRecentLaunchesFilter();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -4684,6 +4696,16 @@ function renderCompanySection() {
   `;
 }
 
+function setupRecentLaunchesFilter() {
+  document.querySelectorAll("[data-launch-filter]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-launch-filter");
+      state.launchFilterCompany = value;
+      render();
+    });
+  });
+}
+
 function setupCompanyMapPagination() {
   document.querySelectorAll("[data-action='company-map-more']").forEach((node) => {
     node.addEventListener("click", () => {
@@ -5163,6 +5185,134 @@ function renderFestiveStockPerf() {
         </tbody>
       </table>
     </div>
+  `;
+}
+
+function renderRecentLaunchesSection() {
+  const mod = dashboardData.modules.recent_launches;
+  if (!mod?.available) return "";
+  const items = mod.items || [];
+  const companies = mod.companies || [];
+  if (!items.length) {
+    return `
+      <section id="section-recent-launches" class="section panel section-anchor">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Recent Launches</p>
+            <h2>No model launches in the last ${mod.window_days || 30} days</h2>
+          </div>
+        </div>
+        <p class="empty-note">The trade-media RSS feeds (RushLane, ET Auto, Autocar Pro, EVReporter) didn't surface any launch articles for tracked OEMs in the rolling window. The next scheduled refresh will retry.</p>
+      </section>
+    `;
+  }
+
+  const today = new Date();
+  const fmtRelative = (iso) => {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return "";
+    const days = Math.round((today - d) / 86400000);
+    if (days <= 0) return "Today";
+    if (days === 1) return "Yesterday";
+    if (days < 7) return `${days} days ago`;
+    if (days < 14) return "Last week";
+    if (days < 30) return `${Math.round(days / 7)} weeks ago`;
+    return `${Math.round(days / 30)} months ago`;
+  };
+  const fmtDateLong = (iso) => {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return "";
+    return d.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+  };
+
+  const escapeHtml = (s) =>
+    String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
+  const stripTags = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+
+  const trimSummary = (s, limit = 220) => {
+    const cleaned = stripTags(s);
+    if (cleaned.length <= limit) return cleaned;
+    return cleaned.slice(0, limit).replace(/\s+\S*$/, "") + "…";
+  };
+
+  const filterCompany = state.launchFilterCompany || "all";
+  const visibleItems = filterCompany === "all"
+    ? items
+    : items.filter((it) => it.company === filterCompany);
+
+  const totalCount = items.length;
+  const filterPills = `
+    <button type="button"
+            class="launch-filter-pill ${filterCompany === "all" ? "is-active" : ""}"
+            data-launch-filter="all">
+      All <span class="launch-filter-count">${totalCount}</span>
+    </button>
+    ${companies.map((c) => `
+      <button type="button"
+              class="launch-filter-pill launch-tone-${c.tone} ${filterCompany === c.company ? "is-active" : ""}"
+              data-launch-filter="${escapeHtml(c.company)}">
+        ${escapeHtml(c.company)}
+        <span class="launch-filter-count">${c.count}</span>
+      </button>
+    `).join("")}
+  `;
+
+  const cards = visibleItems.map((it) => {
+    const tone = it.tone || "pv";
+    const segmentChips = (it.segment_tags || [])
+      .filter((t) => t && t !== "General")
+      .slice(0, 2)
+      .map((t) => `<span class="launch-segment-chip">${escapeHtml(t)}</span>`)
+      .join("");
+    return `
+      <a class="launch-card launch-tone-${tone}" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">
+        <div class="launch-card-header">
+          <span class="launch-company">${escapeHtml(it.company)}</span>
+          <span class="launch-when" title="${escapeHtml(fmtDateLong(it.published_at))}">${escapeHtml(fmtRelative(it.published_at))}</span>
+        </div>
+        <h3 class="launch-title">${escapeHtml(stripTags(it.title))}</h3>
+        ${it.summary ? `<p class="launch-summary">${escapeHtml(trimSummary(it.summary))}</p>` : ""}
+        <div class="launch-card-footer">
+          <span class="launch-source">${escapeHtml(it.source)}</span>
+          ${segmentChips ? `<span class="launch-segment-chip-row">${segmentChips}</span>` : ""}
+          <span class="launch-arrow" aria-hidden="true">↗</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+
+  const generatedDisplay = mod.source_meta?.latest_release_date
+    ? `Latest launch dated ${fmtDateLong(mod.source_meta.latest_release_date)}`
+    : "";
+
+  return `
+    <section id="section-recent-launches" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Recent Launches</p>
+          <h2>New model launches · last ${mod.window_days || 30} days</h2>
+        </div>
+        <p class="section-subtitle">
+          Trade-media coverage from RushLane, ET Auto, Autocar Professional and EVReporter,
+          filtered to launch / unveil / debut articles for tracked listed OEMs. Refreshed three times daily.
+          ${generatedDisplay ? ` · <strong>${escapeHtml(generatedDisplay)}</strong>` : ""}
+        </p>
+      </div>
+      <div class="launch-filter-row" role="tablist" aria-label="Filter launches by company">
+        ${filterPills}
+      </div>
+      ${visibleItems.length
+        ? `<div class="launch-grid">${cards}</div>`
+        : `<p class="empty-note">No launches surfaced for ${escapeHtml(filterCompany)} in the last ${mod.window_days || 30} days.</p>`}
+    </section>
   `;
 }
 
