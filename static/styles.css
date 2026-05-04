@@ -4047,3 +4047,219 @@ th:hover {
     text-align: center;
   }
 }
+
+/* ===========================================================
+   Recent Launches tab
+   =========================================================== */
+
+.launch-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 18px 0;
+}
+
+.launch-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-strong);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.launch-filter-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(24, 34, 49, 0.08);
+}
+
+.launch-filter-pill.is-active {
+  border-color: var(--deep);
+  background: var(--deep);
+  color: #fff;
+}
+
+.launch-filter-pill.is-active .launch-filter-count {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.launch-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: rgba(29, 42, 57, 0.08);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Tone tints for filter pills (inactive state). PV / 2W / CV palettes. */
+.launch-filter-pill.launch-tone-pv:not(.is-active) {
+  border-color: rgba(76, 116, 199, 0.45);
+  background: var(--blue-soft);
+}
+.launch-filter-pill.launch-tone-tw:not(.is-active) {
+  border-color: rgba(47, 137, 125, 0.45);
+  background: var(--teal-soft);
+}
+.launch-filter-pill.launch-tone-cv:not(.is-active) {
+  border-color: rgba(185, 145, 44, 0.5);
+  background: var(--gold-soft);
+}
+
+/* Card grid */
+.launch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.launch-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px 16px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  text-decoration: none;
+  color: var(--text);
+  overflow: hidden;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+.launch-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--blue);
+}
+
+.launch-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(24, 34, 49, 0.10);
+  border-color: var(--line-strong);
+}
+
+.launch-card:hover .launch-arrow {
+  transform: translate(2px, -2px);
+}
+
+.launch-card.launch-tone-pv::before { background: var(--blue); }
+.launch-card.launch-tone-pv { background: linear-gradient(180deg, rgba(76, 116, 199, 0.06) 0%, var(--panel-strong) 55%); }
+
+.launch-card.launch-tone-tw::before { background: var(--teal); }
+.launch-card.launch-tone-tw { background: linear-gradient(180deg, rgba(47, 137, 125, 0.06) 0%, var(--panel-strong) 55%); }
+
+.launch-card.launch-tone-cv::before { background: var(--gold); }
+.launch-card.launch-tone-cv { background: linear-gradient(180deg, rgba(185, 145, 44, 0.07) 0%, var(--panel-strong) 55%); }
+
+.launch-card.launch-tone-ev::before { background: var(--accent); }
+.launch-card.launch-tone-ev { background: linear-gradient(180deg, rgba(194, 108, 58, 0.07) 0%, var(--panel-strong) 55%); }
+
+.launch-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.launch-company {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--deep);
+}
+
+.launch-when {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.launch-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+.launch-summary {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.launch-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.launch-source {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.launch-segment-chip-row {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.launch-segment-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(29, 42, 57, 0.06);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.launch-arrow {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--accent);
+  transition: transform 0.14s ease;
+}
+
+@media (max-width: 640px) {
+  .launch-grid {
+    grid-template-columns: 1fr;
+  }
+  .launch-card {
+    padding: 16px 18px 14px 20px;
+  }
+  .launch-title {
+    font-size: 15px;
+  }
+}

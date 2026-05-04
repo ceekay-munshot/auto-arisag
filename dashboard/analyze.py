@@ -33,6 +33,7 @@ RBI_CREDIT_PATH = Path("data/rbi_credit.json")
 MACRO_INDICATORS_PATH = Path("data/macro_indicators.json")
 OEM_STOCKS_PATH = Path("data/oem_stocks.json")
 EARNINGS_CALENDAR_PATH = Path("data/oem_earnings_calendar.json")
+LAUNCHES_SNAPSHOT_PATH = Path("data/launches_snapshot.json")
 
 
 def _load_siam_history() -> list[dict[str, Any]]:
@@ -165,6 +166,7 @@ def build_payload(
     credit_pulse = build_credit_pulse_module()
     premium_data = build_premium_data_module()
     festive_pulse = build_festive_pulse_module(retail)
+    recent_launches = build_recent_launches_module()
     macro_indicators = build_macro_indicators_module()
     oem_stocks = build_oem_stocks_module()
     earnings_calendar = build_earnings_calendar_module()
@@ -206,6 +208,7 @@ def build_payload(
             "credit_pulse": credit_pulse,
             "premium_data": premium_data,
             "festive_pulse": festive_pulse,
+            "recent_launches": recent_launches,
         },
         "macro_indicators": macro_indicators,
         "oem_stocks": oem_stocks,
@@ -743,6 +746,42 @@ def build_macro_indicators_module() -> dict[str, Any]:
         "as_of_date": payload.get("as_of_date"),
         "source_note": payload.get("source_note", ""),
         "indicators": indicators,
+    }
+
+
+def build_recent_launches_module() -> dict[str, Any]:
+    """Recent vehicle-model launches over the last 30 days, sourced from the
+    trade-media RSS pipeline (RushLane / ET Auto / Autocar Pro / EVReporter)
+    and filtered to articles tagged ``Product / Launch`` for any tracked
+    listed OEM. Refreshed on every cron tick by ``scripts/refresh_launches.py``.
+
+    Returns the digest as-is so the front-end can render company-grouped
+    cards. Hidden when the snapshot is missing or empty (e.g. local dev
+    without the cron having run yet).
+    """
+    if not LAUNCHES_SNAPSHOT_PATH.exists():
+        return {"available": False, "title": MODULE_TITLES["recent_launches"]}
+    try:
+        payload = json.loads(LAUNCHES_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"available": False, "title": MODULE_TITLES["recent_launches"]}
+    if not payload.get("available") or not (payload.get("items") or []):
+        return {"available": False, "title": MODULE_TITLES["recent_launches"]}
+    items = payload.get("items", [])
+    latest_iso = items[0].get("published_at") if items else None
+    latest_date = (latest_iso[:10] if latest_iso else None)
+    return {
+        "available": True,
+        "title": MODULE_TITLES["recent_launches"],
+        "generated_at": payload.get("generated_at"),
+        "window_days": payload.get("window_days", 30),
+        "item_count": payload.get("item_count", 0),
+        "items": items,
+        "companies": payload.get("companies", []),
+        "source_meta": {
+            "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
+            "latest_release_date": latest_date,
+        },
     }
 
 
