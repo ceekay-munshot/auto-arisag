@@ -8,6 +8,14 @@ const state = {
   companyMapFocus: null,
   newsGroup: "all",
   companyTrend: "all",
+  // Companies overlaid on top of the spotlight chart so investors can read
+  // peers (e.g. Maruti vs Tata vs M&M) on a single canvas. Stored as an
+  // array of company names; primary is excluded by syncCompanyTrendCompare.
+  companyTrendCompare: [],
+  // When true, each line in the spotlight chart is rebased to 100 at its
+  // first visible point. Required for peer comparison across very different
+  // scales (e.g. Maruti ~200k/mo vs Atul ~1k/mo).
+  companyTrendIndexed: false,
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
@@ -29,6 +37,7 @@ const state = {
 };
 
 const SECTION_TO_TAB = {
+  "section-what-changed": "overview",
   "section-retail": "retail-trend",
   "section-ev": "retail-ev",
   "section-ev-trend": "retail-ev",
@@ -757,6 +766,17 @@ function syncCompanyTrend() {
   }
 }
 
+function syncCompanyTrendCompare() {
+  const trends = asArray(dashboardData.modules.retail?.company_unit_trends);
+  if (!trends.length) {
+    state.companyTrendCompare = [];
+    return;
+  }
+  const valid = new Set(trends.map((item) => item.company));
+  state.companyTrendCompare = state.companyTrendCompare
+    .filter((name) => valid.has(name) && name !== state.companyTrend);
+}
+
 function syncCompanyMapFocus() {
   const companies = asArray(dashboardData.company_map).map((item) => item.company);
   if (!companies.length) {
@@ -1174,7 +1194,37 @@ function setupCompanyTrendPicker() {
 
   picker.addEventListener("change", (event) => {
     state.companyTrend = event.target.value;
+    // Switching primary purges that company from the compare list — covered
+    // by syncCompanyTrendCompare on the next render, but force it now so the
+    // chip row repaints without stale state.
+    state.companyTrendCompare = state.companyTrendCompare.filter((name) => name !== event.target.value);
     render();
+  });
+}
+
+function setupCompanySpotlightCompare() {
+  document.querySelectorAll("[data-company-trend-peer]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const name = node.getAttribute("data-company-trend-peer");
+      if (!name) return;
+      const idx = state.companyTrendCompare.indexOf(name);
+      if (idx >= 0) {
+        state.companyTrendCompare.splice(idx, 1);
+      } else {
+        // Cap at 5 peers — beyond that the chart turns into spaghetti.
+        if (state.companyTrendCompare.length >= 5) {
+          state.companyTrendCompare.shift();
+        }
+        state.companyTrendCompare.push(name);
+      }
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='toggle-company-trend-indexed']").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.companyTrendIndexed = !state.companyTrendIndexed;
+      render();
+    });
   });
 }
 
@@ -1431,6 +1481,7 @@ function tabDefinitions() {
       label: "Overview",
       group: "Top",
       render: () => [
+        renderWhatChangedToday(),
         renderSourceVisibility(),
         renderInsightsSection(),
       ].join(""),
@@ -1715,6 +1766,7 @@ function render() {
   syncStateToAvailableOptions();
   syncNewsGroup();
   syncCompanyTrend();
+  syncCompanyTrendCompare();
   syncCompanyMapFocus();
   syncStateRegistrationExplorer();
   syncSegmentShareExplorer();
@@ -1745,6 +1797,7 @@ function render() {
   setupTabBar();
   setupNewsPicker();
   setupCompanyTrendPicker();
+  setupCompanySpotlightCompare();
   setupRefreshAction();
   setupStateRegistrationExplorer();
   setupSegmentShareExplorer();
@@ -1754,6 +1807,8 @@ function render() {
   setupEvOemTracker();
   setupLiveOemTrackers();
   setupOemSection();
+  setupOemDrilldown();
+  setupChangedMovers();
   setupSorts();
   setupCompanyMapCards();
   setupDownloads();
@@ -2212,6 +2267,104 @@ function filterField(label, id, options, selectedValue, disabled = false) {
         `).join("")}
       </select>
     </label>
+  `;
+}
+
+// "What's moved today" — first thing investors see when they open the dashboard.
+// Combines top 1D stock movers (gainers + losers) with the most recent news
+// headlines so a buy-side analyst can scan the past 24 hours of auto-sector
+// signal in one glance before drilling into the data lenses below.
+function renderWhatChangedToday() {
+  const stocks = dashboardData.oem_stocks;
+  const news = dashboardData.news;
+  const stocksAvailable = stocks?.available;
+  const newsAvailable = news?.available;
+  if (!stocksAvailable && !newsAvailable) return "";
+
+  // Movers: blend top-3 gainers with top-2 losers so the panel shows
+  // both directions of the tape. Filter rows whose 1D delta is missing.
+  let moversCol = "";
+  if (stocksAvailable) {
+    const stockEntries = Object.entries(stocks.stocks || {})
+      .filter(([, v]) => v && v.change_1d_pct !== null && v.change_1d_pct !== undefined);
+    const gainers = [...stockEntries]
+      .sort((a, b) => b[1].change_1d_pct - a[1].change_1d_pct)
+      .slice(0, 3);
+    const losers = [...stockEntries]
+      .sort((a, b) => a[1].change_1d_pct - b[1].change_1d_pct)
+      .filter(([name]) => !gainers.find(([gName]) => gName === name))
+      .slice(0, 2);
+    const movers = [...gainers, ...losers];
+    const fmtPct = (v) => `${v >= 0 ? "+" : ""}${Number(v).toFixed(2)}%`;
+    const tone = (v) => (v >= 0 ? "positive" : "negative");
+    const arrow = (v) => (v >= 0 ? "▲" : "▼");
+    const companies = asArray(dashboardData.company_map).map((item) => item.company);
+    const moverRows = movers.map(([company, stock]) => {
+      const linkable = companies.includes(company);
+      return `
+        <li class="changed-mover ${linkable ? "is-linkable" : ""}" ${linkable ? `data-company-link="${company}"` : ""}>
+          <span class="changed-mover-name">${company}</span>
+          <span class="changed-mover-arrow stock-tone-${tone(stock.change_1d_pct)}">${arrow(stock.change_1d_pct)}</span>
+          <span class="changed-mover-pct stock-tone-${tone(stock.change_1d_pct)}">${fmtPct(stock.change_1d_pct)}</span>
+        </li>
+      `;
+    }).join("");
+    const asOf = stocks.as_of_date
+      ? new Date(stocks.as_of_date).toLocaleDateString("en-IN", { day: "numeric", month: "short" })
+      : "";
+    moversCol = `
+      <div class="changed-col">
+        <div class="changed-col-head">
+          <p class="small-label">Top stock movers (1D)</p>
+          ${asOf ? `<span class="changed-col-meta">${asOf}</span>` : ""}
+        </div>
+        ${movers.length ? `<ul class="changed-mover-list">${moverRows}</ul>` : '<p class="muted">No 1D moves available yet.</p>'}
+      </div>
+    `;
+  }
+
+  // News: pool every group's items, rank by published_at desc, take top 5.
+  // The published_display field is already pre-formatted; fall back to the
+  // raw published_at for the title attr.
+  let newsCol = "";
+  if (newsAvailable) {
+    const newsItems = (news.groups || [])
+      .flatMap((group) => (group.items || []).map((item) => ({ ...item, group: group.label })))
+      .sort((a, b) => `${b.published_at || ""}`.localeCompare(`${a.published_at || ""}`))
+      .slice(0, 5);
+    const rows = newsItems.map((item) => `
+      <li class="changed-news-item">
+        <a href="${item.url}" target="_blank" rel="noopener" title="${escapeHtml(item.summary || "")}">
+          <span class="changed-news-meta">${item.group || ""}${item.published_display ? ` · ${item.published_display}` : ""}</span>
+          <span class="changed-news-title">${escapeHtml(item.title || "")}</span>
+        </a>
+      </li>
+    `).join("");
+    newsCol = `
+      <div class="changed-col">
+        <div class="changed-col-head">
+          <p class="small-label">Latest headlines</p>
+          <span class="changed-col-meta">Past ${news.window_days || 7} days</span>
+        </div>
+        ${newsItems.length ? `<ul class="changed-news-list">${rows}</ul>` : '<p class="muted">No fresh headlines.</p>'}
+      </div>
+    `;
+  }
+
+  return `
+    <section id="section-what-changed" class="section panel section-anchor">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">What's moved today</p>
+          <h2>Top stock action and fresh sector headlines</h2>
+        </div>
+        <p class="section-subtitle">Click a mover to jump to its company card. Headlines open the original source in a new tab.</p>
+      </div>
+      <div class="changed-grid">
+        ${moversCol}
+        ${newsCol}
+      </div>
+    </section>
   `;
 }
 
@@ -3541,12 +3694,89 @@ function renderUnifiedCompanySpotlight() {
       source_url: point.source_url,
     })),
   );
+
+  // Peer-overlay: build one line per primary + each compared peer, anchored to
+  // the primary's time window so charts stay coherent even when peer reporting
+  // cadences differ. Indexed mode rebases each line to 100 at its first visible
+  // point so very different scales (Maruti ~200k vs Atul ~1k) become readable.
+  const peerPalette = [
+    dashboardData.chart_colors.PV,
+    dashboardData.chart_colors["2W"],
+    dashboardData.chart_colors["3W"],
+    dashboardData.chart_colors.CV,
+    dashboardData.chart_colors.TRACTOR,
+    dashboardData.chart_colors.EV,
+    dashboardData.chart_colors.CE,
+  ];
+  const primaryMonths = series.map((point) => point.month);
+  const peerCompanies = state.companyTrendCompare
+    .map((name) => visibleTrends.find((item) => item.company === name))
+    .filter((item) => item && item.company !== selected.company);
+  const buildAlignedValues = (points) => {
+    const byMonth = new Map();
+    asArray(points).forEach((point) => {
+      if (point && point.month) byMonth.set(point.month, point.units);
+    });
+    return primaryMonths.map((month) => {
+      const value = byMonth.get(month);
+      return value === undefined || value === null ? null : value;
+    });
+  };
+  const indexValues = (values) => {
+    const base = values.find((value) => value !== null && value !== undefined && value !== 0);
+    if (!base) return values.map(() => null);
+    return values.map((value) => (value === null || value === undefined ? null : (value / base) * 100));
+  };
+  const indexed = state.companyTrendIndexed;
+  const primarySeries = {
+    label: selected.label,
+    color: dashboardData.chart_colors.TOTAL,
+    values: indexed ? indexValues(series.map((point) => point.units)) : series.map((point) => point.units),
+  };
+  const peerSeries = peerCompanies.map((peer, idx) => {
+    const aligned = buildAlignedValues(peer.series);
+    return {
+      label: peer.label,
+      color: peerPalette[idx % peerPalette.length],
+      values: indexed ? indexValues(aligned) : aligned,
+    };
+  });
+  const chartSeries = [primarySeries, ...peerSeries];
+  const valueFormatter = indexed
+    ? (v) => v == null ? "" : `${Number(v).toFixed(0)}`
+    : axisFormat;
+  const tooltipFormatter = indexed
+    ? (v) => v == null ? "" : `${Number(v).toFixed(1)} (idx)`
+    : formatUnits;
+
+  // Legend pulls double duty as a compare picker: the primary chip shows the
+  // active selection (greyed; not togglable), peer chips are clickable.
+  const peerChips = visibleTrends
+    .filter((item) => item.company !== selected.company)
+    .map((item, idx) => {
+      const active = state.companyTrendCompare.includes(item.company);
+      const colorIdx = state.companyTrendCompare.indexOf(item.company);
+      const color = active ? peerPalette[colorIdx % peerPalette.length] : "transparent";
+      return `
+        <button
+          type="button"
+          class="spotlight-peer-chip${active ? " is-active" : ""}"
+          data-company-trend-peer="${item.company}"
+          style="--peer-color:${color};"
+        >
+          <span class="spotlight-peer-swatch" aria-hidden="true"></span>
+          ${item.label}
+        </button>
+      `;
+    })
+    .join("");
+
   return `
     <div class="oem-spotlight">
       <div class="oem-spotlight-head">
         <div>
           <p class="small-label">Listed-company spotlight</p>
-          <h3>${selected.label}</h3>
+          <h3>${selected.label}${peerCompanies.length ? ` <span class="spotlight-vs">vs ${peerCompanies.length} peer${peerCompanies.length === 1 ? "" : "s"}</span>` : ""}</h3>
           <p class="table-note">${selected.concept}</p>
         </div>
         <div class="oem-spotlight-controls">
@@ -3555,15 +3785,25 @@ function renderUnifiedCompanySpotlight() {
               <option value="${item.company}" ${item.company === selected.company ? "selected" : ""}>${item.label}</option>
             `).join("")}
           </select>
+          <button
+            type="button"
+            class="spotlight-index-toggle${indexed ? " is-active" : ""}"
+            data-action="toggle-company-trend-indexed"
+            title="Rebase every line to 100 at its first visible month — useful when peers have very different scales."
+          >Index = 100</button>
           ${latestPoint?.source_url ? renderSourceAction(latestPoint.source_url, "Latest filing") : ""}
         </div>
+      </div>
+      <div class="spotlight-compare-row">
+        <span class="spotlight-compare-label">Compare with peers:</span>
+        ${peerChips || '<span class="spotlight-compare-empty">No peers reporting in this segment.</span>'}
       </div>
       <div class="chart-frame compact">
         ${lineChart(
           series.map((point) => point.label),
-          [{ label: selected.label, color: dashboardData.chart_colors.TOTAL, values: series.map((point) => point.units) }],
-          axisFormat,
-          formatUnits,
+          chartSeries,
+          valueFormatter,
+          tooltipFormatter,
         )}
       </div>
     </div>
@@ -3621,6 +3861,68 @@ function setupOemSection() {
         return;
       }
       state.oemSegment = value;
+      render();
+    });
+  });
+}
+
+// Names appearing in FADA / Vahan OEM tables that don't exactly match the
+// listed-company name in dashboardData.company_map. Add a row here to make
+// the OEM drill-down (click row → jump to company card) resolve correctly.
+const OEM_TO_COMPANY_ALIASES = {
+  "Mahindra Group": "Mahindra & Mahindra",
+  "Mahindra Tractors": "Mahindra & Mahindra",
+  "Swaraj": "Mahindra & Mahindra",
+  "Ashok Leyland Group": "Ashok Leyland",
+  "Royal Enfield": "Eicher Motors",
+  "VE Commercial Vehicles": "Eicher Motors",
+  "Eicher Tractors": "Eicher Motors",
+  "Escorts Kubota CE": "Escorts Kubota",
+  "Mahindra Electric Automobile": "Mahindra & Mahindra",
+};
+
+function oemToCompanyMap(oemName) {
+  if (!oemName) return null;
+  const trimmed = `${oemName}`.trim();
+  const companies = asArray(dashboardData.company_map).map((item) => item.company);
+  if (companies.includes(trimmed)) return trimmed;
+  const alias = OEM_TO_COMPANY_ALIASES[trimmed];
+  if (alias && companies.includes(alias)) return alias;
+  return null;
+}
+
+// After the OEM tables render, walk each row and — for any OEM that maps
+// to a listed-company card — make the row clickable. Click switches to the
+// Companies tab and scrolls to that company's drill-down so investors can
+// pivot from "who's gaining share" → "what's the public-market read" in one
+// click. Rows without a public-market name stay inert.
+function setupOemDrilldown() {
+  document.querySelectorAll(".oem-unified-table tbody tr").forEach((row) => {
+    const firstCell = row.querySelector("td");
+    if (!firstCell) return;
+    const oemName = firstCell.textContent.trim();
+    const mapped = oemToCompanyMap(oemName);
+    if (!mapped) return;
+    row.classList.add("is-linkable");
+    row.setAttribute("data-company-link", mapped);
+    firstCell.innerHTML = `<span class="oem-link"><span class="oem-link-text">${escapeHtml(oemName)}</span><span class="oem-link-arrow" aria-hidden="true">↗</span></span>`;
+    row.addEventListener("click", () => {
+      state.companyMapFocus = mapped;
+      pendingScrollTarget = "company-drilldown";
+      render();
+    });
+  });
+}
+
+// Wire stock-mover rows in "What's moved today" to the same drill-down as the
+// OEM table — single source of truth for "company name → company card".
+function setupChangedMovers() {
+  document.querySelectorAll(".changed-mover.is-linkable").forEach((node) => {
+    node.addEventListener("click", () => {
+      const company = node.getAttribute("data-company-link");
+      if (!company) return;
+      state.companyMapFocus = company;
+      pendingScrollTarget = "company-drilldown";
       render();
     });
   });
