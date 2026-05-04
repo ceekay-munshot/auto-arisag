@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-05-04T16:51:02.471454+00:00",
+  "generated_at": "2026-05-04T19:04:38.693889+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 22,
+  "item_count": 25,
   "groups": [
     {
       "id": "pv",
@@ -149,6 +149,21 @@
       "label": "Commercial Vehicles",
       "items": [
         {
+          "title": "Ashok Leyland posts 14% growth in April domestic sales at 14,242 units",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/ashok-leyland-achieves-14-growth-in-april-2026-domestic-sales-boosted-by-mhcv-truck-demand/130757091",
+          "summary": "It also reported a 9% YoY increase in total vehicle sales (domestic and exports combined) at 14,646 units in April 2026, compared to 13,421 units in the same month last year.",
+          "source": "ET Auto Commercial Vehicles",
+          "published_at": "2026-05-04T05:47:46+00:00",
+          "published_display": "04 May 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "General"
+          ],
+          "signal_tags": [
+            "Monthly Sales / Demand"
+          ]
+        },
+        {
           "title": "BYD's sales downturn extends to eighth straight month",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byds-sales-downturn-extends-to-eighth-straight-month/130677984",
           "summary": "Overseas sales of passenger vehicles and pickup \u200btrucks, increasingly a source of growth for BYD, jumped 35 per cent to \u200b130,000 vehicles last month, according to Reuters calculations based on a Weibo post by BYD executive Li Yunfei.",
@@ -162,6 +177,22 @@
           ],
           "signal_tags": [
             "General"
+          ]
+        },
+        {
+          "title": "Electric trucks surge in China as charging network expands",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/electric-trucks-surge-in-china-as-charging-network-expands/130630245",
+          "summary": "China\u2019s electric truck market is rapidly expanding, supported by growing charging infrastructure and lower operating costs that are making EVs increasingly attractive for logistics firms.",
+          "source": "ET Auto Commercial Vehicles",
+          "published_at": "2026-04-30T10:13:20+00:00",
+          "published_display": "30 Apr 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "Commercial Vehicles",
+            "EV"
+          ],
+          "signal_tags": [
+            "Supply Chain / Components"
           ]
         },
         {
@@ -182,20 +213,18 @@
           ]
         },
         {
-          "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
-          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
-          "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
+          "title": "GNIDA to launch 15 e-buses linking city to Noida International Airport",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/gnida-launches-15-electric-buses-to-noida-international-airport/130787689",
+          "summary": "GNIDA CEO Ravi Kumar NG said that the initiative is being driven by the need for an environment-friendly public transport system in view of the airport becoming operational.",
           "source": "ET Auto Commercial Vehicles",
-          "published_at": "2026-04-24T05:40:51+00:00",
-          "published_display": "24 Apr 2026",
-          "importance_score": 6,
+          "published_at": "2026-05-04T10:57:56+00:00",
+          "published_display": "04 May 2026",
+          "importance_score": 5,
           "segment_tags": [
-            "Commercial Vehicles",
-            "EV"
+            "Commercial Vehicles"
           ],
           "signal_tags": [
-            "Capacity / Capex",
-            "Supply Chain / Components"
+            "Product / Launch"
           ]
         }
       ]
@@ -386,6 +415,22 @@
       "label": "Policy / Regulation",
       "items": [
         {
+          "title": "Govt may extend PM eDRIVE scheme if states want more e-buses",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/govt-considers-extension-of-pm-edrive-scheme-amid-growing-demand-for-e-buses/130672312",
+          "summary": "As the Centre winds up the tendering process for all the 14,028 buses earmarked under the PM eDRIVE subsidy scheme, it may look to either extend the provisions of the current scheme or launch an entirely new one, a senior official told ETAuto.",
+          "source": "ET Auto Commercial Vehicles",
+          "published_at": "2026-05-01T07:08:41+00:00",
+          "published_display": "01 May 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Commercial Vehicles"
+          ],
+          "signal_tags": [
+            "Policy / Regulation",
+            "Product / Launch"
+          ]
+        },
+        {
           "title": "Horse Powertrain plans India entry, explores local manufacturing as small-car engine demand rises",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/horse-powertrain-enters-indian-market-with-local-manufacturing-plans-for-compact-engine-demand/130507257",
           "summary": "The move comes after India\u2019s GST cut on small cars boosted demand for efficient 1.2-litre engines, creating fresh opportunities for global powertrain suppliers.",
@@ -424,8 +469,8 @@
       "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 43,
-    "filtered_low_signal": 1,
-    "kept_articles": 69
+    "unmapped_articles": 53,
+    "filtered_low_signal": 5,
+    "kept_articles": 84
   }
 }
