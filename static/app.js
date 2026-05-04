@@ -533,6 +533,21 @@ function renderSourceActions(items = []) {
     .join("");
 }
 
+function renderDownloadIcon(downloadKey, label = "Download Excel") {
+  if (!downloadKey) {
+    return "";
+  }
+  const safeKey = String(downloadKey).replace(/"/g, "&quot;");
+  const safeLabel = String(label).replace(/"/g, "&quot;");
+  return `<button type="button" class="download-icon" data-download-key="${safeKey}" title="${safeLabel}" aria-label="${safeLabel}">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3v12"></path>
+      <path d="m7 10 5 5 5-5"></path>
+      <path d="M5 21h14"></path>
+    </svg>
+  </button>`;
+}
+
 function summarySourceUrl(cardId) {
   const retailUrl = dashboardData.modules.retail?.source_meta?.url;
   const wholesaleUrl = dashboardData.modules.wholesale?.source_meta?.url;
@@ -2336,7 +2351,7 @@ function renderRetailTrendOnly() {
             </div>
             <div class="button-row">
               ${renderSourceAction(retail.source_meta.url)}
-              <button class="button" data-download-key="retail-trend">Download Excel</button>
+              ${renderDownloadIcon("retail-trend")}
             </div>
           </div>
           ${useExtended ? `
@@ -2506,7 +2521,7 @@ function renderRetailSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(retail.source_meta.url)}
-              <button class="button" data-download-key="retail-trend">Download Excel</button>
+              ${renderDownloadIcon("retail-trend")}
             </div>
           </div>
           <div class="chart-frame">
@@ -2636,7 +2651,7 @@ function renderEvSection() {
             <h3>Derived EV penetration from official retail fuel mix</h3>
           </div>
           <div class="button-row">
-            <button class="button" data-download-key="ev-trend">Download Excel</button>
+            ${renderDownloadIcon("ev-trend")}
           </div>
         </div>
         <div class="chart-frame">
@@ -2857,7 +2872,7 @@ function renderEvOemTracker() {
         </div>
         <div class="button-row">
           ${renderSourceAction(selected.source_url)}
-          <button class="button" data-download-key="ev-oem-tracker">Download Excel</button>
+          ${renderDownloadIcon("ev-oem-tracker")}
         </div>
       </div>
       <label class="filter-field compact">
@@ -2981,7 +2996,7 @@ function renderEvTrendExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(retail.source_meta.url)}
-          <button class="button" data-download-key="ev-category-trend">Download Excel</button>
+          ${renderDownloadIcon("ev-category-trend")}
         </div>
       </div>
       <div class="state-explorer-controls">
@@ -3068,7 +3083,7 @@ function renderStateRegistrationExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(module.source_meta.url)}
-          <button class="button" data-download-key="state-registration-trend">Download Excel</button>
+          ${renderDownloadIcon("state-registration-trend")}
         </div>
       </div>
       <div class="state-explorer-controls">
@@ -3586,7 +3601,7 @@ function renderOemSection() {
         </div>
         <div class="oem-section-actions">
           ${sourceUrl ? `<a class="oem-source-pill" href="${sourceUrl}" target="_blank" rel="noopener">${sourceName} · view source</a>` : ""}
-          <button class="button" data-download-key="${downloadKey}">Download Excel</button>
+          ${renderDownloadIcon(`${downloadKey}`)}
         </div>
       </div>
       ${renderOemSegmentChips(segments, active.id)}
@@ -3749,7 +3764,7 @@ function renderCompanyUnitTrend() {
           </div>
           <div class="button-row">
             ${latestPoint?.source_url ? renderSourceAction(latestPoint.source_url, "Latest source") : ""}
-            <button class="button" data-download-key="company-unit-trend">Download Excel</button>
+            ${renderDownloadIcon("company-unit-trend")}
           </div>
         </div>
         <div class="company-trend-toolbar">
@@ -3821,7 +3836,7 @@ function renderOemTable(category, table) {
         </div>
         <div class="button-row">
           ${renderSourceAction(dashboardData.modules.retail?.source_meta?.url)}
-          <button class="button" data-download-key="${key}">Download Excel</button>
+          ${renderDownloadIcon(`${key}`)}
         </div>
       </div>
       ${renderTable(
@@ -3884,7 +3899,7 @@ function renderLiveOemTable(category, table) {
             { url: table.source_meta?.url, label: "Primary source" },
             { url: table.source_meta?.validation_url, label: "Validation export" },
           ])}
-          <button class="button" data-download-key="${key}">Download Excel</button>
+          ${renderDownloadIcon(`${key}`)}
         </div>
       </div>
       <div class="table-toolbar cv-oem-toolbar">
@@ -3936,7 +3951,7 @@ function renderRegistrationSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(registration.source_meta.url)}
-              <button class="button" data-download-key="vahan-registration">Download Excel</button>
+              ${renderDownloadIcon("vahan-registration")}
             </div>
           </div>
           <div class="chart-frame">
@@ -4014,7 +4029,7 @@ function renderWholesaleSection() {
             </div>
             <div class="button-row">
               ${renderSourceAction(wholesale.source_meta.url)}
-              <button class="button" data-download-key="siam-wholesale">Download Excel</button>
+              ${renderDownloadIcon("siam-wholesale")}
             </div>
           </div>
           <div class="chart-frame">
@@ -4202,7 +4217,7 @@ function renderSegmentShareExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(sourceUrl)}
-          <button class="button" data-download-key="segment-share-explorer">Download Excel</button>
+          ${renderDownloadIcon("segment-share-explorer")}
         </div>
       </div>
         <div class="state-explorer-controls">
@@ -4292,7 +4307,7 @@ function renderRawMaterialExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceAction(module.source_meta.url)}
-          <button class="button" data-download-key="raw-material-${slugify(selected.company)}">Download Excel</button>
+          ${renderDownloadIcon(`raw-material-${slugify(selected.company)}`)}
         </div>
       </div>
       <div class="state-explorer-controls explorer-controls">
@@ -4374,7 +4389,7 @@ function renderCompanyExposureTrendExplorer() {
         </div>
         <div class="button-row">
           ${renderSourceActions(selected.sources)}
-          <button class="button" data-download-key="company-segment-${slugify(selected.company)}">Download Excel</button>
+          ${renderDownloadIcon(`company-segment-${slugify(selected.company)}`)}
         </div>
       </div>
       <div class="state-explorer-controls explorer-controls">
