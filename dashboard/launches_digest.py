@@ -185,16 +185,26 @@ LAUNCH_RE = re.compile("|".join(LAUNCH_KEYWORDS), re.IGNORECASE)
 
 # --- Negative keyword patterns --------------------------------------------
 #
-# If any of these match, the article is rejected even when a launch keyword
-# fires. Designed to filter out the most common false-positive shapes:
+# If any of these match anywhere in title+summary, the article is rejected
+# even when a launch keyword fires. Designed to filter out the most common
+# false-positive shapes:
 #   * Quarterly / annual results (uses "unveils Q4 results", "launches FY26
 #     report" phrasing);
-#   * CSR / scholarship / training / internship announcements ("Maruti
-#     launches scholarship program");
-#   * Dealership / showroom / service-centre openings (often headlined as
-#     "launches new dealership in <city>");
-#   * Award / recognition stories.
+#   * Monthly sales reports ("April sales jump", "domestic sales up 17%") —
+#     these are sales news, not launches, even though headlines often pair
+#     them with "launches" / "rolls out" verbs;
+#   * Discount / EMI / loyalty offers ("Honda Cars Discounts May 2026") —
+#     campaigns, not launches;
+#   * Renders / spy shots / leaks ("2027 Hyundai Creta Renders") — pre-launch
+#     speculation, not a launch event;
+#   * Reviews / first rides / road tests — opinion content, not a launch;
+#   * Aftermarket / accessory launches (helmets, tyres, retrofit kits) —
+#     not vehicle launches even when an OEM is mentioned in the body;
+#   * CSR / scholarship / training / internship announcements;
+#   * Dealership / showroom / service-centre openings;
+#   * Award / partnership / M&A / sponsorship stories.
 NEGATIVE_KEYWORDS = [
+    # Earnings / corporate finance
     r"\bq[1-4]\s+(?:fy)?\s*(?:results?|earnings?)\b",
     r"\bquarter(?:ly)?\s+(?:results?|earnings?|profit|loss)\b",
     r"\bannual\s+(?:results?|report|general\s+meeting)\b",
@@ -203,24 +213,61 @@ NEGATIVE_KEYWORDS = [
     r"\bbonus\s+share\b",
     r"\bearnings?\s+call\b",
     r"\bfy\d{2}\s+results?\b",
+    # Monthly sales reports — the dominant false positive on cron output
+    r"\b(?:domestic|monthly|wholesale|retail|total)\s+sales?\b",
+    r"\bsales?\s+(?:jump|jumps?|rise|rises?|fall|falls?|drop|drops?|surge|surges?|grow|grows?|growth|decline|declines?|dip|dips?|slip|slips?|boost|boosts?|double|doubles?|triple|triples?)\b",
+    r"\bsales?\s+(?:up|down)\s+\d",
+    r"\bsales?\s+(?:figures?|numbers?|data|volume|report)\b",
+    r"\bposts?\s+(?:highest|record|best|strong|weak)?(?:[-\s]ever)?\s+(?:sales?|monthly|domestic)\b",
+    r"\b(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+sales?\b",
+    r"\b(?:jan|feb|mar|apr|jun|jul|aug|sep|oct|nov|dec)\s?'?\d{2}\s+sales?\b",
+    r"\b(?:units|vehicles?)\s+sold\b",
+    # Discount / offer / EMI campaigns
+    r"\bdiscount(?:s|ing)?\b",
+    r"\bcashback\b",
+    r"\bemi\s+offers?\b",
+    r"\boffers?\s+up\s+to\b",
+    r"\bsave\s+up\s+to\b",
+    # Renders / spy shots / leaks (pre-launch speculation, not a launch event)
+    r"\brenders?\b",
+    r"\brendering\b",
+    r"\bspy\s+shots?\b",
+    r"\bspied\b",
+    r"\bleaked\b",
+    r"\bteased\b",
+    r"\bteaser\b",
+    # Reviews / road tests
+    r"\b(?:road|long[- ]term|first)\s+(?:test|ride|drive|review)\b",
+    r"\breview\b",
+    # Aftermarket / accessory products (not vehicles)
+    r"\bhelmet\b",
+    r"\btyres?\b",
+    r"\btires?\b",
+    r"\bretrofit\b",
+    r"\baccessor(?:y|ies)\b",
+    # CSR / employee / community programmes
     r"\bcsr\b",
     r"\bscholarship\b",
     r"\binternship\b",
     r"\btraining\s+programme?\b",
     r"\beducation\s+programme?\b",
+    # Network expansion (not vehicle launches)
     r"\bdealership\s+(?:opens?|inaugurat|launches?)\b",
     r"\bshowroom\s+(?:opens?|inaugurat|launches?)\b",
     r"\bservice\s+(?:centre|center|station)\s+(?:opens?|inaugurat)\b",
     r"\bnew\s+(?:dealership|showroom|outlet|touchpoint)\b",
-    r"\bbharat\s+mobility\b",  # expo coverage, not actual launches
+    # Expo coverage (not launches)
+    r"\bbharat\s+mobility\b",
     r"\bauto\s+expo\s+(?:preview|pavilion)\b",
+    # Awards / corporate updates / M&A
     r"\baward\b",
     r"\brecognised\b",
     r"\brecognized\b",
     r"\bappoint(?:s|ed|ment)\b",
     r"\bmerger\b",
     r"\bjoint\s+venture\b",
-    r"\bpartnership\s+with\b",
+    r"\bpartner(?:s|ed|ship)?\s+with\b",
+    r"\bpartner(?:s|ed)?\s+to\b",
     r"\binvestment\s+of\s+(?:rs|inr|\$)\b",
     r"\bsponsorship\b",
     r"\bcampaign\b",
@@ -307,16 +354,32 @@ def _build_digest(
     seen_urls: set[str] = set()
 
     for article in articles:
-        haystack = " ".join(
-            part for part in [article.get("title", ""), article.get("summary", "")] if part
-        )
-        if not haystack:
+        title = (article.get("title") or "").strip()
+        summary = (article.get("summary") or "").strip()
+        if not title:
             continue
+        haystack = f"{title} {summary}"
+
+        # Negative filter runs against the full haystack — even if the title
+        # passes, a sales / discount / spy-shot mention in the summary should
+        # disqualify the article.
         if NEGATIVE_RE.search(haystack):
             continue
-        if not LAUNCH_RE.search(haystack):
+
+        # Launch verb MUST be in the title. Otherwise a passing reference to
+        # "launched last year" buried in a sales report's body would qualify.
+        if not LAUNCH_RE.search(title):
             continue
-        brand_def = _match_brand(article.get("brand_tags") or [])
+
+        # Brand resolution prefers the title — the canonical headline brand
+        # — and only falls back to brand_tags / model-name patterns when the
+        # title has no brand mention. This stops "BMW M440i Convertible" from
+        # being tagged as Mercedes just because the summary name-drops both.
+        brand_def = _match_brand_in_text(title)
+        if not brand_def:
+            brand_def = _match_brand_by_model_name(title)
+        if not brand_def:
+            brand_def = _match_brand(article.get("brand_tags") or [])
         if not brand_def:
             brand_def = _match_brand_by_model_name(haystack)
         if not brand_def:
@@ -379,6 +442,59 @@ def _match_brand(brand_tags: list[str]) -> dict[str, str] | None:
         if definition:
             return definition
     return None
+
+
+# Per-brand title regexes for "scan this string for a brand mention". Built
+# once at import. Iteration order matches BRAND_DEFINITIONS — listed OEMs
+# first, then tracked, then luxury — so the first match in title text is
+# usually the canonical headline brand.
+_BRAND_TITLE_PATTERNS: list[tuple[re.Pattern[str], dict[str, str]]] = [
+    (re.compile(rf"\b{re.escape(label)}\b", re.IGNORECASE), definition)
+    for label, definition in BRAND_DEFINITIONS.items()
+] + [
+    # A handful of softer aliases the literal label match misses.
+    (re.compile(r"\bmaruti\b", re.IGNORECASE), BRAND_DEFINITIONS["Maruti Suzuki"]),
+    (re.compile(r"\btata\s+motors?\b", re.IGNORECASE), BRAND_DEFINITIONS["Tata Motors"]),
+    (re.compile(r"\bmahindra\b", re.IGNORECASE), BRAND_DEFINITIONS["Mahindra"]),
+    (re.compile(r"\bhyundai\b", re.IGNORECASE), BRAND_DEFINITIONS["Hyundai"]),
+    (re.compile(r"\bkia\b", re.IGNORECASE), BRAND_DEFINITIONS["Kia"]),
+    (re.compile(r"\bhonda\s+(?:cars?|amaze|elevate|city)\b", re.IGNORECASE), BRAND_DEFINITIONS["Honda"]),
+    (re.compile(r"\btoyota\b", re.IGNORECASE), BRAND_DEFINITIONS["Toyota"]),
+    (re.compile(r"\bmg\s+(?:motor|hector|astor|gloster|comet|windsor|cyberster)\b", re.IGNORECASE), BRAND_DEFINITIONS["MG Motor"]),
+    (re.compile(r"\bskoda\b", re.IGNORECASE), BRAND_DEFINITIONS["Skoda"]),
+    (re.compile(r"\bvolkswagen\b|\bvw\b", re.IGNORECASE), BRAND_DEFINITIONS["Volkswagen"]),
+    (re.compile(r"\brenault\b", re.IGNORECASE), BRAND_DEFINITIONS["Renault"]),
+    (re.compile(r"\bnissan\b", re.IGNORECASE), BRAND_DEFINITIONS["Nissan"]),
+    (re.compile(r"\bbyd\b", re.IGNORECASE), BRAND_DEFINITIONS["BYD"]),
+    (re.compile(r"\bola\s+electric\b", re.IGNORECASE), BRAND_DEFINITIONS["Ola Electric"]),
+    (re.compile(r"\bather\b", re.IGNORECASE), BRAND_DEFINITIONS["Ather"]),
+    (re.compile(r"\btvs\b", re.IGNORECASE), BRAND_DEFINITIONS["TVS Motor"]),
+    (re.compile(r"\bbajaj\b", re.IGNORECASE), BRAND_DEFINITIONS["Bajaj Auto"]),
+    (re.compile(r"\bhero\s+motocorp\b|\bhero\s+(?:splendor|passion|glamour|xtreme|karizma|mavrick|vida)\b", re.IGNORECASE), BRAND_DEFINITIONS["Hero MotoCorp"]),
+    (re.compile(r"\bashok\s+leyland\b", re.IGNORECASE), BRAND_DEFINITIONS["Ashok Leyland"]),
+    (re.compile(r"\b(?:eicher|royal\s+enfield|vecv|ve\s+commercial)\b", re.IGNORECASE), BRAND_DEFINITIONS["VE Commercial"]),
+    (re.compile(r"\bbmw\b", re.IGNORECASE), BRAND_DEFINITIONS["BMW"]),
+    (re.compile(r"\bmercedes(?:-benz| benz)?\b", re.IGNORECASE), BRAND_DEFINITIONS["Mercedes-Benz"]),
+    (re.compile(r"\baudi\b", re.IGNORECASE), BRAND_DEFINITIONS["Audi"]),
+    (re.compile(r"\b(?:jaguar\s+land\s+rover|jlr|range\s+rover|land\s+rover)\b", re.IGNORECASE), BRAND_DEFINITIONS["JLR"]),
+    (re.compile(r"\bvolvo\b", re.IGNORECASE), BRAND_DEFINITIONS["Volvo"]),
+    (re.compile(r"\bporsche\b", re.IGNORECASE), BRAND_DEFINITIONS["Porsche"]),
+]
+
+
+def _match_brand_in_text(text: str) -> dict[str, str] | None:
+    """Resolve the canonical brand from arbitrary text (typically the title).
+    Returns the *earliest* brand mention so e.g. "BMW M440i Convertible"
+    resolves to BMW even if Mercedes also appears later in the same string.
+    """
+    earliest: tuple[int, dict[str, str]] | None = None
+    for pattern, definition in _BRAND_TITLE_PATTERNS:
+        match = pattern.search(text)
+        if not match:
+            continue
+        if earliest is None or match.start() < earliest[0]:
+            earliest = (match.start(), definition)
+    return earliest[1] if earliest else None
 
 
 def _match_brand_by_model_name(haystack: str) -> dict[str, str] | None:
