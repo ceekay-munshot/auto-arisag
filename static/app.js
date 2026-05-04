@@ -1499,18 +1499,18 @@ function tabDefinitions() {
       render: () => festivePulseAvailable ? renderFestivePulseSection() : "",
     },
     {
-      id: "premium-data",
-      label: "Premium data sources",
-      group: "Data",
-      hidden: !premiumDataAvailable,
-      render: () => premiumDataAvailable ? renderPremiumDataSection() : "",
-    },
-    {
       id: "recent-launches",
       label: "Recent launches",
       group: "News",
       hidden: !recentLaunchesAvailable,
       render: () => recentLaunchesAvailable ? renderRecentLaunchesSection() : "",
+    },
+    {
+      id: "premium-data",
+      label: "Premium data sources",
+      group: "Data",
+      hidden: !premiumDataAvailable,
+      render: () => premiumDataAvailable ? renderPremiumDataSection() : "",
     },
   ];
 }
