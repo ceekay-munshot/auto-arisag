@@ -557,6 +557,18 @@ function renderDownloadIcon(downloadKey, label = "Download Excel") {
   </button>`;
 }
 
+// Standalone PNG-export icon. Injected automatically by setupPngExports
+// into every chart card that already exposes a CSV download icon, so the
+// Excel + PNG buttons sit side-by-side. Self-contained markup so the
+// injection logic stays a one-liner.
+const PNG_ICON_HTML = `<button type="button" class="download-icon download-icon-png" data-action="download-png" title="Download chart as PNG" aria-label="Download chart as PNG">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="2.5"></rect>
+    <circle cx="9" cy="10" r="1.6" fill="currentColor" stroke="none"></circle>
+    <path d="m21 16-5-5-7 7"></path>
+  </svg>
+</button>`;
+
 function summarySourceUrl(cardId) {
   const retailUrl = dashboardData.modules.retail?.source_meta?.url;
   const wholesaleUrl = dashboardData.modules.wholesale?.source_meta?.url;
@@ -1238,6 +1250,48 @@ function setupRefreshAction() {
   });
 }
 
+// "Copy share link" button: serializes the current view-state into the URL
+// hash, copies the resulting URL to clipboard, and flashes the button so
+// the user knows the copy landed. Falls back gracefully when clipboard API
+// is unavailable (older browsers / non-secure contexts).
+function setupShareLink() {
+  document.querySelectorAll("[data-action='copy-share-link']").forEach((node) => {
+    node.addEventListener("click", async () => {
+      serializeStateToUrl();
+      const url = window.location.href;
+      const originalLabel = node.innerHTML;
+      const flash = (text, ok = true) => {
+        node.innerHTML = `<span aria-hidden="true">${ok ? "✓" : "⚠"}</span> ${text}`;
+        node.classList.toggle("is-confirming", ok);
+        setTimeout(() => {
+          node.innerHTML = originalLabel;
+          node.classList.remove("is-confirming");
+        }, 1800);
+      };
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(url);
+          flash("Copied link");
+        } else {
+          // Fallback: select + execCommand("copy") via a transient textarea.
+          const ta = document.createElement("textarea");
+          ta.value = url;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          const ok = document.execCommand("copy");
+          ta.remove();
+          flash(ok ? "Copied link" : "Press Ctrl-C to copy", ok);
+        }
+      } catch {
+        flash("Copy failed — URL is in the address bar", false);
+      }
+    });
+  });
+}
+
 function setupComparePriorToggle() {
   document.querySelectorAll("[data-action='toggle-compare-prior']").forEach((node) => {
     node.addEventListener("click", () => {
@@ -1809,6 +1863,7 @@ function render() {
   setupOemSection();
   setupOemDrilldown();
   setupChangedMovers();
+  setupPngExports();
   setupSorts();
   setupCompanyMapCards();
   setupDownloads();
@@ -1821,6 +1876,11 @@ function render() {
   setupCompanyMapPagination();
   setupComparePriorToggle();
   setupRecentLaunchesFilter();
+  setupShareLink();
+  // After the DOM is in sync with state, mirror state into the URL hash so
+  // any click on "Copy share link" — or any browser-level copy of the URL —
+  // captures exactly what the user is looking at.
+  serializeStateToUrl();
   requestAnimationFrame(() => {
     scrollToPendingSection();
   });
@@ -2100,6 +2160,9 @@ function renderHero() {
                   title="Overlay the same 12 months from one year ago on every line chart that has the data">
             <span aria-hidden="true">${state.compareToPriorCycle ? "✓" : "↻"}</span>
             ${state.compareToPriorCycle ? "Comparing prior year" : "Compare to prior year"}
+          </button>
+          <button class="button button-share" data-action="copy-share-link" title="Copy a deep-link to the current view (tab, filters, peers, all baked in).">
+            <span aria-hidden="true">🔗</span> Copy share link
           </button>
           <p class="hero-status ${refreshState.tone}">${refreshState.message}</p>
         </div>
@@ -3295,6 +3358,53 @@ function renderStateRegistrationExplorer() {
   `;
 }
 
+// Compute the wholesale–retail wedge per category. SIAM dispatch (wholesale)
+// minus FADA registrations (retail) is the cleanest non-PV proxy for dealer
+// inventory pressure: positive cumulative wedge = OEMs stuffing the channel,
+// negative = dealers running stock down faster than OEMs replenish.
+//
+// Categories returned are limited to those present in both data sources with
+// reasonable comparability — PV and 2W. (SIAM 3W excludes e-rickshaws, so the
+// 3W wedge would mis-state reality; CV monthly isn't in SIAM domestic_sales.)
+function computeChannelWedges() {
+  const retail = dashboardData.modules.retail;
+  const wholesale = dashboardData.modules.wholesale;
+  if (!retail?.months?.length || !wholesale?.months?.length) return [];
+  const wholesaleByMonth = new Map((wholesale.months || []).map((m) => [m.month, m]));
+  const cats = ["PV", "2W"];
+  return cats.map((cat) => {
+    const series = (retail.months || [])
+      .filter((m) => wholesaleByMonth.has(m.month))
+      .slice(-6)
+      .map((r) => {
+        const w = wholesaleByMonth.get(r.month);
+        const retailUnits = (r.categories || []).find((c) => c.category === cat)?.units || 0;
+        const wholesaleUnits = (w.domestic_sales || []).find((c) => c.category === cat)?.units || 0;
+        return {
+          month: r.month,
+          label: r.label,
+          retail: retailUnits,
+          wholesale: wholesaleUnits,
+          wedge: wholesaleUnits - retailUnits,
+        };
+      });
+    const cumulative = series.reduce((acc, p) => acc + p.wedge, 0);
+    const avgRetail = series.length
+      ? series.reduce((acc, p) => acc + p.retail, 0) / series.length
+      : 0;
+    // Convert cumulative wedge to implied days-of-sales so investors can
+    // read it on the same axis as the FADA "PV inventory days" metric.
+    const impliedDays = avgRetail > 0 ? (cumulative / avgRetail) * 30 : null;
+    return {
+      category: cat,
+      label: labelForCategory(cat),
+      series,
+      cumulative,
+      impliedDays,
+    };
+  }).filter((entry) => entry.series.length >= 3);
+}
+
 function renderChannelPulse() {
   const retail = dashboardData.modules.retail;
   const pulse = retail.latest_channel_pulse;
@@ -3369,6 +3479,79 @@ function renderChannelPulse() {
       </div>
     `,
   ];
+
+  // Wholesale–retail wedge: extends the inventory health view to non-PV
+  // categories where FADA doesn't publish a days-of-stock survey number.
+  // Cumulative wedge over the last 6 months is converted to "implied days
+  // of sales" so investors can read it on the same axis as the PV survey.
+  const wedges = computeChannelWedges();
+  if (wedges.length) {
+    const monthLabels = wedges[0].series.map((p) => p.label);
+    const wedgeMonths = `${monthLabels[0]} – ${monthLabels[monthLabels.length - 1]}`;
+    const wedgeColor = (cumulative) => cumulative > 0 ? "#cc4343" : "#2f897d";
+    const wedgeTone = (cumulative) => cumulative > 0 ? "negative" : "positive";
+    const wedgeReading = (entry) => {
+      const days = Math.abs(entry.impliedDays || 0).toFixed(1);
+      if (entry.cumulative > 0) {
+        return `OEMs added <strong>${formatUnits(entry.cumulative)}</strong> units to dealer stock over the past 6 months — implied <strong>${days} days</strong> of extra inventory at the current retail pace. Watch for incentive ramps and channel destocking.`;
+      }
+      return `Dealers ran <strong>${formatUnits(Math.abs(entry.cumulative))}</strong> units of stock down — retail outpaced wholesale by ~<strong>${days} days</strong> of supply, a healthy demand-recognition signal.`;
+    };
+    registerDownload(
+      "channel-wedge",
+      "channel_wedge_wholesale_minus_retail.csv",
+      ["category", "month", "label", "retail_units", "wholesale_units", "wedge_units"],
+      wedges.flatMap((entry) => entry.series.map((p) => ({
+        category: entry.category,
+        month: p.month,
+        label: p.label,
+        retail_units: p.retail,
+        wholesale_units: p.wholesale,
+        wedge_units: p.wedge,
+      }))),
+    );
+    cards.push(`
+      <div class="chart-card channel-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Wholesale–retail wedge</p>
+            <h3>Channel-fill proxy for non-PV inventory health · ${wedgeMonths}</h3>
+          </div>
+          <div class="button-row">
+            ${renderDownloadIcon("channel-wedge")}
+          </div>
+        </div>
+        <p class="table-note" style="margin: 0 0 12px;">
+          SIAM dispatch minus FADA retail: positive bars mean OEMs are pushing more units into dealers than dealers are selling out (channel-fill / inventory build), negative means dealers are running stock down. Cumulative figure is converted to implied days-of-sales so the read sits on the same axis as the FADA PV inventory survey.
+        </p>
+        <div class="wedge-grid">
+          ${wedges.map((entry) => `
+            <div class="wedge-card">
+              <div class="wedge-card-head">
+                <strong>${entry.label}</strong>
+                <span class="wedge-cumulative ${wedgeTone(entry.cumulative)}">
+                  ${entry.cumulative >= 0 ? "+" : ""}${formatUnits(entry.cumulative)}
+                  ${entry.impliedDays !== null ? `<span class="wedge-days">(${entry.impliedDays >= 0 ? "+" : ""}${entry.impliedDays.toFixed(1)} days)</span>` : ""}
+                </span>
+              </div>
+              <div class="chart-frame compact">
+                ${lineChart(
+                  entry.series.map((p) => p.label),
+                  [{ label: "Wedge (units)", color: wedgeColor(entry.cumulative), values: entry.series.map((p) => p.wedge) }],
+                  axisFormat,
+                  formatUnits,
+                )}
+              </div>
+              <p class="wedge-reading">${wedgeReading(entry)}</p>
+            </div>
+          `).join("")}
+        </div>
+        <p class="table-note" style="margin: 8px 0 0;">
+          Tracked for PV and 2W only — the SIAM 3W series excludes e-rickshaws (most of the actual 3W retail mix), and SIAM doesn't publish CV at monthly cadence. Tractor / CE wholesale data sit with TMA / ICEMA respectively, not yet on this dashboard.
+        </p>
+      </div>
+    `);
+  }
 
   if (urbanRuralRows.length) {
     cards.push(`
@@ -3911,6 +4094,89 @@ function setupOemDrilldown() {
       pendingScrollTarget = "company-drilldown";
       render();
     });
+  });
+}
+
+// Snapshot a rendered SVG line chart to a PNG file at 2× scale and trigger
+// a browser download. Buy-side analysts paste these into IC memos / pitch
+// books constantly — the existing CSV download stays useful for modelling,
+// PNG covers the screenshot use case.
+function exportSvgAsPng(svg, filenameBase) {
+  if (!svg) return;
+  const viewBox = svg.viewBox?.baseVal;
+  const width = viewBox?.width || svg.clientWidth || 820;
+  const height = viewBox?.height || svg.clientHeight || 320;
+  const cloned = svg.cloneNode(true);
+  cloned.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  cloned.setAttribute("width", `${width}`);
+  cloned.setAttribute("height", `${height}`);
+  // Inline a white background so the PNG isn't transparent — ICs paste these
+  // straight into Word / PowerPoint where transparent background looks broken.
+  const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  bg.setAttribute("x", "0");
+  bg.setAttribute("y", "0");
+  bg.setAttribute("width", `${width}`);
+  bg.setAttribute("height", `${height}`);
+  bg.setAttribute("fill", "#ffffff");
+  cloned.insertBefore(bg, cloned.firstChild);
+
+  const xml = new XMLSerializer().serializeToString(cloned);
+  const svgBlob = new Blob([xml], { type: "image/svg+xml;charset=utf-8" });
+  const url = URL.createObjectURL(svgBlob);
+  const img = new Image();
+  img.onload = () => {
+    const scale = 2;
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(width * scale);
+    canvas.height = Math.round(height * scale);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      URL.revokeObjectURL(url);
+      return;
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.scale(scale, scale);
+    ctx.drawImage(img, 0, 0);
+    URL.revokeObjectURL(url);
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      const safeName = `${filenameBase || "chart"}`
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "")
+        .slice(0, 80) || "chart";
+      link.download = `${safeName}.png`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(link.href), 1500);
+    }, "image/png");
+  };
+  img.onerror = () => {
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+}
+
+// Inject PNG download icons next to every existing Excel download icon in
+// chart cards so investors can grab a screenshot-grade copy of any chart.
+// Idempotent: re-running on subsequent renders skips already-decorated nodes.
+function setupPngExports() {
+  document.querySelectorAll(".download-icon[data-download-key]").forEach((excelBtn) => {
+    if (excelBtn.parentElement?.querySelector("[data-action='download-png']")) return;
+    const card = excelBtn.closest(".chart-card, .oem-spotlight, .channel-card");
+    const svg = card?.querySelector("svg.line-chart");
+    if (!svg) return;
+    const wrap = document.createElement("span");
+    wrap.innerHTML = PNG_ICON_HTML;
+    const btn = wrap.firstElementChild;
+    if (!btn) return;
+    excelBtn.insertAdjacentElement("afterend", btn);
+    const titleText = card?.querySelector("h3")?.textContent?.trim() || "chart";
+    btn.addEventListener("click", () => exportSvgAsPng(svg, titleText));
   });
 }
 
@@ -6557,10 +6823,104 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;");
 }
 
+// State keys that survive across reloads via the URL hash. Defaults match
+// the initial values in `state` so we only serialize what the user has
+// actually deviated from — keeps shared URLs short and human-readable.
+const URL_STATE_DEFAULTS = {
+  activeTab: "overview",
+  window: "5m",
+  lens: "all",
+  category: "TOTAL",
+  fuel: "all",
+  company: "all",
+  companyMapFocus: null,
+  newsGroup: "all",
+  companyTrend: "all",
+  companyTrendCompare: [],
+  companyTrendIndexed: false,
+  registrationState: "all",
+  registrationSegment: "PV",
+  segmentShareView: "TOTAL",
+  rawMaterialCompany: "Tata Motors",
+  componentTrendCompany: "Maruti Suzuki",
+  evCategory: "TOTAL",
+  evPeriod: "M",
+  evOemSegment: "E2W",
+  oemSegment: "PV",
+  liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
+  compareToPriorCycle: false,
+  launchFilterCompany: "all",
+};
+
+function isDefaultStateValue(key, value) {
+  const def = URL_STATE_DEFAULTS[key];
+  if (Array.isArray(def)) return JSON.stringify(value) === JSON.stringify(def);
+  if (def && typeof def === "object") return JSON.stringify(value) === JSON.stringify(def);
+  return value === def;
+}
+
+function serializeStateToUrl() {
+  const params = new URLSearchParams();
+  Object.keys(URL_STATE_DEFAULTS).forEach((key) => {
+    const cur = state[key];
+    if (cur === undefined || cur === null) return;
+    if (isDefaultStateValue(key, cur)) return;
+    if (Array.isArray(cur)) {
+      params.set(key, cur.join("|"));
+    } else if (typeof cur === "object") {
+      params.set(key, JSON.stringify(cur));
+    } else if (typeof cur === "boolean") {
+      params.set(key, cur ? "1" : "0");
+    } else {
+      params.set(key, String(cur));
+    }
+  });
+  const hash = params.toString();
+  const path = window.location.pathname + window.location.search;
+  // replaceState keeps the back/forward stack from filling up with every
+  // filter click; the URL still updates so Copy-Link works at any moment.
+  if (hash) {
+    window.history.replaceState(null, "", `${path}#${hash}`);
+  } else if (window.location.hash) {
+    window.history.replaceState(null, "", path);
+  }
+}
+
+function restoreStateFromUrl() {
+  const hash = window.location.hash.replace(/^#/, "");
+  if (!hash) return;
+  let params;
+  try {
+    params = new URLSearchParams(hash);
+  } catch {
+    return;
+  }
+  Object.keys(URL_STATE_DEFAULTS).forEach((key) => {
+    if (!params.has(key)) return;
+    const raw = params.get(key);
+    const def = URL_STATE_DEFAULTS[key];
+    try {
+      if (Array.isArray(def)) {
+        state[key] = raw ? raw.split("|").filter(Boolean) : [];
+      } else if (def && typeof def === "object") {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === "object") state[key] = parsed;
+      } else if (typeof def === "boolean") {
+        state[key] = raw === "1" || raw === "true";
+      } else {
+        state[key] = raw;
+      }
+    } catch {
+      // Ignore malformed URL params — fall back to default.
+    }
+  });
+}
+
 function main() {
   loadDashboard()
     .then((data) => {
       dashboardData = data;
+      restoreStateFromUrl();
       render();
     })
     .catch((error) => {

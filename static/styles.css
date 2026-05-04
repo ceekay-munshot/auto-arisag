@@ -1082,6 +1082,70 @@ p {
   margin-top: 14px;
 }
 
+/* Wholesale–retail wedge cards: side-by-side per category, each with a
+   cumulative readout, mini line chart, and a plain-English interpretation. */
+.wedge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 760px) {
+  .wedge-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.wedge-card {
+  background: rgba(20, 39, 62, 0.03);
+  border: 1px solid rgba(20, 39, 62, 0.08);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wedge-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.wedge-cumulative {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.wedge-cumulative.positive {
+  color: #1d5a4f;
+}
+
+.wedge-cumulative.negative {
+  color: #8a2727;
+}
+
+.wedge-days {
+  font-weight: 500;
+  opacity: 0.85;
+  margin-left: 4px;
+  font-size: 0.78rem;
+}
+
+.wedge-reading {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--muted, #5a6779);
+}
+
+.wedge-reading strong {
+  color: var(--text);
+}
+
 .mini-table-card,
 .mini-insight {
   padding: 14px 16px;
@@ -4062,6 +4126,23 @@ th:hover {
 
 .button-export-pdf:hover {
   background: linear-gradient(180deg, rgba(76, 116, 199, 0.22), rgba(76, 116, 199, 0.14));
+}
+
+.button-share {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.14), rgba(47, 137, 125, 0.06));
+  border-color: rgba(47, 137, 125, 0.32);
+  color: #1d5a4f;
+  font-weight: 600;
+}
+
+.button-share:hover {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.22), rgba(47, 137, 125, 0.12));
+}
+
+.button-share.is-confirming {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.9), rgba(47, 137, 125, 0.75));
+  border-color: rgba(47, 137, 125, 0.9);
+  color: #fff;
 }
 
 /* WOW-10 'Compare to prior year' toggle */
