@@ -3197,16 +3197,44 @@ th:hover {
   }
 }
 
-/* Annotated time-series event-marker styling — circle hover targets get
-   a subtle outline so they read as clickable, hover state lifts them. */
-.chart-event-marker circle {
-  transition: r 0.12s ease, stroke-width 0.12s ease;
-  cursor: help;
+/* Notable-events caption strip rendered BELOW the chart. Replaces the
+   earlier on-chart markers (vertical dashed lines + floating dots) which
+   looked disconnected from the data series. */
+.chart-events-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  background: var(--bg-ink);
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-size: 0.78rem;
 }
 
-.chart-event-marker circle:hover {
-  r: 8;
-  stroke-width: 2;
+.chart-events-caption-label {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.chart-event-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--chip-color) 32%, transparent);
+  background: color-mix(in srgb, var(--chip-color) 8%, transparent);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.chart-event-chip-month {
+  font-weight: 700;
+  color: var(--chip-color);
 }
 
 .stock-chip-spark {
