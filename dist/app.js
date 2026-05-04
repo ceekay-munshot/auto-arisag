@@ -6088,7 +6088,9 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const activeSeries = series.filter((item) => item.values.some((value) => value !== null && value !== undefined));
   const width = 820;
   const height = 320;
-  const pad = { top: 24, right: 22, bottom: 44, left: 64 };
+  // Padding budget: room for ~5-char Y values on the left, half-label on the
+  // right so the rightmost x-tick can extend without clipping.
+  const pad = { top: 18, right: 28, bottom: 40, left: 56 };
   const innerWidth = width - pad.left - pad.right;
   const innerHeight = height - pad.top - pad.bottom;
   const allValues = activeSeries.flatMap((item) => item.values).filter((value) => value !== null && value !== undefined);
@@ -6111,26 +6113,49 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     yMax = Math.max(rawMax, 1);
   }
   const yRange = yMax - yMin || 1;
-  const steps = 4;
+  // 3 horizontal gridlines (top, middle, bottom) is the readable minimum for
+  // a quant chart — denser grids fight the data line.
+  const steps = 3;
+  // Cap visible x-labels to ~6 so they breathe instead of overlapping.
   const xLabelStep = labels.length > 10 ? Math.ceil(labels.length / 6) : 1;
 
   const gridLines = Array.from({ length: steps + 1 }, (_, index) => {
     const y = pad.top + (innerHeight / steps) * index;
     const value = yMax - (yRange / steps) * index;
+    const isBaseline = index === steps;
     return `
       <g>
-        <line x1="${pad.left}" x2="${width - pad.right}" y1="${y}" y2="${y}" stroke="rgba(20,39,62,0.10)" />
-        <text x="${pad.left - 12}" y="${y + 4}" text-anchor="end" font-size="11" fill="#667687">${formatter(value)}</text>
+        <line x1="${pad.left}" x2="${width - pad.right}" y1="${y}" y2="${y}"
+              stroke="${isBaseline ? "rgba(20,39,62,0.22)" : "rgba(20,39,62,0.07)"}"
+              stroke-width="${isBaseline ? 1 : 1}" />
+        <text x="${pad.left - 10}" y="${y + 4}" text-anchor="end"
+              font-size="11" font-weight="500" fill="#667687"
+              font-family="inherit">${formatter(value)}</text>
       </g>
     `;
   }).join("");
 
+  // X-axis labels: anchor the first label "start" and the last "end" so they
+  // never extend past the plot area into the panel padding (the original
+  // "middle"-anchored extremes were the visible "axis going out of the tab"
+  // problem).
   const xLabels = labels.map((label, index) => {
     if (index % xLabelStep !== 0 && index !== labels.length - 1) {
       return "";
     }
     const x = pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * index;
-    return `<text x="${x}" y="${height - 12}" text-anchor="middle" font-size="11" fill="#667687">${label}</text>`;
+    let anchor = "middle";
+    let dx = 0;
+    if (index === 0) {
+      anchor = "start";
+      dx = -2;
+    } else if (index === labels.length - 1) {
+      anchor = "end";
+      dx = 2;
+    }
+    return `<text x="${x + dx}" y="${height - 14}" text-anchor="${anchor}"
+                  font-size="11" font-weight="500" fill="#667687"
+                  font-family="inherit">${label}</text>`;
   }).join("");
 
   const lines = activeSeries.map((item) => {
@@ -6148,18 +6173,18 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     // opacity, and skip the data dots so they don't crowd the current line.
     const isDashed = item.dashed === true;
     const strokeAttrs = isDashed
-      ? `stroke="${item.color}" stroke-width="2.5" stroke-dasharray="8 5" opacity="0.78"`
-      : `stroke="${item.color}" stroke-width="3"`;
+      ? `stroke="${item.color}" stroke-width="2.2" stroke-dasharray="6 4" opacity="0.7"`
+      : `stroke="${item.color}" stroke-width="2.6"`;
     return `
       <g>
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
         ${isDashed ? "" : points.map((point) => `
-          <circle cx="${point.x}" cy="${point.y}" r="4.5" fill="${item.color}" pointer-events="none"></circle>
+          <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
           <circle
             class="chart-hover-target"
             cx="${point.x}"
             cy="${point.y}"
-            r="12"
+            r="14"
             fill="transparent"
             data-tooltip="${escapeHtml(`${item.label} | ${point.label}: ${tooltipFormatter(point.value)}`)}"
           ></circle>
