@@ -1493,11 +1493,15 @@ th:hover {
   color: #fff;
 }
 
+/* OEM chip rail — each segment-group (FADA retail, Live Vahan EV, EV trade
+   tracker) gets its own row inside the rail with the label sitting on a
+   dedicated line above its chips, so all chip rows line up flush-left and
+   the label widths can vary without staggering. */
 .oem-chip-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding: 14px 16px;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 18px;
   border-radius: var(--radius-md);
   background: var(--bg-ink);
   border: 1px solid var(--line);
@@ -1505,46 +1509,51 @@ th:hover {
 
 .oem-chip-group {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .oem-chip-group + .oem-chip-group {
-  border-left: 1px solid var(--line);
-  padding-left: 18px;
+  border-top: 1px dashed rgba(29, 42, 57, 0.10);
+  padding-top: 14px;
 }
 
 .oem-chip-group-label {
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+  margin: 0;
 }
 
 .oem-chip-group-items {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .oem-chip {
   appearance: none;
   border: 1px solid var(--line-strong);
-  background: var(--panel);
+  background: var(--panel-strong);
   color: var(--text);
   padding: 7px 14px;
   border-radius: 999px;
   font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.005em;
   cursor: pointer;
-  transition: background 140ms ease, color 140ms ease, border-color 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
 }
 
 .oem-chip:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(194, 108, 58, 0.12);
 }
 
 .oem-chip.is-active {
@@ -1555,19 +1564,23 @@ th:hover {
   box-shadow: 0 6px 18px rgba(20, 39, 62, 0.18);
 }
 
+.oem-chip.is-active:hover {
+  color: #f7f1e4;
+}
+
 .oem-section-body {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-@media (max-width: 960px) {
-  .oem-chip-group + .oem-chip-group {
-    border-left: 0;
-    padding-left: 0;
-    border-top: 1px solid var(--line);
-    padding-top: 14px;
-    width: 100%;
+@media (max-width: 640px) {
+  .oem-chip-row {
+    padding: 14px;
+  }
+  .oem-chip {
+    padding: 6px 12px;
+    font-size: 0.78rem;
   }
 }
 
