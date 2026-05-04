@@ -49,13 +49,16 @@ jobs:
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
-      # SIAM history backfill — replaced the broken Wayback-based scraper
-      # with one that walks SIAM's own listing page directly. Restricted to
-      # the 09:00 UTC tick (heavy run) to keep the lighter ticks fast.
-      - name: Extend SIAM wholesale history
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
-        run: python -u scripts/extend_siam_history.py
-        continue-on-error: true
+      # SIAM history: deepening now happens forward via update_siam itself
+      # (it appends each ingested month to data/siam_history.json). The
+      # listing-page scraper at scripts/extend_siam_history.py is preserved
+      # but disabled — SIAM's listing page is JS-rendered, so static HTML
+      # parsing finds 0 detail URLs. Re-enable here if the listing ever
+      # becomes server-side-rendered again.
+      # - name: Extend SIAM wholesale history
+      #   if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+      #   run: python -u scripts/extend_siam_history.py
+      #   continue-on-error: true
 
       - name: Backfill listed-OEM company history
         # Idempotent — discovers monthly company press releases via Wayback
