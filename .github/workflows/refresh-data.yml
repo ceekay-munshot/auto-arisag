@@ -49,11 +49,13 @@ jobs:
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
-      # SIAM history backfill removed 2026-05 — Wayback CDX consistently
-      # returns 0 parseable releases, so the step churned for ~3-5 min per
-      # run with nothing to show for it. The snapshot file
-      # data/siam_history.json is preserved and still surfaces in the
-      # dashboard. Re-enable here if SIAM ever becomes scrape-able again.
+      # SIAM history backfill — replaced the broken Wayback-based scraper
+      # with one that walks SIAM's own listing page directly. Restricted to
+      # the 09:00 UTC tick (heavy run) to keep the lighter ticks fast.
+      - name: Extend SIAM wholesale history
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        run: python -u scripts/extend_siam_history.py
+        continue-on-error: true
 
       - name: Backfill listed-OEM company history
         # Idempotent — discovers monthly company press releases via Wayback
