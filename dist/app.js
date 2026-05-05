@@ -3662,62 +3662,116 @@ function renderChannelPulse() {
   }
 
   if (threeWheelSubsegments.length) {
-    cards.push(`
-      <div class="chart-card">
-        <div class="chart-title-row">
-          <div>
-            <p class="small-label">3W mix</p>
-            <h3>Latest 3W structure</h3>
-          </div>
-          <div class="button-row">
-            ${renderSourceAction(retail.source_meta.url)}
-          </div>
-        </div>
-        <div class="subsegment-list">
-          ${threeWheelSubsegments.map((item) => `
-            <div class="subsegment-row">
-              <div>
-                <strong>${item.label}</strong>
-                <p class="table-note">${formatSigned(item.yoy_pct)} YoY | ${formatSigned(item.mom_pct)} MoM</p>
-              </div>
-              <strong>${formatUnits(item.units)}</strong>
-            </div>
-          `).join("")}
-        </div>
-      </div>
-    `);
+    cards.push(renderSubsegmentCard(retail, "3W", threeWheelSubsegments, "3W mix", "3W structure: e-rickshaw vs ICE passenger vs goods"));
   }
 
   if (cvSubsegments.length) {
-    cards.push(`
-      <div class="chart-card">
-        <div class="chart-title-row">
-          <div>
-            <p class="small-label">CV mix</p>
-            <h3>Latest CV tonnage split</h3>
-          </div>
-          <div class="button-row">
-            ${renderSourceAction(retail.source_meta.url)}
-          </div>
-        </div>
-        <div class="subsegment-list">
-          ${cvSubsegments.map((item) => `
-            <div class="subsegment-row">
-              <div>
-                <strong>${item.label}</strong>
-                <p class="table-note">${formatSigned(item.yoy_pct)} YoY | ${formatSigned(item.mom_pct)} MoM</p>
-              </div>
-              <strong>${formatUnits(item.units)}</strong>
-            </div>
-          `).join("")}
-        </div>
-      </div>
-    `);
+    cards.push(renderSubsegmentCard(retail, "CV", cvSubsegments, "CV mix", "CV tonnage split: HCV / MCV / LCV / Others"));
   }
 
   return `
     <div class="panel-grid one channel-grid">
       ${cards.join("")}
+    </div>
+  `;
+}
+
+// CV / 3W subsegment card. Like the urban-rural card, switches between two
+// presentations based on whether the FADA-history backfill has populated
+// monthly history yet. With history: stacked-area-style multi-line chart of
+// each subsegment's monthly units, plus a latest-month strip. Without:
+// legacy snapshot list (units + YoY/MoM per subsegment).
+function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading) {
+  const series = asArray(retail.subsegment_series?.[category]);
+  const months = [...new Set(series.map((row) => row.month))].sort();
+  const hasHistory = months.length >= 2;
+  const sourceLink = renderSourceAction(retail.source_meta.url);
+  if (!hasHistory) {
+    return `
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">${smallLabel}</p>
+            <h3>Latest ${heading}</h3>
+          </div>
+          <div class="button-row">${sourceLink}</div>
+        </div>
+        <div class="subsegment-list">
+          ${latestRows.map((item) => `
+            <div class="subsegment-row">
+              <div>
+                <strong>${item.label}</strong>
+                <p class="table-note">${formatSigned(item.yoy_pct)} YoY | ${formatSigned(item.mom_pct)} MoM</p>
+              </div>
+              <strong>${formatUnits(item.units)}</strong>
+            </div>
+          `).join("")}
+        </div>
+        <p class="table-note" style="margin-top:8px;">Historical chart unlocks once scripts/backfill_fada_history.py has populated subsegment history (runs in CI on the heavy 09:00 UTC tick).</p>
+      </div>
+    `;
+  }
+  const labels = [...new Set(series.map((row) => row.label))];
+  const palette = [
+    dashboardData.chart_colors.PV,
+    dashboardData.chart_colors["2W"],
+    dashboardData.chart_colors["3W"],
+    dashboardData.chart_colors.CV,
+    dashboardData.chart_colors.TRACTOR,
+    dashboardData.chart_colors.EV,
+  ];
+  const chartSeries = labels.map((label, idx) => {
+    const byMonth = new Map(
+      series.filter((r) => r.label === label).map((r) => [r.month, r.units]),
+    );
+    return {
+      label,
+      color: palette[idx % palette.length],
+      values: months.map((m) => byMonth.get(m) ?? null),
+    };
+  });
+  registerDownload(
+    `subsegment-${category.toLowerCase()}-history`,
+    `${category.toLowerCase()}_subsegment_history.csv`,
+    ["month", "label", "units", "mom_pct", "yoy_pct"],
+    series.map((r) => ({
+      month: r.month,
+      label: r.label,
+      units: r.units,
+      mom_pct: r.mom_pct,
+      yoy_pct: r.yoy_pct,
+    })),
+  );
+  const latestMonth = months[months.length - 1];
+  const latestStrip = latestRows.map((row) => `
+    <span class="subsegment-strip-pair">
+      <span class="small-label">${row.label}</span>
+      <strong>${formatUnits(row.units)}</strong>
+      <span class="${row.yoy_pct >= 0 ? "positive" : "negative"}">${formatSigned(row.yoy_pct)} YoY</span>
+    </span>
+  `).join("");
+  return `
+    <div class="chart-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">${smallLabel}</p>
+          <h3>Monthly history · ${heading}</h3>
+        </div>
+        <div class="button-row">
+          ${sourceLink}
+          ${renderDownloadIcon(`subsegment-${category.toLowerCase()}-history`)}
+        </div>
+      </div>
+      <div class="chart-frame compact">
+        ${lineChart(months.map(monthLabel), chartSeries, axisFormat, formatUnits, buildChartEvents())}
+      </div>
+      <div class="chart-legend">
+        ${chartSeries.map((s) => legendItem(s.label, s.color)).join("")}
+      </div>
+      <div class="subsegment-latest-strip">
+        <span class="urban-rural-strip-meta">Latest (${monthLabel(latestMonth)}):</span>
+        ${latestStrip}
+      </div>
     </div>
   `;
 }
@@ -4821,8 +4875,89 @@ function renderWholesaleSection() {
           </div>
           <p class="legend-note">This is a directional read, not a reconciliation exercise. Timing and reporting scope differ.</p>
         </div>
+        ${renderWholesaleExportsCard(wholesale, months)}
       </div>
     </section>
+  `;
+}
+
+// SIAM exports card. Renders a multi-line trend chart of vehicle exports
+// (PV / 2W / 3W / CV) when ≥2 months carry export data — falls back to a
+// "data not yet captured" stub before the SIAM parser has captured live
+// export prose. Critical for OEMs like Bajaj, TVS, Eicher whose theses
+// hinge on overseas momentum.
+function renderWholesaleExportsCard(wholesale, months) {
+  const exportRows = months.flatMap((m) =>
+    asArray(m.exports).map((row) => ({ ...row, month: m.month, label: m.label })),
+  );
+  const monthsWithExports = [...new Set(exportRows.map((r) => r.month))].sort();
+  if (monthsWithExports.length < 2) {
+    return `
+      <div class="chart-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Exports</p>
+            <h3>Monthly vehicle exports by category</h3>
+          </div>
+          <div class="button-row">
+            ${renderSourceAction(wholesale.source_meta.url)}
+          </div>
+        </div>
+        <p class="empty-note">SIAM's export prose only carries on quarter-end releases, so monthly exports populate gradually as the parser captures Q1 / Q4 commentaries. The chart will turn on as soon as ≥2 months have export numbers extracted (next CI tick).</p>
+      </div>
+    `;
+  }
+  const labelMap = {
+    PV: "PV exports", "2W": "2W exports", "3W": "3W exports", CV: "CV exports",
+  };
+  const colorByCat = {
+    PV: dashboardData.chart_colors.PV,
+    "2W": dashboardData.chart_colors["2W"],
+    "3W": dashboardData.chart_colors["3W"],
+    CV: dashboardData.chart_colors.CV,
+  };
+  const cats = [...new Set(exportRows.map((r) => r.category))];
+  const series = cats.map((cat) => {
+    const byMonth = new Map(
+      exportRows.filter((r) => r.category === cat).map((r) => [r.month, r.units]),
+    );
+    return {
+      label: labelMap[cat] || `${cat} exports`,
+      color: colorByCat[cat] || dashboardData.chart_colors.TOTAL,
+      values: monthsWithExports.map((m) => byMonth.get(m) ?? null),
+    };
+  });
+  registerDownload(
+    "siam-exports",
+    "siam_exports_trend.csv",
+    ["month", "category", "units", "yoy_pct"],
+    exportRows.map((r) => ({
+      month: r.month,
+      category: r.category,
+      units: r.units,
+      yoy_pct: r.yoy_pct,
+    })),
+  );
+  return `
+    <div class="chart-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">Exports</p>
+          <h3>Monthly vehicle exports by category</h3>
+        </div>
+        <div class="button-row">
+          ${renderSourceAction(wholesale.source_meta.url)}
+          ${renderDownloadIcon("siam-exports")}
+        </div>
+      </div>
+      <div class="chart-frame">
+        ${lineChart(monthsWithExports.map(monthLabel), series, axisFormat, formatUnits, buildChartEvents())}
+      </div>
+      <div class="chart-legend">
+        ${series.map((s) => legendItem(s.label, s.color)).join("")}
+      </div>
+      <p class="legend-note">From SIAM monthly press-release prose. Quarter-end releases (Q1 / Q4) usually carry the richest export commentary; pure-monthly releases sometimes omit category-level export numbers.</p>
+    </div>
   `;
 }
 

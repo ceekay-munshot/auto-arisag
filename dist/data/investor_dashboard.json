@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T06:42:19.848057+00:00",
+  "generated_at": "2026-05-05T07:06:04.093953+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -5921,6 +5921,75 @@
           "rural_yoy_pct": 11.65
         }
       ],
+      "subsegment_series": {
+        "CV": [
+          {
+            "month": "2026-03",
+            "label": "HCV",
+            "units": 34775,
+            "mom_pct": -1.0,
+            "yoy_pct": 18.55
+          },
+          {
+            "month": "2026-03",
+            "label": "LCV",
+            "units": 59379,
+            "mom_pct": 3.18,
+            "yoy_pct": 11.99
+          },
+          {
+            "month": "2026-03",
+            "label": "MCV",
+            "units": 8326,
+            "mom_pct": 2.93,
+            "yoy_pct": 25.5
+          },
+          {
+            "month": "2026-03",
+            "label": "Others",
+            "units": 56,
+            "mom_pct": -1.75,
+            "yoy_pct": -29.11
+          }
+        ],
+        "3W": [
+          {
+            "month": "2026-03",
+            "label": "3W goods",
+            "units": 14006,
+            "mom_pct": -2.3,
+            "yoy_pct": 27.28
+          },
+          {
+            "month": "2026-03",
+            "label": "3W passenger",
+            "units": 59283,
+            "mom_pct": -2.13,
+            "yoy_pct": 31.8
+          },
+          {
+            "month": "2026-03",
+            "label": "3W personal",
+            "units": 117,
+            "mom_pct": 9.35,
+            "yoy_pct": 32.95
+          },
+          {
+            "month": "2026-03",
+            "label": "E-rickshaw goods",
+            "units": 7425,
+            "mom_pct": 2.16,
+            "yoy_pct": 3.24
+          },
+          {
+            "month": "2026-03",
+            "label": "E-rickshaw passenger",
+            "units": 28946,
+            "mom_pct": -16.94,
+            "yoy_pct": -19.73
+          }
+        ]
+      },
       "latest_snapshot": {
         "total_units": 2692449,
         "total_yoy_pct": 25.28,
@@ -7096,7 +7165,8 @@
               "yoy_pct": 5.9
             }
           ],
-          "domestic_total": 2752754
+          "domestic_total": 2752754,
+          "exports": []
         },
         {
           "month": "2025-11",
@@ -7124,7 +7194,8 @@
               "yoy_pct": 21.3
             }
           ],
-          "domestic_total": 2428879
+          "domestic_total": 2428879,
+          "exports": []
         },
         {
           "month": "2025-12",
@@ -7152,7 +7223,8 @@
               "yoy_pct": null
             }
           ],
-          "domestic_total": 2002176
+          "domestic_total": 2002176,
+          "exports": []
         },
         {
           "month": "2026-01",
@@ -7180,7 +7252,8 @@
               "yoy_pct": 30.2
             }
           ],
-          "domestic_total": 2450944
+          "domestic_total": 2450944,
+          "exports": []
         },
         {
           "month": "2026-02",
@@ -7208,7 +7281,8 @@
               "yoy_pct": 29.0
             }
           ],
-          "domestic_total": 2363684
+          "domestic_total": 2363684,
+          "exports": []
         },
         {
           "month": "2026-03",
@@ -7236,7 +7310,8 @@
               "yoy_pct": 21.4
             }
           ],
-          "domestic_total": 2494861
+          "domestic_total": 2494861,
+          "exports": []
         }
       ],
       "latest_snapshot": {
@@ -7265,7 +7340,8 @@
             "yoy_pct": 21.4
           }
         ],
-        "domestic_total": 2494861
+        "domestic_total": 2494861,
+        "exports": []
       },
       "retail_vs_wholesale": [
         {

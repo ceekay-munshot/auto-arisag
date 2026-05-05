@@ -41,6 +41,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from dashboard.update_snapshot import (  # noqa: E402  (sys.path tweak above)
+    build_fada_latest_subsegments,
     compact_pdf_pages,
     extract_pdf_pages,
     parse_fada_monthly_fuel_mix,
@@ -67,6 +68,7 @@ def load_history() -> dict:
             if isinstance(payload, dict):
                 payload.setdefault("monthly_fuel_mix", {})
                 payload.setdefault("urban_rural_growth_series", [])
+                payload.setdefault("subsegment_series", {"CV": [], "3W": []})
                 payload.setdefault("sources", {})
                 return payload
         except json.JSONDecodeError:
@@ -74,6 +76,7 @@ def load_history() -> dict:
     return {
         "monthly_fuel_mix": {},
         "urban_rural_growth_series": [],
+        "subsegment_series": {"CV": [], "3W": []},
         "sources": {},
     }
 
@@ -101,6 +104,23 @@ def upsert_urban_rural(
     return sorted(kept, key=lambda item: (item.get("month") or "", item.get("category") or ""))
 
 
+def upsert_subsegment_series(
+    series: list[dict],
+    month_id: str,
+    rows: list[dict],
+) -> list[dict]:
+    """Replace any subsegment rows for `month_id` with `rows`. Each row already
+    carries a `label` key (e.g. "LCV" / "MCV" / "HCV") from the parser. The
+    subsegment series is per-category (CV or 3W); the caller picks which list
+    to upsert into."""
+    kept = [item for item in series if item.get("month") != month_id]
+    for row in rows:
+        if not row.get("label"):
+            continue
+        kept.append({"month": month_id, **{k: v for k, v in row.items() if k != "month"}})
+    return sorted(kept, key=lambda item: (item.get("month") or "", item.get("label") or ""))
+
+
 def main() -> int:
     if not SNAPSHOT_PATH.exists():
         print(f"missing {SNAPSHOT_PATH}", file=sys.stderr)
@@ -117,14 +137,20 @@ def main() -> int:
     skipped = 0
 
     for month_id, url in sorted(targets):
-        # Skip the fetch when we already have BOTH a fuel-mix entry and at
-        # least one urban-rural row for this month with the same URL.
+        # Skip the fetch when fuel-mix, urban-rural, AND subsegments are all
+        # cached at the same source URL. Otherwise re-fetch so any newly added
+        # parser surfaces a previously-missing layer.
         already_fuel = month_id in history["monthly_fuel_mix"]
         already_urban = any(
             row.get("month") == month_id for row in history["urban_rural_growth_series"]
         )
+        already_subseg = any(
+            row.get("month") == month_id
+            for cat_rows in (history.get("subsegment_series") or {}).values()
+            for row in cat_rows
+        )
         same_source = history["sources"].get(month_id) == url
-        if already_fuel and already_urban and same_source:
+        if already_fuel and already_urban and already_subseg and same_source:
             print(f"  {month_id}: already cached, skipping")
             skipped += 1
             continue
@@ -174,6 +200,20 @@ def main() -> int:
         except Exception as exc:
             print(f"  {month_id}: urban_rural parse failed ({exc})", file=sys.stderr, flush=True)
 
+        try:
+            subsegments = build_fada_latest_subsegments(wide_pages) or {}
+            for cat in ("CV", "3W"):
+                cat_rows = subsegments.get(cat) or []
+                if not cat_rows:
+                    continue
+                bucket = history["subsegment_series"].setdefault(cat, [])
+                history["subsegment_series"][cat] = upsert_subsegment_series(
+                    bucket, detected_month, cat_rows,
+                )
+                landed.append(f"{cat}_subsegments({len(cat_rows)})")
+        except Exception as exc:
+            print(f"  {month_id}: subsegment parse failed ({exc})", file=sys.stderr, flush=True)
+
         if not landed:
             print(f"  {month_id}: nothing parsed", file=sys.stderr, flush=True)
             failed += 1
@@ -186,10 +226,15 @@ def main() -> int:
     save_history(history)
     fuel_count = len(history["monthly_fuel_mix"])
     urban_months = len({row.get("month") for row in history["urban_rural_growth_series"]})
+    subseg_counts = {
+        cat: len({row.get("month") for row in (history.get("subsegment_series") or {}).get(cat, [])})
+        for cat in ("CV", "3W")
+    }
     print(
         f"\nWrote {HISTORY_PATH} "
         f"(added {added}, failed {failed}, skipped {skipped}). "
-        f"Coverage: {fuel_count} fuel-mix months, {urban_months} urban-rural months."
+        f"Coverage: {fuel_count} fuel-mix months, {urban_months} urban-rural months, "
+        f"CV subseg {subseg_counts['CV']}m, 3W subseg {subseg_counts['3W']}m."
     )
     return 0 if failed == 0 else 2
 

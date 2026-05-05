@@ -492,6 +492,11 @@ def build_retail_module(
         # build._merge_fada_history; falls back to just the latest month if
         # no fada_history.json has been backfilled yet).
         "urban_rural_growth_series": fada.get("urban_rural_growth_series") or [],
+        # Monthly CV / 3W subsegment history. Same fallback semantics as
+        # above: pre-backfill it carries only the latest month so the
+        # frontend can detect the no-history path and render a snapshot
+        # bar instead of a useless one-point chart.
+        "subsegment_series": fada.get("subsegment_series") or {},
         "latest_snapshot": {
             "total_units": latest_point["total_units"],
             "total_yoy_pct": latest_point["total_yoy_pct"],
@@ -530,6 +535,20 @@ def build_wholesale_module(
                     "yoy_pct": values["yoy_pct"],
                 }
             )
+        # Exports come through whenever the SIAM parser found export numbers
+        # in the press release prose (typically only Q-end releases). Empty
+        # dict if not — frontend gates the export chart on having ≥2 months.
+        exports_payload = []
+        for category in ("PV", "2W", "3W", "CV"):
+            export_row = (record.get("exports") or {}).get(category)
+            if not export_row:
+                continue
+            exports_payload.append({
+                "category": category,
+                "label": CATEGORY_LABELS.get(category, category),
+                "units": export_row.get("units"),
+                "yoy_pct": export_row.get("yoy_pct"),
+            })
         months.append(
             {
                 "month": record["month"],
@@ -539,6 +558,7 @@ def build_wholesale_module(
                 "production_total": record["production_total"],
                 "domestic_sales": domestic_sales,
                 "domestic_total": total_domestic,
+                "exports": exports_payload,
             }
         )
 

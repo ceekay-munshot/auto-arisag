@@ -22,20 +22,30 @@ FADA_HISTORY_PATH = Path("data/fada_history.json")
 TRACKED_OEM_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
 
 
+def _empty_fada_history() -> dict:
+    return {
+        "monthly_fuel_mix": {},
+        "urban_rural_growth_series": [],
+        "subsegment_series": {"CV": [], "3W": []},
+        "sources": {},
+    }
+
+
 def _load_fada_history() -> dict:
-    """Reads the historical fuel-mix + urban/rural splits backfilled by
-    scripts/backfill_fada_history.py. Tolerates a missing file (the live
-    refresh path on its own only carries the latest month)."""
+    """Reads the historical fuel-mix + urban/rural + subsegment splits
+    backfilled by scripts/backfill_fada_history.py. Tolerates a missing file
+    (the live refresh path on its own only carries the latest month)."""
     if not FADA_HISTORY_PATH.exists():
-        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+        return _empty_fada_history()
     try:
         payload = json.loads(FADA_HISTORY_PATH.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
-        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+        return _empty_fada_history()
     if not isinstance(payload, dict):
-        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+        return _empty_fada_history()
     payload.setdefault("monthly_fuel_mix", {})
     payload.setdefault("urban_rural_growth_series", [])
+    payload.setdefault("subsegment_series", {"CV": [], "3W": []})
     payload.setdefault("sources", {})
     return payload
 
@@ -94,6 +104,28 @@ def _merge_fada_history(snapshot: dict) -> None:
             existing_keys.add(key)
     urban_rural_history.sort(key=lambda row: (row.get("month") or "", row.get("category") or ""))
     fada["urban_rural_growth_series"] = urban_rural_history
+
+    # CV / 3W subsegment monthly history. Mirror the same snapshot-in-history
+    # pattern as urban-rural so the latest live month always shows up on the
+    # chart even before the backfill has run.
+    subseg_history = history.get("subsegment_series") or {}
+    latest_subsegments = fada.get("latest_subsegments") or {}
+    merged_subseg: dict[str, list[dict]] = {}
+    for category in ("CV", "3W"):
+        rows = list(subseg_history.get(category) or [])
+        if latest_month:
+            existing_keys = {
+                (row.get("month"), row.get("label")) for row in rows
+            }
+            for row in latest_subsegments.get(category) or []:
+                key = (latest_month, row.get("label"))
+                if key in existing_keys:
+                    continue
+                rows.append({"month": latest_month, **{k: v for k, v in row.items() if k != "month"}})
+                existing_keys.add(key)
+        rows.sort(key=lambda row: (row.get("month") or "", row.get("label") or ""))
+        merged_subseg[category] = rows
+    fada["subsegment_series"] = merged_subseg
 
 
 def _load_oem_history() -> dict:

@@ -397,6 +397,61 @@ def parse_siam_release(html: str, source_url: str) -> dict:
     )
     coverage_note = compact_text(coverage_match.group(1)) if coverage_match else ""
 
+    # Exports — SIAM mentions monthly export volumes in prose for some
+    # categories. Phrasing varies across releases ("Two-Wheeler Exports",
+    # "Exports of Two-Wheelers", "2W Exports"), so we try a few patterns
+    # per category and accept None if none match. Quarterly releases (Q1
+    # / Q4) usually carry richer export commentary than typical monthly.
+    def _match_export(category_terms: tuple[str, ...]) -> tuple[int | None, float | None]:
+        terms_re = "|".join(re.escape(term) for term in category_terms)
+        # Pattern 1: "Two-Wheeler Exports... grew by 8.5%... 304,591 units"
+        # Pattern 2: "Exports of Two-Wheelers... at 304,591 units"
+        # Pattern 3: "Two-Wheeler exports of 304,591 units recording... 8.5%"
+        for pattern in (
+            rf"(?:{terms_re}).{{0,80}}?Exports?.{{0,200}}?(?:grew|increased|rose|growth of|registering)\s+(?:by\s+)?([0-9.]+)%.{{0,200}}?([\d,]+)\s*units",
+            rf"Exports?\s+of\s+(?:{terms_re}).{{0,200}}?(?:at|stood at|were|of)\s+([\d,]+)\s*units(?:.{{0,80}}?(?:growth|grew|growing).{{0,40}}?([0-9.]+)%)?",
+            rf"(?:{terms_re}).{{0,80}}?[Ee]xports?\s+(?:of|stood at|were|at)?\s*([\d,]+)\s*units",
+        ):
+            m = re.search(pattern, commentary_text, flags=re.IGNORECASE | re.DOTALL)
+            if not m:
+                continue
+            groups = m.groups()
+            # Disambiguate which group holds units vs %: units always have a
+            # comma or 4+ digits; % has a decimal.
+            units_val: int | None = None
+            yoy_val: float | None = None
+            for g in groups:
+                if g is None:
+                    continue
+                if "," in g or (len(g) >= 4 and "." not in g):
+                    try:
+                        units_val = parse_indian_number(g)
+                    except (ValueError, TypeError):
+                        pass
+                else:
+                    try:
+                        yoy_val = float(g)
+                    except (ValueError, TypeError):
+                        pass
+            if units_val is not None:
+                return units_val, yoy_val
+        return None, None
+
+    pv_export_units, pv_export_yoy = _match_export(("Passenger Vehicle", "Passenger Vehicles", "PV"))
+    two_w_export_units, two_w_export_yoy = _match_export(("Two-Wheeler", "Two-Wheelers", "Two Wheeler", "2W"))
+    three_w_export_units, three_w_export_yoy = _match_export(("Three-Wheeler", "Three-Wheelers", "Three Wheeler", "3W"))
+    cv_export_units, cv_export_yoy = _match_export(("Commercial Vehicle", "Commercial Vehicles", "CV"))
+
+    exports: dict[str, dict[str, float | int | None]] = {}
+    for label, units, yoy in (
+        ("PV", pv_export_units, pv_export_yoy),
+        ("2W", two_w_export_units, two_w_export_yoy),
+        ("3W", three_w_export_units, three_w_export_yoy),
+        ("CV", cv_export_units, cv_export_yoy),
+    ):
+        if units is not None:
+            exports[label] = {"units": units, "yoy_pct": yoy}
+
     return {
         "month": month,
         "release_date": datetime.strptime(date_match.group(1), "%d/%m/%Y").strftime("%Y-%m-%d"),
@@ -407,6 +462,7 @@ def parse_siam_release(html: str, source_url: str) -> dict:
             "3W": {"units": parse_indian_number(three_w_match.group(1)), "yoy_pct": three_w_yoy},
             "2W": {"units": parse_indian_number(two_w_match.group(1)), "yoy_pct": two_w_yoy},
         },
+        "exports": exports,
         "coverage_note": coverage_note,
     }
 

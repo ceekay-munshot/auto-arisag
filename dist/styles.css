@@ -1333,6 +1333,38 @@ p {
   font-weight: 700;
 }
 
+/* Latest-month strip on the CV / 3W subsegment historical card. Same
+   visual treatment as the urban-rural strip but allows multiple compact
+   pairs (one per subsegment) to flow across the row. */
+.subsegment-latest-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(20, 39, 62, 0.04);
+  border-radius: var(--radius-sm);
+}
+
+.subsegment-strip-pair {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.subsegment-strip-pair .small-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+}
+
+.subsegment-strip-pair strong {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
 .mini-table-card,
 .mini-insight {
   padding: 14px 16px;
