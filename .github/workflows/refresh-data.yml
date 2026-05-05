@@ -173,7 +173,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json data/fada_history.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi
