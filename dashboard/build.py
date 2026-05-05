@@ -19,7 +19,25 @@ from .vahan_oem import read_vahan_oem_cache, refresh_vahan_oem_cache
 OEM_HISTORY_PATH = Path("data/oem_history.json")
 LEGACY_PV_HISTORY_PATH = Path("data/pv_oem_history.json")
 FADA_HISTORY_PATH = Path("data/fada_history.json")
+EV_OEM_TRACKER_PATH = Path("data/ev_oem_tracker.json")
 TRACKED_OEM_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
+
+
+def _load_ev_oem_tracker() -> dict | None:
+    """Reads the per-segment EV OEM leaderboard built by
+    scripts/refresh_ev_oem_tracker.py. Returns None when the file is missing
+    so the frontend's hardcoded fallback path stays usable."""
+    if not EV_OEM_TRACKER_PATH.exists():
+        return None
+    try:
+        payload = json.loads(EV_OEM_TRACKER_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(payload, dict):
+        return None
+    if not isinstance(payload.get("datasets"), list):
+        return None
+    return payload
 
 
 def _empty_fada_history() -> dict:
@@ -261,6 +279,14 @@ def build_dashboard(output_path: Path) -> dict:
         vahan_oem_cache,
         news_snapshot,
     )
+    # Attach the per-segment EV OEM leaderboard so the frontend can read
+    # live trade-press data instead of its hardcoded fallback. Refreshed
+    # by scripts/refresh_ev_oem_tracker.py on each CI tick; on parse
+    # failure the file is left intact and the frontend's fallback (or the
+    # last good scrape) keeps the tracker populated.
+    ev_tracker = _load_ev_oem_tracker()
+    if ev_tracker:
+        payload["ev_oem_tracker"] = ev_tracker
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     return payload

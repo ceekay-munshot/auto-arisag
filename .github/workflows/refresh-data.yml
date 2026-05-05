@@ -138,6 +138,17 @@ jobs:
         run: python -u scripts/refresh_launches.py
         continue-on-error: true
 
+      - name: Refresh per-segment EV OEM leaderboard (trade-press scrape)
+        # Walks the latest monthly leaderboard articles for E-2W
+        # (Autocar Pro), E-4W (RushLane), E-3W goods (EVReporter), and
+        # e-bus (Business Today) and persists into data/ev_oem_tracker.json.
+        # Replaces what used to be a hand-curated array baked into
+        # static/app.js. Per-segment fallback: if a source fails to
+        # parse, the previous month's rows survive — dashboard never
+        # renders empty.
+        run: python -u scripts/refresh_ev_oem_tracker.py
+        continue-on-error: true
+
       - name: Rebuild dashboard with OEM/SIAM/company history
         # The backfills may have added new months, so rebuild so the periodized
         # OEM tables, the SIAM trend chart, and the listed-company spotlight
@@ -173,7 +184,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json data/fada_history.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json data/fada_history.json data/ev_oem_tracker.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi

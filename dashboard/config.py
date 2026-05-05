@@ -581,7 +581,7 @@ PREMIUM_DATA_SOURCES = [
             "Vahan retail registrations (state-wise)",
             "State-wise Vahan registrations",
             "Vahan EV registrations (live, state + RTO)",
-            "EV trade tracker (live, currently hardcoded Mar 2026)",
+            "EV OEM tracker — replaces the trade-press scrape with verified VIN-level monthly data",
         ],
         "what_you_get": [
             "Daily / monthly registrations at state, RTO and PIN-code level",
@@ -598,12 +598,12 @@ PREMIUM_DATA_SOURCES = [
         "id": "ev-trade-paid",
         "name": "Department of Commerce EV Trade Data",
         "tier": "Government · DGFT",
-        "tagline": "Live HSN-code monthly EV import / export figures — the source for the EV trade tracker tile.",
-        "status": "partial",
-        "status_label": "Currently hardcoded",
-        "color": "amber",
+        "tagline": "Live HSN-code monthly EV import / export figures (separate from the EV OEM retail tracker, which now scrapes trade-press monthly leaderboards directly).",
+        "status": "absent",
+        "status_label": "Not yet integrated",
+        "color": "blue",
         "currently_unlocks": [
-            "EV trade tracker (replaces the static Mar 2026 snapshot with live monthly updates)",
+            "Monthly EV import / export volumes by HSN-8 + destination — adds a new export-trade panel to Wholesale lens",
         ],
         "what_you_get": [
             "Monthly export and import volumes + USD value at HSN-8 granularity",

@@ -3038,15 +3038,29 @@ function evCategoryOptions() {
 }
 
 function evOemTrackerDatasets() {
-  // Trade-press derived monthly EV OEM tracker. We tried wiring live
-  // Parivahan Vahan (per-maker EV registrations) on Apr-May 2026 but the
-  // GitHub Actions runner IP times out / gets refused on every Parivahan
-  // call, so the periodised "Live Vahan EV" chip group never populates.
-  // Until we route through a paid Vahan API (ExpertView, DataDelve, etc.)
-  // or a runner inside India, this hand-curated trade-press tracker is the
-  // EV view on the dashboard. Numbers below are pulled from each segment's
-  // monthly leaderboard article and cross-checked where FADA's OEM
-  // annexure exposes the same brand.
+  // Live trade-press EV OEM leaderboard. Refreshed by
+  // scripts/refresh_ev_oem_tracker.py on each CI tick, persisted to
+  // data/ev_oem_tracker.json, and threaded through dashboardData.
+  // The legacy fallback below carries the same shape so the dashboard
+  // never renders empty if the data file is missing or the scraper
+  // hasn't run yet.
+  const liveTracker = dashboardData?.ev_oem_tracker;
+  const liveDatasets = asArray(liveTracker?.datasets);
+  if (liveDatasets.length) {
+    return liveDatasets.map((dataset) => ({
+      ...dataset,
+      // Note is now sourced from the JSON; no longer wedge a stale
+      // PAID_API_NOTE on top.
+      rows: asArray(dataset.rows).map((row) => {
+        const share_pct = dataset.total_units ? (row.units / dataset.total_units) * 100 : null;
+        const growth_pct = row.prior_units ? ((row.units - row.prior_units) / row.prior_units) * 100 : null;
+        return { ...row, share_pct, growth_pct };
+      }),
+    }));
+  }
+
+  // Legacy hardcoded fallback — only kicks in when data/ev_oem_tracker.json
+  // hasn't been built yet. Same numbers as the JSON's bootstrap seed.
   const PAID_API_NOTE =
     "Live per-maker Vahan refresh requires a paid API (Parivahan blocks public scraping from cloud IPs); this segment's monthly leaderboard is hand-curated from trade-press reports until that's wired.";
 
@@ -3206,7 +3220,7 @@ function renderEvOemTracker() {
       <div class="stat-inline state-explorer-stats">
         <div class="stat-block">
           <span class="small-label">Latest month</span>
-          <strong>${selected.latest_month}</strong>
+          <strong>${selected.latest_month || "—"}</strong>
         </div>
         <div class="stat-block">
           <span class="small-label">${selected.label} total</span>
@@ -3216,6 +3230,12 @@ function renderEvOemTracker() {
           <span class="small-label">Source</span>
           <strong>${selected.source_name}</strong>
         </div>
+        ${dashboardData?.ev_oem_tracker?.as_of_date ? `
+        <div class="stat-block">
+          <span class="small-label">Last refreshed</span>
+          <strong>${new Date(dashboardData.ev_oem_tracker.as_of_date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</strong>
+        </div>
+        ` : ""}
       </div>
       ${renderTable(`ev-oem-${selected.id}`, columns, selected.rows, "compact-table")}
       <p class="legend-note">${selected.note}</p>
