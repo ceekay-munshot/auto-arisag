@@ -799,7 +799,6 @@ p {
 .category-card-grid .chip-card {
   display: flex;
   flex-direction: column;
-  min-height: 248px;
   height: 100%;
 }
 
