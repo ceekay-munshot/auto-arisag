@@ -18,7 +18,82 @@ from .vahan_oem import read_vahan_oem_cache, refresh_vahan_oem_cache
 
 OEM_HISTORY_PATH = Path("data/oem_history.json")
 LEGACY_PV_HISTORY_PATH = Path("data/pv_oem_history.json")
+FADA_HISTORY_PATH = Path("data/fada_history.json")
 TRACKED_OEM_CATEGORIES = ("PV", "2W", "3W", "CV", "TRACTOR", "CE")
+
+
+def _load_fada_history() -> dict:
+    """Reads the historical fuel-mix + urban/rural splits backfilled by
+    scripts/backfill_fada_history.py. Tolerates a missing file (the live
+    refresh path on its own only carries the latest month)."""
+    if not FADA_HISTORY_PATH.exists():
+        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+    try:
+        payload = json.loads(FADA_HISTORY_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+    if not isinstance(payload, dict):
+        return {"monthly_fuel_mix": {}, "urban_rural_growth_series": [], "sources": {}}
+    payload.setdefault("monthly_fuel_mix", {})
+    payload.setdefault("urban_rural_growth_series", [])
+    payload.setdefault("sources", {})
+    return payload
+
+
+def _merge_fada_history(snapshot: dict) -> None:
+    """Folds backfilled fuel-mix + urban/rural history into the live FADA
+    snapshot so analyze.py automatically picks up the longer timelines.
+
+    Two surfaces are extended:
+      * `fada.ev_share_series` — appended one row per (month, category) for
+        every historical month not already in the live series. The EV
+        penetration chart on the dashboard is computed from this, so adding
+        rows extends the chart timeline with no frontend change required.
+      * `fada.urban_rural_growth_series` — a new field carrying the full
+        monthly history of urban-vs-rural growth (the live snapshot only
+        carries the latest month under `latest_urban_rural_growth`). The
+        frontend reads this to render a historical chart.
+    """
+    history = _load_fada_history()
+    fada = snapshot.setdefault("fada", {})
+
+    monthly_fuel_mix = history.get("monthly_fuel_mix") or {}
+    if monthly_fuel_mix:
+        existing_series = list(fada.get("ev_share_series") or [])
+        existing_keys = {(row.get("month"), row.get("category")) for row in existing_series}
+        for month_id in sorted(monthly_fuel_mix):
+            mix = monthly_fuel_mix[month_id] or {}
+            for category, fuels in mix.items():
+                if (month_id, category) in existing_keys:
+                    continue
+                share = (fuels or {}).get("EV") or (fuels or {}).get("Electric") or 0.0
+                existing_series.append({
+                    "month": month_id,
+                    "category": category,
+                    "ev_share_pct": share,
+                })
+                existing_keys.add((month_id, category))
+        existing_series.sort(key=lambda row: (row.get("month") or "", row.get("category") or ""))
+        fada["ev_share_series"] = existing_series
+
+    urban_rural_history = list(history.get("urban_rural_growth_series") or [])
+    latest_rows = list(fada.get("latest_urban_rural_growth") or [])
+    latest_month = fada.get("latest_month")
+    if latest_month:
+        # Mirror the live latest-month snapshot into the historical series so
+        # the chart stops at the same point as every other lens.
+        existing_keys = {
+            (row.get("month"), row.get("category"))
+            for row in urban_rural_history
+        }
+        for row in latest_rows:
+            key = (latest_month, row.get("category"))
+            if key in existing_keys:
+                continue
+            urban_rural_history.append({"month": latest_month, **{k: v for k, v in row.items() if k != "month"}})
+            existing_keys.add(key)
+    urban_rural_history.sort(key=lambda row: (row.get("month") or "", row.get("category") or ""))
+    fada["urban_rural_growth_series"] = urban_rural_history
 
 
 def _load_oem_history() -> dict:
@@ -100,6 +175,7 @@ def upsert_oem_history(snapshot: dict) -> None:
 def build_dashboard(output_path: Path) -> dict:
     snapshot = json.loads(DATA_SNAPSHOT_PATH.read_text(encoding="utf-8"))
     upsert_oem_history(snapshot)
+    _merge_fada_history(snapshot)
     news_snapshot = read_news_snapshot()
     vahan_oem_cache = read_vahan_oem_cache(output_path.parent / "vahan_oem_live.json")
     vahan_result = collect_vahan_imports(output_path.parent / "vahan")

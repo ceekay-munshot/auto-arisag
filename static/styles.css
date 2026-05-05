@@ -1255,6 +1255,73 @@ p {
   color: var(--text);
 }
 
+/* Urban-vs-rural historical chart card: chip-row category picker above
+   the chart, latest-month strip below for the legacy "snapshot" reads. */
+.urban-rural-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 10px;
+}
+
+.urban-rural-chip {
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 39, 62, 0.18);
+  background: #fff;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.urban-rural-chip:hover {
+  border-color: rgba(47, 137, 125, 0.5);
+}
+
+.urban-rural-chip.is-active {
+  background: var(--deep);
+  color: #fdfaf2;
+  border-color: var(--deep);
+}
+
+.urban-rural-latest-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(20, 39, 62, 0.04);
+  border-radius: var(--radius-sm);
+}
+
+.urban-rural-strip-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.urban-rural-strip-pair {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.urban-rural-strip-pair .small-label {
+  font-size: 0.66rem;
+}
+
+.urban-rural-strip-pair strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .mini-table-card,
 .mini-insight {
   padding: 14px 16px;

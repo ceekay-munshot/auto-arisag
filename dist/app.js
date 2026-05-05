@@ -10,6 +10,10 @@ const state = {
   // Compact / roomy table density — flows into <body data-density=...> via
   // applyDensity, and is persisted in the URL hash.
   density: "comfortable",
+  // Active category for the urban-vs-rural historical chart on Channel
+  // Pulse. Stays in sync with availableCategoryOptions when the user
+  // changes the global category filter.
+  urbanRuralCategory: "PV",
   companyTrend: "all",
   // Companies overlaid on top of the spotlight chart so investors can read
   // peers (e.g. Maruti vs Tata vs M&M) on a single canvas. Stored as an
@@ -1901,6 +1905,7 @@ function render() {
   setupOemSection();
   setupOemDrilldown();
   setupChangedMovers();
+  setupUrbanRuralCategoryPicker();
   setupPngExports();
   setupSorts();
   setupCompanyMapCards();
@@ -3652,30 +3657,7 @@ function renderChannelPulse() {
   }
 
   if (urbanRuralRows.length) {
-    cards.push(`
-      <div class="chart-card channel-card">
-        <div class="chart-title-row">
-          <div>
-            <p class="small-label">Urban vs rural</p>
-            <h3>Latest YoY and MoM spread</h3>
-          </div>
-          <div class="button-row">
-            ${renderSourceAction(retail.source_meta.url)}
-          </div>
-        </div>
-        ${renderTable(
-          "urban-rural",
-          [
-            { key: "label", label: "Category" },
-            { key: "urban_yoy_pct", label: "Urban YoY", type: "pct" },
-            { key: "rural_yoy_pct", label: "Rural YoY", type: "pct" },
-            { key: "urban_mom_pct", label: "Urban MoM", type: "pct" },
-            { key: "rural_mom_pct", label: "Rural MoM", type: "pct" },
-          ],
-          urbanRuralRows,
-        )}
-      </div>
-    `);
+    cards.push(renderUrbanRuralCard(retail, urbanRuralRows));
   }
 
   if (threeWheelSubsegments.length) {
@@ -3737,6 +3719,117 @@ function renderChannelPulse() {
       ${cards.join("")}
     </div>
   `;
+}
+
+// Urban-vs-rural card. When the dashboard build has a multi-month
+// urban_rural_growth_series (populated by the FADA-history backfill),
+// we render a historical line chart with category chips and a small
+// latest-month strip. When only one month is available (initial state
+// before the backfill has run), fall back to the legacy snapshot table.
+function renderUrbanRuralCard(retail, latestRows) {
+  const series = asArray(retail.urban_rural_growth_series);
+  const months = [...new Set(series.map((row) => row.month))].sort();
+  const hasHistory = months.length >= 2;
+  const sourceLink = renderSourceAction(retail.source_meta.url);
+  if (!hasHistory) {
+    return `
+      <div class="chart-card channel-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Urban vs rural</p>
+            <h3>Latest YoY and MoM spread</h3>
+          </div>
+          <div class="button-row">${sourceLink}</div>
+        </div>
+        ${renderTable(
+          "urban-rural",
+          [
+            { key: "label", label: "Category" },
+            { key: "urban_yoy_pct", label: "Urban YoY", type: "pct" },
+            { key: "rural_yoy_pct", label: "Rural YoY", type: "pct" },
+            { key: "urban_mom_pct", label: "Urban MoM", type: "pct" },
+            { key: "rural_mom_pct", label: "Rural MoM", type: "pct" },
+          ],
+          latestRows,
+        )}
+        <p class="table-note">Historical chart unlocks once scripts/backfill_fada_history.py has populated data/fada_history.json (runs in CI on the heavy 09:00 UTC tick).</p>
+      </div>
+    `;
+  }
+  const availableCategories = [...new Set(series.map((row) => row.category))]
+    .filter((cat) => allowedCategories().includes(cat));
+  if (!availableCategories.length) availableCategories.push("PV");
+  const activeCategory = availableCategories.includes(state.urbanRuralCategory)
+    ? state.urbanRuralCategory
+    : availableCategories[0];
+  state.urbanRuralCategory = activeCategory;
+  const filtered = months.map((month) => {
+    const row = series.find((r) => r.month === month && r.category === activeCategory);
+    return {
+      month,
+      label: monthLabel(month),
+      urban_yoy_pct: row?.urban_yoy_pct ?? null,
+      rural_yoy_pct: row?.rural_yoy_pct ?? null,
+      urban_mom_pct: row?.urban_mom_pct ?? null,
+      rural_mom_pct: row?.rural_mom_pct ?? null,
+    };
+  });
+  const labels = filtered.map((p) => p.label);
+  const chartSeries = [
+    { label: "Urban YoY", color: dashboardData.chart_colors["2W"] || "#7ca4ff", values: filtered.map((p) => p.urban_yoy_pct) },
+    { label: "Rural YoY", color: dashboardData.chart_colors.TRACTOR || "#d7c46f", values: filtered.map((p) => p.rural_yoy_pct) },
+  ];
+  registerDownload(
+    "urban-rural-history",
+    `urban_rural_${activeCategory.toLowerCase()}_history.csv`,
+    ["month", "category", "urban_yoy_pct", "rural_yoy_pct", "urban_mom_pct", "rural_mom_pct"],
+    filtered.map((p) => ({ ...p, category: activeCategory })),
+  );
+  const labelMap = {
+    PV: "Passenger Vehicles", "2W": "Two-Wheelers", "3W": "Three-Wheelers",
+    CV: "Commercial Vehicles", TRACTOR: "Tractors", CE: "Construction Equipment",
+  };
+  const latest = filtered[filtered.length - 1];
+  return `
+    <div class="chart-card channel-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">Urban vs rural</p>
+          <h3>YoY growth history · ${labelMap[activeCategory] || activeCategory}</h3>
+        </div>
+        <div class="button-row">
+          ${sourceLink}
+          ${renderDownloadIcon("urban-rural-history")}
+        </div>
+      </div>
+      <div class="urban-rural-chip-row">
+        ${availableCategories.map((cat) => `
+          <button class="urban-rural-chip${cat === activeCategory ? " is-active" : ""}" data-urban-rural-category="${cat}" type="button">${labelMap[cat] || cat}</button>
+        `).join("")}
+      </div>
+      <div class="chart-frame compact">
+        ${lineChart(labels, chartSeries, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents())}
+      </div>
+      <div class="urban-rural-latest-strip">
+        <span class="urban-rural-strip-meta">Latest month (${latest.label}):</span>
+        <span class="urban-rural-strip-pair"><span class="small-label">Urban YoY</span><strong class="${(latest.urban_yoy_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.urban_yoy_pct == null ? "n.m." : formatSigned(latest.urban_yoy_pct)}</strong></span>
+        <span class="urban-rural-strip-pair"><span class="small-label">Rural YoY</span><strong class="${(latest.rural_yoy_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.rural_yoy_pct == null ? "n.m." : formatSigned(latest.rural_yoy_pct)}</strong></span>
+        <span class="urban-rural-strip-pair"><span class="small-label">Urban MoM</span><strong class="${(latest.urban_mom_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.urban_mom_pct == null ? "n.m." : formatSigned(latest.urban_mom_pct)}</strong></span>
+        <span class="urban-rural-strip-pair"><span class="small-label">Rural MoM</span><strong class="${(latest.rural_mom_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.rural_mom_pct == null ? "n.m." : formatSigned(latest.rural_mom_pct)}</strong></span>
+      </div>
+    </div>
+  `;
+}
+
+function setupUrbanRuralCategoryPicker() {
+  document.querySelectorAll("[data-urban-rural-category]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const cat = node.getAttribute("data-urban-rural-category");
+      if (!cat || cat === state.urbanRuralCategory) return;
+      state.urbanRuralCategory = cat;
+      render();
+    });
+  });
 }
 
 function oemSegmentCatalog() {
@@ -7027,6 +7120,7 @@ const URL_STATE_DEFAULTS = {
   companyMapFocus: null,
   newsGroup: "all",
   density: "comfortable",
+  urbanRuralCategory: "PV",
   companyTrend: "all",
   companyTrendCompare: [],
   companyTrendIndexed: false,

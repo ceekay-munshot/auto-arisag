@@ -488,6 +488,10 @@ def build_retail_module(
             **fada["latest_commentary"],
             "urban_rural_growth": fada["latest_urban_rural_growth"],
         },
+        # Full monthly history of urban-vs-rural growth (built by
+        # build._merge_fada_history; falls back to just the latest month if
+        # no fada_history.json has been backfilled yet).
+        "urban_rural_growth_series": fada.get("urban_rural_growth_series") or [],
         "latest_snapshot": {
             "total_units": latest_point["total_units"],
             "total_yoy_pct": latest_point["total_yoy_pct"],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T05:50:08.871807+00:00",
+  "generated_at": "2026-05-05T06:42:19.848057+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -5863,6 +5863,64 @@
           }
         ]
       },
+      "urban_rural_growth_series": [
+        {
+          "month": "2026-03",
+          "category": "2W",
+          "urban_mom_pct": 10.81,
+          "urban_yoy_pct": 28.84,
+          "rural_mom_pct": 17.74,
+          "rural_yoy_pct": 28.57
+        },
+        {
+          "month": "2026-03",
+          "category": "3W",
+          "urban_mom_pct": -6.77,
+          "urban_yoy_pct": 1.81,
+          "rural_mom_pct": -5.88,
+          "rural_yoy_pct": 18.71
+        },
+        {
+          "month": "2026-03",
+          "category": "CE",
+          "urban_mom_pct": -3.22,
+          "urban_yoy_pct": -21.01,
+          "rural_mom_pct": 7.51,
+          "rural_yoy_pct": -12.31
+        },
+        {
+          "month": "2026-03",
+          "category": "CV",
+          "urban_mom_pct": 2.73,
+          "urban_yoy_pct": 12.4,
+          "rural_mom_pct": 0.66,
+          "rural_yoy_pct": 18.07
+        },
+        {
+          "month": "2026-03",
+          "category": "PV",
+          "urban_mom_pct": 14.02,
+          "urban_yoy_pct": 18.46,
+          "rural_mom_pct": 7.8,
+          "rural_yoy_pct": 26.48
+        },
+        {
+          "month": "2026-03",
+          "category": "TOTAL",
+          "urban_mom_pct": 9.97,
+          "urban_yoy_pct": 23.82,
+          "rural_mom_pct": 13.23,
+          "rural_yoy_pct": 26.49
+        },
+        {
+          "month": "2026-03",
+          "category": "TRACTOR",
+          "urban_mom_pct": -7.64,
+          "urban_yoy_pct": 7.44,
+          "rural_mom_pct": -8.33,
+          "rural_yoy_pct": 11.65
+        }
+      ],
       "latest_snapshot": {
         "total_units": 2692449,
         "total_yoy_pct": 25.28,

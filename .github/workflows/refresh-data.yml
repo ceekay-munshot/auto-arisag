@@ -70,6 +70,18 @@ jobs:
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
+      - name: Backfill FADA fuel-mix + urban-rural history
+        # Same Wayback + listing-page discovery as backfill_oem_history.py,
+        # but parses each PDF for monthly fuel mix and urban/rural growth
+        # splits. Writes data/fada_history.json which dashboard/build.py
+        # folds into fada.ev_share_series (extends EV chart timeline) and
+        # fada.urban_rural_growth_series (powers the urban/rural history
+        # chart on Channel Pulse). Idempotent — months already cached are
+        # skipped on subsequent runs.
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        run: python -u scripts/backfill_fada_history.py
+        continue-on-error: true
+
       # SIAM history: deepening now happens forward via update_siam itself
       # (it appends each ingested month to data/siam_history.json). The
       # listing-page scraper at scripts/extend_siam_history.py is preserved
