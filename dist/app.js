@@ -1501,7 +1501,28 @@ function showTooltip(text, x, y) {
     return;
   }
   const node = ensureTooltipNode();
-  node.textContent = text;
+  // Tooltip payloads now ship as JSON ({label, period, value, note?}) so
+  // we can lay them out with a proper hierarchy instead of a single line of
+  // text. Plain-string fallback retained for legacy callers.
+  let html = "";
+  try {
+    if (text.startsWith("{") && text.endsWith("}")) {
+      const data = JSON.parse(text);
+      html = `
+        <div class="chart-tooltip-row chart-tooltip-label">${escapeHtml(data.label || "")}</div>
+        ${data.period ? `<div class="chart-tooltip-row chart-tooltip-period">${escapeHtml(data.period)}</div>` : ""}
+        <div class="chart-tooltip-row chart-tooltip-value">${escapeHtml(data.value || "")}</div>
+        ${data.note ? `<div class="chart-tooltip-row chart-tooltip-note">${escapeHtml(data.note)}</div>` : ""}
+      `;
+    }
+  } catch {
+    html = "";
+  }
+  if (html) {
+    node.innerHTML = html;
+  } else {
+    node.textContent = text;
+  }
   node.classList.add("visible");
   const offset = 16;
   const { innerWidth, innerHeight } = window;
@@ -2815,7 +2836,70 @@ function renderRetailSection() {
   `;
 }
 
+// Point-in-time N-month growth: latest month's category units vs the same
+// category N months prior. Standard buy-side multi-horizon read (3M / 6M /
+// 9M = momentum across short, medium, longer horizons). Looks up by
+// YYYY-MM rather than array position because months_extended has gaps and
+// one bogus row where a CY total got mislabelled as a month — bad rows
+// are filtered by an upper-bound sanity check on total_units.
+function computeCategoryTrailingGrowth(category, monthsExtended) {
+  const byMonth = new Map();
+  (monthsExtended || []).forEach((m) => {
+    if ((m.total_units || 0) > 10_000_000) return; // discards CY-aggregate bogus rows
+    const cat = (m.categories || []).find((c) => c.category === category);
+    if (!cat || typeof cat.units !== "number") return;
+    byMonth.set(m.month, cat.units);
+  });
+  if (!byMonth.size) {
+    return { g3m: null, g6m: null, g9m: null };
+  }
+  const sortedKeys = [...byMonth.keys()].sort();
+  const latest = sortedKeys[sortedKeys.length - 1];
+  const latestUnits = byMonth.get(latest);
+
+  const shiftMonths = (yyyymm, n) => {
+    const [y, m] = yyyymm.split("-").map(Number);
+    let mm = m - n;
+    let yy = y;
+    while (mm <= 0) { mm += 12; yy -= 1; }
+    return `${yy}-${String(mm).padStart(2, "0")}`;
+  };
+
+  const growthAt = (n) => {
+    const priorKey = shiftMonths(latest, n);
+    const prior = byMonth.get(priorKey);
+    if (prior === undefined || prior === 0) return null;
+    return ((latestUnits - prior) / prior) * 100;
+  };
+
+  return {
+    g3m: growthAt(3),
+    g6m: growthAt(6),
+    g9m: growthAt(9),
+  };
+}
+
+function renderGrowthBlock(label, value) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) {
+    return `
+      <div class="stat-block">
+        <span class="small-label">${label}</span>
+        <strong class="neutral">n.m.</strong>
+      </div>
+    `;
+  }
+  const tone = Number(value) >= 0 ? "positive" : "negative";
+  return `
+    <div class="stat-block">
+      <span class="small-label">${label}</span>
+      <strong class="${tone}">${formatSigned(value)}</strong>
+    </div>
+  `;
+}
+
 function renderCategoryCard(item) {
+  const monthsExtended = dashboardData.modules.retail?.months_extended || [];
+  const growth = computeCategoryTrailingGrowth(item.category, monthsExtended);
   return `
     <article class="chip-card">
       <div class="chip-card-head">
@@ -2825,17 +2909,14 @@ function renderCategoryCard(item) {
         </div>
         ${chip(`${item.share_pct.toFixed(1)}% mix`, "active")}
       </div>
-      <div class="stat-inline">
-        <div class="stat-block">
-          <span class="small-label">YoY</span>
-          <strong class="${item.yoy_pct >= 0 ? "positive" : "negative"}">${formatSigned(item.yoy_pct)}</strong>
-        </div>
-        <div class="stat-block">
-          <span class="small-label">MoM</span>
-          <strong class="${item.mom_pct >= 0 ? "positive" : "negative"}">${formatSigned(item.mom_pct)}</strong>
-        </div>
+      <div class="stat-inline category-growth-grid">
+        ${renderGrowthBlock("MoM", item.mom_pct)}
+        ${renderGrowthBlock("3M", growth.g3m)}
+        ${renderGrowthBlock("6M", growth.g6m)}
+        ${renderGrowthBlock("9M", growth.g9m)}
+        ${renderGrowthBlock("YoY", item.yoy_pct)}
       </div>
-      <p class="table-note">Mapped listed names: ${item.listed_companies.join(", ") || "No direct listed mapping"}</p>
+      <p class="table-note">3M / 6M / 9M = latest month vs N months prior; YoY = vs same month a year ago. n.m. shows where months_extended history has a gap.</p>
     </article>
   `;
 }
@@ -6745,11 +6826,13 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   }).join("");
 
   // Auto-detect anomalous monthly prints using a simple z-score against the
-  // trailing 4-month window. Only flag points where |z| >= 1.8 and absolute
-  // deviation is at least ~10% of the trailing mean — keeps low-noise series
-  // (e.g. flat market shares) from getting nuisance markers.
+  // trailing 4-month window. Tight thresholds (|z| >= 2.5 AND |deviation|
+  // >= 20% of trailing mean) so smooth-trending series like RBI credit
+  // growth don't pick up nuisance markers — only genuine surprise months
+  // get flagged. Direction (positive vs negative deviation) is preserved
+  // so the halo can render in green or red instead of always alarming red.
   const detectAnomalies = (values) => {
-    const flagged = new Set();
+    const flagged = new Map();
     const annotations = [];
     if (!Array.isArray(values) || values.length < 5) return { flagged, annotations };
     for (let i = 3; i < values.length; i += 1) {
@@ -6765,9 +6848,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       if (stddev <= 0 || mean === 0) continue;
       const z = (v - mean) / stddev;
       const pctDeviation = Math.abs((v - mean) / mean);
-      if (Math.abs(z) >= 1.8 && pctDeviation >= 0.1) {
-        flagged.add(i);
-        annotations.push({ index: i, direction: z > 0 ? "up" : "down", z });
+      if (Math.abs(z) >= 2.5 && pctDeviation >= 0.2) {
+        const direction = z > 0 ? "up" : "down";
+        flagged.set(i, { direction, z, pct: pctDeviation, mean });
+        annotations.push({ index: i, direction, z, pct: pctDeviation, mean });
       }
     }
     return { flagged, annotations };
@@ -6784,7 +6868,8 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       const x = pad.left + (innerWidth / Math.max(item.values.length - 1, 1)) * index;
       const numericValue = Number(value);
       const y = pad.top + innerHeight - ((numericValue - yMin) / yRange) * innerHeight;
-      return { x, y, value, label: labels[index], isAnomaly: anomalyFlags.has(index) };
+      const flag = anomalyFlags.get(index);
+      return { x, y, value, label: labels[index], anomaly: flag || null };
     }).filter(Boolean);
     if (!points.length) return "";
     const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
@@ -6798,20 +6883,44 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     return `
       <g>
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
-        ${isDashed ? "" : points.map((point) => `
-          ${point.isAnomaly ? `
-            <circle cx="${point.x}" cy="${point.y}" r="8" fill="rgba(204,67,67,0.18)" stroke="rgba(204,67,67,0.55)" stroke-width="1.4" pointer-events="none"></circle>
-          ` : ""}
-          <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
-          <circle
-            class="chart-hover-target"
-            cx="${point.x}"
-            cy="${point.y}"
-            r="14"
-            fill="transparent"
-            data-tooltip="${escapeHtml(`${item.label} | ${point.label}: ${tooltipFormatter(point.value)}${point.isAnomaly ? " · anomaly vs trailing 4-month avg" : ""}`)}"
-          ></circle>
-        `).join("")}
+        ${isDashed ? "" : points.map((point) => {
+          const anomalyHalo = point.anomaly ? (() => {
+            // Directional halo: teal-green for upside surprise, red for
+            // downside. Smaller radius (5 → 6) and lower opacity than the
+            // first cut so the data line stays the hero, the halo just
+            // catches the eye.
+            const isUp = point.anomaly.direction === "up";
+            const haloFill = isUp ? "rgba(47,137,125,0.16)" : "rgba(204,67,67,0.16)";
+            const haloStroke = isUp ? "rgba(47,137,125,0.5)" : "rgba(204,67,67,0.5)";
+            return `<circle cx="${point.x}" cy="${point.y}" r="6.5" fill="${haloFill}" stroke="${haloStroke}" stroke-width="1.2" pointer-events="none"></circle>`;
+          })() : "";
+          // Tooltip payload as JSON — showTooltip parses it and renders a
+          // structured multi-line layout (label / period / value / note).
+          const noteParts = [];
+          if (point.anomaly) {
+            const direction = point.anomaly.direction === "up" ? "Upside" : "Downside";
+            const pctText = `${(point.anomaly.pct * 100).toFixed(1)}%`;
+            noteParts.push(`${direction} surprise — ${pctText} vs trailing 4-mo avg`);
+          }
+          const tooltipPayload = JSON.stringify({
+            label: item.label,
+            period: point.label,
+            value: tooltipFormatter(point.value),
+            note: noteParts.length ? noteParts.join(" · ") : "",
+          });
+          return `
+            ${anomalyHalo}
+            <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
+            <circle
+              class="chart-hover-target"
+              cx="${point.x}"
+              cy="${point.y}"
+              r="14"
+              fill="transparent"
+              data-tooltip="${escapeHtml(tooltipPayload)}"
+            ></circle>
+          `;
+        }).join("")}
       </g>
     `;
   }).join("");

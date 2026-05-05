@@ -869,6 +869,40 @@ p {
   font-size: 1.2rem;
 }
 
+/* Category card growth row: MoM / 3M / 6M / 9M / YoY laid out in 5
+   even columns. Smaller padding and value font than the default stat-block
+   since five tiles need to breathe inside a compact card. */
+.category-growth-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 12px;
+}
+
+@media (max-width: 920px) {
+  .category-growth-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.category-growth-grid .stat-block {
+  min-width: 0;
+  padding: 7px 8px;
+  text-align: center;
+}
+
+.category-growth-grid .stat-block .small-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+.category-growth-grid .stat-block strong {
+  font-size: 0.88rem;
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .chart-card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
@@ -1027,6 +1061,42 @@ p {
 .chart-tooltip.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.chart-tooltip-row {
+  display: block;
+}
+
+.chart-tooltip-label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: #f7f1e4;
+  letter-spacing: 0.01em;
+}
+
+.chart-tooltip-period {
+  font-size: 0.72rem;
+  color: rgba(247, 241, 228, 0.7);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.chart-tooltip-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+}
+
+.chart-tooltip-note {
+  font-size: 0.72rem;
+  color: #ffd9c8;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(247, 241, 228, 0.18);
+  font-style: italic;
 }
 
 .chart-legend {
