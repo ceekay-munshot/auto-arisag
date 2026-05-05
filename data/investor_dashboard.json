@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T08:26:28.833790+00:00",
+  "generated_at": "2026-05-05T10:52:52.729996+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -13993,10 +13993,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-05T07:37:48.770825+00:00",
+      "generated_at": "2026-05-05T10:52:30.575446+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "Audi fears 'significant' tariff impact ahead of SUV launch in US",
+          "summary": "US President \u200cDonald Trump \u2060has threatened \u2060to raise tariffs on EU car imports to 25 per cent, arguing that the \u200bbloc has failed to comply with last year's US-EU trade agreement. The measures have \u200bnot yet been confirmed, Rittersberger noted.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-fears-significant-tariff-impact-ahead-of-suv-launch-in-us/130823277",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-05T08:33:47+00:00",
+          "published_display": "05 May 2026",
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Luxury"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-313392/130823277.cms"
+        },
         {
           "title": "BMW launches M440i xDrive Convertible in India at \u20b91.09 crore",
           "summary": "The performance convertible is powered by a 3.0-litre six-cylinder petrol engine producing 374 hp and 500 Nm, and claims a 0-100 kmph time of 4.9 seconds.",
@@ -14030,6 +14046,14 @@
       ],
       "companies": [
         {
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-05T08:33:47+00:00",
+          "latest_title": "Audi fears 'significant' tariff impact ahead of SUV launch in US"
+        },
+        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -14048,7 +14072,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-04"
+        "latest_release_date": "2026-05-05"
       }
     }
   },
@@ -14096,10 +14120,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.36,
+        "value": 95.28,
         "unit": "\u20b9",
-        "delta_value": 0.4545,
-        "delta_label": "+1.17% in last week (Yahoo Finance)",
+        "delta_value": 0.377,
+        "delta_label": "+1.08% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -14116,10 +14140,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13520.0,
-        "change_1d_pct": -0.44,
-        "change_1w_pct": 4.87,
-        "change_1m_pct": 7.04,
+        "price": 13426.0,
+        "change_1d_pct": -1.13,
+        "change_1w_pct": 4.14,
+        "change_1m_pct": 6.29,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12599.0,
@@ -14151,7 +14175,7 @@
           13314.0,
           13314.0,
           13580.0,
-          13520.0
+          13426.0
         ],
         "daily_closes": [
           {
@@ -16136,16 +16160,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 13520.0
+            "close": 13426.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3160.0,
-        "change_1d_pct": 1.72,
-        "change_1w_pct": 2.33,
-        "change_1m_pct": 4.92,
+        "price": 3210.8,
+        "change_1d_pct": 3.36,
+        "change_1w_pct": 3.97,
+        "change_1m_pct": 6.61,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3045.4,
@@ -16177,7 +16201,7 @@
           3097.5,
           3097.5,
           3106.5,
-          3160.0
+          3210.8
         ],
         "daily_closes": [
           {
@@ -18162,16 +18186,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 3160.0
+            "close": 3210.8
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5094.0,
-        "change_1d_pct": 0.54,
-        "change_1w_pct": 1.01,
-        "change_1m_pct": -0.55,
+        "price": 5109.0,
+        "change_1d_pct": 0.84,
+        "change_1w_pct": 1.31,
+        "change_1m_pct": -0.25,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5426.0,
@@ -18203,7 +18227,7 @@
           5114.5,
           5099.0,
           5066.5,
-          5094.0
+          5109.0
         ],
         "daily_closes": [
           {
@@ -20184,16 +20208,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 5094.0
+            "close": 5109.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3533.6,
-        "change_1d_pct": 1.09,
-        "change_1w_pct": 1.08,
-        "change_1m_pct": 4.19,
+        "price": 3534.4,
+        "change_1d_pct": 1.11,
+        "change_1w_pct": 1.1,
+        "change_1m_pct": 4.22,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3454.2,
@@ -20225,7 +20249,7 @@
           3492.9,
           3492.9,
           3495.5,
-          3533.6
+          3534.4
         ],
         "daily_closes": [
           {
@@ -22210,16 +22234,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 3533.6
+            "close": 3534.4
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10105.0,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": 4.58,
-        "change_1m_pct": 13.6,
+        "price": 10046.0,
+        "change_1d_pct": -0.85,
+        "change_1w_pct": 3.97,
+        "change_1m_pct": 12.93,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9271.0,
@@ -22251,7 +22275,7 @@
           9543.5,
           9994.0,
           10132.0,
-          10105.0
+          10046.0
         ],
         "daily_closes": [
           {
@@ -24232,16 +24256,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 10105.0
+            "close": 10046.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1819.0,
-        "change_1d_pct": -1.38,
-        "change_1w_pct": -0.34,
-        "change_1m_pct": 6.28,
+        "price": 1822.5,
+        "change_1d_pct": -1.19,
+        "change_1w_pct": -0.15,
+        "change_1m_pct": 6.49,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1951.5,
@@ -24273,7 +24297,7 @@
           1817.6,
           1817.6,
           1844.5,
-          1819.0
+          1822.5
         ],
         "daily_closes": [
           {
@@ -25794,16 +25818,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 1819.0
+            "close": 1822.5
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7313.0,
-        "change_1d_pct": -0.22,
-        "change_1w_pct": 3.42,
-        "change_1m_pct": 9.98,
+        "price": 7301.5,
+        "change_1d_pct": -0.38,
+        "change_1w_pct": 3.25,
+        "change_1m_pct": 9.81,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           6793.0,
@@ -25835,7 +25859,7 @@
           7109.0,
           7109.0,
           7329.0,
-          7313.0
+          7301.5
         ],
         "daily_closes": [
           {
@@ -27820,16 +27844,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 7313.0
+            "close": 7301.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 343.7,
-        "change_1d_pct": 0.19,
-        "change_1w_pct": -3.01,
-        "change_1m_pct": 13.45,
+        "price": 340.15,
+        "change_1d_pct": -0.85,
+        "change_1w_pct": -4.01,
+        "change_1m_pct": 12.28,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -27862,7 +27886,7 @@
           352.7,
           341.55,
           343.05,
-          343.7
+          340.15
         ],
         "daily_closes": [
           {
@@ -28399,16 +28423,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 343.7
+            "close": 340.15
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 406.7,
-        "change_1d_pct": -1.5,
-        "change_1w_pct": -2.77,
-        "change_1m_pct": 4.79,
+        "price": 406.55,
+        "change_1d_pct": -1.54,
+        "change_1w_pct": -2.81,
+        "change_1m_pct": 4.75,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -28441,7 +28465,7 @@
           409.9,
           409.9,
           412.9,
-          406.7
+          406.55
         ],
         "daily_closes": [
           {
@@ -28914,16 +28938,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 406.7
+            "close": 406.55
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 161.5,
-        "change_1d_pct": 0.45,
-        "change_1w_pct": -3.59,
-        "change_1m_pct": 8.8,
+        "price": 160.25,
+        "change_1d_pct": -0.32,
+        "change_1w_pct": -4.34,
+        "change_1m_pct": 7.96,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           168.57,
@@ -28955,7 +28979,7 @@
           162.09,
           162.09,
           160.77,
-          161.5
+          160.25
         ],
         "daily_closes": [
           {
@@ -30940,16 +30964,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 161.5
+            "close": 160.25
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3224.1,
-        "change_1d_pct": 0.59,
-        "change_1w_pct": -2.55,
-        "change_1m_pct": 13.37,
+        "price": 3207.5,
+        "change_1d_pct": 0.07,
+        "change_1w_pct": -3.06,
+        "change_1m_pct": 12.79,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2887.2,
@@ -30981,7 +31005,7 @@
           3241.6,
           3241.6,
           3205.1,
-          3224.1
+          3207.5
         ],
         "daily_closes": [
           {
@@ -32966,16 +32990,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 3224.1
+            "close": 3207.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 885.85,
-        "change_1d_pct": -0.44,
-        "change_1w_pct": -3.34,
-        "change_1m_pct": 9.16,
+        "price": 882.05,
+        "change_1d_pct": -0.87,
+        "change_1w_pct": -3.75,
+        "change_1m_pct": 8.69,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           844.55,
@@ -33007,7 +33031,7 @@
           899.0,
           887.65,
           889.75,
-          885.85
+          882.05
         ],
         "daily_closes": [
           {
@@ -34988,16 +35012,16 @@
           },
           {
             "date": "2026-05-05",
-            "close": 885.85
+            "close": 882.05
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 486.5,
-        "change_1d_pct": -2.03,
-        "change_1w_pct": -1.03,
-        "change_1m_pct": 17.77,
+        "price": 486.45,
+        "change_1d_pct": -2.04,
+        "change_1w_pct": -1.04,
+        "change_1m_pct": 17.76,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           425.25,
@@ -35029,7 +35053,7 @@
           493.4,
           488.3,
           496.6,
-          486.5
+          486.45
         ],
         "daily_closes": [
           {
@@ -37010,7 +37034,7 @@
           },
           {
             "date": "2026-05-05",
-            "close": 486.5
+            "close": 486.45
           }
         ]
       }
@@ -38386,9 +38410,9 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-05T07:21:55.095134+00:00",
+    "generated_at": "2026-05-05T10:50:09.078711+00:00",
     "window_days": 45,
-    "group_count": 6,
+    "group_count": 5,
     "item_count": 22,
     "groups": [
       {
@@ -38409,6 +38433,39 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Audi fears 'significant' tariff impact ahead of SUV launch in US",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-fears-significant-tariff-impact-ahead-of-suv-launch-in-us/130823277",
+            "summary": "US President \u200cDonald Trump \u2060has threatened \u2060to raise tariffs on EU car imports to 25 per cent, arguing that the \u200bbloc has failed to comply with last year's US-EU trade agreement. The measures have \u200bnot yet been confirmed, Rittersberger noted.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-05T08:33:47+00:00",
+            "published_display": "05 May 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Funding / M&A"
+            ]
+          },
+          {
+            "title": "Volvo Cars' February-April sales volume down 10% year-on-year",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-february-april-sales-volume-down-10-year-on-year/130823043",
+            "summary": "China \u2060sales remained weak amid competitive and \u200bmacro pressures, while US deliveries continued to face \u200bsofter customer sentiment, slower electrified car demand and SUV pricing pressure.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-05T08:24:55+00:00",
+            "published_display": "05 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -38439,38 +38496,6 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "As West Asia war continues, Maruti focuses on stronger supplier coordination",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-strengthens-supplier-coordination-amidst-ongoing-west-asia-conflict/130814923",
-            "summary": "The company has been working closely with its supply chain and logistic partners to ensure continuity of operations and mitigate potential disruptions.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-05T03:07:24+00:00",
-            "published_display": "05 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "EVs moving at faster speed in premium lane",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/evs-moving-at-faster-speed-in-premium-lane/130743482",
-            "summary": "The share of cars below \u20b910 lakh has decreased. Luxury EV demand is also strong. This trend suggests the market is expanding upwards, potentially limiting mass adoption.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-04T02:20:09+00:00",
-            "published_display": "04 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
             ]
           }
         ]
@@ -38507,6 +38532,21 @@
               "Passenger Vehicles",
               "Two-Wheelers",
               "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "350cc KTM 390 Duke, 390 Adventure Review \u2013 Same Same, But Slightly Different",
+            "url": "https://www.rushlane.com/350cc-ktm-390-duke-390-adventure-review-same-same-but-slightly-different-12545727.html",
+            "summary": "We experienced the new 350cc KTM 390 Duke and 350cc KTM 390 Adventure at a KTM dealership in Pune and this is what we think about these bikes The post 350cc KTM 390 Duke, 390 Adventure Review \u2013 Same Same, But Slightly Different appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-05T07:39:52+00:00",
+            "published_display": "05 May 2026",
+            "importance_score": 4,
+            "segment_tags": [
+              "Two-Wheelers"
             ],
             "signal_tags": [
               "General"
@@ -38699,6 +38739,22 @@
             ]
           },
           {
+            "title": "EV business to grow 1.5\u20132x faster as Sona Comstar targets 20%+ revenue growth: CFO",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/sona-comstar-projects-20-revenue-growth-driven-by-booming-ev-business/130823192",
+            "summary": "With EVs contributing 70% of its \u20b923,700 crore order book, the company expects faster expansion led by domestic demand, traction motors and controller segments.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-05T08:30:57+00:00",
+            "published_display": "05 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Toyota Hydrogen Scooter Patent Filed \u2013 Based On Suzuki Burgman",
             "url": "https://www.rushlane.com/toyota-hydrogen-scooter-patent-filed-based-on-suzuki-burgman-12545769.html",
             "summary": "Toyota hydrogen powered scooter uses hydrogen fuel-cell technology, which could make it costlier than hydrogen internal combustion engine (HICE) models The post Toyota Hydrogen Scooter Patent Filed \u2013 Based On Suzuki Burgman appeared first on RushLane .",
@@ -38744,47 +38800,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "AMNS India Commissions Automotive Steel Production Line at Hazira Plant",
-            "url": "https://www.autocarpro.in/NEWS/amns-india-commissions-automotive-steel-production-line-at-hazira-plant-132340",
-            "summary": "ArcelorMittal Nippon Steel India on April 30 inaugurated a new Pickling Line and Tandem Cold Mill (PLTCM) at its Hazira facility in Gujarat, adding 2 million tonnes per annum of capacity to its automotive steel operations. The unit was inaugurated by Keiichi Ono and will produce cold-rolled base steel for automotive applications, including Advanced High Strength Steel (AHSS), galvanised (GI), galvannealed (GA), an...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-04-30T18:43:51+00:00",
-            "published_display": "30 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities",
-              "Supply Chain / Components"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "policy",
-        "label": "Policy / Regulation",
-        "items": [
-          {
-            "title": "Horse Powertrain plans India entry, explores local manufacturing as small-car engine demand rises",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/horse-powertrain-enters-indian-market-with-local-manufacturing-plans-for-compact-engine-demand/130507257",
-            "summary": "The move comes after India\u2019s GST cut on small cars boosted demand for efficient 1.2-litre engines, creating fresh opportunities for global powertrain suppliers.",
-            "source": "ET Auto Components",
-            "published_at": "2026-04-25T03:09:46+00:00",
-            "published_display": "25 Apr 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
               "Supply Chain / Components"
             ]
           }
@@ -38861,8 +38876,8 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-04-01",
-    "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Updated by scripts/refresh_ev_oem_tracker.py on each CI tick; falls back to the last successful scrape if a source URL fails to parse. Pure-EV-only OEMs cross-check against FADA's monthly OEM annexure where they appear there too.",
+    "as_of_date": "2026-05-05",
+    "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
         "id": "E2W",
@@ -38910,60 +38925,55 @@
       {
         "id": "E4W",
         "label": "EV 4W",
-        "latest_month": "Mar 2026",
-        "total_units": 22315,
-        "compare_label": "Mar 2025 units",
-        "growth_label": "YoY growth",
         "source_name": "RushLane",
-        "source_url": "https://www.rushlane.com/electric-car-sales-fy-2026-tata-mg-mahindra-hyundai-byd-kia-12543567.html",
-        "note": "Mar 2026 electric-car retail leaderboard from RushLane (record month at 22,315 units). BYD, BMW and VinFast are pure-EV in India; legacy ICE OEMs (Tata, Mahindra, MG, Hyundai, Kia, Maruti) report only their EV-portfolio units here.",
+        "source_url": "https://www.rushlane.com/electric-car-sales-cy-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545538.html",
+        "growth_label": "YoY growth",
+        "compare_label": "Same month, prior year",
         "rows": [
           {
             "oem": "Tata Motors",
-            "units": 8253,
+            "units": 8507,
             "prior_units": 4020
           },
           {
-            "oem": "Mahindra & Mahindra",
-            "units": 5244,
-            "prior_units": 508
+            "oem": "Mahindra Electric",
+            "units": 3889,
+            "prior_units": null
           },
           {
-            "oem": "JSW MG Motor",
-            "units": 5141,
-            "prior_units": 3490
+            "oem": "MG Motor",
+            "units": 4978,
+            "prior_units": null
           },
           {
             "oem": "Maruti Suzuki",
-            "units": 940,
+            "units": 2026,
             "prior_units": 0
           },
           {
             "oem": "VinFast",
-            "units": 688,
+            "units": 3000,
             "prior_units": 0
           },
           {
             "oem": "Hyundai",
-            "units": 473,
+            "units": 3000,
             "prior_units": 93
           },
           {
             "oem": "Kia",
-            "units": 457,
+            "units": 1443,
             "prior_units": null
           },
           {
-            "oem": "BMW",
-            "units": 434,
-            "prior_units": 239
-          },
-          {
             "oem": "BYD",
-            "units": 413,
+            "units": 1502,
             "prior_units": 278
           }
-        ]
+        ],
+        "total_units": 28345,
+        "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
+        "latest_month": "Mar 2026"
       },
       {
         "id": "E3WG",
