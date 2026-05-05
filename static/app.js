@@ -3729,7 +3729,7 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
             </div>
           `).join("")}
         </div>
-        <p class="table-note" style="margin-top:8px;">Historical chart unlocks once scripts/backfill_fada_history.py has populated subsegment history (runs in CI on the heavy 09:00 UTC tick).</p>
+        <p class="table-note" style="margin-top:8px;">Historical chart appears once the next data refresh has populated multi-month subsegment history.</p>
       </div>
     `;
   }
@@ -3829,7 +3829,7 @@ function renderUrbanRuralCard(retail, latestRows) {
           ],
           latestRows,
         )}
-        <p class="table-note">Historical chart unlocks once scripts/backfill_fada_history.py has populated data/fada_history.json (runs in CI on the heavy 09:00 UTC tick).</p>
+        <p class="table-note">Historical chart appears once the next data refresh has populated multi-month urban / rural history.</p>
       </div>
     `;
   }
@@ -4925,7 +4925,7 @@ function renderWholesaleExportsCard(wholesale, months) {
             ${renderSourceAction(wholesale.source_meta.url)}
           </div>
         </div>
-        <p class="empty-note">SIAM's export prose only carries on quarter-end releases, so monthly exports populate gradually as the parser captures Q1 / Q4 commentaries. The chart will turn on as soon as ≥2 months have export numbers extracted (next CI tick).</p>
+        <p class="empty-note">SIAM publishes detailed export volumes mainly in their quarter-end releases, so monthly export figures will populate gradually. The chart will switch on once ≥2 months of export data are available.</p>
       </div>
     `;
   }
