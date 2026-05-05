@@ -554,13 +554,15 @@ function formatLakh(value) {
 
 function axisFormat(value) {
   const number = Number(value || 0);
-  if (number >= 100000) {
-    return `${(number / 100000).toFixed(1)}L`;
+  const abs = Math.abs(number);
+  const sign = number < 0 ? "-" : "";
+  if (abs >= 100000) {
+    return `${sign}${(abs / 100000).toFixed(1)}L`;
   }
-  if (number >= 1000) {
-    return `${(number / 1000).toFixed(0)}K`;
+  if (abs >= 1000) {
+    return `${sign}${(abs / 1000).toFixed(0)}K`;
   }
-  return `${number}`;
+  return `${Math.round(number)}`;
 }
 
 function chip(text, tone = "default") {
