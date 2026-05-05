@@ -2667,6 +2667,7 @@ function renderRetailTrendOnly() {
           .map(renderCategoryCard)
           .join("")}
       </div>
+      <p class="category-grid-note">3M / 6M / 9M = latest month vs N months prior · YoY = vs same month a year ago · n.m. = months_extended history has a gap for that horizon.</p>
     </section>
   `;
 }
@@ -2831,6 +2832,7 @@ function renderRetailSection() {
           .map(renderCategoryCard)
           .join("")}
       </div>
+      <p class="category-grid-note">3M / 6M / 9M = latest month vs N months prior · YoY = vs same month a year ago · n.m. = months_extended history has a gap for that horizon.</p>
       <div class="section-divider"></div>
       ${renderEvSection()}
       <div class="section-divider"></div>
@@ -2921,7 +2923,6 @@ function renderCategoryCard(item) {
         ${renderGrowthBlock("9M", growth.g9m)}
         ${renderGrowthBlock("YoY", item.yoy_pct)}
       </div>
-      <p class="table-note">3M / 6M / 9M = latest month vs N months prior; YoY = vs same month a year ago. n.m. shows where months_extended history has a gap.</p>
     </article>
   `;
 }

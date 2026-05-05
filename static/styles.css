@@ -903,6 +903,17 @@ p {
   white-space: nowrap;
 }
 
+/* One legend line under the entire 6-card grid replaces the per-card
+   footnote, reducing visual noise while still explaining the metrics. */
+.category-grid-note {
+  margin: 12px 0 0;
+  font-size: 0.74rem;
+  color: var(--muted);
+  line-height: 1.45;
+  padding: 6px 0 0;
+  border-top: 1px solid rgba(20, 39, 62, 0.06);
+}
+
 .chart-card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
