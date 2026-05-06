@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-05-06T06:09:32.394108+00:00",
+  "generated_at": "2026-05-06T11:05:09.922433+00:00",
   "window_days": 45,
   "group_count": 5,
-  "item_count": 20,
+  "item_count": 19,
   "groups": [
     {
       "id": "pv",
@@ -58,27 +58,27 @@
           ]
         },
         {
+          "title": "BMW's quarterly profit down 25% as China, tariffs weigh",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-quarterly-profit-down-25-as-china-tariffs-weigh/130848040",
+          "summary": "The company said on Wednesday that quarterly pretax earnings fell \u200c25 per centto 2.3 \u2060billion euros ($2.70 \u2060billion), slightly above analysts' forecast of 2.2 billion euros in a company-provided consensus.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-06T07:47:57+00:00",
+          "published_display": "06 May 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "Luxury"
+          ],
+          "signal_tags": [
+            "General"
+          ]
+        },
+        {
           "title": "Mahindra To Launch 10 New ICE SUVs, 6 BEVs \u2013 Produce 82k SUVs Per Month By End FY 2027",
           "url": "https://www.rushlane.com/mahindra-to-launch-10-new-ice-suvs-6-bevs-produce-82k-suvs-12545847.html",
           "summary": "Upcoming new Mahindra cars will include the ones based on the NU_IQ as well as the INGLO platform The post Mahindra To Launch 10 New ICE SUVs, 6 BEVs \u2013 Produce 82k SUVs Per Month By End FY 2027 appeared first on RushLane .",
           "source": "RushLane",
           "published_at": "2026-05-06T01:10:19+00:00",
           "published_display": "06 May 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "signal_tags": [
-            "Product / Launch"
-          ]
-        },
-        {
-          "title": "New Tata Harrier, Safari Diesel Ultra Red Dark Edition Launch Price Rs 23.84 Lakh",
-          "url": "https://www.rushlane.com/new-tata-harrier-safari-diesel-ultra-red-dark-edition-launch-price-12545841.html",
-          "summary": "Tata Motors has expanded the lineup of Harrier and Safari SUVs with the introduction of the Ultra Red Dark Edition for diesel variants The post New Tata Harrier, Safari Diesel Ultra Red Dark Edition Launch Price Rs 23.84 Lakh appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-05-05T13:22:49+00:00",
-          "published_display": "05 May 2026",
           "importance_score": 6,
           "segment_tags": [
             "Passenger Vehicles"
@@ -108,21 +108,6 @@
             "Product / Launch",
             "Supply Chain / Components"
           ]
-        },
-        {
-          "title": "350cc KTM 390 Duke, 390 Adventure Review \u2013 Same Same, But Slightly Different",
-          "url": "https://www.rushlane.com/350cc-ktm-390-duke-390-adventure-review-same-same-but-slightly-different-12545727.html",
-          "summary": "We experienced the new 350cc KTM 390 Duke and 350cc KTM 390 Adventure at a KTM dealership in Pune and this is what we think about these bikes The post 350cc KTM 390 Duke, 390 Adventure Review \u2013 Same Same, But Slightly Different appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-05-05T07:39:52+00:00",
-          "published_display": "05 May 2026",
-          "importance_score": 4,
-          "segment_tags": [
-            "Two-Wheelers"
-          ],
-          "signal_tags": [
-            "General"
-          ]
         }
       ]
     },
@@ -130,23 +115,6 @@
       "id": "cv",
       "label": "Commercial Vehicles",
       "items": [
-        {
-          "title": "Dhoot Transmission acquires two- and three-wheeler electronics supplier Multilink",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/dhoot-transmission-acquires-two-and-three-wheeler-electronics-supplier-multilink/130571614",
-          "summary": "The deal strengthens Dhoot\u2019s electronics portfolio amid rising vehicle electrification and EV adoption.",
-          "source": "ET Auto Components",
-          "published_at": "2026-04-28T06:31:19+00:00",
-          "published_display": "28 Apr 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "Commercial Vehicles",
-            "EV",
-            "Components"
-          ],
-          "signal_tags": [
-            "Supply Chain / Components"
-          ]
-        },
         {
           "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
           "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
@@ -180,6 +148,23 @@
           "signal_tags": [
             "General"
           ]
+        },
+        {
+          "title": "Dhoot Transmission acquires two- and three-wheeler electronics supplier Multilink",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/dhoot-transmission-acquires-two-and-three-wheeler-electronics-supplier-multilink/130571614",
+          "summary": "The deal strengthens Dhoot\u2019s electronics portfolio amid rising vehicle electrification and EV adoption.",
+          "source": "ET Auto Components",
+          "published_at": "2026-04-28T06:31:19+00:00",
+          "published_display": "28 Apr 2026",
+          "importance_score": 5,
+          "segment_tags": [
+            "Commercial Vehicles",
+            "EV",
+            "Components"
+          ],
+          "signal_tags": [
+            "Supply Chain / Components"
+          ]
         }
       ]
     },
@@ -188,20 +173,51 @@
       "label": "EV / Transition",
       "items": [
         {
-          "title": "Tsuyo Manufacturing secures two EV motor patents; strengthens India\u2019s powertrain R&D capabilities",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-advances-ev-technology-with-new-patents-in-india/130626410",
-          "summary": "The new patents cover a non-magnetic bridge synchronous reluctance motor and a fault-tolerant five-phase permanent magnet motor with dual inverter control.",
-          "source": "ET Auto Components",
-          "published_at": "2026-04-30T07:07:19+00:00",
-          "published_display": "30 Apr 2026",
+          "title": "2026 Maruti Brezza Facelift Spied Along With New Car \u2013 Next Gen Ertiga Or YMC Electric MPV?",
+          "url": "https://www.rushlane.com/2026-maruti-brezza-facelift-spied-next-gen-ertiga-ymc-electric-mpv-12545879.html",
+          "summary": "Alongside the camouflaged Brezza test mule, another heavily camouflaged vehicle can be seen testing together, appearing to be a larger MPV-shaped model The post 2026 Maruti Brezza Facelift Spied Along With New Car \u2013 Next Gen Ertiga Or YMC Electric MPV? appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-05-06T09:50:12+00:00",
+          "published_display": "06 May 2026",
           "importance_score": 7,
           "segment_tags": [
-            "EV",
-            "Components"
+            "Passenger Vehicles",
+            "EV"
           ],
           "signal_tags": [
-            "Capacity / Capex",
+            "Product / Launch"
+          ]
+        },
+        {
+          "title": "India, EU launch \u20b9169 crore joint EV battery recycling initiative",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/india-eu-launch-169-crore-joint-ev-battery-recycling-initiative/130851436",
+          "summary": "The initiative aims to strengthen access to critical raw materials, support the transition to a circular economy, and deepen India-EU collaboration.",
+          "source": "ET Auto Components",
+          "published_at": "2026-05-06T10:01:18+00:00",
+          "published_display": "06 May 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "EV"
+          ],
+          "signal_tags": [
+            "Product / Launch",
             "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Maruti Suzuki shares deliver \u20b91.28 lakh crore shock from January peak. Is the worst behind?",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-shares-deliver-1-28-lakh-crore-shock-from-january-peak-is-the-worst-behind/130846564",
+          "summary": "Maruti Suzuki India Limited shares have fallen nearly 25 per cent from their 2026 peak, wiping out significant investor wealth amid concerns over market share, margin pressure, and rising competition from SUVs and EVs.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-06T06:39:48+00:00",
+          "published_display": "06 May 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "signal_tags": [
+            "General"
           ]
         },
         {
@@ -236,37 +252,6 @@
             "Product / Launch",
             "Filing / Disclosure"
           ]
-        },
-        {
-          "title": "Mahindra eyes 15% electric SUV penetration ahead of CAFE 3 norms",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mahindra-aims-for-15-electric-suv-revenue-share-ahead-of-cafe-3-norms/130826908",
-          "summary": "The automaker\u2019s electric SUV sales in Q4FY26 stood at 9.6 per cent of its total SUV sales, with the penetration already moving to 11%-plus in the last two months, driven by improved deliveries of the latest electric SUV models.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-05T11:35:28+00:00",
-          "published_display": "05 May 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "signal_tags": [
-            "General"
-          ]
-        },
-        {
-          "title": "Sona Comstar sets sights on acquisitions, EV-focused order book to drive growth",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/sona-comstar-sets-sights-on-acquisitions-ev-focused-order-book-to-drive-growth/130814353",
-          "summary": "The company is open to deals up to \u20b92,000 crore or more, targeting technology and new product adjacencies. While domestic acquisitions are preferred, international options are not ruled out.",
-          "source": "ET Auto Components",
-          "published_at": "2026-05-05T02:26:54+00:00",
-          "published_display": "05 May 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "EV"
-          ],
-          "signal_tags": [
-            "Supply Chain / Components"
-          ]
         }
       ]
     },
@@ -274,6 +259,23 @@
       "id": "components",
       "label": "Components",
       "items": [
+        {
+          "title": "TVS Motor launches TVS iQube S 4.7 kWh at \u20b91.37 lakh",
+          "url": "https://evreporter.com/tvs-motor-launches-tvs-iqube-s-4-7-kwh-at-%e2%82%b91-37-lakh",
+          "summary": "The post TVS Motor launches TVS iQube S 4.7 kWh at \u20b91.37 lakh appeared first at EVreporter on EVreporter . TVS Motor Company announced the launch of a new variant of its electric scooter, the TVS iQube S 4.7 kWh, The post TVS Motor launches TVS iQube S 4.7 kWh at \u20b91.37 lakh appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-05-06T07:57:04+00:00",
+          "published_display": "06 May 2026",
+          "importance_score": 9,
+          "segment_tags": [
+            "Two-Wheelers",
+            "EV"
+          ],
+          "signal_tags": [
+            "Product / Launch",
+            "Supply Chain / Components"
+          ]
+        },
         {
           "title": "New Hero Vida Electric Scooter Under Rs 1 L Launch In Aug 2026 \u2013 2X Production Boost By 2027",
           "url": "https://www.rushlane.com/new-hero-vida-electric-scooter-under-rs-1-l-launch-in-aug-2026-12545845.html",
@@ -288,24 +290,6 @@
           ],
           "signal_tags": [
             "Product / Launch",
-            "Supply Chain / Components"
-          ]
-        },
-        {
-          "title": "Exclusive: Rocklink Sees \u20b9300 Crore India Recycling Revenue Opportunity in 5 Years",
-          "url": "https://www.autocarpro.in/NEWS/exclusive-rocklink-sees-\u20b9300-crore-india-recycling-revenue-opportunity-in-5-years-132230",
-          "summary": "German recycling firm Rocklink is targeting \u20b9250 crore to \u20b9300 crore in revenue from its India operations over the next five years, following the commissioning of its first integrated recycling facility in the country. The company has invested around \u20b930 crore in the Sikandrabad, Uttar Pradesh-based plant, which will process lithium-ion batteries, rare earth magnets and metal-bearing industrial waste as part of it...",
-          "source": "Autocar Professional Components",
-          "published_at": "2026-04-24T11:23:32+00:00",
-          "published_display": "24 Apr 2026",
-          "importance_score": 8,
-          "segment_tags": [
-            "EV",
-            "Components"
-          ],
-          "signal_tags": [
-            "Capacity / Capex",
-            "Input Costs / Commodities",
             "Supply Chain / Components"
           ]
         },
@@ -326,22 +310,6 @@
           ]
         },
         {
-          "title": "Tata Motors launches new Curvv.ev variants priced from \u20b916.99 lakh",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-launches-new-curvv-ev-variants-priced-from-16-99-lakh/130784371",
-          "summary": "The new variants have a 55-kWh battery pack offering a certified driving range of up to 502 km.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-04T10:22:10+00:00",
-          "published_display": "04 May 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "EV"
-          ],
-          "signal_tags": [
-            "Product / Launch",
-            "Supply Chain / Components"
-          ]
-        },
-        {
           "title": "AMNS India Commissions Automotive Steel Production Line at Hazira Plant",
           "url": "https://www.autocarpro.in/NEWS/amns-india-commissions-automotive-steel-production-line-at-hazira-plant-132340",
           "summary": "ArcelorMittal Nippon Steel India on April 30 inaugurated a new Pickling Line and Tandem Cold Mill (PLTCM) at its Hazira facility in Gujarat, adding 2 million tonnes per annum of capacity to its automotive steel operations. The unit was inaugurated by Keiichi Ono and will produce cold-rolled base steel for automotive applications, including Advanced High Strength Steel (AHSS), galvanised (GI), galvannealed (GA), an...",
@@ -355,6 +323,23 @@
           "signal_tags": [
             "Capacity / Capex",
             "Input Costs / Commodities",
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Tsuyo Manufacturing secures two EV motor patents; strengthens India\u2019s powertrain R&D capabilities",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-advances-ev-technology-with-new-patents-in-india/130626410",
+          "summary": "The new patents cover a non-magnetic bridge synchronous reluctance motor and a fault-tolerant five-phase permanent magnet motor with dual inverter control.",
+          "source": "ET Auto Components",
+          "published_at": "2026-04-30T07:07:19+00:00",
+          "published_display": "30 Apr 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "EV",
+            "Components"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
             "Supply Chain / Components"
           ]
         }
@@ -379,7 +364,7 @@
       "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 41,
+    "unmapped_articles": 39,
     "filtered_low_signal": 3,
     "kept_articles": 67
   }
