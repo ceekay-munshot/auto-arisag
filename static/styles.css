@@ -1714,6 +1714,11 @@ p {
   background: rgba(20, 39, 62, 0.04);
 }
 
+.mini-table-card {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
 .mini-insight strong {
   display: block;
   margin-top: 8px;

@@ -6,7 +6,7 @@ import re
 import subprocess
 from io import BytesIO
 from dataclasses import asdict, dataclass
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -895,9 +895,25 @@ def parse_fada_monthly_record(compact_pages: str, month_id: str, release_date: s
 
 
 def parse_fada_monthly_fuel_mix(compact_pages: str, month_id: str) -> dict[str, dict[str, float]]:
-    month_name = datetime.strptime(month_id, "%Y-%m").strftime("%b")
-    year_suffix = datetime.strptime(month_id, "%Y-%m").strftime("%y")
-    marker = f"All India Fuel Wise Vehicle Retail Data for {month_name}'{year_suffix}"
+    parsed = datetime.strptime(month_id, "%Y-%m")
+    month_name = parsed.strftime("%b")
+    year_suffix = parsed.strftime("%y")
+    # FADA's fuel-mix table prints three columns: current month, prior
+    # month (one back, with year-rollover), and the same month a year ago.
+    # The previous version hardcoded "Feb'<yy>" for the prior column and
+    # "<MMM>'25" for the YoY column, so it only matched the Mar 2026 PDF.
+    # Compute both dynamically so the parser works for every release.
+    prior_dt = parsed - timedelta(days=1)
+    prior_dt = prior_dt.replace(day=1)
+    prior_marker = f"{prior_dt.strftime('%b')}'{prior_dt.strftime('%y')}"
+    yoy_dt = parsed.replace(year=parsed.year - 1)
+    yoy_marker = f"{yoy_dt.strftime('%b')}'{yoy_dt.strftime('%y')}"
+    cur_marker = f"{month_name}'{year_suffix}"
+
+    def header_triplet(category_label: str) -> str:
+        return f"{category_label} {cur_marker} {prior_marker} {yoy_marker}"
+
+    marker = f"All India Fuel Wise Vehicle Retail Data for {cur_marker}"
     start_index = compact_pages.find(marker)
     if start_index == -1:
         raise ValueError(f"could not locate FADA fuel-mix table for {month_label(month_id)}")
@@ -905,17 +921,17 @@ def parse_fada_monthly_fuel_mix(compact_pages: str, month_id: str) -> dict[str, 
     pct = r"(-?[\d.]+)%"
     pair_2w_3w_chunk = extract_between(
         section,
-        f"Two-Wheeler {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25 Three-Wheeler {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25",
+        f"{header_triplet('Two-Wheeler')} {header_triplet('Three-Wheeler')}",
         "Media Contact|",
     )
     pair_cv_ce_chunk = extract_between(
         section,
-        f"Commercial Vehicle {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25 Construction Equipment {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25",
-        f"Passenger Vehicle {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25 Tractor {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25",
+        f"{header_triplet('Commercial Vehicle')} {header_triplet('Construction Equipment')}",
+        f"{header_triplet('Passenger Vehicle')} {header_triplet('Tractor')}",
     )
     pair_pv_tractor_chunk = extract_between(
         section,
-        f"Passenger Vehicle {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25 Tractor {month_name}'{year_suffix} Feb'{year_suffix} {month_name}'25",
+        f"{header_triplet('Passenger Vehicle')} {header_triplet('Tractor')}",
         "Source: FADA Research",
     )
 
@@ -1016,10 +1032,16 @@ def extract_between(value: str, start_marker: str, end_marker: str) -> str:
 
 
 def parse_fada_urban_rural_growth(compact_pages: str) -> list[dict[str, float | str]]:
-    marker = "Mar'26 Category MoM% YoY% Category MoM% YoY%"
-    start_index = compact_pages.find(marker)
-    if start_index == -1:
+    # Find the urban-rural marker. The exact month label varies per PDF
+    # (e.g. "Mar'26", "Sep'24"), and some PDFs print a period between the
+    # label and the "Category" header — match either form.
+    marker_match = re.search(
+        r"[A-Za-z]{3}'\d{2}[.,\s]+Category\s+MoM%\s+YoY%\s+Category\s+MoM%\s+YoY%",
+        compact_pages,
+    )
+    if not marker_match:
         raise ValueError("could not locate FADA urban-rural growth table")
+    start_index = marker_match.start()
     section = compact_pages[start_index:]
     end_index = section.find("Source: FADA Research")
     if end_index != -1:
@@ -1163,21 +1185,41 @@ def build_fada_latest_subsegments(compact_pages: str) -> dict[str, list[dict[str
     for category, definitions in subsegment_map.items():
         rows = []
         for raw_label, label in definitions:
+            # Try the new (Sep 2024+) 5-column layout first:
+            #   <label> <units> <prior_month_units> <yoy_units> <MoM%> <YoY%>
             match = re.search(
                 rf"{raw_label}\s+([\d,]+)\s+[\d,]+\s+[\d,]+\s+(-?[\d.]+)%\s+(-?[\d.]+)%",
                 section,
                 flags=re.IGNORECASE,
             )
-            if not match:
+            if match:
+                rows.append(
+                    {
+                        "label": label,
+                        "units": parse_indian_number(match.group(1)),
+                        "mom_pct": float(match.group(2)),
+                        "yoy_pct": float(match.group(3)),
+                    }
+                )
                 continue
-            rows.append(
-                {
-                    "label": label,
-                    "units": parse_indian_number(match.group(1)),
-                    "mom_pct": float(match.group(2)),
-                    "yoy_pct": float(match.group(3)),
-                }
+            # Fallback to the older 3-column layout (2022-06 to 2024-08):
+            #   <label> <units> <yoy_units> <YoY%>
+            # MoM is unavailable in this layout — leave it None so the
+            # dashboard can still chart YoY history back further in time.
+            match = re.search(
+                rf"{raw_label}\s+([\d,]+)\s+[\d,]+\s+(-?[\d.]+)%",
+                section,
+                flags=re.IGNORECASE,
             )
+            if match:
+                rows.append(
+                    {
+                        "label": label,
+                        "units": parse_indian_number(match.group(1)),
+                        "mom_pct": None,
+                        "yoy_pct": float(match.group(2)),
+                    }
+                )
         result[category] = rows
     return result
 

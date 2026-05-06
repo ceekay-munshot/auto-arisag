@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T17:55:10.627146+00:00",
+  "generated_at": "2026-05-06T18:15:39.544036+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -35,10 +35,10 @@
       {
         "id": "pv_inventory",
         "label": "PV Inventory",
-        "value": 28.0,
-        "display": "~28 days",
+        "value": 29.0,
+        "display": "28-30 days",
         "change": "FADA dealer channel view",
-        "detail": "Improved from 53-55 days in Oct 2025 to ~28 days now.",
+        "detail": "Improved from 35-40 days in Dec 2018 to 28-30 days now.",
         "tone": "neutral"
       },
       {
@@ -10151,6 +10151,461 @@
       ],
       "inventory_trend": [
         {
+          "month": "2018-12",
+          "label": "Dec 2018",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2019-01",
+          "label": "Jan 2019",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2019-02",
+          "label": "Feb 2019",
+          "days_low": 50,
+          "days_high": 60,
+          "days_mid": 55.0
+        },
+        {
+          "month": "2019-03",
+          "label": "Mar 2019",
+          "days_low": 40,
+          "days_high": 45,
+          "days_mid": 42.5
+        },
+        {
+          "month": "2019-04",
+          "label": "Apr 2019",
+          "days_low": 40,
+          "days_high": 45,
+          "days_mid": 42.5
+        },
+        {
+          "month": "2019-05",
+          "label": "May 2019",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2019-06",
+          "label": "Jun 2019",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2019-07",
+          "label": "Jul 2019",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2019-09",
+          "label": "Sep 2019",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2019-10",
+          "label": "Oct 2019",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2019-11",
+          "label": "Nov 2019",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2019-12",
+          "label": "Dec 2019",
+          "days_low": 20,
+          "days_high": 25,
+          "days_mid": 22.5
+        },
+        {
+          "month": "2020-01",
+          "label": "Jan 2020",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2020-02",
+          "label": "Feb 2020",
+          "days_low": 10,
+          "days_high": 12,
+          "days_mid": 11.0
+        },
+        {
+          "month": "2020-09",
+          "label": "Sep 2020",
+          "days_low": 45,
+          "days_high": 50,
+          "days_mid": 47.5
+        },
+        {
+          "month": "2020-10",
+          "label": "Oct 2020",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2020-11",
+          "label": "Nov 2020",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2020-12",
+          "label": "Dec 2020",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2021-01",
+          "label": "Jan 2021",
+          "days_low": 10,
+          "days_high": 15,
+          "days_mid": 12.5
+        },
+        {
+          "month": "2021-02",
+          "label": "Feb 2021",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2021-03",
+          "label": "Mar 2021",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2021-04",
+          "label": "Apr 2021",
+          "days_low": 15,
+          "days_high": 17,
+          "days_mid": 16.0
+        },
+        {
+          "month": "2021-05",
+          "label": "May 2021",
+          "days_low": 30,
+          "days_high": 45,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2021-06",
+          "label": "Jun 2021",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2021-07",
+          "label": "Jul 2021",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2021-08",
+          "label": "Aug 2021",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2021-09",
+          "label": "Sep 2021",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2021-10",
+          "label": "Oct 2021",
+          "days_low": 40,
+          "days_high": 45,
+          "days_mid": 42.5
+        },
+        {
+          "month": "2021-11",
+          "label": "Nov 2021",
+          "days_low": 10,
+          "days_high": 15,
+          "days_mid": 12.5
+        },
+        {
+          "month": "2021-12",
+          "label": "Dec 2021",
+          "days_low": 30,
+          "days_high": 32,
+          "days_mid": 31.0
+        },
+        {
+          "month": "2022-01",
+          "label": "Jan 2022",
+          "days_low": 25,
+          "days_high": 30,
+          "days_mid": 27.5
+        },
+        {
+          "month": "2022-02",
+          "label": "Feb 2022",
+          "days_low": 12,
+          "days_high": 15,
+          "days_mid": 13.5
+        },
+        {
+          "month": "2022-03",
+          "label": "Mar 2022",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2022-04",
+          "label": "Apr 2022",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2022-05",
+          "label": "May 2022",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2022-06",
+          "label": "Jun 2022",
+          "days_low": 15,
+          "days_high": 20,
+          "days_mid": 17.5
+        },
+        {
+          "month": "2022-07",
+          "label": "Jul 2022",
+          "days_low": 20,
+          "days_high": 25,
+          "days_mid": 22.5
+        },
+        {
+          "month": "2022-08",
+          "label": "Aug 2022",
+          "days_low": 30,
+          "days_high": 35,
+          "days_mid": 32.5
+        },
+        {
+          "month": "2022-09",
+          "label": "Sep 2022",
+          "days_low": 40,
+          "days_high": 45,
+          "days_mid": 42.5
+        },
+        {
+          "month": "2022-10",
+          "label": "Oct 2022",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2022-11",
+          "label": "Nov 2022",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2022-12",
+          "label": "Dec 2022",
+          "days_low": 35,
+          "days_high": 40,
+          "days_mid": 37.5
+        },
+        {
+          "month": "2023-02",
+          "label": "Feb 2023",
+          "days_low": 35,
+          "days_high": 37,
+          "days_mid": 36.0
+        },
+        {
+          "month": "2023-03",
+          "label": "Mar 2023",
+          "days_low": 37,
+          "days_high": 39,
+          "days_mid": 38.0
+        },
+        {
+          "month": "2023-04",
+          "label": "Apr 2023",
+          "days_low": 39,
+          "days_high": 41,
+          "days_mid": 40.0
+        },
+        {
+          "month": "2023-05",
+          "label": "May 2023",
+          "days_low": 40,
+          "days_high": 45,
+          "days_mid": 42.5
+        },
+        {
+          "month": "2023-06",
+          "label": "Jun 2023",
+          "days_low": 45,
+          "days_high": 49,
+          "days_mid": 47.0
+        },
+        {
+          "month": "2023-07",
+          "label": "Jul 2023",
+          "days_low": 50,
+          "days_high": 55,
+          "days_mid": 52.5
+        },
+        {
+          "month": "2023-08",
+          "label": "Aug 2023",
+          "days_low": 58,
+          "days_high": 63,
+          "days_mid": 60.5
+        },
+        {
+          "month": "2023-09",
+          "label": "Sep 2023",
+          "days_low": 60,
+          "days_high": 65,
+          "days_mid": 62.5
+        },
+        {
+          "month": "2023-10",
+          "label": "Oct 2023",
+          "days_low": 63,
+          "days_high": 66,
+          "days_mid": 64.5
+        },
+        {
+          "month": "2023-11",
+          "label": "Nov 2023",
+          "days_low": 61,
+          "days_high": 64,
+          "days_mid": 62.5
+        },
+        {
+          "month": "2023-12",
+          "label": "Dec 2023",
+          "days_low": 55,
+          "days_high": 58,
+          "days_mid": 56.5
+        },
+        {
+          "month": "2024-01",
+          "label": "Jan 2024",
+          "days_low": 50,
+          "days_high": 55,
+          "days_mid": 52.5
+        },
+        {
+          "month": "2024-02",
+          "label": "Feb 2024",
+          "days_low": 50,
+          "days_high": 55,
+          "days_mid": 52.5
+        },
+        {
+          "month": "2024-06",
+          "label": "Jun 2024",
+          "days_low": 62,
+          "days_high": 67,
+          "days_mid": 64.5
+        },
+        {
+          "month": "2024-07",
+          "label": "Jul 2024",
+          "days_low": 67,
+          "days_high": 72,
+          "days_mid": 69.5
+        },
+        {
+          "month": "2024-08",
+          "label": "Aug 2024",
+          "days_low": 70,
+          "days_high": 75,
+          "days_mid": 72.5
+        },
+        {
+          "month": "2024-09",
+          "label": "Sep 2024",
+          "days_low": 80,
+          "days_high": 85,
+          "days_mid": 82.5
+        },
+        {
+          "month": "2024-10",
+          "label": "Oct 2024",
+          "days_low": 75,
+          "days_high": 80,
+          "days_mid": 77.5
+        },
+        {
+          "month": "2024-11",
+          "label": "Nov 2024",
+          "days_low": 65,
+          "days_high": 68,
+          "days_mid": 66.5
+        },
+        {
+          "month": "2025-01",
+          "label": "Jan 2025",
+          "days_low": 50,
+          "days_high": 55,
+          "days_mid": 52.5
+        },
+        {
+          "month": "2025-02",
+          "label": "Feb 2025",
+          "days_low": 50,
+          "days_high": 52,
+          "days_mid": 51.0
+        },
+        {
+          "month": "2025-03",
+          "label": "Mar 2025",
+          "days_low": 50,
+          "days_high": 55,
+          "days_mid": 52.5
+        },
+        {
+          "month": "2025-05",
+          "label": "May 2025",
+          "days_low": 52,
+          "days_high": 53,
+          "days_mid": 52.5
+        },
+        {
           "month": "2025-10",
           "label": "Oct 2025",
           "days_low": 53,
@@ -10191,9 +10646,172 @@
           "days_low": 28,
           "days_high": 28,
           "days_mid": 28.0
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "days_low": 28,
+          "days_high": 30,
+          "days_mid": 29.0
         }
       ],
       "dealer_expectation_trend": [
+        {
+          "month": "2022-06",
+          "label": "Jun 2022",
+          "next_month_growth_pct": 50.3,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2022-07",
+          "label": "Jul 2022",
+          "next_month_growth_pct": 61.7,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2022-08",
+          "label": "Aug 2022",
+          "next_month_growth_pct": 61.2,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2022-09",
+          "label": "Sep 2022",
+          "next_month_growth_pct": 70.1,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2022-10",
+          "label": "Oct 2022",
+          "next_month_growth_pct": 42.4,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-06",
+          "label": "Jun 2023",
+          "next_month_growth_pct": 42.05,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-07",
+          "label": "Jul 2023",
+          "next_month_growth_pct": 59.84,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-08",
+          "label": "Aug 2023",
+          "next_month_growth_pct": 71.11,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-09",
+          "label": "Sep 2023",
+          "next_month_growth_pct": 72.14,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-11",
+          "label": "Nov 2023",
+          "next_month_growth_pct": 47.35,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2023-12",
+          "label": "Dec 2023",
+          "next_month_growth_pct": 58.74,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-01",
+          "label": "Jan 2024",
+          "next_month_growth_pct": 54.02,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-02",
+          "label": "Feb 2024",
+          "next_month_growth_pct": 56.13,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-03",
+          "label": "Mar 2024",
+          "next_month_growth_pct": 56.43,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-04",
+          "label": "Apr 2024",
+          "next_month_growth_pct": 50.0,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-05",
+          "label": "May 2024",
+          "next_month_growth_pct": 42.86,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-07",
+          "label": "Jul 2024",
+          "next_month_growth_pct": 51.08,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-08",
+          "label": "Aug 2024",
+          "next_month_growth_pct": 50.0,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-09",
+          "label": "Sep 2024",
+          "next_month_growth_pct": 66.55,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2024-12",
+          "label": "Dec 2024",
+          "next_month_growth_pct": 48.09,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2025-01",
+          "label": "Jan 2025",
+          "next_month_growth_pct": 45.74,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2025-02",
+          "label": "Feb 2025",
+          "next_month_growth_pct": 45.28,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2025-03",
+          "label": "Mar 2025",
+          "next_month_growth_pct": 58.9,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "next_month_growth_pct": 59.06,
+          "next_three_months_growth_pct": null
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "next_month_growth_pct": 62.75,
+          "next_three_months_growth_pct": 77.9
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "next_month_growth_pct": 62.75,
+          "next_three_months_growth_pct": 66.92
+        },
         {
           "month": "2025-10",
           "label": "Oct 2025",
@@ -10229,6 +10847,12 @@
           "label": "Mar 2026",
           "next_month_growth_pct": 50.56,
           "next_three_months_growth_pct": 49.81
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "next_month_growth_pct": 55.6,
+          "next_three_months_growth_pct": 50.9
         }
       ],
       "latest_oem_tables": {
@@ -14896,6 +15520,454 @@
       },
       "urban_rural_growth_series": [
         {
+          "month": "2025-06",
+          "category": "2W",
+          "urban_mom_pct": -4.92,
+          "urban_yoy_pct": 7.72,
+          "rural_mom_pct": -17.36,
+          "rural_yoy_pct": 2.62
+        },
+        {
+          "month": "2025-06",
+          "category": "3W",
+          "urban_mom_pct": -1.33,
+          "urban_yoy_pct": 5.21,
+          "rural_mom_pct": -5.61,
+          "rural_yoy_pct": 8.0
+        },
+        {
+          "month": "2025-06",
+          "category": "CE",
+          "urban_mom_pct": 60.96,
+          "urban_yoy_pct": 81.01,
+          "rural_mom_pct": 32.24,
+          "rural_yoy_pct": 35.96
+        },
+        {
+          "month": "2025-06",
+          "category": "CV",
+          "urban_mom_pct": 1.1,
+          "urban_yoy_pct": 12.26,
+          "rural_mom_pct": -7.22,
+          "rural_yoy_pct": 0.83
+        },
+        {
+          "month": "2025-06",
+          "category": "PV",
+          "urban_mom_pct": -0.16,
+          "urban_yoy_pct": 0.9,
+          "rural_mom_pct": -3.53,
+          "rural_yoy_pct": 5.05
+        },
+        {
+          "month": "2025-06",
+          "category": "TOTAL",
+          "urban_mom_pct": -3.14,
+          "urban_yoy_pct": 6.63,
+          "rural_mom_pct": -14.04,
+          "rural_yoy_pct": 3.42
+        },
+        {
+          "month": "2025-06",
+          "category": "TRACTOR",
+          "urban_mom_pct": 12.07,
+          "urban_yoy_pct": 15.64,
+          "rural_mom_pct": 6.22,
+          "rural_yoy_pct": 7.22
+        },
+        {
+          "month": "2025-07",
+          "category": "2W",
+          "urban_mom_pct": 1.21,
+          "urban_yoy_pct": -0.31,
+          "rural_mom_pct": -11.84,
+          "rural_yoy_pct": -11.17
+        },
+        {
+          "month": "2025-07",
+          "category": "3W",
+          "urban_mom_pct": 8.23,
+          "urban_yoy_pct": -1.43,
+          "rural_mom_pct": 12.92,
+          "rural_yoy_pct": 2.8
+        },
+        {
+          "month": "2025-07",
+          "category": "CE",
+          "urban_mom_pct": -60.44,
+          "urban_yoy_pct": -26.53,
+          "rural_mom_pct": -57.6,
+          "rural_yoy_pct": -38.39
+        },
+        {
+          "month": "2025-07",
+          "category": "CV",
+          "urban_mom_pct": 3.59,
+          "urban_yoy_pct": 2.56,
+          "rural_mom_pct": 4.86,
+          "rural_yoy_pct": -2.26
+        },
+        {
+          "month": "2025-07",
+          "category": "PV",
+          "urban_mom_pct": 11.14,
+          "urban_yoy_pct": -2.52,
+          "rural_mom_pct": 9.16,
+          "rural_yoy_pct": 2.12
+        },
+        {
+          "month": "2025-07",
+          "category": "TOTAL",
+          "urban_mom_pct": 3.68,
+          "urban_yoy_pct": -0.52,
+          "rural_mom_pct": -6.63,
+          "rural_yoy_pct": -7.53
+        },
+        {
+          "month": "2025-07",
+          "category": "TRACTOR",
+          "urban_mom_pct": 19.23,
+          "urban_yoy_pct": 18.23,
+          "rural_mom_pct": 13.93,
+          "rural_yoy_pct": 9.37
+        },
+        {
+          "month": "2025-08",
+          "category": "2W",
+          "urban_mom_pct": 2.46,
+          "urban_yoy_pct": 8.16,
+          "rural_mom_pct": 0.39,
+          "rural_yoy_pct": -2.51
+        },
+        {
+          "month": "2025-08",
+          "category": "3W",
+          "urban_mom_pct": -6.88,
+          "urban_yoy_pct": 0.43,
+          "rural_mom_pct": -7.96,
+          "rural_yoy_pct": -4.44
+        },
+        {
+          "month": "2025-08",
+          "category": "CE",
+          "urban_mom_pct": -0.9,
+          "urban_yoy_pct": -22.08,
+          "rural_mom_pct": 11.4,
+          "rural_yoy_pct": -29.63
+        },
+        {
+          "month": "2025-08",
+          "category": "CV",
+          "urban_mom_pct": -2.07,
+          "urban_yoy_pct": 11.61,
+          "rural_mom_pct": -0.03,
+          "rural_yoy_pct": 5.38
+        },
+        {
+          "month": "2025-08",
+          "category": "PV",
+          "urban_mom_pct": -1.69,
+          "urban_yoy_pct": 0.6,
+          "rural_mom_pct": -1.53,
+          "rural_yoy_pct": 1.46
+        },
+        {
+          "month": "2025-08",
+          "category": "TOTAL",
+          "urban_mom_pct": 0.74,
+          "urban_yoy_pct": 6.53,
+          "rural_mom_pct": -0.64,
+          "rural_yoy_pct": -0.35
+        },
+        {
+          "month": "2025-08",
+          "category": "TRACTOR",
+          "urban_mom_pct": -3.78,
+          "urban_yoy_pct": 39.39,
+          "rural_mom_pct": -3.99,
+          "rural_yoy_pct": 28.13
+        },
+        {
+          "month": "2025-09",
+          "category": "2W",
+          "urban_mom_pct": -6.07,
+          "urban_yoy_pct": 6.66,
+          "rural_mom_pct": -6.42,
+          "rural_yoy_pct": 6.39
+        },
+        {
+          "month": "2025-09",
+          "category": "3W",
+          "urban_mom_pct": -2.17,
+          "urban_yoy_pct": -5.96,
+          "rural_mom_pct": -5.76,
+          "rural_yoy_pct": -8.26
+        },
+        {
+          "month": "2025-09",
+          "category": "CE",
+          "urban_mom_pct": 18.77,
+          "urban_yoy_pct": -12.37,
+          "rural_mom_pct": 21.64,
+          "rural_yoy_pct": -23.55
+        },
+        {
+          "month": "2025-09",
+          "category": "CV",
+          "urban_mom_pct": -4.17,
+          "urban_yoy_pct": 5.11,
+          "rural_mom_pct": -5.04,
+          "rural_yoy_pct": 0.08
+        },
+        {
+          "month": "2025-09",
+          "category": "PV",
+          "urban_mom_pct": -10.17,
+          "urban_yoy_pct": 2.58,
+          "rural_mom_pct": -2.86,
+          "rural_yoy_pct": 11.06
+        },
+        {
+          "month": "2025-09",
+          "category": "TOTAL",
+          "urban_mom_pct": -6.95,
+          "urban_yoy_pct": 5.08,
+          "rural_mom_pct": -7.02,
+          "rural_yoy_pct": 5.34
+        },
+        {
+          "month": "2025-09",
+          "category": "TRACTOR",
+          "urban_mom_pct": -25.17,
+          "urban_yoy_pct": 17.59,
+          "rural_mom_pct": -23.69,
+          "rural_yoy_pct": 0.82
+        },
+        {
+          "month": "2025-10",
+          "category": "2W",
+          "urban_mom_pct": 104.68,
+          "urban_yoy_pct": 33.91,
+          "rural_mom_pct": 179.45,
+          "rural_yoy_pct": 65.9
+        },
+        {
+          "month": "2025-10",
+          "category": "3W",
+          "urban_mom_pct": 28.0,
+          "urban_yoy_pct": 1.35,
+          "rural_mom_pct": 33.65,
+          "rural_yoy_pct": 9.13
+        },
+        {
+          "month": "2025-10",
+          "category": "CE",
+          "urban_mom_pct": 18.76,
+          "urban_yoy_pct": -31.07,
+          "rural_mom_pct": 37.78,
+          "rural_yoy_pct": -30.09
+        },
+        {
+          "month": "2025-10",
+          "category": "CV",
+          "urban_mom_pct": 38.36,
+          "urban_yoy_pct": 10.77,
+          "rural_mom_pct": 61.9,
+          "rural_yoy_pct": 25.09
+        },
+        {
+          "month": "2025-10",
+          "category": "PV",
+          "urban_mom_pct": 80.13,
+          "urban_yoy_pct": 6.42,
+          "rural_mom_pct": 95.3,
+          "rural_yoy_pct": 19.01
+        },
+        {
+          "month": "2025-10",
+          "category": "TOTAL",
+          "urban_mom_pct": 91.37,
+          "urban_yoy_pct": 25.09,
+          "rural_mom_pct": 146.9,
+          "rural_yoy_pct": 54.19
+        },
+        {
+          "month": "2025-10",
+          "category": "TRACTOR",
+          "urban_mom_pct": 19.27,
+          "urban_yoy_pct": 13.58,
+          "rural_mom_pct": 12.24,
+          "rural_yoy_pct": 14.38
+        },
+        {
+          "month": "2025-11",
+          "category": "2W",
+          "urban_mom_pct": -19.58,
+          "urban_yoy_pct": 5.32,
+          "rural_mom_pct": -18.9,
+          "rural_yoy_pct": -7.78
+        },
+        {
+          "month": "2025-11",
+          "category": "3W",
+          "urban_mom_pct": -2.28,
+          "urban_yoy_pct": 15.23,
+          "rural_mom_pct": 8.23,
+          "rural_yoy_pct": 30.97
+        },
+        {
+          "month": "2025-11",
+          "category": "CE",
+          "urban_mom_pct": -3.13,
+          "urban_yoy_pct": -17.17,
+          "rural_mom_pct": -3.46,
+          "rural_yoy_pct": -16.06
+        },
+        {
+          "month": "2025-11",
+          "category": "CV",
+          "urban_mom_pct": -11.83,
+          "urban_yoy_pct": 22.95,
+          "rural_mom_pct": -16.9,
+          "rural_yoy_pct": 17.05
+        },
+        {
+          "month": "2025-11",
+          "category": "PV",
+          "urban_mom_pct": -28.06,
+          "urban_yoy_pct": 17.6,
+          "rural_mom_pct": -29.64,
+          "rural_yoy_pct": 22.85
+        },
+        {
+          "month": "2025-11",
+          "category": "TOTAL",
+          "urban_mom_pct": -19.49,
+          "urban_yoy_pct": 8.96,
+          "rural_mom_pct": -16.88,
+          "rural_yoy_pct": -2.11
+        },
+        {
+          "month": "2025-11",
+          "category": "TRACTOR",
+          "urban_mom_pct": 81.35,
+          "urban_yoy_pct": 68.01,
+          "rural_mom_pct": 68.81,
+          "rural_yoy_pct": 53.76
+        },
+        {
+          "month": "2026-01",
+          "category": "2W",
+          "urban_mom_pct": 38.81,
+          "urban_yoy_pct": 22.19,
+          "rural_mom_pct": 42.22,
+          "rural_yoy_pct": 19.77
+        },
+        {
+          "month": "2026-01",
+          "category": "3W",
+          "urban_mom_pct": 8.29,
+          "urban_yoy_pct": 5.69,
+          "rural_mom_pct": -6.47,
+          "rural_yoy_pct": 31.64
+        },
+        {
+          "month": "2026-01",
+          "category": "CE",
+          "urban_mom_pct": 23.96,
+          "urban_yoy_pct": -22.45,
+          "rural_mom_pct": 12.47,
+          "rural_yoy_pct": -19.91
+        },
+        {
+          "month": "2026-01",
+          "category": "CV",
+          "urban_mom_pct": 30.45,
+          "urban_yoy_pct": 13.94,
+          "rural_mom_pct": 26.5,
+          "rural_yoy_pct": 16.25
+        },
+        {
+          "month": "2026-01",
+          "category": "PV",
+          "urban_mom_pct": 35.69,
+          "urban_yoy_pct": 2.75,
+          "rural_mom_pct": 34.59,
+          "rural_yoy_pct": 14.43
+        },
+        {
+          "month": "2026-01",
+          "category": "TOTAL",
+          "urban_mom_pct": 35.08,
+          "urban_yoy_pct": 15.69,
+          "rural_mom_pct": 33.44,
+          "rural_yoy_pct": 19.31
+        },
+        {
+          "month": "2026-01",
+          "category": "TRACTOR",
+          "urban_mom_pct": 2.33,
+          "urban_yoy_pct": 30.19,
+          "rural_mom_pct": -0.81,
+          "rural_yoy_pct": 21.22
+        },
+        {
+          "month": "2026-02",
+          "category": "2W",
+          "urban_mom_pct": -9.49,
+          "urban_yoy_pct": 28.96,
+          "rural_mom_pct": -7.23,
+          "rural_yoy_pct": 22.16
+        },
+        {
+          "month": "2026-02",
+          "category": "3W",
+          "urban_mom_pct": -6.11,
+          "urban_yoy_pct": 13.2,
+          "rural_mom_pct": -9.25,
+          "rural_yoy_pct": 35.28
+        },
+        {
+          "month": "2026-02",
+          "category": "CE",
+          "urban_mom_pct": -4.18,
+          "urban_yoy_pct": -4.52,
+          "rural_mom_pct": 0.46,
+          "rural_yoy_pct": 1.57
+        },
+        {
+          "month": "2026-02",
+          "category": "CV",
+          "urban_mom_pct": -6.84,
+          "urban_yoy_pct": 25.78,
+          "rural_mom_pct": -5.54,
+          "rural_yoy_pct": 32.21
+        },
+        {
+          "month": "2026-02",
+          "category": "PV",
+          "urban_mom_pct": -22.92,
+          "urban_yoy_pct": 21.12,
+          "rural_mom_pct": -23.41,
+          "rural_yoy_pct": 34.21
+        },
+        {
+          "month": "2026-02",
+          "category": "TOTAL",
+          "urban_mom_pct": -12.82,
+          "urban_yoy_pct": 26.12,
+          "rural_mom_pct": -10.38,
+          "rural_yoy_pct": 25.21
+        },
+        {
+          "month": "2026-02",
+          "category": "TRACTOR",
+          "urban_mom_pct": -29.35,
+          "urban_yoy_pct": 30.55,
+          "rural_mom_pct": -20.3,
+          "rural_yoy_pct": 37.68
+        },
+        {
           "month": "2026-03",
           "category": "2W",
           "urban_mom_pct": 10.81,
@@ -14950,10 +16022,710 @@
           "urban_yoy_pct": 7.44,
           "rural_mom_pct": -8.33,
           "rural_yoy_pct": 11.65
+        },
+        {
+          "month": "2026-04",
+          "category": "2W",
+          "urban_mom_pct": -5.18,
+          "urban_yoy_pct": 14.07,
+          "rural_mom_pct": 0.67,
+          "rural_yoy_pct": 12.3
+        },
+        {
+          "month": "2026-04",
+          "category": "3W",
+          "urban_mom_pct": -3.83,
+          "urban_yoy_pct": 3.22,
+          "rural_mom_pct": -1.63,
+          "rural_yoy_pct": 10.53
+        },
+        {
+          "month": "2026-04",
+          "category": "CE",
+          "urban_mom_pct": -4.44,
+          "urban_yoy_pct": -7.58,
+          "rural_mom_pct": -10.69,
+          "rural_yoy_pct": 2.28
+        },
+        {
+          "month": "2026-04",
+          "category": "CV",
+          "urban_mom_pct": -4.77,
+          "urban_yoy_pct": 10.22,
+          "rural_mom_pct": -1.41,
+          "rural_yoy_pct": 20.25
+        },
+        {
+          "month": "2026-04",
+          "category": "PV",
+          "urban_mom_pct": -10.34,
+          "urban_yoy_pct": 7.11,
+          "rural_mom_pct": -2.99,
+          "rural_yoy_pct": 20.4
+        },
+        {
+          "month": "2026-04",
+          "category": "TOTAL",
+          "urban_mom_pct": -6.31,
+          "urban_yoy_pct": 11.78,
+          "rural_mom_pct": -0.35,
+          "rural_yoy_pct": 13.83
+        },
+        {
+          "month": "2026-04",
+          "category": "TRACTOR",
+          "urban_mom_pct": -10.23,
+          "urban_yoy_pct": 12.12,
+          "rural_mom_pct": -8.11,
+          "rural_yoy_pct": 25.88
         }
       ],
       "subsegment_series": {
         "CV": [
+          {
+            "month": "2020-12",
+            "label": "HCV",
+            "units": 11212,
+            "mom_pct": null,
+            "yoy_pct": -27.01
+          },
+          {
+            "month": "2020-12",
+            "label": "LCV",
+            "units": 33986,
+            "mom_pct": null,
+            "yoy_pct": -11.22
+          },
+          {
+            "month": "2020-12",
+            "label": "MCV",
+            "units": 2528,
+            "mom_pct": null,
+            "yoy_pct": -16.24
+          },
+          {
+            "month": "2020-12",
+            "label": "Others",
+            "units": 3728,
+            "mom_pct": null,
+            "yoy_pct": 31.36
+          },
+          {
+            "month": "2021-01",
+            "label": "HCV",
+            "units": 14279,
+            "mom_pct": null,
+            "yoy_pct": -26.44
+          },
+          {
+            "month": "2021-01",
+            "label": "LCV",
+            "units": 34464,
+            "mom_pct": null,
+            "yoy_pct": -28.22
+          },
+          {
+            "month": "2021-01",
+            "label": "MCV",
+            "units": 3466,
+            "mom_pct": null,
+            "yoy_pct": -14.17
+          },
+          {
+            "month": "2021-01",
+            "label": "Others",
+            "units": 3626,
+            "mom_pct": null,
+            "yoy_pct": 21.88
+          },
+          {
+            "month": "2021-02",
+            "label": "HCV",
+            "units": 16333,
+            "mom_pct": null,
+            "yoy_pct": -32.68
+          },
+          {
+            "month": "2021-02",
+            "label": "LCV",
+            "units": 34898,
+            "mom_pct": null,
+            "yoy_pct": -32.38
+          },
+          {
+            "month": "2021-02",
+            "label": "MCV",
+            "units": 3785,
+            "mom_pct": null,
+            "yoy_pct": -16.41
+          },
+          {
+            "month": "2021-02",
+            "label": "Others",
+            "units": 4004,
+            "mom_pct": null,
+            "yoy_pct": 19.42
+          },
+          {
+            "month": "2021-03",
+            "label": "HCV",
+            "units": 18609,
+            "mom_pct": null,
+            "yoy_pct": -44.28
+          },
+          {
+            "month": "2021-03",
+            "label": "LCV",
+            "units": 38450,
+            "mom_pct": null,
+            "yoy_pct": -45.55
+          },
+          {
+            "month": "2021-03",
+            "label": "MCV",
+            "units": 4663,
+            "mom_pct": null,
+            "yoy_pct": -44.1
+          },
+          {
+            "month": "2021-03",
+            "label": "Others",
+            "units": 5650,
+            "mom_pct": null,
+            "yoy_pct": 34.24
+          },
+          {
+            "month": "2021-04",
+            "label": "HCV",
+            "units": 16062,
+            "mom_pct": null,
+            "yoy_pct": -40.73
+          },
+          {
+            "month": "2021-04",
+            "label": "LCV",
+            "units": 28511,
+            "mom_pct": null,
+            "yoy_pct": -35.03
+          },
+          {
+            "month": "2021-04",
+            "label": "MCV",
+            "units": 3547,
+            "mom_pct": null,
+            "yoy_pct": -24.79
+          },
+          {
+            "month": "2021-04",
+            "label": "Others",
+            "units": 3316,
+            "mom_pct": null,
+            "yoy_pct": 13.06
+          },
+          {
+            "month": "2021-05",
+            "label": "HCV",
+            "units": 6233,
+            "mom_pct": null,
+            "yoy_pct": -73.85
+          },
+          {
+            "month": "2021-05",
+            "label": "LCV",
+            "units": 9411,
+            "mom_pct": null,
+            "yoy_pct": -78.24
+          },
+          {
+            "month": "2021-05",
+            "label": "MCV",
+            "units": 915,
+            "mom_pct": null,
+            "yoy_pct": -81.97
+          },
+          {
+            "month": "2021-05",
+            "label": "Others",
+            "units": 975,
+            "mom_pct": null,
+            "yoy_pct": -66.98
+          },
+          {
+            "month": "2021-06",
+            "label": "HCV",
+            "units": 9575,
+            "mom_pct": null,
+            "yoy_pct": 2667.34
+          },
+          {
+            "month": "2021-06",
+            "label": "LCV",
+            "units": 21650,
+            "mom_pct": null,
+            "yoy_pct": 156.88
+          },
+          {
+            "month": "2021-06",
+            "label": "MCV",
+            "units": 2091,
+            "mom_pct": null,
+            "yoy_pct": 2580.77
+          },
+          {
+            "month": "2021-06",
+            "label": "Others",
+            "units": 2384,
+            "mom_pct": null,
+            "yoy_pct": 34.92
+          },
+          {
+            "month": "2021-07",
+            "label": "HCV",
+            "units": 11307,
+            "mom_pct": null,
+            "yoy_pct": 867.24
+          },
+          {
+            "month": "2021-07",
+            "label": "LCV",
+            "units": 34895,
+            "mom_pct": null,
+            "yoy_pct": 119.66
+          },
+          {
+            "month": "2021-07",
+            "label": "MCV",
+            "units": 2888,
+            "mom_pct": null,
+            "yoy_pct": 682.66
+          },
+          {
+            "month": "2021-07",
+            "label": "Others",
+            "units": 3040,
+            "mom_pct": null,
+            "yoy_pct": 39.58
+          },
+          {
+            "month": "2021-08",
+            "label": "HCV",
+            "units": 12463,
+            "mom_pct": null,
+            "yoy_pct": 426.98
+          },
+          {
+            "month": "2021-08",
+            "label": "LCV",
+            "units": 34829,
+            "mom_pct": null,
+            "yoy_pct": 61.84
+          },
+          {
+            "month": "2021-08",
+            "label": "MCV",
+            "units": 2947,
+            "mom_pct": null,
+            "yoy_pct": 297.71
+          },
+          {
+            "month": "2021-08",
+            "label": "Others",
+            "units": 2911,
+            "mom_pct": null,
+            "yoy_pct": 30.83
+          },
+          {
+            "month": "2021-09",
+            "label": "HCV",
+            "units": 14635,
+            "mom_pct": null,
+            "yoy_pct": 189.29
+          },
+          {
+            "month": "2021-09",
+            "label": "LCV",
+            "units": 36474,
+            "mom_pct": null,
+            "yoy_pct": 20.69
+          },
+          {
+            "month": "2021-09",
+            "label": "MCV",
+            "units": 3766,
+            "mom_pct": null,
+            "yoy_pct": 136.11
+          },
+          {
+            "month": "2021-09",
+            "label": "Others",
+            "units": 3945,
+            "mom_pct": null,
+            "yoy_pct": 21.91
+          },
+          {
+            "month": "2021-10",
+            "label": "HCV",
+            "units": 15874,
+            "mom_pct": null,
+            "yoy_pct": 121.61
+          },
+          {
+            "month": "2021-10",
+            "label": "LCV",
+            "units": 34162,
+            "mom_pct": null,
+            "yoy_pct": 4.04
+          },
+          {
+            "month": "2021-10",
+            "label": "MCV",
+            "units": 3694,
+            "mom_pct": null,
+            "yoy_pct": 80.11
+          },
+          {
+            "month": "2021-10",
+            "label": "Others",
+            "units": 3002,
+            "mom_pct": null,
+            "yoy_pct": 6.61
+          },
+          {
+            "month": "2021-11",
+            "label": "HCV",
+            "units": 14972,
+            "mom_pct": null,
+            "yoy_pct": 74.54
+          },
+          {
+            "month": "2021-11",
+            "label": "LCV",
+            "units": 36078,
+            "mom_pct": null,
+            "yoy_pct": -1.6
+          },
+          {
+            "month": "2021-11",
+            "label": "MCV",
+            "units": 3647,
+            "mom_pct": null,
+            "yoy_pct": 51.08
+          },
+          {
+            "month": "2021-11",
+            "label": "Others",
+            "units": 2692,
+            "mom_pct": null,
+            "yoy_pct": -9.91
+          },
+          {
+            "month": "2021-12",
+            "label": "HCV",
+            "units": 16066,
+            "mom_pct": null,
+            "yoy_pct": 42.45
+          },
+          {
+            "month": "2021-12",
+            "label": "LCV",
+            "units": 36047,
+            "mom_pct": null,
+            "yoy_pct": 5.5
+          },
+          {
+            "month": "2021-12",
+            "label": "MCV",
+            "units": 4099,
+            "mom_pct": null,
+            "yoy_pct": 64.03
+          },
+          {
+            "month": "2021-12",
+            "label": "Others",
+            "units": 2635,
+            "mom_pct": null,
+            "yoy_pct": -30.75
+          },
+          {
+            "month": "2022-01",
+            "label": "HCV",
+            "units": 20279,
+            "mom_pct": null,
+            "yoy_pct": 41.12
+          },
+          {
+            "month": "2022-01",
+            "label": "LCV",
+            "units": 40343,
+            "mom_pct": null,
+            "yoy_pct": 16.46
+          },
+          {
+            "month": "2022-01",
+            "label": "MCV",
+            "units": 4093,
+            "mom_pct": null,
+            "yoy_pct": 17.11
+          },
+          {
+            "month": "2022-01",
+            "label": "Others",
+            "units": 3048,
+            "mom_pct": null,
+            "yoy_pct": -18.11
+          },
+          {
+            "month": "2022-02",
+            "label": "HCV",
+            "units": 19822,
+            "mom_pct": null,
+            "yoy_pct": 20.73
+          },
+          {
+            "month": "2022-02",
+            "label": "LCV",
+            "units": 37095,
+            "mom_pct": null,
+            "yoy_pct": 5.67
+          },
+          {
+            "month": "2022-02",
+            "label": "MCV",
+            "units": 3782,
+            "mom_pct": null,
+            "yoy_pct": -0.29
+          },
+          {
+            "month": "2022-02",
+            "label": "Others",
+            "units": 3098,
+            "mom_pct": null,
+            "yoy_pct": -24.05
+          },
+          {
+            "month": "2022-03",
+            "label": "HCV",
+            "units": 24169,
+            "mom_pct": null,
+            "yoy_pct": 29.25
+          },
+          {
+            "month": "2022-03",
+            "label": "LCV",
+            "units": 45945,
+            "mom_pct": null,
+            "yoy_pct": 18.6
+          },
+          {
+            "month": "2022-03",
+            "label": "MCV",
+            "units": 4188,
+            "mom_pct": null,
+            "yoy_pct": -10.55
+          },
+          {
+            "month": "2022-03",
+            "label": "Others",
+            "units": 3636,
+            "mom_pct": null,
+            "yoy_pct": -36.29
+          },
+          {
+            "month": "2022-04",
+            "label": "HCV",
+            "units": 26461,
+            "mom_pct": null,
+            "yoy_pct": 64.6
+          },
+          {
+            "month": "2022-04",
+            "label": "LCV",
+            "units": 43928,
+            "mom_pct": null,
+            "yoy_pct": 53.74
+          },
+          {
+            "month": "2022-04",
+            "label": "MCV",
+            "units": 4742,
+            "mom_pct": null,
+            "yoy_pct": 33.5
+          },
+          {
+            "month": "2022-04",
+            "label": "Others",
+            "units": 3267,
+            "mom_pct": null,
+            "yoy_pct": -1.42
+          },
+          {
+            "month": "2022-05",
+            "label": "HCV",
+            "units": 20945,
+            "mom_pct": null,
+            "yoy_pct": 235.01
+          },
+          {
+            "month": "2022-05",
+            "label": "LCV",
+            "units": 38635,
+            "mom_pct": null,
+            "yoy_pct": 308.27
+          },
+          {
+            "month": "2022-05",
+            "label": "MCV",
+            "units": 3941,
+            "mom_pct": null,
+            "yoy_pct": 329.3
+          },
+          {
+            "month": "2022-05",
+            "label": "Others",
+            "units": 3111,
+            "mom_pct": null,
+            "yoy_pct": 219.4
+          },
+          {
+            "month": "2022-06",
+            "label": "HCV",
+            "units": 19380,
+            "mom_pct": null,
+            "yoy_pct": 102.06
+          },
+          {
+            "month": "2022-06",
+            "label": "LCV",
+            "units": 40349,
+            "mom_pct": null,
+            "yoy_pct": 85.69
+          },
+          {
+            "month": "2022-06",
+            "label": "MCV",
+            "units": 4709,
+            "mom_pct": null,
+            "yoy_pct": 124.24
+          },
+          {
+            "month": "2022-06",
+            "label": "Others",
+            "units": 3258,
+            "mom_pct": null,
+            "yoy_pct": 36.32
+          },
+          {
+            "month": "2022-07",
+            "label": "HCV",
+            "units": 18181,
+            "mom_pct": null,
+            "yoy_pct": 60.23
+          },
+          {
+            "month": "2022-07",
+            "label": "LCV",
+            "units": 41077,
+            "mom_pct": null,
+            "yoy_pct": 17.57
+          },
+          {
+            "month": "2022-07",
+            "label": "MCV",
+            "units": 4421,
+            "mom_pct": null,
+            "yoy_pct": 53.24
+          },
+          {
+            "month": "2022-07",
+            "label": "Others",
+            "units": 2780,
+            "mom_pct": null,
+            "yoy_pct": -8.16
+          },
+          {
+            "month": "2022-08",
+            "label": "HCV",
+            "units": 18996,
+            "mom_pct": null,
+            "yoy_pct": 50.44
+          },
+          {
+            "month": "2022-08",
+            "label": "LCV",
+            "units": 41311,
+            "mom_pct": null,
+            "yoy_pct": 17.22
+          },
+          {
+            "month": "2022-08",
+            "label": "MCV",
+            "units": 4320,
+            "mom_pct": null,
+            "yoy_pct": 44.97
+          },
+          {
+            "month": "2022-08",
+            "label": "Others",
+            "units": 2531,
+            "mom_pct": null,
+            "yoy_pct": -22.29
+          },
+          {
+            "month": "2022-09",
+            "label": "HCV",
+            "units": 21318,
+            "mom_pct": null,
+            "yoy_pct": 39.6
+          },
+          {
+            "month": "2022-09",
+            "label": "LCV",
+            "units": 43076,
+            "mom_pct": null,
+            "yoy_pct": 14.76
+          },
+          {
+            "month": "2022-09",
+            "label": "MCV",
+            "units": 4847,
+            "mom_pct": null,
+            "yoy_pct": 6.55
+          },
+          {
+            "month": "2022-09",
+            "label": "Others",
+            "units": 1992,
+            "mom_pct": null,
+            "yoy_pct": -22.52
+          },
+          {
+            "month": "2022-10",
+            "label": "HCV",
+            "units": 22858,
+            "mom_pct": null,
+            "yoy_pct": 38.0
+          },
+          {
+            "month": "2022-10",
+            "label": "LCV",
+            "units": 44896,
+            "mom_pct": null,
+            "yoy_pct": 22.74
+          },
+          {
+            "month": "2022-10",
+            "label": "MCV",
+            "units": 4475,
+            "mom_pct": null,
+            "yoy_pct": 4.41
+          },
+          {
+            "month": "2022-10",
+            "label": "Others",
+            "units": 2214,
+            "mom_pct": null,
+            "yoy_pct": 14.42
+          },
           {
             "month": "2022-11",
             "label": "HCV",
@@ -15009,6 +16781,370 @@
             "units": 2708,
             "mom_pct": 48.63,
             "yoy_pct": 15.78
+          },
+          {
+            "month": "2023-02",
+            "label": "HCV",
+            "units": 26469,
+            "mom_pct": null,
+            "yoy_pct": 23.93
+          },
+          {
+            "month": "2023-02",
+            "label": "LCV",
+            "units": 44392,
+            "mom_pct": null,
+            "yoy_pct": 12.1
+          },
+          {
+            "month": "2023-02",
+            "label": "MCV",
+            "units": 4808,
+            "mom_pct": null,
+            "yoy_pct": 8.8
+          },
+          {
+            "month": "2023-02",
+            "label": "Others",
+            "units": 3358,
+            "mom_pct": null,
+            "yoy_pct": 66.82
+          },
+          {
+            "month": "2023-03",
+            "label": "HCV",
+            "units": 33119,
+            "mom_pct": null,
+            "yoy_pct": 26.18
+          },
+          {
+            "month": "2023-03",
+            "label": "LCV",
+            "units": 49745,
+            "mom_pct": null,
+            "yoy_pct": -0.91
+          },
+          {
+            "month": "2023-03",
+            "label": "MCV",
+            "units": 6050,
+            "mom_pct": null,
+            "yoy_pct": 18.26
+          },
+          {
+            "month": "2023-03",
+            "label": "Others",
+            "units": 3876,
+            "mom_pct": null,
+            "yoy_pct": 51.35
+          },
+          {
+            "month": "2023-04",
+            "label": "HCV",
+            "units": 32165,
+            "mom_pct": null,
+            "yoy_pct": 12.63
+          },
+          {
+            "month": "2023-04",
+            "label": "LCV",
+            "units": 43501,
+            "mom_pct": null,
+            "yoy_pct": -8.66
+          },
+          {
+            "month": "2023-04",
+            "label": "MCV",
+            "units": 6451,
+            "mom_pct": null,
+            "yoy_pct": 15.71
+          },
+          {
+            "month": "2023-04",
+            "label": "Others",
+            "units": 3470,
+            "mom_pct": null,
+            "yoy_pct": 55.68
+          },
+          {
+            "month": "2023-05",
+            "label": "HCV",
+            "units": 26399,
+            "mom_pct": null,
+            "yoy_pct": 15.14
+          },
+          {
+            "month": "2023-05",
+            "label": "LCV",
+            "units": 41149,
+            "mom_pct": null,
+            "yoy_pct": -2.44
+          },
+          {
+            "month": "2023-05",
+            "label": "MCV",
+            "units": 6047,
+            "mom_pct": null,
+            "yoy_pct": 26.82
+          },
+          {
+            "month": "2023-05",
+            "label": "Others",
+            "units": 3540,
+            "mom_pct": null,
+            "yoy_pct": 69.14
+          },
+          {
+            "month": "2023-06",
+            "label": "HCV",
+            "units": 22070,
+            "mom_pct": null,
+            "yoy_pct": 4.93
+          },
+          {
+            "month": "2023-06",
+            "label": "LCV",
+            "units": 41975,
+            "mom_pct": null,
+            "yoy_pct": -4.58
+          },
+          {
+            "month": "2023-06",
+            "label": "MCV",
+            "units": 5988,
+            "mom_pct": null,
+            "yoy_pct": 6.53
+          },
+          {
+            "month": "2023-06",
+            "label": "Others",
+            "units": 3179,
+            "mom_pct": null,
+            "yoy_pct": 41.29
+          },
+          {
+            "month": "2023-07",
+            "label": "HCV",
+            "units": 20581,
+            "mom_pct": null,
+            "yoy_pct": 4.52
+          },
+          {
+            "month": "2023-07",
+            "label": "LCV",
+            "units": 43236,
+            "mom_pct": null,
+            "yoy_pct": -3.21
+          },
+          {
+            "month": "2023-07",
+            "label": "MCV",
+            "units": 6182,
+            "mom_pct": null,
+            "yoy_pct": 16.01
+          },
+          {
+            "month": "2023-07",
+            "label": "Others",
+            "units": 3066,
+            "mom_pct": null,
+            "yoy_pct": 59.11
+          },
+          {
+            "month": "2023-08",
+            "label": "HCV",
+            "units": 22137,
+            "mom_pct": null,
+            "yoy_pct": 6.87
+          },
+          {
+            "month": "2023-08",
+            "label": "LCV",
+            "units": 43929,
+            "mom_pct": null,
+            "yoy_pct": -3.25
+          },
+          {
+            "month": "2023-08",
+            "label": "MCV",
+            "units": 5895,
+            "mom_pct": null,
+            "yoy_pct": 15.16
+          },
+          {
+            "month": "2023-08",
+            "label": "Others",
+            "units": 3333,
+            "mom_pct": null,
+            "yoy_pct": 95.48
+          },
+          {
+            "month": "2023-09",
+            "label": "HCV",
+            "units": 25237,
+            "mom_pct": null,
+            "yoy_pct": 11.11
+          },
+          {
+            "month": "2023-09",
+            "label": "LCV",
+            "units": 46213,
+            "mom_pct": null,
+            "yoy_pct": -1.76
+          },
+          {
+            "month": "2023-09",
+            "label": "MCV",
+            "units": 5623,
+            "mom_pct": null,
+            "yoy_pct": 8.45
+          },
+          {
+            "month": "2023-09",
+            "label": "Others",
+            "units": 3731,
+            "mom_pct": null,
+            "yoy_pct": 76.57
+          },
+          {
+            "month": "2023-10",
+            "label": "HCV",
+            "units": 28940,
+            "mom_pct": null,
+            "yoy_pct": 19.09
+          },
+          {
+            "month": "2023-10",
+            "label": "LCV",
+            "units": 49666,
+            "mom_pct": null,
+            "yoy_pct": 1.25
+          },
+          {
+            "month": "2023-10",
+            "label": "MCV",
+            "units": 5980,
+            "mom_pct": null,
+            "yoy_pct": 24.79
+          },
+          {
+            "month": "2023-10",
+            "label": "Others",
+            "units": 4113,
+            "mom_pct": null,
+            "yoy_pct": 78.75
+          },
+          {
+            "month": "2023-11",
+            "label": "HCV",
+            "units": 26690,
+            "mom_pct": null,
+            "yoy_pct": 0.39
+          },
+          {
+            "month": "2023-11",
+            "label": "LCV",
+            "units": 48322,
+            "mom_pct": null,
+            "yoy_pct": -6.28
+          },
+          {
+            "month": "2023-11",
+            "label": "MCV",
+            "units": 5276,
+            "mom_pct": null,
+            "yoy_pct": 3.82
+          },
+          {
+            "month": "2023-11",
+            "label": "Others",
+            "units": 4298,
+            "mom_pct": null,
+            "yoy_pct": 47.04
+          },
+          {
+            "month": "2023-12",
+            "label": "HCV",
+            "units": 23050,
+            "mom_pct": null,
+            "yoy_pct": 0.89
+          },
+          {
+            "month": "2023-12",
+            "label": "LCV",
+            "units": 41804,
+            "mom_pct": null,
+            "yoy_pct": -2.61
+          },
+          {
+            "month": "2023-12",
+            "label": "MCV",
+            "units": 4808,
+            "mom_pct": null,
+            "yoy_pct": 11.68
+          },
+          {
+            "month": "2023-12",
+            "label": "Others",
+            "units": 4234,
+            "mom_pct": null,
+            "yoy_pct": 47.68
+          },
+          {
+            "month": "2024-01",
+            "label": "HCV",
+            "units": 29179,
+            "mom_pct": null,
+            "yoy_pct": 2.46
+          },
+          {
+            "month": "2024-01",
+            "label": "LCV",
+            "units": 49835,
+            "mom_pct": null,
+            "yoy_pct": -5.78
+          },
+          {
+            "month": "2024-01",
+            "label": "MCV",
+            "units": 5454,
+            "mom_pct": null,
+            "yoy_pct": 11.9
+          },
+          {
+            "month": "2024-01",
+            "label": "Others",
+            "units": 4740,
+            "mom_pct": null,
+            "yoy_pct": 65.68
+          },
+          {
+            "month": "2024-02",
+            "label": "HCV",
+            "units": 28271,
+            "mom_pct": null,
+            "yoy_pct": -0.31
+          },
+          {
+            "month": "2024-02",
+            "label": "LCV",
+            "units": 48594,
+            "mom_pct": null,
+            "yoy_pct": 2.19
+          },
+          {
+            "month": "2024-02",
+            "label": "MCV",
+            "units": 6454,
+            "mom_pct": null,
+            "yoy_pct": 29.05
+          },
+          {
+            "month": "2024-02",
+            "label": "Others",
+            "units": 5048,
+            "mom_pct": null,
+            "yoy_pct": 47.34
           },
           {
             "month": "2024-03",
@@ -15741,6 +17877,48 @@
         ],
         "3W": [
           {
+            "month": "2022-08",
+            "label": "E-rickshaw goods",
+            "units": 1383,
+            "mom_pct": null,
+            "yoy_pct": 51.81
+          },
+          {
+            "month": "2022-08",
+            "label": "E-rickshaw passenger",
+            "units": 28306,
+            "mom_pct": null,
+            "yoy_pct": 154.25
+          },
+          {
+            "month": "2022-09",
+            "label": "E-rickshaw goods",
+            "units": 1720,
+            "mom_pct": null,
+            "yoy_pct": 44.54
+          },
+          {
+            "month": "2022-09",
+            "label": "E-rickshaw passenger",
+            "units": 32153,
+            "mom_pct": null,
+            "yoy_pct": 126.0
+          },
+          {
+            "month": "2022-10",
+            "label": "E-rickshaw goods",
+            "units": 1949,
+            "mom_pct": null,
+            "yoy_pct": 62.69
+          },
+          {
+            "month": "2022-10",
+            "label": "E-rickshaw passenger",
+            "units": 30519,
+            "mom_pct": null,
+            "yoy_pct": 90.85
+          },
+          {
             "month": "2022-11",
             "label": "E-rickshaw goods",
             "units": 1820,
@@ -15767,6 +17945,251 @@
             "units": 28860,
             "mom_pct": 39.18,
             "yoy_pct": 222.49
+          },
+          {
+            "month": "2023-02",
+            "label": "E-rickshaw goods",
+            "units": 2382,
+            "mom_pct": null,
+            "yoy_pct": 38.57
+          },
+          {
+            "month": "2023-02",
+            "label": "E-rickshaw passenger",
+            "units": 30413,
+            "mom_pct": null,
+            "yoy_pct": 88.64
+          },
+          {
+            "month": "2023-03",
+            "label": "E-rickshaw goods",
+            "units": 3250,
+            "mom_pct": null,
+            "yoy_pct": 39.01
+          },
+          {
+            "month": "2023-03",
+            "label": "E-rickshaw passenger",
+            "units": 37373,
+            "mom_pct": null,
+            "yoy_pct": 80.06
+          },
+          {
+            "month": "2023-04",
+            "label": "E-rickshaw goods",
+            "units": 2732,
+            "mom_pct": null,
+            "yoy_pct": 69.58
+          },
+          {
+            "month": "2023-04",
+            "label": "E-rickshaw passenger",
+            "units": 31653,
+            "mom_pct": null,
+            "yoy_pct": 70.89
+          },
+          {
+            "month": "2023-05",
+            "label": "E-rickshaw goods",
+            "units": 3210,
+            "mom_pct": null,
+            "yoy_pct": 75.79
+          },
+          {
+            "month": "2023-05",
+            "label": "E-rickshaw passenger",
+            "units": 36755,
+            "mom_pct": null,
+            "yoy_pct": 74.65
+          },
+          {
+            "month": "2023-06",
+            "label": "E-rickshaw goods",
+            "units": 2877,
+            "mom_pct": null,
+            "yoy_pct": 54.84
+          },
+          {
+            "month": "2023-06",
+            "label": "E-rickshaw passenger",
+            "units": 39042,
+            "mom_pct": null,
+            "yoy_pct": 60.95
+          },
+          {
+            "month": "2023-07",
+            "label": "E-rickshaw goods",
+            "units": 2773,
+            "mom_pct": null,
+            "yoy_pct": 38.86
+          },
+          {
+            "month": "2023-07",
+            "label": "E-rickshaw passenger",
+            "units": 43529,
+            "mom_pct": null,
+            "yoy_pct": 61.0
+          },
+          {
+            "month": "2023-08",
+            "label": "E-rickshaw goods",
+            "units": 3095,
+            "mom_pct": null,
+            "yoy_pct": 114.04
+          },
+          {
+            "month": "2023-08",
+            "label": "E-rickshaw passenger",
+            "units": 46174,
+            "mom_pct": null,
+            "yoy_pct": 57.73
+          },
+          {
+            "month": "2023-09",
+            "label": "E-rickshaw goods",
+            "units": 3038,
+            "mom_pct": null,
+            "yoy_pct": 70.29
+          },
+          {
+            "month": "2023-09",
+            "label": "E-rickshaw passenger",
+            "units": 46707,
+            "mom_pct": null,
+            "yoy_pct": 38.6
+          },
+          {
+            "month": "2023-10",
+            "label": "E-rickshaw goods",
+            "units": 3023,
+            "mom_pct": null,
+            "yoy_pct": 49.36
+          },
+          {
+            "month": "2023-10",
+            "label": "E-rickshaw passenger",
+            "units": 45734,
+            "mom_pct": null,
+            "yoy_pct": 44.67
+          },
+          {
+            "month": "2023-11",
+            "label": "E-rickshaw goods",
+            "units": 3201,
+            "mom_pct": null,
+            "yoy_pct": 63.99
+          },
+          {
+            "month": "2023-11",
+            "label": "E-rickshaw passenger",
+            "units": 41708,
+            "mom_pct": null,
+            "yoy_pct": 16.95
+          },
+          {
+            "month": "2023-12",
+            "label": "3W goods",
+            "units": 9048,
+            "mom_pct": null,
+            "yoy_pct": 15.87
+          },
+          {
+            "month": "2023-12",
+            "label": "3W passenger",
+            "units": 37522,
+            "mom_pct": null,
+            "yoy_pct": 28.39
+          },
+          {
+            "month": "2023-12",
+            "label": "3W personal",
+            "units": 83,
+            "mom_pct": null,
+            "yoy_pct": 102.44
+          },
+          {
+            "month": "2023-12",
+            "label": "E-rickshaw goods",
+            "units": 3688,
+            "mom_pct": null,
+            "yoy_pct": 87.68
+          },
+          {
+            "month": "2023-12",
+            "label": "E-rickshaw passenger",
+            "units": 45108,
+            "mom_pct": null,
+            "yoy_pct": 45.81
+          },
+          {
+            "month": "2024-01",
+            "label": "3W goods",
+            "units": 10163,
+            "mom_pct": null,
+            "yoy_pct": 29.14
+          },
+          {
+            "month": "2024-01",
+            "label": "3W passenger",
+            "units": 43188,
+            "mom_pct": null,
+            "yoy_pct": 37.3
+          },
+          {
+            "month": "2024-01",
+            "label": "3W personal",
+            "units": 59,
+            "mom_pct": null,
+            "yoy_pct": 7.27
+          },
+          {
+            "month": "2024-01",
+            "label": "E-rickshaw goods",
+            "units": 3739,
+            "mom_pct": null,
+            "yoy_pct": 87.89
+          },
+          {
+            "month": "2024-01",
+            "label": "E-rickshaw passenger",
+            "units": 40526,
+            "mom_pct": null,
+            "yoy_pct": 35.29
+          },
+          {
+            "month": "2024-02",
+            "label": "3W goods",
+            "units": 10768,
+            "mom_pct": null,
+            "yoy_pct": 29.66
+          },
+          {
+            "month": "2024-02",
+            "label": "3W passenger",
+            "units": 43065,
+            "mom_pct": null,
+            "yoy_pct": 22.78
+          },
+          {
+            "month": "2024-02",
+            "label": "3W personal",
+            "units": 71,
+            "mom_pct": null,
+            "yoy_pct": 26.79
+          },
+          {
+            "month": "2024-02",
+            "label": "E-rickshaw goods",
+            "units": 4435,
+            "mom_pct": null,
+            "yoy_pct": 81.32
+          },
+          {
+            "month": "2024-02",
+            "label": "E-rickshaw passenger",
+            "units": 36579,
+            "mom_pct": null,
+            "yoy_pct": 19.01
           },
           {
             "month": "2024-03",
@@ -16463,6 +18886,13 @@
           },
           {
             "month": "2025-12",
+            "label": "3W goods",
+            "units": 132919,
+            "mom_pct": null,
+            "yoy_pct": 6.32
+          },
+          {
+            "month": "2025-12",
             "label": "3W passenger",
             "units": 51363,
             "mom_pct": -19.05,
@@ -16654,11 +19084,11 @@
           "share_pct": 0.24
         },
         "inventory_days": {
-          "month": "2026-03",
-          "label": "Mar 2026",
+          "month": "2026-04",
+          "label": "Apr 2026",
           "days_low": 28,
-          "days_high": 28,
-          "days_mid": 28.0
+          "days_high": 30,
+          "days_mid": 29.0
         },
         "monthly_lookup": {
           "2018-12": {
@@ -54155,8 +56585,8 @@
       "icon": "\ud83c\udfec",
       "tone": "positive",
       "kicker": "Dealer inventory",
-      "value": "28 days",
-      "narrative": "FADA reports PV stock at dealers running 28-28 days \u2014 in healthy band. Healthy operating band is 21\u201330 days.",
+      "value": "29 days",
+      "narrative": "FADA reports PV stock at dealers running 28-30 days \u2014 in healthy band. Healthy operating band is 21\u201330 days.",
       "section_anchor": "section-channel-pulse",
       "tab_id": "channel-pulse"
     },
@@ -54188,7 +56618,7 @@
     },
     {
       "title": "Retail vs wholesale",
-      "body": "PV retail ran at 99.5% of wholesale in Mar 2026, versus 98.7% for 2W. The tighter PV ratio sits alongside FADA's ~28 days inventory signal, suggesting channel conditions have improved materially.",
+      "body": "PV retail ran at 99.5% of wholesale in Mar 2026, versus 98.7% for 2W. The tighter PV ratio sits alongside FADA's 28-30 days inventory signal, suggesting channel conditions have improved materially.",
       "tags": [
         "retail",
         "wholesale"

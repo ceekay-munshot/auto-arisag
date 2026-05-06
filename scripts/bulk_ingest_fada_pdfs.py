@@ -276,6 +276,91 @@ def _upsert_subseg(series: list[dict], month_id: str, rows: list[dict]) -> list[
     return sorted(kept, key=lambda x: (x.get("month") or "", x.get("label") or ""))
 
 
+def _upsert_month_keyed(series: list[dict], record: dict) -> list[dict]:
+    """Drop any prior entry for record['month'] and re-add the new one,
+    keeping the list sorted by month."""
+    month = record.get("month")
+    kept = [item for item in series if item.get("month") != month]
+    kept.append(record)
+    return sorted(kept, key=lambda x: x.get("month") or "")
+
+
+def _extract_old_commentary(pdf_text: str) -> dict:
+    """Best-effort inventory / dealer-survey extraction for older FADA
+    PDFs whose phrasings differ from the modern release format. The
+    modern parser dashboard.update_snapshot.parse_fada_latest_commentary
+    is strict (raises on miss) and tied to the latest layout; this is a
+    forgiving fallback that captures whatever's present and returns
+    None for the rest. Designed to deepen inventory_trend and
+    dealer_expectation_trend back across 7 years of history."""
+    # Normalise smart quotes and dashes so the regexes don't have to
+    # branch for typographic variants.
+    text = (
+        pdf_text
+        .replace("’", "'")
+        .replace("‘", "'")
+        .replace("–", "-")
+        .replace("—", "-")
+    )
+
+    out: dict = {
+        "inventory_days_low": None,
+        "inventory_days_high": None,
+        "next_month_growth_pct": None,
+        "next_three_months_growth_pct": None,
+        "liquidity_good_pct": None,
+        "sentiment_good_pct": None,
+    }
+
+    # Inventory: try modern "PV inventory normalised to ~28 days" first,
+    # then a "<low>-<high> days" range pattern, then a "ranges from X to Y"
+    # pattern. Constrain the leading context to "inventory" so we don't
+    # accidentally capture date ranges elsewhere.
+    inv_modern = re.search(r"PV inventory (?:normalised|normalized) to ~?(\d+)\s*days", text, re.IGNORECASE)
+    if inv_modern:
+        n = int(inv_modern.group(1))
+        out["inventory_days_low"], out["inventory_days_high"] = n, n
+    else:
+        inv_range = re.search(
+            r"(?:PV\s+)?inventory[^.]{0,200}?(\d{2,3})\s*[-to ]+\s*(\d{2,3})\s*days",
+            text,
+            re.IGNORECASE,
+        )
+        if inv_range:
+            lo, hi = int(inv_range.group(1)), int(inv_range.group(2))
+            if 5 <= lo <= 200 and 5 <= hi <= 200 and hi >= lo:
+                out["inventory_days_low"], out["inventory_days_high"] = lo, hi
+
+    # Growth expectation phrasings vary:
+    #   "Expectation from <Month>'<YY> o Growth  55"   (modern)
+    #   "Expectation from July o Growth  42"           (older)
+    next_month_match = re.search(
+        r"Expectation from\s+[A-Za-z]+(?:'?\d{2})?\s*o?\s*Growth\s+([\d.]+)",
+        text,
+        re.IGNORECASE,
+    )
+    if next_month_match:
+        out["next_month_growth_pct"] = float(next_month_match.group(1))
+
+    next_three_match = re.search(
+        r"Expectation\s+(?:in|for)\s+next\s+3\s+months[^o]*o?\s*Growth\s+([\d.]+)",
+        text,
+        re.IGNORECASE,
+    )
+    if next_three_match:
+        out["next_three_months_growth_pct"] = float(next_three_match.group(1))
+
+    liq_match = re.search(r"Liquidity[\s|:o-]*(?:Good|Neutral)\s+([\d.]+)", text, re.IGNORECASE)
+    if liq_match:
+        out["liquidity_good_pct"] = float(liq_match.group(1))
+
+    sent_match = re.search(r"Sentiment[\s|:o-]*(?:Good|Neutral)\s+([\d.]+)", text, re.IGNORECASE)
+    if sent_match:
+        out["sentiment_good_pct"] = float(sent_match.group(1))
+
+    return out
+
+
 def _merge_oem_tables_per_month(
     oem_history: dict, month_id: str, release_date: str, source_url: str, tables: dict
 ) -> int:
@@ -492,6 +577,42 @@ def main() -> int:
                 print(f"  OEM annexures: {landed_cats} categories merged", flush=True)
         except Exception as exc:
             print(f"  OEM annexure parse skipped: {exc}", flush=True)
+
+        # Best-effort commentary extraction independent of the modern
+        # parser — covers the wider phrasing range used in pre-2024 PDFs
+        # so PV inventory + dealer-growth-expectation trends can deepen
+        # back across the full 7 years of history rather than the last
+        # few months only.
+        try:
+            full_text = "\n".join(pages)
+            comm = _extract_old_commentary(full_text)
+            inv_lo = comm.get("inventory_days_low")
+            inv_hi = comm.get("inventory_days_high")
+            if inv_lo is not None and inv_hi is not None:
+                fada["inventory_days_pv"] = _upsert_month_keyed(
+                    fada.get("inventory_days_pv") or [],
+                    {"month": detected_month, "days_low": inv_lo, "days_high": inv_hi},
+                )
+            growth_next = comm.get("next_month_growth_pct")
+            growth_q = comm.get("next_three_months_growth_pct")
+            if growth_next is not None or growth_q is not None:
+                fada["dealer_growth_expectation"] = _upsert_month_keyed(
+                    fada.get("dealer_growth_expectation") or [],
+                    {
+                        "month": detected_month,
+                        "next_month_growth_pct": growth_next,
+                        "next_three_months_growth_pct": growth_q,
+                    },
+                )
+            landed = []
+            if inv_lo is not None:
+                landed.append(f"inv={inv_lo}-{inv_hi}d")
+            if growth_next is not None:
+                landed.append(f"next_growth={growth_next}%")
+            if landed:
+                print(f"  commentary (best-effort): {' '.join(landed)}", flush=True)
+        except Exception as exc:
+            print(f"  commentary parse skipped: {exc}", flush=True)
 
         history["sources"][detected_month] = path.name
         succeeded += 1

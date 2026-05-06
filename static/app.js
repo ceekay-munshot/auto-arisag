@@ -3612,8 +3612,11 @@ function computeChannelWedges() {
 function renderChannelPulse() {
   const retail = dashboardData.modules.retail;
   const pulse = retail.latest_channel_pulse;
-  const inventoryTrend = asArray(retail.inventory_trend).slice(-3);
-  const expectationTrend = asArray(retail.dealer_expectation_trend).slice(-3);
+  // Show the full available history (can grow with each FADA release).
+  // Reverse so the latest month sits on top and is scanned first; the
+  // mini-table-card scrolls when the list outgrows its container.
+  const inventoryTrend = asArray(retail.inventory_trend).slice().reverse();
+  const expectationTrend = asArray(retail.dealer_expectation_trend).slice().reverse();
   const threeWheelSubsegments = asArray(retail.latest_subsegments["3W"]);
   const cvSubsegments = asArray(retail.latest_subsegments.CV);
   const urbanRuralRows = pulse.urban_rural_growth
