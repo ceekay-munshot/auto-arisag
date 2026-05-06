@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T17:30:14.574958+00:00",
+  "generated_at": "2026-05-06T17:55:10.627146+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -10678,6 +10678,212 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Hero MotoCorp",
+                  "current_units": 6072688,
+                  "yoy_pct": 18.88,
+                  "cagr_2y_pct": 6.16,
+                  "cagr_5y_pct": null,
+                  "share_pct": 29.67,
+                  "share_change_pp": 5.13
+                },
+                {
+                  "oem": "Honda Motorcycle & Scooter India",
+                  "current_units": 4379207,
+                  "yoy_pct": 6.18,
+                  "cagr_2y_pct": 3.59,
+                  "cagr_5y_pct": null,
+                  "share_pct": 21.39,
+                  "share_change_pp": 1.57
+                },
+                {
+                  "oem": "TVS Motor",
+                  "current_units": 4030308,
+                  "yoy_pct": 30.96,
+                  "cagr_2y_pct": 16.73,
+                  "cagr_5y_pct": null,
+                  "share_pct": 19.69,
+                  "share_change_pp": 4.9
+                },
+                {
+                  "oem": "Bajaj Auto",
+                  "current_units": 1392347,
+                  "yoy_pct": -30.72,
+                  "cagr_2y_pct": -18.64,
+                  "cagr_5y_pct": null,
+                  "share_pct": 6.8,
+                  "share_change_pp": -2.86
+                },
+                {
+                  "oem": "Suzuki Motorcycle India",
+                  "current_units": 1132834,
+                  "yoy_pct": -39.42,
+                  "cagr_2y_pct": 15.92,
+                  "cagr_5y_pct": null,
+                  "share_pct": 5.53,
+                  "share_change_pp": -3.46
+                },
+                {
+                  "oem": "Royal Enfield",
+                  "current_units": 1080140,
+                  "yoy_pct": -31.85,
+                  "cagr_2y_pct": 18.65,
+                  "cagr_5y_pct": null,
+                  "share_pct": 5.28,
+                  "share_change_pp": -2.34
+                },
+                {
+                  "oem": "Ltd",
+                  "current_units": 962412,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 4.7,
+                  "share_change_pp": 4.7
+                },
+                {
+                  "oem": "India Yamaha Motor",
+                  "current_units": 712454,
+                  "yoy_pct": -43.75,
+                  "cagr_2y_pct": 8.53,
+                  "cagr_5y_pct": null,
+                  "share_pct": 3.48,
+                  "share_change_pp": -2.61
+                },
+                {
+                  "oem": "Ather Energy",
+                  "current_units": 236639,
+                  "yoy_pct": -3.39,
+                  "cagr_2y_pct": 48.12,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.16,
+                  "share_change_pp": -0.02
+                },
+                {
+                  "oem": "Ola Electric",
+                  "current_units": 163668,
+                  "yoy_pct": -77.78,
+                  "cagr_2y_pct": -29.33,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.8,
+                  "share_change_pp": -2.74
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 125252,
+                  "yoy_pct": -44.82,
+                  "cagr_2y_pct": -0.46,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.61,
+                  "share_change_pp": -0.48
+                },
+                {
+                  "oem": "Greaves Electric Mobility",
+                  "current_units": 61515,
+                  "yoy_pct": -15.02,
+                  "cagr_2y_pct": 44.35,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.3,
+                  "share_change_pp": -0.05
+                },
+                {
+                  "oem": "Classic Legends",
+                  "current_units": 44243,
+                  "yoy_pct": -28.68,
+                  "cagr_2y_pct": 20.98,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.22,
+                  "share_change_pp": -0.08
+                },
+                {
+                  "oem": "Piaggio Vehicles",
+                  "current_units": 33238,
+                  "yoy_pct": -49.16,
+                  "cagr_2y_pct": -3.16,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.16,
+                  "share_change_pp": -0.15
+                },
+                {
+                  "oem": "BGauss Auto",
+                  "current_units": 20860,
+                  "yoy_pct": -11.8,
+                  "cagr_2y_pct": 80.41,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.1,
+                  "share_change_pp": -0.01
+                },
+                {
+                  "oem": "River Mobility",
+                  "current_units": 15650,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.08,
+                  "share_change_pp": 0.08
+                },
+                {
+                  "oem": "Pur Energy",
+                  "current_units": 5229,
+                  "yoy_pct": 4.14,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.03,
+                  "share_change_pp": 0.01
+                },
+                {
+                  "oem": "Kinetic Green Energy & Power Solutions",
+                  "current_units": 1513,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": -38.21,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.01,
+                  "share_change_pp": 0.01
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -11051,6 +11257,239 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Others",
+                  "current_units": 474036,
+                  "yoy_pct": 25.17,
+                  "cagr_2y_pct": 16.05,
+                  "cagr_5y_pct": null,
+                  "share_pct": 34.77,
+                  "share_change_pp": 9.51
+                },
+                {
+                  "oem": "Bajaj Auto",
+                  "current_units": 473231,
+                  "yoy_pct": 15.81,
+                  "cagr_2y_pct": 9.52,
+                  "cagr_5y_pct": null,
+                  "share_pct": 34.71,
+                  "share_change_pp": 7.46
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 110033,
+                  "yoy_pct": -25.68,
+                  "cagr_2y_pct": 23.05,
+                  "cagr_5y_pct": null,
+                  "share_pct": 8.07,
+                  "share_change_pp": -1.81
+                },
+                {
+                  "oem": "Piaggio Vehicles",
+                  "current_units": 90815,
+                  "yoy_pct": -48.57,
+                  "cagr_2y_pct": 1.71,
+                  "cagr_5y_pct": null,
+                  "share_pct": 6.66,
+                  "share_change_pp": -5.12
+                },
+                {
+                  "oem": "TVS Motor",
+                  "current_units": 55487,
+                  "yoy_pct": 17.22,
+                  "cagr_2y_pct": 74.56,
+                  "cagr_5y_pct": null,
+                  "share_pct": 4.07,
+                  "share_change_pp": 0.91
+                },
+                {
+                  "oem": "YC Electric Vehicle",
+                  "current_units": 36827,
+                  "yoy_pct": -56.58,
+                  "cagr_2y_pct": -7.19,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.7,
+                  "share_change_pp": -2.96
+                },
+                {
+                  "oem": "Atul Auto",
+                  "current_units": 32391,
+                  "yoy_pct": -39.14,
+                  "cagr_2y_pct": 20.03,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.38,
+                  "share_change_pp": -1.17
+                },
+                {
+                  "oem": "Saera Electric Auto",
+                  "current_units": 22857,
+                  "yoy_pct": -58.0,
+                  "cagr_2y_pct": -12.89,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.68,
+                  "share_change_pp": -1.95
+                },
+                {
+                  "oem": "Dilli Electric Auto",
+                  "current_units": 21659,
+                  "yoy_pct": -54.1,
+                  "cagr_2y_pct": -9.03,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.59,
+                  "share_change_pp": -1.56
+                },
+                {
+                  "oem": "Zeniak Innovation",
+                  "current_units": 9623,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.71,
+                  "share_change_pp": 0.71
+                },
+                {
+                  "oem": "Mini Metro Ev L.L.P",
+                  "current_units": 5798,
+                  "yoy_pct": -77.62,
+                  "cagr_2y_pct": -39.93,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.43,
+                  "share_change_pp": -1.3
+                },
+                {
+                  "oem": "Hooghly Motors",
+                  "current_units": 5703,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.42,
+                  "share_change_pp": 0.42
+                },
+                {
+                  "oem": "Energy Electric Vehicles",
+                  "current_units": 5654,
+                  "yoy_pct": -74.93,
+                  "cagr_2y_pct": -14.74,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.41,
+                  "share_change_pp": -1.09
+                },
+                {
+                  "oem": "J. S. Auto",
+                  "current_units": 3707,
+                  "yoy_pct": 16.87,
+                  "cagr_2y_pct": -40.87,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.27,
+                  "share_change_pp": 0.06
+                },
+                {
+                  "oem": "Aahana Commerce",
+                  "current_units": 3436,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.25,
+                  "share_change_pp": 0.25
+                },
+                {
+                  "oem": "Terra Motors",
+                  "current_units": 2960,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": 22.33,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.22,
+                  "share_change_pp": 0.22
+                },
+                {
+                  "oem": "Unique International",
+                  "current_units": 2220,
+                  "yoy_pct": -90.41,
+                  "cagr_2y_pct": -60.13,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.16,
+                  "share_change_pp": -1.38
+                },
+                {
+                  "oem": "Sahnianand E Vehicles",
+                  "current_units": 2209,
+                  "yoy_pct": -1.91,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.16,
+                  "share_change_pp": 0.01
+                },
+                {
+                  "oem": "Fede Industries",
+                  "current_units": 1808,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.13,
+                  "share_change_pp": 0.13
+                },
+                {
+                  "oem": "Jajodia Commodities",
+                  "current_units": 1715,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.13,
+                  "share_change_pp": 0.13
+                },
+                {
+                  "oem": "Vani Electric Vehicles",
+                  "current_units": 1348,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.1,
+                  "share_change_pp": 0.1
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -11377,6 +11816,140 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Tata Motors",
+                  "current_units": 360819,
+                  "yoy_pct": 15.76,
+                  "cagr_2y_pct": 1.12,
+                  "cagr_5y_pct": null,
+                  "share_pct": 34.01,
+                  "share_change_pp": 7.41
+                },
+                {
+                  "oem": "Mahindra Group",
+                  "current_units": 297516,
+                  "yoy_pct": 25.14,
+                  "cagr_2y_pct": 11.11,
+                  "cagr_5y_pct": null,
+                  "share_pct": 28.04,
+                  "share_change_pp": 7.75
+                },
+                {
+                  "oem": "Ashok Leyland Group",
+                  "current_units": 188708,
+                  "yoy_pct": 21.99,
+                  "cagr_2y_pct": 8.8,
+                  "cagr_5y_pct": null,
+                  "share_pct": 17.79,
+                  "share_change_pp": 4.59
+                },
+                {
+                  "oem": "VE Commercial Vehicles",
+                  "current_units": 87490,
+                  "yoy_pct": -39.87,
+                  "cagr_2y_pct": 10.22,
+                  "cagr_5y_pct": null,
+                  "share_pct": 8.25,
+                  "share_change_pp": -4.16
+                },
+                {
+                  "oem": "Maruti Suzuki",
+                  "current_units": 49373,
+                  "yoy_pct": -42.17,
+                  "cagr_2y_pct": 8.13,
+                  "cagr_5y_pct": null,
+                  "share_pct": 4.65,
+                  "share_change_pp": -2.63
+                },
+                {
+                  "oem": "Force Motors",
+                  "current_units": 24218,
+                  "yoy_pct": -34.04,
+                  "cagr_2y_pct": 21.88,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.28,
+                  "share_change_pp": -0.85
+                },
+                {
+                  "oem": "Daimler India Commercial Vehicles",
+                  "current_units": 20212,
+                  "yoy_pct": -49.52,
+                  "cagr_2y_pct": -2.07,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.91,
+                  "share_change_pp": -1.51
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 16920,
+                  "yoy_pct": -87.7,
+                  "cagr_2y_pct": -49.2,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.59,
+                  "share_change_pp": -10.14
+                },
+                {
+                  "oem": "SML Isuzu",
+                  "current_units": 14082,
+                  "yoy_pct": -37.9,
+                  "cagr_2y_pct": 15.15,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.33,
+                  "share_change_pp": -0.6
+                },
+                {
+                  "oem": "Ltd",
+                  "current_units": 1641,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.15,
+                  "share_change_pp": 0.15
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -11827,6 +12400,248 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26; YoY pending until the same quarter from the prior FY is in history."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26 (11/12 mo \u00b7 annualised)",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "JCB India",
+                  "current_units": 34526,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 50.14,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 7226,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 10.49,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Action Construction Equipment",
+                  "current_units": 7036,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 10.22,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Ajax Engineering",
+                  "current_units": 4475,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 6.5,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Escorts Kubota CE",
+                  "current_units": 2855,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 4.15,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Bull Machines",
+                  "current_units": 1690,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.45,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Equipment)",
+                  "current_units": 1547,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.25,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Caterpillar India",
+                  "current_units": 1498,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.18,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "All Terrain Crane",
+                  "current_units": 1423,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.07,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Schwing Stetter",
+                  "current_units": 932,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.35,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "CNH Construction Equipment",
+                  "current_units": 927,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.35,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Pvt",
+                  "current_units": 877,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.27,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Tata Hitachi",
+                  "current_units": 855,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.24,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 813,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.18,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Liugong",
+                  "current_units": 751,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.09,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Indo Farm Equipment",
+                  "current_units": 517,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.75,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Doosan Bobcat India",
+                  "current_units": 288,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.42,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Tata Motors",
+                  "current_units": 196,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.28,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Volvo Ce",
+                  "current_units": 180,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.26,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Sany Heavy Industry",
+                  "current_units": 133,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.19,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Wirtgen",
+                  "current_units": 77,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.11,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Ashok Leyland",
+                  "current_units": 44,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.06,
+                  "share_change_pp": null
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 1 fiscal year(s): FY26 11/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: YoY, 2Y CAGR, 5Y CAGR."
             }
           },
           "source_meta": {
@@ -12371,6 +13186,257 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26 (11/12 mo \u00b7 annualised)",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Maruti Suzuki",
+                  "current_units": 1879848,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 40.23,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Tata Motors",
+                  "current_units": 617434,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 13.21,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Mahindra & Mahindra",
+                  "current_units": 614112,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 13.14,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Hyundai Motor India",
+                  "current_units": 574495,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 12.3,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Toyota Kirloskar Motor",
+                  "current_units": 319833,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 6.85,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Kia India",
+                  "current_units": 276314,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 5.91,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Skoda Auto Volkswagen Group",
+                  "current_units": 106190,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 2.27,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Honda Cars India",
+                  "current_units": 59895,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.28,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "JSW MG Motor India",
+                  "current_units": 57383,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 1.23,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Renault India",
+                  "current_units": 39386,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.84,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 32637,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.7,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Nissan Motor India",
+                  "current_units": 22276,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.48,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Mercedes-Benz Group",
+                  "current_units": 17272,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.37,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "BMW India",
+                  "current_units": 16637,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.36,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Force Motors",
+                  "current_units": 10296,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.22,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Stellantis Group",
+                  "current_units": 7965,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.17,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Mg Motor",
+                  "current_units": 5314,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.11,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Jaguar Land Rover India",
+                  "current_units": 5108,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.11,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "BYD India",
+                  "current_units": 4886,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.1,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Pca Automobiles",
+                  "current_units": 2266,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.05,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "VinFast Auto India",
+                  "current_units": 2057,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.04,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Fca India Automobiles",
+                  "current_units": 601,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.01,
+                  "share_change_pp": null
+                },
+                {
+                  "oem": "Volvo Auto",
+                  "current_units": 130,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.0,
+                  "share_change_pp": null
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 3 fiscal year(s): FY22 11/12, FY23 10/12, FY26 11/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: YoY, 2Y CAGR, 5Y CAGR."
             }
           },
           "source_meta": {
@@ -12693,6 +13759,158 @@
                 }
               ],
               "note": "Roll-up of FADA monthly OEM annexures into Q4 FY26."
+            },
+            "Y": {
+              "id": "Y",
+              "label": "Yearly",
+              "period_label": "FY26",
+              "columns": [
+                {
+                  "key": "oem",
+                  "label": "OEM"
+                },
+                {
+                  "key": "current_units",
+                  "label": "FY Units (annualised)",
+                  "type": "int"
+                },
+                {
+                  "key": "yoy_pct",
+                  "label": "YoY%",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_2y_pct",
+                  "label": "2Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "cagr_5y_pct",
+                  "label": "5Y CAGR",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_pct",
+                  "label": "FY Market Share",
+                  "type": "pct"
+                },
+                {
+                  "key": "share_change_pp",
+                  "label": "Share Chg vs prior FY",
+                  "type": "pp"
+                }
+              ],
+              "rows": [
+                {
+                  "oem": "Mahindra Tractors",
+                  "current_units": 249828,
+                  "yoy_pct": 1256.14,
+                  "cagr_2y_pct": 136.65,
+                  "cagr_5y_pct": null,
+                  "share_pct": 23.8,
+                  "share_change_pp": 21.68
+                },
+                {
+                  "oem": "International Tractors",
+                  "current_units": 133930,
+                  "yoy_pct": 30.82,
+                  "cagr_2y_pct": 8.32,
+                  "cagr_5y_pct": null,
+                  "share_pct": 12.76,
+                  "share_change_pp": 0.97
+                },
+                {
+                  "oem": "TAFE",
+                  "current_units": 118261,
+                  "yoy_pct": 34.86,
+                  "cagr_2y_pct": 4.63,
+                  "cagr_5y_pct": null,
+                  "share_pct": 11.27,
+                  "share_change_pp": 1.17
+                },
+                {
+                  "oem": "Swaraj",
+                  "current_units": 110118,
+                  "yoy_pct": -25.21,
+                  "cagr_2y_pct": -13.85,
+                  "cagr_5y_pct": null,
+                  "share_pct": 10.49,
+                  "share_change_pp": -6.47
+                },
+                {
+                  "oem": "Division)",
+                  "current_units": 86730,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": 174.85,
+                  "cagr_5y_pct": null,
+                  "share_pct": 8.26,
+                  "share_change_pp": 8.26
+                },
+                {
+                  "oem": "John Deere India",
+                  "current_units": 80361,
+                  "yoy_pct": 30.93,
+                  "cagr_2y_pct": 12.21,
+                  "cagr_5y_pct": null,
+                  "share_pct": 7.66,
+                  "share_change_pp": 0.59
+                },
+                {
+                  "oem": "Escorts Kubota",
+                  "current_units": 78328,
+                  "yoy_pct": 20.85,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 7.46,
+                  "share_change_pp": 0.0
+                },
+                {
+                  "oem": "Eicher Tractors",
+                  "current_units": 65154,
+                  "yoy_pct": 29.74,
+                  "cagr_2y_pct": 4.69,
+                  "cagr_5y_pct": null,
+                  "share_pct": 6.21,
+                  "share_change_pp": 0.43
+                },
+                {
+                  "oem": "CNH Industrial",
+                  "current_units": 47087,
+                  "yoy_pct": -30.37,
+                  "cagr_2y_pct": 14.07,
+                  "cagr_5y_pct": null,
+                  "share_pct": 4.49,
+                  "share_change_pp": -3.3
+                },
+                {
+                  "oem": "Others",
+                  "current_units": 41074,
+                  "yoy_pct": -30.96,
+                  "cagr_2y_pct": 35.76,
+                  "cagr_5y_pct": null,
+                  "share_pct": 3.91,
+                  "share_change_pp": -2.94
+                },
+                {
+                  "oem": "Group)",
+                  "current_units": 36062,
+                  "yoy_pct": null,
+                  "cagr_2y_pct": null,
+                  "cagr_5y_pct": null,
+                  "share_pct": 3.44,
+                  "share_change_pp": 3.44
+                },
+                {
+                  "oem": "Kubota Agricultural Machinery India Pvt.Ltd.",
+                  "current_units": 2778,
+                  "yoy_pct": -90.7,
+                  "cagr_2y_pct": -60.31,
+                  "cagr_5y_pct": null,
+                  "share_pct": 0.26,
+                  "share_change_pp": -3.18
+                }
+              ],
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
