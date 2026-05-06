@@ -3880,8 +3880,8 @@ function renderUrbanRuralCard(retail, latestRows) {
   });
   const labels = filtered.map((p) => p.label);
   const chartSeries = [
-    { label: "Urban YoY", color: dashboardData.chart_colors["2W"] || "#7ca4ff", values: filtered.map((p) => p.urban_yoy_pct) },
-    { label: "Rural YoY", color: dashboardData.chart_colors.TRACTOR || "#d7c46f", values: filtered.map((p) => p.rural_yoy_pct) },
+    { label: "Urban YoY", color: dashboardData.chart_colors["2W"] || "#3a64a8", values: filtered.map((p) => p.urban_yoy_pct) },
+    { label: "Rural YoY", color: dashboardData.chart_colors.TRACTOR || "#a48a3c", values: filtered.map((p) => p.rural_yoy_pct) },
   ];
   registerDownload(
     "urban-rural-history",
@@ -5219,7 +5219,7 @@ function renderRawMaterialExplorer() {
       const currentValue = Number(item.value || 0);
       return baseValue ? Number(((currentValue / baseValue) * 100).toFixed(1)) : null;
     }),
-    color: ["#7ca4ff", "#f28b61", "#54d3a1", "#cab0ff", "#d7c46f", "#8ad8c7"][index % 6],
+    color: ["#3a64a8", "#c66a44", "#3f8f7f", "#7a5fb0", "#a48a3c", "#6b7a8a"][index % 6],
   }));
   const strongestMove = materials
     .map((material) => ({
@@ -5639,15 +5639,17 @@ function renderStockVsRetailDivergence() {
     ...xTicks.map((t) => `<line x1="${xToPx(t)}" x2="${xToPx(t)}" y1="${pad.top}" y2="${pad.top + innerH}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
     ...yTicks.map((t) => `<line x1="${pad.left}" x2="${pad.left + innerW}" y1="${yToPx(t)}" y2="${yToPx(t)}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
   ].join("");
-  const xLabels = xTicks.map((t) => `<text x="${xToPx(t)}" y="${H - 28}" text-anchor="middle" font-size="10" fill="#667687">${t.toFixed(1)}%</text>`).join("");
-  const yLabels = yTicks.map((t) => `<text x="${pad.left - 8}" y="${yToPx(t) + 3}" text-anchor="end" font-size="10" fill="#667687">${t.toFixed(0)}%</text>`).join("");
+  const xLabels = xTicks.map((t) => `<text x="${xToPx(t)}" y="${H - 28}" text-anchor="middle" font-size="10.5" font-weight="500" fill="#8693a3" style="letter-spacing:0.01em;">${t.toFixed(1)}%</text>`).join("");
+  const yLabels = yTicks.map((t) => `<text x="${pad.left - 8}" y="${yToPx(t) + 3}" text-anchor="end" font-size="10.5" font-weight="500" fill="#8693a3" style="letter-spacing:0.01em;">${t.toFixed(0)}%</text>`).join("");
 
-  // Quadrant captions in the four corners.
+  // Quadrant captions sit in the four corners — uppercase + tracking so
+  // they read as labels rather than competing with the data dots.
+  const cornerStyle = 'font-size="10" font-weight="600" style="letter-spacing:0.06em; text-transform:uppercase;"';
   const corners = `
-    <text x="${pad.left + 8}" y="${pad.top + 14}" font-size="10" font-weight="600" fill="#1d5a4f">Mispriced upside</text>
-    <text x="${pad.left + innerW - 8}" y="${pad.top + 14}" text-anchor="end" font-size="10" font-weight="600" fill="#3a4a5a">Momentum, in line</text>
-    <text x="${pad.left + 8}" y="${pad.top + innerH - 6}" font-size="10" font-weight="600" fill="#3a4a5a">Fundamentals confirming</text>
-    <text x="${pad.left + innerW - 8}" y="${pad.top + innerH - 6}" text-anchor="end" font-size="10" font-weight="600" fill="#8a2727">Stock running ahead</text>
+    <text x="${pad.left + 8}" y="${pad.top + 14}" ${cornerStyle} fill="#3f8f7f">Mispriced upside</text>
+    <text x="${pad.left + innerW - 8}" y="${pad.top + 14}" text-anchor="end" ${cornerStyle} fill="#8693a3">Momentum, in line</text>
+    <text x="${pad.left + 8}" y="${pad.top + innerH - 6}" ${cornerStyle} fill="#8693a3">Fundamentals confirming</text>
+    <text x="${pad.left + innerW - 8}" y="${pad.top + innerH - 6}" text-anchor="end" ${cornerStyle} fill="#b85a5a">Stock running ahead</text>
   `;
 
   // Each point: a circle + the company short name to its right. Hover
@@ -5658,7 +5660,7 @@ function renderStockVsRetailDivergence() {
     const upRight = p.retail_yoy_pct > 0 && p.stock_1m_pct > 0;
     const upLeft = p.retail_yoy_pct > 0 && p.stock_1m_pct < 0;
     const downRight = p.retail_yoy_pct < 0 && p.stock_1m_pct > 0;
-    const fill = upLeft ? "#2f897d" : downRight ? "#cc4343" : "#4c74c7";
+    const fill = upLeft ? "#3f8f7f" : downRight ? "#b85a5a" : "#3a64a8";
     const tooltip = JSON.stringify({
       label: p.company,
       period: p.ticker || "",
@@ -5670,8 +5672,8 @@ function renderStockVsRetailDivergence() {
       : p.company;
     return `
       <g>
-        <circle cx="${x}" cy="${y}" r="6" fill="${fill}" stroke="#fff" stroke-width="1.5" />
-        <text x="${x + 9}" y="${y + 3}" font-size="10" font-weight="500" fill="#162231">${escapeHtml(shortName)}</text>
+        <circle cx="${x}" cy="${y}" r="5.5" fill="${fill}" fill-opacity="0.85" stroke="#fff" stroke-width="1.4" />
+        <text x="${x + 9}" y="${y + 3}" font-size="10.5" font-weight="500" fill="#2c3a4a">${escapeHtml(shortName)}</text>
         <circle class="chart-hover-target" cx="${x}" cy="${y}" r="14" fill="transparent" data-tooltip="${escapeHtml(tooltip)}"></circle>
       </g>
     `;

@@ -916,8 +916,8 @@ p {
 .chart-card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.66);
-  padding: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 22px 24px 20px;
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
@@ -1028,7 +1028,15 @@ p {
   justify-content: space-between;
   gap: 16px;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.chart-title-row .small-label {
+  margin-bottom: 4px;
+}
+
+.chart-title-row h3 {
+  letter-spacing: -0.01em;
 }
 
 .chart-frame {
