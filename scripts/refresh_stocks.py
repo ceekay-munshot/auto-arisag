@@ -34,15 +34,15 @@ HEADERS = {
 }
 YAHOO_CHART_URL = (
     "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
-    "?interval=1d&range=2y&includePrePost=false"
+    "?interval=1d&range=10y&includePrePost=false"
 )
 
 
 def _fetch_daily(yahoo_ticker: str) -> list[dict]:
     """Return chronological [{date: 'YYYY-MM-DD', close: float}, ...] for
-    the last ~2 years of trading days. Two years of history lets the
-    Festive Pulse tab compute year-over-year festive-window returns
-    without another scrape."""
+    the last ~10 years of trading days. Long history lets the dashboard
+    show 6-year daily candles + compute multi-year festive-window
+    returns without re-scraping."""
     from datetime import datetime as _dt
     url = YAHOO_CHART_URL.format(ticker=quote(yahoo_ticker, safe=""))
     try:

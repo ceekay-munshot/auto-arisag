@@ -24,6 +24,7 @@ on:
           - earnings
           - launches
           - ev_oem_tracker
+          - raw_materials   # FRED commodity prices (refresh_raw_materials.py)
           - live_sources    # FADA + SIAM + ACMA + news (build_dashboard --refresh-live)
           - oem_history     # backfill_oem_history.py
           - fada_history    # backfill_fada_history.py
@@ -136,6 +137,16 @@ jobs:
         run: python -u scripts/refresh_ev_oem_tracker.py
         continue-on-error: true
 
+      - name: Refresh raw-material monthly history (FRED commodity prices)
+        # Pulls monthly Aluminum / Copper / Nickel / Lead / Iron Ore /
+        # Rubber series from FRED's public CSV endpoint (no API key).
+        # Persists 8+ years of monthly history into
+        # data/raw_material_history.json which dashboard/analyze.py
+        # then prefers over the hardcoded fallback values.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'raw_materials' }}
+        run: python -u scripts/refresh_raw_materials.py
+        continue-on-error: true
+
       - name: Rebuild dashboard with OEM/SIAM/company history
         # The backfills may have added new months, so rebuild so the periodized
         # OEM tables, the SIAM trend chart, and the listed-company spotlight
@@ -171,7 +182,7 @@ jobs:
           set -e
           # Stage every signal file that exists; missing files are tolerated
           # because Vahan / news refreshes can legitimately produce nothing.
-          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json data/fada_history.json data/ev_oem_tracker.json; do
+          for path in data/source_snapshot.json data/news_snapshot.json data/oem_history.json data/siam_history.json data/company_unit_history.json data/rbi_credit.json data/macro_indicators.json data/oem_stocks.json data/oem_earnings_calendar.json data/launches_snapshot.json data/vahan_oem_live.json data/fada_history.json data/ev_oem_tracker.json data/raw_material_history.json; do
             if [ -f "$path" ]; then
               git add "$path"
             fi

@@ -1095,11 +1095,132 @@ def build_components_module(acma: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _build_raw_material_module_from_history(fred_payload: dict) -> dict[str, Any]:
+    """Builds the raw_material_prices module from FRED-sourced monthly
+    history (data/raw_material_history.json). Preserves the same shape
+    as the legacy hardcoded path so frontend rendering stays unchanged
+    — same materials[] + companies[] structure, just with proper
+    monthly resolution and 8 years of history."""
+    raw_materials = fred_payload.get("materials", []) or []
+    enriched_materials = []
+    for material in raw_materials:
+        series = material.get("series") or []
+        if not series:
+            continue
+        latest_value = series[-1].get("value")
+        base_value = series[0].get("value")
+        change_pct = (
+            round((latest_value - base_value) / base_value * 100, 2)
+            if base_value else None
+        )
+        enriched_materials.append({
+            "id": material["id"],
+            "label": material["label"],
+            "unit_label": material.get("unit_label", ""),
+            "axis_suffix": material.get("axis_suffix", ""),
+            "series": series,
+            "latest_value": latest_value,
+            "latest_period": series[-1].get("label", ""),
+            "change_since_base_pct": change_pct,
+        })
+
+    if not enriched_materials:
+        return {"available": False, "title": "Key raw-material prices"}
+
+    material_lookup = {item["id"]: item for item in enriched_materials}
+
+    # Reuse the same basket logic as the legacy path so company
+    # exposures stay in lockstep regardless of which data source the
+    # build was run with.
+    def basket_for_company(company: str, categories: list[str], lens: list[str]) -> list[str]:
+        category_set = set(categories)
+        lens_set = set(lens)
+        if company in {"Exide Industries", "Amara Raja Energy & Mobility"}:
+            return ["lead", "nickel", "copper", "aluminum"]
+        if company in {"Sona BLW Precision Forgings"}:
+            return ["copper", "nickel", "aluminum", "iron_ore"]
+        if company in {"JBM Auto", "Olectra Greentech"}:
+            return ["aluminum", "copper", "nickel", "iron_ore"]
+        if company in {"Bharat Forge", "Samvardhana Motherson", "Uno Minda"}:
+            return ["iron_ore", "aluminum", "copper", "natural_rubber"]
+        if company in {"Greaves Cotton"}:
+            return ["copper", "aluminum", "natural_rubber", "nickel"]
+        if "EV_SUPPLY" in category_set or "ev" in lens_set:
+            return ["copper", "nickel", "aluminum", "lead"]
+        if category_set & {"PV", "CV", "2W", "3W", "TRACTOR", "CE"}:
+            basket = ["iron_ore", "aluminum", "copper"]
+            if category_set & {"PV", "2W", "3W", "CV", "TRACTOR"}:
+                basket.append("natural_rubber")
+            return basket
+        return ["aluminum", "copper", "iron_ore"]
+
+    company_baskets = []
+    for company, details in sorted(LISTED_COMPANY_MAP.items()):
+        material_ids = basket_for_company(company, details["categories"], details["lens"])
+        materials_for_company = [
+            material_lookup[mid] for mid in material_ids if mid in material_lookup
+        ]
+        if not materials_for_company:
+            continue
+        company_baskets.append({
+            "company": company,
+            "label": company,
+            "material_ids": material_ids,
+            "materials": materials_for_company,
+            "category_labels": [CATEGORY_LABELS.get(c, c) for c in details["categories"]],
+            "note": (
+                "Directional raw-material basket aligned to the company's main vehicle, "
+                "battery or component exposure. Commodity prices are benchmark series, "
+                "not company-specific procurement prices."
+            ),
+        })
+
+    return {
+        "available": True,
+        "title": "Key raw-material prices",
+        "default_company": "Tata Motors",
+        "source_meta": {
+            "name": fred_payload.get("source_name", "FRED — IMF/World Bank"),
+            "latest_release_date": fred_payload.get("as_of_date", ""),
+            "url": fred_payload.get("source_url", "https://fred.stlouisfed.org/"),
+            "note": fred_payload.get("source_note", ""),
+        },
+        "materials": enriched_materials,
+        "companies": company_baskets,
+    }
+
+
+def _load_raw_material_history() -> dict | None:
+    """Reads the monthly commodity history file populated by
+    scripts/refresh_raw_materials.py from FRED. Returns None if the
+    file's missing or malformed so the hardcoded fallback below stays
+    in play and the dashboard never goes blank."""
+    path = Path("data/raw_material_history.json")
+    if not path.exists():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(payload, dict) or not isinstance(payload.get("materials"), list):
+        return None
+    if not payload["materials"]:
+        return None
+    return payload
+
+
 def build_raw_material_price_module() -> dict[str, Any]:
     world_bank_url = (
         "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/"
         "related/CMO-Pink-Sheet-April-2026.pdf"
     )
+    # Prefer FRED-sourced monthly history when available (built by
+    # scripts/refresh_raw_materials.py). Falls through to the hardcoded
+    # annual+spot baseline below when the file's missing — keeps the
+    # dashboard rendering even before the first CI tick lands the file.
+    fred_payload = _load_raw_material_history()
+    if fred_payload:
+        return _build_raw_material_module_from_history(fred_payload)
     # Mar 2026 monthly averages: aluminum / copper / nickel / lead / iron ore values
     # are FRED's IMF–World Bank-aligned monthly series (PALUMUSDM, PCOPPUSDM,
     # PNICKUSDM, PLEADUSDM, PIORECRUSDM). Natural rubber TSR20 USD/kg is estimated
