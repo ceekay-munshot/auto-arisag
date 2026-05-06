@@ -2823,6 +2823,21 @@ def build_periodized_oem_table_from_history(
         target = month_offset(latest_month, -month_back)
         return history_by_month.get(target, {}).get(oem)
 
+    # Total category units per month — used to derive each OEM's
+    # historical share %, which in turn powers the 3M share-velocity
+    # column. Pre-compute once so per-OEM lookup is O(1).
+    monthly_totals: dict[str, int] = {
+        month: sum(per_oem.values()) for month, per_oem in history_by_month.items()
+    }
+
+    def lookup_share_pct(month_back: int, oem: str) -> float | None:
+        target = month_offset(latest_month, -month_back)
+        units = history_by_month.get(target, {}).get(oem)
+        total = monthly_totals.get(target)
+        if units is None or not total:
+            return None
+        return round(units / total * 100, 2)
+
     rows: list[dict[str, Any]] = []
     for row in latest_rows:
         oem = row["oem"]
@@ -2833,6 +2848,16 @@ def build_periodized_oem_table_from_history(
         u3 = lookup_units(3, oem)
         u6 = lookup_units(6, oem)
         u12 = lookup_units(12, oem) or prior_units
+
+        # 3-month share velocity: how much has this OEM's market share moved
+        # over the trailing 3 months. Smoother than the 1M share_change_pp
+        # already on the table — surfaces real share-takers vs one-month
+        # noise. Returns None if 3-months-ago history is missing.
+        current_share = row.get("share_pct")
+        share_3m_ago = lookup_share_pct(3, oem)
+        share_velocity_3m_pp: float | None = None
+        if current_share is not None and share_3m_ago is not None:
+            share_velocity_3m_pp = round(current_share - share_3m_ago, 2)
 
         rows.append(
             {
@@ -2845,6 +2870,7 @@ def build_periodized_oem_table_from_history(
                 "cagr_12m_pct": _safe_cagr(units, u12, 1),
                 "share_pct": row.get("share_pct"),
                 "share_change_pp": row.get("share_change_pp"),
+                "share_velocity_3m_pp": share_velocity_3m_pp,
                 "listed_companies": row.get("listed_companies", []),
             }
         )
@@ -2875,7 +2901,8 @@ def build_periodized_oem_table_from_history(
                 {"key": "growth_6m_pct", "label": "6M Growth", "type": "pct"},
                 {"key": "cagr_12m_pct", "label": "12M CAGR", "type": "pct"},
                 {"key": "share_pct", "label": "Current Market Share", "type": "pct"},
-                {"key": "share_change_pp", "label": "Share Chg", "type": "pp"},
+                {"key": "share_change_pp", "label": "Share Chg (1M)", "type": "pp"},
+                {"key": "share_velocity_3m_pp", "label": "Share Velocity (3M)", "type": "pp"},
             ],
             "rows": rows,
             "note": coverage_note,

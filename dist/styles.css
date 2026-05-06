@@ -1328,6 +1328,46 @@ p {
   font-weight: 700;
 }
 
+/* Mix-shift strip: shows latest share % per category alongside the
+   delta vs the first month in the visible window. Sits below the
+   Mix-shift trend chart on Retail Pulse. */
+.mix-shift-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(20, 39, 62, 0.04);
+  border-radius: var(--radius-sm);
+}
+
+.mix-shift-strip-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.mix-shift-strip-pair {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mix-shift-strip-pair .small-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+}
+
+.mix-shift-strip-pair strong {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
 /* Latest-month strip on the CV / 3W subsegment historical card. Same
    visual treatment as the urban-rural strip but allows multiple compact
    pairs (one per subsegment) to flow across the row. */

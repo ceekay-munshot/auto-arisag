@@ -2669,8 +2669,83 @@ function renderRetailTrendOnly() {
           .map(renderCategoryCard)
           .join("")}
       </div>
-      <p class="category-grid-note">3M / 6M / 9M = latest month vs N months prior · YoY = vs same month a year ago · n.m. = months_extended history has a gap for that horizon.</p>
+      <p class="category-grid-note">3M / 6M / 9M = latest month vs N months prior · YoY = vs same month a year ago · n.m. = history has a gap for that horizon.</p>
+      <div class="section-divider"></div>
+      ${renderCategoryMixShift(retail, allowed)}
     </section>
+  `;
+}
+
+// "SUVification" / mix-shift chart — each category's share of total retail
+// over time. PV moving from ~14% to ~16% of mix is the visible part of the
+// thesis everyone in this sector talks about. Updates every month as new
+// FADA prints land — fully forward-looking, no static element.
+function renderCategoryMixShift(retail, allowed) {
+  const months = (retail.months || []).slice(-12);
+  if (months.length < 3) return "";
+  const visibleCats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"]
+    .filter((c) => allowed.includes(c));
+  const labels = months.map((m) => m.label);
+  const series = visibleCats.map((cat) => ({
+    label: labelForCategory(cat) || cat,
+    color: dashboardData.chart_colors[cat] || dashboardData.chart_colors.TOTAL,
+    values: months.map((m) => {
+      const entry = (m.categories || []).find((c) => c.category === cat);
+      return entry?.share_pct ?? null;
+    }),
+  })).filter((s) => s.values.some((v) => v !== null && v !== undefined));
+  registerDownload(
+    "category-mix-shift",
+    "category_mix_shift.csv",
+    ["month", ...visibleCats.map((c) => `${c}_share_pct`)],
+    months.map((m) => {
+      const out = { month: m.month };
+      visibleCats.forEach((c) => {
+        const entry = (m.categories || []).find((x) => x.category === c);
+        out[`${c}_share_pct`] = entry?.share_pct ?? null;
+      });
+      return out;
+    }),
+  );
+  // Latest-vs-first delta strip — the punchline read.
+  const latestPoint = months[months.length - 1];
+  const firstPoint = months[0];
+  const deltas = visibleCats.map((cat) => {
+    const latest = (latestPoint.categories || []).find((c) => c.category === cat)?.share_pct;
+    const first = (firstPoint.categories || []).find((c) => c.category === cat)?.share_pct;
+    if (latest == null || first == null) return null;
+    return { cat, label: labelForCategory(cat) || cat, latest, first, delta: latest - first };
+  }).filter(Boolean).sort((a, b) => b.delta - a.delta);
+  return `
+    <div class="chart-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">Mix shift</p>
+          <h3>How the retail mix is moving — each category's share of total volume</h3>
+        </div>
+        <div class="button-row">
+          ${renderSourceAction(retail.source_meta.url)}
+          ${renderDownloadIcon("category-mix-shift")}
+        </div>
+      </div>
+      <div class="chart-frame">
+        ${lineChart(labels, series, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents())}
+      </div>
+      <div class="chart-legend">
+        ${series.map((s) => legendItem(s.label, s.color)).join("")}
+      </div>
+      <div class="mix-shift-strip">
+        <span class="mix-shift-strip-meta">${firstPoint.label} → ${latestPoint.label}:</span>
+        ${deltas.map((d) => `
+          <span class="mix-shift-strip-pair">
+            <span class="small-label">${d.label}</span>
+            <strong>${d.latest.toFixed(1)}%</strong>
+            <span class="${d.delta >= 0 ? "positive" : "negative"}">${d.delta >= 0 ? "+" : ""}${d.delta.toFixed(2)}pp</span>
+          </span>
+        `).join("")}
+      </div>
+      <p class="legend-note">Share of total monthly retail registrations. Watch PV's slope vs 2W's — that gap is the SUV-ification thesis playing out in real time.</p>
+    </div>
   `;
 }
 
@@ -5510,6 +5585,188 @@ function renderStockSnapshotPanel() {
   `;
 }
 
+// Stock-vs-operating divergence quadrant. For every listed OEM with both
+// (a) a 1M stock return and (b) a recent FADA OEM-level YoY retail growth,
+// plot one dot. Quadrants:
+//   top-left      stock down, retail up      → "potentially mispriced upside"
+//   top-right     stock up, retail up        → "momentum, in line"
+//   bottom-left   stock down, retail down    → "fundamentals confirming"
+//   bottom-right  stock up, retail down      → "stock running ahead"
+// Reads off two live datasets — stocks daily, retail monthly — so the chart
+// repositions every CI tick.
+function renderStockVsRetailDivergence() {
+  const stocks = dashboardData.oem_stocks;
+  if (!stocks?.available) return "";
+  const stockMap = stocks.stocks || {};
+
+  // Build one YoY-per-company lookup. For multi-category OEMs (M&M plays
+  // in PV / CV / Tractor / 3W) pick the largest category by current_units
+  // so we anchor on the OEM's biggest exposure.
+  const tables = dashboardData.modules.retail?.latest_oem_tables || {};
+  const oemBestYoy = {};
+  for (const [cat, table] of Object.entries(tables)) {
+    const rows = (table.periods?.M?.rows) || table.rows || [];
+    for (const row of rows) {
+      const oem = row.oem;
+      const yoy = row.yoy_pct ?? row.unit_growth_pct;
+      const units = Number(row.current_units || row.units || 0);
+      if (!oem || yoy == null || Number.isNaN(Number(yoy))) continue;
+      const existing = oemBestYoy[oem];
+      if (!existing || units > existing.units) {
+        oemBestYoy[oem] = { yoy: Number(yoy), cat, units };
+      }
+    }
+  }
+
+  // Reverse the OEM_TO_COMPANY_ALIASES map so we can look up
+  // "Mahindra Group" → "Mahindra & Mahindra" etc. when joining stock
+  // company names to FADA OEM names.
+  const aliasReverse = {};
+  for (const [oem, company] of Object.entries(OEM_TO_COMPANY_ALIASES)) {
+    if (!aliasReverse[company]) aliasReverse[company] = [];
+    aliasReverse[company].push(oem);
+  }
+
+  const points = Object.entries(stockMap).flatMap(([company, stock]) => {
+    if (stock?.change_1m_pct == null) return [];
+    // Direct match first; fall back to alias lookups.
+    let match = oemBestYoy[company];
+    if (!match) {
+      for (const alias of aliasReverse[company] || []) {
+        if (oemBestYoy[alias]) {
+          match = oemBestYoy[alias];
+          break;
+        }
+      }
+    }
+    if (!match) return [];
+    return [{
+      company,
+      ticker: stock.ticker,
+      stock_1m_pct: Number(stock.change_1m_pct),
+      retail_yoy_pct: match.yoy,
+      anchor_cat: match.cat,
+    }];
+  });
+
+  if (points.length < 3) return "";
+
+  // Chart geometry. Axes are forced to symmetric ranges around zero so the
+  // quadrant lines (the four-way cross) actually fall in the middle.
+  const W = 820;
+  const H = 380;
+  const pad = { top: 18, right: 30, bottom: 50, left: 60 };
+  const innerW = W - pad.left - pad.right;
+  const innerH = H - pad.top - pad.bottom;
+  const xs = points.map((p) => p.stock_1m_pct);
+  const ys = points.map((p) => p.retail_yoy_pct);
+  const xAbs = Math.max(5, ...xs.map((v) => Math.abs(v)));
+  const yAbs = Math.max(10, ...ys.map((v) => Math.abs(v)));
+  const xMin = -xAbs * 1.15;
+  const xMax = xAbs * 1.15;
+  const yMin = -yAbs * 1.15;
+  const yMax = yAbs * 1.15;
+  const xToPx = (x) => pad.left + ((x - xMin) / (xMax - xMin)) * innerW;
+  const yToPx = (y) => pad.top + innerH - ((y - yMin) / (yMax - yMin)) * innerH;
+  const x0 = xToPx(0);
+  const y0 = yToPx(0);
+
+  // Quadrant tint rectangles — green for top-left (mispriced upside) and
+  // red for bottom-right (stock running ahead). Other two stay neutral.
+  const quadRects = `
+    <rect x="${pad.left}" y="${pad.top}" width="${x0 - pad.left}" height="${y0 - pad.top}"
+          fill="rgba(47,137,125,0.07)" />
+    <rect x="${x0}" y="${y0}" width="${pad.left + innerW - x0}" height="${pad.top + innerH - y0}"
+          fill="rgba(204,67,67,0.07)" />
+  `;
+
+  // Axis ticks every ~20% of the visible range so labels don't crowd.
+  const xTicks = [xMin, xMin / 2, 0, xMax / 2, xMax];
+  const yTicks = [yMin, yMin / 2, 0, yMax / 2, yMax];
+  const gridLines = [
+    ...xTicks.map((t) => `<line x1="${xToPx(t)}" x2="${xToPx(t)}" y1="${pad.top}" y2="${pad.top + innerH}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
+    ...yTicks.map((t) => `<line x1="${pad.left}" x2="${pad.left + innerW}" y1="${yToPx(t)}" y2="${yToPx(t)}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
+  ].join("");
+  const xLabels = xTicks.map((t) => `<text x="${xToPx(t)}" y="${H - 28}" text-anchor="middle" font-size="10" fill="#667687">${t.toFixed(1)}%</text>`).join("");
+  const yLabels = yTicks.map((t) => `<text x="${pad.left - 8}" y="${yToPx(t) + 3}" text-anchor="end" font-size="10" fill="#667687">${t.toFixed(0)}%</text>`).join("");
+
+  // Quadrant captions in the four corners.
+  const corners = `
+    <text x="${pad.left + 8}" y="${pad.top + 14}" font-size="10" font-weight="600" fill="#1d5a4f">Mispriced upside</text>
+    <text x="${pad.left + innerW - 8}" y="${pad.top + 14}" text-anchor="end" font-size="10" font-weight="600" fill="#3a4a5a">Momentum, in line</text>
+    <text x="${pad.left + 8}" y="${pad.top + innerH - 6}" font-size="10" font-weight="600" fill="#3a4a5a">Fundamentals confirming</text>
+    <text x="${pad.left + innerW - 8}" y="${pad.top + innerH - 6}" text-anchor="end" font-size="10" font-weight="600" fill="#8a2727">Stock running ahead</text>
+  `;
+
+  // Each point: a circle + the company short name to its right. Hover
+  // tooltip carries full numbers for both axes.
+  const dots = points.map((p) => {
+    const x = xToPx(p.stock_1m_pct);
+    const y = yToPx(p.retail_yoy_pct);
+    const upRight = p.retail_yoy_pct > 0 && p.stock_1m_pct > 0;
+    const upLeft = p.retail_yoy_pct > 0 && p.stock_1m_pct < 0;
+    const downRight = p.retail_yoy_pct < 0 && p.stock_1m_pct > 0;
+    const fill = upLeft ? "#2f897d" : downRight ? "#cc4343" : "#4c74c7";
+    const tooltip = JSON.stringify({
+      label: p.company,
+      period: p.ticker || "",
+      value: `${p.stock_1m_pct >= 0 ? "+" : ""}${p.stock_1m_pct.toFixed(2)}% stock · ${p.retail_yoy_pct >= 0 ? "+" : ""}${p.retail_yoy_pct.toFixed(1)}% retail`,
+      note: `Retail YoY anchored on ${p.anchor_cat} (largest exposure)`,
+    });
+    const shortName = p.company.replace(/&/g, "&amp;").length > 14
+      ? p.company.split(" ")[0]
+      : p.company;
+    return `
+      <g>
+        <circle cx="${x}" cy="${y}" r="6" fill="${fill}" stroke="#fff" stroke-width="1.5" />
+        <text x="${x + 9}" y="${y + 3}" font-size="10" font-weight="500" fill="#162231">${escapeHtml(shortName)}</text>
+        <circle class="chart-hover-target" cx="${x}" cy="${y}" r="14" fill="transparent" data-tooltip="${escapeHtml(tooltip)}"></circle>
+      </g>
+    `;
+  }).join("");
+
+  registerDownload(
+    "stock-retail-divergence",
+    "stock_vs_retail_divergence.csv",
+    ["company", "ticker", "stock_1m_pct", "retail_yoy_pct", "anchor_category"],
+    points.map((p) => ({
+      company: p.company,
+      ticker: p.ticker,
+      stock_1m_pct: p.stock_1m_pct,
+      retail_yoy_pct: p.retail_yoy_pct,
+      anchor_category: p.anchor_cat,
+    })),
+  );
+
+  return `
+    <section class="section panel section-anchor" id="section-stock-vs-retail">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Stock vs operating divergence</p>
+          <h2>Where does the share price sit relative to the demand fundamental?</h2>
+        </div>
+        <div class="button-row">
+          ${renderDownloadIcon("stock-retail-divergence")}
+        </div>
+      </div>
+      <p class="section-subtitle">Each dot is a listed OEM. X-axis: 1-month NSE stock return. Y-axis: latest FADA monthly retail YoY for the OEM's largest exposure category. Top-left names have demand momentum the market hasn't priced in yet; bottom-right names have stocks running ahead of their retail print.</p>
+      <div class="chart-frame">
+        <svg viewBox="0 0 ${W} ${H}" class="line-chart" role="img" aria-label="Stock vs operating divergence quadrant">
+          ${quadRects}
+          ${gridLines}
+          ${corners}
+          ${xLabels}
+          ${yLabels}
+          ${dots}
+          <text x="${pad.left + innerW / 2}" y="${H - 8}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a">1M stock return →</text>
+          <text x="14" y="${pad.top + innerH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a" transform="rotate(-90 14 ${pad.top + innerH / 2})">← Retail YoY %</text>
+        </svg>
+      </div>
+      <p class="legend-note">Stock prices refresh on every CI tick (Yahoo Finance NSE close). Retail YoY refreshes monthly when FADA publishes the next OEM annexure. Companies without a clean OEM-name match in the FADA tables (most pure ancillaries — Bharat Forge, Sona BLW, Motherson, Uno Minda) are excluded automatically.</p>
+    </section>
+  `;
+}
+
 function renderEarningsCalendarPanel() {
   const ec = dashboardData.earnings_calendar;
   if (!ec?.available) return "";
@@ -5595,6 +5852,7 @@ function renderCompanySection() {
 
   return `
     ${renderStockSnapshotPanel()}
+    ${renderStockVsRetailDivergence()}
     ${renderEarningsCalendarPanel()}
     <section id="section-company-map" class="section panel section-anchor">
       <div class="panel-header">

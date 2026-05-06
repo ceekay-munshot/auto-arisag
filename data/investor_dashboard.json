@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T06:12:26.698144+00:00",
+  "generated_at": "2026-05-06T06:44:39.511817+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -2577,7 +2577,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -2592,6 +2597,7 @@
                   "cagr_12m_pct": 24.33,
                   "share_pct": 27.77,
                   "share_change_pp": -1.03,
+                  "share_velocity_3m_pp": 5.69,
                   "listed_companies": [
                     "Hero MotoCorp"
                   ]
@@ -2606,6 +2612,7 @@
                   "cagr_12m_pct": 33.48,
                   "share_pct": 24.36,
                   "share_change_pp": 0.78,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -2618,6 +2625,7 @@
                   "cagr_12m_pct": 36.2,
                   "share_pct": 19.2,
                   "share_change_pp": 0.98,
+                  "share_velocity_3m_pp": -0.98,
                   "listed_companies": [
                     "TVS Motor"
                   ]
@@ -2632,6 +2640,7 @@
                   "cagr_12m_pct": 26.36,
                   "share_pct": 11.08,
                   "share_change_pp": -0.26,
+                  "share_velocity_3m_pp": 0.6,
                   "listed_companies": [
                     "Bajaj Auto"
                   ]
@@ -2646,6 +2655,7 @@
                   "cagr_12m_pct": 16.87,
                   "share_pct": 5.04,
                   "share_change_pp": -0.56,
+                  "share_velocity_3m_pp": -1.04,
                   "listed_companies": []
                 },
                 {
@@ -2658,6 +2668,7 @@
                   "cagr_12m_pct": 27.98,
                   "share_pct": 4.95,
                   "share_change_pp": -0.17,
+                  "share_velocity_3m_pp": -1.28,
                   "listed_companies": [
                     "Eicher Motors"
                   ]
@@ -2672,6 +2683,7 @@
                   "cagr_12m_pct": 36.56,
                   "share_pct": 3.37,
                   "share_change_pp": 0.18,
+                  "share_velocity_3m_pp": -0.76,
                   "listed_companies": []
                 },
                 {
@@ -2684,6 +2696,7 @@
                   "cagr_12m_pct": 131.05,
                   "share_pct": 1.83,
                   "share_change_pp": 0.8,
+                  "share_velocity_3m_pp": 0.53,
                   "listed_companies": []
                 },
                 {
@@ -2696,6 +2709,7 @@
                   "cagr_12m_pct": -56.83,
                   "share_pct": 0.52,
                   "share_change_pp": -1.04,
+                  "share_velocity_3m_pp": -0.17,
                   "listed_companies": []
                 },
                 {
@@ -2708,6 +2722,7 @@
                   "cagr_12m_pct": 41.17,
                   "share_pct": 0.41,
                   "share_change_pp": 0.04,
+                  "share_velocity_3m_pp": 0.05,
                   "listed_companies": []
                 },
                 {
@@ -2720,6 +2735,7 @@
                   "cagr_12m_pct": 105.38,
                   "share_pct": 0.24,
                   "share_change_pp": 0.09,
+                  "share_velocity_3m_pp": -0.04,
                   "listed_companies": []
                 },
                 {
@@ -2732,6 +2748,7 @@
                   "cagr_12m_pct": 417.33,
                   "share_pct": 0.21,
                   "share_change_pp": 0.16,
+                  "share_velocity_3m_pp": 0.07,
                   "listed_companies": []
                 },
                 {
@@ -2744,6 +2761,7 @@
                   "cagr_12m_pct": 42.03,
                   "share_pct": 0.19,
                   "share_change_pp": 0.02,
+                  "share_velocity_3m_pp": 0.02,
                   "listed_companies": []
                 },
                 {
@@ -2756,6 +2774,7 @@
                   "cagr_12m_pct": 36.09,
                   "share_pct": 0.16,
                   "share_change_pp": 0.01,
+                  "share_velocity_3m_pp": -0.02,
                   "listed_companies": []
                 },
                 {
@@ -2768,6 +2787,7 @@
                   "cagr_12m_pct": 45.01,
                   "share_pct": 0.66,
                   "share_change_pp": 0.0,
+                  "share_velocity_3m_pp": -0.01,
                   "listed_companies": []
                 }
               ],
@@ -3013,7 +3033,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -3028,6 +3053,7 @@
                   "cagr_12m_pct": 21.63,
                   "share_pct": 37.5,
                   "share_change_pp": 3.43,
+                  "share_velocity_3m_pp": 9.94,
                   "listed_companies": [
                     "Bajaj Auto"
                   ]
@@ -3042,6 +3068,7 @@
                   "cagr_12m_pct": 35.33,
                   "share_pct": 9.08,
                   "share_change_pp": 1.67,
+                  "share_velocity_3m_pp": 2.29,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -3056,6 +3083,7 @@
                   "cagr_12m_pct": 22.3,
                   "share_pct": 7.87,
                   "share_change_pp": 0.75,
+                  "share_velocity_3m_pp": 1.97,
                   "listed_companies": []
                 },
                 {
@@ -3068,6 +3096,7 @@
                   "cagr_12m_pct": 87.64,
                   "share_pct": 5.05,
                   "share_change_pp": 2.08,
+                  "share_velocity_3m_pp": 1.07,
                   "listed_companies": [
                     "TVS Motor"
                   ]
@@ -3082,6 +3111,7 @@
                   "cagr_12m_pct": 23.55,
                   "share_pct": 2.75,
                   "share_change_pp": 0.29,
+                  "share_velocity_3m_pp": 0.66,
                   "listed_companies": [
                     "Atul Auto"
                   ]
@@ -3096,6 +3126,7 @@
                   "cagr_12m_pct": -44.16,
                   "share_pct": 1.76,
                   "share_change_pp": -1.71,
+                  "share_velocity_3m_pp": -0.56,
                   "listed_companies": []
                 },
                 {
@@ -3108,6 +3139,7 @@
                   "cagr_12m_pct": -7.5,
                   "share_pct": 1.46,
                   "share_change_pp": -0.29,
+                  "share_velocity_3m_pp": -0.24,
                   "listed_companies": []
                 },
                 {
@@ -3120,6 +3152,7 @@
                   "cagr_12m_pct": -35.5,
                   "share_pct": 1.31,
                   "share_change_pp": -0.94,
+                  "share_velocity_3m_pp": -0.16,
                   "listed_companies": []
                 },
                 {
@@ -3132,6 +3165,7 @@
                   "cagr_12m_pct": -0.81,
                   "share_pct": 1.0,
                   "share_change_pp": -0.12,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -3144,6 +3178,7 @@
                   "cagr_12m_pct": 4.3,
                   "share_pct": 32.22,
                   "share_change_pp": -5.15,
+                  "share_velocity_3m_pp": -3.95,
                   "listed_companies": []
                 }
               ],
@@ -3371,7 +3406,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -3386,6 +3426,7 @@
                   "cagr_12m_pct": 19.38,
                   "share_pct": 35.48,
                   "share_change_pp": 0.98,
+                  "share_velocity_3m_pp": 0.15,
                   "listed_companies": [
                     "Tata Motors"
                   ]
@@ -3400,6 +3441,7 @@
                   "cagr_12m_pct": 11.29,
                   "share_pct": 26.23,
                   "share_change_pp": -0.9,
+                  "share_velocity_3m_pp": -0.98,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -3414,6 +3456,7 @@
                   "cagr_12m_pct": 18.45,
                   "share_pct": 18.9,
                   "share_change_pp": 0.24,
+                  "share_velocity_3m_pp": 0.69,
                   "listed_companies": [
                     "Ashok Leyland"
                   ]
@@ -3428,6 +3471,7 @@
                   "cagr_12m_pct": 24.2,
                   "share_pct": 8.21,
                   "share_change_pp": 0.49,
+                  "share_velocity_3m_pp": 0.16,
                   "listed_companies": [
                     "Eicher Motors"
                   ]
@@ -3442,6 +3486,7 @@
                   "cagr_12m_pct": 16.06,
                   "share_pct": 4.45,
                   "share_change_pp": 0.02,
+                  "share_velocity_3m_pp": -0.34,
                   "listed_companies": [
                     "Maruti Suzuki"
                   ]
@@ -3456,6 +3501,7 @@
                   "cagr_12m_pct": -20.43,
                   "share_pct": 2.09,
                   "share_change_pp": -1.26,
+                  "share_velocity_3m_pp": 0.16,
                   "listed_companies": []
                 },
                 {
@@ -3468,6 +3514,7 @@
                   "cagr_12m_pct": 15.14,
                   "share_pct": 2.08,
                   "share_change_pp": -0.02,
+                  "share_velocity_3m_pp": -0.05,
                   "listed_companies": []
                 },
                 {
@@ -3480,6 +3527,7 @@
                   "cagr_12m_pct": 33.2,
                   "share_pct": 1.33,
                   "share_change_pp": -0.04,
+                  "share_velocity_3m_pp": 0.23,
                   "listed_companies": []
                 },
                 {
@@ -3492,6 +3540,7 @@
                   "cagr_12m_pct": -83.21,
                   "share_pct": 1.22,
                   "share_change_pp": 0.49,
+                  "share_velocity_3m_pp": -0.03,
                   "listed_companies": []
                 }
               ],
@@ -3683,7 +3732,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -3698,6 +3752,7 @@
                   "cagr_12m_pct": -6.1,
                   "share_pct": 49.52,
                   "share_change_pp": 5.31,
+                  "share_velocity_3m_pp": -4.66,
                   "listed_companies": []
                 },
                 {
@@ -3710,6 +3765,7 @@
                   "cagr_12m_pct": -31.25,
                   "share_pct": 10.35,
                   "share_change_pp": -2.27,
+                  "share_velocity_3m_pp": -0.02,
                   "listed_companies": [
                     "Action Construction Equipment"
                   ]
@@ -3724,6 +3780,7 @@
                   "cagr_12m_pct": -31.85,
                   "share_pct": 6.66,
                   "share_change_pp": -1.53,
+                  "share_velocity_3m_pp": -0.52,
                   "listed_companies": []
                 },
                 {
@@ -3736,6 +3793,7 @@
                   "cagr_12m_pct": -10.69,
                   "share_pct": 6.53,
                   "share_change_pp": 0.4,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": [
                     "Escorts Kubota"
                   ]
@@ -3750,6 +3808,7 @@
                   "cagr_12m_pct": -8.1,
                   "share_pct": 3.29,
                   "share_change_pp": 0.29,
+                  "share_velocity_3m_pp": 1.41,
                   "listed_companies": []
                 },
                 {
@@ -3762,6 +3821,7 @@
                   "cagr_12m_pct": -10.48,
                   "share_pct": 2.72,
                   "share_change_pp": 0.17,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -3774,6 +3834,7 @@
                   "cagr_12m_pct": -31.84,
                   "share_pct": 2.42,
                   "share_change_pp": -0.55,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -3786,6 +3847,7 @@
                   "cagr_12m_pct": -33.17,
                   "share_pct": 1.93,
                   "share_change_pp": -0.49,
+                  "share_velocity_3m_pp": 0.4,
                   "listed_companies": []
                 },
                 {
@@ -3798,6 +3860,7 @@
                   "cagr_12m_pct": 10.71,
                   "share_pct": 1.8,
                   "share_change_pp": 0.44,
+                  "share_velocity_3m_pp": 0.64,
                   "listed_companies": []
                 },
                 {
@@ -3810,6 +3873,7 @@
                   "cagr_12m_pct": -4.65,
                   "share_pct": 1.78,
                   "share_change_pp": 0.21,
+                  "share_velocity_3m_pp": -0.17,
                   "listed_companies": []
                 },
                 {
@@ -3822,6 +3886,7 @@
                   "cagr_12m_pct": -41.35,
                   "share_pct": 1.13,
                   "share_change_pp": -0.48,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -3836,6 +3901,7 @@
                   "cagr_12m_pct": -14.77,
                   "share_pct": 1.09,
                   "share_change_pp": 0.02,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -3848,6 +3914,7 @@
                   "cagr_12m_pct": 30.91,
                   "share_pct": 1.04,
                   "share_change_pp": 0.37,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": []
                 },
                 {
@@ -3860,6 +3927,7 @@
                   "cagr_12m_pct": -29.75,
                   "share_pct": 9.75,
                   "share_change_pp": -1.88,
+                  "share_velocity_3m_pp": -0.73,
                   "listed_companies": []
                 }
               ],
@@ -4114,7 +4182,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -4129,6 +4202,7 @@
                   "cagr_12m_pct": 30.5,
                   "share_pct": 39.26,
                   "share_change_pp": 2.16,
+                  "share_velocity_3m_pp": -0.28,
                   "listed_companies": [
                     "Maruti Suzuki"
                   ]
@@ -4143,6 +4217,7 @@
                   "cagr_12m_pct": 35.74,
                   "share_pct": 14.95,
                   "share_change_pp": 1.23,
+                  "share_velocity_3m_pp": 1.22,
                   "listed_companies": [
                     "Tata Motors"
                   ]
@@ -4157,6 +4232,7 @@
                   "cagr_12m_pct": 31.82,
                   "share_pct": 13.87,
                   "share_change_pp": 0.29,
+                  "share_velocity_3m_pp": 1.26,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -4171,6 +4247,7 @@
                   "cagr_12m_pct": 14.77,
                   "share_pct": 11.09,
                   "share_change_pp": -1.06,
+                  "share_velocity_3m_pp": -1.66,
                   "listed_companies": [
                     "Hyundai Motor India"
                   ]
@@ -4185,6 +4262,7 @@
                   "cagr_12m_pct": 27.78,
                   "share_pct": 6.39,
                   "share_change_pp": 0.09,
+                  "share_velocity_3m_pp": 0.97,
                   "listed_companies": []
                 },
                 {
@@ -4197,6 +4275,7 @@
                   "cagr_12m_pct": 18.03,
                   "share_pct": 6.26,
                   "share_change_pp": -0.74,
+                  "share_velocity_3m_pp": -0.59,
                   "listed_companies": []
                 },
                 {
@@ -4209,6 +4288,7 @@
                   "cagr_12m_pct": -3.3,
                   "share_pct": 1.99,
                   "share_change_pp": -0.63,
+                  "share_velocity_3m_pp": -0.43,
                   "listed_companies": []
                 },
                 {
@@ -4221,6 +4301,7 @@
                   "cagr_12m_pct": 12.61,
                   "share_pct": 1.42,
                   "share_change_pp": -0.12,
+                  "share_velocity_3m_pp": 0.32,
                   "listed_companies": []
                 },
                 {
@@ -4233,6 +4314,7 @@
                   "cagr_12m_pct": 12.18,
                   "share_pct": 1.26,
                   "share_change_pp": -0.16,
+                  "share_velocity_3m_pp": -0.2,
                   "listed_companies": []
                 },
                 {
@@ -4245,6 +4327,7 @@
                   "cagr_12m_pct": 36.5,
                   "share_pct": 0.82,
                   "share_change_pp": 0.09,
+                  "share_velocity_3m_pp": -0.05,
                   "listed_companies": []
                 },
                 {
@@ -4257,6 +4340,7 @@
                   "cagr_12m_pct": 44.87,
                   "share_pct": 0.58,
                   "share_change_pp": 0.08,
+                  "share_velocity_3m_pp": 0.12,
                   "listed_companies": []
                 },
                 {
@@ -4269,6 +4353,7 @@
                   "cagr_12m_pct": 25.1,
                   "share_pct": 0.36,
                   "share_change_pp": -0.02,
+                  "share_velocity_3m_pp": -0.06,
                   "listed_companies": []
                 },
                 {
@@ -4281,6 +4366,7 @@
                   "cagr_12m_pct": -6.04,
                   "share_pct": 0.33,
                   "share_change_pp": -0.12,
+                  "share_velocity_3m_pp": -0.03,
                   "listed_companies": []
                 },
                 {
@@ -4293,6 +4379,7 @@
                   "cagr_12m_pct": 53.81,
                   "share_pct": 0.3,
                   "share_change_pp": 0.14,
+                  "share_velocity_3m_pp": 0.11,
                   "listed_companies": []
                 },
                 {
@@ -4305,6 +4392,7 @@
                   "cagr_12m_pct": 46.46,
                   "share_pct": 0.22,
                   "share_change_pp": 0.04,
+                  "share_velocity_3m_pp": -0.1,
                   "listed_companies": []
                 },
                 {
@@ -4317,6 +4405,7 @@
                   "cagr_12m_pct": null,
                   "share_pct": 0.16,
                   "share_change_pp": 0.16,
+                  "share_velocity_3m_pp": 0.06,
                   "listed_companies": []
                 },
                 {
@@ -4329,6 +4418,7 @@
                   "cagr_12m_pct": -11.31,
                   "share_pct": 0.1,
                   "share_change_pp": -0.06,
+                  "share_velocity_3m_pp": 0.02,
                   "listed_companies": []
                 },
                 {
@@ -4341,6 +4431,7 @@
                   "cagr_12m_pct": 4.55,
                   "share_pct": 0.09,
                   "share_change_pp": -0.03,
+                  "share_velocity_3m_pp": 0.03,
                   "listed_companies": []
                 },
                 {
@@ -4353,6 +4444,7 @@
                   "cagr_12m_pct": -62.28,
                   "share_pct": 0.57,
                   "share_change_pp": -1.31,
+                  "share_velocity_3m_pp": -0.68,
                   "listed_companies": []
                 }
               ],
@@ -4634,7 +4726,12 @@
                 },
                 {
                   "key": "share_change_pp",
-                  "label": "Share Chg",
+                  "label": "Share Chg (1M)",
+                  "type": "pp"
+                },
+                {
+                  "key": "share_velocity_3m_pp",
+                  "label": "Share Velocity (3M)",
                   "type": "pp"
                 }
               ],
@@ -4649,6 +4746,7 @@
                   "cagr_12m_pct": 11.7,
                   "share_pct": 23.94,
                   "share_change_pp": 0.18,
+                  "share_velocity_3m_pp": -1.69,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -4663,6 +4761,7 @@
                   "cagr_12m_pct": 11.59,
                   "share_pct": 19.5,
                   "share_change_pp": 0.11,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": [
                     "Mahindra & Mahindra"
                   ]
@@ -4677,6 +4776,7 @@
                   "cagr_12m_pct": 10.06,
                   "share_pct": 12.42,
                   "share_change_pp": -0.1,
+                  "share_velocity_3m_pp": 0.3,
                   "listed_companies": []
                 },
                 {
@@ -4689,6 +4789,7 @@
                   "cagr_12m_pct": 16.15,
                   "share_pct": 10.87,
                   "share_change_pp": 0.49,
+                  "share_velocity_3m_pp": null,
                   "listed_companies": [
                     "Escorts Kubota"
                   ]
@@ -4703,6 +4804,7 @@
                   "cagr_12m_pct": 20.26,
                   "share_pct": 10.34,
                   "share_change_pp": 0.79,
+                  "share_velocity_3m_pp": 0.35,
                   "listed_companies": []
                 },
                 {
@@ -4715,6 +4817,7 @@
                   "cagr_12m_pct": 8.92,
                   "share_pct": 7.87,
                   "share_change_pp": -0.11,
+                  "share_velocity_3m_pp": 0.52,
                   "listed_companies": []
                 },
                 {
@@ -4727,6 +4830,7 @@
                   "cagr_12m_pct": 2.51,
                   "share_pct": 5.68,
                   "share_change_pp": -0.47,
+                  "share_velocity_3m_pp": -0.33,
                   "listed_companies": []
                 },
                 {
@@ -4739,6 +4843,7 @@
                   "cagr_12m_pct": 29.91,
                   "share_pct": 4.79,
                   "share_change_pp": 0.7,
+                  "share_velocity_3m_pp": 0.51,
                   "listed_companies": []
                 },
                 {
@@ -4751,6 +4856,7 @@
                   "cagr_12m_pct": 8.76,
                   "share_pct": 4.58,
                   "share_change_pp": -1.6,
+                  "share_velocity_3m_pp": 0.65,
                   "listed_companies": []
                 }
               ],
