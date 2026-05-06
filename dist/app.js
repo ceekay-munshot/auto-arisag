@@ -7671,10 +7671,28 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     yMin = Math.min(0, rawMin);
     yMax = Math.max(rawMax, 1);
   }
+  // Nice-numbers tick algorithm: round yMin / yMax outward to a clean
+  // step so labels read as 0 / 10L / 20L / 30L instead of 13.4L / 26.8L
+  // / 40.2L. Picks the smallest step from {1, 2, 2.5, 5} × 10^N that
+  // fits the desired tick count.
+  const steps = 4;
+  const targetStep = (yMax - yMin) / steps;
+  if (targetStep > 0 && Number.isFinite(targetStep)) {
+    const exponent = Math.floor(Math.log10(targetStep));
+    const magnitude = Math.pow(10, exponent);
+    const normalised = targetStep / magnitude;
+    let nice;
+    if (normalised <= 1) nice = 1;
+    else if (normalised <= 2) nice = 2;
+    else if (normalised <= 2.5) nice = 2.5;
+    else if (normalised <= 5) nice = 5;
+    else nice = 10;
+    const niceStep = nice * magnitude;
+    yMin = Math.floor(yMin / niceStep) * niceStep;
+    yMax = Math.ceil(yMax / niceStep) * niceStep;
+    if (yMax === yMin) yMax = yMin + niceStep;
+  }
   const yRange = yMax - yMin || 1;
-  // 3 horizontal gridlines (top, middle, bottom) is the readable minimum for
-  // a quant chart — denser grids fight the data line.
-  const steps = 3;
   // X-tick selection: pick the FIRST label of each calendar year for "MMM YYYY"
   // series, otherwise every-Nth. After candidate selection, enforce a minimum
   // horizontal pixel gap so labels never overlap — this killed the "JaD2018"
@@ -7743,11 +7761,11 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     return `
       <g>
         <line x1="${pad.left}" x2="${width - pad.right}" y1="${y}" y2="${y}"
-              stroke="${isBaseline ? "rgba(20,39,62,0.22)" : "rgba(20,39,62,0.07)"}"
-              stroke-width="${isBaseline ? 1 : 1}" />
-        <text x="${pad.left - 10}" y="${y + 4}" text-anchor="end"
-              font-size="11" font-weight="500" fill="#667687"
-              font-family="inherit">${formatter(value)}</text>
+              stroke="${isBaseline ? "rgba(20,39,62,0.22)" : "rgba(20,39,62,0.06)"}"
+              stroke-width="1" />
+        <text x="${pad.left - 12}" y="${y + 4}" text-anchor="end"
+              font-size="10.5" font-weight="500" fill="#8693a3"
+              font-family="inherit" style="letter-spacing: 0.01em;">${formatter(value)}</text>
       </g>
     `;
   }).join("");
@@ -7771,8 +7789,8 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       dx = 2;
     }
     return `<text x="${x + dx}" y="${height - 14}" text-anchor="${anchor}"
-                  font-size="11" font-weight="500" fill="#667687"
-                  font-family="inherit">${label}</text>`;
+                  font-size="10.5" font-weight="500" fill="#8693a3"
+                  font-family="inherit" style="letter-spacing: 0.01em;">${label}</text>`;
   }).join("");
 
   // Auto-detect anomalous monthly prints using a simple z-score against the
@@ -7828,8 +7846,13 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     // opacity, and skip the data dots so they don't crowd the current line.
     const isDashed = item.dashed === true;
     const strokeAttrs = isDashed
-      ? `stroke="${item.color}" stroke-width="2.2" stroke-dasharray="6 4" opacity="0.7"`
-      : `stroke="${item.color}" stroke-width="2.6"`;
+      ? `stroke="${item.color}" stroke-width="1.8" stroke-dasharray="6 4" opacity="0.7"`
+      : `stroke="${item.color}" stroke-width="2"`;
+    // On long series (>= 30 points), suppress the per-point dot markers —
+    // 77 dots per category × 6 categories = 460 dots = visual noise that
+    // obscures the line. Keep transparent hover targets so the tooltip
+    // still works on every point. On short series the dots add precision.
+    const showDotMarkers = !isDashed && points.length < 30;
     return `
       <g>
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
@@ -7840,13 +7863,16 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
             value: tooltipFormatter(point.value),
             note: "",
           });
+          const dotMarkup = showDotMarkers
+            ? `<circle cx="${point.x}" cy="${point.y}" r="3" fill="#fff" stroke="${item.color}" stroke-width="1.6" pointer-events="none"></circle>`
+            : "";
           return `
-            <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
+            ${dotMarkup}
             <circle
               class="chart-hover-target"
               cx="${point.x}"
               cy="${point.y}"
-              r="14"
+              r="${showDotMarkers ? 14 : 10}"
               fill="transparent"
               data-tooltip="${escapeHtml(tooltipPayload)}"
             ></circle>

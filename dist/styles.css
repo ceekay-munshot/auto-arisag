@@ -1112,22 +1112,28 @@ p {
 .chart-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 14px 18px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(20, 39, 62, 0.06);
 }
 
 .legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 0.86rem;
+  gap: 7px;
+  color: #4a5663;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
+/* Horizontal-bar legend key reads like a miniature segment of the line
+   chart it labels — a more professional convention than circle dots. */
 .legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
 }
 
 .stack-list {

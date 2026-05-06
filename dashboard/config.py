@@ -24,19 +24,22 @@ WHOLESALE_CATEGORY_ORDER = ["PV", "2W", "3W"]
 FUEL_ORDER = ["EV", "Hybrid", "CNG / LPG", "Petrol / Ethanol", "Diesel", "Hydrogen"]
 
 CHART_COLORS = {
-    "TOTAL": "#f4b06d",
-    "PV": "#8ad8c7",
-    "2W": "#7ca4ff",
-    "3W": "#f28b61",
-    "CV": "#cab0ff",
-    "TRACTOR": "#d7c46f",
-    "CE": "#9aa4b2",
-    "EV": "#54d3a1",
-    "Hybrid": "#c9d971",
-    "CNG / LPG": "#6bc3ff",
-    "Petrol / Ethanol": "#f3c98b",
-    "Diesel": "#6f7f95",
-    "Hydrogen": "#bfcaf5",
+    # Tightened palette: lower saturation, higher contrast against white,
+    # categories sit visually closer to each other so no single line leaps
+    # out unfairly. Inspired by financial-press chart conventions.
+    "TOTAL": "#c08a4a",
+    "PV": "#3f8f7f",
+    "2W": "#3a64a8",
+    "3W": "#c66a44",
+    "CV": "#7a5fb0",
+    "TRACTOR": "#a48a3c",
+    "CE": "#6b7a8a",
+    "EV": "#2f9d72",
+    "Hybrid": "#9aac4a",
+    "CNG / LPG": "#3d8fc4",
+    "Petrol / Ethanol": "#c89c5a",
+    "Diesel": "#54667a",
+    "Hydrogen": "#7e8cba",
 }
 
 VAHAN_STATE_SOURCE_URL = "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahan?lang=en"
