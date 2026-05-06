@@ -99,6 +99,594 @@
   "subsegment_series": {
     "CV": [
       {
+        "month": "2022-11",
+        "label": "HCV",
+        "units": 25035,
+        "mom_pct": 60.84,
+        "yoy_pct": 175.38
+      },
+      {
+        "month": "2022-11",
+        "label": "LCV",
+        "units": 46836,
+        "mom_pct": 22.61,
+        "yoy_pct": 22.66
+      },
+      {
+        "month": "2022-11",
+        "label": "MCV",
+        "units": 4776,
+        "mom_pct": 11.59,
+        "yoy_pct": 50.71
+      },
+      {
+        "month": "2022-11",
+        "label": "Others",
+        "units": 2722,
+        "mom_pct": 58.07,
+        "yoy_pct": 49.89
+      },
+      {
+        "month": "2022-12",
+        "label": "HCV",
+        "units": 21269,
+        "mom_pct": 26.58,
+        "yoy_pct": 77.8
+      },
+      {
+        "month": "2022-12",
+        "label": "LCV",
+        "units": 38950,
+        "mom_pct": 4.19,
+        "yoy_pct": 8.74
+      },
+      {
+        "month": "2022-12",
+        "label": "MCV",
+        "units": 4018,
+        "mom_pct": -10.35,
+        "yoy_pct": 13.7
+      },
+      {
+        "month": "2022-12",
+        "label": "Others",
+        "units": 2708,
+        "mom_pct": 48.63,
+        "yoy_pct": 15.78
+      },
+      {
+        "month": "2024-03",
+        "label": "HCV",
+        "units": 30394,
+        "mom_pct": 7.51,
+        "yoy_pct": -12.83
+      },
+      {
+        "month": "2024-03",
+        "label": "LCV",
+        "units": 49332,
+        "mom_pct": 1.52,
+        "yoy_pct": -4.93
+      },
+      {
+        "month": "2024-03",
+        "label": "MCV",
+        "units": 6324,
+        "mom_pct": -2.01,
+        "yoy_pct": 0.51
+      },
+      {
+        "month": "2024-03",
+        "label": "Others",
+        "units": 5239,
+        "mom_pct": 3.78,
+        "yoy_pct": 33.24
+      },
+      {
+        "month": "2024-04",
+        "label": "HCV",
+        "units": 32191,
+        "mom_pct": 5.91,
+        "yoy_pct": -3.31
+      },
+      {
+        "month": "2024-04",
+        "label": "LCV",
+        "units": 47009,
+        "mom_pct": -4.71,
+        "yoy_pct": 4.02
+      },
+      {
+        "month": "2024-04",
+        "label": "MCV",
+        "units": 6704,
+        "mom_pct": 6.01,
+        "yoy_pct": 0.8
+      },
+      {
+        "month": "2024-04",
+        "label": "Others",
+        "units": 4803,
+        "mom_pct": -8.32,
+        "yoy_pct": 36.14
+      },
+      {
+        "month": "2024-05",
+        "label": "HCV",
+        "units": 26306,
+        "mom_pct": -18.28,
+        "yoy_pct": -3.23
+      },
+      {
+        "month": "2024-05",
+        "label": "LCV",
+        "units": 45712,
+        "mom_pct": -2.76,
+        "yoy_pct": 7.94
+      },
+      {
+        "month": "2024-05",
+        "label": "MCV",
+        "units": 6871,
+        "mom_pct": 2.49,
+        "yoy_pct": 10.31
+      },
+      {
+        "month": "2024-05",
+        "label": "Others",
+        "units": 4170,
+        "mom_pct": -13.18,
+        "yoy_pct": 3.14
+      },
+      {
+        "month": "2024-06",
+        "label": "HCV",
+        "units": 21546,
+        "mom_pct": -18.09,
+        "yoy_pct": -5.93
+      },
+      {
+        "month": "2024-06",
+        "label": "LCV",
+        "units": 40711,
+        "mom_pct": -10.94,
+        "yoy_pct": -6.46
+      },
+      {
+        "month": "2024-06",
+        "label": "MCV",
+        "units": 6872,
+        "mom_pct": 0.01,
+        "yoy_pct": 5.51
+      },
+      {
+        "month": "2024-06",
+        "label": "Others",
+        "units": 3618,
+        "mom_pct": -13.24,
+        "yoy_pct": 5.67
+      },
+      {
+        "month": "2024-07",
+        "label": "HCV",
+        "units": 24066,
+        "mom_pct": 11.7,
+        "yoy_pct": 11.8
+      },
+      {
+        "month": "2024-07",
+        "label": "LCV",
+        "units": 45336,
+        "mom_pct": 11.36,
+        "yoy_pct": 2.04
+      },
+      {
+        "month": "2024-07",
+        "label": "MCV",
+        "units": 7124,
+        "mom_pct": 3.67,
+        "yoy_pct": 9.45
+      },
+      {
+        "month": "2024-07",
+        "label": "Others",
+        "units": 3531,
+        "mom_pct": -2.4,
+        "yoy_pct": 13.5
+      },
+      {
+        "month": "2024-08",
+        "label": "HCV",
+        "units": 21221,
+        "mom_pct": -11.82,
+        "yoy_pct": -8.19
+      },
+      {
+        "month": "2024-08",
+        "label": "LCV",
+        "units": 42496,
+        "mom_pct": -6.26,
+        "yoy_pct": -6.1
+      },
+      {
+        "month": "2024-08",
+        "label": "MCV",
+        "units": 6137,
+        "mom_pct": -13.85,
+        "yoy_pct": -0.58
+      },
+      {
+        "month": "2024-08",
+        "label": "Others",
+        "units": 3399,
+        "mom_pct": -3.74,
+        "yoy_pct": -0.7
+      },
+      {
+        "month": "2024-09",
+        "label": "HCV",
+        "units": 22941,
+        "mom_pct": 8.11,
+        "yoy_pct": -11.71
+      },
+      {
+        "month": "2024-09",
+        "label": "LCV",
+        "units": 41715,
+        "mom_pct": -1.84,
+        "yoy_pct": -11.87
+      },
+      {
+        "month": "2024-09",
+        "label": "MCV",
+        "units": 6090,
+        "mom_pct": -0.77,
+        "yoy_pct": 4.01
+      },
+      {
+        "month": "2024-09",
+        "label": "Others",
+        "units": 3578,
+        "mom_pct": 5.27,
+        "yoy_pct": -6.34
+      },
+      {
+        "month": "2024-10",
+        "label": "HCV",
+        "units": 29525,
+        "mom_pct": 28.7,
+        "yoy_pct": -1.15
+      },
+      {
+        "month": "2024-10",
+        "label": "LCV",
+        "units": 56015,
+        "mom_pct": 34.28,
+        "yoy_pct": 9.11
+      },
+      {
+        "month": "2024-10",
+        "label": "MCV",
+        "units": 6557,
+        "mom_pct": 7.67,
+        "yoy_pct": 6.38
+      },
+      {
+        "month": "2024-10",
+        "label": "Others",
+        "units": 5314,
+        "mom_pct": 48.52,
+        "yoy_pct": 26.43
+      },
+      {
+        "month": "2024-11",
+        "label": "HCV",
+        "units": 24441,
+        "mom_pct": -17.22,
+        "yoy_pct": -11.56
+      },
+      {
+        "month": "2024-11",
+        "label": "LCV",
+        "units": 47530,
+        "mom_pct": -15.15,
+        "yoy_pct": -4.46
+      },
+      {
+        "month": "2024-11",
+        "label": "MCV",
+        "units": 5473,
+        "mom_pct": -16.53,
+        "yoy_pct": -0.05
+      },
+      {
+        "month": "2024-11",
+        "label": "Others",
+        "units": 4523,
+        "mom_pct": -14.89,
+        "yoy_pct": 2.56
+      },
+      {
+        "month": "2024-12",
+        "label": "HCV",
+        "units": 22781,
+        "mom_pct": -6.79,
+        "yoy_pct": -4.7
+      },
+      {
+        "month": "2024-12",
+        "label": "LCV",
+        "units": 39794,
+        "mom_pct": -16.28,
+        "yoy_pct": -7.05
+      },
+      {
+        "month": "2024-12",
+        "label": "MCV",
+        "units": 4662,
+        "mom_pct": -14.82,
+        "yoy_pct": -6.52
+      },
+      {
+        "month": "2024-12",
+        "label": "Others",
+        "units": 4791,
+        "mom_pct": 5.93,
+        "yoy_pct": 11.29
+      },
+      {
+        "month": "2025-01",
+        "label": "HCV",
+        "units": 30061,
+        "mom_pct": 31.96,
+        "yoy_pct": -0.53
+      },
+      {
+        "month": "2025-01",
+        "label": "LCV",
+        "units": 56410,
+        "mom_pct": 41.76,
+        "yoy_pct": 10.05
+      },
+      {
+        "month": "2025-01",
+        "label": "MCV",
+        "units": 6975,
+        "mom_pct": 49.61,
+        "yoy_pct": 24.87
+      },
+      {
+        "month": "2025-01",
+        "label": "Others",
+        "units": 5979,
+        "mom_pct": 24.8,
+        "yoy_pct": 24.28
+      },
+      {
+        "month": "2025-02",
+        "label": "HCV",
+        "units": 26094,
+        "mom_pct": -13.2,
+        "yoy_pct": -11.49
+      },
+      {
+        "month": "2025-02",
+        "label": "LCV",
+        "units": 45742,
+        "mom_pct": -18.91,
+        "yoy_pct": -7.35
+      },
+      {
+        "month": "2025-02",
+        "label": "MCV",
+        "units": 6212,
+        "mom_pct": -10.94,
+        "yoy_pct": -5.32
+      },
+      {
+        "month": "2025-02",
+        "label": "Others",
+        "units": 4715,
+        "mom_pct": -21.14,
+        "yoy_pct": -8.21
+      },
+      {
+        "month": "2025-03",
+        "label": "HCV",
+        "units": 29436,
+        "mom_pct": 12.81,
+        "yoy_pct": -4.87
+      },
+      {
+        "month": "2025-03",
+        "label": "LCV",
+        "units": 52380,
+        "mom_pct": 14.51,
+        "yoy_pct": 5.57
+      },
+      {
+        "month": "2025-03",
+        "label": "MCV",
+        "units": 7200,
+        "mom_pct": 15.9,
+        "yoy_pct": 12.43
+      },
+      {
+        "month": "2025-03",
+        "label": "Others",
+        "units": 5748,
+        "mom_pct": 21.91,
+        "yoy_pct": 7.86
+      },
+      {
+        "month": "2025-04",
+        "label": "HCV",
+        "units": 31657,
+        "mom_pct": 7.55,
+        "yoy_pct": -2.86
+      },
+      {
+        "month": "2025-04",
+        "label": "LCV",
+        "units": 46751,
+        "mom_pct": -10.75,
+        "yoy_pct": -1.09
+      },
+      {
+        "month": "2025-04",
+        "label": "MCV",
+        "units": 7638,
+        "mom_pct": 6.08,
+        "yoy_pct": 12.72
+      },
+      {
+        "month": "2025-04",
+        "label": "Others",
+        "units": 4512,
+        "mom_pct": -21.5,
+        "yoy_pct": -7.6
+      },
+      {
+        "month": "2025-05",
+        "label": "HCV",
+        "units": 24382,
+        "mom_pct": -22.18,
+        "yoy_pct": -7.06
+      },
+      {
+        "month": "2025-05",
+        "label": "LCV",
+        "units": 44419,
+        "mom_pct": -4.93,
+        "yoy_pct": -3.16
+      },
+      {
+        "month": "2025-05",
+        "label": "MCV",
+        "units": 6772,
+        "mom_pct": -4.47,
+        "yoy_pct": 6.49
+      },
+      {
+        "month": "2025-05",
+        "label": "Others",
+        "units": 42,
+        "mom_pct": -33.33,
+        "yoy_pct": -37.31
+      },
+      {
+        "month": "2025-06",
+        "label": "HCV",
+        "units": 21447,
+        "mom_pct": -12.04,
+        "yoy_pct": -0.12
+      },
+      {
+        "month": "2025-06",
+        "label": "LCV",
+        "units": 44469,
+        "mom_pct": 0.11,
+        "yoy_pct": 8.8
+      },
+      {
+        "month": "2025-06",
+        "label": "MCV",
+        "units": 7393,
+        "mom_pct": 9.17,
+        "yoy_pct": 15.21
+      },
+      {
+        "month": "2025-06",
+        "label": "Others",
+        "units": 58,
+        "mom_pct": 38.1,
+        "yoy_pct": -7.94
+      },
+      {
+        "month": "2025-07",
+        "label": "HCV",
+        "units": 23154,
+        "mom_pct": 7.96,
+        "yoy_pct": -3.17
+      },
+      {
+        "month": "2025-07",
+        "label": "LCV",
+        "units": 45808,
+        "mom_pct": 3.01,
+        "yoy_pct": 0.53
+      },
+      {
+        "month": "2025-07",
+        "label": "MCV",
+        "units": 7414,
+        "mom_pct": 0.28,
+        "yoy_pct": 10.46
+      },
+      {
+        "month": "2025-07",
+        "label": "Others",
+        "units": 63,
+        "mom_pct": 8.62,
+        "yoy_pct": -12.5
+      },
+      {
+        "month": "2025-08",
+        "label": "HCV",
+        "units": 22412,
+        "mom_pct": -3.2,
+        "yoy_pct": 5.92
+      },
+      {
+        "month": "2025-08",
+        "label": "LCV",
+        "units": 46156,
+        "mom_pct": 0.76,
+        "yoy_pct": 8.16
+      },
+      {
+        "month": "2025-08",
+        "label": "MCV",
+        "units": 6970,
+        "mom_pct": -5.99,
+        "yoy_pct": 21.39
+      },
+      {
+        "month": "2025-08",
+        "label": "Others",
+        "units": 54,
+        "mom_pct": -14.29,
+        "yoy_pct": -12.9
+      },
+      {
+        "month": "2025-09",
+        "label": "HCV",
+        "units": 21410,
+        "mom_pct": -4.47,
+        "yoy_pct": -5.66
+      },
+      {
+        "month": "2025-09",
+        "label": "LCV",
+        "units": 44392,
+        "mom_pct": -3.82,
+        "yoy_pct": 6.03
+      },
+      {
+        "month": "2025-09",
+        "label": "MCV",
+        "units": 6257,
+        "mom_pct": -10.23,
+        "yoy_pct": 11.65
+      },
+      {
+        "month": "2025-09",
+        "label": "Others",
+        "units": 65,
+        "mom_pct": 20.37,
+        "yoy_pct": -25.29
+      },
+      {
         "month": "2025-10",
         "label": "HCV",
         "units": 27685,
@@ -265,9 +853,688 @@
         "units": 56,
         "mom_pct": -1.75,
         "yoy_pct": -29.11
+      },
+      {
+        "month": "2026-04",
+        "label": "HCV",
+        "units": 34170,
+        "mom_pct": -1.74,
+        "yoy_pct": 8.25
+      },
+      {
+        "month": "2026-04",
+        "label": "LCV",
+        "units": 55949,
+        "mom_pct": -5.78,
+        "yoy_pct": 17.76
+      },
+      {
+        "month": "2026-04",
+        "label": "MCV",
+        "units": 9177,
+        "mom_pct": 10.22,
+        "yoy_pct": 27.07
+      },
+      {
+        "month": "2026-04",
+        "label": "Others",
+        "units": 43,
+        "mom_pct": -23.21,
+        "yoy_pct": -33.85
       }
     ],
     "3W": [
+      {
+        "month": "2022-11",
+        "label": "E-rickshaw goods",
+        "units": 1820,
+        "mom_pct": 75.17,
+        "yoy_pct": 161.87
+      },
+      {
+        "month": "2022-11",
+        "label": "E-rickshaw passenger",
+        "units": 33971,
+        "mom_pct": 112.88,
+        "yoy_pct": 354.4
+      },
+      {
+        "month": "2022-12",
+        "label": "E-rickshaw goods",
+        "units": 1805,
+        "mom_pct": 27.65,
+        "yoy_pct": 104.65
+      },
+      {
+        "month": "2022-12",
+        "label": "E-rickshaw passenger",
+        "units": 28860,
+        "mom_pct": 39.18,
+        "yoy_pct": 222.49
+      },
+      {
+        "month": "2024-03",
+        "label": "3W goods",
+        "units": 14433,
+        "mom_pct": 34.04,
+        "yoy_pct": 35.46
+      },
+      {
+        "month": "2024-03",
+        "label": "3W passenger",
+        "units": 48223,
+        "mom_pct": 11.98,
+        "yoy_pct": 25.07
+      },
+      {
+        "month": "2024-03",
+        "label": "3W personal",
+        "units": 101,
+        "mom_pct": 42.25,
+        "yoy_pct": 27.85
+      },
+      {
+        "month": "2024-03",
+        "label": "E-rickshaw goods",
+        "units": 5087,
+        "mom_pct": 14.7,
+        "yoy_pct": 58.28
+      },
+      {
+        "month": "2024-03",
+        "label": "E-rickshaw passenger",
+        "units": 37378,
+        "mom_pct": 2.18,
+        "yoy_pct": 0.12
+      },
+      {
+        "month": "2024-04",
+        "label": "3W goods",
+        "units": 9072,
+        "mom_pct": -37.14,
+        "yoy_pct": 11.35
+      },
+      {
+        "month": "2024-04",
+        "label": "3W passenger",
+        "units": 34938,
+        "mom_pct": -27.55,
+        "yoy_pct": 13.37
+      },
+      {
+        "month": "2024-04",
+        "label": "3W personal",
+        "units": 64,
+        "mom_pct": -36.63,
+        "yoy_pct": 18.52
+      },
+      {
+        "month": "2024-04",
+        "label": "E-rickshaw goods",
+        "units": 4223,
+        "mom_pct": -16.98,
+        "yoy_pct": 56.35
+      },
+      {
+        "month": "2024-04",
+        "label": "E-rickshaw passenger",
+        "units": 31808,
+        "mom_pct": -14.9,
+        "yoy_pct": 0.69
+      },
+      {
+        "month": "2024-05",
+        "label": "E-rickshaw goods",
+        "units": 5530,
+        "mom_pct": 30.95,
+        "yoy_pct": 76.9
+      },
+      {
+        "month": "2024-05",
+        "label": "E-rickshaw passenger",
+        "units": 39505,
+        "mom_pct": 24.2,
+        "yoy_pct": 7.92
+      },
+      {
+        "month": "2024-06",
+        "label": "3W goods",
+        "units": 8959,
+        "mom_pct": -9.75,
+        "yoy_pct": 3.35
+      },
+      {
+        "month": "2024-06",
+        "label": "3W passenger",
+        "units": 42690,
+        "mom_pct": -1.24,
+        "yoy_pct": 9.29
+      },
+      {
+        "month": "2024-06",
+        "label": "3W personal",
+        "units": 97,
+        "mom_pct": 22.78,
+        "yoy_pct": 29.33
+      },
+      {
+        "month": "2024-06",
+        "label": "E-rickshaw goods",
+        "units": 4612,
+        "mom_pct": -16.6,
+        "yoy_pct": 59.64
+      },
+      {
+        "month": "2024-06",
+        "label": "E-rickshaw passenger",
+        "units": 37963,
+        "mom_pct": -3.9,
+        "yoy_pct": -2.78
+      },
+      {
+        "month": "2024-07",
+        "label": "3W goods",
+        "units": 10187,
+        "mom_pct": 13.71,
+        "yoy_pct": 5.65
+      },
+      {
+        "month": "2024-07",
+        "label": "3W passenger",
+        "units": 50594,
+        "mom_pct": 18.51,
+        "yoy_pct": 20.84
+      },
+      {
+        "month": "2024-07",
+        "label": "3W personal",
+        "units": 83,
+        "mom_pct": -14.43,
+        "yoy_pct": 10.67
+      },
+      {
+        "month": "2024-07",
+        "label": "E-rickshaw goods",
+        "units": 5186,
+        "mom_pct": 12.45,
+        "yoy_pct": 86.68
+      },
+      {
+        "month": "2024-07",
+        "label": "E-rickshaw passenger",
+        "units": 44447,
+        "mom_pct": 17.08,
+        "yoy_pct": 2.11
+      },
+      {
+        "month": "2024-08",
+        "label": "3W goods",
+        "units": 8646,
+        "mom_pct": -15.13,
+        "yoy_pct": -10.61
+      },
+      {
+        "month": "2024-08",
+        "label": "3W passenger",
+        "units": 48005,
+        "mom_pct": -5.12,
+        "yoy_pct": 7.3
+      },
+      {
+        "month": "2024-08",
+        "label": "3W personal",
+        "units": 89,
+        "mom_pct": 7.23,
+        "yoy_pct": -11.0
+      },
+      {
+        "month": "2024-08",
+        "label": "E-rickshaw goods",
+        "units": 4392,
+        "mom_pct": -15.31,
+        "yoy_pct": 41.91
+      },
+      {
+        "month": "2024-08",
+        "label": "E-rickshaw passenger",
+        "units": 44346,
+        "mom_pct": -0.23,
+        "yoy_pct": -3.96
+      },
+      {
+        "month": "2024-09",
+        "label": "3W goods",
+        "units": 9108,
+        "mom_pct": 5.34,
+        "yoy_pct": -5.04
+      },
+      {
+        "month": "2024-09",
+        "label": "3W passenger",
+        "units": 48714,
+        "mom_pct": 1.48,
+        "yoy_pct": 4.98
+      },
+      {
+        "month": "2024-09",
+        "label": "3W personal",
+        "units": 90,
+        "mom_pct": 1.12,
+        "yoy_pct": 9.76
+      },
+      {
+        "month": "2024-09",
+        "label": "E-rickshaw goods",
+        "units": 4569,
+        "mom_pct": 4.03,
+        "yoy_pct": 50.39
+      },
+      {
+        "month": "2024-09",
+        "label": "E-rickshaw passenger",
+        "units": 44043,
+        "mom_pct": -0.68,
+        "yoy_pct": -5.71
+      },
+      {
+        "month": "2024-10",
+        "label": "3W goods",
+        "units": 12709,
+        "mom_pct": 39.54,
+        "yoy_pct": 15.98
+      },
+      {
+        "month": "2024-10",
+        "label": "3W passenger",
+        "units": 60169,
+        "mom_pct": 23.51,
+        "yoy_pct": 19.3
+      },
+      {
+        "month": "2024-10",
+        "label": "3W personal",
+        "units": 94,
+        "mom_pct": 4.44,
+        "yoy_pct": 42.42
+      },
+      {
+        "month": "2024-10",
+        "label": "E-rickshaw goods",
+        "units": 5892,
+        "mom_pct": 28.96,
+        "yoy_pct": 95.16
+      },
+      {
+        "month": "2024-10",
+        "label": "E-rickshaw passenger",
+        "units": 43982,
+        "mom_pct": -0.14,
+        "yoy_pct": -3.85
+      },
+      {
+        "month": "2024-11",
+        "label": "3W goods",
+        "units": 10940,
+        "mom_pct": -13.92,
+        "yoy_pct": 3.95
+      },
+      {
+        "month": "2024-11",
+        "label": "3W passenger",
+        "units": 51466,
+        "mom_pct": -14.46,
+        "yoy_pct": 6.3
+      },
+      {
+        "month": "2024-11",
+        "label": "3W personal",
+        "units": 117,
+        "mom_pct": 24.47,
+        "yoy_pct": 28.57
+      },
+      {
+        "month": "2024-11",
+        "label": "E-rickshaw goods",
+        "units": 5423,
+        "mom_pct": -7.96,
+        "yoy_pct": 70.11
+      },
+      {
+        "month": "2024-11",
+        "label": "E-rickshaw passenger",
+        "units": 40391,
+        "mom_pct": -8.16,
+        "yoy_pct": -3.18
+      },
+      {
+        "month": "2024-12",
+        "label": "3W goods",
+        "units": 9122,
+        "mom_pct": -16.62,
+        "yoy_pct": -4.44
+      },
+      {
+        "month": "2024-12",
+        "label": "3W passenger",
+        "units": 38031,
+        "mom_pct": -26.1,
+        "yoy_pct": -4.83
+      },
+      {
+        "month": "2024-12",
+        "label": "3W personal",
+        "units": 68,
+        "mom_pct": -41.88,
+        "yoy_pct": -19.05
+      },
+      {
+        "month": "2024-12",
+        "label": "E-rickshaw goods",
+        "units": 5826,
+        "mom_pct": 7.43,
+        "yoy_pct": 57.8
+      },
+      {
+        "month": "2024-12",
+        "label": "E-rickshaw passenger",
+        "units": 40845,
+        "mom_pct": 1.12,
+        "yoy_pct": -9.43
+      },
+      {
+        "month": "2025-01",
+        "label": "3W goods",
+        "units": 12036,
+        "mom_pct": 31.94,
+        "yoy_pct": 12.32
+      },
+      {
+        "month": "2025-01",
+        "label": "3W passenger",
+        "units": 50322,
+        "mom_pct": 32.32,
+        "yoy_pct": 11.55
+      },
+      {
+        "month": "2025-01",
+        "label": "3W personal",
+        "units": 85,
+        "mom_pct": 25.0,
+        "yoy_pct": 70.0
+      },
+      {
+        "month": "2025-01",
+        "label": "E-rickshaw goods",
+        "units": 5760,
+        "mom_pct": -1.13,
+        "yoy_pct": 53.85
+      },
+      {
+        "month": "2025-01",
+        "label": "E-rickshaw passenger",
+        "units": 38830,
+        "mom_pct": -4.93,
+        "yoy_pct": -4.21
+      },
+      {
+        "month": "2025-02",
+        "label": "E-rickshaw goods",
+        "units": 6401,
+        "mom_pct": 11.13,
+        "yoy_pct": 44.1
+      },
+      {
+        "month": "2025-02",
+        "label": "E-rickshaw passenger",
+        "units": 32361,
+        "mom_pct": -16.66,
+        "yoy_pct": -11.46
+      },
+      {
+        "month": "2025-03",
+        "label": "3W goods",
+        "units": 11001,
+        "mom_pct": 1.59,
+        "yoy_pct": -24.04
+      },
+      {
+        "month": "2025-03",
+        "label": "3W passenger",
+        "units": 44971,
+        "mom_pct": 1.01,
+        "yoy_pct": -6.93
+      },
+      {
+        "month": "2025-03",
+        "label": "3W personal",
+        "units": 85,
+        "mom_pct": 25.0,
+        "yoy_pct": -13.27
+      },
+      {
+        "month": "2025-03",
+        "label": "E-rickshaw goods",
+        "units": 7222,
+        "mom_pct": 12.83,
+        "yoy_pct": 41.77
+      },
+      {
+        "month": "2025-03",
+        "label": "E-rickshaw passenger",
+        "units": 36097,
+        "mom_pct": 11.54,
+        "yoy_pct": -3.38
+      },
+      {
+        "month": "2025-04",
+        "label": "3W goods",
+        "units": 10312,
+        "mom_pct": -6.26,
+        "yoy_pct": 13.57
+      },
+      {
+        "month": "2025-04",
+        "label": "3W passenger",
+        "units": 42321,
+        "mom_pct": -5.89,
+        "yoy_pct": 21.06
+      },
+      {
+        "month": "2025-04",
+        "label": "3W personal",
+        "units": 142,
+        "mom_pct": 67.06,
+        "yoy_pct": 129.03
+      },
+      {
+        "month": "2025-04",
+        "label": "E-rickshaw goods",
+        "units": 7463,
+        "mom_pct": 3.34,
+        "yoy_pct": 77.06
+      },
+      {
+        "month": "2025-04",
+        "label": "E-rickshaw passenger",
+        "units": 39528,
+        "mom_pct": 9.5,
+        "yoy_pct": 24.26
+      },
+      {
+        "month": "2025-05",
+        "label": "3W goods",
+        "units": 10272,
+        "mom_pct": -0.39,
+        "yoy_pct": 3.41
+      },
+      {
+        "month": "2025-05",
+        "label": "3W passenger",
+        "units": 45429,
+        "mom_pct": 7.34,
+        "yoy_pct": 5.09
+      },
+      {
+        "month": "2025-05",
+        "label": "3W personal",
+        "units": 140,
+        "mom_pct": -1.41,
+        "yoy_pct": 79.49
+      },
+      {
+        "month": "2025-05",
+        "label": "E-rickshaw goods",
+        "units": 7972,
+        "mom_pct": 6.82,
+        "yoy_pct": 44.08
+      },
+      {
+        "month": "2025-05",
+        "label": "E-rickshaw passenger",
+        "units": 40635,
+        "mom_pct": 2.8,
+        "yoy_pct": 2.87
+      },
+      {
+        "month": "2025-06",
+        "label": "3W goods",
+        "units": 9468,
+        "mom_pct": -7.83,
+        "yoy_pct": 5.55
+      },
+      {
+        "month": "2025-06",
+        "label": "3W passenger",
+        "units": 48848,
+        "mom_pct": 7.53,
+        "yoy_pct": 14.44
+      },
+      {
+        "month": "2025-06",
+        "label": "3W personal",
+        "units": 96,
+        "mom_pct": -31.43,
+        "yoy_pct": 1.05
+      },
+      {
+        "month": "2025-06",
+        "label": "E-rickshaw goods",
+        "units": 6846,
+        "mom_pct": -14.12,
+        "yoy_pct": 48.5
+      },
+      {
+        "month": "2025-06",
+        "label": "E-rickshaw passenger",
+        "units": 35367,
+        "mom_pct": -12.96,
+        "yoy_pct": -6.84
+      },
+      {
+        "month": "2025-07",
+        "label": "3W goods",
+        "units": 9862,
+        "mom_pct": 4.16,
+        "yoy_pct": -3.29
+      },
+      {
+        "month": "2025-07",
+        "label": "3W passenger",
+        "units": 54861,
+        "mom_pct": 12.31,
+        "yoy_pct": 8.44
+      },
+      {
+        "month": "2025-07",
+        "label": "3W personal",
+        "units": 92,
+        "mom_pct": -4.17,
+        "yoy_pct": 26.03
+      },
+      {
+        "month": "2025-07",
+        "label": "E-rickshaw goods",
+        "units": 6813,
+        "mom_pct": -0.48,
+        "yoy_pct": 31.37
+      },
+      {
+        "month": "2025-07",
+        "label": "E-rickshaw passenger",
+        "units": 39798,
+        "mom_pct": 12.53,
+        "yoy_pct": -10.49
+      },
+      {
+        "month": "2025-08",
+        "label": "3W goods",
+        "units": 9697,
+        "mom_pct": -1.67,
+        "yoy_pct": 12.09
+      },
+      {
+        "month": "2025-08",
+        "label": "3W passenger",
+        "units": 50100,
+        "mom_pct": -8.68,
+        "yoy_pct": 4.35
+      },
+      {
+        "month": "2025-08",
+        "label": "3W personal",
+        "units": 126,
+        "mom_pct": 36.96,
+        "yoy_pct": 43.18
+      },
+      {
+        "month": "2025-08",
+        "label": "E-rickshaw goods",
+        "units": 6213,
+        "mom_pct": -8.81,
+        "yoy_pct": 41.33
+      },
+      {
+        "month": "2025-08",
+        "label": "E-rickshaw passenger",
+        "units": 36969,
+        "mom_pct": -7.11,
+        "yoy_pct": -16.64
+      },
+      {
+        "month": "2025-09",
+        "label": "3W goods",
+        "units": 9569,
+        "mom_pct": -1.32,
+        "yoy_pct": 4.97
+      },
+      {
+        "month": "2025-09",
+        "label": "3W passenger",
+        "units": 49045,
+        "mom_pct": -2.11,
+        "yoy_pct": 0.67
+      },
+      {
+        "month": "2025-09",
+        "label": "3W personal",
+        "units": 138,
+        "mom_pct": 9.52,
+        "yoy_pct": 58.62
+      },
+      {
+        "month": "2025-09",
+        "label": "E-rickshaw goods",
+        "units": 6031,
+        "mom_pct": -2.93,
+        "yoy_pct": 31.97
+      },
+      {
+        "month": "2025-09",
+        "label": "E-rickshaw passenger",
+        "units": 34083,
+        "mom_pct": -7.81,
+        "yoy_pct": -22.62
+      },
       {
         "month": "2025-10",
         "label": "3W goods",
@@ -470,15 +1737,129 @@
         "units": 28946,
         "mom_pct": -16.94,
         "yoy_pct": -19.73
+      },
+      {
+        "month": "2026-04",
+        "label": "3W goods",
+        "units": 13133,
+        "mom_pct": -6.23,
+        "yoy_pct": 27.23
+      },
+      {
+        "month": "2026-04",
+        "label": "3W passenger",
+        "units": 57767,
+        "mom_pct": -2.56,
+        "yoy_pct": 36.48
+      },
+      {
+        "month": "2026-04",
+        "label": "3W personal",
+        "units": 112,
+        "mom_pct": -4.27,
+        "yoy_pct": -21.13
+      },
+      {
+        "month": "2026-04",
+        "label": "E-rickshaw goods",
+        "units": 7742,
+        "mom_pct": 4.27,
+        "yoy_pct": 3.96
+      },
+      {
+        "month": "2026-04",
+        "label": "E-rickshaw passenger",
+        "units": 28154,
+        "mom_pct": -2.74,
+        "yoy_pct": -28.73
       }
     ]
   },
   "sources": {
-    "2025-10": "https://fada.in/images/press-release/1690d68d7a2e6cFADA%20releases%20October%202025%20%26%2042-Days%20Festive%20Vehicle%20Retail%20Data.pdf",
-    "2025-11": "https://fada.in/images/press-release/1693661428b2e7FADA%20releases%20November%202025%20Vehicle%20Retail%20Data.pdf",
-    "2025-12": "https://fada.in/images/press-release/1695cc82c07602FADA%20releases%20CY%202025%20and%20December%202025%20Vehicle%20Retail%20Data.pdf",
-    "2026-01": "https://fada.in/images/press-release/1698aa6afacdf0FADA%20releases%20January%202026%20Vehicle%20Retail%20Data.pdf",
-    "2026-02": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-    "2026-03": "https://www.fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf"
+    "2025-10": "1690d68d7a2e6cFADA releases October 2025 & 42-Days Festive Vehicle Retail Data.pdf",
+    "2025-11": "1693661428b2e7FADA releases November 2025 Vehicle Retail Data.pdf",
+    "2025-12": "1695cc82c07602FADA releases CY 2025 and December 2025 Vehicle Retail Data.pdf",
+    "2026-01": "1698aa6afacdf0FADA releases January 2026 Vehicle Retail Data.pdf",
+    "2026-02": "169a8f8bd834feFADA releases February 2026 Vehicle Retail Data.pdf",
+    "2026-03": "169d329fc83770FADA releases FY 2026 and March 2026 Vehicle Retail Data.pdf",
+    "2025-03": "167f3463b1a212FADA Releases FY 2025 and March 2025 Vehicle Retail Data.pdf",
+    "2018-12": "160c47841d656dPR_Dec_2018.pdf",
+    "2019-01": "160c47538ddecfRetail_Sales_Data_Jan_2019.pdf",
+    "2019-02": "160c474eeaaab0PR_Feb_19_Vehicle_Registration_Data.pdf",
+    "2019-03": "160c474ae603baAutomobile Retail Sales Data for March 2019.pdf",
+    "2019-04": "160c4741a8033cAutomobile_Retail_Sales_Data_for_April_2019.pdf",
+    "2019-05": "160c47402529d7Automobile Retail Sales Data for May 2019.pdf",
+    "2019-06": "160c472eabbcc5Retail Sales Data for June 2019.pdf",
+    "2019-07": "160c4729c7e9d6Automobile Retail Sales Data for July 2019.pdf",
+    "2019-09": "160c4718ad2268Automobile Retail Sales Data for September 2019.pdf",
+    "2019-10": "160c470c8bc9caAutomobile Retail Sales Data for October 2019.pdf",
+    "2019-11": "160c4707e6a6ceAutomobile Retail Sales Data for November 2019.pdf",
+    "2019-12": "160c4702d0cea3Automobile Retail Sales Data for December 2019.pdf",
+    "2020-01": "160c46fcdd8be4Automobile Retail Sales - January 2020.pdf",
+    "2020-02": "160c46fb2f366cAutomobile Retail Sales Data for February 2020.pdf",
+    "2020-05": "160c46f472e29dAutomobile Retail Sales Data for May 2020.pdf",
+    "2020-06": "160c46e07da6fdAutomobile Retail Sales Data for June 2020.pdf",
+    "2020-07": "160c46de4b638bAutomobile Retail Sales Data for July 2020.pdf",
+    "2020-08": "160c46d7daf5c8Automobile Retail Sales Data for August 2020.pdf",
+    "2020-09": "160694a1f380aeAutomobile Retail Sales Data for September 2020.pdf",
+    "2020-10": "160694a8b95101Automobile Retail Sales Data for October 2020.pdf",
+    "2020-11": "160694ad330ae0Automobile Retail Sales Data for November 2020.pdf",
+    "2020-12": "160694b5adcb02Automobile_Retail_Sales_Data_for_Dec_2020.pdf",
+    "2021-01": "160694bc506748Automobile Retail Sales Data for January 2021.pdf",
+    "2021-02": "160ab48191ba8eAutomobile Retail Sales Data for February 2021.pdf",
+    "2021-03": "160ab483f0c0e7Automobile Retail Sales Data for March 2021.pdf",
+    "2021-04": "160ab497d50cd6FADA Releases FY20-21 & April 21 Vehicle Registration Data.pdf",
+    "2021-05": "160c187f005d7eFADA releases May 2021 Vehicle Retail Data.pdf",
+    "2021-06": "160e672556b96fFADA_releases_June_2021_Vehicle_Retail_Data.pdf",
+    "2021-07": "161109ff1cd17aFADA releases July 2021 Vehicle Retail Data.pdf",
+    "2021-08": "16136dce05fe1bFADA releases August 2021 Vehicle Retail Data.pdf",
+    "2021-09": "1615e8d102e816FADA Press Release - FADA releases September'21 Vehicle Retail Data.pdf",
+    "2021-10": "16195c82d4d9b4FADA releases October 2021 and 42 Days Festive Period Vehicle Retail Data.pdf",
+    "2021-11": "161b0274270644FADA releases November 2021 Vehicle Retail Data.pdf",
+    "2021-12": "161d510bfbc9d6FADA releases December 2021 Vehicle Retail Data.pdf",
+    "2022-01": "1620091addc405FADA releases January 2022 Vehicle Retail Data.pdf",
+    "2022-02": "1622186956779dFADA releases February 2022 Vehicle Retail Data.pdf",
+    "2022-03": "1624be480319abFADA Releases March22 and FY22 Vehicle Retail Data.pdf",
+    "2022-04": "162735070afcdaFADA Releases April'22 Vehicle Retail Data.pdf",
+    "2022-05": "1629d74a874db7FADA Releases May22 Vehicle Retail Data.pdf",
+    "2022-06": "162c3b03b6f373FADA Releases Jun'22 Vehicle Retail Data.pdf",
+    "2022-07": "162eb3e4a3291dFADA Releases July'22 Vehicle Retail Data.pdf",
+    "2022-08": "1631961c57f5a9FADA Releases Aug'22 Vehicle Retail Data.pdf",
+    "2022-09": "1633bbf4bd8658FADA Releases September'22 Vehicle Retail Data.pdf",
+    "2022-10": "163687bcc1bcafFADA Releases October22 & 42 Days Festive Period Vehicle Retail Data.pdf",
+    "2022-11": "16392ab5f7da10FADA Releases November'22 Vehicle Retail Data.pdf",
+    "2022-12": "163b643cb3ee01FADA Releases December'22 & CY'22 Vehicle Retail Data.pdf",
+    "2023-02": "164055e69c3f8dFADA Releases February'23 Vehicle Retail Data.pdf",
+    "2023-03": "1642fe78e86f4cFADA Press Release - FADA releases Mar'23 & FY'23 Vehicle Retail Data_final.pdf",
+    "2023-04": "1645339b5389cbFADA Releases April 2023 Vehicle Retail Data.pdf",
+    "2023-05": "1647d5679e36c3FADA Releases May 2023 Vehicle Retail Data.pdf",
+    "2023-06": "164a63562b4002FADA Releases June 2023 Vehicle Retail Data.pdf",
+    "2023-07": "164d06efcee1d8FADA Releases July 2023 Vehicle Retail Data.pdf",
+    "2023-08": "164f6a5ee4ada1FADA releases August 2023 Vehicle Retail Data.pdf",
+    "2023-09": "165237130d355aFADA Releases September 2023 Vehicle Retail Data.pdf",
+    "2023-10": "165485d8f4423bFADA Releases October 2023 Vehicle Retail Data.pdf",
+    "2023-11": "165707ec862f3dFADA Releases November 2023 Vehicle Retail Data.pdf",
+    "2023-12": "1659b6bf5b5962FADA Releases December 2023 and CY 2023 Vehicle Retail Data (1).pdf",
+    "2024-01": "165cae1dbb99acFADA Releases January 2024 Vehicle Retail Data.pdf",
+    "2024-02": "165e93530ae2c9FADA releases February 2024 Vehicle Retail Data.pdf",
+    "2024-03": "16613636250c94FADA releases March 2024 and FY 2024 Vehicle Retail Data.pdf",
+    "2024-04": "1663af19a1dcbdFADA releases April 2024 Vehicle Retail Data.pdf",
+    "2024-05": "16666733b69de8FADA_releases_May_2024_Vehicle_Retail_Data.pdf",
+    "2024-06": "1668768a35fb67FADA releases June 2024 Vehicle Retail Data.pdf",
+    "2024-07": "166b046f6d37ffFADA releases July 2024 Vehicle Retail Data.pdf",
+    "2024-08": "166d925182828bFADA releases August 2024 Vehicle Retail Data.pdf",
+    "2024-09": "16703bd0a727fbFADA releases September 2024 Vehicle Retail Data.pdf",
+    "2024-10": "1672ae22942b7fFADA releases October 2024 Vehicle Retail Data.pdf",
+    "2024-11": "167566418d08beFADA releases November 2024 Vehicle Retail Data.pdf",
+    "2024-12": "1677c9fa734b0cFADA releases CY 2024 and December 2024 Vehicle Retail Data.pdf",
+    "2025-01": "167a42affa6ff9FADA releases January 2025 Vehicle Retail Data.pdf",
+    "2025-02": "167c94f2acd830FADA releases February 2025 Vehicle Retail Data.pdf",
+    "2025-04": "168189154668a8FADA releases April 2025 Vehicle Retail Data.pdf",
+    "2025-05": "1684260cc6aca5FADA releases May 2025 Vehicle Retail Data.pdf",
+    "2025-06": "1686b40981c6d0FADA releases June 2025 Vehicle Retail Data.pdf",
+    "2025-07": "168941dda798bcFADA releases July 2025 Vehicle Retail Data.pdf",
+    "2025-08": "168be66c36b877FADA releases August 2025 Vehicle Retail Data.pdf",
+    "2025-09": "168e48945da69dFADA releases September 2025 and Navratri Vehicle Retail Data.pdf",
+    "2026-04": "169f9644078df6FADA Releases April 2026 Vehicle Retail Data.pdf"
   }
 }
