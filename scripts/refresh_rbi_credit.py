@@ -46,6 +46,7 @@ import calendar
 import json
 import re
 import sys
+import time
 from datetime import date, datetime, timedelta
 from io import BytesIO
 from pathlib import Path
@@ -88,18 +89,55 @@ MAX_NEW_ATTEMPTS_PER_RUN = 12
 # without burning HEAD-request budget every tick.
 NEGATIVE_CACHE_TTL_DAYS = 90
 TIMEOUT = 60
+# Throttle fetches so RBI's Cloudflare WAF doesn't rate-limit us with
+# 418 ("I'm a teapot" — Cloudflare's polite "you look like a bot" reply).
+# Earlier runs fired ~500 GETs in a couple minutes and tripped this; a
+# 0.5s gap brings us under any reasonable per-IP threshold while still
+# letting a 12-month batch finish in <5 min.
+REQUEST_DELAY_SECONDS = 0.5
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
     ),
+    # Browser-realistic Accept chain so the WAF's bot heuristics are happier.
     "Accept": (
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,"
-        "application/vnd.ms-excel,*/*;q=0.8"
+        "application/vnd.ms-excel;q=0.9,application/octet-stream;q=0.8,*/*;q=0.5"
     ),
     "Accept-Language": "en-IN,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
     "Referer": "https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx",
+    # Sec-Fetch-* are sent by every modern browser. Their absence is a
+    # strong "this is a bot" signal to most WAFs.
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    "DNT": "1",
 }
+
+# Module-level session so cookies (Cloudflare's __cf_bm session token in
+# particular) persist across all GETs in one CI run. Without this, every
+# request looks like a brand-new client and gets re-challenged.
+_session: requests.Session | None = None
+
+
+def _get_session() -> requests.Session:
+    global _session
+    if _session is None:
+        _session = requests.Session()
+        _session.headers.update(HEADERS)
+        # Warm the session by visiting the listing page once. This lets
+        # Cloudflare set its session cookie before we start hammering the
+        # Excel URLs, which dramatically reduces 418 rate.
+        try:
+            _session.get(LISTING_URL, timeout=TIMEOUT, allow_redirects=True)
+        except Exception:
+            pass
+    return _session
 
 
 def _candidate_publication_dates(reference_month: str) -> list[date]:
@@ -168,15 +206,24 @@ def _target_months(today: date | None = None) -> list[str]:
 
 
 def _try_fetch_excel(url: str) -> bytes | None:
-    """Single GET attempt. Returns bytes only when the response is a
-    valid OOXML zip (PK magic). Suppresses 404 noise — RBI returns 404
-    for every wrong-date guess and we make many of those by design."""
+    """Single GET attempt via the shared session. Returns bytes only when
+    the response is a valid OOXML zip (PK magic). Suppresses 404 noise —
+    RBI returns 404 for every wrong-date guess and we make many of those
+    by design. Throttles each request by REQUEST_DELAY_SECONDS so we
+    don't trip RBI's Cloudflare rate limit (which signals as HTTP 418)."""
+    session = _get_session()
+    time.sleep(REQUEST_DELAY_SECONDS)
     try:
-        response = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
+        response = session.get(url, timeout=TIMEOUT, allow_redirects=True)
     except Exception as exc:
         print(f"    {url}: connection error ({exc})", flush=True)
         return None
     if response.status_code == 404:
+        return None
+    if response.status_code == 418:
+        # Cloudflare bot challenge — back off harder so we don't escalate.
+        print(f"    {url}: HTTP 418 (bot challenge); backing off 3s", flush=True)
+        time.sleep(3.0)
         return None
     if response.status_code != 200:
         print(f"    {url}: HTTP {response.status_code}", flush=True)
