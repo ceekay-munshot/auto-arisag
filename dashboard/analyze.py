@@ -327,13 +327,30 @@ def build_retail_module(
     for item in fada["ev_share_series"]:
         ev_share_lookup[(item["month"], item["category"])] = item["ev_share_pct"]
 
+    # Only keep months where the fuel-mix annexure was actually parsed —
+    # otherwise the chart flatlines at 0 across years of pre-2024 history
+    # (no fuel-mix in older PDFs) and any month where the parser missed.
+    # Distinguishing "0% EV share" from "no data" matters: prior approach
+    # treated missing as 0%, which read as a fictitious 0-unit print.
     ev_penetration_series: list[dict[str, Any]] = []
     for point in months:
-        ev_units_total = 0.0
+        ev_units_total = 0
         by_category: list[dict[str, Any]] = []
+        any_real_category = False
         for category in ["2W", "3W", "PV", "CV"]:
             units = next(item["units"] for item in point["categories"] if item["category"] == category)
-            share_pct = ev_share_lookup.get((point["month"], category), 0.0)
+            share_pct = ev_share_lookup.get((point["month"], category))
+            if share_pct is None:
+                by_category.append(
+                    {
+                        "category": category,
+                        "label": CATEGORY_LABELS[category],
+                        "ev_share_pct": None,
+                        "ev_units": None,
+                    }
+                )
+                continue
+            any_real_category = True
             ev_units = round(units * share_pct / 100)
             ev_units_total += ev_units
             by_category.append(
@@ -344,6 +361,11 @@ def build_retail_module(
                     "ev_units": ev_units,
                 }
             )
+
+        # Skip months where no category had a parsed EV share — they would
+        # render as a 0-unit point on the trend chart, which is misleading.
+        if not any_real_category:
+            continue
 
         overall_pct = round(ev_units_total / point["total_units"] * 100, 2) if point["total_units"] else 0.0
         ev_penetration_series.append(

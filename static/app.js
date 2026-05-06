@@ -3270,13 +3270,26 @@ function renderEvOemTracker() {
 }
 
 function buildEvTrendPoints(categoryId, period) {
-  const monthlyPoints = asArray(dashboardData.modules.retail?.ev_penetration_series).map((item) => ({
-    month: item.month,
-    label: item.label,
-    units: categoryId === "TOTAL"
-      ? Number(item.overall_ev_units || 0)
-      : Number(asArray(item.by_category).find((entry) => entry.category === categoryId)?.ev_units || 0),
-  }));
+  // Preserve null when a specific category has no fuel-mix data for a
+  // month — Number(... || 0) would have collapsed null/undefined to 0
+  // and dragged the line to zero on incomplete months. We then filter
+  // those nulls out so the chart only plots real data.
+  const monthlyPoints = asArray(dashboardData.modules.retail?.ev_penetration_series)
+    .map((item) => {
+      let units;
+      if (categoryId === "TOTAL") {
+        units = item.overall_ev_units;
+      } else {
+        const entry = asArray(item.by_category).find((e) => e.category === categoryId);
+        units = entry ? entry.ev_units : null;
+      }
+      return {
+        month: item.month,
+        label: item.label,
+        units: units === null || units === undefined ? null : Number(units),
+      };
+    })
+    .filter((p) => p.units !== null);
 
   if (period === "M") {
     return monthlyPoints;
