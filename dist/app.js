@@ -1889,6 +1889,7 @@ function render() {
            <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
          </div>`,
     renderCreditPulseExplainerModal(),
+    renderExplainModal(),
   ].join("");
 
   setupFilters();
@@ -1914,6 +1915,7 @@ function render() {
   setupDownloads();
   setupChartTooltips();
   setupCreditPulseExplainer();
+  setupExplainModal();
   setupMarketInsightsRibbon();
   setupExplainerTooltips();
   setupSearchBar();
@@ -2724,6 +2726,7 @@ function renderCategoryMixShift(retail, allowed) {
           <h3>How the retail mix is moving — each category's share of total volume</h3>
         </div>
         <div class="button-row">
+          ${renderExplainButton("mix-shift")}
           ${renderSourceAction(retail.source_meta.url)}
           ${renderDownloadIcon("category-mix-shift")}
         </div>
@@ -5746,6 +5749,7 @@ function renderStockVsRetailDivergence() {
           <h2>Where does the share price sit relative to the demand fundamental?</h2>
         </div>
         <div class="button-row">
+          ${renderExplainButton("stock-vs-retail")}
           ${renderDownloadIcon("stock-retail-divergence")}
         </div>
       </div>
@@ -6987,6 +6991,291 @@ function renderCreditPulseSection() {
   `;
 }
 
+// ────────────────────────────────────────────────────────────────────────
+// Explain-this-chart modals
+//
+// Click the "✨ Explain" button on a chart card → opens a modal that
+// reads the chart's live data and produces a structured narrative:
+//   • What this is        — definition, plain English
+//   • Right now           — bullet readouts of the actual numbers
+//   • Why it matters      — investor angle
+//   • Watch for next      — what would change the read
+//
+// Every generator pulls from dashboardData at render time, so the
+// explanations always match what's on screen — no hardcoded numbers.
+// ────────────────────────────────────────────────────────────────────────
+
+function renderExplainButton(key) {
+  return `<button type="button" class="explain-btn" data-explain-open="${key}" title="Explain this chart in plain English">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3v3M5.5 5.5l2.1 2.1M3 12h3M5.5 18.5l2.1-2.1M12 18v3M16.4 16.4l2.1 2.1M18 12h3M16.4 7.6l2.1-2.1"/>
+      <circle cx="12" cy="12" r="3.5"/>
+    </svg>
+    <span>Explain</span>
+  </button>`;
+}
+
+function renderExplainModal() {
+  if (!state.explainOpen) return "";
+  const generator = EXPLAIN_REGISTRY[state.explainOpen];
+  if (!generator) return "";
+  let body;
+  try {
+    body = generator();
+  } catch (err) {
+    body = `<p class="explain-fallback">Couldn't build a fresh explanation right now (${(err && err.message) || "data not ready"}). Try refreshing the page.</p>`;
+  }
+  return `
+    <div class="explain-overlay" data-explain-close>
+      <div class="explain-modal" role="dialog" aria-modal="true">
+        <button class="explain-modal-close" data-explain-close-btn aria-label="Close">×</button>
+        ${body}
+      </div>
+    </div>
+  `;
+}
+
+function setupExplainModal() {
+  document.querySelectorAll("[data-explain-open]").forEach((node) => {
+    node.addEventListener("click", (e) => {
+      e.stopPropagation();
+      state.explainOpen = node.getAttribute("data-explain-open");
+      render();
+    });
+  });
+  document.querySelectorAll("[data-explain-close]").forEach((node) => {
+    node.addEventListener("click", (e) => {
+      if (e.target === node) {
+        state.explainOpen = null;
+        render();
+      }
+    });
+  });
+  document.querySelectorAll("[data-explain-close-btn]").forEach((node) => {
+    node.addEventListener("click", () => {
+      state.explainOpen = null;
+      render();
+    });
+  });
+  if (state.explainOpen && !window.__explainEscBound) {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && state.explainOpen) {
+        state.explainOpen = null;
+        render();
+      }
+    });
+    window.__explainEscBound = true;
+  }
+}
+
+// Helper: format a percentage with sign + 1dp.
+function _fmtPct1(v) {
+  if (v == null || Number.isNaN(Number(v))) return "n.m.";
+  const n = Number(v);
+  return `${n >= 0 ? "+" : ""}${n.toFixed(1)}%`;
+}
+function _fmtPp(v) {
+  if (v == null || Number.isNaN(Number(v))) return "n.m.";
+  const n = Number(v);
+  return `${n >= 0 ? "+" : ""}${n.toFixed(2)}pp`;
+}
+
+const EXPLAIN_REGISTRY = {
+  "stock-vs-retail": explainStockVsRetail,
+  "mix-shift": explainMixShift,
+};
+
+// ──────────────────────── Stock vs Operating Divergence ────────────────
+function explainStockVsRetail() {
+  const stocks = (dashboardData.oem_stocks || {}).stocks || {};
+  const tables = dashboardData.modules.retail?.latest_oem_tables || {};
+
+  // Mirror the same join logic as the chart so explanation matches dots.
+  const oemBestYoy = {};
+  for (const [cat, table] of Object.entries(tables)) {
+    const rows = (table.periods?.M?.rows) || table.rows || [];
+    for (const row of rows) {
+      const oem = row.oem;
+      const yoy = row.yoy_pct ?? row.unit_growth_pct;
+      const units = Number(row.current_units || row.units || 0);
+      if (!oem || yoy == null || Number.isNaN(Number(yoy))) continue;
+      const ex = oemBestYoy[oem];
+      if (!ex || units > ex.units) {
+        oemBestYoy[oem] = { yoy: Number(yoy), cat, units };
+      }
+    }
+  }
+  const aliasReverse = {};
+  for (const [oem, company] of Object.entries(OEM_TO_COMPANY_ALIASES)) {
+    if (!aliasReverse[company]) aliasReverse[company] = [];
+    aliasReverse[company].push(oem);
+  }
+  const points = [];
+  for (const [company, stock] of Object.entries(stocks)) {
+    if (stock?.change_1m_pct == null) continue;
+    let m = oemBestYoy[company];
+    if (!m) {
+      for (const alias of aliasReverse[company] || []) {
+        if (oemBestYoy[alias]) { m = oemBestYoy[alias]; break; }
+      }
+    }
+    if (!m) continue;
+    points.push({
+      company,
+      stock_1m: Number(stock.change_1m_pct),
+      retail_yoy: m.yoy,
+      cat: m.cat,
+    });
+  }
+
+  const mispriced = points.filter((p) => p.retail_yoy > 0 && p.stock_1m < 0)
+    .sort((a, b) => b.retail_yoy - a.retail_yoy);
+  const runningAhead = points.filter((p) => p.retail_yoy < 0 && p.stock_1m > 0)
+    .sort((a, b) => b.stock_1m - a.stock_1m);
+  const momentum = points.filter((p) => p.retail_yoy > 0 && p.stock_1m > 0)
+    .sort((a, b) => b.retail_yoy - a.retail_yoy)
+    .slice(0, 3);
+  const struggling = points.filter((p) => p.retail_yoy < 0 && p.stock_1m < 0)
+    .sort((a, b) => a.retail_yoy - b.retail_yoy);
+
+  const renderQuadCard = (title, list, tone, hint) => `
+    <article class="explain-quad-card explain-tone-${tone}">
+      <header>
+        <span class="explain-quad-name">${title}</span>
+        <span class="explain-quad-count">${list.length}</span>
+      </header>
+      ${list.length ? `
+        <ul>${list.slice(0, 5).map((p) => `
+          <li>
+            <span class="explain-name">${p.company}</span>
+            <span class="explain-numbers">
+              <span class="explain-mini stock-tone-${p.stock_1m >= 0 ? "positive" : "negative"}">stock ${_fmtPct1(p.stock_1m)}</span>
+              <span class="explain-mini stock-tone-${p.retail_yoy >= 0 ? "positive" : "negative"}">retail ${_fmtPct1(p.retail_yoy)}</span>
+            </span>
+          </li>
+        `).join("")}</ul>
+      ` : `<p class="explain-empty">No names in this quadrant right now.</p>`}
+      <footer>${hint}</footer>
+    </article>
+  `;
+
+  return `
+    <header class="explain-header">
+      <span class="explain-eyebrow">✨ Explain</span>
+      <h2>Stock vs Operating Divergence</h2>
+      <p class="explain-subtitle">Plain-English read of where each listed OEM sits, using the live numbers on the chart.</p>
+    </header>
+
+    <section class="explain-section">
+      <h3>What this chart is</h3>
+      <p>Every dot is a listed Indian auto OEM. The <strong>x-axis is its 1-month stock return</strong> on NSE; the <strong>y-axis is its latest FADA monthly retail YoY</strong> for whichever segment that OEM sells most of (its largest exposure). The four quadrants highlight where stock price and demand fundamentals are saying different things.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Right now (${points.length} OEMs plotted)</h3>
+      <div class="explain-quad-grid">
+        ${renderQuadCard("Mispriced upside", mispriced, "positive", "Stock flat or down despite strong retail demand. Watch for re-rating.")}
+        ${renderQuadCard("Stock running ahead", runningAhead, "negative", "Stock up despite weak retail print. Risk of pullback if next print disappoints.")}
+        ${renderQuadCard("Momentum (top 3)", momentum, "neutral", "Both stock and retail are working — confirmation, not a turning point.")}
+        ${renderQuadCard("Fundamentals confirming", struggling, "neutral", "Both falling. Already priced in — no edge.")}
+      </div>
+    </section>
+
+    <section class="explain-section">
+      <h3>Why this matters for an investor</h3>
+      <p>Stock prices move daily; retail prints land monthly. When they diverge — a stock falling while retail is accelerating, or vice-versa — you're often looking at a turning point the market hasn't recognised yet. The <strong>top-left quadrant is where the alpha lives</strong>: names where the next monthly print could trigger a re-rating. The bottom-right is where you trim exposure before the disappointment.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Watch for next print</h3>
+      ${mispriced.length ? `
+        <p>If <strong>${mispriced[0].company}</strong> posts another retail YoY print above ${_fmtPct1(mispriced[0].retail_yoy)} (in <strong>${mispriced[0].cat}</strong>), expect the market to start closing the gap with the operating data. Stock currently at ${_fmtPct1(mispriced[0].stock_1m)} 1M.</p>
+      ` : `<p>No "mispriced upside" names today — every OEM with strong retail growth has already been bid up. The setup is clean momentum, not a divergence trade.</p>`}
+      ${runningAhead.length ? `
+        <p><strong>${runningAhead[0].company}</strong> has stock up ${_fmtPct1(runningAhead[0].stock_1m)} despite retail down ${_fmtPct1(runningAhead[0].retail_yoy)} — the burden of proof is on the next print.</p>
+      ` : ""}
+    </section>
+  `;
+}
+
+// ──────────────────────── Mix Shift ────────────────────────────────────
+function explainMixShift() {
+  const retail = dashboardData.modules.retail || {};
+  const months = (retail.months || []).slice(-12);
+  if (months.length < 3) {
+    return `<p class="explain-fallback">Need at least 3 months of retail history for a mix-shift read.</p>`;
+  }
+  const cats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"];
+  const labelMap = {
+    PV: "Passenger Vehicles", "2W": "Two-Wheelers", "3W": "Three-Wheelers",
+    CV: "Commercial Vehicles", TRACTOR: "Tractors", CE: "Construction Equipment",
+  };
+  const first = months[0];
+  const latest = months[months.length - 1];
+  const deltas = cats.map((c) => {
+    const f = (first.categories || []).find((x) => x.category === c)?.share_pct;
+    const l = (latest.categories || []).find((x) => x.category === c)?.share_pct;
+    if (f == null || l == null) return null;
+    return { cat: c, label: labelMap[c], first: f, latest: l, delta: l - f };
+  }).filter(Boolean);
+  const gainers = [...deltas].sort((a, b) => b.delta - a.delta).filter((d) => d.delta > 0.05);
+  const losers = [...deltas].sort((a, b) => a.delta - b.delta).filter((d) => d.delta < -0.05);
+  const topGainer = gainers[0];
+  const topLoser = losers[0];
+
+  const renderRow = (d) => `
+    <li class="explain-mix-row">
+      <span class="explain-name">${d.label}</span>
+      <span class="explain-numbers">
+        <span class="explain-mini">${d.first.toFixed(1)}% → <strong>${d.latest.toFixed(1)}%</strong></span>
+        <span class="explain-mini stock-tone-${d.delta >= 0 ? "positive" : "negative"}">${_fmtPp(d.delta)}</span>
+      </span>
+    </li>
+  `;
+
+  return `
+    <header class="explain-header">
+      <span class="explain-eyebrow">✨ Explain</span>
+      <h2>Mix Shift</h2>
+      <p class="explain-subtitle">How each vehicle category's slice of total retail has moved over the visible window.</p>
+    </header>
+
+    <section class="explain-section">
+      <h3>What this chart is</h3>
+      <p>Six lines, one per category (<strong>PV / 2W / 3W / CV / Tractor / CE</strong>). Each line is that category's <strong>share of total monthly retail volume</strong>. They always sum to 100%. When a line trends up, that category is taking share from the others — and vice versa. This is the simplest way to see structural mix change inside the auto market.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Right now (${first.label} → ${latest.label})</h3>
+      <div class="explain-mix-cols">
+        <div class="explain-mix-col">
+          <h4>Gaining share</h4>
+          ${gainers.length ? `<ul>${gainers.map(renderRow).join("")}</ul>` : `<p class="explain-empty">No clear share gainers in this window.</p>`}
+        </div>
+        <div class="explain-mix-col">
+          <h4>Losing share</h4>
+          ${losers.length ? `<ul>${losers.map(renderRow).join("")}</ul>` : `<p class="explain-empty">No clear share losers in this window.</p>`}
+        </div>
+      </div>
+    </section>
+
+    <section class="explain-section">
+      <h3>Why this matters for an investor</h3>
+      <p>Mix shifts <strong>compound slowly but durably</strong>. A 2-3pp move in PV's share over six months looks small in isolation, but it's the visible part of the SUV-ification thesis: Indians moving from 2W → entry PV → SUV as incomes rise. The OEMs benefiting are the ones with strong PV portfolios; the ones losing are the pure-2W names. Watching this once a month tells you whether the structural trade is still on, or stalling.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Watch for next print</h3>
+      ${topGainer ? `
+        <p>If <strong>${topGainer.label}</strong>'s share keeps climbing past <strong>${topGainer.latest.toFixed(1)}%</strong> next month, the trend is intact. A reversal would suggest festive seasonality was driving the move, not a real shift.</p>
+      ` : ""}
+      ${topLoser ? `
+        <p><strong>${topLoser.label}</strong> has shed ${_fmtPp(topLoser.delta)} since ${first.label} — watch whether it stabilises around ${topLoser.latest.toFixed(1)}% or continues sliding.</p>
+      ` : ""}
+    </section>
+  `;
+}
+
 function renderCreditPulseExplainerModal() {
   if (!state.creditPulseExplainerOpen) {
     return "";
@@ -7536,6 +7825,10 @@ const URL_STATE_DEFAULTS = {
   companyMapFocus: null,
   newsGroup: "all",
   density: "comfortable",
+  // Active explain-this-chart modal key (null = closed). Each chart that
+  // wants a "✨ Explain" button registers a generator in EXPLAIN_REGISTRY
+  // below, and the button just toggles state.explainOpen to that key.
+  explainOpen: null,
   urbanRuralCategory: "PV",
   companyTrend: "all",
   companyTrendCompare: [],

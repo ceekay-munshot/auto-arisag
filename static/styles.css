@@ -1328,6 +1328,300 @@ p {
   font-weight: 700;
 }
 
+/* "Explain this chart" button + modal — generic, used by any chart that
+   wires up a key in EXPLAIN_REGISTRY (Stock-vs-Retail, Mix Shift, etc.). */
+.explain-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(122, 76, 199, 0.4);
+  background: linear-gradient(135deg, rgba(122, 76, 199, 0.10) 0%, rgba(76, 116, 199, 0.10) 100%);
+  color: #5b3aa8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.explain-btn:hover,
+.explain-btn:focus-visible {
+  background: linear-gradient(135deg, #7a4cc7 0%, #4c74c7 100%);
+  border-color: #7a4cc7;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(122, 76, 199, 0.32);
+  outline: none;
+}
+
+.explain-btn svg {
+  display: block;
+}
+
+.explain-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 26, 40, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 32px 16px;
+  animation: explain-fade-in 180ms ease-out;
+}
+
+@keyframes explain-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.explain-modal {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  background: #fffdf6;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(20, 26, 40, 0.45);
+  padding: 28px 30px 26px;
+  animation: explain-pop-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1.05);
+}
+
+@keyframes explain-pop-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.explain-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid rgba(20, 39, 62, 0.2);
+  border-radius: 999px;
+  color: #5a6779;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.explain-modal-close:hover {
+  background: #f6efe2;
+  color: #14273e;
+  border-color: rgba(20, 39, 62, 0.4);
+}
+
+.explain-header {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(20, 39, 62, 0.08);
+}
+
+.explain-eyebrow {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7a4cc7 0%, #4c74c7 100%);
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.explain-header h2 {
+  margin: 6px 0 4px;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: #14273e;
+}
+
+.explain-subtitle {
+  margin: 0;
+  color: #5a6779;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.explain-section {
+  margin-top: 18px;
+}
+
+.explain-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7a4cc7;
+  font-weight: 700;
+}
+
+.explain-section p {
+  margin: 0 0 8px;
+  line-height: 1.55;
+  color: #1f2c3d;
+  font-size: 0.92rem;
+}
+
+.explain-section p strong,
+.explain-quad-card strong,
+.explain-mix-row strong {
+  color: #14273e;
+  font-weight: 700;
+}
+
+.explain-quad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .explain-quad-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+.explain-quad-card {
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(20, 39, 62, 0.08);
+  background: #fcf8ee;
+  display: flex;
+  flex-direction: column;
+}
+
+.explain-quad-card.explain-tone-positive {
+  border-color: rgba(47, 137, 125, 0.35);
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.10), rgba(47, 137, 125, 0.04));
+}
+
+.explain-quad-card.explain-tone-negative {
+  border-color: rgba(204, 67, 67, 0.35);
+  background: linear-gradient(180deg, rgba(204, 67, 67, 0.10), rgba(204, 67, 67, 0.04));
+}
+
+.explain-quad-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.explain-quad-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #14273e;
+}
+
+.explain-quad-count {
+  font-size: 0.78rem;
+  color: #5a6779;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.explain-quad-card ul,
+.explain-mix-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.explain-quad-card li,
+.explain-mix-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(20, 39, 62, 0.05);
+  font-size: 0.85rem;
+}
+
+.explain-quad-card li:last-child,
+.explain-mix-row:last-child {
+  border-bottom: none;
+}
+
+.explain-name {
+  font-weight: 600;
+  color: #14273e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explain-numbers {
+  display: inline-flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.explain-mini {
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: #5a6779;
+  white-space: nowrap;
+}
+
+.explain-mini.stock-tone-positive { color: #1d5a4f; }
+.explain-mini.stock-tone-negative { color: #8a2727; }
+
+.explain-quad-card footer {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(20, 39, 62, 0.06);
+  font-size: 0.78rem;
+  color: #5a6779;
+  line-height: 1.4;
+}
+
+.explain-empty {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: #5a6779;
+  font-style: italic;
+}
+
+.explain-mix-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .explain-mix-cols { grid-template-columns: minmax(0, 1fr); }
+}
+
+.explain-mix-col h4 {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #14273e;
+}
+
+.explain-fallback {
+  padding: 16px;
+  background: #f6efe2;
+  border-radius: 12px;
+  color: #5a6779;
+  font-size: 0.92rem;
+}
+
 /* Mix-shift strip: shows latest share % per category alongside the
    delta vs the first month in the visible window. Sits below the
    Mix-shift trend chart on Retail Pulse. */
