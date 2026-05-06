@@ -7708,6 +7708,38 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     if (yMax === yMin) yMax = yMin + niceStep;
   }
   const yRange = yMax - yMin || 1;
+
+  // Sticky-scale Y-axis formatter: pick K vs L vs raw ONCE based on the
+  // top of the axis, and apply that same unit to every tick. The previous
+  // axisFormat() flipped between K and L per-tick (38K / 75K / 1.1L / 1.5L
+  // on a single chart) which read as a typo. Tooltips still use the
+  // caller's full-precision formatter.
+  const callerFormatter = formatter;
+  const peakAbs = Math.max(Math.abs(yMax), Math.abs(yMin));
+  let yAxisFormatter;
+  if (peakAbs >= 100000) {
+    yAxisFormatter = (value) => {
+      const n = Number(value || 0);
+      const sign = n < 0 ? "-" : "";
+      const abs = Math.abs(n);
+      // Use 0 decimals when the step is whole-lakh, 1 decimal otherwise.
+      const lakhs = abs / 100000;
+      const decimals = lakhs >= 10 || Number.isInteger(lakhs) ? 0 : 1;
+      return `${sign}${lakhs.toFixed(decimals)}L`;
+    };
+  } else if (peakAbs >= 1000) {
+    yAxisFormatter = (value) => {
+      const n = Number(value || 0);
+      const sign = n < 0 ? "-" : "";
+      const abs = Math.abs(n);
+      return `${sign}${(abs / 1000).toFixed(0)}K`;
+    };
+  } else if (peakAbs > 0 && peakAbs < 100) {
+    // Percentage-like axes — keep the caller's formatter (typically "X%").
+    yAxisFormatter = callerFormatter;
+  } else {
+    yAxisFormatter = callerFormatter;
+  }
   // X-tick selection: pick the FIRST label of each calendar year for "MMM YYYY"
   // series, otherwise every-Nth. After candidate selection, enforce a minimum
   // horizontal pixel gap so labels never overlap — this killed the "JaD2018"
@@ -7780,7 +7812,7 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
               stroke-width="1" />
         <text x="${pad.left - 12}" y="${y + 4}" text-anchor="end"
               font-size="10.5" font-weight="500" fill="#8693a3"
-              font-family="inherit" style="letter-spacing: 0.01em;">${formatter(value)}</text>
+              font-family="inherit" style="letter-spacing: 0.01em;">${yAxisFormatter(value)}</text>
       </g>
     `;
   }).join("");

@@ -1157,13 +1157,26 @@ def parse_fada_latest_commentary(compact_pages: str, month_id: str) -> dict[str,
 
 
 def build_fada_latest_subsegments(compact_pages: str) -> dict[str, list[dict[str, float | int | str]]]:
-    month_name = ""
-    month_match = re.search(r"All India Vehicle Retail Data for ([A-Za-z]+)'\d{2}", compact_pages)
-    if month_match:
-        month_name = month_match.group(1)
-    marker = f"All India Vehicle Retail Data for {month_name}'" if month_name else "All India Vehicle Retail Data for "
-    start_index = compact_pages.find(marker)
-    section = compact_pages[start_index:] if start_index != -1 else compact_pages
+    # Anchor on a real calendar-month header — NOT "FY", "CY", or "YTD".
+    # CY-end / FY-end FADA PDFs print three "All India Vehicle Retail Data
+    # for ..." tables in sequence (e.g. FY'26 YTD, CY'25, Dec'25); naively
+    # grabbing the first match landed on the cumulative table and turned
+    # December 2025's 3W goods row into 1,32,919 (cumulative) instead of
+    # ~10K (monthly) — same class of bug fixed earlier in
+    # _parse_old_format_volumes.
+    month_words = (
+        "January|February|March|April|May|June|July|August|September|October|November|December"
+        "|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+    )
+    month_match = re.search(
+        rf"All India Vehicle Retail Data for ({month_words})'\d{{2}}",
+        compact_pages,
+        flags=re.IGNORECASE,
+    )
+    if not month_match:
+        return {}
+    start_index = month_match.start()
+    section = compact_pages[start_index:]
 
     subsegment_map = {
         "3W": [
