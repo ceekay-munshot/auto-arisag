@@ -2481,11 +2481,13 @@ function renderRetailTrendOnly() {
   const weakest = visibleCategories.length
     ? visibleCategories.reduce((worst, item) => (item.yoy_pct < worst.yoy_pct ? item : worst), visibleCategories[0])
     : retail.latest_snapshot?.bottom_category_yoy;
+  // When the user is on the "Total" filter we render every category line
+  // so they can compare segments. The Total-retail line itself is dropped
+  // — it's just the sum of the other six and dominates the Y-axis scale,
+  // squashing 3W / CV / Tractor / CE at the bottom. Total stays available
+  // via the headline KPI cards above the chart.
   const chosenCategories = state.category === "TOTAL"
-    ? [
-        ...(companyFocused ? [] : ["TOTAL"]),
-        ...retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category),
-      ]
+    ? retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category)
     : [state.category];
 
   // For prior-cycle overlay: build lookup keyed by month so we can find the
@@ -2747,29 +2749,20 @@ function renderRetailSection() {
   const weakest = visibleCategories.length
     ? visibleCategories.reduce((worst, item) => (item.yoy_pct < worst.yoy_pct ? item : worst), visibleCategories[0])
     : retail.latest_snapshot?.bottom_category_yoy;
+  // Drop the Total-retail line on the multi-category view — its magnitude
+  // (sum of the six) compresses the smaller categories into a flat band at
+  // the bottom of the chart. Headline KPI cards above already carry Total.
   const chosenCategories = state.category === "TOTAL"
-    ? [
-        ...(companyFocused ? [] : ["TOTAL"]),
-        ...retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category),
-      ]
+    ? retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category)
     : [state.category];
 
   const trendSeries = chosenCategories
-    .filter((category) => category === "TOTAL" || retail.category_cards.some((item) => item.category === category))
-    .map((category) => {
-      if (category === "TOTAL") {
-        return {
-          label: "Total retail",
-          color: dashboardData.chart_colors.TOTAL,
-          values: months.map((item) => item.total_units),
-        };
-      }
-      return {
-        label: labelForCategory(category),
-        color: dashboardData.chart_colors[category],
-        values: months.map((item) => item.categories.find((entry) => entry.category === category)?.units || 0),
-      };
-    });
+    .filter((category) => retail.category_cards.some((item) => item.category === category))
+    .map((category) => ({
+      label: labelForCategory(category),
+      color: dashboardData.chart_colors[category],
+      values: months.map((item) => item.categories.find((entry) => entry.category === category)?.units || 0),
+    }));
 
   registerDownload(
     "retail-trend",
@@ -7682,27 +7675,66 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   // 3 horizontal gridlines (top, middle, bottom) is the readable minimum for
   // a quant chart — denser grids fight the data line.
   const steps = 3;
-  // Cap visible x-labels to ~6 so they breathe instead of overlapping.
-  const xLabelStep = labels.length > 10 ? Math.ceil(labels.length / 6) : 1;
-  // For long monthly series (≥24 labels in "MMM YYYY" format) the every-Nth
-  // approach lands on irregular calendar months — Mar/Mar/Mar/Feb/Nov/Aug
-  // becomes the spacing for a 5-year window. Switch to year-aware spacing
-  // that picks the FIRST label of each new calendar year so ticks land
-  // cleanly at year boundaries (Mar 2021 → Mar 2022 → … → Mar 2026).
-  const yearAwareIndices = (() => {
-    if (labels.length < 24) return null;
-    const monthYearRe = /^[A-Za-z]{3,}\s+(\d{4})$/;
-    const indicesByYear = new Map();
-    for (let i = 0; i < labels.length; i += 1) {
-      const m = `${labels[i] || ""}`.match(monthYearRe);
-      if (!m) return null; // not pure month-year format → fall back to default
-      const year = m[1];
-      if (!indicesByYear.has(year)) indicesByYear.set(year, i);
+  // X-tick selection: pick the FIRST label of each calendar year for "MMM YYYY"
+  // series, otherwise every-Nth. After candidate selection, enforce a minimum
+  // horizontal pixel gap so labels never overlap — this killed the "JaD2018"
+  // (Dec 2018 + Jan 2019 colliding at the start) and "Jan2026Apr2026" (last
+  // two labels colliding at the end) artefacts on long 77-month series.
+  const MIN_LABEL_GAP_PX = 60;
+  const indexToPx = (idx) => pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
+  const monthYearRe = /^[A-Za-z]{3,}\s+(\d{4})$/;
+  const isMonthYearSeries = labels.length >= 12 && labels.every((label) => monthYearRe.test(`${label || ""}`));
+  let candidateIndices;
+  if (isMonthYearSeries) {
+    const seenYear = new Set();
+    candidateIndices = [];
+    labels.forEach((label, i) => {
+      const year = `${label}`.match(monthYearRe)[1];
+      if (!seenYear.has(year)) {
+        seenYear.add(year);
+        candidateIndices.push(i);
+      }
+    });
+    if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
+      candidateIndices.push(labels.length - 1);
     }
-    const set = new Set(indicesByYear.values());
-    set.add(labels.length - 1); // always show the last label
-    return set;
-  })();
+  } else if (labels.length > 10) {
+    const step = Math.ceil(labels.length / 6);
+    candidateIndices = [];
+    for (let i = 0; i < labels.length; i += step) candidateIndices.push(i);
+    if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
+      candidateIndices.push(labels.length - 1);
+    }
+  } else {
+    candidateIndices = labels.map((_, i) => i);
+  }
+  // Greedy pass: keep first candidate; drop any subsequent candidate that
+  // sits within MIN_LABEL_GAP_PX of the last kept one. Then walk back from
+  // the end to preserve the final label, dropping the second-to-last if it's
+  // too close.
+  const visibleSet = new Set();
+  let lastPx = -Infinity;
+  candidateIndices.forEach((idx) => {
+    const px = indexToPx(idx);
+    if (px - lastPx >= MIN_LABEL_GAP_PX) {
+      visibleSet.add(idx);
+      lastPx = px;
+    }
+  });
+  const lastIdx = labels.length - 1;
+  if (!visibleSet.has(lastIdx) && lastIdx >= 0) {
+    visibleSet.add(lastIdx);
+    // If the new last collides with a neighbor, drop the neighbor.
+    const lastPxFinal = indexToPx(lastIdx);
+    [...visibleSet]
+      .filter((i) => i !== lastIdx)
+      .sort((a, b) => b - a)
+      .forEach((i) => {
+        if (Math.abs(indexToPx(i) - lastPxFinal) < MIN_LABEL_GAP_PX) {
+          visibleSet.delete(i);
+        }
+      });
+  }
 
   const gridLines = Array.from({ length: steps + 1 }, (_, index) => {
     const y = pad.top + (innerHeight / steps) * index;
@@ -7725,13 +7757,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   // "middle"-anchored extremes were the visible "axis going out of the tab"
   // problem).
   const xLabels = labels.map((label, index) => {
-    const visible = yearAwareIndices
-      ? yearAwareIndices.has(index)
-      : (index % xLabelStep === 0 || index === labels.length - 1);
-    if (!visible) {
+    if (!visibleSet.has(index)) {
       return "";
     }
-    const x = pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * index;
+    const x = indexToPx(index);
     let anchor = "middle";
     let dx = 0;
     if (index === 0) {
@@ -7805,32 +7834,13 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       <g>
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
         ${isDashed ? "" : points.map((point) => {
-          const anomalyHalo = point.anomaly ? (() => {
-            // Directional halo: teal-green for upside surprise, red for
-            // downside. Smaller radius (5 → 6) and lower opacity than the
-            // first cut so the data line stays the hero, the halo just
-            // catches the eye.
-            const isUp = point.anomaly.direction === "up";
-            const haloFill = isUp ? "rgba(47,137,125,0.16)" : "rgba(204,67,67,0.16)";
-            const haloStroke = isUp ? "rgba(47,137,125,0.5)" : "rgba(204,67,67,0.5)";
-            return `<circle cx="${point.x}" cy="${point.y}" r="6.5" fill="${haloFill}" stroke="${haloStroke}" stroke-width="1.2" pointer-events="none"></circle>`;
-          })() : "";
-          // Tooltip payload as JSON — showTooltip parses it and renders a
-          // structured multi-line layout (label / period / value / note).
-          const noteParts = [];
-          if (point.anomaly) {
-            const direction = point.anomaly.direction === "up" ? "Upside" : "Downside";
-            const pctText = `${(point.anomaly.pct * 100).toFixed(1)}%`;
-            noteParts.push(`${direction} surprise — ${pctText} vs trailing 4-mo avg`);
-          }
           const tooltipPayload = JSON.stringify({
             label: item.label,
             period: point.label,
             value: tooltipFormatter(point.value),
-            note: noteParts.length ? noteParts.join(" · ") : "",
+            note: "",
           });
           return `
-            ${anomalyHalo}
             <circle cx="${point.x}" cy="${point.y}" r="3.5" fill="#fff" stroke="${item.color}" stroke-width="2" pointer-events="none"></circle>
             <circle
               class="chart-hover-target"
