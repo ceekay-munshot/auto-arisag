@@ -10,6 +10,25 @@ on:
     # runs. Lighter scrapers (RBI / macro / stocks) still fire on every tick.
     - cron: '0 3,9,15 * * *'
   workflow_dispatch:
+    inputs:
+      target:
+        description: 'Which scraper(s) to run. "all" = the full pipeline (same as scheduled cron). Anything else runs only that one scraper + a dashboard rebuild + commit.'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - rbi
+          - stocks
+          - macro
+          - earnings
+          - launches
+          - ev_oem_tracker
+          - live_sources    # FADA + SIAM + ACMA + news (build_dashboard --refresh-live)
+          - oem_history     # backfill_oem_history.py
+          - fada_history    # backfill_fada_history.py
+          - company_history # backfill_company_history.py
+          - vahan           # refresh_vahan_playwright.py
 
 permissions:
   contents: write
@@ -36,49 +55,37 @@ jobs:
           pip install pypdf openpyxl requests
 
       - name: Install Playwright + Chromium (Vahan scraper)
-        # Only needed by scripts/refresh_vahan_playwright.py, which runs on
-        # the heavy 09:00 UTC tick. The browser install adds ~80 MB and ~60s
-        # the first time; subsequent runs reuse the GitHub-hosted runner's
-        # cache where possible.
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        # Only needed by scripts/refresh_vahan_playwright.py. Browser install
+        # adds ~80 MB and ~60s; subsequent runs reuse the runner's cache.
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 9 * * *') || github.event.inputs.target == 'all' || github.event.inputs.target == 'vahan' }}
         run: |
           pip install playwright
           python -m playwright install --with-deps chromium
 
-      - name: Refresh dashboard data
+      - name: Refresh dashboard data (FADA + SIAM + ACMA + news)
+        # The "live sources" step. Runs on every scheduled tick and on
+        # manual target=all / target=live_sources. For other manual targets
+        # (e.g. just rbi), this is skipped — the targeted scraper still
+        # rebuilds the dashboard at the end via the plain build step below.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'live_sources' }}
         run: python -u build_dashboard.py --refresh-live
 
       - name: Refresh Vahan registrations (Playwright)
-        # Headless-Chromium drive of vahan.parivahan.gov.in/vahan4dashboard/
-        # to fetch all-India maker-wise monthly registrations for every
-        # tracked segment. Writes per-month CSVs under data/vahan/ which the
-        # analyzer's collect_vahan_imports() picks up to un-hide the
-        # registration tab. Forward-retention: each tick fetches the latest
-        # 2 months and accumulates history. Heavy step — gated to 09:00 UTC.
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        # Heavy step. Scheduled: only the 09:00 UTC tick. Manual: only when
+        # target == all or vahan.
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 9 * * *') || github.event.inputs.target == 'all' || github.event.inputs.target == 'vahan' }}
         run: python -u scripts/refresh_vahan_playwright.py
         continue-on-error: true
 
       - name: Backfill OEM history (all categories)
-        # Idempotent — only fetches PDFs for months that don't yet have rows
-        # for every tracked category in data/oem_history.json. After the first
-        # successful run this is essentially a no-op until a new monthly URL
-        # appears in data/source_snapshot.json.
-        # Restricted to the 09:00 UTC (2:30 PM IST) tick to save 5–8 min on
-        # the other two daily runs. workflow_dispatch (manual) always runs it.
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        # Heavy step. Scheduled: only 09:00 UTC. Manual: only target=all/oem_history.
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 9 * * *') || github.event.inputs.target == 'all' || github.event.inputs.target == 'oem_history' }}
         run: python -u scripts/backfill_oem_history.py
         continue-on-error: true
 
       - name: Backfill FADA fuel-mix + urban-rural history
-        # Same Wayback + listing-page discovery as backfill_oem_history.py,
-        # but parses each PDF for monthly fuel mix and urban/rural growth
-        # splits. Writes data/fada_history.json which dashboard/build.py
-        # folds into fada.ev_share_series (extends EV chart timeline) and
-        # fada.urban_rural_growth_series (powers the urban/rural history
-        # chart on Channel Pulse). Idempotent — months already cached are
-        # skipped on subsequent runs.
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        # Heavy step. Scheduled: only 09:00 UTC. Manual: only target=all/fada_history.
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 9 * * *') || github.event.inputs.target == 'all' || github.event.inputs.target == 'fada_history' }}
         run: python -u scripts/backfill_fada_history.py
         continue-on-error: true
 
@@ -94,58 +101,38 @@ jobs:
       #   continue-on-error: true
 
       - name: Backfill listed-OEM company history
-        # Idempotent — discovers monthly company press releases via Wayback
-        # and fills data/company_unit_history.json. Snapshot/static rows in
-        # dashboard/config.py always win for the same month.
-        # As of 2026-05 only TVS Motor / M&M / Atul Auto adapters produce
-        # data; the other 5 are commented out in COMPANY_FETCHERS.
-        # Restricted to the 09:00 UTC tick to keep the lighter ticks fast.
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
+        # Heavy step. Scheduled: only 09:00 UTC. Manual: only target=all/company_history.
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 9 * * *') || github.event.inputs.target == 'all' || github.event.inputs.target == 'company_history' }}
         run: python -u scripts/backfill_company_history.py
         continue-on-error: true
 
       - name: Refresh RBI vehicle-loan credit pulse
-        # Walks RBI's Sectoral Deployment of Bank Credit press releases for
-        # any month newer than what data/rbi_credit.json already carries,
-        # parses the Vehicle Loans line, and refreshes the file. Idempotent.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'rbi' }}
         run: python -u scripts/refresh_rbi_credit.py
         continue-on-error: true
 
       - name: Refresh macro indicators (USD/INR + fuel)
-        # Live USD/INR from Yahoo Finance, fuel prices from Goodreturns.
-        # Repo rate is preserved (manual update on RBI MPC announcements).
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'macro' }}
         run: python -u scripts/refresh_macro.py
         continue-on-error: true
 
       - name: Refresh listed-OEM stock prices
-        # Yahoo Finance daily closes for every NSE-listed OEM in
-        # data/oem_stocks.json; computes 1D/1W/1M deltas.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'stocks' }}
         run: python -u scripts/refresh_stocks.py
         continue-on-error: true
 
       - name: Refresh OEM earnings calendar (NSE corporate filings)
-        # Walks NSE's event-calendar API for upcoming OEM result dates.
-        # Falls back to seeded events when NSE blocks the runner.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'earnings' }}
         run: python -u scripts/refresh_earnings_calendar.py
         continue-on-error: true
 
       - name: Refresh recent model launches (RSS launch detector)
-        # Re-fetches the trade-media RSS feeds (RushLane, ET Auto, Autocar Pro,
-        # EVReporter), filters to articles tagged Product / Launch for tracked
-        # listed OEMs, and writes data/launches_snapshot.json. 30-day rolling
-        # window. Idempotent — only rewrites the file when the article set
-        # actually changes.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'launches' }}
         run: python -u scripts/refresh_launches.py
         continue-on-error: true
 
       - name: Refresh per-segment EV OEM leaderboard (trade-press scrape)
-        # Walks the latest monthly leaderboard articles for E-2W
-        # (Autocar Pro), E-4W (RushLane), E-3W goods (EVReporter), and
-        # e-bus (Business Today) and persists into data/ev_oem_tracker.json.
-        # Replaces what used to be a hand-curated array baked into
-        # static/app.js. Per-segment fallback: if a source fails to
-        # parse, the previous month's rows survive — dashboard never
-        # renders empty.
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.target == 'all' || github.event.inputs.target == 'ev_oem_tracker' }}
         run: python -u scripts/refresh_ev_oem_tracker.py
         continue-on-error: true
 
