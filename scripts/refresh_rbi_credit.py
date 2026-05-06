@@ -64,7 +64,12 @@ from dashboard.update_snapshot import (  # noqa: E402
 HISTORY_PATH = Path("data/rbi_credit.json")
 EXCEL_URL_TEMPLATE = "https://rbi.org.in/upload/PressReleases/Excel/SIBCS{ddmmyyyy}.xlsx"
 LISTING_URL = "https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx"
-MAX_LOOKBACK_MONTHS = 24  # try the last 24 months of reference data
+# Walk a deep history. RBI's standardised SIBCS<DDMMYYYY>.xlsx URL pattern
+# is reliable from ~Jan 2020 onward; before that the file naming was
+# inconsistent and most candidates 404. The script handles 404s
+# gracefully (just skips), so over-shooting is safe — costs ~7 HEAD
+# requests per missing month on the heavy CI tick.
+MAX_LOOKBACK_MONTHS = 96  # try up to 8 years back
 CANDIDATE_DAYS_PER_MONTH = 7  # try last 7 working days of publication month
 TIMEOUT = 60
 HEADERS = {
