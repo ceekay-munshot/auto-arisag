@@ -6849,6 +6849,36 @@ function renderCreditPulseSection() {
     }
     const fillPct = Math.max(0, Math.min(100, sharePct * 10));  // 0-10% maps to 0-100% bar width
     const ticks = [0, 2, 4, 6, 8, 10];
+    // Build the trend series from the same `months` history that powers
+    // the YoY chart above. Showing 5+ years of share-pct lets investors
+    // spot whether banks have been quietly drifting toward "auto heavy".
+    const sharePoints = (months || [])
+      .filter((p) => p && p.share_pct !== null && p.share_pct !== undefined);
+    const sharePctTrend = sharePoints.length >= 6 ? `
+      <div class="chart-frame compact" style="margin-top:14px;">
+        ${lineChart(
+          sharePoints.map((p) => p.label),
+          [{
+            label: "Auto share %",
+            color: dashboardData.chart_colors?.PV || "#3f8f7f",
+            values: sharePoints.map((p) => p.share_pct),
+          }],
+          (v) => v == null ? "" : `${Number(v).toFixed(2)}%`,
+          (v) => v == null ? "" : `${Number(v).toFixed(2)}%`,
+        )}
+      </div>
+    ` : "";
+    registerDownload(
+      "credit-share-trend",
+      "auto_share_of_bank_lending_history.csv",
+      ["month", "share_pct", "outstanding_cr", "non_food_total_cr"],
+      sharePoints.map((p) => ({
+        month: p.month,
+        share_pct: p.share_pct,
+        outstanding_cr: p.outstanding_cr,
+        non_food_total_cr: p.non_food_total_cr,
+      })),
+    );
     return `
       <div class="chart-card">
         <div class="chart-title-row">
@@ -6860,6 +6890,9 @@ function renderCreditPulseSection() {
               Total bank lending: ${formatLakhCr(latest.non_food_total_cr || 0)}.
             </p>
           </div>
+          <div class="button-row">
+            ${renderDownloadIcon("credit-share-trend")}
+          </div>
         </div>
         <div class="share-gauge">
           <div class="share-gauge-track">
@@ -6870,6 +6903,7 @@ function renderCreditPulseSection() {
             ${ticks.map((t) => `<span class="share-gauge-tick">${t}%</span>`).join("")}
           </div>
         </div>
+        ${sharePctTrend}
         <p class="metric-detail" style="margin-top:10px;">
           Healthy range historically sits between 3% and 4%.
           A drift higher = banks getting more "auto-heavy"; a drift lower = auto losing share to other lending.
