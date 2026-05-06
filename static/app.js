@@ -65,59 +65,12 @@ const refreshState = {
 };
 let pendingScrollTarget = null;
 
-// Static calendar of Indian-auto-industry events to overlay on key time-series
-// charts (lineChart's optional 5th param). Each entry: month YYYY-MM, label,
-// and tone (festive | policy | milestone | macro). The chart only renders
-// markers for events whose month falls within its visible range — older
-// events automatically drop off as data scrolls.
-const CHART_EVENT_CALENDAR = [
-  { month: "2023-04", label: "BS-VI Phase II emissions kicks in", tone: "policy" },
-  { month: "2024-10", label: "Diwali 2024 (Oct 31) — peak festive month", tone: "festive" },
-  { month: "2024-10", label: "Hyundai Motor India IPO lists on NSE", tone: "milestone" },
-  { month: "2025-04", label: "EV PLI & PMP localisation ramp", tone: "policy" },
-  { month: "2025-10", label: "Diwali 2025 (Oct 20) — peak festive month", tone: "festive" },
-  { month: "2025-11", label: "Tata Motors demerger: TMPV + TMCV listed", tone: "milestone" },
-  { month: "2026-04", label: "RBI repo cut −25 bps (MPC, Apr 2026)", tone: "macro" },
-  { month: "2026-11", label: "Diwali 2026 (Nov 8) — peak festive month", tone: "festive" },
-];
-
-// Build the event list to overlay on a chart. Combines the static calendar
-// with earnings-calendar dates pulled from dashboardData (aggregated to month
-// granularity since charts are monthly). When a `company` filter is passed,
-// only that company's earnings dates are surfaced — used by the spotlight
-// chart so the marker actually correlates with the line on the page.
-function buildChartEvents({ company = null } = {}) {
-  const events = [...CHART_EVENT_CALENDAR];
-  const ec = dashboardData?.earnings_calendar;
-  if (ec?.available) {
-    const allDates = [
-      ...asArray(ec.upcoming_all),
-      ...asArray(ec.recent_past),
-    ];
-    const filtered = company
-      ? allDates.filter((item) => item.company === company)
-      : allDates;
-    // Group by month so we surface one chip per month even when several
-    // OEMs report on consecutive days. Charts can only render at month
-    // granularity; bunching is the honest representation.
-    const byMonth = new Map();
-    filtered.forEach((item) => {
-      const month = `${item.date || ""}`.slice(0, 7);
-      if (!month) return;
-      if (!byMonth.has(month)) byMonth.set(month, []);
-      byMonth.get(month).push(item.company);
-    });
-    byMonth.forEach((companies, month) => {
-      const unique = [...new Set(companies)];
-      const label = unique.length === 1
-        ? `${unique[0]} earnings`
-        : unique.length <= 3
-          ? `${unique.join(", ")} earnings`
-          : `${unique.length} OEM earnings (${unique.slice(0, 2).join(", ")}, …)`;
-      events.push({ month, label, tone: "earnings" });
-    });
-  }
-  return events;
+// Stub kept for backwards-compat with the 11 lineChart() call-sites that
+// pass it as the events parameter. The "Notable events in this window"
+// chip strip and z-score anomaly text labels were noisy clutter; we no
+// longer render either, so this just returns an empty array.
+function buildChartEvents() {
+  return [];
 }
 
 // Plain-English explainers attached to metric elements via data-explain="<key>".
@@ -7893,68 +7846,12 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     `;
   }).join("");
 
-  // Auto-anomalies feed the events caption strip too, so investors see a
-  // textual readout below the chart explaining which months tripped the flag.
-  const anomalyEvents = [];
-  activeSeries.forEach((item, seriesIdx) => {
-    seriesAnomalyData[seriesIdx].annotations.forEach((anno) => {
-      const monthRaw = labels[anno.index];
-      if (!monthRaw) return;
-      const direction = anno.direction === "up" ? "spike" : "drop";
-      const label = activeSeries.length > 1
-        ? `${item.label}: ${direction} (z=${anno.z >= 0 ? "+" : ""}${anno.z.toFixed(1)})`
-        : `Outlier ${direction} (z=${anno.z >= 0 ? "+" : ""}${anno.z.toFixed(1)})`;
-      anomalyEvents.push({ rawLabel: monthRaw, label, tone: "anomaly" });
-    });
-  });
-
-  // Events list — render BELOW the chart as a small caption strip rather
-  // than as floating dots inside the chart itself. The on-chart markers
-  // looked disconnected from the data line; the caption is cleaner. The
-  // strip combines static calendar events (from the `events` arg) and the
-  // auto-detected anomaly markers we just generated, so investors see one
-  // unified "what's notable about this window" readout.
-  const matchedStaticEvents = (events || [])
-    .filter((event) => {
-      if (!event?.month) return false;
-      const matchLabel = monthLabel(event.month);
-      return matchLabel && labels.indexOf(matchLabel) >= 0;
-    })
-    .map((event) => ({ resolvedLabel: monthLabel(event.month), label: event.label, tone: event.tone || "policy" }));
-  const matchedAnomalyEvents = anomalyEvents.map((event) => ({
-    resolvedLabel: event.rawLabel,
-    label: event.label,
-    tone: event.tone || "anomaly",
-  }));
-  const matchedEvents = [...matchedStaticEvents, ...matchedAnomalyEvents];
-  const palette = {
-    policy: "#4c74c7",
-    festive: "#c26c3a",
-    milestone: "#7a4cc7",
-    macro: "#2f897d",
-    earnings: "#a66325",
-    anomaly: "#cc4343",
-  };
-  const eventCaption = matchedEvents.length
-    ? `<div class="chart-events-caption">
-         <span class="chart-events-caption-label">Notable events in this window:</span>
-         ${matchedEvents.map((event) => {
-           const color = palette[event.tone] || palette.policy;
-           return `<span class="chart-event-chip" style="--chip-color:${color};">
-             <span class="chart-event-chip-month">${event.resolvedLabel}</span>
-             ${event.label}
-           </span>`;
-         }).join("")}
-       </div>`
-    : "";
-
   return `
     <svg class="line-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Line chart">
       ${gridLines}
       ${lines}
       ${xLabels}
     </svg>
-    ${eventCaption}
   `;
 }
 
