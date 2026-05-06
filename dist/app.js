@@ -7740,24 +7740,29 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   } else {
     yAxisFormatter = callerFormatter;
   }
-  // X-tick selection: pick the FIRST label of each calendar year for "MMM YYYY"
-  // series, otherwise every-Nth. After candidate selection, enforce a minimum
-  // horizontal pixel gap so labels never overlap — this killed the "JaD2018"
-  // (Dec 2018 + Jan 2019 colliding at the start) and "Jan2026Apr2026" (last
-  // two labels colliding at the end) artefacts on long 77-month series.
+  // X-tick selection. For monthly "MMM YYYY" series spanning >= 12 months,
+  // pin ticks to *January* of each calendar year that exists in the data
+  // (rendered as just the year — "2023", "2024", …) plus the very last
+  // data point as "MMM YYYY". Older approach picked the first label of
+  // each year, which on a series starting Aug 2022 read as
+  // "Aug 2022 · Feb 2023 · Jan 2024 · Jan 2025 · Apr 2026" — irregular
+  // intervals = unreadable timeline. Bloomberg / FT convention is year
+  // boundaries; we follow that.
   const MIN_LABEL_GAP_PX = 60;
   const indexToPx = (idx) => pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
-  const monthYearRe = /^[A-Za-z]{3,}\s+(\d{4})$/;
+  const monthYearRe = /^([A-Za-z]{3,})\s+(\d{4})$/;
   const isMonthYearSeries = labels.length >= 12 && labels.every((label) => monthYearRe.test(`${label || ""}`));
+  const yearOnlyDisplay = new Map(); // index -> override display label
   let candidateIndices;
   if (isMonthYearSeries) {
-    const seenYear = new Set();
     candidateIndices = [];
     labels.forEach((label, i) => {
-      const year = `${label}`.match(monthYearRe)[1];
-      if (!seenYear.has(year)) {
-        seenYear.add(year);
+      const m = `${label}`.match(monthYearRe);
+      const monthName = m[1].slice(0, 3).toLowerCase();
+      const year = m[2];
+      if (monthName === "jan") {
         candidateIndices.push(i);
+        yearOnlyDisplay.set(i, year);
       }
     });
     if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
@@ -7835,9 +7840,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       anchor = "end";
       dx = 2;
     }
+    const displayLabel = yearOnlyDisplay.has(index) ? yearOnlyDisplay.get(index) : label;
     return `<text x="${x + dx}" y="${height - 14}" text-anchor="${anchor}"
                   font-size="10.5" font-weight="500" fill="#8693a3"
-                  font-family="inherit" style="letter-spacing: 0.01em;">${label}</text>`;
+                  font-family="inherit" style="letter-spacing: 0.01em;">${displayLabel}</text>`;
   }).join("");
 
   // Auto-detect anomalous monthly prints using a simple z-score against the
