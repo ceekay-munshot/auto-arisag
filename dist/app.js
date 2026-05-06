@@ -6821,6 +6821,11 @@ function renderCreditPulseSection() {
   }
   const months = credit.months || [];
   const latest = credit.latest || {};
+  const firstMonth = months[0];
+  const lastMonth = months[months.length - 1];
+  const spanLabel = (firstMonth && lastMonth)
+    ? `${months.length} months · ${firstMonth.label} → ${lastMonth.label}`
+    : "";
   const yoyChange = latest.yoy_change_pp;
   const yoyChangeNote = (yoyChange === null || yoyChange === undefined)
     ? ""
@@ -6941,7 +6946,7 @@ function renderCreditPulseSection() {
           <button class="button button-explain" data-action="open-credit-explainer">Explain this tab</button>
         </div>
       </div>
-      <p class="section-subtitle">${credit.source_meta?.note || ""}</p>
+      <p class="section-subtitle">${credit.source_meta?.note || ""}${spanLabel ? ` <span class="credit-span-pill">${spanLabel}</span>` : ""}</p>
       <div class="panel-grid one">
         <div class="chart-card">
           <div class="chart-title-row">
@@ -6954,12 +6959,13 @@ function renderCreditPulseSection() {
               </p>
             </div>
             <div class="button-row">
+              ${renderExplainButton("credit-outstanding")}
               ${renderSourceAction(latest.source_url || credit.source_meta?.url)}
             </div>
           </div>
           ${seedNote}
           <div class="chart-frame">
-            ${lineChart(months.map((point) => point.label), trendSeries, formatUnits, formatCrore, buildChartEvents())}
+            ${lineChart(months.map((point) => point.label), trendSeries, axisFormat, formatCrore, buildChartEvents())}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
@@ -6971,6 +6977,9 @@ function renderCreditPulseSection() {
             <div>
               <p class="small-label">YoY growth: vehicle loans vs total bank lending</p>
               <h3>Is auto credit running hotter or cooler than the broader lending market?</h3>
+            </div>
+            <div class="button-row">
+              ${renderExplainButton("credit-spread")}
             </div>
           </div>
           <div class="chart-frame">
@@ -7083,6 +7092,8 @@ function _fmtPp(v) {
 const EXPLAIN_REGISTRY = {
   "stock-vs-retail": explainStockVsRetail,
   "mix-shift": explainMixShift,
+  "credit-outstanding": explainCreditOutstanding,
+  "credit-spread": explainCreditSpread,
 };
 
 // ──────────────────────── Stock vs Operating Divergence ────────────────
@@ -7274,6 +7285,140 @@ function explainMixShift() {
       ` : ""}
     </section>
   `;
+}
+
+// ──────────────────────── Credit Pulse — Outstanding ──────────────────
+function explainCreditOutstanding() {
+  const credit = dashboardData.modules.credit_pulse || {};
+  const months = (credit.months || []).filter((m) => m.outstanding_cr != null);
+  if (months.length < 6) {
+    return `<p class="explain-fallback">Need at least 6 months of RBI history for a credit-cycle read.</p>`;
+  }
+  const latest = months[months.length - 1];
+  const first = months[0];
+  const yearAgo = months.find((m) => m.month === _shiftYYYYMM(latest.month, -12));
+  const fiveYearsBack = months.find((m) => m.month === _shiftYYYYMM(latest.month, -60))
+    || months[Math.max(0, months.length - 60)];
+  const totalGrowthPct = first.outstanding_cr
+    ? ((latest.outstanding_cr - first.outstanding_cr) / first.outstanding_cr) * 100
+    : null;
+  const yoyPct = latest.yoy_pct;
+  const sharePct = latest.share_pct;
+  const fmtCr = (v) => v == null ? "—" : `₹${(v / 100000).toFixed(2)} lakh cr`;
+  return `
+    <header class="explain-header">
+      <span class="explain-eyebrow">✨ Explain</span>
+      <h2>Bank Vehicle-Loan Outstanding</h2>
+      <p class="explain-subtitle">How much money Indian banks have lent to vehicle buyers, tracked monthly from RBI's Sectoral Deployment of Bank Credit release.</p>
+    </header>
+
+    <section class="explain-section">
+      <h3>What this chart is</h3>
+      <p>Each dot is the <strong>total outstanding rupees</strong> Indian scheduled commercial banks have lent for vehicle purchases as of the last reporting Friday of that month. Vehicle loans are a sub-segment of "Personal Loans" in RBI's classification. The line trending up = more financing flowing into auto demand. The line flattening = banks tightening, consumers pulling back, or both.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Right now (${latest.label})</h3>
+      <div class="explain-quad-grid">
+        <article class="explain-quad-card explain-tone-${yoyPct != null && yoyPct > 0 ? "positive" : "negative"}">
+          <header><span class="explain-quad-name">Latest outstanding</span><span class="explain-quad-count">${fmtCr(latest.outstanding_cr)}</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">Up from <strong>${fmtCr(first.outstanding_cr)}</strong> at ${first.label} (${totalGrowthPct == null ? "n.m." : _fmtPct1(totalGrowthPct)} cumulative across ${months.length} months).</p>
+        </article>
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">YoY growth</span><span class="explain-quad-count">${_fmtPct1(yoyPct)}</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">Vehicle loans growing ${_fmtPct1(yoyPct)} year-over-year. Total bank credit is growing ${_fmtPct1(latest.non_food_yoy_pct)} for context — auto is ${(latest.spread_pp ?? 0) >= 0 ? "outpacing" : "trailing"} the broader market.</p>
+        </article>
+        ${sharePct != null ? `
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">Share of bank credit</span><span class="explain-quad-count">${sharePct.toFixed(2)}%</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">Auto's share of all bank lending. Healthy historic range: ~3-4%. Drift higher = banks getting more "auto-heavy"; drift lower = auto losing share to housing / unsecured / other lending.</p>
+        </article>` : ""}
+        ${yearAgo ? `
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">12 months ago</span><span class="explain-quad-count">${fmtCr(yearAgo.outstanding_cr)}</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">${yearAgo.label}. Net addition of ${fmtCr(latest.outstanding_cr - yearAgo.outstanding_cr)} since.</p>
+        </article>` : ""}
+      </div>
+    </section>
+
+    <section class="explain-section">
+      <h3>Why this matters for an investor</h3>
+      <p>About <strong>75-80% of Indian car / 2W purchases are financed</strong>. So this chart is a leading indicator of retail demand sustainability. When bank vehicle-loan growth accelerates, retail volumes follow within 2-3 months. When it slows or reverses, the same lag plays in reverse. If you see FADA retail accelerating but this line is flat → demand is fragile. If both lines are accelerating together → durable demand.</p>
+      <p>Also a stress monitor: vehicle loans are floating-rate. When RBI hikes repo, EMIs go up → loan growth slows → retail follows. The lag from this chart to the dealer floor is your forward-looking edge.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Watch for next print</h3>
+      <p>${(yoyPct ?? 0) > 12 ? `YoY at <strong>${_fmtPct1(yoyPct)}</strong> is robust — watch whether the next print sustains above ${(yoyPct - 1).toFixed(0)}%. A drop below 10% would be the first sign of credit-cycle moderation.` : (yoyPct ?? 0) > 8 ? `YoY at <strong>${_fmtPct1(yoyPct)}</strong> is mid-cycle — neither overheating nor stalling. Watch the spread vs total bank lending: if it's positive and widening, auto is gaining share of new credit (bullish). If narrowing, banks are shifting away from auto (bearish setup).` : `YoY at <strong>${_fmtPct1(yoyPct)}</strong> is on the slower side. Watch whether the next print stabilises here or breaks lower — sub-7% would suggest rate-driven demand stress.`}</p>
+    </section>
+  `;
+}
+
+// ──────────────────────── Credit Pulse — YoY Spread ───────────────────
+function explainCreditSpread() {
+  const credit = dashboardData.modules.credit_pulse || {};
+  const months = (credit.months || []).filter((m) => m.yoy_pct != null && m.non_food_yoy_pct != null);
+  if (months.length < 6) {
+    return `<p class="explain-fallback">Need at least 6 months of paired YoY data for a spread read.</p>`;
+  }
+  const latest = months[months.length - 1];
+  const spreadPp = latest.yoy_pct - latest.non_food_yoy_pct;
+  const direction = spreadPp >= 0 ? "above" : "below";
+  // 12-month average of the spread to give context
+  const trail12 = months.slice(-12);
+  const avgSpread = trail12.reduce((a, m) => a + (m.yoy_pct - m.non_food_yoy_pct), 0) / trail12.length;
+  return `
+    <header class="explain-header">
+      <span class="explain-eyebrow">✨ Explain</span>
+      <h2>Vehicle vs Bank-Lending YoY Spread</h2>
+      <p class="explain-subtitle">Two YoY growth rates side by side: how fast vehicle loans are growing vs how fast all bank credit is growing.</p>
+    </header>
+
+    <section class="explain-section">
+      <h3>What this chart is</h3>
+      <p>Two lines. <strong>Vehicle Loans YoY%</strong> is how much more money was outstanding in auto loans this month vs the same month last year. <strong>Total Bank Lending YoY%</strong> is the same calculation across every loan banks have on their books (housing, personal, business, NBFCs, etc.). When the auto line is above the total line, banks are putting <strong>more</strong> incremental rupees into vehicle finance than into other lending — auto is gaining share of new credit. When the auto line is below, the opposite.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Right now (${latest.label})</h3>
+      <div class="explain-quad-grid">
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">Vehicle loans YoY</span><span class="explain-quad-count">${_fmtPct1(latest.yoy_pct)}</span></header>
+        </article>
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">Total bank lending YoY</span><span class="explain-quad-count">${_fmtPct1(latest.non_food_yoy_pct)}</span></header>
+        </article>
+        <article class="explain-quad-card explain-tone-${spreadPp >= 0 ? "positive" : "negative"}">
+          <header><span class="explain-quad-name">Spread (auto − total)</span><span class="explain-quad-count">${_fmtPp(spreadPp)}</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">Vehicle-loan growth is running <strong>${spreadPp >= 0 ? "+" : ""}${spreadPp.toFixed(1)}pp</strong> ${direction} total bank lending growth.</p>
+        </article>
+        <article class="explain-quad-card">
+          <header><span class="explain-quad-name">Trailing 12-month avg spread</span><span class="explain-quad-count">${_fmtPp(avgSpread)}</span></header>
+          <p class="explain-empty" style="margin:6px 0 0;">Average over the last year. Today's spread (${_fmtPp(spreadPp)}) sits ${spreadPp > avgSpread ? "above" : "below"} that.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="explain-section">
+      <h3>Why this matters for an investor</h3>
+      <p>The spread is a <strong>real-time read on bank appetite for auto risk</strong>. When the auto line breaks above the total line for several months running, banks are actively channeling incremental rupees into vehicle finance — that's a tailwind for OEMs and especially for auto NBFCs (Bajaj Finance, Cholamandalam, M&M Financial). When the spread compresses or inverts, banks are getting more cautious — a leading sign that retail volumes will slow.</p>
+    </section>
+
+    <section class="explain-section">
+      <h3>Watch for next print</h3>
+      <p>${spreadPp >= 2 ? `Spread of <strong>${_fmtPp(spreadPp)}</strong> is comfortably positive. Watch whether it sustains — a sustained +2 to +5pp spread is consistent with a healthy multi-quarter expansion. A drop into negative territory would be the first leading-indicator warning.` : spreadPp >= 0 ? `Spread is positive but tight at <strong>${_fmtPp(spreadPp)}</strong>. Watch the next two prints — if it widens, auto credit is reaccelerating; if it goes negative, banks are starting to favour other lending.` : `Spread is <strong>${_fmtPp(spreadPp)}</strong> (auto trailing total bank lending). Watch for two things — whether the spread reverses back toward zero (regime improving) or widens further negative (banks structurally shifting away from auto).`}</p>
+    </section>
+  `;
+}
+
+// Helper to shift YYYY-MM by N months. Used by credit explainers.
+function _shiftYYYYMM(yyyymm, deltaMonths) {
+  const [y, m] = yyyymm.split("-").map(Number);
+  let mm = m + deltaMonths;
+  let yy = y;
+  while (mm < 1) { mm += 12; yy -= 1; }
+  while (mm > 12) { mm -= 12; yy += 1; }
+  return `${yy}-${String(mm).padStart(2, "0")}`;
 }
 
 function renderCreditPulseExplainerModal() {
@@ -7583,6 +7728,25 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const steps = 3;
   // Cap visible x-labels to ~6 so they breathe instead of overlapping.
   const xLabelStep = labels.length > 10 ? Math.ceil(labels.length / 6) : 1;
+  // For long monthly series (≥24 labels in "MMM YYYY" format) the every-Nth
+  // approach lands on irregular calendar months — Mar/Mar/Mar/Feb/Nov/Aug
+  // becomes the spacing for a 5-year window. Switch to year-aware spacing
+  // that picks the FIRST label of each new calendar year so ticks land
+  // cleanly at year boundaries (Mar 2021 → Mar 2022 → … → Mar 2026).
+  const yearAwareIndices = (() => {
+    if (labels.length < 24) return null;
+    const monthYearRe = /^[A-Za-z]{3,}\s+(\d{4})$/;
+    const indicesByYear = new Map();
+    for (let i = 0; i < labels.length; i += 1) {
+      const m = `${labels[i] || ""}`.match(monthYearRe);
+      if (!m) return null; // not pure month-year format → fall back to default
+      const year = m[1];
+      if (!indicesByYear.has(year)) indicesByYear.set(year, i);
+    }
+    const set = new Set(indicesByYear.values());
+    set.add(labels.length - 1); // always show the last label
+    return set;
+  })();
 
   const gridLines = Array.from({ length: steps + 1 }, (_, index) => {
     const y = pad.top + (innerHeight / steps) * index;
@@ -7605,7 +7769,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   // "middle"-anchored extremes were the visible "axis going out of the tab"
   // problem).
   const xLabels = labels.map((label, index) => {
-    if (index % xLabelStep !== 0 && index !== labels.length - 1) {
+    const visible = yearAwareIndices
+      ? yearAwareIndices.has(index)
+      : (index % xLabelStep === 0 || index === labels.length - 1);
+    if (!visible) {
       return "";
     }
     const x = pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * index;
