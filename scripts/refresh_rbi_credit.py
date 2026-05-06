@@ -70,7 +70,12 @@ LISTING_URL = "https://rbi.org.in/Scripts/Data_Sectoral_Deployment.aspx"
 # gracefully (just skips), so over-shooting is safe — costs ~7 HEAD
 # requests per missing month on the heavy CI tick.
 MAX_LOOKBACK_MONTHS = 96  # try up to 8 years back
-CANDIDATE_DAYS_PER_MONTH = 7  # try last 7 working days of publication month
+# Bump from 7 → 23 so we cover every weekday of the publication month
+# (not just the last 1.5 weeks). Earlier window missed publication dates
+# that landed mid-month, which is why prior runs only captured 5 months
+# per year. With 23 we hit the whole month, ~360 HEAD requests on the
+# heavy tick — still trivial.
+CANDIDATE_DAYS_PER_MONTH = 23
 TIMEOUT = 60
 HEADERS = {
     "User-Agent": (
@@ -87,29 +92,48 @@ HEADERS = {
 
 
 def _candidate_publication_dates(reference_month: str) -> list[date]:
-    """Return up to CANDIDATE_DAYS_PER_MONTH dates to try for the given
-    reference month, ordered most-likely first.
+    """Return candidate publication dates to try for the given reference
+    month, ordered most-likely first.
 
-    RBI publishes the SDBC release on the last 1–3 *working* days of the
-    next month after the reference month. We yield the last
-    CANDIDATE_DAYS_PER_MONTH weekdays of the publication month, latest
-    first.
+    RBI usually publishes the Sectoral Deployment release on the last 1–3
+    working days of the *next* calendar month, but a) sometimes mid-month,
+    b) occasionally slips into the month after that. We sweep all weekdays
+    of pub_month (next month) first, then all weekdays of pub_month + 1
+    as a fallback. With CANDIDATE_DAYS_PER_MONTH = 23 that gives roughly
+    full coverage of two months of weekdays per reference month — ~46
+    HEAD requests for any missing month on the heavy CI tick.
     """
     year, month = (int(part) for part in reference_month.split("-"))
+
+    def _month_weekdays_descending(target_year: int, target_month: int) -> list[date]:
+        last_day = calendar.monthrange(target_year, target_month)[1]
+        out: list[date] = []
+        cur = date(target_year, target_month, last_day)
+        seen = 0
+        while seen < CANDIDATE_DAYS_PER_MONTH and cur.month == target_month:
+            if cur.weekday() < 5:
+                out.append(cur)
+                seen += 1
+            cur = cur - timedelta(days=1)
+        return out
+
+    candidates: list[date] = []
+
+    # Primary publication window: next calendar month.
     pub_month = month + 1
     pub_year = year
     if pub_month > 12:
         pub_month = 1
         pub_year += 1
-    last_day = calendar.monthrange(pub_year, pub_month)[1]
-    candidates: list[date] = []
-    cur = date(pub_year, pub_month, last_day)
-    seen = 0
-    while seen < CANDIDATE_DAYS_PER_MONTH and cur.month == pub_month:
-        if cur.weekday() < 5:  # Mon-Fri
-            candidates.append(cur)
-            seen += 1
-        cur -= timedelta(days=1)
+    candidates.extend(_month_weekdays_descending(pub_year, pub_month))
+
+    # Slip-window fallback: the month after that.
+    slip_month = pub_month + 1
+    slip_year = pub_year
+    if slip_month > 12:
+        slip_month = 1
+        slip_year += 1
+    candidates.extend(_month_weekdays_descending(slip_year, slip_month))
     return candidates
 
 
