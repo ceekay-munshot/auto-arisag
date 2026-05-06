@@ -76,6 +76,17 @@ MAX_LOOKBACK_MONTHS = 96  # try up to 8 years back
 # per year. With 23 we hit the whole month, ~360 HEAD requests on the
 # heavy tick — still trivial.
 CANDIDATE_DAYS_PER_MONTH = 23
+# Per-run cap for new probing. Without this, the first run after a
+# lookback-window bump tries ~85 missing months × 46 candidates ≈ 4000
+# HEAD requests → 20 minute hang on the heavy tick (which is why the
+# previous run got cancelled). Cap to a budget that finishes in <3
+# minutes; subsequent runs drain the rest, and the negative cache
+# (NEGATIVE_CACHE_TTL_DAYS) avoids re-probing the same misses.
+MAX_NEW_ATTEMPTS_PER_RUN = 12
+# How long to wait before re-trying a month whose URL we couldn't find.
+# RBI rarely publishes back-fills, so 90 days is a generous retry window
+# without burning HEAD-request budget every tick.
+NEGATIVE_CACHE_TTL_DAYS = 90
 TIMEOUT = 60
 HEADERS = {
     "User-Agent": (
@@ -273,6 +284,12 @@ def _is_already_verified(record: dict | None) -> bool:
 def main() -> int:
     history = _load_history()
     by_month: dict[str, dict] = {row["month"]: row for row in history.get("series", []) if row.get("month")}
+    # Negative cache — months we've already exhaustively searched but found
+    # no Excel for. Map of month → ISO date of last attempt. Months are
+    # re-tried when the entry is older than NEGATIVE_CACHE_TTL_DAYS.
+    not_found_cache: dict[str, str] = dict(history.get("not_found_months") or {})
+    today = date.today()
+    cutoff = today - timedelta(days=NEGATIVE_CACHE_TTL_DAYS)
 
     target_months = _target_months()
     print(
@@ -284,13 +301,39 @@ def main() -> int:
     added = 0
     refreshed = 0
     skipped = 0
+    skipped_negative = 0
     not_yet_published = 0
+    new_attempts_made = 0
 
     for month_id in target_months:
         existing = by_month.get(month_id)
         if _is_already_verified(existing):
             skipped += 1
             continue
+
+        # Negative-cache check — skip months we've recently tried and missed,
+        # so we don't burn 46 HEAD requests on the same dead end every run.
+        last_attempt_iso = not_found_cache.get(month_id)
+        if last_attempt_iso:
+            try:
+                last_attempt = datetime.strptime(last_attempt_iso, "%Y-%m-%d").date()
+            except ValueError:
+                last_attempt = None
+            if last_attempt and last_attempt > cutoff:
+                skipped_negative += 1
+                continue
+
+        # Per-run probe budget — stops us from hanging the whole workflow
+        # on one massive first-time backfill. Subsequent runs pick up where
+        # we left off.
+        if new_attempts_made >= MAX_NEW_ATTEMPTS_PER_RUN:
+            print(
+                f"  {month_id}: per-run probe cap reached ({MAX_NEW_ATTEMPTS_PER_RUN}); "
+                "will retry next CI tick.",
+                flush=True,
+            )
+            break
+        new_attempts_made += 1
 
         candidate_dates = _candidate_publication_dates(month_id)
         successful_url: str | None = None
@@ -306,8 +349,11 @@ def main() -> int:
 
         if not excel_bytes or not successful_url:
             not_yet_published += 1
-            print(f"  {month_id}: no Excel found at any of {len(candidate_dates)} candidate URLs", flush=True)
+            not_found_cache[month_id] = today.isoformat()
+            print(f"  {month_id}: no Excel found at any of {len(candidate_dates)} candidate URLs (cached as not-found)", flush=True)
             continue
+        # Successful hit — clear any stale negative-cache entry.
+        not_found_cache.pop(month_id, None)
 
         parsed = _parse_excel(excel_bytes)
         if not parsed or not parsed.get("vehicle_outstanding_cr"):
@@ -339,6 +385,7 @@ def main() -> int:
         )
 
     history["series"] = [by_month[k] for k in sorted(by_month)]
+    history["not_found_months"] = not_found_cache
     if added or refreshed:
         history["is_seed"] = False
         history["coverage_note"] = (
@@ -350,6 +397,8 @@ def main() -> int:
     print(
         f"\nWrote {HISTORY_PATH}: added {added}, refreshed {refreshed}, "
         f"skipped (already verified) {skipped}, "
+        f"skipped (negative cache) {skipped_negative}, "
+        f"new probes attempted {new_attempts_made}, "
         f"not published yet {not_yet_published}. "
         f"Total months: {len(history['series'])}",
         flush=True,
