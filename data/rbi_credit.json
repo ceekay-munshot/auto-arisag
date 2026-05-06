@@ -7,6 +7,26 @@
   "is_seed": false,
   "series": [
     {
+      "month": "2022-03",
+      "as_of_date": "2022-03-25",
+      "outstanding_cr": 402564,
+      "yoy_pct": null,
+      "non_food_total_cr": 11836304,
+      "non_food_yoy_pct": null,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed from RBI Sectoral Deployment Statement 1 (Mar 2024 release showed 25.Mar.2022 fiscal-year-end snapshot)."
+    },
+    {
+      "month": "2023-03",
+      "as_of_date": "2023-03-24",
+      "outstanding_cr": 501979,
+      "yoy_pct": 24.6,
+      "non_food_total_cr": 13655330,
+      "non_food_yoy_pct": 15.4,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed; using restated 24-Mar-2023 value as printed in subsequent (2024+) releases for consistency with rest of series."
+    },
+    {
       "month": "2023-12",
       "as_of_date": "2023-12-29",
       "outstanding_cr": 563468,
@@ -32,6 +52,46 @@
       "non_food_total_cr": 16409083,
       "non_food_yoy_pct": null,
       "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
+    },
+    {
+      "month": "2024-04",
+      "as_of_date": "2024-04-19",
+      "outstanding_cr": 594034,
+      "yoy_pct": 16.9,
+      "non_food_total_cr": 16476193,
+      "non_food_yoy_pct": 19.1,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed from RBI Sectoral Deployment Statement 1 (Apr 2024 release)."
+    },
+    {
+      "month": "2024-05",
+      "as_of_date": "2024-05-31",
+      "outstanding_cr": 602270,
+      "yoy_pct": 17.9,
+      "non_food_total_cr": 16741161,
+      "non_food_yoy_pct": 19.8,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed from RBI Sectoral Deployment Statement 1 (May 2024 release)."
+    },
+    {
+      "month": "2024-06",
+      "as_of_date": "2024-06-28",
+      "outstanding_cr": 603628,
+      "yoy_pct": 14.9,
+      "non_food_total_cr": 16846878,
+      "non_food_yoy_pct": 17.4,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed from RBI Sectoral Deployment Statement 1 (Jun 2024 release)."
+    },
+    {
+      "month": "2024-07",
+      "as_of_date": "2024-07-26",
+      "outstanding_cr": 618600,
+      "yoy_pct": 16.4,
+      "non_food_total_cr": 16786602,
+      "non_food_yoy_pct": 13.7,
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "source_note": "Manually transcribed from RBI Sectoral Deployment Statement 1 (Jul 2024 release)."
     },
     {
       "month": "2024-08",
