@@ -393,16 +393,20 @@ def parse_siam_release(html: str, source_url: str) -> dict:
     # release and their Q4 / FY-end summary release. Try both:
     #   Standard: "Production:</strong> ... in March 2025 was N units"
     #   Q4/FYend: "Production: The total production ... in the month of March 2026 was N units"
-    # The fallback drops the </strong> requirement and accepts the longer
-    # "in the month of <Month> <Year>" phrasing the Q4 release uses.
+    #   Older: same as Q4/FYend but uses "were" instead of "was" (the
+    #          subject is plural — "Passenger Vehicles, Three Wheelers...").
+    #          Some 2022 releases also have a stray comma: "were, N units".
+    # The fallback drops the </strong> requirement, accepts the longer
+    # "in the month of <Month> <Year>" phrasing, allows "was|were" for
+    # the verb and optional comma between verb and number.
     production_match = (
         re.search(
-            rf"Production:\s*</strong>.*?in\s+{re.escape(month_name)}\s+{year_text}\s+was\s+([\d,]+)\s+units",
+            rf"Production:\s*</strong>.*?in\s+{re.escape(month_name)}\s+{year_text}\s+(?:was|were)[,\s]+([\d,]+)\s+units",
             html,
             flags=re.IGNORECASE | re.DOTALL,
         )
         or re.search(
-            rf"Production[:\s].*?in\s+(?:the\s+month\s+of\s+)?{re.escape(month_name)}\s+{year_text}\s+was\s+([\d,]+)\s+units",
+            rf"Production[:\s].*?in\s+(?:the\s+month\s+of\s+)?{re.escape(month_name)}\s+{year_text}\s+(?:was|were)[,\s]+([\d,]+)\s+units",
             html,
             flags=re.IGNORECASE | re.DOTALL,
         )

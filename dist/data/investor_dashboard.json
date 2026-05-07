@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T10:57:16.221241+00:00",
+  "generated_at": "2026-05-07T11:01:45.536522+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23819,6 +23819,64 @@
           "exports": []
         },
         {
+          "month": "2022-01",
+          "label": "Jan 2022",
+          "release_date": "2022-02-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-january-2022/500",
+          "production_total": 1860809,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 254287,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1128293,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 24091,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1406671,
+          "exports": []
+        },
+        {
+          "month": "2022-02",
+          "label": "Feb 2022",
+          "release_date": "2022-03-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-february-2022/502",
+          "production_total": 1795514,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 262984,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1037994,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 27039,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1328017,
+          "exports": []
+        },
+        {
           "month": "2022-03",
           "label": "Mar 2022",
           "release_date": "2022-04-15",
@@ -24106,6 +24164,64 @@
             }
           ],
           "domestic_total": 1319054,
+          "exports": []
+        },
+        {
+          "month": "2023-01",
+          "label": "Jan 2023",
+          "release_date": "2023-02-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-january-2023/537",
+          "production_total": 1904364,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 298093,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1184379,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 48903,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1531375,
+          "exports": []
+        },
+        {
+          "month": "2023-02",
+          "label": "Feb 2023",
+          "release_date": "2023-03-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-february-2023/538",
+          "production_total": 1754922,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 291928,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1129661,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 50382,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1471971,
           "exports": []
         },
         {
@@ -58892,8 +59008,8 @@
       "message": "FADA retail month continuity has gaps."
     },
     {
-      "status": "warning",
-      "message": "SIAM wholesale month continuity has gaps."
+      "status": "ok",
+      "message": "SIAM wholesale month continuity validated."
     },
     {
       "status": "warning",
