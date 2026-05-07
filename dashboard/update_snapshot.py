@@ -362,10 +362,23 @@ def parse_siam_release(html: str, source_url: str) -> dict:
     month_name, year_text = title_match.groups()
     month = to_month_id(month_name, int(year_text))
 
-    production_match = re.search(
-        rf"Production:\s*</strong>.*?in\s+{re.escape(month_name)}\s+{year_text}\s+was\s+([\d,]+)\s+units",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
+    # Production phrasing varies between SIAM's standard monthly press
+    # release and their Q4 / FY-end summary release. Try both:
+    #   Standard: "Production:</strong> ... in March 2025 was N units"
+    #   Q4/FYend: "Production: The total production ... in the month of March 2026 was N units"
+    # The fallback drops the </strong> requirement and accepts the longer
+    # "in the month of <Month> <Year>" phrasing the Q4 release uses.
+    production_match = (
+        re.search(
+            rf"Production:\s*</strong>.*?in\s+{re.escape(month_name)}\s+{year_text}\s+was\s+([\d,]+)\s+units",
+            html,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        or re.search(
+            rf"Production[:\s].*?in\s+(?:the\s+month\s+of\s+)?{re.escape(month_name)}\s+{year_text}\s+was\s+([\d,]+)\s+units",
+            html,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
     )
     pv_match = re.search(
         rf"Passenger Vehicles.*?sales were\s+([\d,]+)\s+units in\s+{re.escape(month_name)}\s+{year_text}",
