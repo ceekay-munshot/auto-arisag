@@ -3,11 +3,8 @@
 # After CI runs target=siam_urls, the runner fetches each, parses the
 # Monthly Performance section, and merges into siam_history.json.
 # Already-ingested months are no-ops on subsequent runs.
-#
-# To extend the dashboard's wholesale chart further back, add more
-# URLs below — each SIAM monthly press release covers ONE month of
-# data (Production + PV/2W/3W domestic sales).
 
+# Batch 1 (FY 2025-26 + Q4 FY26): Jul 2025 → Mar 2026 (already ingested)
 https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605
 https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-february-2026/603
 https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-january-2026/597
@@ -17,3 +14,22 @@ https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-o
 https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2025-and-q2-julyseptember-2025/591
 https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-august-2025/590
 https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-july-2025/584
+
+# Batch 2 (FY 2024-25 + Q1 FY26): Jan 2024 → Jun 2025
+# Five months (Mar 2024, Sep 2024, Dec 2024, Mar 2025, Jun 2025) were
+# pre-seeded from user screenshots since their Q-bundle pages embed
+# multiple monthly sections; the URLs below cover the remaining
+# 13 individual monthly releases.
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-may-2025/582
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-april-2025/581
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-february---2025/578
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-january--2025/577
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-november-2024/575
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-october-2024/574
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-august-2024/572
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-july-2024/566
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-june-2024/565
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-may-2024/564
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-april-2024/563
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-february-2024/561
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-january-2024/559
