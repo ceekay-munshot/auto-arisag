@@ -104,7 +104,7 @@
       "month": "2026-03",
       "release_date": "2026-04-14",
       "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
-      "production_total": 0,
+      "production_total": null,
       "domestic_sales": {
         "PV": {
           "units": 442460,
@@ -118,7 +118,8 @@
           "units": 1976128,
           "yoy_pct": 19.3
         }
-      }
+      },
+      "coverage_note": "production_total not parsed from this Q4/FY-end SIAM release format; chart shows gap until manual or parser fix"
     }
   ]
 }
