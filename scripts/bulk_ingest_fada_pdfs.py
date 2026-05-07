@@ -141,6 +141,18 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
         ("TRACTOR", "TRACTOR"),
         ("CE", "CE"),
         ("Total", "TOTAL"),
+        # Long-form labels (used in some 2022-2023 PDFs and in the
+        # Jan 2023 release specifically). The "2- Wheeler" form (dash
+        # then space) is a PDF text-extraction artifact of "2-Wheeler"
+        # in the source.
+        (r"2\s*-\s*Wheeler", "2W"),
+        (r"Two\s*-?\s*Wheeler", "2W"),
+        (r"3\s*-\s*Wheeler", "3W"),
+        (r"Three\s*-?\s*Wheeler", "3W"),
+        (r"Passenger\s+Vehicle", "PV"),
+        (r"Commercial\s+Vehicle", "CV"),
+        (r"Tractor", "TRACTOR"),
+        (r"Construction\s+Equipment", "CE"),
     ]
     out: dict = {}
     # Try the NEW format first (5 columns: 3 units + MoM% + YoY%) — it's
@@ -151,7 +163,7 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
             continue
         # New format pattern: <CAT> <curr_units> <prior_month_units> <prior_year_units> <MoM%> <YoY%>
         pattern_new = (
-            rf"(?<![\w/.])({re.escape(label)})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+([\d,]{{3,}})"
+            rf"(?<![\w/.])({label})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+([\d,]{{3,}})"
             rf"\s+(-?[\d.]+)\s*%\s+(-?[\d.]+)\s*%"
         )
         m = re.search(pattern_new, section_text)
@@ -171,7 +183,7 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
     for label, canonical in cat_aliases:
         if canonical in out:
             continue
-        pattern_old = rf"(?<![\w/.])({re.escape(label)})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+(-?[\d.]+)\s*%"
+        pattern_old = rf"(?<![\w/.])({label})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+(-?[\d.]+)\s*%"
         m = re.search(pattern_old, section_text)
         if not m:
             continue
