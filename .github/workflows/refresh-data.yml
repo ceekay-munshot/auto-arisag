@@ -30,6 +30,7 @@ on:
           - fada_history    # backfill_fada_history.py
           - company_history # backfill_company_history.py
           - vahan           # refresh_vahan_playwright.py
+          - siam_urls       # ingest URLs from scripts/siam_pending_urls.txt (manual)
 
 permissions:
   contents: write
@@ -100,6 +101,17 @@ jobs:
       #   if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 9 * * *'
       #   run: python -u scripts/extend_siam_history.py
       #   continue-on-error: true
+
+      - name: Ingest SIAM URLs from siam_pending_urls.txt
+        # Manual-only target. The user lists SIAM press-release URLs in
+        # scripts/siam_pending_urls.txt; this step fetches each from the
+        # runner (which has clean egress to siam.in unlike Claude's
+        # sandbox), parses the Monthly Performance section, and merges
+        # into data/siam_history.json. Idempotent — already-ingested
+        # months are no-ops.
+        if: ${{ github.event.inputs.target == 'siam_urls' }}
+        run: python -u scripts/ingest_siam_urls.py
+        continue-on-error: true
 
       - name: Backfill listed-OEM company history
         # Heavy step. Scheduled: only 09:00 UTC. Manual: only target=all/company_history.

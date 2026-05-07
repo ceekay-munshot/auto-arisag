@@ -1,0 +1,19 @@
+# SIAM press-release URLs to ingest into data/siam_history.json.
+# One URL per line. Blank lines and lines starting with # are ignored.
+# After CI runs target=siam_urls, the runner fetches each, parses the
+# Monthly Performance section, and merges into siam_history.json.
+# Already-ingested months are no-ops on subsequent runs.
+#
+# To extend the dashboard's wholesale chart further back, add more
+# URLs below — each SIAM monthly press release covers ONE month of
+# data (Production + PV/2W/3W domestic sales).
+
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-february-2026/603
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-january-2026/597
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-december-2025-and-q3-october---december-2025/595
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-november-2025/593
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-october-2025/592
+https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2025-and-q2-julyseptember-2025/591
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-august-2025/590
+https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-july-2025/584
