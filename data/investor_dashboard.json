@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T10:45:32.496723+00:00",
+  "generated_at": "2026-05-07T10:50:52.621028+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23267,6 +23267,151 @@
       },
       "latest_month": "2026-03",
       "months": [
+        {
+          "month": "2020-06",
+          "label": "Jun 2020",
+          "release_date": "2020-07-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-june-2020",
+          "production_total": 1094363,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 105617,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1013431,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 10300,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1129348,
+          "exports": []
+        },
+        {
+          "month": "2020-07",
+          "label": "Jul 2020",
+          "release_date": "2020-08-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-july-2020",
+          "production_total": 1715514,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 182779,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1281354,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 12728,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1476861,
+          "exports": []
+        },
+        {
+          "month": "2020-08",
+          "label": "Aug 2020",
+          "release_date": "2020-09-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-august-2020",
+          "production_total": 2162367,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 215916,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1559665,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 14534,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1790115,
+          "exports": []
+        },
+        {
+          "month": "2020-09",
+          "label": "Sep 2020",
+          "release_date": "2020-10-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2020",
+          "production_total": 2619045,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 272027,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1849546,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 18640,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 2140213,
+          "exports": []
+        },
+        {
+          "month": "2020-10",
+          "label": "Oct 2020",
+          "release_date": "2020-11-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-october-2020",
+          "production_total": 2830153,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 310294,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 2053814,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 26187,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 2390295,
+          "exports": []
+        },
         {
           "month": "2020-11",
           "label": "Nov 2020",
