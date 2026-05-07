@@ -349,10 +349,25 @@ def update_acma(current: dict) -> tuple[dict, SourceUpdateResult]:
 
 
 def parse_siam_release(html: str, source_url: str) -> dict:
-    title_match = re.search(
-        r'ContentPlaceHolder1_lbltitle">Auto Industry Performance of ([A-Za-z]+)-(\d{4})<',
-        html,
-        flags=re.IGNORECASE,
+    # Title patterns SIAM uses across release variants:
+    #   1. "Auto Industry Performance of February-2026"
+    #   2. "Auto Industry Performance of February 2026"
+    #   3. "Auto Industry Performance of December 2025 and Q3..."  (combo)
+    #   4. "Auto Industry Sales Performance of September 2025 and Q2..."
+    #   5. "Auto Industry Performance of Q4 (Jan- March 2026), FY 2025-26"
+    # For (5) we want the closing month (March) so the parser anchors on
+    # the month whose Monthly Performance section appears on the page.
+    title_match = (
+        re.search(
+            r'ContentPlaceHolder1_lbltitle">Auto Industry (?:Sales )?Performance of ([A-Za-z]+)[-\s]+(\d{4})',
+            html,
+            flags=re.IGNORECASE,
+        )
+        or re.search(
+            r'ContentPlaceHolder1_lbltitle">Auto Industry (?:Sales )?Performance of[^<]*?\b([A-Za-z]+)\s+(\d{4})',
+            html,
+            flags=re.IGNORECASE,
+        )
     )
     date_match = re.search(r'ContentPlaceHolder1_lbldate">(\d{2}/\d{2}/\d{4})<', html)
 
@@ -360,6 +375,18 @@ def parse_siam_release(html: str, source_url: str) -> dict:
         raise ValueError("missing SIAM title or release date")
 
     month_name, year_text = title_match.groups()
+    # Q-bundle releases like "Q4 (Jan- March 2026)" report in a single
+    # closing-month "Monthly Performance:" section. The fallback regex
+    # above can land on a leading word ("Q4") whose to_month_id mapping
+    # would fail. Walk forward through subsequent <Month> <Year> tokens
+    # in the title until we find one to_month_id accepts.
+    if month_name.lower() not in MONTH_LOOKUP:
+        title_text = title_match.group(0)
+        for follow in re.finditer(r"\b([A-Za-z]+)\s+(\d{4})\b", title_text):
+            cand = follow.group(1).lower()
+            if cand in MONTH_LOOKUP:
+                month_name, year_text = follow.group(1), follow.group(2)
+                break
     month = to_month_id(month_name, int(year_text))
 
     # Production phrasing varies between SIAM's standard monthly press
