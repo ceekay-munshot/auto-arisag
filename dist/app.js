@@ -38,6 +38,10 @@ const state = {
   // meaningful single-line view by default rather than a 5-line tangle.
   // "ALL" stays available via the dropdown when overlay is wanted.
   subsegmentSelection: { "3W": "E-rickshaw passenger", "CV": "LCV" },
+  // Mix Shift category selector. Default = PV (the SUV-ification line —
+  // the chart's headline narrative), but the dropdown also offers each
+  // other category and an "ALL" overlay.
+  mixShiftCategory: "PV",
   sorts: {},
   activeTab: "overview",
   creditPulseExplainerOpen: false,
@@ -1871,6 +1875,7 @@ function render() {
   setupChangedMovers();
   setupUrbanRuralCategoryPicker();
   setupSubsegmentSelect();
+  setupMixShiftSelect();
   setupPngExports();
   setupSorts();
   setupCompanyMapCards();
@@ -2768,7 +2773,8 @@ function renderCategoryMixShift(retail, allowed) {
   const visibleCats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"]
     .filter((c) => allowed.includes(c));
   const labels = months.map((m) => m.label);
-  const series = visibleCats.map((cat) => ({
+  const allSeries = visibleCats.map((cat) => ({
+    cat,
     label: labelForCategory(cat) || cat,
     color: dashboardData.chart_colors[cat] || dashboardData.chart_colors.TOTAL,
     values: months.map((m) => {
@@ -2776,6 +2782,13 @@ function renderCategoryMixShift(retail, allowed) {
       return entry?.share_pct ?? null;
     }),
   })).filter((s) => s.values.some((v) => v !== null && v !== undefined));
+  // Single-category default (PV by default — the SUV-ification line is the
+  // chart's headline narrative). "ALL" overlays every category as before.
+  const selection = state.mixShiftCategory || "PV";
+  const validSelection = selection === "ALL" || visibleCats.includes(selection) ? selection : "PV";
+  const series = validSelection === "ALL"
+    ? allSeries
+    : allSeries.filter((s) => s.cat === validSelection);
   registerDownload(
     "category-mix-shift",
     "category_mix_shift.csv",
@@ -2798,6 +2811,10 @@ function renderCategoryMixShift(retail, allowed) {
     if (latest == null || first == null) return null;
     return { cat, label: labelForCategory(cat) || cat, latest, first, delta: latest - first };
   }).filter(Boolean).sort((a, b) => b.delta - a.delta);
+  const selectorOptions = [
+    `<option value="ALL"${validSelection === "ALL" ? " selected" : ""}>All categories</option>`,
+    ...allSeries.map((s) => `<option value="${escapeHtml(s.cat)}"${validSelection === s.cat ? " selected" : ""}>${escapeHtml(s.label)}</option>`),
+  ].join("");
   return `
     <div class="chart-card">
       <div class="chart-title-row">
@@ -2811,12 +2828,22 @@ function renderCategoryMixShift(retail, allowed) {
           ${renderDownloadIcon("category-mix-shift")}
         </div>
       </div>
+      <div class="state-explorer-controls explorer-controls" style="margin-bottom:12px;">
+        <label class="filter-field compact">
+          <span class="small-label">Show</span>
+          <select data-mix-shift-select>
+            ${selectorOptions}
+          </select>
+        </label>
+      </div>
       <div class="chart-frame">
         ${lineChart(labels, series, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents(), "share of total volume")}
       </div>
-      <div class="chart-legend">
-        ${series.map((s) => legendItem(s.label, s.color)).join("")}
-      </div>
+      ${validSelection === "ALL" ? `
+        <div class="chart-legend">
+          ${series.map((s) => legendItem(s.label, s.color)).join("")}
+        </div>
+      ` : ""}
       <div class="mix-shift-strip">
         <span class="mix-shift-strip-meta">${firstPoint.label} → ${latestPoint.label}:</span>
         ${deltas.map((d) => `
@@ -4124,6 +4151,15 @@ function setupSubsegmentSelect() {
       if (!cat) return;
       if (!state.subsegmentSelection) state.subsegmentSelection = {};
       state.subsegmentSelection[cat] = event.target.value;
+      render();
+    });
+  });
+}
+
+function setupMixShiftSelect() {
+  document.querySelectorAll("[data-mix-shift-select]").forEach((node) => {
+    node.addEventListener("change", (event) => {
+      state.mixShiftCategory = event.target.value;
       render();
     });
   });
