@@ -7697,8 +7697,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const width = 820;
   const height = 320;
   // Padding budget: room for ~5-char Y values on the left, half-label on the
-  // right so the rightmost x-tick can extend without clipping.
-  const pad = { top: 18, right: 28, bottom: 40, left: 56 };
+  // right so the rightmost x-tick can extend without clipping. Right gutter
+  // is wider than left to accommodate the latest-value annotation we render
+  // on single-series charts (Bloomberg/FT chart convention).
+  const pad = { top: 22, right: 64, bottom: 40, left: 56 };
   const innerWidth = width - pad.left - pad.right;
   const innerHeight = height - pad.top - pad.bottom;
   const allValues = activeSeries.flatMap((item) => item.values).filter((value) => value !== null && value !== undefined);
@@ -7935,41 +7937,107 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     item.dashed === true ? { flagged: new Set(), annotations: [] } : detectAnomalies(item.values)
   ));
 
+  // A unique-per-call ID prefix lets us scope SVG <linearGradient> refs so
+  // multiple charts on the same page don't cross-pollute their fills.
+  const gradientNs = `lc-${Math.random().toString(36).slice(2, 9)}`;
+  const isSingleSeries = activeSeries.filter((s) => s.dashed !== true).length === 1;
+
+  // Render the latest VALUE as a small in-chart annotation on
+  // single-series charts (the most readable case). For multi-line charts
+  // we keep the legend below — direct labels with names like "Passenger
+  // Vehicles" / "Construction Equipment" would overflow the right gutter
+  // and crowd each other. Single-series charts (auto-share trend, raw
+  // materials, EV 2W, USD/INR, OEM spotlight) get the "what's the latest
+  // print" annotation that defines the Bloomberg reading style.
+  const endLabelData = [];
+  if (isSingleSeries) {
+    const item = activeSeries.find((s) => s.dashed !== true);
+    if (item) {
+      let lastIdx = -1;
+      for (let i = item.values.length - 1; i >= 0; i -= 1) {
+        const v = item.values[i];
+        if (v !== null && v !== undefined && !Number.isNaN(Number(v))) { lastIdx = i; break; }
+      }
+      if (lastIdx >= 0) {
+        const anchorY = pad.top + innerHeight - ((Number(item.values[lastIdx]) - yMin) / yRange) * innerHeight;
+        endLabelData.push({
+          color: item.color,
+          label: tooltipFormatter(item.values[lastIdx]),
+          anchorY,
+          displayY: Math.max(pad.top + 8, Math.min(pad.top + innerHeight - 4, anchorY)),
+        });
+      }
+    }
+  }
+
+  // Build SVG <defs> for area gradients. Only used on single-series charts.
+  let defs = "";
+  if (isSingleSeries) {
+    activeSeries.forEach((item, idx) => {
+      if (item.dashed === true) return;
+      defs += `
+        <linearGradient id="${gradientNs}-area-${idx}" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="${item.color}" stop-opacity="0.18"></stop>
+          <stop offset="100%" stop-color="${item.color}" stop-opacity="0"></stop>
+        </linearGradient>
+      `;
+    });
+  }
+
   const lines = activeSeries.map((item, seriesIdx) => {
-    const anomalyFlags = seriesAnomalyData[seriesIdx].flagged;
     const points = item.values.map((value, index) => {
       if (value === null || value === undefined) return null;
       const x = pad.left + (innerWidth / Math.max(item.values.length - 1, 1)) * index;
       const numericValue = Number(value);
       const y = pad.top + innerHeight - ((numericValue - yMin) / yRange) * innerHeight;
-      const flag = anomalyFlags.get(index);
-      return { x, y, value, label: labels[index], anomaly: flag || null };
+      return { x, y, value, label: labels[index] };
     }).filter(Boolean);
     if (!points.length) return "";
     const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
-    // Series with `dashed: true` are prior-year overlays for WOW 10's
-    // "Compare to prior year" toggle. Render thinner + dashed + lower
-    // opacity, and skip the data dots so they don't crowd the current line.
+
     const isDashed = item.dashed === true;
     const strokeAttrs = isDashed
       ? `stroke="${item.color}" stroke-width="1.8" stroke-dasharray="6 4" opacity="0.7"`
       : `stroke="${item.color}" stroke-width="2"`;
-    // On long series (>= 30 points), suppress the per-point dot markers —
-    // 77 dots per category × 6 categories = 460 dots = visual noise that
-    // obscures the line. Keep transparent hover targets so the tooltip
-    // still works on every point. On short series the dots add precision.
+
+    // Per-point dots are noise on long series (77 months × 6 lines = 460
+    // markers). Keep transparent hover targets so tooltips still hit
+    // every month.
     const showDotMarkers = !isDashed && points.length < 30;
+
+    // Emphasised marker on the LATEST point — this is a finance-chart
+    // convention that makes the "now" instantly findable. Always shown
+    // (even on long series where intermediate dots are suppressed) and
+    // a touch larger + filled in series colour.
+    const lastPoint = points[points.length - 1];
+    const latestMarker = !isDashed
+      ? `<circle cx="${lastPoint.x}" cy="${lastPoint.y}" r="4.5" fill="${item.color}" stroke="#fff" stroke-width="2" pointer-events="none"></circle>`
+      : "";
+
+    // Single-series charts get a soft area fill from line down to the
+    // baseline. Multi-line charts skip the fill — overlapping fills mud
+    // up the whole canvas and obscure individual lines.
+    let areaPath = "";
+    if (isSingleSeries && !isDashed) {
+      const baselineY = pad.top + innerHeight - ((0 - yMin) / yRange) * innerHeight;
+      const clampedBaseline = Math.max(pad.top, Math.min(pad.top + innerHeight, baselineY));
+      areaPath = `<path d="${d} L ${lastPoint.x} ${clampedBaseline} L ${points[0].x} ${clampedBaseline} Z" fill="url(#${gradientNs}-area-${seriesIdx})" stroke="none"></path>`;
+    }
+
     return `
       <g>
+        ${areaPath}
         <path d="${d}" fill="none" ${strokeAttrs} stroke-linecap="round" stroke-linejoin="round"></path>
-        ${isDashed ? "" : points.map((point) => {
+        ${latestMarker}
+        ${isDashed ? "" : points.map((point, idx) => {
+          const isLatest = idx === points.length - 1;
           const tooltipPayload = JSON.stringify({
             label: item.label,
             period: point.label,
             value: tooltipFormatter(point.value),
             note: "",
           });
-          const dotMarkup = showDotMarkers
+          const dotMarkup = showDotMarkers && !isLatest
             ? `<circle cx="${point.x}" cy="${point.y}" r="3" fill="#fff" stroke="${item.color}" stroke-width="1.6" pointer-events="none"></circle>`
             : "";
           return `
@@ -7988,10 +8056,24 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     `;
   }).join("");
 
+  // Latest-value annotation rendered next to the line's terminal point on
+  // single-series charts. The text sits in the line's colour so the eye
+  // links it to the data without any decoration overhead.
+  const endLabels = endLabelData.map((entry) => {
+    const x = pad.left + innerWidth + 8;
+    return `
+      <text x="${x}" y="${entry.displayY + 4}" text-anchor="start"
+            font-size="11" font-weight="700" fill="${entry.color}"
+            font-family="inherit" style="letter-spacing: -0.005em;">${escapeHtml(entry.label)}</text>
+    `;
+  }).join("");
+
   return `
     <svg class="line-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Line chart">
+      <defs>${defs}</defs>
       ${gridLines}
       ${lines}
+      ${endLabels}
       ${xLabels}
     </svg>
   `;
