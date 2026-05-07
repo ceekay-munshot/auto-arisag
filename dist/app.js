@@ -28,15 +28,16 @@ const state = {
   segmentShareView: "TOTAL",
   rawMaterialCompany: "Tata Motors",
   componentTrendCompany: "Maruti Suzuki",
-  evCategory: "TOTAL",
+  evCategory: "2W",
   evPeriod: "M",
   evOemSegment: "E2W",
   oemSegment: "PV",
   liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
-  // Per-category subsegment chart selection. "ALL" overlays every line;
-  // otherwise the chart drops to a single-series view of the chosen
-  // subsegment, which gets the latest-value annotation + area gradient.
-  subsegmentSelection: { "3W": "ALL", "CV": "ALL" },
+  // Per-category subsegment chart selection. Defaults pick the largest
+  // / most-watched subsegment in each category so investors see a
+  // meaningful single-line view by default rather than a 5-line tangle.
+  // "ALL" stays available via the dropdown when overlay is wanted.
+  subsegmentSelection: { "3W": "E-rickshaw passenger", "CV": "LCV" },
   sorts: {},
   activeTab: "overview",
   creditPulseExplainerOpen: false,
@@ -3868,6 +3869,9 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
         <div class="chart-legend">
           ${chartSeries.map((s) => legendItem(s.label, s.color)).join("")}
         </div>
+      ` : ""}
+      ${category === "CV" && validSelection === "Others" ? `
+        <p class="legend-note">FADA's "Others" CV bucket carried ~3-5K monthly units of niche commercial vehicles (special-purpose, custom-bodied, residual classifications) through Apr 2025. From May 2025 onward FADA reclassified those volumes into LCV / MCV / HCV, which is why the line collapses to ~50 units / month from that point — it's a definitional change, not a demand collapse.</p>
       ` : ""}
       <div class="subsegment-latest-strip">
         <span class="urban-rural-strip-meta">Latest (${monthLabel(latestMonth)}):</span>
@@ -8188,7 +8192,7 @@ const URL_STATE_DEFAULTS = {
   segmentShareView: "TOTAL",
   rawMaterialCompany: "Tata Motors",
   componentTrendCompany: "Maruti Suzuki",
-  evCategory: "TOTAL",
+  evCategory: "2W",
   evPeriod: "M",
   evOemSegment: "E2W",
   oemSegment: "PV",
