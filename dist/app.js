@@ -4886,7 +4886,7 @@ function renderCompanyUnitTrend() {
             "units (company-reported)",
           )}
         </div>
-        <p class="legend-note">This chart uses company-reported unit series from official company disclosures. Some companies report monthly while others disclose quarterly periods. It is intentionally kept separate from FADA retail OEM tables.</p>
+        <p class="legend-note">Hybrid source: company-reported wholesale (domestic + OEM + exports) for the most recent months from each company's own press releases, with FADA monthly retail registrations filling the back-history. FADA retail typically runs 5-10% below wholesale (it captures registrations to end-customer; wholesale captures despatch to dealers + exports), but the two track each other almost identically in shape — fine for peer comparison and trend reading. Hover any data point to see which source it came from.</p>
       </article>
     </div>
   `;

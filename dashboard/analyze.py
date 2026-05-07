@@ -120,11 +120,79 @@ def _merge_company_series(
     return sorted(by_key.values(), key=lambda item: item.get("month") or item.get("label") or "")
 
 
+def _build_fada_oem_back_history_by_company() -> dict[str, list[dict[str, Any]]]:
+    """Return {listed_company: [{month, units, source_url}, ...]} from the
+    FADA OEM annexure history we already maintain (data/oem_history.json,
+    86 months Dec 2018 -> Apr 2026 across PV / 2W / 3W / CV / TRACTOR / CE).
+
+    For each (month, OEM) row we use OEM_TO_LISTED to map FADA's OEM name
+    to the listed parent (e.g. 'Mahindra Group' / 'Swaraj' / 'Mahindra
+    Tractors' all roll up to 'Mahindra & Mahindra'). Units sum across
+    every category the company plays in.
+
+    This is used as the back-history layer in _build_company_unit_trends:
+    company-reported wholesale press releases win for the months they
+    cover; FADA retail fills the deeper history. Scale runs ~5-10% below
+    company-reported (FADA captures retail registrations to end-customer
+    while company-reported captures wholesale despatch + exports), but
+    the chart's job is peer comparison and direction-of-trend, both of
+    which read identically off either source."""
+    by_company_month: dict[tuple[str, str], int] = {}
+    history = load_oem_history()
+    for category_records in history.values():
+        for record in category_records:
+            month_id = record.get("month")
+            if not month_id:
+                continue
+            for row in record.get("rows") or []:
+                oem_name = row.get("oem")
+                units = row.get("units")
+                if not oem_name or units is None:
+                    continue
+                try:
+                    units_int = int(units)
+                except (TypeError, ValueError):
+                    continue
+                listed = OEM_TO_LISTED.get(oem_name) or []
+                for company in listed:
+                    key = (company, month_id)
+                    by_company_month[key] = by_company_month.get(key, 0) + units_int
+    out: dict[str, list[dict[str, Any]]] = {}
+    for (company, month_id), units in by_company_month.items():
+        out.setdefault(company, []).append(
+            {
+                "month": month_id,
+                "units": units,
+                "source_url": "https://fada.in/press-releases.php",
+            }
+        )
+    for company in out:
+        out[company].sort(key=lambda item: item["month"])
+    return out
+
+
 def _build_company_unit_trends() -> list[dict[str, Any]]:
     history = _load_company_history()
+    fada_back_history = _build_fada_oem_back_history_by_company()
     out: list[dict[str, Any]] = []
     for company, details in COMPANY_UNIT_TRENDS.items():
+        # Order of precedence (highest wins for a given month):
+        #   1. Static config series (curated, validated)
+        #   2. company_unit_history.json (scraped from press releases)
+        #   3. FADA OEM annexure roll-up (back-history fill)
         merged = _merge_company_series(company, details["series"], history.get(company, []))
+        merged_months = {point.get("month") for point in merged if point.get("month")}
+        # Only include FADA points that aren't already covered by the
+        # higher-priority sources.
+        for fada_point in fada_back_history.get(company, []):
+            if fada_point["month"] not in merged_months:
+                merged.append(fada_point)
+                merged_months.add(fada_point["month"])
+        # Re-sort the merged list by month after appending.
+        merged.sort(key=lambda p: p.get("month") or p.get("label") or "")
+        # Tag the source explicitly for each point so the chart legend
+        # can show which months are company-reported vs FADA-derived.
+        fada_months_set = {p["month"] for p in fada_back_history.get(company, [])}
         out.append(
             {
                 "company": company,
@@ -137,6 +205,14 @@ def _build_company_unit_trends() -> list[dict[str, Any]]:
                         "label": point["label"] if "label" in point else month_label(point["month"]),
                         "units": point["units"],
                         "source_url": point["source_url"],
+                        # Mark which rows came from the FADA back-history layer
+                        # so the chart legend can flag the methodology shift.
+                        "source_lens": (
+                            "fada_retail"
+                            if point.get("month") in fada_months_set
+                            and point.get("source_url", "").startswith("https://fada.in")
+                            else "company_reported"
+                        ),
                     }
                     for point in merged
                 ],

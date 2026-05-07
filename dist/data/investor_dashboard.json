@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T11:01:45.536522+00:00",
+  "generated_at": "2026-05-07T11:13:43.044334+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -12916,40 +12916,487 @@
           "source_name": "Maruti Suzuki press releases",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 1776,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 2337,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 2286,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 2231,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 133202,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 3001,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 3219,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 3767,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 1187130,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 848,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 76516,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 3603,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 112665,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 3889,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "units": 3778,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 104377,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 107766,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "units": 3789,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 3277,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 3803,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 109631,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 3027,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 2730,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "units": 2784,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 2665,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 3036,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 3677,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 3828,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 3043,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 3861,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 3209,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 3699,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 113447,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 3466,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 3446,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 3315,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 3250,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 3486,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 3945,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 3714,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 3165,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 4194,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 3323,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 3393,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 3389,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 3350,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 2883,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 3519,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 3441,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 3453,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 5238,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 3696,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 43582,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 5224,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 3669,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 3930,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 141221,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 120021,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 3296,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 132753,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 131695,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 126519,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2025-10",
               "label": "Oct 2025",
               "units": 220894,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2025/november/maruti-suzuki-sales-in-october-2025"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2025/november/maruti-suzuki-sales-in-october-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 229021,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2025/december/maruti-suzuki-sales-in-november-2025"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2025/december/maruti-suzuki-sales-in-november-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 217854,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/january/maruti-suzuki-sales-in-december"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/january/maruti-suzuki-sales-in-december",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 236963,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/february/maruti-suzuki-sales-in-january-2026"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/february/maruti-suzuki-sales-in-january-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 213995,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-sales-in-february-2026"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-sales-in-february-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 225251,
-              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/april/maruti-suzuki-sales-in-march-2026-and-fy-2025-26"
+              "source_url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/april/maruti-suzuki-sales-in-march-2026-and-fy-2025-26",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 162401,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -12960,40 +13407,487 @@
           "source_name": "Mahindra auto monthly press releases",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 9622,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 23462,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 22923,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 26437,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 18197,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 28044,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 27648,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 30651,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 147455,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 9241,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 25340,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 31494,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 30953,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 36314,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "units": 18565,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 31504,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 46639,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "units": 25017,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 40658,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 52333,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 40945,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 44999,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 46962,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "units": 29118,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 48838,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 50717,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 60675,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 64658,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 59118,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 68951,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 63606,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 71274,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 76826,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 72065,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 73477,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 75167,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 38730,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 69340,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 72071,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 44347,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 71495,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 86608,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 58649,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 82628,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 72236,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 71258,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 36200,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 61360,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 36427,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 36393,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 47286,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 45614,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 493708,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 103700,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 80276,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 92174,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 89768,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 100862,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 45477,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 110532,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 94579,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 94720,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2025-10",
               "label": "Oct 2025",
               "units": 120142,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-records-highest-ever-suv-sales-of-71624-vehicles-31-percent-growth-and-highest-ever-total-volumes-of-120142-in-october-2025"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-records-highest-ever-suv-sales-of-71624-vehicles-31-percent-growth-and-highest-ever-total-volumes-of-120142-in-october-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 92670,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-56336-suvs-and-92670-total-vehicle-sales-in-november-2025"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-56336-suvs-and-92670-total-vehicle-sales-in-november-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 86090,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-50946-suvs-and-86090-total-vehicle-sales-in-december-2025"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-50946-suvs-and-86090-total-vehicle-sales-in-december-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 104309,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-63510-SUVs-and-104309-total-vehicle-sales-in-january-2026"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-63510-SUVs-and-104309-total-vehicle-sales-in-january-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 97177,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60018-suvs-and-97177-total-vehicle-sales-in-february-2026"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60018-suvs-and-97177-total-vehicle-sales-in-february-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 99969,
-              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60272-suvs-and-99969-total-vehicle-sales-in-march-2026"
+              "source_url": "https://www.mahindra.com/news-room/press-release/en/mahindra-auto-clocks-60272-suvs-and-99969-total-vehicle-sales-in-march-2026",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 121967,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13004,40 +13898,186 @@
           "source_name": "Hero MotoCorp monthly sales releases",
           "series": [
             {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 559118,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 4129740,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 415366,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 313074,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 530997,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 396278,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 410722,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 250246,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 410947,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 802234,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 413470,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 399324,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 271390,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 511687,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 499036,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 393832,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 339548,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 341865,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 323268,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2025-10",
               "label": "Oct 2025",
               "units": 635808,
-              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2025/october-pdf/press_release_hero_motocorp_celebrates_festive_season_with_nearly_10_lakh_million_retails_in_october_2025.pdf"
+              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2025/october-pdf/press_release_hero_motocorp_celebrates_festive_season_with_nearly_10_lakh_million_retails_in_october_2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 604490,
-              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2025/december-pdfs/press_releasehero_motocorp_delivers_31percent_dispatch_growth_in_november_2025_driven_by_continued_festive_momentum.pdf"
+              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2025/december-pdfs/press_releasehero_motocorp_delivers_31percent_dispatch_growth_in_november_2025_driven_by_continued_festive_momentum.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 456479,
-              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/reports-and-polices/fillings-and-reports/press-releases/2025-2026/StxintimationPR01012026.pdf"
+              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/reports-and-polices/fillings-and-reports/press-releases/2025-2026/StxintimationPR01012026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 557871,
-              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/january-pdfs/press_release_records_26_percent_dispatch_growth_with_5.58_lakh_units_sold_in_january_2026.pdf"
+              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/january-pdfs/press_release_records_26_percent_dispatch_growth_with_5.58_lakh_units_sold_in_january_2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 558216,
-              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/march-pdfs/press_release_hero_motocorp_february_2026_sales_march_1_2026.pdf"
+              "source_url": "https://www.heromotocorp.com/content/dam/hero-aem-website/in/en-in/company-section/press-releases/2026/march-pdfs/press_release_hero_motocorp_february_2026_sales_march_1_2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 598198,
-              "source_url": "https://www.heromotocorp.com/en-in/company/newsroom/press-release-news-and-media.html"
+              "source_url": "https://www.heromotocorp.com/en-in/company/newsroom/press-release-news-and-media.html",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 552145,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13048,286 +14088,487 @@
           "source_name": "TVS Motor monthly sales releases",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 140346,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 158050,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 156791,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 196217,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 205272,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 177105,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 166949,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 179405,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 1712234,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2021-05",
               "label": "May 2021",
               "units": 154416,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-166889-units-in-may-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-166889-units-in-may-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-06",
               "label": "Jun 2021",
               "units": 238092,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-by-27percent-in-june-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-by-27percent-in-june-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-07",
               "label": "Jul 2021",
               "units": 262728,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-10-percent-growth-with-sales-of-278855-units-in-july-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-10-percent-growth-with-sales-of-278855-units-in-july-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-08",
               "label": "Aug 2021",
               "units": 274313,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-290694-units-in-august-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-290694-units-in-august-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-09",
               "label": "Sep 2021",
               "units": 332511,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-a-sales-growth-of-6-percent-in-september-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-a-sales-growth-of-6-percent-in-september-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-10",
               "label": "Oct 2021",
               "units": 341513,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-355033-units-in-october-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-355033-units-in-october-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-11",
               "label": "Nov 2021",
               "units": 257863,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-272,693-units-in-november-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-272,693-units-in-november-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-12",
               "label": "Dec 2021",
               "units": 235392,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-250,933-units-in-december-2021"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-250,933-units-in-december-2021",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-01",
               "label": "Jan 2022",
               "units": 254139,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-266,788-units-in-january-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-266,788-units-in-january-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-02",
               "label": "Feb 2022",
               "units": 267625,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-281714-units-in-february-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-registers-sales-of-281714-units-in-february-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-03",
               "label": "Mar 2022",
               "units": 292918,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-307,954-units-in-March-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-307,954-units-in-March-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-04",
               "label": "Apr 2022",
               "units": 226193,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-In-April-2022-Grows-By-24-percentage"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-In-April-2022-Grows-By-24-percentage",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-05",
               "label": "May 2022",
               "units": 154416,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-302,982-units-in-May-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-302,982-units-in-May-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-06",
               "label": "Jun 2022",
               "units": 238092,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-302,982-units-in-June-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-registers-sales-of-302,982-units-in-June-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-07",
               "label": "Jul 2022",
               "units": 262728,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-Grows-By-13-In-July-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-Grows-By-13-In-July-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-08",
               "label": "Aug 2022",
               "units": 274313,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-Grows-By-15-In-August-2022"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/TVS-Motor-Company-Sales-Grows-By-15-In-August-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-09",
               "label": "Sep 2022",
               "units": 332511,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grows-by-9percent-in-september-2022"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grows-by-9percent-in-september-2022",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 250831,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2022-11",
               "label": "Nov 2022",
               "units": 257863,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grows-by-2-in-november-2022"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grows-by-2-in-november-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2022-12",
               "label": "Dec 2022",
               "units": 227666,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-sales-of-242,012-units-in-december-2022"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-sales-of-242,012-units-in-december-2022",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-01",
               "label": "Jan 2023",
               "units": 254139,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-29-domestic-sales-growth-and-3-overall-in-january-2023"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-29-domestic-sales-growth-and-3-overall-in-january-2023",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-02",
               "label": "Feb 2023",
               "units": 267026,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-at-276150-units-in-february-2023"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-at-276150-units-in-february-2023",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-03",
               "label": "Mar 2023",
               "units": 292918,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-march-2023-sales-registers-3-growth-22-growth-in-domestic-sales"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-march-2023-sales-registers-3-growth-22-growth-in-domestic-sales",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-04",
               "label": "Apr 2023",
               "units": 280022,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-4-sales-growth-in-april-2023"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-4-sales-growth-in-april-2023",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-05",
               "label": "May 2023",
               "units": 287058,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-may-2023-sales-registers-growth"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-may-2023-sales-registers-growth",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-06",
               "label": "Jun 2023",
               "units": 293715,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-june-2023-sales-registers-growth"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-june-2023-sales-registers-growth",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 214456,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2023-08",
               "label": "Aug 2023",
               "units": 315539,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-august-2023-sales-registers-growth"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-august-2023-sales-registers-growth",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 230258,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 252965,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2023-11",
               "label": "Nov 2023",
               "units": 263642,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-31-in-november-2023"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-31-in-november-2023",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-12",
               "label": "Dec 2023",
               "units": 227666,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-25-in-december-2023"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-25-in-december-2023",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-01",
               "label": "Jan 2024",
               "units": 264710,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-23-in-january-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-23-in-january-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-02",
               "label": "Feb 2024",
               "units": 267026,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-33-in-february-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-33-in-february-2024",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 254129,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2024-04",
               "label": "Apr 2024",
               "units": 294786,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-sales-growth-of-25-in-april-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-registers-sales-growth-of-25-in-april-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-05",
               "label": "May 2024",
               "units": 319295,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-may-2024-sales-registers-growth"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-may-2024-sales-registers-growth",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-06",
               "label": "Jun 2024",
               "units": 304401,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-5-per-in-june-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-5-per-in-june-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-07",
               "label": "Jul 2024",
               "units": 312307,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-9-percent-in-july-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-companys-sales-grow-by-9-percent-in-july-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-08",
               "label": "Aug 2024",
               "units": 332110,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-13-percent-august-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-13-percent-august-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-09",
               "label": "Sep 2024",
               "units": 386955,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-highest-monthly-sales-september-2024-482000-units-20-percent-growth"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-highest-monthly-sales-september-2024-482000-units-20-percent-growth",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-10",
               "label": "Oct 2024",
               "units": 420610,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-highest-monthly-sales-october-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-highest-monthly-sales-october-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-11",
               "label": "Nov 2024",
               "units": 352103,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-november-2024"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-growth-november-2024",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-12",
               "label": "Dec 2024",
               "units": 290064,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-december-2024-sales-growth-7-percent"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-december-2024-sales-growth-7-percent",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 290140,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-02",
               "label": "Feb 2025",
               "units": 357810,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grow-10-percent-february-2025"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-sales-grow-10-percent-february-2025",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 277984,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 312422,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 312736,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 285987,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 273956,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-08",
               "label": "Aug 2025",
               "units": 378841,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-achieves-its-highest-ever-sales-in-august-2025"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-company-achieves-its-highest-ever-sales-in-august-2025",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 250381,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-10",
               "label": "Oct 2025",
               "units": 543557,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-achieves-its-highest-ever-monthly-sales-in-october-2025"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-achieves-its-highest-ever-monthly-sales-in-october-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 519508,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-30-percent-november-2025"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-30-percent-november-2025",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 481389,
-              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-highest-ever-sales-revenue-profits-q3fy26"
+              "source_url": "https://www.tvsmotor.com/media/press-release/tvs-motor-highest-ever-sales-revenue-profits-q3fy26",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 511766,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-29-percent-january-2026"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-29-percent-january-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 529308,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-31-percent-in-february-2026"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grows-31-percent-in-february-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 519358,
-              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-25-percent-march-2026"
+              "source_url": "https://www.tvsmotor.com/Media/Press-Release/tvs-motor-company-sales-grow-25-percent-march-2026",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 374226,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13338,100 +14579,333 @@
           "source_name": "Bajaj Auto monthly sales reports",
           "series": [
             {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 9570,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 94637,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 4925,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 11006,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2021-09",
               "label": "Sep 2021",
               "units": 532216,
-              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/october/Press-Release-Sept-2021.ashx"
+              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/october/Press-Release-Sept-2021.ashx",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-10",
               "label": "Oct 2021",
               "units": 391303,
-              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/oct/PRESS-RELEASE-OCT-2021.ashx"
+              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/oct/PRESS-RELEASE-OCT-2021.ashx",
+              "source_lens": "company_reported"
             },
             {
               "month": "2021-11",
               "label": "Nov 2021",
               "units": 338473,
-              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/November/PRESS-RELEASE-NOV-2021.ashx"
+              "source_url": "https://www.bajajauto.com/-/media/Images/bajajauto/media-kit/press-release/2021/November/PRESS-RELEASE-NOV-2021.ashx",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 13844,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 13377,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 163926,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 171045,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 186150,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 163176,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 146281,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 148129,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 149314,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 178717,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 310897,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 182030,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 176836,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 205832,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 181109,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 195842,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 175179,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 153535,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 200163,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 149031,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 141668,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 230254,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 304221,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 2184506,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-01",
               "label": "Jan 2025",
               "units": 328413,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-jan-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-jan-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-02",
               "label": "Feb 2025",
               "units": 299418,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-feb-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-feb-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-03",
               "label": "Mar 2025",
               "units": 315732,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-mar-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-mar-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-04",
               "label": "Apr 2025",
               "units": 317937,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-apr-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-apr-2025.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 219428,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-06",
               "label": "Jun 2025",
               "units": 298484,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-june-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-june-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-07",
               "label": "Jul 2025",
               "units": 296247,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-july-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-july-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-08",
               "label": "Aug 2025",
               "units": 341887,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-aug-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-aug-2025.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 172016,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-10",
               "label": "Oct 2025",
               "units": 518170,
-              "source_url": "https://www.bajajauto.com/report/bajaj-report-2025.html"
+              "source_url": "https://www.bajajauto.com/report/bajaj-report-2025.html",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 453273,
-              "source_url": "https://www.bajajauto.com/report/bajaj-report-2025.html"
+              "source_url": "https://www.bajajauto.com/report/bajaj-report-2025.html",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 369809,
-              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-dec-2025.pdf"
+              "source_url": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/2025/press-release-dec-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 477422,
-              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"
+              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 448259,
-              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"
+              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 445377,
-              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html"
+              "source_url": "https://www.bajajauto.com/report/bajaj-report-2026.html",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 241304,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13442,22 +14916,410 @@
           "source_name": "Hyundai investor relations",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 34699,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 35182,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 42757,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 47162,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 46382,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 48250,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 43873,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 45719,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 414304,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 16051,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 34431,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 44737,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 43988,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 40691,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 37272,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 38736,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 35542,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 40567,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 38076,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 38311,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 36952,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 43188,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 39118,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 47783,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 44859,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 41287,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 45799,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 39106,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 45703,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 41813,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 45297,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 43079,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 40945,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 49625,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 50713,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 39501,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 51652,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 43539,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 48050,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 44456,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 59858,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 38156,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 42511,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 43642,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 38189,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 43009,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 42226,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 35812,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 65442,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "units": 49567,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-12",
+              "label": "Dec 2025",
+              "units": 48413,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-01",
+              "label": "Jan 2026",
+              "units": 65914,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-02",
+              "label": "Feb 2026",
+              "units": 45615,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-03",
+              "label": "Mar 2026",
+              "units": 48791,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 47449,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "Q1 FY26",
               "label": "Q1 FY26",
               "units": 180399,
-              "source_url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/investor-relations/quaterly-financials/press-release-Q1FY26.pdf"
+              "source_url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/investor-relations/quaterly-financials/press-release-Q1FY26.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "Q2 FY26",
               "label": "Q2 FY26",
               "units": 190921,
-              "source_url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/investor-relations/quaterly-financials/press-release-Q2.pdf"
+              "source_url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/investor-relations/quaterly-financials/press-release-Q2.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "Q3 FY26",
               "label": "Q3 FY26",
               "units": 195436,
-              "source_url": "https://www.hyundai.com/in/en/hyundai-story/media-center/press-release/q3-and-9m-fy26-financial-results"
+              "source_url": "https://www.hyundai.com/in/en/hyundai-story/media-center/press-release/q3-and-9m-fy26-financial-results",
+              "source_lens": "company_reported"
             }
           ]
         },
@@ -13468,112 +15330,487 @@
           "source_name": "Eicher Motors monthly sales releases",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 36163,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 43285,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 48769,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 51459,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 2637,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 57653,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 56407,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 64390,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 23354,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 15865,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 37956,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 45417,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 39884,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 36678,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "units": 33670,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 3745,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 43632,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "units": 50240,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 47923,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 55328,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 52498,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 50199,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 47322,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "units": 44651,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 53633,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 60053,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 73242,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 74481,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 60141,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 69778,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 69833,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 76428,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 68077,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2023-05",
               "label": "May 2023",
               "units": 77461,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-May-2023.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-May-2023.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-06",
               "label": "Jun 2023",
               "units": 77109,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-June-2023.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-June-2023.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 60766,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 63967,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 68778,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 74586,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2023-11",
               "label": "Nov 2023",
               "units": 47942,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-VECV-November-2023.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-VECV-November-2023.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2023-12",
               "label": "Dec 2023",
               "units": 63387,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-December-2023.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-December-2023.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-01",
               "label": "Jan 2024",
               "units": 76187,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-January-2024.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-January-2024.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-02",
               "label": "Feb 2024",
               "units": 75935,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-February-2024.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-February-2024.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-03",
               "label": "Mar 2024",
               "units": 75551,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-March-2024.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-March-2024.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2024-04",
               "label": "Apr 2024",
               "units": 81870,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-April-2024.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/Monthly-Sales-of-EML-of-April-2024.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 69798,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 61121,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2024-07",
               "label": "Jul 2024",
               "units": 73141,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/EMLMonthlyBusinessUpdate1stJuly2024.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/EMLMonthlyBusinessUpdate1stJuly2024.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 60983,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 63515,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 102146,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 99047,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 888546,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 83848,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 76398,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 82186,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-04",
               "label": "Apr 2025",
               "units": 86559,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-april-2025.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-april-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-05",
               "label": "May 2025",
               "units": 89429,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-may-2025-eml.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-may-2025-eml.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-06",
               "label": "Jun 2025",
               "units": 89540,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-june-2025.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-june-2025.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 74686,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 78232,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-09",
               "label": "Sep 2025",
               "units": 124328,
-              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-september-2025.pdf"
+              "source_url": "https://eicher.in/content/dam/eicher-motors/investor/disclosures-under-regulation-46/disclosure-under-sub-regulation(8)-of-regulation-30/monthly-sales-of-eml-of-september-2025.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 152213,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 100670,
-              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/media/press-release/monthly-sales-release-november-2025.pdf"
+              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/media/press-release/monthly-sales-release-november-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 103574,
-              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/eml-monthly-sales-december-2025.pdf"
+              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/eml-monthly-sales-december-2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 104322,
-              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-january-2026.pdf"
+              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-january-2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 100905,
-              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-february-2026.pdf"
+              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-february-2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 112334,
-              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-march-2026.pdf"
+              "source_url": "https://www.eicher.in/content/dam/eicher-motors/investor/financial-and-reports/monthly-sales-volume/monthly-sales-of-eml-of-march-2026.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 105909,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13584,28 +15821,417 @@
           "source_name": "Tata Motors CV monthly sales releases",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 21251,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 28037,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 18340,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 21835,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 38841,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 23267,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 20948,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 24541,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 350851,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 9392,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 34360,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 24953,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 46382,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 23510,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 53973,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 56971,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 32909,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 36419,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 69931,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 35345,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 36974,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 37725,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 36435,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 46566,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 40723,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 36826,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 45061,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 38965,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 46847,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 74494,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 41824,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 39773,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 39033,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 38984,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 48858,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 29700,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 43859,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 53094,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 31915,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 45701,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 45930,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 41550,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 27492,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 53884,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 38696,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 48462,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 74463,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 62769,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 24436,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 65730,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 62557,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 64978,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 110190,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "units": 85338,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 42508,
-              "source_url": "https://cv.tatamotors.com/news/tata-motors-delivers-strong-sales"
+              "source_url": "https://cv.tatamotors.com/news/tata-motors-delivers-strong-sales",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 41549,
-              "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-total-sales-of-41549-commercial-vehicle-units-in-january-2026"
+              "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-total-sales-of-41549-commercial-vehicle-units-in-january-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-02",
               "label": "Feb 2026",
               "units": 42940,
-              "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-32%25-growth-yoy-with-total-sales-of-42940-commercial-vehicle-units-in-february-2026"
+              "source_url": "https://cv.tatamotors.com/news/tata-motors-registered-32%25-growth-yoy-with-total-sales-of-42940-commercial-vehicle-units-in-february-2026",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-03",
               "label": "Mar 2026",
               "units": 47976,
-              "source_url": "https://cv.tatamotors.com/news/tata-motors-records-17-percent-growth-in-commercial-vehicle-sales-in-march-2026"
+              "source_url": "https://cv.tatamotors.com/news/tata-motors-records-17-percent-growth-in-commercial-vehicle-sales-in-march-2026",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 94579,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         },
@@ -13616,16 +16242,501 @@
           "source_name": "Ashok Leyland quarterly results",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 2834,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 4490,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 5259,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 6060,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 6583,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 8333,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 8838,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 10486,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 58066,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 2785,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 4579,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 7249,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 6958,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 8211,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "units": 7822,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 7609,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 7876,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "units": 9921,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 9602,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 11676,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 12284,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 10391,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 10105,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "units": 9785,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 10183,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 11284,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 12077,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 13084,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 10178,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 13372,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 13331,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 16124,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 15787,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 13807,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 11907,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 11600,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 11297,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 12690,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 14074,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 12946,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 11427,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 13969,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 14736,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 15183,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 16423,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 13518,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 11257,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 13914,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 11955,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 12519,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 15772,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 12824,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 166390,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 15748,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 14393,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 16365,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 15766,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 13763,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 13049,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 14174,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 14305,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 13273,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 16557,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "units": 15375,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-12",
+              "label": "Dec 2025",
+              "units": 15238,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-01",
+              "label": "Jan 2026",
+              "units": 19205,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-02",
+              "label": "Feb 2026",
+              "units": 18619,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-03",
+              "label": "Mar 2026",
+              "units": 19384,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 17821,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "Q1 FY26",
               "label": "Q1 FY26",
               "units": 44238,
-              "source_url": "https://www.ashokleyland.com/backend/wp-content/uploads/2025/08/Q1FY-26.pdf"
+              "source_url": "https://www.ashokleyland.com/backend/wp-content/uploads/2025/08/Q1FY-26.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "Q2 FY26",
               "label": "Q2 FY26",
               "units": 44004,
-              "source_url": "https://www.ashokleyland.com/in/pressrelease/ashok-leyland-q2-pbt-up-23-at-rs-1083-cr-pat-all-time-high-of-rs-771-cr-ebitda-up-at-12-1-announces-100-interim-dividend-of-rs-1-per-share"
+              "source_url": "https://www.ashokleyland.com/in/pressrelease/ashok-leyland-q2-pbt-up-23-at-rs-1083-cr-pat-all-time-high-of-rs-771-cr-ebitda-up-at-12-1-announces-100-interim-dividend-of-rs-1-per-share",
+              "source_lens": "company_reported"
             }
           ]
         },
@@ -13636,16 +16747,158 @@
           "source_name": "Escorts Kubota earnings presentations",
           "series": [
             {
-              "month": "Q4 FY25",
-              "label": "Q4 FY25",
-              "units": 26633,
-              "source_url": "https://static.escortskubota.com/new/pdf/2025/may/Q4FY25-Earning-PPT-Final.pdf"
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 7536,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 8274,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "units": 5869,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 6313,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 6043,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 7395,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 87444,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "units": 9123,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "units": 6575,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "units": 7685,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "units": 6355,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 8533,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 9400,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 8662,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 6999,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 8212,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-01",
+              "label": "Jan 2026",
+              "units": 12839,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-02",
+              "label": "Feb 2026",
+              "units": 10568,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-03",
+              "label": "Mar 2026",
+              "units": 9377,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 9081,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "Q1 FY26",
               "label": "Q1 FY26",
               "units": 30581,
-              "source_url": "https://static.escortskubota.com/new/pdf/2025/august/EKL_2025_08_04_Intimation_of_Earning_Presentation-Signed.pdf"
+              "source_url": "https://static.escortskubota.com/new/pdf/2025/august/EKL_2025_08_04_Intimation_of_Earning_Presentation-Signed.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "Q4 FY25",
+              "label": "Q4 FY25",
+              "units": 26633,
+              "source_url": "https://static.escortskubota.com/new/pdf/2025/may/Q4FY25-Earning-PPT-Final.pdf",
+              "source_lens": "company_reported"
             }
           ]
         },
@@ -13656,22 +16909,109 @@
           "source_name": "ACE earnings presentations",
           "series": [
             {
+              "month": "2025-05",
+              "label": "May 2025",
+              "units": 685,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "units": 884,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "units": 401,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "units": 382,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 441,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 453,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "units": 549,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-12",
+              "label": "Dec 2025",
+              "units": 589,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-01",
+              "label": "Jan 2026",
+              "units": 652,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-02",
+              "label": "Feb 2026",
+              "units": 699,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-03",
+              "label": "Mar 2026",
+              "units": 715,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 733,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "Q1 FY26",
               "label": "Q1 FY26",
               "units": 2337,
-              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20Presentation%20Q1FY2026.pdf"
+              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20Presentation%20Q1FY2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "Q2 FY26",
               "label": "Q2 FY26",
               "units": 2348,
-              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20presentation%20Q2%20FY2026.pdf"
+              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20presentation%20Q2%20FY2026.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "Q3 FY26",
               "label": "Q3 FY26",
               "units": 2710,
-              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20Presentation%20Q3%20FY%202026.pdf"
+              "source_url": "https://www.ace-cranes.com/public/front/pdf/Earning%20Presentation%20Q3%20FY%202026.pdf",
+              "source_lens": "company_reported"
             }
           ]
         },
@@ -13682,76 +17022,487 @@
           "source_name": "Atul Auto sales updates",
           "series": [
             {
+              "month": "2020-08",
+              "label": "Aug 2020",
+              "units": 625,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-09",
+              "label": "Sep 2020",
+              "units": 940,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-10",
+              "label": "Oct 2020",
+              "units": 876,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-11",
+              "label": "Nov 2020",
+              "units": 1065,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2020-12",
+              "label": "Dec 2020",
+              "units": 1187,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-01",
+              "label": "Jan 2021",
+              "units": 1322,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-02",
+              "label": "Feb 2021",
+              "units": 1332,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-03",
+              "label": "Mar 2021",
+              "units": 1342,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-04",
+              "label": "Apr 2021",
+              "units": 10677,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "units": 286,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "units": 594,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "units": 1056,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "units": 1133,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "units": 1263,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "units": 1401,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "units": 1400,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "units": 1476,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "units": 1221,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "units": 1225,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "units": 1367,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "units": 1310,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "units": 1146,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "units": 1225,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "units": 1370,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "units": 1437,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "units": 1437,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-10",
+              "label": "Oct 2022",
+              "units": 1570,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "units": 1808,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "units": 1558,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "units": 1617,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "units": 1908,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "units": 2475,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "units": 1562,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "units": 1568,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "units": 1639,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-07",
+              "label": "Jul 2023",
+              "units": 1404,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "units": 1719,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-09",
+              "label": "Sep 2023",
+              "units": 2163,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-10",
+              "label": "Oct 2023",
+              "units": 2185,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "units": 2105,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "units": 1937,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "units": 2068,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "units": 1961,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "units": 2173,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "units": 1762,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "units": 2450,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "units": 2022,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "units": 2376,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
               "month": "2024-08",
               "label": "Aug 2024",
               "units": 2733,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2024/12/BSEnseSalesPerformanceAugust2024.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2024/12/BSEnseSalesPerformanceAugust2024.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "units": 2182,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "units": 3212,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "units": 2512,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "units": 27083,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-01",
               "label": "Jan 2025",
               "units": 2378,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/02/Letter_SalesPerformance_BSE_NSE_January2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/02/Letter_SalesPerformance_BSE_NSE_January2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-02",
               "label": "Feb 2025",
               "units": 2360,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/03/Letter_SalesPerformance_BSE_NSE_February2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/03/Letter_SalesPerformance_BSE_NSE_February2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-03",
               "label": "Mar 2025",
               "units": 3391,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/04/Letter_SalesPerformance_BSE_NSE_March2025_signed.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/04/Letter_SalesPerformance_BSE_NSE_March2025_signed.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-04",
               "label": "Apr 2025",
               "units": 1427,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/05/Signed_Letter_SalesPerformance_BSE_NSE_April2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/05/Signed_Letter_SalesPerformance_BSE_NSE_April2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-05",
               "label": "May 2025",
               "units": 2357,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/06/Letter_SalesPerformance_BSE_NSE_May2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/06/Letter_SalesPerformance_BSE_NSE_May2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-06",
               "label": "Jun 2025",
               "units": 2511,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/07/Letter_SalesPerformance_BSE_NSE_June2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/07/Letter_SalesPerformance_BSE_NSE_June2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-07",
               "label": "Jul 2025",
               "units": 2500,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/08/Letter_SalesPerformance_BSE_NSE_July2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/08/Letter_SalesPerformance_BSE_NSE_July2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-08",
               "label": "Aug 2025",
               "units": 2601,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/09/Letter_SalesPerformance_BSE_NSE_August2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/09/Letter_SalesPerformance_BSE_NSE_August2025.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "units": 2358,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2025-10",
+              "label": "Oct 2025",
+              "units": 3581,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             },
             {
               "month": "2025-11",
               "label": "Nov 2025",
               "units": 2802,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/12/SignedLetter_SalesPerformance_BSE_NSE_November2025.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2025/12/SignedLetter_SalesPerformance_BSE_NSE_November2025.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2025-12",
               "label": "Dec 2025",
               "units": 3602,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2026/01/Signed_Letter_SalesPerformance_BSE_NSE_December2025-003.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2026/01/Signed_Letter_SalesPerformance_BSE_NSE_December2025-003.pdf",
+              "source_lens": "company_reported"
             },
             {
               "month": "2026-01",
               "label": "Jan 2026",
               "units": 3606,
-              "source_url": "https://atulauto.co.in/wp-content/uploads/2026/02/SignedLetter_SalesPerformance_BSE_NSE_January2026.pdf"
+              "source_url": "https://atulauto.co.in/wp-content/uploads/2026/02/SignedLetter_SalesPerformance_BSE_NSE_January2026.pdf",
+              "source_lens": "company_reported"
+            },
+            {
+              "month": "2026-02",
+              "label": "Feb 2026",
+              "units": 3140,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-03",
+              "label": "Mar 2026",
+              "units": 3022,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
+            },
+            {
+              "month": "2026-04",
+              "label": "Apr 2026",
+              "units": 2649,
+              "source_url": "https://fada.in/press-releases.php",
+              "source_lens": "fada_retail"
             }
           ]
         }
