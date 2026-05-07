@@ -418,20 +418,23 @@ def parse_siam_release(html: str, source_url: str) -> dict:
     # \s* (not \s+) before "units" because SIAM's HTML occasionally has
     # typos with no space — e.g. Sep 2025 prints "84,077units" for the
     # Three-wheeler row. Tightness is preserved everywhere else: the
-    # number must still be sandwiched between the "sales were" and
+    # number must still be sandwiched between the "sales were|was" and
     # "in <Month> <Year>" anchors.
+    # Older (2021/early-2022/early-2023) SIAM releases use "sales was N
+    # units in <Month>" (singular). The current monthly format uses
+    # "sales were N units" (plural). Accept either form.
     pv_match = re.search(
-        rf"Passenger Vehicles.*?sales were\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
+        rf"Passenger Vehicles.*?sales (?:was|were)\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
         html,
         flags=re.IGNORECASE | re.DOTALL,
     )
     three_w_match = re.search(
-        rf"Three-wheeler sales were\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
+        rf"Three-wheeler sales (?:was|were)\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
         html,
         flags=re.IGNORECASE | re.DOTALL,
     )
     two_w_match = re.search(
-        rf"Two-wheeler sales were\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
+        rf"Two-wheeler sales (?:was|were)\s+([\d,]+)\s*units\s+in\s+{re.escape(month_name)}\s+{year_text}",
         html,
         flags=re.IGNORECASE | re.DOTALL,
     )
