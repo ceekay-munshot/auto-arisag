@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T10:05:41.503740+00:00",
+  "generated_at": "2026-05-07T10:45:32.496723+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23267,6 +23267,151 @@
       },
       "latest_month": "2026-03",
       "months": [
+        {
+          "month": "2020-11",
+          "label": "Nov 2020",
+          "release_date": "2020-12-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-november-2020",
+          "production_total": 2296701,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 264898,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1600379,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 23626,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1888903,
+          "exports": []
+        },
+        {
+          "month": "2020-12",
+          "label": "Dec 2020",
+          "release_date": "2021-01-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-december-2020",
+          "production_total": 1907811,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 252998,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1127917,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 22126,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1403041,
+          "exports": []
+        },
+        {
+          "month": "2021-01",
+          "label": "Jan 2021",
+          "release_date": "2021-02-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-january-2021",
+          "production_total": 2206261,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 276554,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1429928,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 26335,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1732817,
+          "exports": []
+        },
+        {
+          "month": "2021-02",
+          "label": "Feb 2021",
+          "release_date": "2021-03-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-february-2021",
+          "production_total": 2252877,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 281380,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1426865,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 27331,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1735576,
+          "exports": []
+        },
+        {
+          "month": "2021-03",
+          "label": "Mar 2021",
+          "release_date": "2021-04-12",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/production-domestic-sales-and-exports-data-for-the-fy-21-april-2020-to-march-2021",
+          "production_total": null,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 291000,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1497000,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 32000,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1820000,
+          "exports": []
+        },
         {
           "month": "2021-06",
           "label": "Jun 2021",
