@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T09:38:05.087435+00:00",
+  "generated_at": "2026-05-07T09:41:40.640433+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23323,6 +23323,35 @@
             }
           ],
           "domestic_total": 2231520,
+          "exports": []
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "release_date": "2025-10-13",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2025-and-q2-julyseptember-2025/591",
+          "production_total": 3073654,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 372458,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 2160889,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 84077,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 2617424,
           "exports": []
         },
         {
@@ -57210,8 +57239,8 @@
       "message": "FADA retail month continuity has gaps."
     },
     {
-      "status": "warning",
-      "message": "SIAM wholesale month continuity has gaps."
+      "status": "ok",
+      "message": "SIAM wholesale month continuity validated."
     },
     {
       "status": "warning",

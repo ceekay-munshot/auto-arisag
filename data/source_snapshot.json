@@ -5061,6 +5061,26 @@
     "coverage_note": "March 2026 figures sourced from the SIAM Q4 (Jan-Mar 2026) & FY 2025-26 release; production total is bundled at Q4 / FY level rather than monthly so the monthly figure is left at 0 for Mar 2026.",
     "monthly_series": [
       {
+        "month": "2025-09",
+        "release_date": "2025-10-13",
+        "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2025-and-q2-julyseptember-2025/591",
+        "production_total": 3073654,
+        "domestic_sales": {
+          "PV": {
+            "units": 372458,
+            "yoy_pct": null
+          },
+          "2W": {
+            "units": 2160889,
+            "yoy_pct": null
+          },
+          "3W": {
+            "units": 84077,
+            "yoy_pct": null
+          }
+        }
+      },
+      {
         "month": "2025-10",
         "release_date": "2025-11-14",
         "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-october-2025/592",
@@ -5242,7 +5262,7 @@
     "period_label": "H1 FY2025-26",
     "release_date": "2026-01-14",
     "source_url": "https://www.acma.in/press-release.php",
-    "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 — steady demand despite a swing into trade deficit.",
+    "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 \u2014 steady demand despite a swing into trade deficit.",
     "metrics": [
       {
         "label": "Industry turnover",
@@ -5278,8 +5298,8 @@
     "insights": [
       "Industry growth slowed from 9.6% (FY25) to 6.8% (H1 FY26) on softer global demand and selective domestic moderation.",
       "OEM demand still leads, with passenger vehicles and LCVs the strongest contributors.",
-      "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves — supports the larger-vehicle-parc thesis.",
-      "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports — an early warning for ancillary cap-ex priorities.",
+      "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves \u2014 supports the larger-vehicle-parc thesis.",
+      "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports \u2014 an early warning for ancillary cap-ex priorities.",
       "EV components now contribute 4.6% of total OEM supplies as electrification accelerates."
     ],
     "scope_note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
