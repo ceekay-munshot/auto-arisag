@@ -1208,6 +1208,80 @@ function setupNewsPicker() {
   });
 }
 
+// OEM dropdown groups for the spotlight chart. Each company maps to its
+// primary segment so the dropdown reads as a finder ("looking for a 2W
+// pure-play? open the Two-Wheelers section") rather than a flat list of
+// 34 names. PV / 2W / CV+3W / Tractors+CE = the four segments FADA
+// itself reports on, kept consistent so the mental model is one click
+// of muscle memory.
+const OEM_SPOTLIGHT_GROUPS = [
+  {
+    label: "Passenger Vehicles",
+    companies: [
+      "Maruti Suzuki", "Hyundai Motor India", "Tata Motors",
+      "Honda Cars India", "Toyota Kirloskar Motor", "Kia India",
+      "Skoda Auto Volkswagen Group", "JSW MG Motor India",
+      "Renault India", "Nissan Motor India",
+      "Mercedes-Benz Group", "BMW India", "Jaguar Land Rover India",
+      "BYD India",
+    ],
+  },
+  {
+    label: "Two-Wheelers",
+    companies: [
+      "Hero MotoCorp", "Honda Motorcycle & Scooter India",
+      "TVS Motor", "Bajaj Auto", "Eicher Motors",
+      "Suzuki Motorcycle India", "India Yamaha Motor",
+      "Ola Electric", "Ather Energy",
+    ],
+  },
+  {
+    label: "Commercial Vehicles & 3-Wheelers",
+    companies: [
+      "Ashok Leyland", "SML Isuzu", "Force Motors",
+      "Atul Auto", "Piaggio Vehicles",
+    ],
+  },
+  {
+    label: "Tractors & Construction Equipment",
+    companies: [
+      "Mahindra & Mahindra", "Escorts Kubota",
+      "TAFE", "International Tractors (Sonalika)",
+      "John Deere India", "Action Construction Equipment",
+    ],
+  },
+];
+
+function renderOemSpotlightOptions(visibleTrends, selectedCompany) {
+  // Build a quick lookup so we can preserve each option's label as
+  // analyze.py emitted it (which may differ from the canonical group key).
+  const trendByCompany = new Map(visibleTrends.map((t) => [t.company, t]));
+  const placed = new Set();
+  const groups = OEM_SPOTLIGHT_GROUPS.map((group) => {
+    const items = group.companies
+      .map((name) => trendByCompany.get(name))
+      .filter(Boolean);
+    items.forEach((item) => placed.add(item.company));
+    return { label: group.label, items };
+  });
+  // Anything in visibleTrends that wasn't in a group falls into "Other"
+  // — keeps the dropdown comprehensive even if a new OEM lands before
+  // we get a chance to slot it.
+  const stragglers = visibleTrends.filter((t) => !placed.has(t.company));
+  if (stragglers.length) {
+    groups.push({ label: "Other", items: stragglers });
+  }
+  return groups
+    .filter((g) => g.items.length)
+    .map((g) => `
+      <optgroup label="${escapeHtml(g.label)}">
+        ${g.items.map((item) => `
+          <option value="${escapeHtml(item.company)}" ${item.company === selectedCompany ? "selected" : ""}>${escapeHtml(item.label)}</option>
+        `).join("")}
+      </optgroup>
+    `).join("");
+}
+
 function setupCompanyTrendPicker() {
   const picker = document.querySelector("[data-company-trend]");
   if (!picker) {
@@ -4491,9 +4565,7 @@ function renderUnifiedCompanySpotlight() {
         </div>
         <div class="oem-spotlight-controls">
           <select class="filter-select" data-company-trend>
-            ${visibleTrends.map((item) => `
-              <option value="${item.company}" ${item.company === selected.company ? "selected" : ""}>${item.label}</option>
-            `).join("")}
+            ${renderOemSpotlightOptions(visibleTrends, selected.company)}
           </select>
           <button
             type="button"
@@ -4868,9 +4940,7 @@ function renderCompanyUnitTrend() {
           <div class="filter-field compact">
             <label class="filter-label" for="company-trend-select">Company</label>
             <select id="company-trend-select" class="filter-select" data-company-trend>
-              ${visibleTrends.map((item) => `
-                <option value="${item.company}" ${item.company === selected.company ? "selected" : ""}>${item.label}</option>
-              `).join("")}
+              ${renderOemSpotlightOptions(visibleTrends, selected.company)}
             </select>
           </div>
           <div class="company-trend-meta">
