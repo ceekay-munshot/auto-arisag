@@ -1119,6 +1119,13 @@ p {
   margin-top: 4px;
 }
 
+.chart-tooltip-unit {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(247, 241, 228, 0.78);
+  letter-spacing: 0.01em;
+}
+
 .chart-tooltip-note {
   font-size: 0.72rem;
   color: #ffd9c8;

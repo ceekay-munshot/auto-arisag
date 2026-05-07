@@ -1475,7 +1475,9 @@ function showTooltip(text, x, y) {
       html = `
         <div class="chart-tooltip-row chart-tooltip-label">${escapeHtml(data.label || "")}</div>
         ${data.period ? `<div class="chart-tooltip-row chart-tooltip-period">${escapeHtml(data.period)}</div>` : ""}
-        <div class="chart-tooltip-row chart-tooltip-value">${escapeHtml(data.value || "")}</div>
+        <div class="chart-tooltip-row chart-tooltip-value">
+          ${escapeHtml(data.value || "")}${data.unit ? `<span class="chart-tooltip-unit"> ${escapeHtml(data.unit)}</span>` : ""}
+        </div>
         ${data.note ? `<div class="chart-tooltip-row chart-tooltip-note">${escapeHtml(data.note)}</div>` : ""}
       `;
     }
@@ -2588,7 +2590,7 @@ function renderRetailTrendOnly() {
             </div>
           ` : "")}
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents())}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents(), "vehicles retailed")}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -2693,7 +2695,7 @@ function renderCategoryMixShift(retail, allowed) {
         </div>
       </div>
       <div class="chart-frame">
-        ${lineChart(labels, series, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents())}
+        ${lineChart(labels, series, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents(), "share of total volume")}
       </div>
       <div class="chart-legend">
         ${series.map((s) => legendItem(s.label, s.color)).join("")}
@@ -2817,7 +2819,7 @@ function renderRetailSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents())}
+            ${lineChart(months.map((item) => item.label), trendSeries, axisFormat, formatUnits, buildChartEvents(), "vehicles retailed")}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -3007,7 +3009,7 @@ function renderEvSection() {
           </div>
         </div>
         <div class="chart-frame">
-          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2), buildChartEvents())}
+          ${lineChart(months.map((item) => item.label), evSeries, (value) => `${value.toFixed(1)}%`, (value) => formatPct(value, 2), buildChartEvents(), "EV share of category")}
         </div>
         <div class="chart-legend">
           ${evSeries.map((series) => legendItem(series.label, series.color)).join("")}
@@ -3429,6 +3431,8 @@ function renderEvTrendExplorer() {
           }],
           axisFormat,
           (value) => formatUnits(value),
+          [],
+          "EV units retailed",
         )}
       </div>
       <div class="chart-legend">
@@ -3519,6 +3523,8 @@ function renderStateRegistrationExplorer() {
           ],
           axisFormat,
           formatUnits,
+          [],
+          "Vahan registrations",
         )}
       </div>
       <p class="legend-note">${module.source_meta.note}</p>
@@ -3712,6 +3718,8 @@ function renderChannelPulse() {
                   [{ label: "Wedge (units)", color: wedgeColor(entry.cumulative), values: entry.series.map((p) => p.wedge) }],
                   axisFormat,
                   formatUnits,
+                  [],
+                  "wholesale - retail (units)",
                 )}
               </div>
               <p class="wedge-reading">${wedgeReading(entry)}</p>
@@ -3863,7 +3871,7 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
         </label>
       </div>
       <div class="chart-frame compact">
-        ${lineChart(visibleMonths.map(monthLabel), chartSeries, axisFormat, formatUnits, buildChartEvents())}
+        ${lineChart(visibleMonths.map(monthLabel), chartSeries, axisFormat, formatUnits, buildChartEvents(), "vehicles retailed")}
       </div>
       ${validSelection === "ALL" ? `
         <div class="chart-legend">
@@ -3968,7 +3976,7 @@ function renderUrbanRuralCard(retail, latestRows) {
         `).join("")}
       </div>
       <div class="chart-frame compact">
-        ${lineChart(labels, chartSeries, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents())}
+        ${lineChart(labels, chartSeries, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents(), "YoY growth")}
       </div>
       <div class="urban-rural-latest-strip">
         <span class="urban-rural-strip-meta">Latest month (${latest.label}):</span>
@@ -4351,6 +4359,7 @@ function renderUnifiedCompanySpotlight() {
           valueFormatter,
           tooltipFormatter,
           buildChartEvents({ company: selected.company }),
+          indexed ? "" : "units retailed",
         )}
       </div>
     </div>
@@ -4720,6 +4729,8 @@ function renderCompanyUnitTrend() {
             [{ label: selected.label, color: dashboardData.chart_colors.TOTAL, values: series.map((point) => point.units) }],
             axisFormat,
             formatUnits,
+            [],
+            "units (company-reported)",
           )}
         </div>
         <p class="legend-note">This chart uses company-reported unit series from official company disclosures. Some companies report monthly while others disclose quarterly periods. It is intentionally kept separate from FADA retail OEM tables.</p>
@@ -4892,6 +4903,8 @@ function renderRegistrationSection() {
               [{ label: "Registrations", color: dashboardData.chart_colors.TOTAL, values: months.map((item) => item.total_units) }],
               axisFormat,
               formatUnits,
+              [],
+              "Vahan registrations",
             )}
           </div>
         </div>
@@ -4965,7 +4978,7 @@ function renderWholesaleSection() {
             </div>
           </div>
           <div class="chart-frame">
-            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits, buildChartEvents())}
+            ${lineChart(months.map((item) => item.label), series, axisFormat, formatUnits, buildChartEvents(), "vehicles retailed")}
           </div>
           <div class="chart-legend">
             ${series.map((item) => legendItem(item.label, item.color)).join("")}
@@ -5068,7 +5081,7 @@ function renderWholesaleExportsCard(wholesale, months) {
         </div>
       </div>
       <div class="chart-frame">
-        ${lineChart(monthsWithExports.map(monthLabel), series, axisFormat, formatUnits, buildChartEvents())}
+        ${lineChart(monthsWithExports.map(monthLabel), series, axisFormat, formatUnits, buildChartEvents(), "exports (units)")}
       </div>
       <div class="chart-legend">
         ${series.map((s) => legendItem(s.label, s.color)).join("")}
@@ -5259,7 +5272,7 @@ function renderSegmentShareExplorer() {
         </div>
         ${renderTable(`segment-share-${selectedOption?.id || "default"}`, columns, rows, "segment-share-table")}
         <div class="chart-frame compact">
-          ${lineChart(trendLabels, chartSeries, axisFormat, formatUnits)}
+          ${lineChart(trendLabels, chartSeries, axisFormat, formatUnits, [], "units retailed")}
         </div>
         <div class="chart-legend">
           ${chartSeries.map((item) => legendItem(item.label, item.color)).join("")}
@@ -5351,6 +5364,8 @@ function renderRawMaterialExplorer() {
           series,
           (value) => `${Number(value || 0).toFixed(0)}`,
           (value) => `${Number(value || 0).toFixed(1)} index`,
+          [],
+          "(rebased: 2022 = 100)",
         )}
       </div>
       <div class="chart-legend">
@@ -5428,7 +5443,7 @@ function renderCompanyExposureTrendExplorer() {
         </div>
       </div>
       <div class="chart-frame compact">
-        ${lineChart(labels, chartSeries, axisFormat, formatUnits)}
+        ${lineChart(labels, chartSeries, axisFormat, formatUnits, [], "units")}
       </div>
       <div class="chart-legend">
         ${chartSeries.map((item) => legendItem(item.label, item.color)).join("")}
@@ -6920,6 +6935,8 @@ function renderCreditPulseSection() {
           }],
           (v) => v == null ? "" : `${Number(v).toFixed(2)}%`,
           (v) => v == null ? "" : `${Number(v).toFixed(2)}%`,
+          [],
+          "of total bank lending",
         )}
       </div>
     ` : "";
@@ -7018,7 +7035,7 @@ function renderCreditPulseSection() {
           </div>
           ${seedNote}
           <div class="chart-frame">
-            ${lineChart(months.map((point) => point.label), trendSeries, axisFormat, formatCrore, buildChartEvents())}
+            ${lineChart(months.map((point) => point.label), trendSeries, axisFormat, formatCrore, buildChartEvents(), "₹ crore outstanding")}
           </div>
           <div class="chart-legend">
             ${trendSeries.map((s) => legendItem(s.label, s.color)).join("")}
@@ -7041,6 +7058,8 @@ function renderCreditPulseSection() {
               yoyComparisonChartSeries,
               (value) => `${Number(value || 0).toFixed(1)}%`,
               (value) => `${Number(value || 0).toFixed(1)}%`,
+              [],
+              "YoY growth",
             )}
           </div>
           <div class="chart-legend">
@@ -7747,7 +7766,7 @@ function setupCreditPulseExplainer() {
   }
 }
 
-function lineChart(labels, series, formatter, tooltipFormatter = formatter, events = []) {
+function lineChart(labels, series, formatter, tooltipFormatter = formatter, events = [], unit = "") {
   const activeSeries = series.filter((item) => item.values.some((value) => value !== null && value !== undefined));
   const width = 820;
   const height = 320;
@@ -8098,6 +8117,7 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
             label: item.label,
             period: point.label,
             value: tooltipFormatter(point.value),
+            unit: unit,
             note: "",
           });
           const dotMarkup = showDotMarkers && !isLatest
