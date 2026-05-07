@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T09:02:19.979986+00:00",
+  "generated_at": "2026-05-07T09:29:40.416531+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23268,29 +23268,87 @@
       "latest_month": "2026-03",
       "months": [
         {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "release_date": "2025-08-14",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-july-2025/584",
+          "production_total": 2698519,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 340772,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1567267,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 69403,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1977442,
+          "exports": []
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "release_date": "2025-09-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-august-2025/590",
+          "production_total": 2693049,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 321840,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1833921,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 75759,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 2231520,
+          "exports": []
+        },
+        {
           "month": "2025-10",
           "label": "Oct 2025",
           "release_date": "2025-11-14",
-          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=592",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-october-2025/592",
           "production_total": 2801412,
           "domestic_sales": [
             {
               "category": "PV",
               "label": "Passenger Vehicles",
               "units": 460739,
-              "yoy_pct": 17.2
+              "yoy_pct": null
             },
             {
               "category": "2W",
               "label": "Two-Wheelers",
               "units": 2210727,
-              "yoy_pct": 2.1
+              "yoy_pct": null
             },
             {
               "category": "3W",
               "label": "Three-Wheelers",
               "units": 81288,
-              "yoy_pct": 5.9
+              "yoy_pct": null
             }
           ],
           "domestic_total": 2752754,
@@ -23300,26 +23358,26 @@
           "month": "2025-11",
           "label": "Nov 2025",
           "release_date": "2025-12-12",
-          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=48&pgidtrail=50&pid=593",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-november-2025/593",
           "production_total": 2943456,
           "domestic_sales": [
             {
               "category": "PV",
               "label": "Passenger Vehicles",
               "units": 412405,
-              "yoy_pct": 18.7
+              "yoy_pct": null
             },
             {
               "category": "2W",
               "label": "Two-Wheelers",
               "units": 1944475,
-              "yoy_pct": 21.2
+              "yoy_pct": null
             },
             {
               "category": "3W",
               "label": "Three-Wheelers",
               "units": 71999,
-              "yoy_pct": 21.3
+              "yoy_pct": null
             }
           ],
           "domestic_total": 2428879,
@@ -23358,7 +23416,7 @@
           "month": "2026-01",
           "label": "Jan 2026",
           "release_date": "2026-02-13",
-          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=597",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-january-2026/597",
           "production_total": 2927394,
           "domestic_sales": [
             {
@@ -23387,7 +23445,7 @@
           "month": "2026-02",
           "label": "Feb 2026",
           "release_date": "2026-03-13",
-          "source_url": "https://www.siam.in/pressrelease-details.aspx?mpgid=53&pgidtrail=50&pid=603",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-performance-of-february-2026/603",
           "production_total": 2864612,
           "domestic_sales": [
             {
@@ -57152,8 +57210,8 @@
       "message": "FADA retail month continuity has gaps."
     },
     {
-      "status": "ok",
-      "message": "SIAM wholesale month continuity validated."
+      "status": "warning",
+      "message": "SIAM wholesale month continuity has gaps."
     },
     {
       "status": "warning",
