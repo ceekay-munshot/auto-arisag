@@ -7782,6 +7782,10 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   // "Aug 2022 · Feb 2023 · Jan 2024 · Jan 2025 · Apr 2026" — irregular
   // intervals = unreadable timeline. Bloomberg / FT convention is year
   // boundaries; we follow that.
+  // Important: a 12-month window often contains only 1 January, which
+  // would yield only 2 ticks (Jan + last) and a giant unlabelled stretch
+  // before the January. We require at least 3 January-anchored ticks for
+  // the year strategy; otherwise fall back to evenly-spaced "MMM YYYY".
   const MIN_LABEL_GAP_PX = 60;
   const indexToPx = (idx) => pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
   const monthYearRe = /^([A-Za-z]{3,})\s+(\d{4})$/;
@@ -7789,18 +7793,33 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const yearOnlyDisplay = new Map(); // index -> override display label
   let candidateIndices;
   if (isMonthYearSeries) {
-    candidateIndices = [];
+    const januaryIndices = [];
     labels.forEach((label, i) => {
       const m = `${label}`.match(monthYearRe);
-      const monthName = m[1].slice(0, 3).toLowerCase();
-      const year = m[2];
-      if (monthName === "jan") {
-        candidateIndices.push(i);
-        yearOnlyDisplay.set(i, year);
-      }
+      if (m[1].slice(0, 3).toLowerCase() === "jan") januaryIndices.push({ idx: i, year: m[2] });
     });
-    if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
-      candidateIndices.push(labels.length - 1);
+    if (januaryIndices.length >= 3) {
+      // Year-strategy: clean year boundaries + last point.
+      candidateIndices = [];
+      januaryIndices.forEach(({ idx, year }) => {
+        candidateIndices.push(idx);
+        yearOnlyDisplay.set(idx, year);
+      });
+      if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
+        candidateIndices.push(labels.length - 1);
+      }
+    } else {
+      // Short-window strategy (12-24 months, < 3 Januarys): evenly-spaced
+      // "MMM YYYY" labels so the eye gets ~5 reference points across the
+      // window. Always include first + last so the user sees the data
+      // window endpoints.
+      const desiredCount = Math.min(6, labels.length);
+      const step = Math.max(1, Math.floor((labels.length - 1) / (desiredCount - 1)));
+      candidateIndices = [];
+      for (let i = 0; i < labels.length; i += step) candidateIndices.push(i);
+      if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
+        candidateIndices.push(labels.length - 1);
+      }
     }
   } else if (labels.length > 10) {
     const step = Math.ceil(labels.length / 6);
