@@ -176,6 +176,174 @@
         }
       },
       {
+        "month": "2019-04",
+        "release_date": "2019-04-15",
+        "source_url": "file://160c4741a8033cAutomobile_Retail_Sales_Data_for_April_2019.pdf",
+        "categories": {
+          "PV": {
+            "units": 242457,
+            "yoy_pct": -2.0,
+            "mom_pct": -2.0
+          },
+          "2W": {
+            "units": 1285470,
+            "yoy_pct": -4.0,
+            "mom_pct": -9.0
+          },
+          "3W": {
+            "units": 47183,
+            "yoy_pct": -12.0,
+            "mom_pct": -13.0
+          },
+          "CV": {
+            "units": 63360,
+            "yoy_pct": 2.0,
+            "mom_pct": -16.0
+          },
+          "TOTAL": {
+            "units": 1638470,
+            "yoy_pct": -4.0,
+            "mom_pct": -8.0
+          },
+          "TRACTOR": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2019-05",
+        "release_date": "2018-05-19",
+        "source_url": "file://160c47402529d7Automobile Retail Sales Data for May 2019.pdf",
+        "categories": {
+          "PV": {
+            "units": 251049,
+            "yoy_pct": 0.2,
+            "mom_pct": -1.0
+          },
+          "2W": {
+            "units": 1407361,
+            "yoy_pct": 6.1,
+            "mom_pct": -8.6
+          },
+          "3W": {
+            "units": 50959,
+            "yoy_pct": 5.8,
+            "mom_pct": -4.0
+          },
+          "CV": {
+            "units": 62551,
+            "yoy_pct": -2.3,
+            "mom_pct": -7.8
+          },
+          "TOTAL": {
+            "units": 1771920,
+            "yoy_pct": 4.9,
+            "mom_pct": -7.5
+          },
+          "TRACTOR": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2019-06",
+        "release_date": "2018-06-19",
+        "source_url": "file://160c472eabbcc5Retail Sales Data for June 2019.pdf",
+        "categories": {
+          "PV": {
+            "units": 224755,
+            "yoy_pct": -11.3,
+            "mom_pct": -4.6
+          },
+          "2W": {
+            "units": 1324822,
+            "yoy_pct": -6.3,
+            "mom_pct": -5.0
+          },
+          "3W": {
+            "units": 48447,
+            "yoy_pct": -5.3,
+            "mom_pct": -2.8
+          },
+          "CV": {
+            "units": 48752,
+            "yoy_pct": -22.0,
+            "mom_pct": -19.3
+          },
+          "TOTAL": {
+            "units": 1646776,
+            "yoy_pct": -7.6,
+            "mom_pct": -5.4
+          },
+          "TRACTOR": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2019-07",
+        "release_date": "2019-07-15",
+        "source_url": "file://160c4729c7e9d6Automobile Retail Sales Data for July 2019.pdf",
+        "categories": {
+          "2W": {
+            "units": 1332384,
+            "yoy_pct": 4.0,
+            "mom_pct": -5.0
+          },
+          "3W": {
+            "units": 55850,
+            "yoy_pct": 21.0,
+            "mom_pct": 3.0
+          },
+          "TOTAL": {
+            "units": 1654535,
+            "yoy_pct": 5.0,
+            "mom_pct": -6.0
+          },
+          "PV": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
         "month": "2019-09",
         "release_date": "2019-09-15",
         "source_url": "file://160c4718ad2268Automobile Retail Sales Data for September 2019.pdf",
@@ -376,6 +544,48 @@
           "TOTAL": {
             "units": 1750116,
             "yoy_pct": -7.17,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2020-02",
+        "release_date": "2020-02-15",
+        "source_url": "file://160c46fb2f366cAutomobile Retail Sales Data for February 2020.pdf",
+        "categories": {
+          "PV": {
+            "units": 226271,
+            "yoy_pct": -1.17,
+            "mom_pct": null
+          },
+          "2W": {
+            "units": 1285398,
+            "yoy_pct": 1.52,
+            "mom_pct": null
+          },
+          "3W": {
+            "units": 65752,
+            "yoy_pct": 20.7,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 92805,
+            "yoy_pct": 13.0,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 41485,
+            "yoy_pct": 13.52,
+            "mom_pct": null
+          },
+          "TOTAL": {
+            "units": 1711711,
+            "yoy_pct": 2.6,
             "mom_pct": null
           },
           "CE": {
@@ -795,7 +1005,91 @@
           },
           "TOTAL": {
             "units": 1499036,
+            "yoy_pct": -13.43,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
             "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2021-03",
+        "release_date": "2021-03-15",
+        "source_url": "file://160ab483f0c0e7Automobile Retail Sales Data for March 2021.pdf",
+        "categories": {
+          "PV": {
+            "units": 279745,
+            "yoy_pct": 28.39,
+            "mom_pct": null
+          },
+          "2W": {
+            "units": 1195445,
+            "yoy_pct": -35.26,
+            "mom_pct": null
+          },
+          "3W": {
+            "units": 38034,
+            "yoy_pct": -50.72,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 67372,
+            "yoy_pct": -42.2,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 69082,
+            "yoy_pct": 29.21,
+            "mom_pct": null
+          },
+          "TOTAL": {
+            "units": 1649678,
+            "yoy_pct": -28.64,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2021-04",
+        "release_date": "2021-04-15",
+        "source_url": "file://160ab497d50cd6FADA Releases FY20-21 & April 21 Vehicle Registration Data.pdf",
+        "categories": {
+          "PV": {
+            "units": 208883,
+            "yoy_pct": -11.56,
+            "mom_pct": null
+          },
+          "2W": {
+            "units": 865134,
+            "yoy_pct": -35.35,
+            "mom_pct": null
+          },
+          "3W": {
+            "units": 21636,
+            "yoy_pct": -55.59,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 51436,
+            "yoy_pct": -34.58,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 38285,
+            "yoy_pct": 3.52,
+            "mom_pct": null
+          },
+          "TOTAL": {
+            "units": 1185374,
+            "yoy_pct": -31.83,
             "mom_pct": null
           },
           "CE": {
@@ -974,39 +1268,81 @@
         }
       },
       {
+        "month": "2021-09",
+        "release_date": "2021-09-15",
+        "source_url": "file://1615e8d102e816FADA Press Release - FADA releases September'21 Vehicle Retail Data.pdf",
+        "categories": {
+          "PV": {
+            "units": 233308,
+            "yoy_pct": 16.32,
+            "mom_pct": null
+          },
+          "2W": {
+            "units": 914621,
+            "yoy_pct": -11.54,
+            "mom_pct": null
+          },
+          "3W": {
+            "units": 36612,
+            "yoy_pct": 50.9,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 58820,
+            "yoy_pct": 46.64,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 52896,
+            "yoy_pct": -23.85,
+            "mom_pct": null
+          },
+          "TOTAL": {
+            "units": 1296257,
+            "yoy_pct": -5.27,
+            "mom_pct": null
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
         "month": "2021-10",
         "release_date": "2021-10-15",
         "source_url": "file://16195c82d4d9b4FADA releases October 2021 and 42 Days Festive Period Vehicle Retail Data.pdf",
         "categories": {
           "PV": {
-            "units": 324542,
-            "yoy_pct": -14.59,
-            "mom_pct": -26.17
+            "units": 228431,
+            "yoy_pct": -11.38,
+            "mom_pct": null
           },
           "2W": {
-            "units": 1579642,
-            "yoy_pct": -22.39,
-            "mom_pct": -18.49
+            "units": 996024,
+            "yoy_pct": -6.07,
+            "mom_pct": null
           },
           "3W": {
-            "units": 52802,
-            "yoy_pct": -38.88,
-            "mom_pct": 53.41
+            "units": 39077,
+            "yoy_pct": 73.93,
+            "mom_pct": null
           },
           "CV": {
-            "units": 77066,
-            "yoy_pct": -14.3,
-            "mom_pct": 9.53
+            "units": 56732,
+            "yoy_pct": 26.45,
+            "mom_pct": null
           },
           "TRACTOR": {
-            "units": 56841,
-            "yoy_pct": 15.75,
-            "mom_pct": -23.11
+            "units": 44262,
+            "yoy_pct": -20.78,
+            "mom_pct": null
           },
           "TOTAL": {
-            "units": 2090893,
-            "yoy_pct": -20.82,
-            "mom_pct": -18.21
+            "units": 1364526,
+            "yoy_pct": -5.33,
+            "mom_pct": null
           },
           "CE": {
             "units": 0,
@@ -1595,6 +1931,48 @@
             "units": 1622317,
             "yoy_pct": -21.15,
             "mom_pct": -5.4
+          },
+          "CE": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          }
+        }
+      },
+      {
+        "month": "2023-01",
+        "release_date": "2023-01-15",
+        "source_url": "file://163e073fa5b2d1FADA Releases January23 Vehicle Retail Data.pdf",
+        "categories": {
+          "TOTAL": {
+            "units": 1826669,
+            "yoy_pct": 13.56,
+            "mom_pct": null
+          },
+          "PV": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "2W": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "3W": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "CV": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
+          },
+          "TRACTOR": {
+            "units": 0,
+            "yoy_pct": null,
+            "mom_pct": null
           },
           "CE": {
             "units": 0,
@@ -3452,6 +3830,11 @@
         "month": "2022-12",
         "days_low": 35,
         "days_high": 40
+      },
+      {
+        "month": "2023-01",
+        "days_low": 33,
+        "days_high": 35
       },
       {
         "month": "2023-02",

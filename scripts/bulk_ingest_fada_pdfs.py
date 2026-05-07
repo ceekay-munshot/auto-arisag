@@ -77,13 +77,23 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
     anchor_patterns = [
         rf"All India Vehicle Retail Data for ({month_words})['']?\d{{2}}",
         rf"Vehicle Retail Data for ({month_words})['']?\d{{2}}",
+        # Older (2019 / 2020 / early-2021) PDFs use a bare "CATEGORY
+        # <MONTH>'YY" header for the monthly table, with no "All India
+        # Vehicle Retail Data" preamble. Pick that up too.
+        rf"(?:CATEGORY|Category)\s+({month_words})['']?\d{{2}}",
     ]
     section_text = None
     for pat in anchor_patterns:
         m = re.search(pat, compact, flags=re.IGNORECASE)
         if m:
             start = m.end()
-            # Scan up to 3000 chars OR until next major section header
+            # Scan up to 3000 chars OR until next major section header.
+            # Cumulative / half-yearly tables APPEAR LATER in the same
+            # PDF for FY-end / mid-year releases (e.g. Sep 2021's
+            # "Apr-September'21 (1st Half FY21)" table) — those would
+            # poison the parser by satisfying the 3-num + 2-pct pattern
+            # the new format regex looks for. Aggressive truncation here
+            # is the cheapest defence.
             end_markers = [
                 r"Annexure\s+\d",
                 r"Source:\s*FADA Research",
@@ -92,13 +102,29 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
                 r"Cumulative",
                 r"CY['']?\d{2}\s+CY['']?\d{2}",
                 r"FY['']?\d{2}\s+FY['']?\d{2}",
+                # Half-year / cumulative table headers in older PDFs.
+                r"\(1st\s*Half",
+                r"\(H1\s*FY",
+                r"\(YTD",
+                r"YTD\s*FY",
+                # Range-style "Apr-September'21" or "Apr - Sep'21"
+                # cumulative headers that follow the monthly section.
+                rf"All India Vehicle Retail Data for ({month_words})\s*-",
+                rf"({month_words})\s*-\s*({month_words})['']?\d{{2}}",
             ]
             section = compact[start:start + 3000]
+            # Truncate at the EARLIEST end-marker hit, not the first in
+            # iteration order. Sep 2021's PDF triggers `Annexure 1` at
+            # position 1870 and `Source: FADA Research` at position 466
+            # — taking the first by iteration order kept the cumulative
+            # half-year table in scope, poisoning the parse.
+            earliest_end = None
             for em in end_markers:
                 em_match = re.search(em, section, flags=re.IGNORECASE)
-                if em_match:
-                    section = section[:em_match.start()]
-                    break
+                if em_match and (earliest_end is None or em_match.start() < earliest_end):
+                    earliest_end = em_match.start()
+            if earliest_end is not None:
+                section = section[:earliest_end]
             section_text = section
             break
     if section_text is None:

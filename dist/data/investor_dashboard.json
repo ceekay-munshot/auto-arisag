@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T07:42:47.694736+00:00",
+  "generated_at": "2026-05-07T08:12:24.899647+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -108,6 +108,22 @@
         "label": "Mar 2019"
       },
       {
+        "id": "2019-04",
+        "label": "Apr 2019"
+      },
+      {
+        "id": "2019-05",
+        "label": "May 2019"
+      },
+      {
+        "id": "2019-06",
+        "label": "Jun 2019"
+      },
+      {
+        "id": "2019-07",
+        "label": "Jul 2019"
+      },
+      {
         "id": "2019-09",
         "label": "Sep 2019"
       },
@@ -126,6 +142,10 @@
       {
         "id": "2020-01",
         "label": "Jan 2020"
+      },
+      {
+        "id": "2020-02",
+        "label": "Feb 2020"
       },
       {
         "id": "2020-05",
@@ -168,6 +188,14 @@
         "label": "Feb 2021"
       },
       {
+        "id": "2021-03",
+        "label": "Mar 2021"
+      },
+      {
+        "id": "2021-04",
+        "label": "Apr 2021"
+      },
+      {
         "id": "2021-05",
         "label": "May 2021"
       },
@@ -182,6 +210,10 @@
       {
         "id": "2021-08",
         "label": "Aug 2021"
+      },
+      {
+        "id": "2021-09",
+        "label": "Sep 2021"
       },
       {
         "id": "2021-10",
@@ -242,6 +274,10 @@
       {
         "id": "2022-12",
         "label": "Dec 2022"
+      },
+      {
+        "id": "2023-01",
+        "label": "Jan 2023"
       },
       {
         "id": "2023-02",
@@ -414,7 +450,7 @@
       {
         "id": "all",
         "label": "All available",
-        "count": 77
+        "count": 86
       }
     ],
     "default_window": "5m",
@@ -995,6 +1031,242 @@
           ]
         },
         {
+          "month": "2019-04",
+          "label": "Apr 2019",
+          "source_url": "file://160c4741a8033cAutomobile_Retail_Sales_Data_for_April_2019.pdf",
+          "release_date": "2019-04-15",
+          "total_units": 1638470,
+          "total_mom_pct": -8.0,
+          "total_yoy_pct": -4.0,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 242457,
+              "mom_pct": -2.0,
+              "yoy_pct": -2.0,
+              "share_pct": 14.8
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1285470,
+              "mom_pct": -9.0,
+              "yoy_pct": -4.0,
+              "share_pct": 78.46
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 47183,
+              "mom_pct": -13.0,
+              "yoy_pct": -12.0,
+              "share_pct": 2.88
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 63360,
+              "mom_pct": -16.0,
+              "yoy_pct": 2.0,
+              "share_pct": 3.87
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2019-05",
+          "label": "May 2019",
+          "source_url": "file://160c47402529d7Automobile Retail Sales Data for May 2019.pdf",
+          "release_date": "2018-05-19",
+          "total_units": 1771920,
+          "total_mom_pct": -7.5,
+          "total_yoy_pct": 4.9,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 251049,
+              "mom_pct": -1.0,
+              "yoy_pct": 0.2,
+              "share_pct": 14.17
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1407361,
+              "mom_pct": -8.6,
+              "yoy_pct": 6.1,
+              "share_pct": 79.43
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 50959,
+              "mom_pct": -4.0,
+              "yoy_pct": 5.8,
+              "share_pct": 2.88
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 62551,
+              "mom_pct": -7.8,
+              "yoy_pct": -2.3,
+              "share_pct": 3.53
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2019-06",
+          "label": "Jun 2019",
+          "source_url": "file://160c472eabbcc5Retail Sales Data for June 2019.pdf",
+          "release_date": "2018-06-19",
+          "total_units": 1646776,
+          "total_mom_pct": -5.4,
+          "total_yoy_pct": -7.6,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 224755,
+              "mom_pct": -4.6,
+              "yoy_pct": -11.3,
+              "share_pct": 13.65
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1324822,
+              "mom_pct": -5.0,
+              "yoy_pct": -6.3,
+              "share_pct": 80.45
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 48447,
+              "mom_pct": -2.8,
+              "yoy_pct": -5.3,
+              "share_pct": 2.94
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 48752,
+              "mom_pct": -19.3,
+              "yoy_pct": -22.0,
+              "share_pct": 2.96
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2019-07",
+          "label": "Jul 2019",
+          "source_url": "file://160c4729c7e9d6Automobile Retail Sales Data for July 2019.pdf",
+          "release_date": "2019-07-15",
+          "total_units": 1654535,
+          "total_mom_pct": -6.0,
+          "total_yoy_pct": 5.0,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1332384,
+              "mom_pct": -5.0,
+              "yoy_pct": 4.0,
+              "share_pct": 80.53
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 55850,
+              "mom_pct": 3.0,
+              "yoy_pct": 21.0,
+              "share_pct": 3.38
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
           "month": "2019-09",
           "label": "Sep 2019",
           "source_url": "file://160c4718ad2268Automobile Retail Sales Data for September 2019.pdf",
@@ -1278,6 +1550,65 @@
               "mom_pct": null,
               "yoy_pct": 5.11,
               "share_pct": 2.64
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2020-02",
+          "label": "Feb 2020",
+          "source_url": "file://160c46fb2f366cAutomobile Retail Sales Data for February 2020.pdf",
+          "release_date": "2020-02-15",
+          "total_units": 1711711,
+          "total_mom_pct": null,
+          "total_yoy_pct": 2.6,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 226271,
+              "mom_pct": null,
+              "yoy_pct": -1.17,
+              "share_pct": 13.22
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1285398,
+              "mom_pct": null,
+              "yoy_pct": 1.52,
+              "share_pct": 75.09
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 65752,
+              "mom_pct": null,
+              "yoy_pct": 20.7,
+              "share_pct": 3.84
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 92805,
+              "mom_pct": null,
+              "yoy_pct": 13.0,
+              "share_pct": 5.42
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 41485,
+              "mom_pct": null,
+              "yoy_pct": 13.52,
+              "share_pct": 2.42
             },
             {
               "category": "CE",
@@ -1827,7 +2158,7 @@
           "release_date": "2021-02-15",
           "total_units": 1499036,
           "total_mom_pct": null,
-          "total_yoy_pct": null,
+          "total_yoy_pct": -13.43,
           "categories": [
             {
               "category": "PV",
@@ -1868,6 +2199,124 @@
               "mom_pct": null,
               "yoy_pct": 18.89,
               "share_pct": 4.09
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2021-03",
+          "label": "Mar 2021",
+          "source_url": "file://160ab483f0c0e7Automobile Retail Sales Data for March 2021.pdf",
+          "release_date": "2021-03-15",
+          "total_units": 1649678,
+          "total_mom_pct": null,
+          "total_yoy_pct": -28.64,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 279745,
+              "mom_pct": null,
+              "yoy_pct": 28.39,
+              "share_pct": 16.96
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1195445,
+              "mom_pct": null,
+              "yoy_pct": -35.26,
+              "share_pct": 72.47
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 38034,
+              "mom_pct": null,
+              "yoy_pct": -50.72,
+              "share_pct": 2.31
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 67372,
+              "mom_pct": null,
+              "yoy_pct": -42.2,
+              "share_pct": 4.08
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 69082,
+              "mom_pct": null,
+              "yoy_pct": 29.21,
+              "share_pct": 4.19
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2021-04",
+          "label": "Apr 2021",
+          "source_url": "file://160ab497d50cd6FADA Releases FY20-21 & April 21 Vehicle Registration Data.pdf",
+          "release_date": "2021-04-15",
+          "total_units": 1185374,
+          "total_mom_pct": null,
+          "total_yoy_pct": -31.83,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 208883,
+              "mom_pct": null,
+              "yoy_pct": -11.56,
+              "share_pct": 17.62
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 865134,
+              "mom_pct": null,
+              "yoy_pct": -35.35,
+              "share_pct": 72.98
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 21636,
+              "mom_pct": null,
+              "yoy_pct": -55.59,
+              "share_pct": 1.83
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 51436,
+              "mom_pct": null,
+              "yoy_pct": -34.58,
+              "share_pct": 4.34
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 38285,
+              "mom_pct": null,
+              "yoy_pct": 3.52,
+              "share_pct": 3.23
             },
             {
               "category": "CE",
@@ -2116,53 +2565,112 @@
           ]
         },
         {
-          "month": "2021-10",
-          "label": "Oct 2021",
-          "source_url": "file://16195c82d4d9b4FADA releases October 2021 and 42 Days Festive Period Vehicle Retail Data.pdf",
-          "release_date": "2021-10-15",
-          "total_units": 2090893,
-          "total_mom_pct": -18.21,
-          "total_yoy_pct": -20.82,
+          "month": "2021-09",
+          "label": "Sep 2021",
+          "source_url": "file://1615e8d102e816FADA Press Release - FADA releases September'21 Vehicle Retail Data.pdf",
+          "release_date": "2021-09-15",
+          "total_units": 1296257,
+          "total_mom_pct": null,
+          "total_yoy_pct": -5.27,
           "categories": [
             {
               "category": "PV",
               "label": "Passenger Vehicles",
-              "units": 324542,
-              "mom_pct": -26.17,
-              "yoy_pct": -14.59,
-              "share_pct": 15.52
+              "units": 233308,
+              "mom_pct": null,
+              "yoy_pct": 16.32,
+              "share_pct": 18.0
             },
             {
               "category": "2W",
               "label": "Two-Wheelers",
-              "units": 1579642,
-              "mom_pct": -18.49,
-              "yoy_pct": -22.39,
-              "share_pct": 75.55
+              "units": 914621,
+              "mom_pct": null,
+              "yoy_pct": -11.54,
+              "share_pct": 70.56
             },
             {
               "category": "3W",
               "label": "Three-Wheelers",
-              "units": 52802,
-              "mom_pct": 53.41,
-              "yoy_pct": -38.88,
-              "share_pct": 2.53
+              "units": 36612,
+              "mom_pct": null,
+              "yoy_pct": 50.9,
+              "share_pct": 2.82
             },
             {
               "category": "CV",
               "label": "Commercial Vehicles",
-              "units": 77066,
-              "mom_pct": 9.53,
-              "yoy_pct": -14.3,
-              "share_pct": 3.69
+              "units": 58820,
+              "mom_pct": null,
+              "yoy_pct": 46.64,
+              "share_pct": 4.54
             },
             {
               "category": "TRACTOR",
               "label": "Tractors",
-              "units": 56841,
-              "mom_pct": -23.11,
-              "yoy_pct": 15.75,
-              "share_pct": 2.72
+              "units": 52896,
+              "mom_pct": null,
+              "yoy_pct": -23.85,
+              "share_pct": 4.08
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2021-10",
+          "label": "Oct 2021",
+          "source_url": "file://16195c82d4d9b4FADA releases October 2021 and 42 Days Festive Period Vehicle Retail Data.pdf",
+          "release_date": "2021-10-15",
+          "total_units": 1364526,
+          "total_mom_pct": null,
+          "total_yoy_pct": -5.33,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 228431,
+              "mom_pct": null,
+              "yoy_pct": -11.38,
+              "share_pct": 16.74
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 996024,
+              "mom_pct": null,
+              "yoy_pct": -6.07,
+              "share_pct": 72.99
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 39077,
+              "mom_pct": null,
+              "yoy_pct": 73.93,
+              "share_pct": 2.86
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 56732,
+              "mom_pct": null,
+              "yoy_pct": 26.45,
+              "share_pct": 4.16
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 44262,
+              "mom_pct": null,
+              "yoy_pct": -20.78,
+              "share_pct": 3.24
             },
             {
               "category": "CE",
@@ -2989,6 +3497,65 @@
               "mom_pct": 5.24,
               "yoy_pct": -5.61,
               "share_pct": 4.84
+            },
+            {
+              "category": "CE",
+              "label": "Construction Equipment",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            }
+          ]
+        },
+        {
+          "month": "2023-01",
+          "label": "Jan 2023",
+          "source_url": "file://163e073fa5b2d1FADA Releases January23 Vehicle Retail Data.pdf",
+          "release_date": "2023-01-15",
+          "total_units": 1826669,
+          "total_mom_pct": null,
+          "total_yoy_pct": 13.56,
+          "categories": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
+            },
+            {
+              "category": "TRACTOR",
+              "label": "Tractors",
+              "units": 0,
+              "mom_pct": null,
+              "yoy_pct": null,
+              "share_pct": 0.0
             },
             {
               "category": "CE",
@@ -8173,6 +8740,13 @@
           "days_mid": 37.5
         },
         {
+          "month": "2023-01",
+          "label": "Jan 2023",
+          "days_low": 33,
+          "days_high": 35,
+          "days_mid": 34.0
+        },
+        {
           "month": "2023-02",
           "label": "Feb 2023",
           "days_low": 35,
@@ -8850,7 +9424,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 68 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -9235,7 +9809,7 @@
                   "share_change_pp": 0.01
                 }
               ],
-              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 12/12, FY24 12/12, FY25 12/12, FY26 12/12; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -9447,7 +10021,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 68 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -9841,7 +10415,7 @@
                   "share_change_pp": 0.1
                 }
               ],
-              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 12/12, FY24 12/12, FY25 12/12, FY26 12/12; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -10042,7 +10616,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 68 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -10301,7 +10875,7 @@
                   "share_change_pp": 0.15
                 }
               ],
-              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 12/12, FY24 12/12, FY25 12/12, FY26 12/12; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -11322,7 +11896,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 55 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 56 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -11788,7 +12362,7 @@
                   "share_change_pp": null
                 }
               ],
-              "note": "FY-roll-up of FADA monthly OEM annexures across 3 fiscal year(s): FY22 11/12, FY23 10/12, FY26 11/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: YoY, 2Y CAGR, 5Y CAGR."
+              "note": "FY-roll-up of FADA monthly OEM annexures across 3 fiscal year(s): FY22 11/12, FY23 11/12, FY26 11/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: YoY, 2Y CAGR, 5Y CAGR."
             }
           },
           "source_meta": {
@@ -11985,7 +12559,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Tractors OEM annexure across 68 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Tractors OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -12262,7 +12836,7 @@
                   "share_change_pp": -3.18
                 }
               ],
-              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 11/12, FY24 12/12, FY25 12/12, FY26 12/12; Partial FYs are annualised (raw FY total scaled by 12/months_in_history) so YoY% stays comparable; numbers will firm up as missing months land via the backfill workflow.; pending until older history lands: 5Y CAGR."
+              "note": "FY-roll-up of FADA monthly OEM annexures across 5 fiscal year(s): FY22 12/12, FY23 12/12, FY24 12/12, FY25 12/12, FY26 12/12; pending until older history lands: 5Y CAGR."
             }
           },
           "source_meta": {
@@ -14511,6 +15085,34 @@
             "yoy_pct": 15.78
           },
           {
+            "month": "2023-01",
+            "label": "HCV",
+            "units": 26881,
+            "mom_pct": null,
+            "yoy_pct": 24.71
+          },
+          {
+            "month": "2023-01",
+            "label": "LCV",
+            "units": 48115,
+            "mom_pct": null,
+            "yoy_pct": 12.75
+          },
+          {
+            "month": "2023-01",
+            "label": "MCV",
+            "units": 4670,
+            "mom_pct": null,
+            "yoy_pct": -1.58
+          },
+          {
+            "month": "2023-01",
+            "label": "Others",
+            "units": 2762,
+            "mom_pct": null,
+            "yoy_pct": 46.99
+          },
+          {
             "month": "2023-02",
             "label": "HCV",
             "units": 26469,
@@ -15673,6 +16275,20 @@
             "units": 28860,
             "mom_pct": 39.18,
             "yoy_pct": 222.49
+          },
+          {
+            "month": "2023-01",
+            "label": "E-rickshaw goods",
+            "units": 1857,
+            "mom_pct": null,
+            "yoy_pct": 45.65
+          },
+          {
+            "month": "2023-01",
+            "label": "E-rickshaw passenger",
+            "units": 28534,
+            "mom_pct": null,
+            "yoy_pct": 72.89
           },
           {
             "month": "2023-02",
@@ -17048,6 +17664,242 @@
               }
             ]
           },
+          "2019-04": {
+            "month": "2019-04",
+            "label": "Apr 2019",
+            "source_url": "file://160c4741a8033cAutomobile_Retail_Sales_Data_for_April_2019.pdf",
+            "release_date": "2019-04-15",
+            "total_units": 1638470,
+            "total_mom_pct": -8.0,
+            "total_yoy_pct": -4.0,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 242457,
+                "mom_pct": -2.0,
+                "yoy_pct": -2.0,
+                "share_pct": 14.8
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1285470,
+                "mom_pct": -9.0,
+                "yoy_pct": -4.0,
+                "share_pct": 78.46
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 47183,
+                "mom_pct": -13.0,
+                "yoy_pct": -12.0,
+                "share_pct": 2.88
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 63360,
+                "mom_pct": -16.0,
+                "yoy_pct": 2.0,
+                "share_pct": 3.87
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2019-05": {
+            "month": "2019-05",
+            "label": "May 2019",
+            "source_url": "file://160c47402529d7Automobile Retail Sales Data for May 2019.pdf",
+            "release_date": "2018-05-19",
+            "total_units": 1771920,
+            "total_mom_pct": -7.5,
+            "total_yoy_pct": 4.9,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 251049,
+                "mom_pct": -1.0,
+                "yoy_pct": 0.2,
+                "share_pct": 14.17
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1407361,
+                "mom_pct": -8.6,
+                "yoy_pct": 6.1,
+                "share_pct": 79.43
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 50959,
+                "mom_pct": -4.0,
+                "yoy_pct": 5.8,
+                "share_pct": 2.88
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 62551,
+                "mom_pct": -7.8,
+                "yoy_pct": -2.3,
+                "share_pct": 3.53
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2019-06": {
+            "month": "2019-06",
+            "label": "Jun 2019",
+            "source_url": "file://160c472eabbcc5Retail Sales Data for June 2019.pdf",
+            "release_date": "2018-06-19",
+            "total_units": 1646776,
+            "total_mom_pct": -5.4,
+            "total_yoy_pct": -7.6,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 224755,
+                "mom_pct": -4.6,
+                "yoy_pct": -11.3,
+                "share_pct": 13.65
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1324822,
+                "mom_pct": -5.0,
+                "yoy_pct": -6.3,
+                "share_pct": 80.45
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 48447,
+                "mom_pct": -2.8,
+                "yoy_pct": -5.3,
+                "share_pct": 2.94
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 48752,
+                "mom_pct": -19.3,
+                "yoy_pct": -22.0,
+                "share_pct": 2.96
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2019-07": {
+            "month": "2019-07",
+            "label": "Jul 2019",
+            "source_url": "file://160c4729c7e9d6Automobile Retail Sales Data for July 2019.pdf",
+            "release_date": "2019-07-15",
+            "total_units": 1654535,
+            "total_mom_pct": -6.0,
+            "total_yoy_pct": 5.0,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1332384,
+                "mom_pct": -5.0,
+                "yoy_pct": 4.0,
+                "share_pct": 80.53
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 55850,
+                "mom_pct": 3.0,
+                "yoy_pct": 21.0,
+                "share_pct": 3.38
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
           "2019-09": {
             "month": "2019-09",
             "label": "Sep 2019",
@@ -17332,6 +18184,65 @@
                 "mom_pct": null,
                 "yoy_pct": 5.11,
                 "share_pct": 2.64
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2020-02": {
+            "month": "2020-02",
+            "label": "Feb 2020",
+            "source_url": "file://160c46fb2f366cAutomobile Retail Sales Data for February 2020.pdf",
+            "release_date": "2020-02-15",
+            "total_units": 1711711,
+            "total_mom_pct": null,
+            "total_yoy_pct": 2.6,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 226271,
+                "mom_pct": null,
+                "yoy_pct": -1.17,
+                "share_pct": 13.22
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1285398,
+                "mom_pct": null,
+                "yoy_pct": 1.52,
+                "share_pct": 75.09
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 65752,
+                "mom_pct": null,
+                "yoy_pct": 20.7,
+                "share_pct": 3.84
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 92805,
+                "mom_pct": null,
+                "yoy_pct": 13.0,
+                "share_pct": 5.42
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 41485,
+                "mom_pct": null,
+                "yoy_pct": 13.52,
+                "share_pct": 2.42
               },
               {
                 "category": "CE",
@@ -17881,7 +18792,7 @@
             "release_date": "2021-02-15",
             "total_units": 1499036,
             "total_mom_pct": null,
-            "total_yoy_pct": null,
+            "total_yoy_pct": -13.43,
             "categories": [
               {
                 "category": "PV",
@@ -17922,6 +18833,124 @@
                 "mom_pct": null,
                 "yoy_pct": 18.89,
                 "share_pct": 4.09
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2021-03": {
+            "month": "2021-03",
+            "label": "Mar 2021",
+            "source_url": "file://160ab483f0c0e7Automobile Retail Sales Data for March 2021.pdf",
+            "release_date": "2021-03-15",
+            "total_units": 1649678,
+            "total_mom_pct": null,
+            "total_yoy_pct": -28.64,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 279745,
+                "mom_pct": null,
+                "yoy_pct": 28.39,
+                "share_pct": 16.96
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 1195445,
+                "mom_pct": null,
+                "yoy_pct": -35.26,
+                "share_pct": 72.47
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 38034,
+                "mom_pct": null,
+                "yoy_pct": -50.72,
+                "share_pct": 2.31
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 67372,
+                "mom_pct": null,
+                "yoy_pct": -42.2,
+                "share_pct": 4.08
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 69082,
+                "mom_pct": null,
+                "yoy_pct": 29.21,
+                "share_pct": 4.19
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2021-04": {
+            "month": "2021-04",
+            "label": "Apr 2021",
+            "source_url": "file://160ab497d50cd6FADA Releases FY20-21 & April 21 Vehicle Registration Data.pdf",
+            "release_date": "2021-04-15",
+            "total_units": 1185374,
+            "total_mom_pct": null,
+            "total_yoy_pct": -31.83,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 208883,
+                "mom_pct": null,
+                "yoy_pct": -11.56,
+                "share_pct": 17.62
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 865134,
+                "mom_pct": null,
+                "yoy_pct": -35.35,
+                "share_pct": 72.98
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 21636,
+                "mom_pct": null,
+                "yoy_pct": -55.59,
+                "share_pct": 1.83
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 51436,
+                "mom_pct": null,
+                "yoy_pct": -34.58,
+                "share_pct": 4.34
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 38285,
+                "mom_pct": null,
+                "yoy_pct": 3.52,
+                "share_pct": 3.23
               },
               {
                 "category": "CE",
@@ -18169,54 +19198,113 @@
               }
             ]
           },
+          "2021-09": {
+            "month": "2021-09",
+            "label": "Sep 2021",
+            "source_url": "file://1615e8d102e816FADA Press Release - FADA releases September'21 Vehicle Retail Data.pdf",
+            "release_date": "2021-09-15",
+            "total_units": 1296257,
+            "total_mom_pct": null,
+            "total_yoy_pct": -5.27,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 233308,
+                "mom_pct": null,
+                "yoy_pct": 16.32,
+                "share_pct": 18.0
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 914621,
+                "mom_pct": null,
+                "yoy_pct": -11.54,
+                "share_pct": 70.56
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 36612,
+                "mom_pct": null,
+                "yoy_pct": 50.9,
+                "share_pct": 2.82
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 58820,
+                "mom_pct": null,
+                "yoy_pct": 46.64,
+                "share_pct": 4.54
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 52896,
+                "mom_pct": null,
+                "yoy_pct": -23.85,
+                "share_pct": 4.08
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
           "2021-10": {
             "month": "2021-10",
             "label": "Oct 2021",
             "source_url": "file://16195c82d4d9b4FADA releases October 2021 and 42 Days Festive Period Vehicle Retail Data.pdf",
             "release_date": "2021-10-15",
-            "total_units": 2090893,
-            "total_mom_pct": -18.21,
-            "total_yoy_pct": -20.82,
+            "total_units": 1364526,
+            "total_mom_pct": null,
+            "total_yoy_pct": -5.33,
             "categories": [
               {
                 "category": "PV",
                 "label": "Passenger Vehicles",
-                "units": 324542,
-                "mom_pct": -26.17,
-                "yoy_pct": -14.59,
-                "share_pct": 15.52
+                "units": 228431,
+                "mom_pct": null,
+                "yoy_pct": -11.38,
+                "share_pct": 16.74
               },
               {
                 "category": "2W",
                 "label": "Two-Wheelers",
-                "units": 1579642,
-                "mom_pct": -18.49,
-                "yoy_pct": -22.39,
-                "share_pct": 75.55
+                "units": 996024,
+                "mom_pct": null,
+                "yoy_pct": -6.07,
+                "share_pct": 72.99
               },
               {
                 "category": "3W",
                 "label": "Three-Wheelers",
-                "units": 52802,
-                "mom_pct": 53.41,
-                "yoy_pct": -38.88,
-                "share_pct": 2.53
+                "units": 39077,
+                "mom_pct": null,
+                "yoy_pct": 73.93,
+                "share_pct": 2.86
               },
               {
                 "category": "CV",
                 "label": "Commercial Vehicles",
-                "units": 77066,
-                "mom_pct": 9.53,
-                "yoy_pct": -14.3,
-                "share_pct": 3.69
+                "units": 56732,
+                "mom_pct": null,
+                "yoy_pct": 26.45,
+                "share_pct": 4.16
               },
               {
                 "category": "TRACTOR",
                 "label": "Tractors",
-                "units": 56841,
-                "mom_pct": -23.11,
-                "yoy_pct": 15.75,
-                "share_pct": 2.72
+                "units": 44262,
+                "mom_pct": null,
+                "yoy_pct": -20.78,
+                "share_pct": 3.24
               },
               {
                 "category": "CE",
@@ -19043,6 +20131,65 @@
                 "mom_pct": 5.24,
                 "yoy_pct": -5.61,
                 "share_pct": 4.84
+              },
+              {
+                "category": "CE",
+                "label": "Construction Equipment",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              }
+            ]
+          },
+          "2023-01": {
+            "month": "2023-01",
+            "label": "Jan 2023",
+            "source_url": "file://163e073fa5b2d1FADA Releases January23 Vehicle Retail Data.pdf",
+            "release_date": "2023-01-15",
+            "total_units": 1826669,
+            "total_mom_pct": null,
+            "total_yoy_pct": 13.56,
+            "categories": [
+              {
+                "category": "PV",
+                "label": "Passenger Vehicles",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "2W",
+                "label": "Two-Wheelers",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "3W",
+                "label": "Three-Wheelers",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "CV",
+                "label": "Commercial Vehicles",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
+              },
+              {
+                "category": "TRACTOR",
+                "label": "Tractors",
+                "units": 0,
+                "mom_pct": null,
+                "yoy_pct": null,
+                "share_pct": 0.0
               },
               {
                 "category": "CE",
@@ -29328,38 +30475,40 @@
         },
         {
           "year": "2021",
-          "month_count": 2,
+          "month_count": 3,
           "months_covered": [
+            "2021-09",
             "2021-10",
             "2021-11"
           ],
           "month_labels": [
+            "Sep 2021",
             "Oct 2021",
             "Nov 2021"
           ],
-          "total_units": 3908493,
+          "total_units": 4478383,
           "peak_month_label": "Nov 2021",
           "peak_month_yoy_pct": -2.7,
           "categories": [
             {
               "category": "2W",
-              "units": 3013497
+              "units": 3344500
             },
             {
               "category": "PV",
-              "units": 564776
+              "units": 701973
             },
             {
               "category": "CV",
-              "units": 134455
+              "units": 172941
             },
             {
               "category": "TRACTOR",
-              "units": 102470
+              "units": 142787
             },
             {
               "category": "3W",
-              "units": 93295
+              "units": 116182
             },
             {
               "category": "CE",
@@ -29368,51 +30517,108 @@
           ],
           "monthly_rows": [
             {
-              "month": "2021-10",
-              "label": "Oct 2021",
-              "total_units": 2090893,
-              "total_yoy_pct": -20.82,
-              "total_mom_pct": -18.21,
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "total_units": 1296257,
+              "total_yoy_pct": -5.27,
+              "total_mom_pct": null,
               "categories": [
                 {
                   "category": "PV",
                   "label": "Passenger Vehicles",
-                  "units": 324542,
-                  "mom_pct": -26.17,
-                  "yoy_pct": -14.59,
-                  "share_pct": 15.52
+                  "units": 233308,
+                  "mom_pct": null,
+                  "yoy_pct": 16.32,
+                  "share_pct": 18.0
                 },
                 {
                   "category": "2W",
                   "label": "Two-Wheelers",
-                  "units": 1579642,
-                  "mom_pct": -18.49,
-                  "yoy_pct": -22.39,
-                  "share_pct": 75.55
+                  "units": 914621,
+                  "mom_pct": null,
+                  "yoy_pct": -11.54,
+                  "share_pct": 70.56
                 },
                 {
                   "category": "3W",
                   "label": "Three-Wheelers",
-                  "units": 52802,
-                  "mom_pct": 53.41,
-                  "yoy_pct": -38.88,
-                  "share_pct": 2.53
+                  "units": 36612,
+                  "mom_pct": null,
+                  "yoy_pct": 50.9,
+                  "share_pct": 2.82
                 },
                 {
                   "category": "CV",
                   "label": "Commercial Vehicles",
-                  "units": 77066,
-                  "mom_pct": 9.53,
-                  "yoy_pct": -14.3,
-                  "share_pct": 3.69
+                  "units": 58820,
+                  "mom_pct": null,
+                  "yoy_pct": 46.64,
+                  "share_pct": 4.54
                 },
                 {
                   "category": "TRACTOR",
                   "label": "Tractors",
-                  "units": 56841,
-                  "mom_pct": -23.11,
-                  "yoy_pct": 15.75,
-                  "share_pct": 2.72
+                  "units": 52896,
+                  "mom_pct": null,
+                  "yoy_pct": -23.85,
+                  "share_pct": 4.08
+                },
+                {
+                  "category": "CE",
+                  "label": "Construction Equipment",
+                  "units": 0,
+                  "mom_pct": null,
+                  "yoy_pct": null,
+                  "share_pct": 0.0
+                }
+              ]
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "total_units": 1364526,
+              "total_yoy_pct": -5.33,
+              "total_mom_pct": null,
+              "categories": [
+                {
+                  "category": "PV",
+                  "label": "Passenger Vehicles",
+                  "units": 228431,
+                  "mom_pct": null,
+                  "yoy_pct": -11.38,
+                  "share_pct": 16.74
+                },
+                {
+                  "category": "2W",
+                  "label": "Two-Wheelers",
+                  "units": 996024,
+                  "mom_pct": null,
+                  "yoy_pct": -6.07,
+                  "share_pct": 72.99
+                },
+                {
+                  "category": "3W",
+                  "label": "Three-Wheelers",
+                  "units": 39077,
+                  "mom_pct": null,
+                  "yoy_pct": 73.93,
+                  "share_pct": 2.86
+                },
+                {
+                  "category": "CV",
+                  "label": "Commercial Vehicles",
+                  "units": 56732,
+                  "mom_pct": null,
+                  "yoy_pct": 26.45,
+                  "share_pct": 4.16
+                },
+                {
+                  "category": "TRACTOR",
+                  "label": "Tractors",
+                  "units": 44262,
+                  "mom_pct": null,
+                  "yoy_pct": -20.78,
+                  "share_pct": 3.24
                 },
                 {
                   "category": "CE",
