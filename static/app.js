@@ -5087,7 +5087,12 @@ function renderRegistrationSection() {
 
 function renderWholesaleSection() {
   const wholesale = dashboardData.modules.wholesale;
-  const months = sliceMonths(wholesale.months);
+  // Was sliceMonths(wholesale.months) which trimmed to state.window's
+  // 5m default — masking 65 months of data we just spent two days
+  // ingesting from SIAM. Render the full series; lineChart already
+  // suppresses dot markers on >=30 point series so 70 months still
+  // reads cleanly.
+  const months = wholesale.months || [];
 
   registerDownload(
     "siam-wholesale",
