@@ -33,6 +33,10 @@ const state = {
   evOemSegment: "E2W",
   oemSegment: "PV",
   liveOemPeriods: { PV: "M", CV: "M", "2W": "Q" },
+  // Per-category subsegment chart selection. "ALL" overlays every line;
+  // otherwise the chart drops to a single-series view of the chosen
+  // subsegment, which gets the latest-value annotation + area gradient.
+  subsegmentSelection: { "3W": "ALL", "CV": "ALL" },
   sorts: {},
   activeTab: "overview",
   creditPulseExplainerOpen: false,
@@ -1862,6 +1866,7 @@ function render() {
   setupOemDrilldown();
   setupChangedMovers();
   setupUrbanRuralCategoryPicker();
+  setupSubsegmentSelect();
   setupPngExports();
   setupSorts();
   setupCompanyMapCards();
@@ -3782,7 +3787,7 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
     dashboardData.chart_colors.TRACTOR,
     dashboardData.chart_colors.EV,
   ];
-  const chartSeries = labels.map((label, idx) => {
+  const allSeries = labels.map((label, idx) => {
     const byMonth = new Map(
       series.filter((r) => r.label === label).map((r) => [r.month, r.units]),
     );
@@ -3792,6 +3797,26 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
       values: months.map((m) => byMonth.get(m) ?? null),
     };
   });
+  // Selection: "ALL" -> overlay every subsegment, otherwise restrict to
+  // the chosen one so the eye reads a single clean line. Subsegments that
+  // start mid-history (e.g. 3W passenger / goods / personal land Nov 2023
+  // because FADA changed the table schema then) are easier to read alone.
+  const selection = (state.subsegmentSelection && state.subsegmentSelection[category]) || "ALL";
+  const validSelection = selection === "ALL" || labels.includes(selection) ? selection : "ALL";
+  const chartSeries = validSelection === "ALL"
+    ? allSeries
+    : allSeries.filter((s) => s.label === validSelection);
+  // For a single-subsegment view, trim leading null months so the chart
+  // doesn't carry empty space at the start — purely cosmetic, the data
+  // is unchanged.
+  const visibleMonths = (() => {
+    if (chartSeries.length !== 1) return months;
+    const vs = chartSeries[0].values;
+    let firstNonNull = vs.findIndex((v) => v !== null && v !== undefined);
+    if (firstNonNull <= 0) return months;
+    chartSeries[0].values = vs.slice(firstNonNull);
+    return months.slice(firstNonNull);
+  })();
   registerDownload(
     `subsegment-${category.toLowerCase()}-history`,
     `${category.toLowerCase()}_subsegment_history.csv`,
@@ -3812,6 +3837,10 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
       <span class="${row.yoy_pct >= 0 ? "positive" : "negative"}">${formatSigned(row.yoy_pct)} YoY</span>
     </span>
   `).join("");
+  const selectorOptions = [
+    `<option value="ALL"${validSelection === "ALL" ? " selected" : ""}>All subsegments</option>`,
+    ...labels.map((lbl) => `<option value="${escapeHtml(lbl)}"${validSelection === lbl ? " selected" : ""}>${escapeHtml(lbl)}</option>`),
+  ].join("");
   return `
     <div class="chart-card">
       <div class="chart-title-row">
@@ -3824,12 +3853,22 @@ function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading)
           ${renderDownloadIcon(`subsegment-${category.toLowerCase()}-history`)}
         </div>
       </div>
+      <div class="state-explorer-controls explorer-controls" style="margin-bottom:12px;">
+        <label class="filter-field compact">
+          <span class="small-label">Show</span>
+          <select data-subsegment-select="${category}">
+            ${selectorOptions}
+          </select>
+        </label>
+      </div>
       <div class="chart-frame compact">
-        ${lineChart(months.map(monthLabel), chartSeries, axisFormat, formatUnits, buildChartEvents())}
+        ${lineChart(visibleMonths.map(monthLabel), chartSeries, axisFormat, formatUnits, buildChartEvents())}
       </div>
-      <div class="chart-legend">
-        ${chartSeries.map((s) => legendItem(s.label, s.color)).join("")}
-      </div>
+      ${validSelection === "ALL" ? `
+        <div class="chart-legend">
+          ${chartSeries.map((s) => legendItem(s.label, s.color)).join("")}
+        </div>
+      ` : ""}
       <div class="subsegment-latest-strip">
         <span class="urban-rural-strip-meta">Latest (${monthLabel(latestMonth)}):</span>
         ${latestStrip}
@@ -3944,6 +3983,18 @@ function setupUrbanRuralCategoryPicker() {
       const cat = node.getAttribute("data-urban-rural-category");
       if (!cat || cat === state.urbanRuralCategory) return;
       state.urbanRuralCategory = cat;
+      render();
+    });
+  });
+}
+
+function setupSubsegmentSelect() {
+  document.querySelectorAll("[data-subsegment-select]").forEach((node) => {
+    node.addEventListener("change", (event) => {
+      const cat = node.getAttribute("data-subsegment-select");
+      if (!cat) return;
+      if (!state.subsegmentSelection) state.subsegmentSelection = {};
+      state.subsegmentSelection[cat] = event.target.value;
       render();
     });
   });
