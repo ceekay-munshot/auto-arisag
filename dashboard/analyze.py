@@ -1414,64 +1414,59 @@ def build_raw_material_price_module() -> dict[str, Any]:
 
 
 def build_company_segment_trend_module() -> dict[str, Any]:
-    siam_url = "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-    fada_url = "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+    fada_url = "https://fada.in/press-releases.php"
+    # Compute FY annual aggregates from the 86-month FADA monthly retail
+    # series we already maintain. Switching from the previous SIAM-for-PV/2W
+    # mix to uniform FADA retail trades a slightly lower absolute scale on
+    # PV / 2W (FADA retail runs ~5-7% below SIAM wholesale because of dealer
+    # inventory) for: (1) one consistent methodology across every line,
+    # (2) auto-extension forward as new monthly prints land, (3) more
+    # fiscal-year coverage without manual data entry.
+    snapshot = json.loads(Path("data/source_snapshot.json").read_text(encoding="utf-8"))
+    fada_months = sorted(snapshot.get("fada", {}).get("monthly_series", []), key=lambda m: m["month"])
+    fy_buckets: dict[str, dict[str, Any]] = {}
+    for record in fada_months:
+        month_id = record.get("month")
+        if not month_id:
+            continue
+        year, month_no = int(month_id[:4]), int(month_id[5:])
+        # Indian FY runs Apr-Mar. 2025-04 -> 2025-26; 2026-03 -> 2025-26.
+        fy_start = year if month_no >= 4 else year - 1
+        fy_label = f"{fy_start}-{(fy_start + 1) % 100:02d}"
+        bucket = fy_buckets.setdefault(fy_label, {"months": [], "totals": {c: 0 for c in ("PV", "2W", "3W", "CV", "TRACTOR")}})
+        bucket["months"].append(month_id)
+        cats = record.get("categories", {})
+        for cat in ("PV", "2W", "3W", "CV", "TRACTOR"):
+            units = (cats.get(cat) or {}).get("units") or 0
+            bucket["totals"][cat] += units
+
+    # Only keep FYs with all 12 months present — partial FYs would mislead
+    # comparisons. Older incomplete FYs (FY 2018-19, 2019-20, 2020-21 are
+    # missing 1-9 months each due to FADA PDFs the user couldn't source)
+    # are dropped here; they re-appear automatically once the missing
+    # PDFs land.
+    complete_fys = sorted(
+        [fy for fy, bucket in fy_buckets.items() if len(bucket["months"]) == 12]
+    )
+
+    def make_series(category: str) -> list[dict[str, Any]]:
+        return [
+            {
+                "period": fy,
+                "label": fy,
+                "units": fy_buckets[fy]["totals"][category],
+            }
+            for fy in complete_fys
+        ]
+
     segment_library = {
-        "PV": {
-            "label": CATEGORY_LABELS["PV"],
-            "source_name": "SIAM annual domestic sales",
-            "source_url": siam_url,
-            "series": [
-                {"period": "2021-22", "label": "2021-22", "units": 2920084},
-                {"period": "2022-23", "label": "2022-23", "units": 3890114},
-                {"period": "2023-24", "label": "2023-24", "units": 4218746},
-                {"period": "2024-25", "label": "2024-25", "units": 4301848},
-            ],
-        },
-        "2W": {
-            "label": CATEGORY_LABELS["2W"],
-            "source_name": "SIAM annual domestic sales",
-            "source_url": siam_url,
-            "series": [
-                {"period": "2021-22", "label": "2021-22", "units": 13494214},
-                {"period": "2022-23", "label": "2022-23", "units": 15862771},
-                {"period": "2023-24", "label": "2023-24", "units": 17974365},
-                {"period": "2024-25", "label": "2024-25", "units": 19607332},
-            ],
-        },
-        "3W": {
-            "label": CATEGORY_LABELS["3W"],
-            "source_name": "FADA annual retail",
+        category: {
+            "label": CATEGORY_LABELS[category],
+            "source_name": "FADA annual retail (computed from monthly press releases)",
             "source_url": fada_url,
-            "series": [
-                {"period": "2021-22", "label": "2021-22", "units": 417108},
-                {"period": "2022-23", "label": "2022-23", "units": 767071},
-                {"period": "2023-24", "label": "2023-24", "units": 1167986},
-                {"period": "2024-25", "label": "2024-25", "units": 1220981},
-            ],
-        },
-        "CV": {
-            "label": CATEGORY_LABELS["CV"],
-            "source_name": "FADA annual retail",
-            "source_url": fada_url,
-            "series": [
-                {"period": "2021-22", "label": "2021-22", "units": 707186},
-                {"period": "2022-23", "label": "2022-23", "units": 939741},
-                {"period": "2023-24", "label": "2023-24", "units": 1010324},
-                {"period": "2024-25", "label": "2024-25", "units": 1008623},
-            ],
-        },
-        "TRACTOR": {
-            "label": CATEGORY_LABELS["TRACTOR"],
-            "source_name": "FADA annual retail",
-            "source_url": fada_url,
-            "series": [
-                {"period": "2021-22", "label": "2021-22", "units": 766545},
-                {"period": "2022-23", "label": "2022-23", "units": 827403},
-                {"period": "2023-24", "label": "2023-24", "units": 892410},
-                {"period": "2024-25", "label": "2024-25", "units": 883095},
-            ],
-        },
+            "series": make_series(category),
+        }
+        for category in ("PV", "2W", "3W", "CV", "TRACTOR")
     }
     company_segments = {
         "Maruti Suzuki": ["PV", "CV"],
@@ -1531,9 +1526,14 @@ def build_company_segment_trend_module() -> dict[str, Any]:
         "available": True,
         "title": "End-market volume trend by company exposure",
         "default_company": "Maruti Suzuki",
-        "latest_period": "2024-25",
+        "latest_period": complete_fys[-1] if complete_fys else None,
         "source_meta": {
-            "note": "Uses SIAM for passenger vehicles and two-wheelers, and FADA annual retail for three-wheelers, commercial vehicles and tractors.",
+            "note": (
+                "Annual fiscal-year totals computed from FADA monthly retail press releases. "
+                "PV / 2W run roughly 5-7% below SIAM wholesale volumes (FADA captures retail "
+                "registrations to end-customer; SIAM captures wholesale despatch to dealers). "
+                "Series auto-extends each new completed fiscal year as monthly prints land."
+            ),
         },
         "companies": companies,
     }

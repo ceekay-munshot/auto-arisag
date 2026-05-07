@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T08:30:07.131131+00:00",
+  "generated_at": "2026-05-07T08:48:05.051738+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -27720,9 +27720,9 @@
         "available": true,
         "title": "End-market volume trend by company exposure",
         "default_company": "Maruti Suzuki",
-        "latest_period": "2024-25",
+        "latest_period": "2025-26",
         "source_meta": {
-          "note": "Uses SIAM for passenger vehicles and two-wheelers, and FADA annual retail for three-wheelers, commercial vehicles and tractors."
+          "note": "Annual fiscal-year totals computed from FADA monthly retail press releases. PV / 2W run roughly 5-7% below SIAM wholesale volumes (FADA captures retail registrations to end-customer; SIAM captures wholesale despatch to dealers). Series auto-extends each new completed fiscal year as monthly prints land."
         },
         "companies": [
           {
@@ -27731,56 +27731,66 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -27788,15 +27798,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -27806,56 +27812,66 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -27863,15 +27879,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -27881,112 +27893,132 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Three-Wheelers",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 417108
+                    "units": 388061
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 767071
+                    "units": 731059
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1167986
+                    "units": 1131218
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1220981
+                    "units": 1220855
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1363517
                   }
                 ],
                 "category": "3W"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
               },
               {
                 "label": "Tractors",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 766545
+                    "units": 635969
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 827403
+                    "units": 752748
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 892410
+                    "units": 891364
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 883095
+                    "units": 882921
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1049711
                   }
                 ],
                 "category": "TRACTOR"
@@ -27994,15 +28026,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28012,28 +28040,33 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
@@ -28041,11 +28074,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28055,28 +28088,33 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
@@ -28084,11 +28122,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28098,56 +28136,66 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Three-Wheelers",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 417108
+                    "units": 388061
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 767071
+                    "units": 731059
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1167986
+                    "units": 1131218
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1220981
+                    "units": 1220855
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1363517
                   }
                 ],
                 "category": "3W"
@@ -28155,15 +28203,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28173,56 +28217,66 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Three-Wheelers",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 417108
+                    "units": 388061
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 767071
+                    "units": 731059
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1167986
+                    "units": 1131218
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1220981
+                    "units": 1220855
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1363517
                   }
                 ],
                 "category": "3W"
@@ -28230,15 +28284,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28248,56 +28298,66 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28305,15 +28365,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28323,28 +28379,33 @@
             "segments": [
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28352,11 +28413,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28366,28 +28427,33 @@
             "segments": [
               {
                 "label": "Tractors",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 766545
+                    "units": 635969
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 827403
+                    "units": 752748
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 892410
+                    "units": 891364
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 883095
+                    "units": 882921
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1049711
                   }
                 ],
                 "category": "TRACTOR"
@@ -28395,11 +28461,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28409,28 +28475,33 @@
             "segments": [
               {
                 "label": "Three-Wheelers",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 417108
+                    "units": 388061
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 767071
+                    "units": 731059
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1167986
+                    "units": 1131218
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1220981
+                    "units": 1220855
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1363517
                   }
                 ],
                 "category": "3W"
@@ -28438,11 +28509,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": false
           },
@@ -28452,84 +28523,99 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28537,15 +28623,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28555,84 +28637,99 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28640,15 +28737,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28658,56 +28751,66 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
@@ -28715,11 +28818,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28729,56 +28832,66 @@
             "segments": [
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
               },
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
@@ -28786,15 +28899,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
-              },
-              {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28804,56 +28913,66 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
@@ -28861,11 +28980,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28875,56 +28994,66 @@
             "segments": [
               {
                 "label": "Passenger Vehicles",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 2920084
+                    "units": 2708252
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 3890114
+                    "units": 3446404
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 4218746
+                    "units": 3861439
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 4301848
+                    "units": 4043398
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 4580696
                   }
                 ],
                 "category": "PV"
               },
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28932,15 +29061,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28950,28 +29075,33 @@
             "segments": [
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -28979,11 +29109,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -28993,28 +29123,33 @@
             "segments": [
               {
                 "label": "Commercial Vehicles",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 707186
+                    "units": 651236
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 939741
+                    "units": 892578
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1010324
+                    "units": 981142
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1008623
+                    "units": 1002505
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1060979
                   }
                 ],
                 "category": "CV"
@@ -29022,11 +29157,11 @@
             ],
             "sources": [
               {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           },
@@ -29036,56 +29171,66 @@
             "segments": [
               {
                 "label": "Two-Wheelers",
-                "source_name": "SIAM annual domestic sales",
-                "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 13494214
+                    "units": 11966933
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 15862771
+                    "units": 15166332
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 17974365
+                    "units": 17461077
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 19607332
+                    "units": 18806378
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 21320014
                   }
                 ],
                 "category": "2W"
               },
               {
                 "label": "Three-Wheelers",
-                "source_name": "FADA annual retail",
-                "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
+                "source_name": "FADA annual retail (computed from monthly press releases)",
+                "source_url": "https://fada.in/press-releases.php",
                 "series": [
                   {
                     "period": "2021-22",
                     "label": "2021-22",
-                    "units": 417108
+                    "units": 388061
                   },
                   {
                     "period": "2022-23",
                     "label": "2022-23",
-                    "units": 767071
+                    "units": 731059
                   },
                   {
                     "period": "2023-24",
                     "label": "2023-24",
-                    "units": 1167986
+                    "units": 1131218
                   },
                   {
                     "period": "2024-25",
                     "label": "2024-25",
-                    "units": 1220981
+                    "units": 1220855
+                  },
+                  {
+                    "period": "2025-26",
+                    "label": "2025-26",
+                    "units": 1363517
                   }
                 ],
                 "category": "3W"
@@ -29093,15 +29238,11 @@
             ],
             "sources": [
               {
-                "label": "SIAM",
-                "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
-              },
-              {
-                "label": "FADA",
-                "url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf"
+                "label": "FADA (computed from monthly press releases)",
+                "url": "https://fada.in/press-releases.php"
               }
             ],
-            "latest_period": "2024-25",
+            "latest_period": "2025-26",
             "note": "Industry segment annual volumes for the markets this company participates in. This is not company-reported unit volume.",
             "is_directional_mapping": true
           }

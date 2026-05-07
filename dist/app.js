@@ -5545,6 +5545,7 @@ function renderCompanyExposureTrendExplorer() {
     values: asArray(segment.series).map((item) => item.units),
     color: dashboardData.chart_colors?.[segment.category] || "#1b3454",
   }));
+  const fyCount = labels.length;
 
   registerDownload(
     `company-segment-${slugify(selected.company)}`,
@@ -5566,7 +5567,7 @@ function renderCompanyExposureTrendExplorer() {
       <div class="chart-title-row">
         <div>
           <p class="small-label">Company-linked end-market volumes</p>
-          <h3>See how the segments behind a company have moved over the last 4 fiscal years</h3>
+          <h3>See how the segments behind a company have moved over the last ${fyCount} fiscal year${fyCount === 1 ? "" : "s"}</h3>
         </div>
         <div class="button-row">
           ${renderSourceActions(selected.sources)}
