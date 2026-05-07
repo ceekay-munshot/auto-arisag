@@ -2758,7 +2758,12 @@ function renderRetailTrendOnly() {
 // thesis everyone in this sector talks about. Updates every month as new
 // FADA prints land — fully forward-looking, no static element.
 function renderCategoryMixShift(retail, allowed) {
-  const months = (retail.months || []).slice(-12);
+  // Was capped to the last 12 months. We have 86 months of FADA monthly
+  // history (Dec 2018 -> Apr 2026); plotting the full series shows the
+  // long-arc structural shifts (BS-VI, COVID, festive cycles, EV ramp)
+  // that a 1-year window completely hides. Each line is bounded 0-80%
+  // so 86 points still reads cleanly.
+  const months = retail.months || [];
   if (months.length < 3) return "";
   const visibleCats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"]
     .filter((c) => allowed.includes(c));
