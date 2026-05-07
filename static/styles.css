@@ -4192,6 +4192,73 @@ th:hover {
   display: block;
 }
 
+/* Data-gaps panel — surfaces months where the upstream source publishes
+   data but our snapshot doesn't have it. Amber accent so the user spots
+   it; the panel collapses entirely when there are no gaps. */
+.data-gaps-panel {
+  border-left: 3px solid #c08a4a;
+  background: rgba(192, 138, 74, 0.04);
+}
+
+.data-gaps-panel h2 {
+  font-size: 1.2rem;
+}
+
+.data-gaps-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.data-gaps-row {
+  padding: 12px 14px;
+  border: 1px solid rgba(20, 39, 62, 0.08);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
+.data-gaps-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.data-gaps-row-head strong {
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
+}
+
+.data-gaps-source-link {
+  font-size: 0.78rem;
+  color: #6b7886;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.data-gaps-source-link:hover {
+  color: #c08a4a;
+}
+
+.data-gaps-months {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.data-gaps-month-pill {
+  display: inline-flex;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(192, 138, 74, 0.12);
+  color: #8a5e2a;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
 .stock-chip-changes {
   display: flex;
   gap: 6px;

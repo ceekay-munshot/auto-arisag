@@ -1841,6 +1841,7 @@ function render() {
     renderHero(),
     renderMacroOverlayStrip(),
     renderMarketInsightsRibbon(),
+    renderDataGapsPanel(),
     renderFilters(),
     state.printAllTabs
       ? `<main class="dashboard-content print-all-tabs">${renderAllTabsForPrint()}</main>`
@@ -2143,6 +2144,117 @@ function renderMacroOverlayStrip() {
         <div class="macro-strip-grid">
           ${macro.indicators.map(renderTile).join("")}
         </div>
+      </div>
+    </section>
+  `;
+}
+
+// Detect missing months across the major monthly time-series powering the
+// dashboard. Returns one entry per series; series without gaps are
+// omitted. Used to surface data holes to the user via the data-gaps
+// panel rather than silently fudging the chart timeline around them.
+function detectDataGaps() {
+  const expandMonths = (start, end) => {
+    const out = [];
+    let [y, m] = start.split("-").map(Number);
+    const [ey, em] = end.split("-").map(Number);
+    while (y < ey || (y === ey && m <= em)) {
+      out.push(`${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}`);
+      m += 1;
+      if (m > 12) { m = 1; y += 1; }
+    }
+    return out;
+  };
+  const monthsBetween = (months) => {
+    if (!months.length) return [];
+    const sorted = [...months].sort();
+    const expected = expandMonths(sorted[0], sorted[sorted.length - 1]);
+    const have = new Set(sorted);
+    return expected.filter((m) => !have.has(m));
+  };
+  const monthLabelStr = (mid) => monthLabel(mid);
+  const gaps = [];
+
+  const retail = dashboardData.modules?.retail;
+  if (retail) {
+    const fadaMonths = asArray(retail.months).map((m) => m.month);
+    const fadaMissing = monthsBetween(fadaMonths);
+    if (fadaMissing.length) {
+      gaps.push({
+        series: "FADA monthly retail",
+        sourceLabel: "FADA Press Releases",
+        sourceUrl: "https://fada.in/press-releases.php",
+        missing: fadaMissing,
+      });
+    }
+    for (const cat of ["CV", "3W"]) {
+      const subSeries = asArray(retail.subsegment_series?.[cat]);
+      const subMonths = [...new Set(subSeries.map((r) => r.month))];
+      const subMissing = monthsBetween(subMonths);
+      if (subMissing.length) {
+        gaps.push({
+          series: `FADA ${cat} subsegments`,
+          sourceLabel: "FADA Press Releases",
+          sourceUrl: "https://fada.in/press-releases.php",
+          missing: subMissing,
+        });
+      }
+    }
+    const ur = asArray(retail.urban_rural_growth_series);
+    const urMonths = [...new Set(ur.map((r) => r.month))];
+    const urMissing = monthsBetween(urMonths);
+    if (urMissing.length) {
+      gaps.push({
+        series: "FADA urban-rural growth",
+        sourceLabel: "FADA Press Releases",
+        sourceUrl: "https://fada.in/press-releases.php",
+        missing: urMissing,
+      });
+    }
+  }
+
+  const credit = dashboardData.modules?.credit_pulse;
+  if (credit) {
+    const creditMonths = asArray(credit.months).map((m) => m.month);
+    const creditMissing = monthsBetween(creditMonths);
+    if (creditMissing.length) {
+      gaps.push({
+        series: "RBI Sectoral Deployment of Bank Credit",
+        sourceLabel: "RBI Press Releases",
+        sourceUrl: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+        missing: creditMissing,
+      });
+    }
+  }
+
+  return { gaps, monthLabel: monthLabelStr };
+}
+
+function renderDataGapsPanel() {
+  const { gaps, monthLabel: fmt } = detectDataGaps();
+  if (!gaps.length) return "";
+  const totalMissing = gaps.reduce((acc, g) => acc + g.missing.length, 0);
+  return `
+    <section class="section panel data-gaps-panel">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Data gaps</p>
+          <h2>${totalMissing} report${totalMissing === 1 ? "" : "s"} missing across ${gaps.length} series</h2>
+          <p class="section-subtitle">Months where the source publishes data but our snapshot doesn't have it. Send the report and we'll ingest it; the chart timeline isn't fudged to hide these.</p>
+        </div>
+      </div>
+      <div class="data-gaps-list">
+        ${gaps.map((g) => `
+          <div class="data-gaps-row">
+            <div class="data-gaps-row-head">
+              <strong>${escapeHtml(g.series)}</strong>
+              <a href="${g.sourceUrl}" target="_blank" rel="noopener" class="data-gaps-source-link">${escapeHtml(g.sourceLabel)} ↗</a>
+            </div>
+            <div class="data-gaps-months">
+              ${g.missing.map((m) => `<span class="data-gaps-month-pill">${escapeHtml(fmt(m))}</span>`).join("")}
+            </div>
+          </div>
+        `).join("")}
       </div>
     </section>
   `;
@@ -7869,43 +7981,28 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const yearOnlyDisplay = new Map(); // index -> override display label
   let candidateIndices;
   if (isMonthYearSeries) {
-    // Anchor a year-tick on the FIRST month of each year that appears in
-    // the data — not strictly January. Series with gaps (e.g. RBI YoY
-    // with Jan 2024 missing) would silently skip a year if we only looked
-    // for January. Picking the first-available month per year guarantees
-    // every year boundary visible in the data gets a label.
-    const yearFirstIndices = [];
-    const seenYears = new Set();
+    // Anchor year ticks STRICTLY on January positions. If January of a
+    // given year isn't in the data, that year's label is intentionally
+    // absent — silently shifting the anchor to e.g. Feb would hide a
+    // genuine data gap from the user, who wants visibility into missing
+    // months so they can supply the report.
+    const januaryIndices = [];
     labels.forEach((label, i) => {
       const m = `${label}`.match(monthYearRe);
-      const year = m[2];
-      if (!seenYears.has(year)) {
-        seenYears.add(year);
-        yearFirstIndices.push({ idx: i, year });
-      }
+      if (m[1].slice(0, 3).toLowerCase() === "jan") januaryIndices.push({ idx: i, year: m[2] });
     });
-    if (yearFirstIndices.length >= 2) {
-      // Year-strategy: data-start (MMM YYYY), year boundaries (YYYY), data-end (MMM YYYY).
-      // The first data point is always included so the user can see when
-      // the series starts — without it, a chart starting Aug 2022 would
-      // jump straight to '2023' and leave the leading 5 months unlabelled.
-      // For the FIRST year in the data we render the full month (Aug 2022)
-      // as the data-start anchor; for subsequent years we render just the
-      // year — even if its first available month is Feb (e.g. Feb 2024 in
-      // a series with Jan 2024 missing) the eye still reads it as the
-      // year boundary, which is the only thing investors care about.
+    if (januaryIndices.length >= 2) {
       candidateIndices = [0];
-      // If the data starts in January, treat the data-start as the year
-      // anchor (render as "YYYY"). Otherwise the data-start renders as
-      // its native "MMM YYYY" so the user sees exactly when the series
-      // begins, and subsequent years render as just the year.
+      // If the data starts in January, render the data-start as just the
+      // year. Otherwise the data-start renders as its native MMM YYYY so
+      // the user sees exactly when the series begins.
       const firstLabelMatch = `${labels[0]}`.match(monthYearRe);
       const firstIsJanuary = firstLabelMatch && firstLabelMatch[1].slice(0, 3).toLowerCase() === "jan";
       if (firstIsJanuary) {
         yearOnlyDisplay.set(0, firstLabelMatch[2]);
       }
-      yearFirstIndices.forEach(({ idx, year }, ord) => {
-        if (ord === 0) return;  // already handled above
+      januaryIndices.forEach(({ idx, year }) => {
+        if (idx === 0) return;  // already in candidates above
         candidateIndices.push(idx);
         yearOnlyDisplay.set(idx, year);
       });
