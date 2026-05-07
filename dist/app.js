@@ -7869,25 +7869,45 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   const yearOnlyDisplay = new Map(); // index -> override display label
   let candidateIndices;
   if (isMonthYearSeries) {
-    const januaryIndices = [];
+    // Anchor a year-tick on the FIRST month of each year that appears in
+    // the data — not strictly January. Series with gaps (e.g. RBI YoY
+    // with Jan 2024 missing) would silently skip a year if we only looked
+    // for January. Picking the first-available month per year guarantees
+    // every year boundary visible in the data gets a label.
+    const yearFirstIndices = [];
+    const seenYears = new Set();
     labels.forEach((label, i) => {
       const m = `${label}`.match(monthYearRe);
-      if (m[1].slice(0, 3).toLowerCase() === "jan") januaryIndices.push({ idx: i, year: m[2] });
+      const year = m[2];
+      if (!seenYears.has(year)) {
+        seenYears.add(year);
+        yearFirstIndices.push({ idx: i, year });
+      }
     });
-    if (januaryIndices.length >= 2) {
+    if (yearFirstIndices.length >= 2) {
       // Year-strategy: data-start (MMM YYYY), year boundaries (YYYY), data-end (MMM YYYY).
       // The first data point is always included so the user can see when
       // the series starts — without it, a chart starting Aug 2022 would
       // jump straight to '2023' and leave the leading 5 months unlabelled.
+      // For the FIRST year in the data we render the full month (Aug 2022)
+      // as the data-start anchor; for subsequent years we render just the
+      // year — even if its first available month is Feb (e.g. Feb 2024 in
+      // a series with Jan 2024 missing) the eye still reads it as the
+      // year boundary, which is the only thing investors care about.
       candidateIndices = [0];
-      januaryIndices.forEach(({ idx, year }) => {
-        if (idx !== 0) {
-          candidateIndices.push(idx);
-          yearOnlyDisplay.set(idx, year);
-        } else {
-          // Data starts in January — show as "YYYY" rather than "Jan YYYY".
-          yearOnlyDisplay.set(idx, year);
-        }
+      // If the data starts in January, treat the data-start as the year
+      // anchor (render as "YYYY"). Otherwise the data-start renders as
+      // its native "MMM YYYY" so the user sees exactly when the series
+      // begins, and subsequent years render as just the year.
+      const firstLabelMatch = `${labels[0]}`.match(monthYearRe);
+      const firstIsJanuary = firstLabelMatch && firstLabelMatch[1].slice(0, 3).toLowerCase() === "jan";
+      if (firstIsJanuary) {
+        yearOnlyDisplay.set(0, firstLabelMatch[2]);
+      }
+      yearFirstIndices.forEach(({ idx, year }, ord) => {
+        if (ord === 0) return;  // already handled above
+        candidateIndices.push(idx);
+        yearOnlyDisplay.set(idx, year);
       });
       if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
         candidateIndices.push(labels.length - 1);
