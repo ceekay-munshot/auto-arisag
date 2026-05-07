@@ -407,21 +407,33 @@ def parse_siam_release(html: str, source_url: str) -> dict:
             flags=re.IGNORECASE | re.DOTALL,
         )
     )
-    pv_match = re.search(
-        rf"Passenger Vehicles.*?sales were\s+([\d,]+)\s+units in\s+{re.escape(month_name)}\s+{year_text}",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-    three_w_match = re.search(
-        rf"Three-wheeler sales were\s+([\d,]+)\s+units in\s+{re.escape(month_name)}\s+{year_text}",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-    two_w_match = re.search(
-        rf"Two-wheeler sales were\s+([\d,]+)\s+units in\s+{re.escape(month_name)}\s+{year_text}",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
+    # Volume regex: try the standard "sales were N units in <Month>" form
+    # first, then the "sold ... N units in <Month>" form Q-bundle releases
+    # use. Both forms are anchored on the target month so the parser never
+    # accidentally lifts a Q-cumulative or YTD number from elsewhere on
+    # the page.
+    def _volume_match(category_pattern: str):
+        return (
+            re.search(
+                rf"{category_pattern}.*?sales were\s+([\d,]+)\s+units in\s+{re.escape(month_name)}\s+{year_text}",
+                html,
+                flags=re.IGNORECASE | re.DOTALL,
+            )
+            or re.search(
+                rf"{category_pattern}(?:[^.]*?)sold[^.]*?\b([\d,]+)\b[^.]*?{re.escape(month_name)}\s+{year_text}",
+                html,
+                flags=re.IGNORECASE | re.DOTALL,
+            )
+            or re.search(
+                rf"{category_pattern}(?:[^.]*?)\b([\d,]{{4,}})\s+units?\b[^.]*?{re.escape(month_name)}\s+{year_text}",
+                html,
+                flags=re.IGNORECASE | re.DOTALL,
+            )
+        )
+
+    pv_match = _volume_match(r"Passenger Vehicles?")
+    three_w_match = _volume_match(r"Three[-\s]?wheelers?")
+    two_w_match = _volume_match(r"Two[-\s]?wheelers?")
     if not all([production_match, pv_match, three_w_match, two_w_match]):
         raise ValueError("missing one or more SIAM volume fields")
 
