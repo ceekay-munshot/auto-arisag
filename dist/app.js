@@ -4388,7 +4388,10 @@ function renderUnifiedCompanySpotlight() {
     return "";
   }
   const selected = visibleTrends.find((item) => item.company === state.companyTrend) || visibleTrends[0];
-  const series = asArray(selected.series).slice(-6);
+  // Render the full series (typically 60+ months now that FADA back-history
+  // is wired in). lineChart suppresses dot markers on >=30 point series so
+  // long histories still read cleanly.
+  const series = asArray(selected.series);
   const latestPoint = series.at(-1);
   registerDownload(
     "company-unit-trend",
@@ -4833,7 +4836,7 @@ function renderCompanyUnitTrend() {
   }
 
   const selected = visibleTrends.find((item) => item.company === state.companyTrend) || visibleTrends[0];
-  const series = asArray(selected.series).slice(-6);
+  const series = asArray(selected.series);
   const latestPoint = series.at(-1);
 
   registerDownload(
