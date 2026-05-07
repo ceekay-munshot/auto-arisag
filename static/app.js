@@ -7851,18 +7851,26 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       const m = `${label}`.match(monthYearRe);
       if (m[1].slice(0, 3).toLowerCase() === "jan") januaryIndices.push({ idx: i, year: m[2] });
     });
-    if (januaryIndices.length >= 3) {
-      // Year-strategy: clean year boundaries + last point.
-      candidateIndices = [];
+    if (januaryIndices.length >= 2) {
+      // Year-strategy: data-start (MMM YYYY), year boundaries (YYYY), data-end (MMM YYYY).
+      // The first data point is always included so the user can see when
+      // the series starts — without it, a chart starting Aug 2022 would
+      // jump straight to '2023' and leave the leading 5 months unlabelled.
+      candidateIndices = [0];
       januaryIndices.forEach(({ idx, year }) => {
-        candidateIndices.push(idx);
-        yearOnlyDisplay.set(idx, year);
+        if (idx !== 0) {
+          candidateIndices.push(idx);
+          yearOnlyDisplay.set(idx, year);
+        } else {
+          // Data starts in January — show as "YYYY" rather than "Jan YYYY".
+          yearOnlyDisplay.set(idx, year);
+        }
       });
       if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
         candidateIndices.push(labels.length - 1);
       }
     } else {
-      // Short-window strategy (12-24 months, < 3 Januarys): evenly-spaced
+      // Short-window strategy (12-24 months, < 2 Januarys): evenly-spaced
       // "MMM YYYY" labels so the eye gets ~5 reference points across the
       // window. Always include first + last so the user sees the data
       // window endpoints.
