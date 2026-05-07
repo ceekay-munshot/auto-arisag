@@ -484,6 +484,7 @@ LISTED_COMPANY_MAP = {
 }
 
 OEM_TO_LISTED = {
+    # Listed on Indian exchanges (NSE / BSE)
     "Maruti Suzuki": ["Maruti Suzuki"],
     "Tata Motors": ["Tata Motors"],
     "Mahindra & Mahindra": ["Mahindra & Mahindra"],
@@ -497,25 +498,46 @@ OEM_TO_LISTED = {
     "Bajaj Auto": ["Bajaj Auto"],
     "Royal Enfield": ["Eicher Motors"],
     "VE Commercial Vehicles": ["Eicher Motors"],
+    "Eicher Tractors": ["Eicher Motors"],
     "Ashok Leyland Group": ["Ashok Leyland"],
     "Escorts Kubota": ["Escorts Kubota"],
     "Escorts Kubota CE": ["Escorts Kubota"],
     "Action Construction Equipment": ["Action Construction Equipment"],
     "Atul Auto": ["Atul Auto"],
-    "Ather Energy": [],
-    "Ola Electric": [],
-    "Honda Motorcycle & Scooter India": [],
-    "Honda Cars India": [],
-    "Toyota Kirloskar Motor": [],
-    "Kia India": [],
-    "Skoda Auto Volkswagen Group": [],
-    "JSW MG Motor India": [],
-    "Renault India": [],
-    "Nissan Motor India": [],
-    "Mercedes-Benz Group": [],
-    "BMW India": [],
-    "Jaguar Land Rover India": [],
-    "BYD India": [],
+    "Force Motors": ["Force Motors"],
+    "Force Motors Limited": ["Force Motors"],
+    "Force Motors Limited, A Firodia Enterprise": ["Force Motors"],
+    "SML Isuzu": ["SML Isuzu"],
+    "Sml Isuzu Ltd": ["SML Isuzu"],
+    "Ola Electric": ["Ola Electric"],
+    "Ather Energy": ["Ather Energy"],
+    "Ather Energy Pvt Ltd": ["Ather Energy"],
+    # Foreign-parent India subsidiaries — not listed on NSE/BSE but tracked
+    # via their FADA OEM annexure rows. Mapped to themselves so the
+    # back-history aggregator picks them up.
+    "Honda Motorcycle & Scooter India": ["Honda Motorcycle & Scooter India"],
+    "Honda Cars India": ["Honda Cars India"],
+    "Toyota Kirloskar Motor": ["Toyota Kirloskar Motor"],
+    "Kia India": ["Kia India"],
+    "Kia Motors India Pvt Ltd": ["Kia India"],
+    "Skoda Auto Volkswagen Group": ["Skoda Auto Volkswagen Group"],
+    "JSW MG Motor India": ["JSW MG Motor India"],
+    "Mg Motor India Pvt Ltd": ["JSW MG Motor India"],
+    "Renault India": ["Renault India"],
+    "Nissan Motor India": ["Nissan Motor India"],
+    "Mercedes-Benz Group": ["Mercedes-Benz Group"],
+    "BMW India": ["BMW India"],
+    "Bmw India Pvt Ltd": ["BMW India"],
+    "Jaguar Land Rover India": ["Jaguar Land Rover India"],
+    "BYD India": ["BYD India"],
+    "Suzuki Motorcycle India": ["Suzuki Motorcycle India"],
+    "India Yamaha Motor": ["India Yamaha Motor"],
+    "Piaggio Vehicles": ["Piaggio Vehicles"],
+    "Piaggio Vehicles Pvt Ltd": ["Piaggio Vehicles"],
+    "TAFE": ["TAFE"],
+    "International Tractors": ["International Tractors (Sonalika)"],
+    "John Deere India": ["John Deere India"],
+    "John Deere India Pvt Ltd": ["John Deere India"],
 }
 
 MODULE_TITLES = {
@@ -824,5 +846,143 @@ COMPANY_UNIT_TRENDS = {
             {"month": "2025-12", "units": 3602, "source_url": "https://atulauto.co.in/wp-content/uploads/2026/01/Signed_Letter_SalesPerformance_BSE_NSE_December2025-003.pdf"},
             {"month": "2026-01", "units": 3606, "source_url": "https://atulauto.co.in/wp-content/uploads/2026/02/SignedLetter_SalesPerformance_BSE_NSE_January2026.pdf"},
         ],
+    },
+    # ----------- Foreign-parent India subsidiaries (FADA-tracked only) -----------
+    # These OEMs sell in India but their listed parent trades on a
+    # foreign exchange (NYSE, Tokyo, Frankfurt, Shenzhen, etc.). Series
+    # is empty so the back-history aggregator in
+    # analyze._build_fada_oem_back_history_by_company fills the entire
+    # line from FADA monthly retail data.
+    "Honda Motorcycle & Scooter India": {
+        "label": "Honda Motorcycle & Scooter India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed on Tokyo Stock Exchange)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Honda Cars India": {
+        "label": "Honda Cars India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed on Tokyo Stock Exchange)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Toyota Kirloskar Motor": {
+        "label": "Toyota Kirloskar Motor",
+        "concept": "FADA-tracked monthly retail registrations (Toyota Motor Corp, listed Tokyo)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Kia India": {
+        "label": "Kia India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed on KOSPI)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Skoda Auto Volkswagen Group": {
+        "label": "Skoda Auto Volkswagen Group",
+        "concept": "FADA-tracked monthly retail registrations (Volkswagen AG, listed Frankfurt)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "JSW MG Motor India": {
+        "label": "JSW MG Motor India",
+        "concept": "FADA-tracked monthly retail registrations (JV between JSW Group and SAIC Motor)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Renault India": {
+        "label": "Renault India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed on Euronext Paris)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Nissan Motor India": {
+        "label": "Nissan Motor India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed on Tokyo Stock Exchange)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Mercedes-Benz Group": {
+        "label": "Mercedes-Benz Group",
+        "concept": "FADA-tracked monthly retail registrations (Mercedes-Benz Group AG, listed Frankfurt)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "BMW India": {
+        "label": "BMW India",
+        "concept": "FADA-tracked monthly retail registrations (BMW AG, listed Frankfurt)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Jaguar Land Rover India": {
+        "label": "Jaguar Land Rover India",
+        "concept": "FADA-tracked monthly retail registrations (JLR is owned by Tata Motors)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "BYD India": {
+        "label": "BYD India",
+        "concept": "FADA-tracked monthly retail registrations (parent listed Shenzhen + Hong Kong)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Suzuki Motorcycle India": {
+        "label": "Suzuki Motorcycle India",
+        "concept": "FADA-tracked monthly 2W retail registrations (Suzuki Motor Corp, listed Tokyo)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "India Yamaha Motor": {
+        "label": "India Yamaha Motor",
+        "concept": "FADA-tracked monthly 2W retail registrations (Yamaha Motor Co., listed Tokyo)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Piaggio Vehicles": {
+        "label": "Piaggio Vehicles",
+        "concept": "FADA-tracked monthly 3W + 2W retail registrations (parent listed Borsa Italiana)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Force Motors": {
+        "label": "Force Motors",
+        "concept": "FADA-tracked monthly retail registrations (listed on NSE/BSE)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "SML Isuzu": {
+        "label": "SML Isuzu",
+        "concept": "FADA-tracked monthly CV retail registrations (listed on NSE/BSE)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Ola Electric": {
+        "label": "Ola Electric",
+        "concept": "FADA-tracked monthly EV 2W retail registrations (listed on NSE/BSE)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "Ather Energy": {
+        "label": "Ather Energy",
+        "concept": "FADA-tracked monthly EV 2W retail registrations (listed on NSE/BSE)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "TAFE": {
+        "label": "TAFE (Tractors and Farm Equipment)",
+        "concept": "FADA-tracked monthly tractor retail registrations (private; Amalgamations Group)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "International Tractors (Sonalika)": {
+        "label": "Sonalika (International Tractors)",
+        "concept": "FADA-tracked monthly tractor retail registrations (private)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
+    },
+    "John Deere India": {
+        "label": "John Deere India",
+        "concept": "FADA-tracked monthly tractor retail registrations (Deere & Co., listed NYSE)",
+        "source_name": "FADA OEM annexure",
+        "series": [],
     },
 }

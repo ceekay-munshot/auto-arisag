@@ -4485,7 +4485,7 @@ function renderUnifiedCompanySpotlight() {
     <div class="oem-spotlight">
       <div class="oem-spotlight-head">
         <div>
-          <p class="small-label">Listed-company spotlight</p>
+          <p class="small-label">OEM spotlight</p>
           <h3>${selected.label}${peerCompanies.length ? ` <span class="spotlight-vs">vs ${peerCompanies.length} peer${peerCompanies.length === 1 ? "" : "s"}</span>` : ""}</h3>
           <p class="table-note">${selected.concept}</p>
         </div>
