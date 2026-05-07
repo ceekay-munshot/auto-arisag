@@ -3766,9 +3766,12 @@ function computeChannelWedges() {
   const wholesaleByMonth = new Map((wholesale.months || []).map((m) => [m.month, m]));
   const cats = ["PV", "2W"];
   return cats.map((cat) => {
+    // Drop slice(-6); we have ~70 months of overlap (FADA from Dec 2018,
+    // SIAM from Jun 2020) and the wedge story is most useful AS a
+    // long-arc trend (channel-stuffing cycles run multiple quarters).
+    // lineChart suppresses dot markers >=30 points so the line stays clean.
     const series = (retail.months || [])
       .filter((m) => wholesaleByMonth.has(m.month))
-      .slice(-6)
       .map((r) => {
         const w = wholesaleByMonth.get(r.month);
         const retailUnits = (r.categories || []).find((c) => c.category === cat)?.units || 0;
@@ -3781,12 +3784,18 @@ function computeChannelWedges() {
           wedge: wholesaleUnits - retailUnits,
         };
       });
-    const cumulative = series.reduce((acc, p) => acc + p.wedge, 0);
-    const avgRetail = series.length
-      ? series.reduce((acc, p) => acc + p.retail, 0) / series.length
+    // Headline cumulative + impliedDays read as "recent dealer
+    // inventory pressure" — meaningful only over a rolling 6-month
+    // window, not a 6-year cumulative. Compute the headline metrics
+    // off the trailing 6 months while plotting the full series.
+    const trailing = series.slice(-6);
+    const cumulative = trailing.reduce((acc, p) => acc + p.wedge, 0);
+    const avgRetail = trailing.length
+      ? trailing.reduce((acc, p) => acc + p.retail, 0) / trailing.length
       : 0;
-    // Convert cumulative wedge to implied days-of-sales so investors can
-    // read it on the same axis as the FADA "PV inventory days" metric.
+    // Convert trailing-6m cumulative wedge to implied days-of-sales so
+    // investors can read it on the same axis as the FADA "PV inventory
+    // days" metric.
     const impliedDays = avgRetail > 0 ? (cumulative / avgRetail) * 30 : null;
     return {
       category: cat,
@@ -3884,6 +3893,11 @@ function renderChannelPulse() {
   if (wedges.length) {
     const monthLabels = wedges[0].series.map((p) => p.label);
     const wedgeMonths = `${monthLabels[0]} – ${monthLabels[monthLabels.length - 1]}`;
+    // Trailing-6m label for the headline metric. The chart plots the full
+    // series; the cumulative + impliedDays headline is computed from the
+    // trailing 6 months only (channel-stuffing is a recent-quarters read).
+    const trailingLabels = monthLabels.slice(-6);
+    const trailingWindow = `${trailingLabels[0]} – ${trailingLabels[trailingLabels.length - 1]}`;
     const wedgeColor = (cumulative) => cumulative > 0 ? "#cc4343" : "#2f897d";
     const wedgeTone = (cumulative) => cumulative > 0 ? "negative" : "positive";
     const wedgeReading = (entry) => {
@@ -3911,7 +3925,7 @@ function renderChannelPulse() {
         <div class="chart-title-row">
           <div>
             <p class="small-label">Wholesale–retail wedge</p>
-            <h3>Channel-fill proxy for non-PV inventory health · ${wedgeMonths}</h3>
+            <h3>Channel-fill proxy for non-PV inventory health · ${wedgeMonths} <span class="oem-spotlight-vs">(headline metric: ${trailingWindow})</span></h3>
           </div>
           <div class="button-row">
             ${renderDownloadIcon("channel-wedge")}
