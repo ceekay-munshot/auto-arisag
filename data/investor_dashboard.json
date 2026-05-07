@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T10:00:29.610012+00:00",
+  "generated_at": "2026-05-07T10:05:41.503740+00:00",
   "as_of_date": "2026-04-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -23267,6 +23267,151 @@
       },
       "latest_month": "2026-03",
       "months": [
+        {
+          "month": "2021-06",
+          "label": "Jun 2021",
+          "release_date": "2021-07-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-june-2021-q1-april---june-2021",
+          "production_total": 1693639,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 231633,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1055777,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 9397,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1296807,
+          "exports": []
+        },
+        {
+          "month": "2021-09",
+          "label": "Sep 2021",
+          "release_date": "2021-10-14",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-september-2021-q2-jul---sep-2021",
+          "production_total": 2125304,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 160070,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1528472,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 29185,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1717727,
+          "exports": []
+        },
+        {
+          "month": "2021-12",
+          "label": "Dec 2021",
+          "release_date": "2022-01-14",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-december-2021-q3-oct---dec-2021",
+          "production_total": 1638111,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 219421,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1006062,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 28111,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1253594,
+          "exports": []
+        },
+        {
+          "month": "2022-03",
+          "label": "Mar 2022",
+          "release_date": "2022-04-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-march-2022-q4-jan---march-2022-fy-2021-22",
+          "production_total": 1960398,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 279501,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1184210,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 32088,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1495799,
+          "exports": []
+        },
+        {
+          "month": "2022-06",
+          "label": "Jun 2022",
+          "release_date": "2022-07-15",
+          "source_url": "https://www.siam.in/news-&-updates/press-releases/auto-industry-sales-performance-of-june-2022-q1-apr---jun-2022",
+          "production_total": 2081148,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 275788,
+              "yoy_pct": null
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1308764,
+              "yoy_pct": null
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 26701,
+              "yoy_pct": null
+            }
+          ],
+          "domestic_total": 1611253,
+          "exports": []
+        },
         {
           "month": "2022-09",
           "label": "Sep 2022",
