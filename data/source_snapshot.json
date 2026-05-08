@@ -306,6 +306,11 @@
         "release_date": "2019-07-15",
         "source_url": "file://160c4729c7e9d6Automobile Retail Sales Data for July 2019.pdf",
         "categories": {
+          "PV": {
+            "units": 243183,
+            "yoy_pct": 7.0,
+            "mom_pct": -11.0
+          },
           "2W": {
             "units": 1332384,
             "yoy_pct": 4.0,
@@ -316,20 +321,15 @@
             "yoy_pct": 21.0,
             "mom_pct": 3.0
           },
+          "CV": {
+            "units": 23118,
+            "yoy_pct": -19.0,
+            "mom_pct": -14.0
+          },
           "TOTAL": {
             "units": 1654535,
             "yoy_pct": 5.0,
             "mom_pct": -6.0
-          },
-          "PV": {
-            "units": 0,
-            "yoy_pct": null,
-            "mom_pct": null
-          },
-          "CV": {
-            "units": 0,
-            "yoy_pct": null,
-            "mom_pct": null
           },
           "TRACTOR": {
             "units": 0,

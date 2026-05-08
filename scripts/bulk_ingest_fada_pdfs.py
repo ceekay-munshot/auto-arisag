@@ -162,8 +162,13 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
         if canonical in out:
             continue
         # New format pattern: <CAT> <curr_units> <prior_month_units> <prior_year_units> <MoM%> <YoY%>
+        # Allow optional '*' / '**' footnote markers right after the
+        # category label — older FADA PDFs (Jul 2019 e.g.) print 'PV**'
+        # and 'CV*' next to a footnote about RTO coverage. \*+ swallows
+        # any number of trailing asterisks; \s+ then anchors on the
+        # space before the units number.
         pattern_new = (
-            rf"(?<![\w/.])({label})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+([\d,]{{3,}})"
+            rf"(?<![\w/.])({label})\**\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+([\d,]{{3,}})"
             rf"\s+(-?[\d.]+)\s*%\s+(-?[\d.]+)\s*%"
         )
         m = re.search(pattern_new, section_text)
@@ -183,7 +188,7 @@ def _parse_old_format_volumes(pdf_text: str) -> dict | None:
     for label, canonical in cat_aliases:
         if canonical in out:
             continue
-        pattern_old = rf"(?<![\w/.])({label})\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+(-?[\d.]+)\s*%"
+        pattern_old = rf"(?<![\w/.])({label})\**\s+([\d,]{{3,}})\s+([\d,]{{3,}})\s+(-?[\d.]+)\s*%"
         m = re.search(pattern_old, section_text)
         if not m:
             continue
