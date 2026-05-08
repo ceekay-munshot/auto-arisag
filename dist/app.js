@@ -2837,12 +2837,14 @@ function renderRetailTrendOnly() {
 // thesis everyone in this sector talks about. Updates every month as new
 // FADA prints land — fully forward-looking, no static element.
 function renderCategoryMixShift(retail, allowed) {
-  // Was capped to the last 12 months. We have 86 months of FADA monthly
-  // history (Dec 2018 -> Apr 2026); plotting the full series shows the
-  // long-arc structural shifts (BS-VI, COVID, festive cycles, EV ramp)
-  // that a 1-year window completely hides. Each line is bounded 0-80%
-  // so 86 points still reads cleanly.
-  const months = retail.months || [];
+  // Plot from Jan 2020 onward. FADA's Dec 2018 release only carried PV+2W,
+  // their 2019 monthly releases didn't separately track tractors, and CE
+  // came online only in late 2024 — so the 2018-19 stretch had several
+  // category lines anchored at 0% which read as data errors rather than
+  // a real reporting-coverage limitation. Jan 2020 onward all 5 main
+  // categories (PV / 2W / 3W / CV / Tractor) are consistently reported,
+  // giving a clean comparable mix-shift story.
+  const months = (retail.months || []).filter((m) => m.month >= "2020-01");
   if (months.length < 3) return "";
   const visibleCats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"]
     .filter((c) => allowed.includes(c));
