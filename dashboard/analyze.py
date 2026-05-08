@@ -3539,7 +3539,11 @@ def build_yearly_period(
         "period_label": period_label,
         "columns": [
             {"key": "oem", "label": "OEM"},
-            {"key": "current_units", "label": "FY Units (annualised)", "type": "int"},
+            # "FY retail units" is the dealer-counter retail-registration total
+            # for the year (FADA RTO data), not factory production / wholesale.
+            # The "(annualised)" caveat already lives on the period_label when
+            # the FY is partial, so the column header doesn't need to repeat it.
+            {"key": "current_units", "label": "FY Retail Units", "type": "int"},
             {"key": "yoy_pct", "label": "YoY%", "type": "pct"},
             {"key": "cagr_2y_pct", "label": "2Y CAGR", "type": "pct"},
             {"key": "cagr_5y_pct", "label": "5Y CAGR", "type": "pct"},
