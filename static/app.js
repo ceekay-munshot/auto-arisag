@@ -26,6 +26,10 @@ const state = {
   // first visible point. Required for peer comparison across very different
   // scales (e.g. Maruti ~200k/mo vs Atul ~1k/mo).
   companyTrendIndexed: false,
+  // Time window for the spotlight chart. One of "6m" | "1y" | "2y" | "3y" |
+  // "5y" | "all". Lets the user clip the early-COVID volume spike out of
+  // the view without losing the data underneath.
+  companyTrendWindow: "all",
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
@@ -1334,6 +1338,14 @@ function setupCompanySpotlightCompare() {
   document.querySelectorAll("[data-action='toggle-company-trend-indexed']").forEach((node) => {
     node.addEventListener("click", () => {
       state.companyTrendIndexed = !state.companyTrendIndexed;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='set-company-trend-window']").forEach((node) => {
+    node.addEventListener("click", () => {
+      const next = node.getAttribute("data-window");
+      if (!next || next === state.companyTrendWindow) return;
+      state.companyTrendWindow = next;
       render();
     });
   });
@@ -4552,16 +4564,29 @@ function renderUnifiedCompanySpotlight() {
     return "";
   }
   const selected = visibleTrends.find((item) => item.company === state.companyTrend) || visibleTrends[0];
-  // Render the full series (typically 60+ months now that FADA back-history
-  // is wired in). lineChart suppresses dot markers on >=30 point series so
-  // long histories still read cleanly.
-  const series = asArray(selected.series);
+  // Full series (typically 60+ months now that FADA back-history is wired in).
+  // lineChart suppresses dot markers on >=30 point series so long histories
+  // still read cleanly.
+  const fullSeries = asArray(selected.series);
+  // Apply the user's selected time window. Default "all" keeps every month;
+  // numeric windows slice to the last N months so they can clip the early-
+  // COVID volume spike (Tata's 3.5L stock-shipment outlier in Sep 2020,
+  // among others). Slicing at the series level means the peer-overlay
+  // alignment that depends on primaryMonths gets clipped automatically.
+  const WINDOW_MONTHS = { "6m": 6, "1y": 12, "2y": 24, "3y": 36, "5y": 60 };
+  const windowKey = state.companyTrendWindow || "all";
+  const windowMonths = WINDOW_MONTHS[windowKey];
+  const series = windowMonths && fullSeries.length > windowMonths
+    ? fullSeries.slice(-windowMonths)
+    : fullSeries;
   const latestPoint = series.at(-1);
+  // CSV export keeps the FULL series so a download is always source-of-truth
+  // complete, regardless of which window is on screen.
   registerDownload(
     "company-unit-trend",
     `${selected.company.toLowerCase().replace(/[^a-z0-9]+/g, "_")}_company_units.csv`,
     ["month", "label", "units", "source_url"],
-    series.map((point) => ({
+    fullSeries.map((point) => ({
       month: point.month,
       label: point.label,
       units: point.units,
@@ -4674,6 +4699,33 @@ function renderUnifiedCompanySpotlight() {
   const triggerLabel = peerCount === 0
     ? "Compare with peers"
     : `Compare with peers (${peerCount}/5)`;
+  // Time-window selector: investor wants to clip the early-COVID volume
+  // spike (e.g. Tata's Sep 2020 stock-shipment outlier) without losing
+  // the underlying data. Five preset windows + All. The widest "All" stays
+  // default to preserve the long-arc story when first loading the chart.
+  const WINDOW_PRESETS = [
+    { id: "6m",  label: "6M"  },
+    { id: "1y",  label: "1Y"  },
+    { id: "2y",  label: "2Y"  },
+    { id: "3y",  label: "3Y"  },
+    { id: "5y",  label: "5Y"  },
+    { id: "all", label: "All" },
+  ];
+  const activeWindow = state.companyTrendWindow || "all";
+  const windowControl = `
+    <div class="spotlight-window-control" role="group" aria-label="Chart time window">
+      <span class="spotlight-window-label">Range</span>
+      ${WINDOW_PRESETS.map((preset) => `
+        <button
+          type="button"
+          class="spotlight-window-chip${activeWindow === preset.id ? " is-active" : ""}"
+          data-action="set-company-trend-window"
+          data-window="${preset.id}"
+        >${preset.label}</button>
+      `).join("")}
+    </div>
+  `;
+
   const peerControl = allPeers.length
     ? `
       <div class="spotlight-peer-dropdown${peerOpen ? " is-open" : ""}" data-peer-dropdown>
@@ -4722,6 +4774,7 @@ function renderUnifiedCompanySpotlight() {
       <div class="spotlight-compare-row">
         ${peerControl}
         ${selectedTagsHtml ? `<div class="spotlight-peer-tag-strip">${selectedTagsHtml}</div>` : ""}
+        ${windowControl}
       </div>
       <div class="chart-frame compact">
         ${lineChart(
@@ -8644,6 +8697,7 @@ const URL_STATE_DEFAULTS = {
   companyTrend: "all",
   companyTrendCompare: [],
   companyTrendIndexed: false,
+  companyTrendWindow: "all",
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
