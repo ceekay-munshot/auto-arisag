@@ -27,6 +27,7 @@ const state = {
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
   rawMaterialCompany: "Tata Motors",
+  rawMaterialCurrency: "usd",
   componentTrendCompany: "Maruti Suzuki",
   evCategory: "2W",
   evPeriod: "M",
@@ -1429,13 +1430,24 @@ function setupSegmentShareExplorer() {
 
 function setupRawMaterialExplorer() {
   const picker = document.querySelector("[data-raw-material-company]");
-  if (!picker) {
-    return;
+  if (picker) {
+    picker.addEventListener("change", (event) => {
+      state.rawMaterialCompany = event.target.value;
+      render();
+    });
   }
-
-  picker.addEventListener("change", (event) => {
-    state.rawMaterialCompany = event.target.value;
-    render();
+  // USD ↔ INR currency toggle. INR view multiplies each USD spot by the
+  // monthly USD/INR average so investors can read the rupee-cost impact —
+  // when the rupee weakens, INR-indexed lines diverge above USD-indexed
+  // ones, surfacing the FX amplification on input costs.
+  document.querySelectorAll("[data-raw-material-currency]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      const next = event.currentTarget.dataset.rawMaterialCurrency;
+      if (next && next !== state.rawMaterialCurrency) {
+        state.rawMaterialCurrency = next;
+        render();
+      }
+    });
   });
 }
 
@@ -5572,37 +5584,82 @@ function renderRawMaterialExplorer() {
 
   const selected = selectedRawMaterialCompany() || companies[0];
   const materials = asArray(selected.materials);
-  const labels = asArray(materials[0]?.series).map((item) => item.label);
-  const series = materials.map((material, index) => ({
-    label: material.label,
-    values: asArray(material.series).map((item) => {
-      const baseValue = Number(material.series?.[0]?.value || 0);
-      const currentValue = Number(item.value || 0);
-      return baseValue ? Number(((currentValue / baseValue) * 100).toFixed(1)) : null;
-    }),
-    color: ["#3a64a8", "#c66a44", "#3f8f7f", "#7a5fb0", "#a48a3c", "#6b7a8a"][index % 6],
-  }));
+  // INR series only exists where data/macro_indicators.json had a USD/INR
+  // close for the matching month (May 2016 onwards in practice). USD has
+  // been backfilled all the way to Jan 2016 from the Pink Sheet, so the
+  // two views show different leading edges — INR drops the four pre-USD/INR
+  // months. Toggle defaults to USD; the URL hash persists user choice.
+  const currency = state.rawMaterialCurrency === "inr" ? "inr" : "usd";
+  const valueKey = currency === "inr" ? "value_inr" : "value";
+  const changeKey = currency === "inr" ? "change_since_base_pct_inr" : "change_since_base_pct";
+  const inrAvailable = materials.some((material) =>
+    asArray(material.series).some((item) => item.value_inr !== null && item.value_inr !== undefined),
+  );
+
+  // Build the indexed series for the chart. For INR view we slice each
+  // material to start at its first month with a USD/INR rate so the
+  // baseline (=100) is well-defined and consistent across materials.
+  const trimmedSeriesByMaterial = materials.map((material) => {
+    const raw = asArray(material.series);
+    return currency === "inr"
+      ? raw.filter((item) => item.value_inr !== null && item.value_inr !== undefined)
+      : raw;
+  });
+  const labels = (trimmedSeriesByMaterial[0] || []).map((item) => item.label);
+  const series = materials.map((material, index) => {
+    const points = trimmedSeriesByMaterial[index];
+    const baseValue = Number(points?.[0]?.[valueKey] || 0);
+    return {
+      label: material.label,
+      values: points.map((item) => {
+        const currentValue = Number(item[valueKey] || 0);
+        return baseValue ? Number(((currentValue / baseValue) * 100).toFixed(1)) : null;
+      }),
+      color: ["#3a64a8", "#c66a44", "#3f8f7f", "#7a5fb0", "#a48a3c", "#6b7a8a"][index % 6],
+    };
+  });
   const strongestMove = materials
     .map((material) => ({
       label: material.label,
-      change_pct: Number(material.change_since_base_pct),
+      change_pct: Number(material[changeKey]),
     }))
+    .filter((item) => Number.isFinite(item.change_pct))
     .sort((left, right) => Math.abs(Number(right.change_pct || 0)) - Math.abs(Number(left.change_pct || 0)))[0];
 
+  // Baseline period for the chart subtitle / "biggest move vs X" stat.
+  // Falls back to the first label visible on the active currency view so
+  // the wording stays accurate when the INR series starts later than USD.
+  const baselineLabel = labels[0] || (currency === "inr" ? "INR baseline" : "USD baseline");
+  const moveStatLabel = `Biggest move since ${baselineLabel}`;
+
+  // Currency-aware CSV: include both columns in USD view (so a download
+  // is always source-of-truth complete), and just the INR column when
+  // viewing INR. Either way the file mirrors what's on screen + a peek
+  // at the other side.
   registerDownload(
     `raw-material-${slugify(selected.company)}`,
     `${slugify(selected.company)}_raw_material_basket.csv`,
-    ["Company", "Material", "Period", "Price", "Unit"],
+    ["Company", "Material", "Period", "Price (USD)", "Price (INR)", "Unit"],
     materials.flatMap((material) =>
       asArray(material.series).map((item) => ({
         Company: selected.company,
         Material: material.label,
         Period: item.label,
-        Price: item.value,
+        "Price (USD)": item.value,
+        "Price (INR)": item.value_inr ?? "",
         Unit: material.unit_label,
       })),
     ),
   );
+
+  const usdActive = currency === "usd";
+  const inrToggleDisabled = !inrAvailable;
+  const currencyToggle = `
+    <div class="chart-currency-toggle" role="group" aria-label="Currency">
+      <button type="button" class="${usdActive ? "is-active" : ""}" data-raw-material-currency="usd">USD</button>
+      <button type="button" class="${!usdActive ? "is-active" : ""}" data-raw-material-currency="inr" ${inrToggleDisabled ? "disabled aria-disabled=\"true\"" : ""}>INR</button>
+    </div>
+  `;
 
   return `
     <div class="chart-card inset-card">
@@ -5623,6 +5680,7 @@ function renderRawMaterialExplorer() {
             ${companies.map((item) => `<option value="${item.company}" ${item.company === selected.company ? "selected" : ""}>${item.label}</option>`).join("")}
           </select>
         </label>
+        ${currencyToggle}
       </div>
       <div class="stat-inline-compact">
         <div class="stat-block">
@@ -5634,7 +5692,7 @@ function renderRawMaterialExplorer() {
           <strong>${materials[0]?.latest_period || "-"}</strong>
         </div>
         <div class="stat-block">
-          <span class="small-label">Biggest move vs 2022</span>
+          <span class="small-label">${moveStatLabel}</span>
           <strong class="${Number(strongestMove?.change_pct) >= 0 ? "positive" : "negative"}">${strongestMove ? `${strongestMove.label} ${formatSigned(strongestMove.change_pct)}` : "-"}</strong>
         </div>
       </div>
@@ -5645,7 +5703,7 @@ function renderRawMaterialExplorer() {
           (value) => `${Number(value || 0).toFixed(0)}`,
           (value) => `${Number(value || 0).toFixed(1)} index`,
           [],
-          "(rebased: 2022 = 100)",
+          `(rebased: ${baselineLabel} = 100, ${currency.toUpperCase()})`,
         )}
       </div>
       <div class="chart-legend">
@@ -5653,7 +5711,7 @@ function renderRawMaterialExplorer() {
       </div>
       <p class="table-note">${asArray(selected.category_labels).join(" / ")}</p>
       <p class="table-note">${selected.note}</p>
-      <p class="legend-note">Chart is rebased to 2022 = 100 so different commodity units can be compared on one view. CSV download keeps the raw benchmark prices. ${module.source_meta.note}</p>
+      <p class="legend-note">Chart rebases to ${baselineLabel} = 100 so different commodity units compare on one view. ${currency === "inr" ? "INR view multiplies USD spot by monthly USD/INR average — diverges from USD when the rupee moves. " : "Toggle to INR to see the rupee-cost view (USD × monthly USD/INR), which amplifies the headline move when the rupee weakens. "}CSV download keeps both raw USD and INR prices. ${module.source_meta.note}</p>
     </div>
   `;
 }
@@ -8508,6 +8566,7 @@ const URL_STATE_DEFAULTS = {
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
   rawMaterialCompany: "Tata Motors",
+  rawMaterialCurrency: "usd",
   componentTrendCompany: "Maruti Suzuki",
   evCategory: "2W",
   evPeriod: "M",

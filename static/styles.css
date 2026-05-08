@@ -984,6 +984,50 @@ p {
   margin-bottom: 14px;
 }
 
+/* USD ↔ INR toggle on the raw-material chart. Sits next to the Company
+   picker in .explorer-controls; widens to a 2-col grid when present. */
+.explorer-controls:has(.chart-currency-toggle) {
+  grid-template-columns: minmax(240px, 320px) auto;
+  align-items: end;
+}
+
+.chart-currency-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #fffdfa;
+  align-self: end;
+  height: 42px;
+}
+
+.chart-currency-toggle button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0 14px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.chart-currency-toggle button + button {
+  border-left: 1px solid var(--line-strong);
+}
+
+.chart-currency-toggle button.is-active {
+  background: var(--accent, #1b3454);
+  color: #fff;
+}
+
+.chart-currency-toggle button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .state-explorer .filter-field {
   gap: 8px;
 }

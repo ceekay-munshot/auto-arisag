@@ -1193,33 +1193,102 @@ def build_components_module(acma: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _load_monthly_usd_inr() -> dict[str, float]:
+    """Aggregates the USD/INR daily-close series from data/macro_indicators.json
+    into {YYYY-MM: avg_close}. Returns an empty dict if the file is
+    missing or the indicator hasn't been populated yet — callers should
+    treat absence as "skip the INR overlay" rather than failing."""
+    path = Path("data/macro_indicators.json")
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    indicators = payload.get("indicators") if isinstance(payload, dict) else None
+    if not isinstance(indicators, list):
+        return {}
+    usd_inr = next((ind for ind in indicators if ind.get("id") == "usd_inr"), None)
+    if not usd_inr:
+        return {}
+    closes = usd_inr.get("daily_closes") or []
+    bucket: dict[str, list[float]] = {}
+    for entry in closes:
+        date_str = entry.get("date") or ""
+        close = entry.get("close")
+        if not date_str or close is None:
+            continue
+        ym = date_str[:7]
+        if not ym:
+            continue
+        bucket.setdefault(ym, []).append(float(close))
+    return {ym: round(sum(vals) / len(vals), 4) for ym, vals in bucket.items() if vals}
+
+
 def _build_raw_material_module_from_history(fred_payload: dict) -> dict[str, Any]:
     """Builds the raw_material_prices module from FRED-sourced monthly
     history (data/raw_material_history.json). Preserves the same shape
     as the legacy hardcoded path so frontend rendering stays unchanged
     — same materials[] + companies[] structure, just with proper
-    monthly resolution and 8 years of history."""
+    monthly resolution and 8 years of history.
+
+    Augments each series point with a parallel `value_inr` field whenever
+    monthly USD/INR is available (May 2016 onwards). The frontend uses
+    these to flip the chart between USD-headline and INR-cost views via
+    a currency toggle. INR-base for indexing is the first month where
+    both USD and USD/INR are present."""
     raw_materials = fred_payload.get("materials", []) or []
+    monthly_usd_inr = _load_monthly_usd_inr()
     enriched_materials = []
     for material in raw_materials:
         series = material.get("series") or []
         if not series:
             continue
+        # Augment each point with INR value when the matching month has a
+        # USD/INR rate. Months without coverage stay at value_inr=None,
+        # which the chart treats as a gap.
+        augmented_series = []
+        first_inr_period = None
+        first_inr_value = None
+        latest_value_inr = None
+        for point in series:
+            ym = point.get("period")
+            usd = point.get("value")
+            inr_rate = monthly_usd_inr.get(ym) if ym else None
+            value_inr = (
+                round(float(usd) * float(inr_rate), 2)
+                if isinstance(usd, (int, float)) and isinstance(inr_rate, (int, float))
+                else None
+            )
+            if value_inr is not None:
+                latest_value_inr = value_inr
+                if first_inr_period is None:
+                    first_inr_period = ym
+                    first_inr_value = value_inr
+            augmented_series.append({**point, "value_inr": value_inr})
+
         latest_value = series[-1].get("value")
         base_value = series[0].get("value")
         change_pct = (
             round((latest_value - base_value) / base_value * 100, 2)
             if base_value else None
         )
+        change_pct_inr = (
+            round((latest_value_inr - first_inr_value) / first_inr_value * 100, 2)
+            if first_inr_value and latest_value_inr else None
+        )
         enriched_materials.append({
             "id": material["id"],
             "label": material["label"],
             "unit_label": material.get("unit_label", ""),
             "axis_suffix": material.get("axis_suffix", ""),
-            "series": series,
+            "series": augmented_series,
             "latest_value": latest_value,
+            "latest_value_inr": latest_value_inr,
             "latest_period": series[-1].get("label", ""),
             "change_since_base_pct": change_pct,
+            "change_since_base_pct_inr": change_pct_inr,
+            "inr_base_period": first_inr_period,
         })
 
     if not enriched_materials:
