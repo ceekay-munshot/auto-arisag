@@ -2578,7 +2578,7 @@ def build_filters(retail: dict[str, Any], wholesale: dict[str, Any], registratio
             {"id": "5m", "label": "Last 5 months", "count": 5},
             {"id": "all", "label": "All available", "count": len(months)},
         ],
-        "default_window": "5m",
+        "default_window": "all",
         "categories": [{"id": key, "label": CATEGORY_LABELS[key]} for key in CATEGORY_ORDER],
         "fuels": [{"id": fuel, "label": fuel} for fuel in FUEL_ORDER],
         "lenses": lenses,
