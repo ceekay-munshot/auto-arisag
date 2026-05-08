@@ -9436,7 +9436,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -10035,7 +10035,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -10634,7 +10634,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -11155,7 +11155,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Construction Equipment OEM annexure across 12 months (2025-05 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Construction Equipment OEM annexure across 12 months (2025-05 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -11348,7 +11348,7 @@
             "Y": {
               "id": "Y",
               "label": "Yearly",
-              "period_label": "FY26 (11/12 mo \u00b7 annualised)",
+              "period_label": "FY26 (11/12 mo · annualised)",
               "columns": [
                 {
                   "key": "oem",
@@ -11938,7 +11938,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 56 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 56 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -12158,7 +12158,7 @@
             "Y": {
               "id": "Y",
               "label": "Yearly",
-              "period_label": "FY26 (11/12 mo \u00b7 annualised)",
+              "period_label": "FY26 (11/12 mo · annualised)",
               "columns": [
                 {
                   "key": "oem",
@@ -12609,7 +12609,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Tractors OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Tractors OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -35375,15 +35375,19 @@
       "source_meta": {
         "name": "Recent official annual mix",
         "latest_month": null,
-        "latest_release_date": "2025-08-31",
-        "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
-        "note": "This module now uses recent annual official data instead of the older Vahan class rollup. Source switches cleanly by category: FADA for total, 3W and CV retail mix; SIAM for PV and 2W domestic-sales mix."
+        "latest_release_date": "2026-04-06",
+        "url": "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
+        "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY23-FY25; older annuals pending manual ingest)."
       },
-      "method_note": "Rolled 857,760 raw Vahan rows into 3,974 class-month points for the segment-share explorer.",
-      "latest_full_year": "2024-25",
-      "latest_full_year_label": "2024-25",
-      "cagr_label": "FY23-25 CAGR",
+      "method_note": "",
+      "latest_full_year": "2025-26",
+      "latest_full_year_label": "2025-26",
+      "cagr_label": "FY21-26 CAGR",
       "table_years": [
+        {
+          "id": "2025-26",
+          "label": "2025-26"
+        },
         {
           "id": "2024-25",
           "label": "2024-25"
@@ -35395,10 +35399,26 @@
         {
           "id": "2022-23",
           "label": "2022-23"
+        },
+        {
+          "id": "2021-22",
+          "label": "2021-22"
+        },
+        {
+          "id": "2020-21",
+          "label": "2020-21"
         }
       ],
       "trend_years": [
         {
+          "id": "2020-21",
+          "label": "2020-21"
+        },
+        {
+          "id": "2021-22",
+          "label": "2021-22"
+        },
+        {
           "id": "2022-23",
           "label": "2022-23"
         },
@@ -35409,6 +35429,10 @@
         {
           "id": "2024-25",
           "label": "2024-25"
+        },
+        {
+          "id": "2025-26",
+          "label": "2025-26"
         }
       ],
       "default_option": "TOTAL",
@@ -35421,6 +35445,16 @@
               "id": "2W",
               "label": "Two-Wheelers",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 11533928
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 13494214
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35435,18 +35469,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 18877812
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 21420386
                 }
               ],
-              "share_pct": 72.21,
-              "cagr_pct": 8.64,
+              "share_pct": 72.19,
+              "cagr_pct": 13.18,
+              "units_2020-21": 11533928,
+              "units_2021-22": 13494214,
               "units_2022-23": 15995968,
               "units_2023-24": 17527115,
-              "units_2024-25": 18877812
+              "units_2024-25": 18877812,
+              "units_2025-26": 21420386
             },
             {
               "id": "PV",
               "label": "Passenger Vehicles",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 2387925
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 2942273
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35461,18 +35513,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 4153432
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 4705056
                 }
               ],
-              "share_pct": 15.89,
-              "cagr_pct": 7.11,
+              "share_pct": 15.86,
+              "cagr_pct": 14.53,
+              "units_2020-21": 2387925,
+              "units_2021-22": 2942273,
               "units_2022-23": 3620039,
               "units_2023-24": 3960602,
-              "units_2024-25": 4153432
+              "units_2024-25": 4153432,
+              "units_2025-26": 4705056
             },
             {
               "id": "CV",
               "label": "Commercial Vehicles",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 449324
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 707186
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35487,18 +35557,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 1008623
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 1132133
                 }
               ],
-              "share_pct": 3.86,
-              "cagr_pct": 3.6,
+              "share_pct": 3.82,
+              "cagr_pct": 20.3,
+              "units_2020-21": 449324,
+              "units_2021-22": 707186,
               "units_2022-23": 939741,
               "units_2023-24": 1010324,
-              "units_2024-25": 1008623
+              "units_2024-25": 1008623,
+              "units_2025-26": 1132133
             },
             {
               "id": "3W",
               "label": "Three-Wheelers",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 258172
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 417108
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35513,18 +35601,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 1220981
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 1363412
                 }
               ],
-              "share_pct": 4.67,
-              "cagr_pct": 26.16,
+              "share_pct": 4.6,
+              "cagr_pct": 39.49,
+              "units_2020-21": 258172,
+              "units_2021-22": 417108,
               "units_2022-23": 767071,
               "units_2023-24": 1167986,
-              "units_2024-25": 1220981
+              "units_2024-25": 1220981,
+              "units_2025-26": 1363412
             },
             {
               "id": "TRACTOR",
               "label": "Tractors",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 644965
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 766545
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35539,20 +35645,81 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 883095
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 1050077
                 }
               ],
-              "share_pct": 3.38,
-              "cagr_pct": 3.31,
+              "share_pct": 3.54,
+              "cagr_pct": 10.24,
+              "units_2020-21": 644965,
+              "units_2021-22": 766545,
               "units_2022-23": 827403,
               "units_2023-24": 892410,
-              "units_2024-25": 883095
+              "units_2024-25": 883095,
+              "units_2025-26": 1050077
             }
           ],
           "source_name": "FADA annual retail",
-          "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_release_date": "2025-04-04",
-          "latest_full_year_label": "2024-25",
-          "note": "Recent annual mix uses official FADA retail totals for FY23, FY24 and FY25. This keeps the market-share view current and conceptually aligned with dealer retail."
+          "source_url": "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_release_date": "2026-04-06",
+          "latest_full_year_label": "2025-26",
+          "cagr_label": "FY21-26 CAGR",
+          "trend_years": [
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            }
+          ],
+          "table_years": [
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            }
+          ],
+          "note": "Annual mix uses official FADA retail totals for FY21 → FY26. FY21/FY22 figures are the FY22/FY23-release revisions (later FADA releases revise prior-year totals as RTO coverage expands). FY26 CV row recombines Construction Equipment that FADA split out, preserving the historical CV definition."
         },
         {
           "id": "PV",
@@ -35641,7 +35808,36 @@
           "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
           "latest_release_date": "2025-08-31",
           "latest_full_year_label": "2024-25",
-          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans."
+          "cagr_label": "FY23-25 CAGR",
+          "trend_years": [
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            }
+          ],
+          "table_years": [
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            }
+          ],
+          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending."
         },
         {
           "id": "2W",
@@ -35730,7 +35926,36 @@
           "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
           "latest_release_date": "2025-08-31",
           "latest_full_year_label": "2024-25",
-          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds."
+          "cagr_label": "FY23-25 CAGR",
+          "trend_years": [
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            }
+          ],
+          "table_years": [
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            }
+          ],
+          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending."
         },
         {
           "id": "3W",
@@ -35740,6 +35965,11 @@
               "id": "three_w_passenger",
               "label": "3W passenger",
               "trend": [
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 169384
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35754,18 +35984,30 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 557693
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 655953
                 }
               ],
-              "share_pct": 45.68,
-              "cagr_pct": 35.92,
+              "share_pct": 48.11,
+              "cagr_pct": 40.28,
+              "units_2021-22": 169384,
               "units_2022-23": 301877,
               "units_2023-24": 513328,
-              "units_2024-25": 557693
+              "units_2024-25": 557693,
+              "units_2025-26": 655953
             },
             {
               "id": "e_rickshaw_passenger",
               "label": "E-rickshaw passenger",
               "trend": [
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 160065
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35780,18 +36022,30 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 474635
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 477897
                 }
               ],
-              "share_pct": 38.87,
-              "cagr_pct": 16.41,
+              "share_pct": 35.05,
+              "cagr_pct": 31.45,
+              "units_2021-22": 160065,
               "units_2022-23": 350247,
               "units_2023-24": 490662,
-              "units_2024-25": 474635
+              "units_2024-25": 474635,
+              "units_2025-26": 477897
             },
             {
               "id": "three_w_goods",
               "label": "3W goods",
               "trend": [
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 72668
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35806,18 +36060,30 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 122624
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 141595
                 }
               ],
-              "share_pct": 10.04,
-              "cagr_pct": 16.65,
+              "share_pct": 10.39,
+              "cagr_pct": 18.15,
+              "units_2021-22": 72668,
               "units_2022-23": 90111,
               "units_2023-24": 122298,
-              "units_2024-25": 122624
+              "units_2024-25": 122624,
+              "units_2025-26": 141595
             },
             {
               "id": "e_rickshaw_goods",
               "label": "E-rickshaw with cart",
               "trend": [
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 14467
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35832,18 +36098,30 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 65038
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 86384
                 }
               ],
-              "share_pct": 5.33,
-              "cagr_pct": 63.86,
+              "share_pct": 6.34,
+              "cagr_pct": 56.32,
+              "units_2021-22": 14467,
               "units_2022-23": 24224,
               "units_2023-24": 40785,
-              "units_2024-25": 65038
+              "units_2024-25": 65038,
+              "units_2025-26": 86384
             },
             {
               "id": "three_w_personal",
               "label": "3W personal",
               "trend": [
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 524
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35858,20 +36136,72 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 991
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 1583
                 }
               ],
-              "share_pct": 0.08,
-              "cagr_pct": 27.25,
+              "share_pct": 0.12,
+              "cagr_pct": 31.84,
+              "units_2021-22": 524,
               "units_2022-23": 612,
               "units_2023-24": 913,
-              "units_2024-25": 991
+              "units_2024-25": 991,
+              "units_2025-26": 1583
             }
           ],
           "source_name": "FADA annual retail",
-          "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_release_date": "2025-04-04",
-          "latest_full_year_label": "2024-25",
-          "note": "Three-wheeler mix uses official FADA annual retail rows, including electric rickshaw passenger and cargo splits."
+          "source_url": "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_release_date": "2026-04-06",
+          "latest_full_year_label": "2025-26",
+          "cagr_label": "FY22-26 CAGR",
+          "trend_years": [
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            }
+          ],
+          "table_years": [
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            }
+          ],
+          "note": "Three-wheeler mix uses official FADA annual retail rows for FY22 → FY26 (e-rickshaw passenger/goods + 3W passenger/goods/personal). FY21 lacks an FADA-published 3W subsegment split."
         },
         {
           "id": "CV",
@@ -35881,6 +36211,16 @@
               "id": "lcv",
               "label": "LCV",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 301776
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 438802
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35895,18 +36235,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 563189
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 638323
                 }
               ],
-              "share_pct": 55.84,
-              "cagr_pct": 0.77,
+              "share_pct": 56.38,
+              "cagr_pct": 16.16,
+              "units_2020-21": 301776,
+              "units_2021-22": 438802,
               "units_2022-23": 554585,
               "units_2023-24": 562026,
-              "units_2024-25": 563189
+              "units_2024-25": 563189,
+              "units_2025-26": 638323
             },
             {
               "id": "hcv",
               "label": "HCV",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 90562
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 197365
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35921,18 +36279,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 312892
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 334227
                 }
               ],
-              "share_pct": 31.02,
-              "cagr_pct": 3.2,
+              "share_pct": 29.52,
+              "cagr_pct": 29.84,
+              "units_2020-21": 90562,
+              "units_2021-22": 197365,
               "units_2022-23": 293796,
               "units_2023-24": 326150,
-              "units_2024-25": 312892
+              "units_2024-25": 312892,
+              "units_2025-26": 334227
             },
             {
               "id": "mcv",
               "label": "MCV",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 23345
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 48005
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35947,18 +36323,36 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 77568
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 87676
                 }
               ],
-              "share_pct": 7.69,
-              "cagr_pct": 12.93,
+              "share_pct": 7.74,
+              "cagr_pct": 30.3,
+              "units_2020-21": 23345,
+              "units_2021-22": 48005,
               "units_2022-23": 60818,
               "units_2023-24": 73142,
-              "units_2024-25": 77568
+              "units_2024-25": 77568,
+              "units_2025-26": 87676
             },
             {
               "id": "others",
               "label": "Others",
               "trend": [
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 33641
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 23014
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35973,20 +36367,81 @@
                   "year": "2024-25",
                   "label": "2024-25",
                   "units": 54974
+                },
+                {
+                  "year": "2025-26",
+                  "label": "2025-26",
+                  "units": 71907
                 }
               ],
-              "share_pct": 5.45,
-              "cagr_pct": 34.16,
+              "share_pct": 6.35,
+              "cagr_pct": 16.41,
+              "units_2020-21": 33641,
+              "units_2021-22": 23014,
               "units_2022-23": 30542,
               "units_2023-24": 49006,
-              "units_2024-25": 54974
+              "units_2024-25": 54974,
+              "units_2025-26": 71907
             }
           ],
           "source_name": "FADA annual retail",
-          "source_url": "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_release_date": "2025-04-04",
-          "latest_full_year_label": "2024-25",
-          "note": "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and others."
+          "source_url": "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_release_date": "2026-04-06",
+          "latest_full_year_label": "2025-26",
+          "cagr_label": "FY21-26 CAGR",
+          "trend_years": [
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            }
+          ],
+          "table_years": [
+            {
+              "id": "2025-26",
+              "label": "2025-26"
+            },
+            {
+              "id": "2024-25",
+              "label": "2024-25"
+            },
+            {
+              "id": "2023-24",
+              "label": "2023-24"
+            },
+            {
+              "id": "2022-23",
+              "label": "2022-23"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            }
+          ],
+          "note": "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and Others (incl. construction equipment) for FY21 → FY26. FADA split CE out as its own category in FY26; we re-combine into Others to keep the series continuous."
         }
       ]
     },
@@ -38203,7 +38658,7 @@
         "url": "https://www.acma.in/press-release.php",
         "note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
       },
-      "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 \u2014 steady demand despite a swing into trade deficit.",
+      "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 — steady demand despite a swing into trade deficit.",
       "metrics": [
         {
           "label": "Industry turnover",
@@ -38239,8 +38694,8 @@
       "insights": [
         "Industry growth slowed from 9.6% (FY25) to 6.8% (H1 FY26) on softer global demand and selective domestic moderation.",
         "OEM demand still leads, with passenger vehicles and LCVs the strongest contributors.",
-        "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves \u2014 supports the larger-vehicle-parc thesis.",
-        "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports \u2014 an early warning for ancillary cap-ex priorities.",
+        "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves — supports the larger-vehicle-parc thesis.",
+        "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports — an early warning for ancillary cap-ex priorities.",
         "EV components now contribute 4.6% of total OEM supplies as electrification accelerates."
       ],
       "listed_beneficiaries": [
@@ -38366,7 +38821,7 @@
           "name": "World Bank Pink Sheet",
           "latest_release_date": "2026-04-02",
           "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-April-2026.pdf",
-          "note": "Annual averages for 2022 to 2025 plus monthly quotes for Feb 2026 and Mar 2026. Metals and iron ore use the IMF\u2013World Bank monthly series (PALUMUSDM, PCOPPUSDM, PNICKUSDM, PLEADUSDM, PIORECRUSDM via FRED); rubber TSR20 uses converging public TSR20 observations. Iron ore is shown as a steel-input proxy for auto materials."
+          "note": "Annual averages for 2022 to 2025 plus monthly quotes for Feb 2026 and Mar 2026. Metals and iron ore use the IMF–World Bank monthly series (PALUMUSDM, PCOPPUSDM, PNICKUSDM, PLEADUSDM, PIORECRUSDM via FRED); rubber TSR20 uses converging public TSR20 observations. Iron ore is shown as a steel-input proxy for auto materials."
         },
         "materials": [
           {
@@ -43913,10 +44368,10 @@
       "available": true,
       "title": "Credit Pulse",
       "source_meta": {
-        "name": "RBI \u2014 Sectoral Deployment of Bank Credit",
+        "name": "RBI — Sectoral Deployment of Bank Credit",
         "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
         "note": "Each row is the outstanding amount as of the last reporting Friday of that calendar month, taken directly from RBI's Sectoral Deployment of Bank Credit release (Statement 1: Deployment of Gross Bank Credit by Major Sectors). YoY% values are RBI's printed year-on-year growth.",
-        "concept": "Outstanding scheduled commercial bank credit for Vehicle Loans (a sub-segment of Personal Loans) \u2014 a leading indicator of retail auto demand financing. Compared against total non-food bank credit so the spread shows whether auto credit is running hotter or cooler than the broader lending cycle.",
+        "concept": "Outstanding scheduled commercial bank credit for Vehicle Loans (a sub-segment of Personal Loans) — a leading indicator of retail auto demand financing. Compared against total non-food bank credit so the spread shows whether auto credit is running hotter or cooler than the broader lending cycle.",
         "is_seed": false,
         "latest_month": "2026-03"
       },
@@ -44559,8 +45014,8 @@
         {
           "id": "vahan-paid",
           "name": "Vahan / Parivahan Analytics API",
-          "tier": "Government \u00b7 NIC",
-          "tagline": "The single biggest unlock \u2014 turns four currently-disabled dashboard tabs into live feeds.",
+          "tier": "Government · NIC",
+          "tagline": "The single biggest unlock — turns four currently-disabled dashboard tabs into live feeds.",
           "status": "blocked",
           "status_label": "Blocked from cloud runners",
           "color": "red",
@@ -44568,15 +45023,15 @@
             "Vahan retail registrations (state-wise)",
             "State-wise Vahan registrations",
             "Vahan EV registrations (live, state + RTO)",
-            "EV OEM tracker \u2014 replaces the trade-press scrape with verified VIN-level monthly data"
+            "EV OEM tracker — replaces the trade-press scrape with verified VIN-level monthly data"
           ],
           "what_you_get": [
             "Daily / monthly registrations at state, RTO and PIN-code level",
-            "Vehicle class \u00d7 fuel type matrix (PV / 2W / 3W / CV / Tractor / CE \u00d7 Petrol / Diesel / EV / CNG / Hybrid)",
-            "OEM \u00d7 model registrations with verified VIN-level audit trail",
+            "Vehicle class × fuel type matrix (PV / 2W / 3W / CV / Tractor / CE × Petrol / Diesel / EV / CNG / Hybrid)",
+            "OEM × model registrations with verified VIN-level audit trail",
             "Same dataset MoRTH / SIAM / FADA all reconcile against"
           ],
-          "cost": "\u20b925,000 \u2013 \u20b92,00,000 / year",
+          "cost": "₹25,000 – ₹2,00,000 / year",
           "cost_note": "Tiered by call volume and granularity. Contact NIC Vahan Help Desk.",
           "cta_label": "Vahan analytics",
           "cta_url": "https://analytics.parivahan.gov.in/analytics/"
@@ -44584,28 +45039,28 @@
         {
           "id": "ev-trade-paid",
           "name": "Department of Commerce EV Trade Data",
-          "tier": "Government \u00b7 DGFT",
+          "tier": "Government · DGFT",
           "tagline": "Live HSN-code monthly EV import / export figures (separate from the EV OEM retail tracker, which now scrapes trade-press monthly leaderboards directly).",
           "status": "absent",
           "status_label": "Not yet integrated",
           "color": "blue",
           "currently_unlocks": [
-            "Monthly EV import / export volumes by HSN-8 + destination \u2014 adds a new export-trade panel to Wholesale lens"
+            "Monthly EV import / export volumes by HSN-8 + destination — adds a new export-trade panel to Wholesale lens"
           ],
           "what_you_get": [
             "Monthly export and import volumes + USD value at HSN-8 granularity",
             "Country-wise trade splits (top 20 destinations)",
             "Lithium-ion cell, motor, BMS and full-vehicle line items"
           ],
-          "cost": "\u20b935,000 \u2013 \u20b91,50,000 / year",
+          "cost": "₹35,000 – ₹1,50,000 / year",
           "cost_note": "DGFT ICEGATE bulk-data subscription, billed per HSN bucket.",
           "cta_label": "DGFT data subscription",
           "cta_url": "https://www.dgft.gov.in/CP/?opt=ft-data"
         },
         {
           "id": "jato",
-          "name": "JATO Dynamics \u2014 India",
-          "tier": "Industry \u00b7 Subscription",
+          "name": "JATO Dynamics — India",
+          "tier": "Industry · Subscription",
           "tagline": "Model-level pricing, specs and configuration data; the spine of any \"price index\" or \"feature index\" view.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -44616,19 +45071,19 @@
             "Feature-set comparison tooling (planned)"
           ],
           "what_you_get": [
-            "OEM \u00d7 model \u00d7 variant master with MSRP, ex-showroom, on-road",
+            "OEM × model × variant master with MSRP, ex-showroom, on-road",
             "Spec sheets (engine, dimensions, ADAS features, safety ratings)",
             "Daily incentive / discount tracking per dealer geography"
           ],
-          "cost": "$10,000 \u2013 $50,000 / year",
-          "cost_note": "Approx. \u20b98\u201340 lakh. Tier depends on data depth.",
+          "cost": "$10,000 – $50,000 / year",
+          "cost_note": "Approx. ₹8–40 lakh. Tier depends on data depth.",
           "cta_label": "JATO India",
           "cta_url": "https://www.jato.com/india/"
         },
         {
           "id": "polk",
           "name": "S&P Global Mobility (Polk)",
-          "tier": "Industry \u00b7 Enterprise",
+          "tier": "Industry · Enterprise",
           "tagline": "The institutional benchmark for verified registrations + forecasting.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -44643,15 +45098,15 @@
             "Monthly market-share at OEM, brand and model level",
             "Production forecasts (LMC Automotive merge) by plant and platform"
           ],
-          "cost": "$25,000 \u2013 $100,000 / year",
-          "cost_note": "Approx. \u20b920\u201380 lakh. Enterprise-only.",
+          "cost": "$25,000 – $100,000 / year",
+          "cost_note": "Approx. ₹20–80 lakh. Enterprise-only.",
           "cta_label": "S&P Mobility",
           "cta_url": "https://www.spglobal.com/mobility/en/products/automotive-data.html"
         },
         {
           "id": "crisil",
-          "name": "CRISIL & ICRA \u2014 Auto Sector Reports",
-          "tier": "Research \u00b7 Credit Agencies",
+          "name": "CRISIL & ICRA — Auto Sector Reports",
+          "tier": "Research · Credit Agencies",
           "tagline": "Quarterly outlook, OEM credit watch, and segment-level demand forecasts.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -44666,8 +45121,8 @@
             "Credit ratings & outlook changes for listed OEMs / ancillaries",
             "Monthly view-points and short notes on sector themes (EV, premium, exports)"
           ],
-          "cost": "\u20b93,00,000 \u2013 \u20b910,00,000 / year",
-          "cost_note": "Per-report \u20b950K\u20132L; annual seats from ~\u20b93L.",
+          "cost": "₹3,00,000 – ₹10,00,000 / year",
+          "cost_note": "Per-report ₹50K–2L; annual seats from ~₹3L.",
           "cta_label": "CRISIL Research",
           "cta_url": "https://www.crisil.com/en/home/our-businesses/india-research.html"
         }
@@ -44676,7 +45131,7 @@
     "festive_pulse": {
       "available": true,
       "title": "Festive Pulse",
-      "window_label": "Sep \u2013 Nov (FADA festive window)",
+      "window_label": "Sep – Nov (FADA festive window)",
       "festival_calendar": {
         "2024": [
           {
@@ -46610,7 +47065,7 @@
           "yoy_pct": null
         }
       ],
-      "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories. Sep\u2013Nov festive window total grew +17.9% versus the same period last year.",
+      "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories. Sep–Nov festive window total grew +17.9% versus the same period last year.",
       "next_festival": {
         "name": "Dhanteras",
         "date": "2026-11-06",
@@ -46911,10 +47366,10 @@
             ]
           }
         ],
-        "note": "Top OEMs by Sep\u2013Nov retail growth versus the same window one year prior. Sourced from FADA OEM annexures \u2014 auto-updates each cron run as new festive months land."
+        "note": "Top OEMs by Sep–Nov retail growth versus the same window one year prior. Sourced from FADA OEM annexures — auto-updates each cron run as new festive months land."
       },
       "source_meta": {
-        "name": "FADA retail (Sep\u2013Nov festive aggregation)",
+        "name": "FADA retail (Sep–Nov festive aggregation)",
         "url": "file://169d329fc83770FADA releases FY 2026 and March 2026 Vehicle Retail Data.pdf"
       }
     },
@@ -46926,7 +47381,7 @@
       "item_count": 2,
       "items": [
         {
-          "title": "Tata Motors launches Ultra, Red Dark Editions of Harrier, Safari in diesel; prices start at \u20b923.84 lakh",
+          "title": "Tata Motors launches Ultra, Red Dark Editions of Harrier, Safari in diesel; prices start at ₹23.84 lakh",
           "summary": "The company said the diesel Ultra and Ultra Red Dark variants of Harrier and Safari feature a 36.9 cm cinematic infotainment system by Harman, powered by Samsung Neo QLED, paired with Dolby Atmos audio.",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-unveils-ultra-and-red-dark-editions-of-harrier-and-safari-suvs-starting-at-2384-lakh/130842316",
           "source": "ET Auto Passenger Vehicles",
@@ -46940,7 +47395,7 @@
         },
         {
           "title": "Audi fears 'significant' tariff impact ahead of SUV launch in US",
-          "summary": "US President \u200cDonald Trump \u2060has threatened \u2060to raise tariffs on EU car imports to 25 per cent, arguing that the \u200bbloc has failed to comply with last year's US-EU trade agreement. The measures have \u200bnot yet been confirmed, Rittersberger noted.",
+          "summary": "US President ‌Donald Trump ⁠has threatened ⁠to raise tariffs on EU car imports to 25 per cent, arguing that the ​bloc has failed to comply with last year's US-EU trade agreement. The measures have ​not yet been confirmed, Rittersberger noted.",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-fears-significant-tariff-impact-ahead-of-suv-launch-in-us/130823277",
           "source": "ET Auto Passenger Vehicles",
           "published_at": "2026-05-05T08:33:47+00:00",
@@ -46962,7 +47417,7 @@
           "scope": "listed",
           "count": 1,
           "latest_published_at": "2026-05-06T02:24:16+00:00",
-          "latest_title": "Tata Motors launches Ultra, Red Dark Editions of Harrier, Safari in diesel; prices start at \u20b923.84 lakh"
+          "latest_title": "Tata Motors launches Ultra, Red Dark Editions of Harrier, Safari in diesel; prices start at ₹23.84 lakh"
         },
         {
           "company": "Audi India",
@@ -46988,7 +47443,7 @@
         "id": "petrol_delhi",
         "label": "Petrol (Delhi)",
         "value": 95.41,
-        "unit": "\u20b9/L",
+        "unit": "₹/L",
         "delta_value": 0.0,
         "delta_label": "Unchanged in last week",
         "delta_tone": "neutral",
@@ -47000,7 +47455,7 @@
         "id": "diesel_delhi",
         "label": "Diesel (Delhi)",
         "value": 87.67,
-        "unit": "\u20b9/L",
+        "unit": "₹/L",
         "delta_value": 0.0,
         "delta_label": "Unchanged in last week",
         "delta_tone": "neutral",
@@ -47014,9 +47469,9 @@
         "value": 5.5,
         "unit": "%",
         "delta_value": -0.25,
-        "delta_label": "\u221225 bps in last MPC (Apr 2026)",
+        "delta_label": "−25 bps in last MPC (Apr 2026)",
         "delta_tone": "positive",
-        "context": "Direct driver of vehicle-loan EMI. A 25-bps cut typically translates to \u20b9150-200/month lower EMI on a \u20b910-lakh PV loan within 2-3 cycles.",
+        "context": "Direct driver of vehicle-loan EMI. A 25-bps cut typically translates to ₹150-200/month lower EMI on a ₹10-lakh PV loan within 2-3 cycles.",
         "source_name": "RBI MPC announcements",
         "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
         "history": [
@@ -47098,12 +47553,12 @@
         "id": "usd_inr",
         "label": "USD / INR",
         "value": 94.25,
-        "unit": "\u20b9",
+        "unit": "₹",
         "delta_value": -0.933,
         "delta_label": "-0.70% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
-        "source_name": "Yahoo Finance \u2014 USDINR=X",
+        "source_name": "Yahoo Finance — USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
         "daily_closes": [
           {
@@ -119241,7 +119696,7 @@
         "change_1w_pct": 5.89,
         "change_1m_pct": 9.59,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
-        "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
+        "note": "Tata Motors Commercial Vehicles — listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
           394.45,
           415.7,
@@ -159694,25 +160149,25 @@
   },
   "market_insights": [
     {
-      "icon": "\ud83d\udcc8",
+      "icon": "📈",
       "tone": "positive",
       "kicker": "Demand winner",
       "value": "TRACTOR +23.2%",
-      "narrative": "Tractors leads retail growth this month at +23.2% YoY \u2014 strongest category by some distance.",
+      "narrative": "Tractors leads retail growth this month at +23.2% YoY — strongest category by some distance.",
       "section_anchor": "section-retail",
       "tab_id": "retail-trend"
     },
     {
-      "icon": "\ud83d\udcc9",
+      "icon": "📉",
       "tone": "negative",
       "kicker": "Demand laggard",
       "value": "CE -2.2%",
-      "narrative": "Construction Equipment is the weakest spot at -2.2% YoY \u2014 flag if this persists for two more months.",
+      "narrative": "Construction Equipment is the weakest spot at -2.2% YoY — flag if this persists for two more months.",
       "section_anchor": "section-retail",
       "tab_id": "retail-trend"
     },
     {
-      "icon": "\u26a1",
+      "icon": "⚡",
       "tone": "positive",
       "kicker": "EV penetration",
       "value": "10.4%",
@@ -159721,7 +160176,7 @@
       "tab_id": "retail-ev"
     },
     {
-      "icon": "\ud83d\udcb0",
+      "icon": "💰",
       "tone": "positive",
       "kicker": "Auto-credit pulse",
       "value": "+2.7 pp",
@@ -159730,20 +160185,20 @@
       "tab_id": "credit-pulse"
     },
     {
-      "icon": "\ud83c\udfec",
+      "icon": "🏬",
       "tone": "positive",
       "kicker": "Dealer inventory",
       "value": "29 days",
-      "narrative": "FADA reports PV stock at dealers running 28-30 days \u2014 in healthy band. Healthy operating band is 21\u201330 days.",
+      "narrative": "FADA reports PV stock at dealers running 28-30 days — in healthy band. Healthy operating band is 21–30 days.",
       "section_anchor": "section-channel-pulse",
       "tab_id": "channel-pulse"
     },
     {
-      "icon": "\ud83d\udd01",
+      "icon": "🔁",
       "tone": "neutral",
       "kicker": "Channel balance (PV)",
       "value": "99.5%",
-      "narrative": "In sync. Wholesale tracking retail within 5% \u2014 channel stable.",
+      "narrative": "In sync. Wholesale tracking retail within 5% — channel stable.",
       "section_anchor": "section-wholesale",
       "tab_id": "wholesale"
     }
@@ -160813,7 +161268,7 @@
           {
             "title": "Audi fears 'significant' tariff impact ahead of SUV launch in US",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-fears-significant-tariff-impact-ahead-of-suv-launch-in-us/130823277",
-            "summary": "US President \u200cDonald Trump \u2060has threatened \u2060to raise tariffs on EU car imports to 25 per cent, arguing that the \u200bbloc has failed to comply with last year's US-EU trade agreement. The measures have \u200bnot yet been confirmed, Rittersberger noted.",
+            "summary": "US President ‌Donald Trump ⁠has threatened ⁠to raise tariffs on EU car imports to 25 per cent, arguing that the ​bloc has failed to comply with last year's US-EU trade agreement. The measures have ​not yet been confirmed, Rittersberger noted.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-05T08:33:47+00:00",
             "published_display": "05 May 2026",
@@ -160830,7 +161285,7 @@
           {
             "title": "Spain's EBRO aims to double production to up to 30,000 cars this year",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/spains-ebro-aims-to-double-production-to-up-to-30000-cars-this-year/130882054",
-            "summary": "The company also has a 60 per cent stake in a joint venture \u200bwith Chinese carmaker Chery to manufacture vehicles at a former Nissan plant in Barcelona.",
+            "summary": "The company also has a 60 per cent stake in a joint venture ​with Chinese carmaker Chery to manufacture vehicles at a former Nissan plant in Barcelona.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-07T06:54:06+00:00",
             "published_display": "07 May 2026",
@@ -160844,9 +161299,9 @@
             ]
           },
           {
-            "title": "Top 10 Cars, SUVs April 2026 \u2013 Dzire, Punch, Ertiga, Nexon, Creta, Scorpio, Seltos",
+            "title": "Top 10 Cars, SUVs April 2026 – Dzire, Punch, Ertiga, Nexon, Creta, Scorpio, Seltos",
             "url": "https://www.rushlane.com/top-10-cars-suvs-april-2026-dzire-punch-ertiga-nexon-creta-scorpio-seltos-12545990.html",
-            "summary": "The Top 10 cars list registered combined sales of 1,83,498 units, recording a robust 23.31% YoY growth over 1,48,809 units sold in April 2025 The post Top 10 Cars, SUVs April 2026 \u2013 Dzire, Punch, Ertiga, Nexon, Creta, Scorpio, Seltos appeared first on RushLane .",
+            "summary": "The Top 10 cars list registered combined sales of 1,83,498 units, recording a robust 23.31% YoY growth over 1,48,809 units sold in April 2025 The post Top 10 Cars, SUVs April 2026 – Dzire, Punch, Ertiga, Nexon, Creta, Scorpio, Seltos appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-05-07T09:40:38+00:00",
             "published_display": "07 May 2026",
@@ -160861,7 +161316,7 @@
           {
             "title": "BMW keeps 2026 guidance, shrugs off tariff threat as profit beats expectations",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-keeps-2026-guidance-shrugs-off-tariff-threat-as-profit-beats-expectations/130878144",
-            "summary": "BMW beat key profit expectations for the quarter even \u2060as a narrowing \u200ccore margin underscored continued pressure on its business.",
+            "summary": "BMW beat key profit expectations for the quarter even ⁠as a narrowing ‌core margin underscored continued pressure on its business.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-07T04:11:41+00:00",
             "published_display": "07 May 2026",
@@ -160876,7 +161331,7 @@
           {
             "title": "BMW's quarterly profit down 25% as China, tariffs weigh",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-quarterly-profit-down-25-as-china-tariffs-weigh/130848040",
-            "summary": "The company said on Wednesday that quarterly pretax earnings fell \u200c25 per centto 2.3 \u2060billion euros ($2.70 \u2060billion), slightly above analysts' forecast of 2.2 billion euros in a company-provided consensus.",
+            "summary": "The company said on Wednesday that quarterly pretax earnings fell ‌25 per centto 2.3 ⁠billion euros ($2.70 ⁠billion), slightly above analysts' forecast of 2.2 billion euros in a company-provided consensus.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-06T07:47:57+00:00",
             "published_display": "06 May 2026",
@@ -160936,7 +161391,7 @@
           {
             "title": "Rivian developing variants of its more affordable R2 EVs",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/rivian-developing-variants-of-its-more-affordable-r2-evs/130844117",
-            "summary": "Rivian, known \u200bfor its high-end R1 SUVs and pickup trucks, plans to start deliveries of R2 SUVs around June and analysts have said a successful rollout is critical to expanding the company's market among the masses.",
+            "summary": "Rivian, known ​for its high-end R1 SUVs and pickup trucks, plans to start deliveries of R2 SUVs around June and analysts have said a successful rollout is critical to expanding the company's market among the masses.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-06T04:32:58+00:00",
             "published_display": "06 May 2026",
@@ -160974,9 +161429,9 @@
             ]
           },
           {
-            "title": "Lexus TZ Electric SUV Debuts \u2013 95.8 kWh, 530 km, 402 bhp, AWD",
+            "title": "Lexus TZ Electric SUV Debuts – 95.8 kWh, 530 km, 402 bhp, AWD",
             "url": "https://www.rushlane.com/lexus-tz-electric-suv-debuts-95-8-kwh-530-km-402-bhp-awd-12546002.html",
-            "summary": "Lexus TZ Electric SUV has been debuted, based on a revised TNGA platform and is a badge-engineered version of Toyota Highlander The post Lexus TZ Electric SUV Debuts \u2013 95.8 kWh, 530 km, 402 bhp, AWD appeared first on RushLane .",
+            "summary": "Lexus TZ Electric SUV has been debuted, based on a revised TNGA platform and is a badge-engineered version of Toyota Highlander The post Lexus TZ Electric SUV Debuts – 95.8 kWh, 530 km, 402 bhp, AWD appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-05-07T13:13:33+00:00",
             "published_display": "07 May 2026",
@@ -160992,7 +161447,7 @@
           {
             "title": "Tesla's China-made EV sales jump 36% in April, extending rebound",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-china-made-ev-sales-jump-36-in-april-extending-rebound/130895340",
-            "summary": "Deliveries of \u200bModel 3 and Model Y vehicles built at Tesla's Shanghai plant, including those exported \u200bto Europe and other markets, totaled 79,478 units, data from China Passenger Car Association showed on Thursday.",
+            "summary": "Deliveries of ​Model 3 and Model Y vehicles built at Tesla's Shanghai plant, including those exported ​to Europe and other markets, totaled 79,478 units, data from China Passenger Car Association showed on Thursday.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-07T12:15:11+00:00",
             "published_display": "07 May 2026",
@@ -161006,9 +161461,9 @@
             ]
           },
           {
-            "title": "2027 MG Starlight EV Spied \u2013 7 Seater SUV To Rival Mahindra XEV 9S",
+            "title": "2027 MG Starlight EV Spied – 7 Seater SUV To Rival Mahindra XEV 9S",
             "url": "https://www.rushlane.com/2027-mg-starlight-ev-spied-7-seater-suv-to-rival-mahindra-xev-9s-12545931.html",
-            "summary": "Earlier, it was the Hybrid / ICE variant that was spied - BEV version of the Starlight SUV will directly rival the Mahindra XEV 9S The post 2027 MG Starlight EV Spied \u2013 7 Seater SUV To Rival Mahindra XEV 9S appeared first on RushLane .",
+            "summary": "Earlier, it was the Hybrid / ICE variant that was spied - BEV version of the Starlight SUV will directly rival the Mahindra XEV 9S The post 2027 MG Starlight EV Spied – 7 Seater SUV To Rival Mahindra XEV 9S appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-05-07T01:22:36+00:00",
             "published_display": "07 May 2026",
@@ -161024,7 +161479,7 @@
           {
             "title": "GoMechanic CEO: Our Strategy is Built Around Going the Extra Mile",
             "url": "https://www.autocarpro.in/Interview/gomechanic-ceo-our-strategy-is-built-around-going-the-extra-mile-132453",
-            "summary": "In an email interaction with Shahkar Abidi, Co\u2011Founder and CEO Himanshu Arora, GoMechanic talks about how his company is well prepared to lead the competition. Over the past 3-5 years, how has the average age at higher technical demands in areas such as EV battery first visit for vehicles on your platform changed as diagnostics, high-voltage safety and ADAS calibration, OEMs push longer warranties and AMCs?",
+            "summary": "In an email interaction with Shahkar Abidi, Co‑Founder and CEO Himanshu Arora, GoMechanic talks about how his company is well prepared to lead the competition. Over the past 3-5 years, how has the average age at higher technical demands in areas such as EV battery first visit for vehicles on your platform changed as diagnostics, high-voltage safety and ADAS calibration, OEMs push longer warranties and AMCs?",
             "source": "Autocar Professional Components",
             "published_at": "2026-05-06T17:50:29+00:00",
             "published_display": "06 May 2026",
@@ -161077,9 +161532,9 @@
             ]
           },
           {
-            "title": "EV business to grow 1.5\u20132x faster as Sona Comstar targets 20%+ revenue growth: CFO",
+            "title": "EV business to grow 1.5–2x faster as Sona Comstar targets 20%+ revenue growth: CFO",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/sona-comstar-projects-20-revenue-growth-driven-by-booming-ev-business/130823192",
-            "summary": "With EVs contributing 70% of its \u20b923,700 crore order book, the company expects faster expansion led by domestic demand, traction motors and controller segments.",
+            "summary": "With EVs contributing 70% of its ₹23,700 crore order book, the company expects faster expansion led by domestic demand, traction motors and controller segments.",
             "source": "ET Auto Components",
             "published_at": "2026-05-05T08:30:57+00:00",
             "published_display": "05 May 2026",
@@ -161110,7 +161565,7 @@
             ]
           },
           {
-            "title": "Tsuyo Manufacturing secures two EV motor patents; strengthens India\u2019s powertrain R&D capabilities",
+            "title": "Tsuyo Manufacturing secures two EV motor patents; strengthens India’s powertrain R&D capabilities",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-advances-ev-technology-with-new-patents-in-india/130626410",
             "summary": "The new patents cover a non-magnetic bridge synchronous reluctance motor and a fault-tolerant five-phase permanent magnet motor with dual inverter control.",
             "source": "ET Auto Components",
@@ -161307,7 +161762,7 @@
         "growth_label": "MoM growth",
         "source_name": "EVReporter",
         "source_url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-march-2026/",
-        "note": "Mar 2026 e-cargo 3W (L5) OEM mix from EVReporter \u2014 Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. Comparable column is Feb 2026 because OEM-level Mar 2025 L5-cargo splits aren't widely published.",
+        "note": "Mar 2026 e-cargo 3W (L5) OEM mix from EVReporter — Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. Comparable column is Feb 2026 because OEM-level Mar 2025 L5-cargo splits aren't widely published.",
         "rows": [
           {
             "oem": "Mahindra Last Mile Mobility",
