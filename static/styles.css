@@ -2765,6 +2765,50 @@ th:hover {
   margin-left: 2px;
 }
 
+/* Time-window selector — small inline pill row that lets the user clip
+   the chart to a trailing N-month window. Sits to the right side of
+   the spotlight controls strip via margin-left:auto. */
+.spotlight-window-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 39, 62, 0.18);
+  background: #fff;
+}
+
+.spotlight-window-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 4px 0 4px;
+}
+
+.spotlight-window-chip {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 999px;
+  transition: background 100ms ease, color 100ms ease;
+}
+
+.spotlight-window-chip:hover {
+  background: rgba(47, 137, 125, 0.08);
+}
+
+.spotlight-window-chip.is-active {
+  background: var(--accent, #2f897d);
+  color: #fff;
+}
+
 .spotlight-peer-chip {
   --peer-color: transparent;
   display: inline-flex;
