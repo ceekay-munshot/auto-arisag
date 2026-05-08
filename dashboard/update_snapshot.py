@@ -720,19 +720,59 @@ def extract_pdf_pages(pdf_bytes: bytes) -> list[str]:
     return [(page.extract_text() or "") for page in reader.pages]
 
 
+_MONTH_NAME_ALT = (
+    "January|February|March|April|May|June|July|August|September|October|November|December|"
+    "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept?|Oct|Nov|Dec"
+)
+_MONTH_SHORT_TO_NUM = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+
+
+def _resolve_month_name(name: str) -> int:
+    key = name.strip().lower()
+    if key in MONTH_LOOKUP:
+        return MONTH_LOOKUP[key]
+    if key in _MONTH_SHORT_TO_NUM:
+        return _MONTH_SHORT_TO_NUM[key]
+    # Try first 3 chars (handles "Sept" → "Sep", etc.)
+    return _MONTH_SHORT_TO_NUM.get(key[:3])
+
+
 def parse_fada_pdf_header(pages: list[str]) -> tuple[str, str]:
     header_text = " ".join(pages)
     month_names = "|".join(MONTH_LOOKUP.keys())
-    month_match = re.search(
-        r"FADA Releases FY['’]?\d+\s+and\s+([A-Za-z]+)['’]?(\d{2})\s+Vehicle Retail Data",
+    # Find the title block "FADA [Rr]eleases <middle> Vehicle Retail/Registration Data".
+    # The middle varies by release type:
+    #   - regular monthly:     "May'24" / "Aug'23"
+    #   - FY-closing March:    "FY'25 and March'25" / "FY 2026 and March 2026"
+    #   - CY-closing December: "CY 2025 and December'25"
+    #   - older FY22 form:     "March22 and FY22"
+    # Extract the last <Month>'<YY|YYYY> pair from inside the title — works
+    # for every form because the FY/CY mention isn't a month name.
+    title_match = re.search(
+        r"FADA\s+[Rr]eleases\s+(.+?)\s+Vehicle\s+(?:Retail|Registration)\s+Data",
         header_text,
         flags=re.IGNORECASE,
     )
-    if not month_match:
+    if not title_match:
         raise ValueError("could not detect FADA OEM annexure month")
-    month_name = month_match.group(1).strip().lower()
-    year = 2000 + int(month_match.group(2))
-    month_number = MONTH_LOOKUP[month_name]
+    title = title_match.group(1)
+    pair_re = re.compile(
+        rf"\b({_MONTH_NAME_ALT})['’]?\s?(\d{{2,4}})\b",
+        re.IGNORECASE,
+    )
+    pairs = pair_re.findall(title)
+    if not pairs:
+        raise ValueError("could not detect FADA OEM annexure month")
+    month_name, year_str = pairs[-1]
+    month_number = _resolve_month_name(month_name)
+    if not month_number:
+        raise ValueError(f"could not resolve month name {month_name!r}")
+    year = int(year_str)
+    if year < 100:
+        year += 2000
     month_id = f"{year}-{month_number:02d}"
 
     date_match = re.search(
@@ -766,10 +806,14 @@ def parse_fada_oem_annexure_tables(pages: list[str], current: dict, month_id: st
     # December and March releases include cumulative annexures (CY / FY) right
     # next to the actual monthly annexure. Match the monthly heading
     # specifically — "OEM wise Market Share Data for Dec'25" — so we land on
-    # the monthly page, not the cumulative one.
+    # the monthly page, not the cumulative one. Some 2024-vintage PDFs phrase
+    # this as "OEM wise Market Share Data for the Month of June'24 with YoY
+    # comparison", so allow up to ~60 chars of filler between "Data" and the
+    # month token.
     monthly_heading_re = re.compile(
-        r"OEM wise Market Share Data for "
-        r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)['’]?\d{2}\b",
+        r"OEM wise Market Share Data\b[^.\n]{0,60}?\b"
+        r"(?:January|February|March|April|May|June|July|August|September|October|November|December|"
+        r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)['’]?\d{2}\b",
         re.IGNORECASE,
     )
     monthly_pages = [
