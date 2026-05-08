@@ -979,16 +979,21 @@ p {
   align-items: end;
 }
 
+/* Explorer-controls strip used under several chart cards. Flexes a
+   single picker (Company / Show selector) on the left, with optional
+   trailing controls (e.g. the USD/INR toggle on the raw-material chart)
+   pushed to the right via margin-left: auto. Wraps on narrow screens. */
 .explorer-controls {
-  grid-template-columns: minmax(240px, 320px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
   margin-bottom: 14px;
 }
 
-/* USD ↔ INR toggle on the raw-material chart. Sits next to the Company
-   picker in .explorer-controls; widens to a 2-col grid when present. */
-.explorer-controls:has(.chart-currency-toggle) {
-  grid-template-columns: minmax(240px, 320px) auto;
-  align-items: end;
+.explorer-controls > .filter-field {
+  flex: 0 1 280px;
+  min-width: 220px;
 }
 
 .chart-currency-toggle {
@@ -997,7 +1002,7 @@ p {
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: #fffdfa;
-  align-self: end;
+  margin-left: auto;
   height: 42px;
 }
 
