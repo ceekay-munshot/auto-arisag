@@ -2878,6 +2878,24 @@ function renderCategoryMixShift(retail, allowed) {
   const series = validSelection === "ALL"
     ? allSeries
     : allSeries.filter((s) => s.cat === validSelection);
+
+  // When a single category is shown, trim the X-axis to that category's
+  // first reported month. Picking Construction Equipment otherwise meant
+  // the chart spanned Jan 2020 -> Apr 2026 with the CE line only kicking
+  // in at May 2025, leaving 5 years of empty whitespace on the left.
+  let chartLabels = labels;
+  let chartSeries = series;
+  let chartMonths = months;
+  if (validSelection !== "ALL" && series.length === 1) {
+    const onlyValues = series[0].values;
+    let firstReported = onlyValues.findIndex((v) => v !== null && v !== undefined);
+    if (firstReported > 0) {
+      chartLabels = labels.slice(firstReported);
+      chartMonths = months.slice(firstReported);
+      chartSeries = [{ ...series[0], values: onlyValues.slice(firstReported) }];
+    }
+  }
+
   registerDownload(
     "category-mix-shift",
     "category_mix_shift.csv",
@@ -2891,9 +2909,11 @@ function renderCategoryMixShift(retail, allowed) {
       return out;
     }),
   );
-  // Latest-vs-first delta strip — the punchline read.
-  const latestPoint = months[months.length - 1];
-  const firstPoint = months[0];
+  // Latest-vs-first delta strip — the punchline read. Use the trimmed
+  // chartMonths so the strip label matches the visible chart window
+  // when a single late-arriving category is selected.
+  const latestPoint = chartMonths[chartMonths.length - 1];
+  const firstPoint = chartMonths[0];
   const deltas = visibleCats.map((cat) => {
     const latest = (latestPoint.categories || []).find((c) => c.category === cat)?.share_pct;
     const first = (firstPoint.categories || []).find((c) => c.category === cat)?.share_pct;
@@ -2926,7 +2946,7 @@ function renderCategoryMixShift(retail, allowed) {
         </label>
       </div>
       <div class="chart-frame">
-        ${lineChart(labels, series, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents(), "share of total volume")}
+        ${lineChart(chartLabels, chartSeries, (v) => v == null ? "" : `${Number(v).toFixed(0)}%`, (v) => v == null ? "" : `${Number(v).toFixed(2)}%`, buildChartEvents(), "share of total volume")}
       </div>
       ${validSelection === "ALL" ? `
         <div class="chart-legend">
