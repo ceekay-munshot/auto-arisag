@@ -2849,15 +2849,28 @@ function renderCategoryMixShift(retail, allowed) {
   const visibleCats = ["PV", "2W", "3W", "CV", "TRACTOR", "CE"]
     .filter((c) => allowed.includes(c));
   const labels = months.map((m) => m.label);
-  const allSeries = visibleCats.map((cat) => ({
-    cat,
-    label: labelForCategory(cat) || cat,
-    color: dashboardData.chart_colors[cat] || dashboardData.chart_colors.TOTAL,
-    values: months.map((m) => {
+  const allSeries = visibleCats.map((cat) => {
+    const rawValues = months.map((m) => {
       const entry = (m.categories || []).find((c) => c.category === cat);
       return entry?.share_pct ?? null;
-    }),
-  })).filter((s) => s.values.some((v) => v !== null && v !== undefined));
+    });
+    // Convert leading run of zeros to null so the line draws starting
+    // from the first month FADA actually reported the category. CE
+    // didn't appear in FADA monthly retail until May 2025; pre-May 2025
+    // months reported as 0% across every category-row of the parser
+    // which on the chart looked like a flat line crashed at zero.
+    let firstReported = -1;
+    for (let i = 0; i < rawValues.length; i += 1) {
+      if (rawValues[i] != null && rawValues[i] > 0) { firstReported = i; break; }
+    }
+    const values = rawValues.map((v, i) => (firstReported >= 0 && i < firstReported ? null : v));
+    return {
+      cat,
+      label: labelForCategory(cat) || cat,
+      color: dashboardData.chart_colors[cat] || dashboardData.chart_colors.TOTAL,
+      values,
+    };
+  }).filter((s) => s.values.some((v) => v !== null && v !== undefined && v > 0));
   // Single-category default (PV by default — the SUV-ification line is the
   // chart's headline narrative). "ALL" overlays every category as before.
   const selection = state.mixShiftCategory || "PV";
@@ -8091,6 +8104,17 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       const sign = n < 0 ? "-" : "";
       const abs = Math.abs(n);
       return `${sign}${(abs / 1000).toFixed(0)}K`;
+    };
+  } else if (peakAbs > 0 && peakAbs < 5) {
+    // Small percentage axes — caller formatter typically uses 0 decimal
+    // ("0%"), which on a 0-1% range renders identical "1%, 1%, 1%, 0%,
+    // 0%" labels because every tick rounds to the nearest integer.
+    // Override with adaptive precision: 2 decimals when peak < 0.5,
+    // 1 decimal otherwise. Caller's tooltip formatter is unaffected.
+    const decimals = peakAbs < 0.5 ? 2 : 1;
+    yAxisFormatter = (value) => {
+      if (value == null || Number.isNaN(Number(value))) return "";
+      return `${Number(value).toFixed(decimals)}%`;
     };
   } else if (peakAbs > 0 && peakAbs < 100) {
     // Percentage-like axes — keep the caller's formatter (typically "X%").
