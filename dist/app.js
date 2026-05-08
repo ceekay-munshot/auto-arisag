@@ -1,6 +1,6 @@
 let dashboardData = null;
 const state = {
-  window: "5m",
+  window: "all",
   lens: "all",
   category: "TOTAL",
   fuel: "all",
@@ -8488,7 +8488,7 @@ function escapeHtml(value) {
 // actually deviated from — keeps shared URLs short and human-readable.
 const URL_STATE_DEFAULTS = {
   activeTab: "overview",
-  window: "5m",
+  window: "all",
   lens: "all",
   category: "TOTAL",
   fuel: "all",
