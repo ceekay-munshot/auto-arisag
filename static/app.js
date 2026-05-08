@@ -19,6 +19,9 @@ const state = {
   // peers (e.g. Maruti vs Tata vs M&M) on a single canvas. Stored as an
   // array of company names; primary is excluded by syncCompanyTrendCompare.
   companyTrendCompare: [],
+  // Whether the multi-select peer-picker dropdown is open. UI-only state;
+  // not persisted to URL hash.
+  companyTrendCompareOpen: false,
   // When true, each line in the spotlight chart is rebased to 100 at its
   // first visible point. Required for peer comparison across very different
   // scales (e.g. Maruti ~200k/mo vs Atul ~1k/mo).
@@ -1300,20 +1303,31 @@ function setupCompanyTrendPicker() {
 }
 
 function setupCompanySpotlightCompare() {
-  document.querySelectorAll("[data-company-trend-peer]").forEach((node) => {
-    node.addEventListener("click", () => {
-      const name = node.getAttribute("data-company-trend-peer");
-      if (!name) return;
-      const idx = state.companyTrendCompare.indexOf(name);
-      if (idx >= 0) {
-        state.companyTrendCompare.splice(idx, 1);
-      } else {
-        // Cap at 5 peers — beyond that the chart turns into spaghetti.
-        if (state.companyTrendCompare.length >= 5) {
-          state.companyTrendCompare.shift();
-        }
-        state.companyTrendCompare.push(name);
-      }
+  // Checkbox rows + removable tags both carry data-company-trend-peer.
+  // Listen on `change` for checkboxes so the toggle responds to keyboard
+  // selection too; tags use `click` since they're <button>.
+  document.querySelectorAll("input[type='checkbox'][data-company-trend-peer]").forEach((node) => {
+    node.addEventListener("change", () => {
+      togglePeerCompare(node.getAttribute("data-company-trend-peer"));
+    });
+  });
+  document.querySelectorAll("button[data-company-trend-peer]").forEach((node) => {
+    node.addEventListener("click", (event) => {
+      event.preventDefault();
+      togglePeerCompare(node.getAttribute("data-company-trend-peer"));
+    });
+  });
+  document.querySelectorAll("[data-action='toggle-peer-dropdown']").forEach((node) => {
+    node.addEventListener("click", (event) => {
+      event.stopPropagation();
+      state.companyTrendCompareOpen = !state.companyTrendCompareOpen;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='clear-peer-compare']").forEach((node) => {
+    node.addEventListener("click", (event) => {
+      event.stopPropagation();
+      state.companyTrendCompare = [];
       render();
     });
   });
@@ -1323,6 +1337,21 @@ function setupCompanySpotlightCompare() {
       render();
     });
   });
+}
+
+function togglePeerCompare(name) {
+  if (!name) return;
+  const idx = state.companyTrendCompare.indexOf(name);
+  if (idx >= 0) {
+    state.companyTrendCompare.splice(idx, 1);
+  } else {
+    // Cap at 5 peers — beyond that the chart turns into spaghetti.
+    if (state.companyTrendCompare.length >= 5) {
+      state.companyTrendCompare.shift();
+    }
+    state.companyTrendCompare.push(name);
+  }
+  render();
 }
 
 function setupRefreshAction() {
@@ -4594,27 +4623,80 @@ function renderUnifiedCompanySpotlight() {
     ? (v) => v == null ? "" : `${Number(v).toFixed(1)} (idx)`
     : formatUnits;
 
-  // Legend pulls double duty as a compare picker: the primary chip shows the
-  // active selection (greyed; not togglable), peer chips are clickable.
-  const peerChips = visibleTrends
-    .filter((item) => item.company !== selected.company)
-    .map((item, idx) => {
-      const active = state.companyTrendCompare.includes(item.company);
-      const colorIdx = state.companyTrendCompare.indexOf(item.company);
-      const color = active ? peerPalette[colorIdx % peerPalette.length] : "transparent";
+  // Peer compare control. Replaces the old wrap-around chip strip with a
+  // dropdown panel of checkboxes — easier to scan when there are 25+ peers
+  // and avoids the chip-row eating four lines of vertical space. Selected
+  // peers also surface as removable color-swatched tags on the trigger
+  // button so the user can see what's active without opening the panel.
+  const allPeers = visibleTrends.filter((item) => item.company !== selected.company);
+  const selectedPeerSet = new Set(state.companyTrendCompare);
+  const peerOpen = !!state.companyTrendCompareOpen;
+  const peerCheckboxRows = allPeers.map((item) => {
+    const checked = selectedPeerSet.has(item.company);
+    const colorIdx = state.companyTrendCompare.indexOf(item.company);
+    const swatchColor = checked && colorIdx >= 0 ? peerPalette[colorIdx % peerPalette.length] : "transparent";
+    const atCap = !checked && state.companyTrendCompare.length >= 5;
+    return `
+      <li>
+        <label class="spotlight-peer-row${checked ? " is-active" : ""}${atCap ? " is-at-cap" : ""}" title="${atCap ? "Adding this will drop the oldest selection (cap is 5)." : ""}">
+          <input
+            type="checkbox"
+            data-company-trend-peer="${item.company}"
+            ${checked ? "checked" : ""}
+          >
+          <span class="spotlight-peer-row-swatch" style="--peer-color:${swatchColor};" aria-hidden="true"></span>
+          <span class="spotlight-peer-row-label">${item.label}</span>
+        </label>
+      </li>
+    `;
+  }).join("");
+  const selectedTagsHtml = state.companyTrendCompare
+    .map((name, idx) => {
+      const item = allPeers.find((peer) => peer.company === name);
+      if (!item) return "";
+      const color = peerPalette[idx % peerPalette.length];
       return `
         <button
           type="button"
-          class="spotlight-peer-chip${active ? " is-active" : ""}"
+          class="spotlight-peer-tag"
           data-company-trend-peer="${item.company}"
           style="--peer-color:${color};"
+          title="Remove ${item.label} from compare"
         >
-          <span class="spotlight-peer-swatch" aria-hidden="true"></span>
+          <span class="spotlight-peer-tag-swatch" aria-hidden="true"></span>
           ${item.label}
+          <span class="spotlight-peer-tag-x" aria-hidden="true">×</span>
         </button>
       `;
     })
     .join("");
+  const peerCount = state.companyTrendCompare.length;
+  const triggerLabel = peerCount === 0
+    ? "Compare with peers"
+    : `Compare with peers (${peerCount}/5)`;
+  const peerControl = allPeers.length
+    ? `
+      <div class="spotlight-peer-dropdown${peerOpen ? " is-open" : ""}" data-peer-dropdown>
+        <button
+          type="button"
+          class="spotlight-peer-dropdown-trigger"
+          data-action="toggle-peer-dropdown"
+          aria-haspopup="listbox"
+          aria-expanded="${peerOpen ? "true" : "false"}"
+        >
+          <span class="spotlight-peer-dropdown-label">${triggerLabel}</span>
+          <span class="spotlight-peer-dropdown-caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="spotlight-peer-dropdown-panel" role="listbox" aria-multiselectable="true" ${peerOpen ? "" : "hidden"}>
+          <div class="spotlight-peer-dropdown-head">
+            <strong>Pick up to 5 peers</strong>
+            <button type="button" class="spotlight-peer-dropdown-clear" data-action="clear-peer-compare" ${peerCount === 0 ? "disabled" : ""}>Clear</button>
+          </div>
+          <ul class="spotlight-peer-list">${peerCheckboxRows}</ul>
+        </div>
+      </div>
+    `
+    : '<span class="spotlight-compare-empty">No peers reporting in this segment.</span>';
 
   return `
     <div class="oem-spotlight">
@@ -4638,8 +4720,8 @@ function renderUnifiedCompanySpotlight() {
         </div>
       </div>
       <div class="spotlight-compare-row">
-        <span class="spotlight-compare-label">Compare with peers:</span>
-        ${peerChips || '<span class="spotlight-compare-empty">No peers reporting in this segment.</span>'}
+        ${peerControl}
+        ${selectedTagsHtml ? `<div class="spotlight-peer-tag-strip">${selectedTagsHtml}</div>` : ""}
       </div>
       <div class="chart-frame compact">
         ${lineChart(
@@ -8642,6 +8724,21 @@ function restoreStateFromUrl() {
 }
 
 function main() {
+  // One-time global handlers. Attached here (not in per-render setup
+  // functions) so they don't accumulate listeners across renders.
+  document.addEventListener("click", (event) => {
+    if (state.companyTrendCompareOpen && !event.target.closest("[data-peer-dropdown]")) {
+      state.companyTrendCompareOpen = false;
+      render();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && state.companyTrendCompareOpen) {
+      state.companyTrendCompareOpen = false;
+      render();
+    }
+  });
+
   loadDashboard()
     .then((data) => {
       dashboardData = data;

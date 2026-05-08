@@ -2563,7 +2563,7 @@ th:hover {
 .spotlight-compare-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 8px;
+  gap: 8px 10px;
   align-items: center;
   padding: 8px 10px;
   background: rgba(20, 39, 62, 0.03);
@@ -2583,6 +2583,186 @@ th:hover {
   font-size: 0.78rem;
   color: var(--muted);
   font-style: italic;
+}
+
+/* Multi-select peer dropdown — replaces the wrap-around chip strip with
+   a single trigger + checkbox panel. Selected peers also surface as
+   removable color-swatched tags inline next to the trigger. */
+.spotlight-peer-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.spotlight-peer-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 39, 62, 0.22);
+  background: #fff;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.spotlight-peer-dropdown-trigger:hover {
+  border-color: rgba(47, 137, 125, 0.6);
+}
+
+.spotlight-peer-dropdown.is-open .spotlight-peer-dropdown-trigger {
+  border-color: rgba(47, 137, 125, 0.85);
+  background: rgba(47, 137, 125, 0.08);
+}
+
+.spotlight-peer-dropdown-caret {
+  font-size: 0.68rem;
+  transition: transform 120ms ease;
+}
+
+.spotlight-peer-dropdown.is-open .spotlight-peer-dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.spotlight-peer-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  min-width: 280px;
+  max-width: 360px;
+  background: #fff;
+  border: 1px solid rgba(20, 39, 62, 0.16);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 32px rgba(20, 39, 62, 0.18);
+  padding: 10px 0 4px;
+}
+
+.spotlight-peer-dropdown-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 8px;
+  border-bottom: 1px solid rgba(20, 39, 62, 0.08);
+  margin-bottom: 4px;
+}
+
+.spotlight-peer-dropdown-head strong {
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.spotlight-peer-dropdown-clear {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent, #2f897d);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.spotlight-peer-dropdown-clear:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.spotlight-peer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.spotlight-peer-row {
+  --peer-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: background 100ms ease;
+}
+
+.spotlight-peer-row:hover {
+  background: rgba(47, 137, 125, 0.06);
+}
+
+.spotlight-peer-row.is-active {
+  background: rgba(47, 137, 125, 0.04);
+  font-weight: 600;
+}
+
+.spotlight-peer-row.is-at-cap {
+  opacity: 0.55;
+}
+
+.spotlight-peer-row input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.spotlight-peer-row-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--peer-color);
+  border: 1px solid rgba(20, 39, 62, 0.22);
+  flex-shrink: 0;
+}
+
+.spotlight-peer-row-label {
+  flex: 1;
+  color: var(--text);
+}
+
+.spotlight-peer-tag-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  align-items: center;
+}
+
+.spotlight-peer-tag {
+  --peer-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--peer-color);
+  background: color-mix(in srgb, var(--peer-color) 14%, #fff);
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.spotlight-peer-tag:hover {
+  background: color-mix(in srgb, var(--peer-color) 22%, #fff);
+}
+
+.spotlight-peer-tag-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--peer-color);
+}
+
+.spotlight-peer-tag-x {
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--muted);
+  margin-left: 2px;
 }
 
 .spotlight-peer-chip {
