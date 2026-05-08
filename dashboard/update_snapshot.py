@@ -1413,12 +1413,32 @@ def parse_fada_oem_page(category: str, text: str, previous_rows: list[dict]) -> 
         }
         text = text[: others_match.start()] + text[others_match.end() :]
 
-    row_pattern = re.compile(r"([A-Z0-9&().,'/\- ]+?)\s+([-\d,]+)\s+([\d.]+)%\s+([-\d,]+)\s+([\d.]+)%")
+    row_pattern = re.compile(r"([A-Z0-9&().,'’/\- ]+?)\s+([-\d,]+)\s+([\d.]+)%\s+([-\d,]+)\s+([\d.]+)%")
     parsed = []
     seen = set()
     for match in row_pattern.finditer(text):
         raw_name = " ".join(match.group(1).split())
-        raw_name = re.sub(r"^['’]?\d{2}\s+", "", raw_name).strip()
+        # Strip column-header bleed left over from FADA's tabular layout.
+        # The OEM-rows table puts each row directly after the comparison-month
+        # header column, so the row-pattern's non-greedy capture often slurps:
+        #   "(%) SEP'23 MARUTI SUZUKI INDIA LTD"  → "MARUTI SUZUKI INDIA LTD"
+        #   ") FY'23 BAJAJ AUTO LTD"              → "BAJAJ AUTO LTD"
+        #   ") DEC'23 HYUNDAI MOTOR INDIA LTD"    → "HYUNDAI MOTOR INDIA LTD"
+        # Run the cleanup loop until stable so chained leftovers (")", "(", ","
+        # plus a month token) all get stripped in any order.
+        for _ in range(3):
+            cleaned = re.sub(r"^[\)\(%\s,]+", "", raw_name)
+            cleaned = re.sub(
+                r"^(?:[A-Z]{2,9}|FY|CY)['’]?\d{2,4}\s+",
+                "",
+                cleaned,
+                flags=re.IGNORECASE,
+            )
+            cleaned = re.sub(r"^['’]?\d{2}\s+", "", cleaned)
+            cleaned = cleaned.strip()
+            if cleaned == raw_name:
+                break
+            raw_name = cleaned
         if raw_name.upper() in {"ANNEXURE 2", "TOTAL", "SOURCE: FADA RESEARCH"}:
             continue
         canonical_name = map_fada_oem_name(category, raw_name, canonical_lookup)

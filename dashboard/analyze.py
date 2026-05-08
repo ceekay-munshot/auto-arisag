@@ -171,6 +171,9 @@ def _build_fada_oem_back_history_by_company() -> dict[str, list[dict[str, Any]]]
     return out
 
 
+_MONTH_ID_RE = re.compile(r"^\d{4}-\d{2}$")
+
+
 def _build_company_unit_trends() -> list[dict[str, Any]]:
     history = _load_company_history()
     fada_back_history = _build_fada_oem_back_history_by_company()
@@ -181,6 +184,14 @@ def _build_company_unit_trends() -> list[dict[str, Any]]:
         #   2. company_unit_history.json (scraped from press releases)
         #   3. FADA OEM annexure roll-up (back-history fill)
         merged = _merge_company_series(company, details["series"], history.get(company, []))
+        # Drop quarterly / annual entries (e.g. "Q1 FY26", "H1 FY25", "FY24")
+        # that some companies' investor decks include alongside monthly data.
+        # Plotting them on a monthly chart produces phantom 3× spikes because
+        # a quarterly aggregate gets attributed to a single month slot.
+        merged = [
+            point for point in merged
+            if isinstance(point.get("month"), str) and _MONTH_ID_RE.match(point["month"])
+        ]
         merged_months = {point.get("month") for point in merged if point.get("month")}
         # Only include FADA points that aren't already covered by the
         # higher-priority sources.
