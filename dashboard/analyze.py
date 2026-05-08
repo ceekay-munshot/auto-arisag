@@ -2191,24 +2191,39 @@ def build_segment_share_module(
     source_meta: dict[str, Any],
     validations: list[dict[str, str]],
 ) -> dict[str, Any]:
-    recent_years = ["2022-23", "2023-24", "2024-25"]
-    latest_full_year = recent_years[-1]
-    cagr_periods = len(recent_years) - 1
+    fada_years_full = ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+    fada_3w_years = ["2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+    siam_years = ["2022-23", "2023-24", "2024-25"]
+
+    fada_fy26_url = "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf"
+    fada_fy26_release = "2026-04-06"
+    siam_url = "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+    siam_release = "2025-08-31"
+
+    def fy_short(year: str) -> str:
+        # "2024-25" → "25" (Indian fiscal years are named by their ending year).
+        return year.split("-")[1]
+
+    def cagr_label_for(years: list[str]) -> str:
+        return f"FY{fy_short(years[0])}-{fy_short(years[-1])} CAGR"
 
     def build_option(
         option_id: str,
         label: str,
+        years: list[str],
         rows: list[dict[str, Any]],
         source_name: str,
         source_url: str,
         latest_release_date: str,
         note: str,
     ) -> dict[str, Any]:
+        latest_full_year = years[-1]
+        cagr_periods = len(years) - 1
         latest_total = sum(item["units_by_year"][latest_full_year] for item in rows)
         enriched_rows: list[dict[str, Any]] = []
         for item in rows:
             current_units = item["units_by_year"][latest_full_year]
-            base_units = item["units_by_year"][recent_years[0]]
+            base_units = item["units_by_year"][years[0]]
             cagr_pct = (
                 round((((current_units / base_units) ** (1 / cagr_periods)) - 1) * 100, 2)
                 if base_units and current_units and cagr_periods > 0
@@ -2218,10 +2233,10 @@ def build_segment_share_module(
                 {
                     "id": item["id"],
                     "label": item["label"],
-                    "trend": [{"year": year, "label": year, "units": item["units_by_year"][year]} for year in recent_years],
+                    "trend": [{"year": year, "label": year, "units": item["units_by_year"][year]} for year in years],
                     "share_pct": round(current_units / latest_total * 100, 2) if latest_total else 0.0,
                     "cagr_pct": cagr_pct,
-                    **{f"units_{year}": item["units_by_year"][year] for year in recent_years},
+                    **{f"units_{year}": item["units_by_year"][year] for year in years},
                 }
             )
 
@@ -2233,6 +2248,9 @@ def build_segment_share_module(
             "source_url": source_url,
             "latest_release_date": latest_release_date,
             "latest_full_year_label": latest_full_year,
+            "cagr_label": cagr_label_for(years),
+            "trend_years": [{"id": year, "label": year} for year in years],
+            "table_years": [{"id": year, "label": year} for year in reversed(years)],
             "note": note,
         }
 
@@ -2240,76 +2258,89 @@ def build_segment_share_module(
         build_option(
             "TOTAL",
             "Total market",
+            fada_years_full,
             [
-                {"id": "2W", "label": "Two-Wheelers", "units_by_year": {"2022-23": 15995968, "2023-24": 17527115, "2024-25": 18877812}},
-                {"id": "PV", "label": "Passenger Vehicles", "units_by_year": {"2022-23": 3620039, "2023-24": 3960602, "2024-25": 4153432}},
-                {"id": "CV", "label": "Commercial Vehicles", "units_by_year": {"2022-23": 939741, "2023-24": 1010324, "2024-25": 1008623}},
-                {"id": "3W", "label": "Three-Wheelers", "units_by_year": {"2022-23": 767071, "2023-24": 1167986, "2024-25": 1220981}},
-                {"id": "TRACTOR", "label": "Tractors", "units_by_year": {"2022-23": 827403, "2023-24": 892410, "2024-25": 883095}},
+                # FY26 CV row keeps the historical "incl. CE" definition: FADA broke
+                # Construction Equipment out as its own top-level category in FY26
+                # (CV 10,60,906 + CE 71,227 = 11,32,133), so we recombine to keep
+                # the CV trend line continuous with FY21-FY25.
+                {"id": "2W", "label": "Two-Wheelers", "units_by_year": {"2020-21": 11533928, "2021-22": 13494214, "2022-23": 15995968, "2023-24": 17527115, "2024-25": 18877812, "2025-26": 21420386}},
+                {"id": "PV", "label": "Passenger Vehicles", "units_by_year": {"2020-21": 2387925, "2021-22": 2942273, "2022-23": 3620039, "2023-24": 3960602, "2024-25": 4153432, "2025-26": 4705056}},
+                {"id": "CV", "label": "Commercial Vehicles", "units_by_year": {"2020-21": 449324, "2021-22": 707186, "2022-23": 939741, "2023-24": 1010324, "2024-25": 1008623, "2025-26": 1132133}},
+                {"id": "3W", "label": "Three-Wheelers", "units_by_year": {"2020-21": 258172, "2021-22": 417108, "2022-23": 767071, "2023-24": 1167986, "2024-25": 1220981, "2025-26": 1363412}},
+                {"id": "TRACTOR", "label": "Tractors", "units_by_year": {"2020-21": 644965, "2021-22": 766545, "2022-23": 827403, "2023-24": 892410, "2024-25": 883095, "2025-26": 1050077}},
             ],
             "FADA annual retail",
-            "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-            "2025-04-04",
-            "Recent annual mix uses official FADA retail totals for FY23, FY24 and FY25. This keeps the market-share view current and conceptually aligned with dealer retail.",
+            fada_fy26_url,
+            fada_fy26_release,
+            "Annual mix uses official FADA retail totals for FY21 → FY26. FY21/FY22 figures are the FY22/FY23-release revisions (later FADA releases revise prior-year totals as RTO coverage expands). FY26 CV row recombines Construction Equipment that FADA split out, preserving the historical CV definition.",
         ),
         build_option(
             "PV",
             "Passenger Vehicles",
+            siam_years,
             [
                 {"id": "utility_vehicles", "label": "Utility Vehicles", "units_by_year": {"2022-23": 2003718, "2023-24": 2520691, "2024-25": 2797229}},
                 {"id": "passenger_cars", "label": "Passenger Cars", "units_by_year": {"2022-23": 1747376, "2023-24": 1548943, "2024-25": 1353287}},
                 {"id": "vans", "label": "Vans", "units_by_year": {"2022-23": 139020, "2023-24": 149112, "2024-25": 151332}},
             ],
             "SIAM annual domestic sales",
-            "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
-            "2025-08-31",
-            "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans.",
+            siam_url,
+            siam_release,
+            "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending.",
         ),
         build_option(
             "2W",
             "Two-Wheelers",
+            siam_years,
             [
                 {"id": "motorcycles", "label": "Motorcycles", "units_by_year": {"2022-23": 10230502, "2023-24": 11653237, "2024-25": 12252305}},
                 {"id": "scooters", "label": "Scooters", "units_by_year": {"2022-23": 5190702, "2023-24": 5839325, "2024-25": 6853214}},
                 {"id": "mopeds", "label": "Mopeds", "units_by_year": {"2022-23": 441567, "2023-24": 481803, "2024-25": 501813}},
             ],
             "SIAM annual domestic sales",
-            "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
-            "2025-08-31",
-            "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds.",
+            siam_url,
+            siam_release,
+            "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending.",
         ),
         build_option(
             "3W",
             "Three-Wheelers",
+            fada_3w_years,
             [
-                {"id": "three_w_passenger", "label": "3W passenger", "units_by_year": {"2022-23": 301877, "2023-24": 513328, "2024-25": 557693}},
-                {"id": "e_rickshaw_passenger", "label": "E-rickshaw passenger", "units_by_year": {"2022-23": 350247, "2023-24": 490662, "2024-25": 474635}},
-                {"id": "three_w_goods", "label": "3W goods", "units_by_year": {"2022-23": 90111, "2023-24": 122298, "2024-25": 122624}},
-                {"id": "e_rickshaw_goods", "label": "E-rickshaw with cart", "units_by_year": {"2022-23": 24224, "2023-24": 40785, "2024-25": 65038}},
-                {"id": "three_w_personal", "label": "3W personal", "units_by_year": {"2022-23": 612, "2023-24": 913, "2024-25": 991}},
+                {"id": "three_w_passenger", "label": "3W passenger", "units_by_year": {"2021-22": 169384, "2022-23": 301877, "2023-24": 513328, "2024-25": 557693, "2025-26": 655953}},
+                {"id": "e_rickshaw_passenger", "label": "E-rickshaw passenger", "units_by_year": {"2021-22": 160065, "2022-23": 350247, "2023-24": 490662, "2024-25": 474635, "2025-26": 477897}},
+                {"id": "three_w_goods", "label": "3W goods", "units_by_year": {"2021-22": 72668, "2022-23": 90111, "2023-24": 122298, "2024-25": 122624, "2025-26": 141595}},
+                {"id": "e_rickshaw_goods", "label": "E-rickshaw with cart", "units_by_year": {"2021-22": 14467, "2022-23": 24224, "2023-24": 40785, "2024-25": 65038, "2025-26": 86384}},
+                {"id": "three_w_personal", "label": "3W personal", "units_by_year": {"2021-22": 524, "2022-23": 612, "2023-24": 913, "2024-25": 991, "2025-26": 1583}},
             ],
             "FADA annual retail",
-            "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-            "2025-04-04",
-            "Three-wheeler mix uses official FADA annual retail rows, including electric rickshaw passenger and cargo splits.",
+            fada_fy26_url,
+            fada_fy26_release,
+            "Three-wheeler mix uses official FADA annual retail rows for FY22 → FY26 (e-rickshaw passenger/goods + 3W passenger/goods/personal). FY21 lacks an FADA-published 3W subsegment split.",
         ),
         build_option(
             "CV",
             "Commercial Vehicles",
+            fada_years_full,
             [
-                {"id": "lcv", "label": "LCV", "units_by_year": {"2022-23": 554585, "2023-24": 562026, "2024-25": 563189}},
-                {"id": "hcv", "label": "HCV", "units_by_year": {"2022-23": 293796, "2023-24": 326150, "2024-25": 312892}},
-                {"id": "mcv", "label": "MCV", "units_by_year": {"2022-23": 60818, "2023-24": 73142, "2024-25": 77568}},
-                {"id": "others", "label": "Others", "units_by_year": {"2022-23": 30542, "2023-24": 49006, "2024-25": 54974}},
+                # FY26 "Others" recombines FADA's FY26 CV-Others (680) with the
+                # newly-broken-out Construction Equipment bucket (71,227 = 71,907)
+                # so the time series stays comparable to the FY21-FY25 definition
+                # where Others already included CE.
+                {"id": "lcv", "label": "LCV", "units_by_year": {"2020-21": 301776, "2021-22": 438802, "2022-23": 554585, "2023-24": 562026, "2024-25": 563189, "2025-26": 638323}},
+                {"id": "hcv", "label": "HCV", "units_by_year": {"2020-21": 90562, "2021-22": 197365, "2022-23": 293796, "2023-24": 326150, "2024-25": 312892, "2025-26": 334227}},
+                {"id": "mcv", "label": "MCV", "units_by_year": {"2020-21": 23345, "2021-22": 48005, "2022-23": 60818, "2023-24": 73142, "2024-25": 77568, "2025-26": 87676}},
+                {"id": "others", "label": "Others", "units_by_year": {"2020-21": 33641, "2021-22": 23014, "2022-23": 30542, "2023-24": 49006, "2024-25": 54974, "2025-26": 71907}},
             ],
             "FADA annual retail",
-            "https://fada.in/images/press-release/169a8f8bd834feFADA%20releases%20February%202026%20Vehicle%20Retail%20Data.pdf",
-            "2025-04-04",
-            "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and others.",
+            fada_fy26_url,
+            fada_fy26_release,
+            "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and Others (incl. construction equipment) for FY21 → FY26. FADA split CE out as its own category in FY26; we re-combine into Others to keep the series continuous.",
         ),
     ]
 
-    validations.append({"status": "ok", "message": "Segment-share explorer rebuilt with recent FY23-FY25 official annual FADA and SIAM data."})
+    validations.append({"status": "ok", "message": "Segment-share explorer rebuilt with FY21–FY26 FADA annual data (Total/3W/CV) and FY23–FY25 SIAM splits (PV/2W)."})
 
     return {
         "available": True,
@@ -2317,16 +2348,16 @@ def build_segment_share_module(
         "source_meta": {
             "name": "Recent official annual mix",
             "latest_month": None,
-            "latest_release_date": "2025-08-31",
-            "url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
-            "note": "This module now uses recent annual official data instead of the older Vahan class rollup. Source switches cleanly by category: FADA for total, 3W and CV retail mix; SIAM for PV and 2W domestic-sales mix.",
+            "latest_release_date": fada_fy26_release,
+            "url": fada_fy26_url,
+            "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY23-FY25; older annuals pending manual ingest).",
         },
         "method_note": source_message,
-        "latest_full_year": latest_full_year,
-        "latest_full_year_label": latest_full_year,
-        "cagr_label": "FY23-25 CAGR",
-        "table_years": [{"id": year, "label": year} for year in reversed(recent_years)],
-        "trend_years": [{"id": year, "label": year} for year in recent_years],
+        "latest_full_year": fada_years_full[-1],
+        "latest_full_year_label": fada_years_full[-1],
+        "cagr_label": cagr_label_for(fada_years_full),
+        "table_years": [{"id": year, "label": year} for year in reversed(fada_years_full)],
+        "trend_years": [{"id": year, "label": year} for year in fada_years_full],
         "default_option": "TOTAL",
         "options": option_items,
     }
