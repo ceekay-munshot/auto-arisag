@@ -2193,11 +2193,14 @@ def build_segment_share_module(
 ) -> dict[str, Any]:
     fada_years_full = ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
     fada_3w_years = ["2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
-    siam_years = ["2022-23", "2023-24", "2024-25"]
+    # SIAM annual domestic sales — pre-FY23 numbers come from the SIAM Annual
+    # Report 2021-22 PDF (filemanager/414SIAMAnnualReport202122Final.pdf). FY23+
+    # carried over from the prior dataset.
+    siam_years = ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"]
 
     fada_fy26_url = "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf"
     fada_fy26_release = "2026-04-06"
-    siam_url = "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50"
+    siam_url = "https://www.siam.in/statistics.aspx?mpgid=8&pgidtrail=14"
     siam_release = "2025-08-31"
 
     def fy_short(year: str) -> str:
@@ -2280,28 +2283,28 @@ def build_segment_share_module(
             "Passenger Vehicles",
             siam_years,
             [
-                {"id": "utility_vehicles", "label": "Utility Vehicles", "units_by_year": {"2022-23": 2003718, "2023-24": 2520691, "2024-25": 2797229}},
-                {"id": "passenger_cars", "label": "Passenger Cars", "units_by_year": {"2022-23": 1747376, "2023-24": 1548943, "2024-25": 1353287}},
-                {"id": "vans", "label": "Vans", "units_by_year": {"2022-23": 139020, "2023-24": 149112, "2024-25": 151332}},
+                {"id": "utility_vehicles", "label": "Utility Vehicles", "units_by_year": {"2017-18": 922322, "2018-19": 941474, "2019-20": 945959, "2020-21": 1060750, "2021-22": 1489178, "2022-23": 2003718, "2023-24": 2520691, "2024-25": 2797229}},
+                {"id": "passenger_cars", "label": "Passenger Cars", "units_by_year": {"2017-18": 2174024, "2018-19": 2218489, "2019-20": 1695436, "2020-21": 1541866, "2021-22": 1467056, "2022-23": 1747376, "2023-24": 1548943, "2024-25": 1353287}},
+                {"id": "vans", "label": "Vans", "units_by_year": {"2017-18": 192235, "2018-19": 217426, "2019-20": 132124, "2020-21": 108841, "2021-22": 113265, "2022-23": 139020, "2023-24": 149112, "2024-25": 151332}},
             ],
             "SIAM annual domestic sales",
             siam_url,
             siam_release,
-            "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending.",
+            "Passenger-vehicle mix uses SIAM annual domestic sales for FY18 → FY25 (cars / utility vehicles / vans). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases.",
         ),
         build_option(
             "2W",
             "Two-Wheelers",
             siam_years,
             [
-                {"id": "motorcycles", "label": "Motorcycles", "units_by_year": {"2022-23": 10230502, "2023-24": 11653237, "2024-25": 12252305}},
-                {"id": "scooters", "label": "Scooters", "units_by_year": {"2022-23": 5190702, "2023-24": 5839325, "2024-25": 6853214}},
-                {"id": "mopeds", "label": "Mopeds", "units_by_year": {"2022-23": 441567, "2023-24": 481803, "2024-25": 501813}},
+                {"id": "motorcycles", "label": "Motorcycles", "units_by_year": {"2017-18": 12620690, "2018-19": 13598190, "2019-20": 11213662, "2020-21": 10021231, "2021-22": 8984186, "2022-23": 10230502, "2023-24": 11653237, "2024-25": 12252305}},
+                {"id": "scooters", "label": "Scooters", "units_by_year": {"2017-18": 6719909, "2018-19": 6701430, "2019-20": 5565958, "2020-21": 4482305, "2021-22": 4009076, "2022-23": 5190702, "2023-24": 5839325, "2024-25": 6853214}},
+                {"id": "mopeds", "label": "Mopeds", "units_by_year": {"2017-18": 859518, "2018-19": 880227, "2019-20": 636812, "2020-21": 617247, "2021-22": 473150, "2022-23": 441567, "2023-24": 481803, "2024-25": 501813}},
             ],
             "SIAM annual domestic sales",
             siam_url,
             siam_release,
-            "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending.",
+            "Two-wheeler mix uses SIAM annual domestic sales for FY18 → FY25 (motorcycles / scooters / mopeds). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases.",
         ),
         build_option(
             "3W",
@@ -2340,7 +2343,7 @@ def build_segment_share_module(
         ),
     ]
 
-    validations.append({"status": "ok", "message": "Segment-share explorer rebuilt with FY21–FY26 FADA annual data (Total/3W/CV) and FY23–FY25 SIAM splits (PV/2W)."})
+    validations.append({"status": "ok", "message": "Segment-share explorer rebuilt with FY21–FY26 FADA annual data (Total/3W/CV) and FY18–FY25 SIAM annual splits (PV/2W)."})
 
     return {
         "available": True,
@@ -2350,7 +2353,7 @@ def build_segment_share_module(
             "latest_month": None,
             "latest_release_date": fada_fy26_release,
             "url": fada_fy26_url,
-            "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY23-FY25; older annuals pending manual ingest).",
+            "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY18-FY25 from SIAM Annual Report 2021-22 + subsequent releases).",
         },
         "method_note": source_message,
         "latest_full_year": fada_years_full[-1],

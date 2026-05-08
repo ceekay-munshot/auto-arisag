@@ -35377,7 +35377,7 @@
         "latest_month": null,
         "latest_release_date": "2026-04-06",
         "url": "https://fada.in/images/press-release/169d329fc83770FADA%20releases%20FY%202026%20and%20March%202026%20Vehicle%20Retail%20Data.pdf",
-        "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY23-FY25; older annuals pending manual ingest)."
+        "note": "Annual official data: FADA for Total/3W/CV (FY21-FY26 where subsegment data is published; 3W subsegments start FY22); SIAM for PV/2W (FY18-FY25 from SIAM Annual Report 2021-22 + subsequent releases)."
       },
       "method_note": "",
       "latest_full_year": "2025-26",
@@ -35730,6 +35730,31 @@
               "label": "Utility Vehicles",
               "trend": [
                 {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 922322
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 941474
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 945959
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 1060750
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 1489178
+                },
+                {
                   "year": "2022-23",
                   "label": "2022-23",
                   "units": 2003718
@@ -35746,7 +35771,12 @@
                 }
               ],
               "share_pct": 65.02,
-              "cagr_pct": 18.15,
+              "cagr_pct": 17.18,
+              "units_2017-18": 922322,
+              "units_2018-19": 941474,
+              "units_2019-20": 945959,
+              "units_2020-21": 1060750,
+              "units_2021-22": 1489178,
               "units_2022-23": 2003718,
               "units_2023-24": 2520691,
               "units_2024-25": 2797229
@@ -35755,6 +35785,31 @@
               "id": "passenger_cars",
               "label": "Passenger Cars",
               "trend": [
+                {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 2174024
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 2218489
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 1695436
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 1541866
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 1467056
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35772,7 +35827,12 @@
                 }
               ],
               "share_pct": 31.46,
-              "cagr_pct": -12.0,
+              "cagr_pct": -6.55,
+              "units_2017-18": 2174024,
+              "units_2018-19": 2218489,
+              "units_2019-20": 1695436,
+              "units_2020-21": 1541866,
+              "units_2021-22": 1467056,
               "units_2022-23": 1747376,
               "units_2023-24": 1548943,
               "units_2024-25": 1353287
@@ -35781,6 +35841,31 @@
               "id": "vans",
               "label": "Vans",
               "trend": [
+                {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 192235
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 217426
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 132124
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 108841
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 113265
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35798,18 +35883,43 @@
                 }
               ],
               "share_pct": 3.52,
-              "cagr_pct": 4.33,
+              "cagr_pct": -3.36,
+              "units_2017-18": 192235,
+              "units_2018-19": 217426,
+              "units_2019-20": 132124,
+              "units_2020-21": 108841,
+              "units_2021-22": 113265,
               "units_2022-23": 139020,
               "units_2023-24": 149112,
               "units_2024-25": 151332
             }
           ],
           "source_name": "SIAM annual domestic sales",
-          "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+          "source_url": "https://www.siam.in/statistics.aspx?mpgid=8&pgidtrail=14",
           "latest_release_date": "2025-08-31",
           "latest_full_year_label": "2024-25",
-          "cagr_label": "FY23-25 CAGR",
+          "cagr_label": "FY18-25 CAGR",
           "trend_years": [
+            {
+              "id": "2017-18",
+              "label": "2017-18"
+            },
+            {
+              "id": "2018-19",
+              "label": "2018-19"
+            },
+            {
+              "id": "2019-20",
+              "label": "2019-20"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
             {
               "id": "2022-23",
               "label": "2022-23"
@@ -35835,9 +35945,29 @@
             {
               "id": "2022-23",
               "label": "2022-23"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2019-20",
+              "label": "2019-20"
+            },
+            {
+              "id": "2018-19",
+              "label": "2018-19"
+            },
+            {
+              "id": "2017-18",
+              "label": "2017-18"
             }
           ],
-          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY23 to FY25, broken into cars, utility vehicles and vans. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending."
+          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY18 → FY25 (cars / utility vehicles / vans). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
         },
         {
           "id": "2W",
@@ -35847,6 +35977,31 @@
               "id": "motorcycles",
               "label": "Motorcycles",
               "trend": [
+                {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 12620690
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 13598190
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 11213662
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 10021231
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 8984186
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35864,7 +36019,12 @@
                 }
               ],
               "share_pct": 62.49,
-              "cagr_pct": 9.44,
+              "cagr_pct": -0.42,
+              "units_2017-18": 12620690,
+              "units_2018-19": 13598190,
+              "units_2019-20": 11213662,
+              "units_2020-21": 10021231,
+              "units_2021-22": 8984186,
               "units_2022-23": 10230502,
               "units_2023-24": 11653237,
               "units_2024-25": 12252305
@@ -35873,6 +36033,31 @@
               "id": "scooters",
               "label": "Scooters",
               "trend": [
+                {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 6719909
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 6701430
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 5565958
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 4482305
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 4009076
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35890,7 +36075,12 @@
                 }
               ],
               "share_pct": 34.95,
-              "cagr_pct": 14.9,
+              "cagr_pct": 0.28,
+              "units_2017-18": 6719909,
+              "units_2018-19": 6701430,
+              "units_2019-20": 5565958,
+              "units_2020-21": 4482305,
+              "units_2021-22": 4009076,
               "units_2022-23": 5190702,
               "units_2023-24": 5839325,
               "units_2024-25": 6853214
@@ -35899,6 +36089,31 @@
               "id": "mopeds",
               "label": "Mopeds",
               "trend": [
+                {
+                  "year": "2017-18",
+                  "label": "2017-18",
+                  "units": 859518
+                },
+                {
+                  "year": "2018-19",
+                  "label": "2018-19",
+                  "units": 880227
+                },
+                {
+                  "year": "2019-20",
+                  "label": "2019-20",
+                  "units": 636812
+                },
+                {
+                  "year": "2020-21",
+                  "label": "2020-21",
+                  "units": 617247
+                },
+                {
+                  "year": "2021-22",
+                  "label": "2021-22",
+                  "units": 473150
+                },
                 {
                   "year": "2022-23",
                   "label": "2022-23",
@@ -35916,18 +36131,43 @@
                 }
               ],
               "share_pct": 2.56,
-              "cagr_pct": 6.6,
+              "cagr_pct": -7.4,
+              "units_2017-18": 859518,
+              "units_2018-19": 880227,
+              "units_2019-20": 636812,
+              "units_2020-21": 617247,
+              "units_2021-22": 473150,
               "units_2022-23": 441567,
               "units_2023-24": 481803,
               "units_2024-25": 501813
             }
           ],
           "source_name": "SIAM annual domestic sales",
-          "source_url": "https://www.siam.in/annualreports.aspx?mpgid=20&pgidtrail=50",
+          "source_url": "https://www.siam.in/statistics.aspx?mpgid=8&pgidtrail=14",
           "latest_release_date": "2025-08-31",
           "latest_full_year_label": "2024-25",
-          "cagr_label": "FY23-25 CAGR",
+          "cagr_label": "FY18-25 CAGR",
           "trend_years": [
+            {
+              "id": "2017-18",
+              "label": "2017-18"
+            },
+            {
+              "id": "2018-19",
+              "label": "2018-19"
+            },
+            {
+              "id": "2019-20",
+              "label": "2019-20"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
             {
               "id": "2022-23",
               "label": "2022-23"
@@ -35953,9 +36193,29 @@
             {
               "id": "2022-23",
               "label": "2022-23"
+            },
+            {
+              "id": "2021-22",
+              "label": "2021-22"
+            },
+            {
+              "id": "2020-21",
+              "label": "2020-21"
+            },
+            {
+              "id": "2019-20",
+              "label": "2019-20"
+            },
+            {
+              "id": "2018-19",
+              "label": "2018-19"
+            },
+            {
+              "id": "2017-18",
+              "label": "2017-18"
             }
           ],
-          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY23 to FY25, split across motorcycles, scooters and mopeds. SIAM annual subsegment splits for FY20-FY22 are not yet ingested — manual upload pending."
+          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY18 → FY25 (motorcycles / scooters / mopeds). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
         },
         {
           "id": "3W",
