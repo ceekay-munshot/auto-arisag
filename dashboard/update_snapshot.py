@@ -1151,58 +1151,86 @@ def parse_fada_urban_rural_growth(compact_pages: str) -> list[dict[str, float | 
     if end_index != -1:
         section = section[:end_index]
 
-    category_pairs = [("2W", "CV"), ("3W", "CE"), ("PV", "TRAC")]
-    results: list[dict[str, float | str]] = []
-    pct_pattern = r"(-?[\d.]+)%"
-
-    for left, right in category_pairs:
-        pattern = re.compile(
-            rf"{re.escape(left)}\s+{re.escape(right)}\s+"
-            rf"Urban\s+{pct_pattern}\s+{pct_pattern}\s+Urban\s+{pct_pattern}\s+{pct_pattern}\s+"
-            rf"Rural\s+{pct_pattern}\s+{pct_pattern}\s+Rural\s+{pct_pattern}\s+{pct_pattern}\s+"
-            rf"Total\s+{pct_pattern}\s+{pct_pattern}\s+Total\s+{pct_pattern}\s+{pct_pattern}",
-            flags=re.IGNORECASE,
-        )
-        match = pattern.search(section)
-        if not match:
-            raise ValueError(f"could not parse FADA urban-rural block for {left} / {right}")
-        values = [float(item) for item in match.groups()]
-        results.extend(
-            [
-                {
-                    "category": "TRACTOR" if left == "TRAC" else left,
-                    "urban_mom_pct": values[0],
-                    "urban_yoy_pct": values[1],
-                    "rural_mom_pct": values[4],
-                    "rural_yoy_pct": values[5],
-                },
-                {
-                    "category": "TRACTOR" if right == "TRAC" else right,
-                    "urban_mom_pct": values[2],
-                    "urban_yoy_pct": values[3],
-                    "rural_mom_pct": values[6],
-                    "rural_yoy_pct": values[7],
-                },
-            ]
-        )
-
-    total_match = re.search(
-        rf"Total\s+Urban\s+{pct_pattern}\s+{pct_pattern}\s+Rural\s+{pct_pattern}\s+{pct_pattern}\s+Total\s+{pct_pattern}\s+{pct_pattern}",
-        section,
+    # Two layouts seen historically:
+    #   Pre-CE (Nov 2024 → ~Apr 2025): three pairs (2W, CV), (3W, TRAC),
+    #                                  (PV, Total). No per-pair "Total" line.
+    #   Post-CE (May 2025 onwards):    three pairs (2W, CV), (3W, CE),
+    #                                  (PV, TRAC) + a separate overall
+    #                                  "Total Urban / Rural / Total" block.
+    # The pair regex below is permissive enough for both: it matches the
+    # row layout `<L> <R> Urban .. Urban .. Rural .. Rural .. [Total ..
+    # Total ..]?` and walks every occurrence in the section.
+    pct = r"(-?[\d.]+)%"
+    pair_pattern = re.compile(
+        rf"\b([A-Z0-9]+)\s+([A-Za-z0-9]+)\s+"
+        rf"Urban\s+{pct}\s+{pct}\s+Urban\s+{pct}\s+{pct}\s+"
+        rf"Rural\s+{pct}\s+{pct}\s+Rural\s+{pct}\s+{pct}"
+        rf"(?:\s+Total\s+{pct}\s+{pct}\s+Total\s+{pct}\s+{pct})?",
         flags=re.IGNORECASE,
     )
-    if not total_match:
-        raise ValueError("could not parse FADA overall urban-rural totals")
-    total_values = [float(item) for item in total_match.groups()]
-    results.append(
-        {
-            "category": "TOTAL",
-            "urban_mom_pct": total_values[0],
-            "urban_yoy_pct": total_values[1],
-            "rural_mom_pct": total_values[2],
-            "rural_yoy_pct": total_values[3],
-        }
-    )
+
+    def normalize_category(name: str) -> str:
+        upper = name.strip().upper()
+        if upper == "TRAC":
+            return "TRACTOR"
+        if upper == "TOTAL":
+            return "TOTAL"
+        return upper
+
+    results: list[dict[str, float | str]] = []
+    seen: set[str] = set()
+    for match in pair_pattern.finditer(section):
+        cat_l = normalize_category(match.group(1))
+        cat_r = normalize_category(match.group(2))
+        # Skip pair candidates whose left/right token isn't actually a known
+        # category — guards against false matches inside surrounding text.
+        if cat_l not in {"2W", "3W", "PV", "CV", "TRACTOR", "CE", "TOTAL"}:
+            continue
+        if cat_r not in {"2W", "3W", "PV", "CV", "TRACTOR", "CE", "TOTAL"}:
+            continue
+        groups = match.groups()
+        l_urban_mom, l_urban_yoy = float(groups[2]), float(groups[3])
+        r_urban_mom, r_urban_yoy = float(groups[4]), float(groups[5])
+        l_rural_mom, l_rural_yoy = float(groups[6]), float(groups[7])
+        r_rural_mom, r_rural_yoy = float(groups[8]), float(groups[9])
+        if cat_l not in seen:
+            results.append({
+                "category": cat_l,
+                "urban_mom_pct": l_urban_mom, "urban_yoy_pct": l_urban_yoy,
+                "rural_mom_pct": l_rural_mom, "rural_yoy_pct": l_rural_yoy,
+            })
+            seen.add(cat_l)
+        if cat_r not in seen:
+            results.append({
+                "category": cat_r,
+                "urban_mom_pct": r_urban_mom, "urban_yoy_pct": r_urban_yoy,
+                "rural_mom_pct": r_rural_mom, "rural_yoy_pct": r_rural_yoy,
+            })
+            seen.add(cat_r)
+
+    if not results:
+        raise ValueError("could not parse any FADA urban-rural pair blocks")
+
+    # Post-CE layout has a separate overall Total block. If we already
+    # captured TOTAL via the pair pattern (pre-CE layout), this just no-ops.
+    # Some transitional PDFs (e.g. May 2025) omit the standalone overall
+    # Total row entirely — that's tolerable, the per-category rows still
+    # render on the chart and Total just won't have an entry that month.
+    if "TOTAL" not in seen:
+        total_match = re.search(
+            rf"Total\s+Urban\s+{pct}\s+{pct}\s+Rural\s+{pct}\s+{pct}\s+Total\s+{pct}\s+{pct}",
+            section,
+            flags=re.IGNORECASE,
+        )
+        if total_match:
+            total_values = [float(item) for item in total_match.groups()]
+            results.append({
+                "category": "TOTAL",
+                "urban_mom_pct": total_values[0],
+                "urban_yoy_pct": total_values[1],
+                "rural_mom_pct": total_values[2],
+                "rural_yoy_pct": total_values[3],
+            })
     return results
 
 
