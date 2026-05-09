@@ -560,17 +560,30 @@ def build_retail_module(
         for item in latest_point["categories"]
     ]
 
+    # Derive latest_month from the actual monthly_series tail rather than
+    # trusting fada["latest_month"], which can lag the data when bulk PDF
+    # ingestion adds new months without rewriting the snapshot header.
+    # Without this, the dashboard's "Latest:" pill and downstream
+    # retail_vs_wholesale alignment lock to a stale month while the chart
+    # already shows the newer print on the right edge.
+    actual_latest_month = months[-1]["month"] if months else fada["latest_month"]
+    actual_latest_release_date = (
+        months[-1].get("release_date")
+        if months and months[-1].get("release_date")
+        else fada["latest_release_date"]
+    )
+
     return {
         "available": True,
         "title": MODULE_TITLES["retail"],
         "source_meta": {
             "name": fada["source_name"],
-            "latest_month": fada["latest_month"],
-            "latest_release_date": fada["latest_release_date"],
+            "latest_month": actual_latest_month,
+            "latest_release_date": actual_latest_release_date,
             "url": fada["source_url"],
             "note": fada["coverage_note"],
         },
-        "latest_month": fada["latest_month"],
+        "latest_month": actual_latest_month,
         "months": months,
         "months_extended": _build_extended_monthly_retail(months),
         "category_cards": category_cards,
@@ -672,8 +685,18 @@ def build_wholesale_module(
         )
 
     latest_point = months[-1]
-    retail_lookup = retail["latest_snapshot"]["monthly_lookup"][retail["latest_month"]]["categories"]
-    retail_latest_lookup = {item["category"]: item for item in retail_lookup}
+    # Compare retail vs wholesale on the wholesale latest month. SIAM
+    # publishes ~10 days after FADA, so when retail has run a month ahead
+    # we still need to pair on the month wholesale actually has data for —
+    # otherwise we'd compare retail(month N) to wholesale(month N-1) and
+    # produce a fake gap.
+    comparison_month = latest_point["month"]
+    retail_monthly_lookup = retail["latest_snapshot"]["monthly_lookup"]
+    retail_month_record = (
+        retail_monthly_lookup.get(comparison_month)
+        or retail_monthly_lookup[retail["latest_month"]]
+    )
+    retail_latest_lookup = {item["category"]: item for item in retail_month_record["categories"]}
     retail_vs_wholesale = []
     for category in ["PV", "2W"]:
         retail_units = retail_latest_lookup[category]["units"]
@@ -950,10 +973,14 @@ def build_festive_pulse_module(retail: dict[str, Any]) -> dict[str, Any]:
         for r in rows:
             for c in r.get("categories", []) or []:
                 category_totals[c["category"]] = category_totals.get(c["category"], 0) + (c.get("units") or 0)
-        # Use the latest festive month present this year for headline YoY%.
-        latest_row = rows[-1]
-        peak_yoy = latest_row.get("total_yoy_pct")
-        peak_label = latest_row.get("label", latest_row["month"])
+        # Pick the actual peak festive month — the one with the highest
+        # total retail volume in the Sep–Nov window. Earlier this took the
+        # latest row, which silently understated the headline whenever
+        # Diwali fell in October and November came in lighter (e.g. 2025:
+        # Oct 4.0M @ +40.5% YoY vs Nov 3.3M @ +2.1% YoY).
+        peak_row = max(rows, key=lambda r: r.get("total_units") or 0)
+        peak_yoy = peak_row.get("total_yoy_pct")
+        peak_label = peak_row.get("label", peak_row["month"])
         year_summaries.append({
             "year": year,
             "month_count": len(rows),
