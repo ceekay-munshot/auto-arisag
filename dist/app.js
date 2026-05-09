@@ -2753,19 +2753,34 @@ function renderRetailTrendOnly() {
     return record.categories?.find((e) => e.category === category)?.units ?? null;
   };
 
+  // Older FADA PDFs only carried PV+2W, so 3W/CV/Tractor/CE were stamped
+  // as 0 units in the source records before they started reporting. On
+  // the multi-year trend that read as a flat zero floor that suddenly
+  // jumped — visually a fake spike. Convert that leading run of zeros to
+  // null so the line draws from the first month FADA actually reported
+  // the category.
+  const stripLeadingZeros = (values) => {
+    let firstReal = -1;
+    for (let i = 0; i < values.length; i += 1) {
+      const v = values[i];
+      if (v !== null && v !== undefined && v > 0) { firstReal = i; break; }
+    }
+    if (firstReal <= 0) return values;
+    return values.map((v, i) => (i < firstReal ? null : v));
+  };
   const trendSeries = chosenCategories
     .filter((category) => category === "TOTAL" || retail.category_cards.some((item) => item.category === category))
     .flatMap((category) => {
       const label = category === "TOTAL" ? "Total retail" : labelForCategory(category);
       const color = category === "TOTAL" ? dashboardData.chart_colors.TOTAL : dashboardData.chart_colors[category];
-      const currentValues = months.map((item) => valueForCategory(item, category));
+      const currentValues = stripLeadingZeros(months.map((item) => valueForCategory(item, category)));
       const out = [{ label, color, values: currentValues }];
       if (useExtended && extendedLookup) {
-        const priorValues = months.map((m) => {
+        const priorValues = stripLeadingZeros(months.map((m) => {
           const [y, mo] = m.month.split("-");
           const priorId = `${parseInt(y, 10) - 1}-${mo}`;
           return valueForCategory(extendedLookup.get(priorId), category);
-        });
+        }));
         if (priorValues.some((v) => v !== null && v !== undefined)) {
           out.push({
             label: `${label} · prior year`,

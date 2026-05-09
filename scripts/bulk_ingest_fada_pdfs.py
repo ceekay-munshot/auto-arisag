@@ -32,6 +32,7 @@ import re
 import shutil
 import sys
 import traceback
+from datetime import datetime
 from pathlib import Path
 
 # Allow running from repo root
@@ -483,10 +484,15 @@ def main() -> int:
 
         # Use filename-detected month rather than relying on parse_fada_pdf_header,
         # which only recognises the current FADA header format. We still try to
-        # extract a publication date from the PDF prose if possible — otherwise
-        # fall back to the 15th of the month as a placeholder.
+        # extract a publication date from the PDF prose if possible —
+        # otherwise fall back to the first day of the *following* month
+        # (FADA's typical release cadence) rather than the 15th of the data
+        # month, which mid-2026 was rendering an "April 2026 PDF, released
+        # 15-Apr-2026" tag that's physically impossible.
         detected_month = month_id
-        release_date = f"{detected_month}-15"
+        det_y, det_m = int(month_id[:4]), int(month_id[5:7])
+        next_y, next_m = (det_y + 1, 1) if det_m == 12 else (det_y, det_m + 1)
+        release_date = f"{next_y:04d}-{next_m:02d}-01"
 
         try:
             pages = extract_pdf_pages(pdf_bytes)
@@ -495,7 +501,10 @@ def main() -> int:
             continue
 
         # Try to refine release_date from page text — look for "1st [Month] [Year]"
-        # style date strings near the top of the doc.
+        # style date strings near the top of the doc. Reject any date older
+        # than the data month itself; previously the regex would happily
+        # capture YoY comparison references like "vs May'18" inside the
+        # body of a May 2019 release and stamp a 2018 release_date on it.
         try:
             head_text = " ".join(pages[:3]) if pages else ""
             month_to_num = {
@@ -503,17 +512,43 @@ def main() -> int:
                 'june': 6, 'july': 7, 'august': 8, 'september': 9, 'october': 10,
                 'november': 11, 'december': 12,
             }
-            date_match = re.search(
+            best_iso = None
+            best_distance = None
+            target_iso = release_date  # fallback (1st of next month) is the ideal target
+            for date_match in re.finditer(
                 r"(\d{1,2})(st|nd|rd|th)?\s+(january|february|march|april|may|june|july|august|september|october|november|december)\s*[,'']?\s*(\d{2,4})",
                 head_text,
                 flags=re.IGNORECASE,
-            )
-            if date_match:
-                day = int(date_match.group(1))
-                mname = date_match.group(3).lower()
-                yr_str = date_match.group(4)
-                yr = int(yr_str) if len(yr_str) == 4 else 2000 + int(yr_str)
-                release_date = f"{yr:04d}-{month_to_num[mname]:02d}-{day:02d}"
+            ):
+                try:
+                    day = int(date_match.group(1))
+                    if not (1 <= day <= 31):
+                        continue
+                    mname = date_match.group(3).lower()
+                    yr_str = date_match.group(4)
+                    yr = int(yr_str) if len(yr_str) == 4 else 2000 + int(yr_str)
+                    candidate = f"{yr:04d}-{month_to_num[mname]:02d}-{day:02d}"
+                except (ValueError, KeyError):
+                    continue
+                # A release date earlier than the data month is by
+                # definition not a release date — drop it.
+                if candidate < f"{detected_month}-01":
+                    continue
+                # Pick the candidate closest to the expected release window
+                # (1st of the following month) so we prefer the actual
+                # publication header over any forward-looking date in the
+                # body.
+                distance = abs(
+                    (
+                        datetime.strptime(candidate, "%Y-%m-%d")
+                        - datetime.strptime(target_iso, "%Y-%m-%d")
+                    ).days
+                )
+                if best_distance is None or distance < best_distance:
+                    best_iso = candidate
+                    best_distance = distance
+            if best_iso is not None:
+                release_date = best_iso
         except Exception:
             pass
 
@@ -659,6 +694,20 @@ def main() -> int:
 
         history["sources"][detected_month] = path.name
         succeeded += 1
+
+    # Refresh fada.latest_month and fada.latest_release_date to match the
+    # newest record in monthly_series. Without this the snapshot header
+    # would lag behind the ingested data — which then bleeds into the
+    # dashboard's "Latest:" pill and into retail_vs_wholesale alignment.
+    series_sorted = sorted(
+        fada.get("monthly_series") or [],
+        key=lambda rec: rec.get("month") or "",
+    )
+    if series_sorted:
+        tail = series_sorted[-1]
+        fada["latest_month"] = tail.get("month") or fada.get("latest_month")
+        if tail.get("release_date"):
+            fada["latest_release_date"] = tail["release_date"]
 
     # Persist everything
     snapshot["fada"] = fada
