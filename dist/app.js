@@ -33,6 +33,13 @@ const state = {
   // Time window for the multi-OEM share trend chart on the OEM Tracker tab.
   // "1y" / "2y" / "3y" / "5y" / "all" — same vocabulary as companyTrendWindow.
   oemShareTrendWindow: "all",
+  // Hidden OEMs in the share-trend chart, keyed by category. Default is
+  // empty per category (all OEMs visible) so the card matches its prior
+  // behavior. Populated by the dropdown filter to hide busy mid-band
+  // lines investors don't want to look at right now.
+  oemShareTrendHidden: { PV: [], "2W": [], "3W": [], CV: [], TRACTOR: [], CE: [] },
+  // Whether the share-trend OEM filter dropdown is open. UI-only.
+  oemShareTrendFilterOpen: false,
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
@@ -4689,7 +4696,7 @@ function renderOemShareTrendCard(active) {
     dashboardData.chart_colors.CE || "#b4663f",
   ];
   const othersColor = "#9aa0a6";
-  const series = data.series.map((entry, idx) => {
+  const allSeries = data.series.map((entry, idx) => {
     const isOthers = entry.oem === "Others";
     return {
       label: entry.oem,
@@ -4697,6 +4704,12 @@ function renderOemShareTrendCard(active) {
       values: (entry.share_pct || []).slice(startIdx),
     };
   });
+  // Per-category hidden-OEM filter so investors can mute the busy
+  // mid-band lines and focus on the names they actually trade. Defaults
+  // to empty per category so unfiltered behavior is preserved.
+  const hiddenList = (state.oemShareTrendHidden && state.oemShareTrendHidden[active.id]) || [];
+  const hiddenSet = new Set(hiddenList);
+  const series = allSeries.filter((s) => !hiddenSet.has(s.label));
   const segLabel = labelForCategory(active.id) || active.id;
   registerDownload(
     "oem-share-trends",
@@ -4718,6 +4731,34 @@ function renderOemShareTrendCard(active) {
   const monthsCount = labels.length;
   const fmtAxis = (v) => v == null ? "" : `${Number(v).toFixed(0)}%`;
   const fmtTip = (v) => v == null ? "" : `${Number(v).toFixed(2)}%`;
+  // OEM filter dropdown — mirrors the spotlight peer-compare pattern so
+  // the UX feels like the rest of the OEM tracker. Default is "all
+  // visible"; checkboxes toggle visibility per OEM. Selection is per
+  // category so muting Toyota in PV doesn't carry over when the user
+  // switches to 2W (where Toyota wouldn't appear anyway, but the
+  // principle is per-segment memory of preferences).
+  const filterOpen = !!state.oemShareTrendFilterOpen;
+  const visibleCount = allSeries.length - hiddenSet.size;
+  const filterLabel = hiddenSet.size === 0
+    ? `OEMs (${allSeries.length} shown)`
+    : `OEMs (${visibleCount}/${allSeries.length} shown)`;
+  const filterCheckboxRows = allSeries.map((s) => {
+    const hidden = hiddenSet.has(s.label);
+    const swatchColor = hidden ? "transparent" : s.color;
+    return `
+      <li>
+        <label class="spotlight-peer-row${!hidden ? " is-active" : ""}">
+          <input
+            type="checkbox"
+            data-oem-share-trend-toggle="${escapeHtml(s.label)}"
+            ${hidden ? "" : "checked"}
+          >
+          <span class="spotlight-peer-row-swatch" style="--peer-color:${swatchColor};" aria-hidden="true"></span>
+          <span class="spotlight-peer-row-label">${escapeHtml(s.label)}</span>
+        </label>
+      </li>
+    `;
+  }).join("");
   return `
     <div class="chart-card oem-share-trend-card">
       <div class="chart-title-row">
@@ -4729,17 +4770,40 @@ function renderOemShareTrendCard(active) {
           ${renderDownloadIcon("oem-share-trends")}
         </div>
       </div>
-      <div class="oem-share-trend-window-row">
-        ${windowChips.map((chip) => `
+      <div class="oem-share-trend-controls">
+        <div class="oem-share-trend-window-row">
+          ${windowChips.map((chip) => `
+            <button
+              class="urban-rural-chip${(state.oemShareTrendWindow || "all") === chip.key ? " is-active" : ""}"
+              data-oem-share-trend-window="${chip.key}"
+              type="button"
+            >${chip.label}</button>
+          `).join("")}
+        </div>
+        <div class="spotlight-peer-dropdown${filterOpen ? " is-open" : ""}" data-oem-share-trend-dropdown>
           <button
-            class="urban-rural-chip${(state.oemShareTrendWindow || "all") === chip.key ? " is-active" : ""}"
-            data-oem-share-trend-window="${chip.key}"
             type="button"
-          >${chip.label}</button>
-        `).join("")}
+            class="spotlight-peer-dropdown-trigger"
+            data-action="toggle-oem-share-trend-filter"
+            aria-haspopup="listbox"
+            aria-expanded="${filterOpen ? "true" : "false"}"
+          >
+            <span class="spotlight-peer-dropdown-label">${filterLabel}</span>
+            <span class="spotlight-peer-dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="spotlight-peer-dropdown-panel" role="listbox" aria-multiselectable="true" ${filterOpen ? "" : "hidden"}>
+            <div class="spotlight-peer-dropdown-head">
+              <strong>Toggle visibility</strong>
+              <button type="button" class="spotlight-peer-dropdown-clear" data-action="reset-oem-share-trend-filter" ${hiddenSet.size === 0 ? "disabled" : ""}>Show all</button>
+            </div>
+            <ul class="spotlight-peer-list">${filterCheckboxRows}</ul>
+          </div>
+        </div>
       </div>
       <div class="chart-frame">
-        ${lineChart(labels, series, fmtAxis, fmtTip, buildChartEvents(), "share %")}
+        ${series.length
+          ? lineChart(labels, series, fmtAxis, fmtTip, buildChartEvents(), "share %")
+          : `<div class="empty-chart-note">All OEMs are hidden — toggle at least one back on in the filter above.</div>`}
       </div>
       <p class="table-note" style="margin-top: 8px;">
         Top OEMs picked by trailing-12-month mean share, plus a single Others bucket aggregating the long tail. Reads as "who's stealing share from whom" — flat lines = stable competitive structure, divergent slopes = active share-shift in progress.
@@ -4755,6 +4819,35 @@ function setupOemShareTrendWindow() {
       if (!value || value === state.oemShareTrendWindow) return;
       state.oemShareTrendWindow = value;
       render();
+    });
+  });
+  document.querySelectorAll("[data-action='toggle-oem-share-trend-filter']").forEach((node) => {
+    node.addEventListener("click", (event) => {
+      event.stopPropagation();
+      state.oemShareTrendFilterOpen = !state.oemShareTrendFilterOpen;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-oem-share-trend-toggle]").forEach((node) => {
+    node.addEventListener("change", () => {
+      const oem = node.getAttribute("data-oem-share-trend-toggle");
+      const cat = state.oemSegment;
+      if (!oem || !cat) return;
+      if (!state.oemShareTrendHidden[cat]) state.oemShareTrendHidden[cat] = [];
+      const arr = state.oemShareTrendHidden[cat];
+      const idx = arr.indexOf(oem);
+      if (idx >= 0) arr.splice(idx, 1);
+      else arr.push(oem);
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='reset-oem-share-trend-filter']").forEach((node) => {
+    node.addEventListener("click", () => {
+      const cat = state.oemSegment;
+      if (cat && state.oemShareTrendHidden[cat]) {
+        state.oemShareTrendHidden[cat] = [];
+        render();
+      }
     });
   });
 }
@@ -8900,6 +8993,8 @@ const URL_STATE_DEFAULTS = {
   companyTrendIndexed: false,
   companyTrendWindow: "all",
   oemShareTrendWindow: "all",
+  oemShareTrendHidden: { PV: [], "2W": [], "3W": [], CV: [], TRACTOR: [], CE: [] },
+  oemShareTrendFilterOpen: false,
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
@@ -8987,10 +9082,15 @@ function main() {
       state.companyTrendCompareOpen = false;
       render();
     }
+    if (state.oemShareTrendFilterOpen && !event.target.closest("[data-oem-share-trend-dropdown]")) {
+      state.oemShareTrendFilterOpen = false;
+      render();
+    }
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && state.companyTrendCompareOpen) {
+    if (event.key === "Escape" && (state.companyTrendCompareOpen || state.oemShareTrendFilterOpen)) {
       state.companyTrendCompareOpen = false;
+      state.oemShareTrendFilterOpen = false;
       render();
     }
   });
