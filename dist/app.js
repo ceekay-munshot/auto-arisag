@@ -3888,15 +3888,31 @@ function renderStateRegistrationExplorer() {
 // inventory pressure: positive cumulative wedge = OEMs stuffing the channel,
 // negative = dealers running stock down faster than OEMs replenish.
 //
-// Categories returned are limited to those present in both data sources with
-// reasonable comparability — PV and 2W. (SIAM 3W excludes e-rickshaws, so the
-// 3W wedge would mis-state reality; CV monthly isn't in SIAM domestic_sales.)
+// Categories rendered:
+//   * PV / 2W: SIAM and FADA scopes match — direct subtraction.
+//   * 3W: SIAM excludes e-rickshaws, so we strip the e-rickshaw goods +
+//     passenger subsegments out of FADA retail before differencing.
+//     Coverage starts when FADA's 3W subsegment annexure first
+//     appears (Aug 2022) — earlier months can't be scope-adjusted
+//     honestly so we skip them.
+//   (CV monthly isn't published by SIAM at all; quarterly handled
+//   separately by computeCvQuarterlyWedge.)
 function computeChannelWedges() {
   const retail = dashboardData.modules.retail;
   const wholesale = dashboardData.modules.wholesale;
   if (!retail?.months?.length || !wholesale?.months?.length) return [];
   const wholesaleByMonth = new Map((wholesale.months || []).map((m) => [m.month, m]));
-  const cats = ["PV", "2W"];
+  // Build a per-month e-rickshaw total from the 3W subsegment series so
+  // we can subtract it from FADA retail before comparing to SIAM
+  // (which excludes e-rickshaws).
+  const erickshawByMonth = new Map();
+  const subRows = asArray(retail.subsegment_series?.["3W"]);
+  for (const row of subRows) {
+    const label = `${row.label || ""}`.toLowerCase();
+    if (!label.startsWith("e-rickshaw")) continue;
+    erickshawByMonth.set(row.month, (erickshawByMonth.get(row.month) || 0) + (row.units || 0));
+  }
+  const cats = ["PV", "2W", "3W"];
   return cats.map((cat) => {
     // Drop slice(-6); we have ~70 months of overlap (FADA from Dec 2018,
     // SIAM from Jun 2020) and the wedge story is most useful AS a
@@ -3904,9 +3920,13 @@ function computeChannelWedges() {
     // lineChart suppresses dot markers >=30 points so the line stays clean.
     const series = (retail.months || [])
       .filter((m) => wholesaleByMonth.has(m.month))
+      .filter((m) => cat !== "3W" || erickshawByMonth.has(m.month))
       .map((r) => {
         const w = wholesaleByMonth.get(r.month);
-        const retailUnits = (r.categories || []).find((c) => c.category === cat)?.units || 0;
+        let retailUnits = (r.categories || []).find((c) => c.category === cat)?.units || 0;
+        if (cat === "3W") {
+          retailUnits = Math.max(0, retailUnits - (erickshawByMonth.get(r.month) || 0));
+        }
         const wholesaleUnits = (w.domestic_sales || []).find((c) => c.category === cat)?.units || 0;
         return {
           month: r.month,
@@ -3929,14 +3949,85 @@ function computeChannelWedges() {
     // investors can read it on the same axis as the FADA "PV inventory
     // days" metric.
     const impliedDays = avgRetail > 0 ? (cumulative / avgRetail) * 30 : null;
+    const scopeNote = cat === "3W"
+      ? "Retail line strips e-rickshaw goods + passenger subsegments to match SIAM scope; coverage begins Aug 2022 when the FADA 3W subsegment annexure starts."
+      : null;
     return {
       category: cat,
       label: labelForCategory(cat),
       series,
       cumulative,
       impliedDays,
+      scopeNote,
     };
   }).filter((entry) => entry.series.length >= 3);
+}
+
+// CV channel wedge — SIAM doesn't publish monthly CV dispatch, only a
+// rolling-quarter snapshot in `wholesale.quarter_summary` plus a CY
+// summary in `wholesale.calendar_year_summary`. We fold both into a
+// single quarterly card: bars / value chart of FADA quarterly retail
+// (full multi-year history) + the lone SIAM wholesale point so the
+// channel-stuffing read is at least anchored on real data instead of
+// silently missing from the channel pulse tab.
+function computeCvQuarterlyWedge() {
+  const retail = dashboardData.modules.retail;
+  const wholesale = dashboardData.modules.wholesale;
+  if (!retail?.months?.length) return null;
+  // Aggregate FADA CV retail to quarters (Jan-Mar, Apr-Jun, …). India
+  // FY runs Apr–Mar, but SIAM publishes both fiscal and calendar
+  // quarters; calendar quarters are the simpler comparable since both
+  // surfaces (q3_2025_26 and cy_2025) use the calendar-quarter end
+  // months.
+  const buckets = new Map();
+  for (const month of retail.months) {
+    const cvUnits = (month.categories || []).find((c) => c.category === "CV")?.units || 0;
+    if (!cvUnits) continue;
+    const [yearStr, monStr] = `${month.month}`.split("-");
+    const year = parseInt(yearStr, 10);
+    const monIdx = parseInt(monStr, 10);
+    if (!Number.isFinite(year) || !Number.isFinite(monIdx)) continue;
+    const quarter = Math.floor((monIdx - 1) / 3) + 1; // 1..4
+    const key = `${year}-Q${quarter}`;
+    if (!buckets.has(key)) {
+      buckets.set(key, { key, year, quarter, retail: 0, monthCount: 0 });
+    }
+    const b = buckets.get(key);
+    b.retail += cvUnits;
+    b.monthCount += 1;
+  }
+  const series = [...buckets.values()]
+    // Drop in-progress quarters (incomplete months) so the bar chart
+    // doesn't mix a 1-month-into-Q2 print with full-quarter historicals.
+    .filter((b) => b.monthCount === 3)
+    .sort((a, b) => (a.year - b.year) || (a.quarter - b.quarter))
+    .map((b) => ({
+      key: b.key,
+      label: `Q${b.quarter} ${b.year}`,
+      retail: b.retail,
+    }));
+  const latest = series[series.length - 1] || null;
+  // SIAM's quarterly snapshot is the latest quarter they've published.
+  // Match it to the corresponding FADA quarter when the keys align;
+  // otherwise the wedge stat falls back to "n/a".
+  const wholesaleQuarter = wholesale?.quarter_summary || null;
+  const wholesaleCv = wholesaleQuarter?.domestic_sales?.CV?.units || null;
+  const wholesaleCy = wholesale?.calendar_year_summary?.domestic_sales?.CV?.units || null;
+  const wholesaleQuarterLabel = wholesaleQuarter?.label
+    || (latest ? latest.label : null);
+  const matchedRetail = latest?.retail ?? null;
+  const wedge = (wholesaleCv != null && matchedRetail != null)
+    ? wholesaleCv - matchedRetail
+    : null;
+  return {
+    series,
+    latest,
+    wholesaleCv,
+    wholesaleCy,
+    wholesaleQuarterLabel,
+    wedge,
+    sourceUrl: wholesaleQuarter?.source_url || wholesale?.source_meta?.url,
+  };
 }
 
 function renderChannelPulse() {
@@ -4087,12 +4178,85 @@ function renderChannelPulse() {
                 )}
               </div>
               <p class="wedge-reading">${wedgeReading(entry)}</p>
+              ${entry.scopeNote ? `<p class="legend-note" style="margin: 6px 0 0;">${entry.scopeNote}</p>` : ""}
             </div>
           `).join("")}
         </div>
         <p class="table-note" style="margin: 8px 0 0;">
-          Tracked for PV and 2W only — the SIAM 3W series excludes e-rickshaws (most of the actual 3W retail mix), and SIAM doesn't publish CV at monthly cadence. Tractor / CE wholesale data sit with TMA / ICEMA respectively, not yet on this dashboard.
+          Tracked at monthly cadence for PV / 2W / 3W. CV uses the quarterly card below — SIAM doesn't publish CV monthly. Tractor / CE wholesale data sit with TMA / ICEMA respectively, not yet on this dashboard.
         </p>
+      </div>
+    `);
+  }
+
+  // CV quarterly wedge — separate card because SIAM only publishes CV
+  // dispatch at quarterly + CY cadence. We show FADA quarterly retail as
+  // the time series and overlay the lone available SIAM wholesale point
+  // as a stat strip so the channel-fill read is at least anchored.
+  const cvWedge = computeCvQuarterlyWedge();
+  if (cvWedge && cvWedge.series.length >= 4) {
+    registerDownload(
+      "channel-wedge-cv-quarterly",
+      "channel_wedge_cv_quarterly.csv",
+      ["quarter", "fada_retail_units"],
+      cvWedge.series.map((p) => ({ quarter: p.label, fada_retail_units: p.retail })),
+    );
+    const wedgeUnits = cvWedge.wedge;
+    const wedgeTone2 = wedgeUnits == null ? null : (wedgeUnits > 0 ? "negative" : "positive");
+    const wedgeStat = wedgeUnits == null
+      ? "n/a"
+      : `${wedgeUnits >= 0 ? "+" : ""}${formatUnits(wedgeUnits)}`;
+    const wedgeReadingCv = wedgeUnits == null
+      ? "SIAM has not yet published a CV wholesale snapshot we can pair with this quarter."
+      : (wedgeUnits > 0
+          ? `OEMs dispatched <strong>${formatUnits(wedgeUnits)}</strong> CV units more than dealers retailed in ${cvWedge.wholesaleQuarterLabel} — channel-fill bias.`
+          : `Dealers retailed <strong>${formatUnits(Math.abs(wedgeUnits))}</strong> CV units more than OEMs dispatched in ${cvWedge.wholesaleQuarterLabel} — channel-drawdown bias.`);
+    const cyLabel = cvWedge.wholesaleCy != null ? "CY 2025" : null;
+    cards.push(`
+      <div class="chart-card channel-card">
+        <div class="chart-title-row">
+          <div>
+            <p class="small-label">Wholesale–retail wedge · CV (quarterly)</p>
+            <h3>CV channel-fill proxy at quarterly cadence</h3>
+          </div>
+          <div class="button-row">
+            ${renderDownloadIcon("channel-wedge-cv-quarterly")}
+          </div>
+        </div>
+        <p class="table-note" style="margin: 0 0 12px;">
+          SIAM publishes CV dispatch only at quarterly / calendar-year cadence — no monthly series exists. Bars below show FADA CV retail aggregated to calendar quarters across the full retail history; the stat strip pairs the single most recent SIAM wholesale quarter with the matching FADA quarter so investors can read the latest channel-fill bias.
+        </p>
+        <div class="stat-inline stat-inline-compact">
+          <div class="stat-block">
+            <span class="small-label">SIAM CV ${cvWedge.wholesaleQuarterLabel || "(latest qtr)"}</span>
+            <strong>${cvWedge.wholesaleCv != null ? formatUnits(cvWedge.wholesaleCv) : "n/a"}</strong>
+          </div>
+          <div class="stat-block">
+            <span class="small-label">FADA CV retail same quarter</span>
+            <strong>${cvWedge.latest ? formatUnits(cvWedge.latest.retail) : "n/a"}</strong>
+          </div>
+          <div class="stat-block">
+            <span class="small-label">Wedge (wholesale − retail)</span>
+            <strong class="${wedgeTone2 || ""}">${wedgeStat}</strong>
+          </div>
+          ${cyLabel ? `
+            <div class="stat-block">
+              <span class="small-label">SIAM CV ${cyLabel}</span>
+              <strong>${formatUnits(cvWedge.wholesaleCy)}</strong>
+            </div>
+          ` : ""}
+        </div>
+        <div class="chart-frame compact">
+          ${lineChart(
+            cvWedge.series.map((p) => p.label),
+            [{ label: "FADA CV retail (quarterly)", color: dashboardData.chart_colors?.CV || "#7a5fb0", values: cvWedge.series.map((p) => p.retail) }],
+            axisFormat,
+            formatUnits,
+            [],
+            "CV retail units",
+          )}
+        </div>
+        <p class="wedge-reading">${wedgeReadingCv}</p>
       </div>
     `);
   }
