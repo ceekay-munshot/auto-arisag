@@ -604,6 +604,10 @@ def build_retail_module(
         "inventory_trend": inventory_trend,
         "dealer_expectation_trend": expectation_trend,
         "latest_oem_tables": latest_oem_tables,
+        # Per-category multi-line history of OEM market share. Top-N OEMs by
+        # trailing-12m mean share, plus an aggregated "Others" line. Powers
+        # the OEM share trend card on the OEM Tracker tab.
+        "oem_share_trends": build_oem_share_trends(history_by_category),
         "latest_subsegments": fada["latest_subsegments"],
         "company_unit_trends": _build_company_unit_trends(),
         "latest_channel_pulse": {
@@ -3133,6 +3137,133 @@ def _build_oem_canonicalizer(canonical_names: list[str]):
         return cleaned
 
     return canonicalize
+
+
+def build_oem_share_trends(
+    history_by_category: dict[str, list[dict[str, Any]]],
+    *,
+    top_n: int = 7,
+    history_months: int = 60,
+) -> dict[str, dict[str, Any]]:
+    """For each FADA category, return a curated multi-line trend of OEM
+    market share over the last `history_months` months. Keeps the top N
+    OEMs by mean share over the trailing 12 months and folds the rest
+    into a single "Others" series so the chart stays legible — buy-side
+    wants to see who's gaining / losing share, not 30 sub-1% lines.
+    """
+    # Canonical fragments produced by historical FADA-PDF parser bleed
+    # ("HERO MOTOCORP LTD" tokenizing to just "Ltd" on a couple of months,
+    # "MAHINDRA & MAHINDRA LIMITED (TRACTOR DIVISION)" leaving "Division)"
+    # behind, etc.). They show up as ostensibly large rows because the
+    # bleed sometimes captures the whole category total. Drop them — the
+    # periodized OEM table already filters these out via different means
+    # but the share-trend builder needs its own guard.
+    NOISE_CANONICALS = {
+        "Ltd", "Pvt", "Inc", "Limited", "Division)", "Group)",
+        "Equipment)", "Tractor)", "Bus Division)",
+    }
+
+    out: dict[str, dict[str, Any]] = {}
+    for category, history in history_by_category.items():
+        if category not in {"PV", "2W", "3W", "CV", "TRACTOR", "CE"}:
+            continue
+        if not history:
+            continue
+        latest_rows = history[-1].get("rows") or []
+        canonicalize = _build_oem_canonicalizer(
+            [row.get("oem") for row in latest_rows if row.get("oem")]
+        )
+        latest_max = max(
+            (int(row.get("units") or 0) for row in latest_rows if row.get("units") is not None),
+            default=0,
+        )
+        # Same CY/FY-leak guard as the periodized OEM table builder.
+        max_monthly = latest_max * 3 if latest_max else None
+        per_month: dict[str, dict[str, int]] = {}
+        for item in history:
+            month = item.get("month")
+            if not month:
+                continue
+            bucket: dict[str, int] = {}
+            for row in item.get("rows") or []:
+                raw = row.get("oem")
+                units = row.get("units")
+                if not raw or units is None:
+                    continue
+                if _is_cumulative_oem_row(raw):
+                    continue
+                units_int = int(units)
+                if max_monthly and units_int > max_monthly:
+                    continue
+                canonical = canonicalize(raw)
+                if canonical in NOISE_CANONICALS or len(canonical) < 4:
+                    continue
+                bucket[canonical] = bucket.get(canonical, 0) + units_int
+            if bucket:
+                per_month[month] = bucket
+        months_sorted = sorted(per_month.keys())[-history_months:]
+        if len(months_sorted) < 6:
+            continue
+        trailing = months_sorted[-12:] if len(months_sorted) >= 12 else months_sorted
+        oem_share_running: dict[str, float] = {}
+        oem_share_count: dict[str, int] = {}
+        for month in trailing:
+            bucket = per_month.get(month) or {}
+            total = sum(bucket.values())
+            if not total:
+                continue
+            for oem, units in bucket.items():
+                oem_share_running[oem] = oem_share_running.get(oem, 0.0) + (units / total * 100)
+                oem_share_count[oem] = oem_share_count.get(oem, 0) + 1
+        oem_share_avg = {
+            oem: oem_share_running[oem] / max(oem_share_count[oem], 1)
+            for oem in oem_share_running
+        }
+        # FADA publishes an "Others" aggregated row in every annexure; we
+        # build our own tail-aggregated Others series below, so exclude
+        # the published one from top-N candidacy.
+        top_oems = sorted(
+            (oem for oem in oem_share_avg.keys() if oem.lower() != "others"),
+            key=lambda o: oem_share_avg[o],
+            reverse=True,
+        )[:top_n]
+        series: list[dict[str, Any]] = []
+        for oem in top_oems:
+            share_values: list[float | None] = []
+            unit_values: list[int | None] = []
+            for month in months_sorted:
+                bucket = per_month.get(month) or {}
+                total = sum(bucket.values())
+                units = bucket.get(oem)
+                if units is not None and total:
+                    share_values.append(round(units / total * 100, 2))
+                    unit_values.append(units)
+                else:
+                    share_values.append(None)
+                    unit_values.append(units)
+            series.append({"oem": oem, "share_pct": share_values, "units": unit_values})
+        # Aggregate the long tail under "Others" so the chart still sums to 100.
+        other_shares: list[float | None] = []
+        other_units: list[int | None] = []
+        for month in months_sorted:
+            bucket = per_month.get(month) or {}
+            total = sum(bucket.values())
+            top_units = sum((bucket.get(oem) or 0) for oem in top_oems)
+            other = total - top_units
+            if total:
+                other_shares.append(round(other / total * 100, 2))
+                other_units.append(other)
+            else:
+                other_shares.append(None)
+                other_units.append(None)
+        if any(v is not None and v > 0 for v in other_units):
+            series.append({"oem": "Others", "share_pct": other_shares, "units": other_units})
+        out[category] = {
+            "months": months_sorted,
+            "labels": [month_label(m) for m in months_sorted],
+            "series": series,
+        }
+    return out
 
 
 def build_periodized_oem_table_from_history(

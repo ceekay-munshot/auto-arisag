@@ -1343,7 +1343,8 @@ p {
 
 /* Urban-vs-rural historical chart card: chip-row category picker above
    the chart, latest-month strip below for the legacy "snapshot" reads. */
-.urban-rural-chip-row {
+.urban-rural-chip-row,
+.oem-share-trend-window-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
