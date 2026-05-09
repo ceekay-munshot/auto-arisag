@@ -30,6 +30,9 @@ const state = {
   // "5y" | "all". Lets the user clip the early-COVID volume spike out of
   // the view without losing the data underneath.
   companyTrendWindow: "all",
+  // Time window for the multi-OEM share trend chart on the OEM Tracker tab.
+  // "1y" / "2y" / "3y" / "5y" / "all" — same vocabulary as companyTrendWindow.
+  oemShareTrendWindow: "all",
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
@@ -4340,15 +4343,30 @@ function renderUrbanRuralCard(retail, latestRows) {
     };
   });
   const labels = filtered.map((p) => p.label);
+  // Third line is the rural − urban YoY spread in percentage points. Buy-side
+  // reads it as a single rural-distress / rural-recovery gauge: positive =
+  // rural outpacing urban (recovery / Bharat-led demand), negative = urban
+  // outpacing rural (rural distress). Keeps the spread visible without
+  // forcing the user to do mental subtraction across two lines.
+  const spreadValues = filtered.map((p) =>
+    (p.rural_yoy_pct == null || p.urban_yoy_pct == null)
+      ? null
+      : Number((p.rural_yoy_pct - p.urban_yoy_pct).toFixed(2))
+  );
   const chartSeries = [
     { label: "Urban YoY", color: dashboardData.chart_colors["2W"] || "#3a64a8", values: filtered.map((p) => p.urban_yoy_pct) },
     { label: "Rural YoY", color: dashboardData.chart_colors.TRACTOR || "#a48a3c", values: filtered.map((p) => p.rural_yoy_pct) },
+    { label: "Rural − Urban (pp)", color: "#7a5fb0", values: spreadValues },
   ];
   registerDownload(
     "urban-rural-history",
     `urban_rural_${activeCategory.toLowerCase()}_history.csv`,
-    ["month", "category", "urban_yoy_pct", "rural_yoy_pct", "urban_mom_pct", "rural_mom_pct"],
-    filtered.map((p) => ({ ...p, category: activeCategory })),
+    ["month", "category", "urban_yoy_pct", "rural_yoy_pct", "spread_yoy_pp", "urban_mom_pct", "rural_mom_pct"],
+    filtered.map((p, idx) => ({
+      ...p,
+      category: activeCategory,
+      spread_yoy_pp: spreadValues[idx],
+    })),
   );
   const labelMap = {
     PV: "Passenger Vehicles", "2W": "Two-Wheelers", "3W": "Three-Wheelers",
@@ -4379,6 +4397,7 @@ function renderUrbanRuralCard(retail, latestRows) {
         <span class="urban-rural-strip-meta">Latest month (${latest.label}):</span>
         <span class="urban-rural-strip-pair"><span class="small-label">Urban YoY</span><strong class="${(latest.urban_yoy_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.urban_yoy_pct == null ? "n.m." : formatSigned(latest.urban_yoy_pct)}</strong></span>
         <span class="urban-rural-strip-pair"><span class="small-label">Rural YoY</span><strong class="${(latest.rural_yoy_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.rural_yoy_pct == null ? "n.m." : formatSigned(latest.rural_yoy_pct)}</strong></span>
+        <span class="urban-rural-strip-pair"><span class="small-label">Spread (R−U)</span><strong class="${(spreadValues[spreadValues.length - 1] ?? 0) >= 0 ? "positive" : "negative"}">${spreadValues[spreadValues.length - 1] == null ? "n.m." : `${spreadValues[spreadValues.length - 1] >= 0 ? "+" : ""}${spreadValues[spreadValues.length - 1].toFixed(2)} pp`}</strong></span>
         <span class="urban-rural-strip-pair"><span class="small-label">Urban MoM</span><strong class="${(latest.urban_mom_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.urban_mom_pct == null ? "n.m." : formatSigned(latest.urban_mom_pct)}</strong></span>
         <span class="urban-rural-strip-pair"><span class="small-label">Rural MoM</span><strong class="${(latest.rural_mom_pct ?? 0) >= 0 ? "positive" : "negative"}">${latest.rural_mom_pct == null ? "n.m." : formatSigned(latest.rural_mom_pct)}</strong></span>
       </div>
@@ -4636,6 +4655,108 @@ function renderUnifiedEvTable(dataset) {
       ${renderTable(key, columns, dataset.rows, "oem-unified-table", { key: "units", dir: "desc" })}
     </div>
   `;
+}
+
+// Multi-line chart of top-N OEMs' market share over time, per category.
+// Sits between the periodized OEM table (who's where right now) and the
+// per-OEM spotlight (drill into one OEM). Reads the curated trend
+// payload built by build_oem_share_trends() in dashboard/analyze.py —
+// top 7 OEMs by trailing-12m mean share + an aggregated "Others" line
+// so the chart doesn't degrade into 25 sub-1% spaghetti.
+function renderOemShareTrendCard(active) {
+  if (!active || active.kind !== "fada") return "";
+  const trends = dashboardData.modules.retail?.oem_share_trends || {};
+  const data = trends[active.id];
+  if (!data || !data.series?.length) return "";
+  const WINDOW_MONTHS = { "1y": 12, "2y": 24, "3y": 36, "5y": 60 };
+  const windowKey = state.oemShareTrendWindow || "all";
+  const windowMonths = WINDOW_MONTHS[windowKey];
+  const fullMonths = data.months || [];
+  const fullLabels = data.labels || fullMonths;
+  const startIdx = windowMonths && fullMonths.length > windowMonths
+    ? fullMonths.length - windowMonths
+    : 0;
+  const labels = fullLabels.slice(startIdx);
+  // Curated palette — 8 colors that stay distinguishable on overlay.
+  // Last color reserved for the Others line so it reads as "the rest".
+  const palette = [
+    dashboardData.chart_colors.PV || "#3a64a8",
+    dashboardData.chart_colors["2W"] || "#cc4343",
+    dashboardData.chart_colors.CV || "#2f897d",
+    dashboardData.chart_colors.TRACTOR || "#a48a3c",
+    dashboardData.chart_colors["3W"] || "#7a5fb0",
+    dashboardData.chart_colors.EV || "#1f9aa3",
+    dashboardData.chart_colors.CE || "#b4663f",
+  ];
+  const othersColor = "#9aa0a6";
+  const series = data.series.map((entry, idx) => {
+    const isOthers = entry.oem === "Others";
+    return {
+      label: entry.oem,
+      color: isOthers ? othersColor : (palette[idx % palette.length]),
+      values: (entry.share_pct || []).slice(startIdx),
+    };
+  });
+  const segLabel = labelForCategory(active.id) || active.id;
+  registerDownload(
+    "oem-share-trends",
+    `oem_share_trends_${active.id.toLowerCase()}.csv`,
+    ["month", "oem", "share_pct"],
+    fullMonths.flatMap((month, mi) => data.series.map((s) => ({
+      month,
+      oem: s.oem,
+      share_pct: s.share_pct?.[mi] ?? null,
+    }))),
+  );
+  const windowChips = [
+    { key: "1y", label: "1Y" },
+    { key: "2y", label: "2Y" },
+    { key: "3y", label: "3Y" },
+    { key: "5y", label: "5Y" },
+    { key: "all", label: "All" },
+  ];
+  const monthsCount = labels.length;
+  const fmtAxis = (v) => v == null ? "" : `${Number(v).toFixed(0)}%`;
+  const fmtTip = (v) => v == null ? "" : `${Number(v).toFixed(2)}%`;
+  return `
+    <div class="chart-card oem-share-trend-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">OEM share trend · ${segLabel}</p>
+          <h3>Who's gaining and losing share — top ${data.series.filter((s) => s.oem !== "Others").length} OEMs + Others, last ${monthsCount} months</h3>
+        </div>
+        <div class="button-row">
+          ${renderDownloadIcon("oem-share-trends")}
+        </div>
+      </div>
+      <div class="oem-share-trend-window-row">
+        ${windowChips.map((chip) => `
+          <button
+            class="urban-rural-chip${(state.oemShareTrendWindow || "all") === chip.key ? " is-active" : ""}"
+            data-oem-share-trend-window="${chip.key}"
+            type="button"
+          >${chip.label}</button>
+        `).join("")}
+      </div>
+      <div class="chart-frame">
+        ${lineChart(labels, series, fmtAxis, fmtTip, buildChartEvents(), "share %")}
+      </div>
+      <p class="table-note" style="margin-top: 8px;">
+        Top OEMs picked by trailing-12-month mean share, plus a single Others bucket aggregating the long tail. Reads as "who's stealing share from whom" — flat lines = stable competitive structure, divergent slopes = active share-shift in progress.
+      </p>
+    </div>
+  `;
+}
+
+function setupOemShareTrendWindow() {
+  document.querySelectorAll("[data-oem-share-trend-window]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-oem-share-trend-window");
+      if (!value || value === state.oemShareTrendWindow) return;
+      state.oemShareTrendWindow = value;
+      render();
+    });
+  });
 }
 
 function renderUnifiedCompanySpotlight() {
@@ -4913,6 +5034,7 @@ function renderOemSection() {
       ${renderOemSegmentChips(segments, active.id)}
       <div class="oem-section-body">
         ${renderUnifiedOemTable(active)}
+        ${renderOemShareTrendCard(active)}
         ${renderUnifiedCompanySpotlight()}
       </div>
     </div>
@@ -4930,6 +5052,7 @@ function setupOemSection() {
       render();
     });
   });
+  setupOemShareTrendWindow();
 }
 
 // Names appearing in FADA / Vahan OEM tables that don't exactly match the
@@ -8776,6 +8899,7 @@ const URL_STATE_DEFAULTS = {
   companyTrendCompare: [],
   companyTrendIndexed: false,
   companyTrendWindow: "all",
+  oemShareTrendWindow: "all",
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
