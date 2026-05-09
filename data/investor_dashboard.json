@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T19:11:41.231896+00:00",
+  "generated_at": "2026-05-09T19:40:30.116689+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -18968,6 +18968,597 @@
           ]
         }
       },
+      "oem_channel_wedges": [
+        {
+          "oem": "Bajaj Auto",
+          "fada_aliases": [
+            "Bajaj Auto"
+          ],
+          "series": [
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "wholesale": 532216,
+              "retail": 13469,
+              "wedge": 518747
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "wholesale": 391303,
+              "retail": 14018,
+              "wedge": 377285
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "wholesale": 338473,
+              "retail": 14677,
+              "wedge": 323796
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "wholesale": 328413,
+              "retail": 213242,
+              "wedge": 115171
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "wholesale": 299418,
+              "retail": 188275,
+              "wedge": 111143
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "wholesale": 315732,
+              "retail": 204977,
+              "wedge": 110755
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "wholesale": 317937,
+              "retail": 215707,
+              "wedge": 102230
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "wholesale": 298484,
+              "retail": 192500,
+              "wedge": 105984
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "wholesale": 296247,
+              "retail": 38704,
+              "wedge": 257543
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "wholesale": 341887,
+              "retail": 35159,
+              "wedge": 306728
+            },
+            {
+              "month": "2025-12",
+              "label": "Dec 2025",
+              "wholesale": 310353,
+              "retail": 173220,
+              "wedge": 137133
+            }
+          ],
+          "cumulative_6m": 1020373,
+          "implied_days_6m": 213.5,
+          "first_month": "2021-09",
+          "last_month": "2025-12"
+        },
+        {
+          "oem": "TVS Motor",
+          "fada_aliases": [
+            "TVS Motor"
+          ],
+          "series": [
+            {
+              "month": "2021-05",
+              "label": "May 2021",
+              "wholesale": 154416,
+              "retail": 57782,
+              "wedge": 96634
+            },
+            {
+              "month": "2021-06",
+              "label": "Jun 2021",
+              "wholesale": 238092,
+              "retail": 120180,
+              "wedge": 117912
+            },
+            {
+              "month": "2021-07",
+              "label": "Jul 2021",
+              "wholesale": 262728,
+              "retail": 165951,
+              "wedge": 96777
+            },
+            {
+              "month": "2021-08",
+              "label": "Aug 2021",
+              "wholesale": 274313,
+              "retail": 149342,
+              "wedge": 124971
+            },
+            {
+              "month": "2021-09",
+              "label": "Sep 2021",
+              "wholesale": 332511,
+              "retail": 141301,
+              "wedge": 191210
+            },
+            {
+              "month": "2021-10",
+              "label": "Oct 2021",
+              "wholesale": 341513,
+              "retail": 155991,
+              "wedge": 185522
+            },
+            {
+              "month": "2021-11",
+              "label": "Nov 2021",
+              "wholesale": 257863,
+              "retail": 214124,
+              "wedge": 43739
+            },
+            {
+              "month": "2021-12",
+              "label": "Dec 2021",
+              "wholesale": 235392,
+              "retail": 174766,
+              "wedge": 60626
+            },
+            {
+              "month": "2022-01",
+              "label": "Jan 2022",
+              "wholesale": 254139,
+              "retail": 164966,
+              "wedge": 89173
+            },
+            {
+              "month": "2022-02",
+              "label": "Feb 2022",
+              "wholesale": 267625,
+              "retail": 155763,
+              "wedge": 111862
+            },
+            {
+              "month": "2022-03",
+              "label": "Mar 2022",
+              "wholesale": 292918,
+              "retail": 182543,
+              "wedge": 110375
+            },
+            {
+              "month": "2022-04",
+              "label": "Apr 2022",
+              "wholesale": 226193,
+              "retail": 181269,
+              "wedge": 44924
+            },
+            {
+              "month": "2022-05",
+              "label": "May 2022",
+              "wholesale": 154416,
+              "retail": 170839,
+              "wedge": -16423
+            },
+            {
+              "month": "2022-06",
+              "label": "Jun 2022",
+              "wholesale": 238092,
+              "retail": 167556,
+              "wedge": 70536
+            },
+            {
+              "month": "2022-07",
+              "label": "Jul 2022",
+              "wholesale": 262728,
+              "retail": 166134,
+              "wedge": 96594
+            },
+            {
+              "month": "2022-08",
+              "label": "Aug 2022",
+              "wholesale": 274313,
+              "retail": 182080,
+              "wedge": 92233
+            },
+            {
+              "month": "2022-09",
+              "label": "Sep 2022",
+              "wholesale": 332511,
+              "retail": 172025,
+              "wedge": 160486
+            },
+            {
+              "month": "2022-11",
+              "label": "Nov 2022",
+              "wholesale": 257863,
+              "retail": 271774,
+              "wedge": -13911
+            },
+            {
+              "month": "2022-12",
+              "label": "Dec 2022",
+              "wholesale": 227666,
+              "retail": 177173,
+              "wedge": 50493
+            },
+            {
+              "month": "2023-01",
+              "label": "Jan 2023",
+              "wholesale": 254139,
+              "retail": 209513,
+              "wedge": 44626
+            },
+            {
+              "month": "2023-02",
+              "label": "Feb 2023",
+              "wholesale": 267026,
+              "retail": 212660,
+              "wedge": 54366
+            },
+            {
+              "month": "2023-03",
+              "label": "Mar 2023",
+              "wholesale": 292918,
+              "retail": 239416,
+              "wedge": 53502
+            },
+            {
+              "month": "2023-04",
+              "label": "Apr 2023",
+              "wholesale": 280022,
+              "retail": 209394,
+              "wedge": 70628
+            },
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "wholesale": 287058,
+              "retail": 253508,
+              "wedge": 33550
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "wholesale": 293715,
+              "retail": 227909,
+              "wedge": 65806
+            },
+            {
+              "month": "2023-08",
+              "label": "Aug 2023",
+              "wholesale": 315539,
+              "retail": 226425,
+              "wedge": 89114
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "wholesale": 263642,
+              "retail": 366840,
+              "wedge": -103198
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "wholesale": 227666,
+              "retail": 234244,
+              "wedge": -6578
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "wholesale": 264710,
+              "retail": 256024,
+              "wedge": 8686
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "wholesale": 267026,
+              "retail": 249806,
+              "wedge": 17220
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "wholesale": 294786,
+              "retail": 281792,
+              "wedge": 12994
+            },
+            {
+              "month": "2024-05",
+              "label": "May 2024",
+              "wholesale": 319295,
+              "retail": 265009,
+              "wedge": 54286
+            },
+            {
+              "month": "2024-06",
+              "label": "Jun 2024",
+              "wholesale": 304401,
+              "retail": 237926,
+              "wedge": 66475
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "wholesale": 312307,
+              "retail": 253121,
+              "wedge": 59186
+            },
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "wholesale": 332110,
+              "retail": 238839,
+              "wedge": 93271
+            },
+            {
+              "month": "2024-09",
+              "label": "Sep 2024",
+              "wholesale": 386955,
+              "retail": 223266,
+              "wedge": 163689
+            },
+            {
+              "month": "2024-10",
+              "label": "Oct 2024",
+              "wholesale": 420610,
+              "retail": 354401,
+              "wedge": 66209
+            },
+            {
+              "month": "2024-11",
+              "label": "Nov 2024",
+              "wholesale": 352103,
+              "retail": 423127,
+              "wedge": -71024
+            },
+            {
+              "month": "2024-12",
+              "label": "Dec 2024",
+              "wholesale": 290064,
+              "retail": 214808,
+              "wedge": 75256
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "wholesale": 357810,
+              "retail": 255930,
+              "wedge": 101880
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "wholesale": 378841,
+              "retail": 275906,
+              "wedge": 102935
+            }
+          ],
+          "cumulative_6m": 438945,
+          "implied_days_6m": 45.2,
+          "first_month": "2021-05",
+          "last_month": "2025-08"
+        },
+        {
+          "oem": "Eicher Motors",
+          "fada_aliases": [
+            "Royal Enfield",
+            "VE Commercial Vehicles",
+            "Eicher Tractors"
+          ],
+          "series": [
+            {
+              "month": "2023-05",
+              "label": "May 2023",
+              "wholesale": 77461,
+              "retail": 80110,
+              "wedge": -2649
+            },
+            {
+              "month": "2023-06",
+              "label": "Jun 2023",
+              "wholesale": 77109,
+              "retail": 72195,
+              "wedge": 4914
+            },
+            {
+              "month": "2023-11",
+              "label": "Nov 2023",
+              "wholesale": 47942,
+              "retail": 91406,
+              "wedge": -43464
+            },
+            {
+              "month": "2023-12",
+              "label": "Dec 2023",
+              "wholesale": 63387,
+              "retail": 65597,
+              "wedge": -2210
+            },
+            {
+              "month": "2024-01",
+              "label": "Jan 2024",
+              "wholesale": 76187,
+              "retail": 77859,
+              "wedge": -1672
+            },
+            {
+              "month": "2024-02",
+              "label": "Feb 2024",
+              "wholesale": 75935,
+              "retail": 76053,
+              "wedge": -118
+            },
+            {
+              "month": "2024-03",
+              "label": "Mar 2024",
+              "wholesale": 75551,
+              "retail": 76420,
+              "wedge": -869
+            },
+            {
+              "month": "2024-04",
+              "label": "Apr 2024",
+              "wholesale": 81870,
+              "retail": 82798,
+              "wedge": -928
+            },
+            {
+              "month": "2024-07",
+              "label": "Jul 2024",
+              "wholesale": 73141,
+              "retail": 69352,
+              "wedge": 3789
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "wholesale": 86559,
+              "retail": 91319,
+              "wedge": -4760
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "wholesale": 89429,
+              "retail": 87653,
+              "wedge": 1776
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "wholesale": 89540,
+              "retail": 82239,
+              "wedge": 7301
+            },
+            {
+              "month": "2025-09",
+              "label": "Sep 2025",
+              "wholesale": 124328,
+              "retail": 87668,
+              "wedge": 36660
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "wholesale": 100670,
+              "retail": 129495,
+              "wedge": -28825
+            },
+            {
+              "month": "2025-12",
+              "label": "Dec 2025",
+              "wholesale": 103574,
+              "retail": 95703,
+              "wedge": 7871
+            }
+          ],
+          "cumulative_6m": 20023,
+          "implied_days_6m": 6.3,
+          "first_month": "2023-05",
+          "last_month": "2025-12"
+        },
+        {
+          "oem": "Atul Auto",
+          "fada_aliases": [
+            "Atul Auto"
+          ],
+          "series": [
+            {
+              "month": "2024-08",
+              "label": "Aug 2024",
+              "wholesale": 2733,
+              "retail": 2102,
+              "wedge": 631
+            },
+            {
+              "month": "2025-01",
+              "label": "Jan 2025",
+              "wholesale": 2378,
+              "retail": 2748,
+              "wedge": -370
+            },
+            {
+              "month": "2025-02",
+              "label": "Feb 2025",
+              "wholesale": 2360,
+              "retail": 2327,
+              "wedge": 33
+            },
+            {
+              "month": "2025-03",
+              "label": "Mar 2025",
+              "wholesale": 3391,
+              "retail": 2446,
+              "wedge": 945
+            },
+            {
+              "month": "2025-04",
+              "label": "Apr 2025",
+              "wholesale": 1427,
+              "retail": 2015,
+              "wedge": -588
+            },
+            {
+              "month": "2025-05",
+              "label": "May 2025",
+              "wholesale": 2357,
+              "retail": 2045,
+              "wedge": 312
+            },
+            {
+              "month": "2025-06",
+              "label": "Jun 2025",
+              "wholesale": 2511,
+              "retail": 2299,
+              "wedge": 212
+            },
+            {
+              "month": "2025-07",
+              "label": "Jul 2025",
+              "wholesale": 2500,
+              "retail": 2365,
+              "wedge": 135
+            },
+            {
+              "month": "2025-08",
+              "label": "Aug 2025",
+              "wholesale": 2601,
+              "retail": 2107,
+              "wedge": 494
+            },
+            {
+              "month": "2025-11",
+              "label": "Nov 2025",
+              "wholesale": 2802,
+              "retail": 3508,
+              "wedge": -706
+            }
+          ],
+          "cumulative_6m": -141,
+          "implied_days_6m": -1.8,
+          "first_month": "2024-08",
+          "last_month": "2025-11"
+        }
+      ],
       "latest_subsegments": {
         "3W": [
           {

@@ -4140,6 +4140,18 @@ function renderChannelPulse() {
     `);
   }
 
+  // Per-listed-OEM production-retail spread. Data shipped from
+  // dashboard/analyze.py:build_oem_channel_wedges() — only OEMs whose
+  // monthly press release captures full dispatch + whose name appears
+  // (under aliases) in FADA's annexure get a wedge series. Maruti /
+  // Hero / Tata are absent today (no scraper for their press releases
+  // yet); Mahindra has only 4 months and is filtered out by the
+  // builder's <6-month minimum.
+  const oemWedges = asArray(retail.oem_channel_wedges);
+  if (oemWedges.length) {
+    cards.push(renderOemChannelWedgeCard(oemWedges));
+  }
+
   if (urbanRuralRows.length) {
     cards.push(renderUrbanRuralCard(retail, urbanRuralRows));
   }
@@ -4164,6 +4176,89 @@ function renderChannelPulse() {
 // monthly history yet. With history: stacked-area-style multi-line chart of
 // each subsegment's monthly units, plus a latest-month strip. Without:
 // legacy snapshot list (units + YoY/MoM per subsegment).
+// Per-OEM production-retail spread card. Shows a small-card grid where
+// each available OEM gets a mini line chart of (wholesale dispatch −
+// FADA retail) over time + a trailing-6m cumulative units headline.
+//
+// Important caveat surfaced on the card: company press-release
+// dispatch numbers typically include exports (Bajaj / TVS / Royal
+// Enfield in particular ship significant export volume), while FADA
+// retail is domestic-only. So the wedge LEVEL overstates domestic
+// channel-fill for export-heavy OEMs — but the trend direction is
+// still informative ("widening spread" vs "narrowing spread") and the
+// shape over time tells a real story. We deliberately do NOT render
+// the implied-days metric for these because 200+ "days" is dominated
+// by export volume, not channel stress.
+function renderOemChannelWedgeCard(oemWedges) {
+  const wedgeColor = (cumulative) => cumulative > 0 ? "#cc4343" : "#2f897d";
+  const wedgeTone = (cumulative) => cumulative > 0 ? "negative" : "positive";
+  registerDownload(
+    "oem-channel-wedge",
+    "oem_channel_wedge_per_company.csv",
+    ["oem", "month", "label", "wholesale_units", "fada_retail_units", "wedge_units", "fada_aliases"],
+    oemWedges.flatMap((entry) => entry.series.map((point) => ({
+      oem: entry.oem,
+      month: point.month,
+      label: point.label,
+      wholesale_units: point.wholesale,
+      fada_retail_units: point.retail,
+      wedge_units: point.wedge,
+      fada_aliases: (entry.fada_aliases || []).join(" + "),
+    }))),
+  );
+  return `
+    <div class="chart-card channel-card">
+      <div class="chart-title-row">
+        <div>
+          <p class="small-label">Per-OEM production–retail spread</p>
+          <h3>Per-listed-OEM wedge: dispatch minus FADA retail · ${oemWedges.length} OEM${oemWedges.length === 1 ? "" : "s"} on disk</h3>
+        </div>
+        <div class="button-row">
+          ${renderDownloadIcon("oem-channel-wedge")}
+        </div>
+      </div>
+      <p class="table-note" style="margin: 0 0 12px;">
+        Per-listed-OEM version of the category wedge above. Each card pairs the OEM's monthly press-release dispatch with FADA's retail across every annexure they appear in. <strong>Caveat:</strong> most OEMs publish only total dispatch (domestic + export), so the absolute spread overstates domestic channel-fill for export-heavy names (Bajaj, TVS, Royal Enfield). The <em>direction</em> of the spread over time still reads as a real channel-stress / destock signal. Maruti / Hero / Tata absent until their press-release scrapers are wired up.
+      </p>
+      <div class="wedge-grid">
+        ${oemWedges.map((entry) => `
+          <div class="wedge-card">
+            <div class="wedge-card-head">
+              <strong>${escapeHtml(entry.oem)}</strong>
+              <span class="wedge-cumulative ${wedgeTone(entry.cumulative_6m)}">
+                6m cum: ${entry.cumulative_6m >= 0 ? "+" : ""}${formatUnits(entry.cumulative_6m)}
+              </span>
+            </div>
+            <div class="chart-frame compact">
+              ${lineChart(
+                entry.series.map((p) => p.label),
+                [{
+                  label: "Spread (units)",
+                  color: wedgeColor(entry.cumulative_6m),
+                  values: entry.series.map((p) => p.wedge),
+                }],
+                axisFormat,
+                formatUnits,
+                [],
+                "wholesale - retail (units)",
+              )}
+            </div>
+            <p class="legend-note" style="margin: 4px 0 0;">
+              ${entry.series.length} months · ${entry.first_month} → ${entry.last_month}
+              ${(entry.fada_aliases || []).length > 1
+                ? ` · joined on FADA names ${entry.fada_aliases.map((a) => `<code>${escapeHtml(a)}</code>`).join(", ")}`
+                : ""}
+            </p>
+          </div>
+        `).join("")}
+      </div>
+      <p class="table-note" style="margin: 8px 0 0;">
+        Sources: each OEM's monthly press release for dispatch (company_unit_history.json), FADA monthly retail annexure for registrations. Dispatch coverage is sparse — currently TVS Motor (deepest, ~41 months), Bajaj Auto, Eicher Motors, Atul Auto. Backfill of Maruti / Hero / Tata press releases is the unlock for full coverage.
+      </p>
+    </div>
+  `;
+}
+
 function renderSubsegmentCard(retail, category, latestRows, smallLabel, heading) {
   const series = asArray(retail.subsegment_series?.[category]);
   const months = [...new Set(series.map((row) => row.month))].sort();

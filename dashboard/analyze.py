@@ -608,6 +608,11 @@ def build_retail_module(
         # trailing-12m mean share, plus an aggregated "Others" line. Powers
         # the OEM share trend card on the OEM Tracker tab.
         "oem_share_trends": build_oem_share_trends(history_by_category),
+        # Per-listed-OEM wholesale-retail wedge series. Pairs each
+        # OEM's monthly dispatch (company_unit_history.json) with FADA
+        # retail aggregated across the FADA categories they sell into.
+        # Sparse today — only OEMs with both sides have wedges.
+        "oem_channel_wedges": build_oem_channel_wedges(),
         "latest_subsegments": fada["latest_subsegments"],
         "company_unit_trends": _build_company_unit_trends(),
         "latest_channel_pulse": {
@@ -3263,6 +3268,115 @@ def build_oem_share_trends(
             "labels": [month_label(m) for m in months_sorted],
             "series": series,
         }
+    return out
+
+
+# Per-listed-OEM channel-stress wedge: pairs each OEM's monthly
+# wholesale dispatch (from company_unit_history.json — typically scraped
+# from the company's own monthly press release) with the matching FADA
+# retail registrations across every FADA category they sell into. Some
+# listed OEMs map to multiple FADA OEM names (Eicher → Royal Enfield +
+# VE Commercial Vehicles + Eicher Tractors; M&M → Mahindra & Mahindra +
+# Mahindra Group + Mahindra Tractors + Swaraj), so the join needs an
+# explicit alias map. Names not in the map fall through as 1:1 (TVS
+# Motor → TVS Motor across 2W+3W).
+OEM_WEDGE_FADA_ALIASES: dict[str, list[str]] = {
+    "Eicher Motors": ["Royal Enfield", "VE Commercial Vehicles", "Eicher Tractors"],
+    "Mahindra & Mahindra": [
+        "Mahindra & Mahindra", "Mahindra Group", "Mahindra Tractors", "Swaraj",
+    ],
+}
+
+
+def build_oem_channel_wedges() -> list[dict[str, Any]]:
+    """For each listed OEM with usable wholesale dispatch on disk, build
+    a wholesale-vs-FADA-retail wedge series. Skips OEMs whose dispatch
+    history is too thin (<6 months) or whose FADA join lands on zero
+    retail (Eicher's pre-2023 absence from VE/Royal Enfield annexures
+    historically). Output is consumed by the per-OEM wedge card on the
+    Channel Pulse tab.
+    """
+    cuh_path = Path("data/company_unit_history.json")
+    if not cuh_path.exists():
+        return []
+    raw = json.loads(cuh_path.read_text(encoding="utf-8"))
+    companies = raw.get("companies") if isinstance(raw, dict) else None
+    if not companies:
+        return []
+    history_by_category = load_oem_history()
+    # Build a flat lookup: (fada_oem_name, month) → units, summing across
+    # every FADA category that name appears in. Most names show up in
+    # exactly one category but some span multiple (Bajaj Auto in 2W+3W,
+    # TVS Motor in 2W+3W, Mahindra & Mahindra in PV+3W).
+    retail_lookup: dict[tuple[str, str], int] = {}
+    for category, history in history_by_category.items():
+        if category not in {"PV", "2W", "3W", "CV", "TRACTOR", "CE"}:
+            continue
+        for record in history:
+            month = record.get("month")
+            if not month:
+                continue
+            for row in record.get("rows") or []:
+                oem = row.get("oem")
+                units = row.get("units")
+                if not oem or units is None:
+                    continue
+                if _is_cumulative_oem_row(oem):
+                    continue
+                key = (oem, month)
+                retail_lookup[key] = retail_lookup.get(key, 0) + int(units)
+    out: list[dict[str, Any]] = []
+    for oem, rows in companies.items():
+        if not isinstance(rows, list) or not rows:
+            continue
+        wholesale_by_month: dict[str, int] = {}
+        for row in rows:
+            month = row.get("month")
+            units = row.get("units")
+            if not month or units is None:
+                continue
+            wholesale_by_month[month] = int(units)
+        if len(wholesale_by_month) < 6:
+            continue
+        fada_aliases = OEM_WEDGE_FADA_ALIASES.get(oem, [oem])
+        # Months where BOTH a wholesale print AND at least one alias has
+        # FADA retail are eligible for the wedge. Anything else is
+        # silently skipped to avoid plotting half a wedge.
+        eligible_months: list[str] = []
+        for month in sorted(wholesale_by_month.keys()):
+            retail_units = sum(retail_lookup.get((alias, month), 0) for alias in fada_aliases)
+            if retail_units > 0:
+                eligible_months.append(month)
+        if len(eligible_months) < 6:
+            continue
+        series: list[dict[str, Any]] = []
+        for month in eligible_months:
+            wholesale = wholesale_by_month[month]
+            retail = sum(retail_lookup.get((alias, month), 0) for alias in fada_aliases)
+            series.append({
+                "month": month,
+                "label": month_label(month),
+                "wholesale": wholesale,
+                "retail": retail,
+                "wedge": wholesale - retail,
+            })
+        # Trailing-6m headline metrics, mirroring the category-wedge card.
+        trailing = series[-6:]
+        cumulative = sum(point["wedge"] for point in trailing)
+        avg_retail = sum(point["retail"] for point in trailing) / len(trailing) if trailing else 0
+        implied_days = (cumulative / avg_retail * 30) if avg_retail else None
+        out.append({
+            "oem": oem,
+            "fada_aliases": fada_aliases,
+            "series": series,
+            "cumulative_6m": cumulative,
+            "implied_days_6m": round(implied_days, 1) if implied_days is not None else None,
+            "first_month": series[0]["month"] if series else None,
+            "last_month": series[-1]["month"] if series else None,
+        })
+    # Order by absolute trailing-6m wedge so investors see the loudest
+    # signal first. Ties broken by alphabetical OEM name.
+    out.sort(key=lambda entry: (-abs(entry["cumulative_6m"] or 0), entry["oem"]))
     return out
 
 
