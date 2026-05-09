@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T16:54:53.111312+00:00",
+  "generated_at": "2026-05-09T06:29:37.757731+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -9436,7 +9436,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Two-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -10035,7 +10035,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Three-Wheelers OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -10634,7 +10634,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Commercial Vehicles OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -11155,7 +11155,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Construction Equipment OEM annexure across 12 months (2025-05 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Construction Equipment OEM annexure across 12 months (2025-05 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -11348,7 +11348,7 @@
             "Y": {
               "id": "Y",
               "label": "Yearly",
-              "period_label": "FY26 (11/12 mo · annualised)",
+              "period_label": "FY26 (11/12 mo \u00b7 annualised)",
               "columns": [
                 {
                   "key": "oem",
@@ -11938,7 +11938,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Passenger Vehicles OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -12609,7 +12609,7 @@
                   "listed_companies": []
                 }
               ],
-              "note": "Computed from FADA's monthly Tractors OEM annexure across 69 months (2020-08 → 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
+              "note": "Computed from FADA's monthly Tractors OEM annexure across 69 months (2020-08 \u2192 2026-04). Some columns may be n.m. for OEMs that didn't exist in the comparison month."
             },
             "Q": {
               "id": "Q",
@@ -37679,7 +37679,7 @@
               "label": "2020-21"
             }
           ],
-          "note": "Annual mix uses official FADA retail totals for FY21 → FY26. FY21/FY22 figures are the FY22/FY23-release revisions (later FADA releases revise prior-year totals as RTO coverage expands). FY26 CV row recombines Construction Equipment that FADA split out, preserving the historical CV definition."
+          "note": "Annual mix uses official FADA retail totals for FY21 \u2192 FY26. FY21/FY22 figures are the FY22/FY23-release revisions (later FADA releases revise prior-year totals as RTO coverage expands). FY26 CV row recombines Construction Equipment that FADA split out, preserving the historical CV definition."
         },
         {
           "id": "PV",
@@ -37927,7 +37927,7 @@
               "label": "2017-18"
             }
           ],
-          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY18 → FY25 (cars / utility vehicles / vans). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
+          "note": "Passenger-vehicle mix uses SIAM annual domestic sales for FY18 \u2192 FY25 (cars / utility vehicles / vans). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
         },
         {
           "id": "2W",
@@ -38175,7 +38175,7 @@
               "label": "2017-18"
             }
           ],
-          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY18 → FY25 (motorcycles / scooters / mopeds). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
+          "note": "Two-wheeler mix uses SIAM annual domestic sales for FY18 \u2192 FY25 (motorcycles / scooters / mopeds). FY18-FY22 sourced from the SIAM Annual Report 2021-22; FY23-FY25 from subsequent SIAM annual releases."
         },
         {
           "id": "3W",
@@ -38421,7 +38421,7 @@
               "label": "2021-22"
             }
           ],
-          "note": "Three-wheeler mix uses official FADA annual retail rows for FY22 → FY26 (e-rickshaw passenger/goods + 3W passenger/goods/personal). FY21 lacks an FADA-published 3W subsegment split."
+          "note": "Three-wheeler mix uses official FADA annual retail rows for FY22 \u2192 FY26 (e-rickshaw passenger/goods + 3W passenger/goods/personal). FY21 lacks an FADA-published 3W subsegment split."
         },
         {
           "id": "CV",
@@ -38661,7 +38661,7 @@
               "label": "2020-21"
             }
           ],
-          "note": "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and Others (incl. construction equipment) for FY21 → FY26. FADA split CE out as its own category in FY26; we re-combine into Others to keep the series continuous."
+          "note": "Commercial-vehicle mix uses official FADA annual retail rows for LCV, MCV, HCV and Others (incl. construction equipment) for FY21 \u2192 FY26. FADA split CE out as its own category in FY26; we re-combine into Others to keep the series continuous."
         }
       ]
     },
@@ -40878,7 +40878,7 @@
         "url": "https://www.acma.in/press-release.php",
         "note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
       },
-      "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 — steady demand despite a swing into trade deficit.",
+      "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 \u2014 steady demand despite a swing into trade deficit.",
       "metrics": [
         {
           "label": "Industry turnover",
@@ -40914,8 +40914,8 @@
       "insights": [
         "Industry growth slowed from 9.6% (FY25) to 6.8% (H1 FY26) on softer global demand and selective domestic moderation.",
         "OEM demand still leads, with passenger vehicles and LCVs the strongest contributors.",
-        "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves — supports the larger-vehicle-parc thesis.",
-        "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports — an early warning for ancillary cap-ex priorities.",
+        "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves \u2014 supports the larger-vehicle-parc thesis.",
+        "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports \u2014 an early warning for ancillary cap-ex priorities.",
         "EV components now contribute 4.6% of total OEM supplies as electrification accelerates."
       ],
       "listed_beneficiaries": [
@@ -41038,8 +41038,8 @@
         "title": "Key raw-material prices",
         "default_company": "Tata Motors",
         "source_meta": {
-          "name": "World Bank Commodity Markets — Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-08",
+          "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
+          "latest_release_date": "2026-05-09",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -110401,10 +110401,10 @@
       "available": true,
       "title": "Credit Pulse",
       "source_meta": {
-        "name": "RBI — Sectoral Deployment of Bank Credit",
+        "name": "RBI \u2014 Sectoral Deployment of Bank Credit",
         "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
         "note": "Each row is the outstanding amount as of the last reporting Friday of that calendar month, taken directly from RBI's Sectoral Deployment of Bank Credit release (Statement 1: Deployment of Gross Bank Credit by Major Sectors). YoY% values are RBI's printed year-on-year growth.",
-        "concept": "Outstanding scheduled commercial bank credit for Vehicle Loans (a sub-segment of Personal Loans) — a leading indicator of retail auto demand financing. Compared against total non-food bank credit so the spread shows whether auto credit is running hotter or cooler than the broader lending cycle.",
+        "concept": "Outstanding scheduled commercial bank credit for Vehicle Loans (a sub-segment of Personal Loans) \u2014 a leading indicator of retail auto demand financing. Compared against total non-food bank credit so the spread shows whether auto credit is running hotter or cooler than the broader lending cycle.",
         "is_seed": false,
         "latest_month": "2026-03"
       },
@@ -111047,8 +111047,8 @@
         {
           "id": "vahan-paid",
           "name": "Vahan / Parivahan Analytics API",
-          "tier": "Government · NIC",
-          "tagline": "The single biggest unlock — turns four currently-disabled dashboard tabs into live feeds.",
+          "tier": "Government \u00b7 NIC",
+          "tagline": "The single biggest unlock \u2014 turns four currently-disabled dashboard tabs into live feeds.",
           "status": "blocked",
           "status_label": "Blocked from cloud runners",
           "color": "red",
@@ -111056,15 +111056,15 @@
             "Vahan retail registrations (state-wise)",
             "State-wise Vahan registrations",
             "Vahan EV registrations (live, state + RTO)",
-            "EV OEM tracker — replaces the trade-press scrape with verified VIN-level monthly data"
+            "EV OEM tracker \u2014 replaces the trade-press scrape with verified VIN-level monthly data"
           ],
           "what_you_get": [
             "Daily / monthly registrations at state, RTO and PIN-code level",
-            "Vehicle class × fuel type matrix (PV / 2W / 3W / CV / Tractor / CE × Petrol / Diesel / EV / CNG / Hybrid)",
-            "OEM × model registrations with verified VIN-level audit trail",
+            "Vehicle class \u00d7 fuel type matrix (PV / 2W / 3W / CV / Tractor / CE \u00d7 Petrol / Diesel / EV / CNG / Hybrid)",
+            "OEM \u00d7 model registrations with verified VIN-level audit trail",
             "Same dataset MoRTH / SIAM / FADA all reconcile against"
           ],
-          "cost": "₹25,000 – ₹2,00,000 / year",
+          "cost": "\u20b925,000 \u2013 \u20b92,00,000 / year",
           "cost_note": "Tiered by call volume and granularity. Contact NIC Vahan Help Desk.",
           "cta_label": "Vahan analytics",
           "cta_url": "https://analytics.parivahan.gov.in/analytics/"
@@ -111072,28 +111072,28 @@
         {
           "id": "ev-trade-paid",
           "name": "Department of Commerce EV Trade Data",
-          "tier": "Government · DGFT",
+          "tier": "Government \u00b7 DGFT",
           "tagline": "Live HSN-code monthly EV import / export figures (separate from the EV OEM retail tracker, which now scrapes trade-press monthly leaderboards directly).",
           "status": "absent",
           "status_label": "Not yet integrated",
           "color": "blue",
           "currently_unlocks": [
-            "Monthly EV import / export volumes by HSN-8 + destination — adds a new export-trade panel to Wholesale lens"
+            "Monthly EV import / export volumes by HSN-8 + destination \u2014 adds a new export-trade panel to Wholesale lens"
           ],
           "what_you_get": [
             "Monthly export and import volumes + USD value at HSN-8 granularity",
             "Country-wise trade splits (top 20 destinations)",
             "Lithium-ion cell, motor, BMS and full-vehicle line items"
           ],
-          "cost": "₹35,000 – ₹1,50,000 / year",
+          "cost": "\u20b935,000 \u2013 \u20b91,50,000 / year",
           "cost_note": "DGFT ICEGATE bulk-data subscription, billed per HSN bucket.",
           "cta_label": "DGFT data subscription",
           "cta_url": "https://www.dgft.gov.in/CP/?opt=ft-data"
         },
         {
           "id": "jato",
-          "name": "JATO Dynamics — India",
-          "tier": "Industry · Subscription",
+          "name": "JATO Dynamics \u2014 India",
+          "tier": "Industry \u00b7 Subscription",
           "tagline": "Model-level pricing, specs and configuration data; the spine of any \"price index\" or \"feature index\" view.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -111104,19 +111104,19 @@
             "Feature-set comparison tooling (planned)"
           ],
           "what_you_get": [
-            "OEM × model × variant master with MSRP, ex-showroom, on-road",
+            "OEM \u00d7 model \u00d7 variant master with MSRP, ex-showroom, on-road",
             "Spec sheets (engine, dimensions, ADAS features, safety ratings)",
             "Daily incentive / discount tracking per dealer geography"
           ],
-          "cost": "$10,000 – $50,000 / year",
-          "cost_note": "Approx. ₹8–40 lakh. Tier depends on data depth.",
+          "cost": "$10,000 \u2013 $50,000 / year",
+          "cost_note": "Approx. \u20b98\u201340 lakh. Tier depends on data depth.",
           "cta_label": "JATO India",
           "cta_url": "https://www.jato.com/india/"
         },
         {
           "id": "polk",
           "name": "S&P Global Mobility (Polk)",
-          "tier": "Industry · Enterprise",
+          "tier": "Industry \u00b7 Enterprise",
           "tagline": "The institutional benchmark for verified registrations + forecasting.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -111131,15 +111131,15 @@
             "Monthly market-share at OEM, brand and model level",
             "Production forecasts (LMC Automotive merge) by plant and platform"
           ],
-          "cost": "$25,000 – $100,000 / year",
-          "cost_note": "Approx. ₹20–80 lakh. Enterprise-only.",
+          "cost": "$25,000 \u2013 $100,000 / year",
+          "cost_note": "Approx. \u20b920\u201380 lakh. Enterprise-only.",
           "cta_label": "S&P Mobility",
           "cta_url": "https://www.spglobal.com/mobility/en/products/automotive-data.html"
         },
         {
           "id": "crisil",
-          "name": "CRISIL & ICRA — Auto Sector Reports",
-          "tier": "Research · Credit Agencies",
+          "name": "CRISIL & ICRA \u2014 Auto Sector Reports",
+          "tier": "Research \u00b7 Credit Agencies",
           "tagline": "Quarterly outlook, OEM credit watch, and segment-level demand forecasts.",
           "status": "absent",
           "status_label": "Not yet integrated",
@@ -111154,8 +111154,8 @@
             "Credit ratings & outlook changes for listed OEMs / ancillaries",
             "Monthly view-points and short notes on sector themes (EV, premium, exports)"
           ],
-          "cost": "₹3,00,000 – ₹10,00,000 / year",
-          "cost_note": "Per-report ₹50K–2L; annual seats from ~₹3L.",
+          "cost": "\u20b93,00,000 \u2013 \u20b910,00,000 / year",
+          "cost_note": "Per-report \u20b950K\u20132L; annual seats from ~\u20b93L.",
           "cta_label": "CRISIL Research",
           "cta_url": "https://www.crisil.com/en/home/our-businesses/india-research.html"
         }
@@ -111164,7 +111164,7 @@
     "festive_pulse": {
       "available": true,
       "title": "Festive Pulse",
-      "window_label": "Sep – Nov (FADA festive window)",
+      "window_label": "Sep \u2013 Nov (FADA festive window)",
       "festival_calendar": {
         "2024": [
           {
@@ -113098,7 +113098,7 @@
           "yoy_pct": null
         }
       ],
-      "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories. Sep–Nov festive window total grew +17.9% versus the same period last year.",
+      "narrative": "Peak festive month Nov 2025 retail grew +2.1% YoY across all categories. Sep\u2013Nov festive window total grew +17.9% versus the same period last year.",
       "next_festival": {
         "name": "Dhanteras",
         "date": "2026-11-06",
@@ -113399,23 +113399,39 @@
             ]
           }
         ],
-        "note": "Top OEMs by Sep–Nov retail growth versus the same window one year prior. Sourced from FADA OEM annexures — auto-updates each cron run as new festive months land."
+        "note": "Top OEMs by Sep\u2013Nov retail growth versus the same window one year prior. Sourced from FADA OEM annexures \u2014 auto-updates each cron run as new festive months land."
       },
       "source_meta": {
-        "name": "FADA retail (Sep–Nov festive aggregation)",
+        "name": "FADA retail (Sep\u2013Nov festive aggregation)",
         "url": "file://169d329fc83770FADA releases FY 2026 and March 2026 Vehicle Retail Data.pdf"
       }
     },
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-08T16:54:31.088565+00:00",
+      "generated_at": "2026-05-09T06:29:14.182297+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 4,
       "items": [
         {
-          "title": "Tata Nexon New Variant Launched – Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices)",
-          "summary": "Tata Motors is celebrating 1 million Nexon milestone and has launched a new Pure+ PS variant of the Nexon at a starting price of Rs 9.59 lakh (Ex-sh, Delhi) The post Tata Nexon New Variant Launched – Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices) appeared first on RushLane .",
+          "title": "Hyundai Confirms 2 New SUV Launches This FY \u2013 Mid SUV and Compact EV SUV",
+          "summary": "By offering more options to buyers, Hyundai will be better positioned to cater to varying customer needs and budgets The post Hyundai Confirms 2 New SUV Launches This FY \u2013 Mid SUV and Compact EV SUV appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hyundai-confirms-2-new-suv-launches-this-fy-mid-suv-and-compact-ev-suv-12546102.html",
+          "source": "RushLane",
+          "published_at": "2026-05-09T01:36:15+00:00",
+          "published_display": "09 May 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/03/2027-hyundai-electric-suv-spied-new-small-3.jpeg"
+        },
+        {
+          "title": "Tata Nexon New Variant Launched \u2013 Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices)",
+          "summary": "Tata Motors is celebrating 1 million Nexon milestone and has launched a new Pure+ PS variant of the Nexon at a starting price of Rs 9.59 lakh (Ex-sh, Delhi) The post Tata Nexon New Variant Launched \u2013 Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices) appeared first on RushLane .",
           "url": "https://www.rushlane.com/tata-nexon-new-variant-launched-panoramic-sunroof-under-rs-10-lakh-12546088.html",
           "source": "RushLane",
           "published_at": "2026-05-08T14:45:07+00:00",
@@ -113442,8 +113458,8 @@
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-20836/130962394.cms"
         },
         {
-          "title": "TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) – 1200cc V4, 206 bhp",
-          "summary": "TVS-backed Norton Manx R litre-class supersport 200bhp superbike has been launched in UK for a starting price of GBP 20,250 (Rs 26 lakh) The post TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) – 1200cc V4, 206 bhp appeared first on RushLane .",
+          "title": "TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) \u2013 1200cc V4, 206 bhp",
+          "summary": "TVS-backed Norton Manx R litre-class supersport 200bhp superbike has been launched in UK for a starting price of GBP 20,250 (Rs 26 lakh) The post TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) \u2013 1200cc V4, 206 bhp appeared first on RushLane .",
           "url": "https://www.rushlane.com/tvs-norton-manx-r-launch-price-gbp-20k-rs-26-lakh-1200cc-v4-206-bhp-12546086.html",
           "source": "RushLane",
           "published_at": "2026-05-08T12:59:21+00:00",
@@ -113457,20 +113473,20 @@
       ],
       "companies": [
         {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 2,
+          "latest_published_at": "2026-05-09T01:36:15+00:00",
+          "latest_title": "Hyundai Confirms 2 New SUV Launches This FY \u2013 Mid SUV and Compact EV SUV"
+        },
+        {
           "company": "Tata Motors",
           "tone": "pv",
           "scope": "listed",
           "count": 1,
           "latest_published_at": "2026-05-08T14:45:07+00:00",
-          "latest_title": "Tata Nexon New Variant Launched – Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices)"
-        },
-        {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-05-08T14:19:49+00:00",
-          "latest_title": "Hyundai pins hopes on new SUV launches in FY27 to regain lost ground"
+          "latest_title": "Tata Nexon New Variant Launched \u2013 Panoramic Sunroof Under Rs 10 Lakh (All 79 Variants Prices)"
         },
         {
           "company": "TVS Motor",
@@ -113478,25 +113494,25 @@
           "scope": "listed",
           "count": 1,
           "latest_published_at": "2026-05-08T12:59:21+00:00",
-          "latest_title": "TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) – 1200cc V4, 206 bhp"
+          "latest_title": "TVS Norton Manx R Launch Price GBP 20k (Rs 26 lakh) \u2013 1200cc V4, 206 bhp"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-08"
+        "latest_release_date": "2026-05-09"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-08",
+    "as_of_date": "2026-05-09",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
         "id": "petrol_delhi",
         "label": "Petrol (Delhi)",
         "value": 95.41,
-        "unit": "₹/L",
+        "unit": "\u20b9/L",
         "delta_value": 0.0,
         "delta_label": "Unchanged in last week",
         "delta_tone": "neutral",
@@ -113508,7 +113524,7 @@
         "id": "diesel_delhi",
         "label": "Diesel (Delhi)",
         "value": 87.67,
-        "unit": "₹/L",
+        "unit": "\u20b9/L",
         "delta_value": 0.0,
         "delta_label": "Unchanged in last week",
         "delta_tone": "neutral",
@@ -113522,9 +113538,9 @@
         "value": 5.5,
         "unit": "%",
         "delta_value": -0.25,
-        "delta_label": "−25 bps in last MPC (Apr 2026)",
+        "delta_label": "\u221225 bps in last MPC (Apr 2026)",
         "delta_tone": "positive",
-        "context": "Direct driver of vehicle-loan EMI. A 25-bps cut typically translates to ₹150-200/month lower EMI on a ₹10-lakh PV loan within 2-3 cycles.",
+        "context": "Direct driver of vehicle-loan EMI. A 25-bps cut typically translates to \u20b9150-200/month lower EMI on a \u20b910-lakh PV loan within 2-3 cycles.",
         "source_name": "RBI MPC announcements",
         "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
         "history": [
@@ -113606,12 +113622,12 @@
         "id": "usd_inr",
         "label": "USD / INR",
         "value": 94.47,
-        "unit": "₹",
-        "delta_value": -0.138,
-        "delta_label": "-0.31% in last week (Yahoo Finance)",
+        "unit": "\u20b9",
+        "delta_value": 0.217,
+        "delta_label": "-0.46% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
-        "source_name": "Yahoo Finance — USDINR=X",
+        "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
         "daily_closes": [
           {
@@ -124019,6 +124035,10 @@
             "close": 94.608
           },
           {
+            "date": "2026-05-07",
+            "close": 94.253
+          },
+          {
             "date": "2026-05-08",
             "close": 94.47
           }
@@ -124028,7 +124048,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-08",
+    "as_of_date": "2026-05-09",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -185785,7 +185805,7 @@
         "change_1w_pct": 5.15,
         "change_1m_pct": -0.7,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
-        "note": "Tata Motors Commercial Vehicles — listed Nov 2025 as a separate entity post-demerger.",
+        "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
           415.7,
           431.85,
@@ -226029,17 +226049,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-08",
+    "as_of_date": "2026-05-09",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Hyundai Motor India",
-        "ticker": "HYUNDAI",
-        "date": "2026-05-08",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HYUNDAI"
-      },
       {
         "company": "Ashok Leyland",
         "ticker": "ASHOKLEY",
@@ -226122,14 +226134,6 @@
       }
     ],
     "upcoming_all": [
-      {
-        "company": "Hyundai Motor India",
-        "ticker": "HYUNDAI",
-        "date": "2026-05-08",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HYUNDAI"
-      },
       {
         "company": "Ashok Leyland",
         "ticker": "ASHOKLEY",
@@ -226221,6 +226225,14 @@
     ],
     "recent_past": [
       {
+        "company": "Hyundai Motor India",
+        "ticker": "HYUNDAI",
+        "date": "2026-05-08",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HYUNDAI"
+      },
+      {
         "company": "Escorts Kubota",
         "ticker": "ESCORTS",
         "date": "2026-05-07",
@@ -226259,40 +226271,32 @@
         "period_label": "Financial Results/Dividend/Other business matters",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=M&M"
-      },
-      {
-        "company": "TVS Motor",
-        "ticker": "TVSMOTOR",
-        "date": "2026-04-30",
-        "period_label": "Q4 FY26 results (already announced)",
-        "event_type": "earnings",
-        "source_url": "https://www.tvsmotor.com/investors/financial-results"
       }
     ],
-    "next_14_count": 11,
-    "upcoming_count": 12
+    "next_14_count": 10,
+    "upcoming_count": 11
   },
   "market_insights": [
     {
-      "icon": "📈",
+      "icon": "\ud83d\udcc8",
       "tone": "positive",
       "kicker": "Demand winner",
       "value": "TRACTOR +23.2%",
-      "narrative": "Tractors leads retail growth this month at +23.2% YoY — strongest category by some distance.",
+      "narrative": "Tractors leads retail growth this month at +23.2% YoY \u2014 strongest category by some distance.",
       "section_anchor": "section-retail",
       "tab_id": "retail-trend"
     },
     {
-      "icon": "📉",
+      "icon": "\ud83d\udcc9",
       "tone": "negative",
       "kicker": "Demand laggard",
       "value": "CE -2.2%",
-      "narrative": "Construction Equipment is the weakest spot at -2.2% YoY — flag if this persists for two more months.",
+      "narrative": "Construction Equipment is the weakest spot at -2.2% YoY \u2014 flag if this persists for two more months.",
       "section_anchor": "section-retail",
       "tab_id": "retail-trend"
     },
     {
-      "icon": "⚡",
+      "icon": "\u26a1",
       "tone": "positive",
       "kicker": "EV penetration",
       "value": "10.4%",
@@ -226301,7 +226305,7 @@
       "tab_id": "retail-ev"
     },
     {
-      "icon": "💰",
+      "icon": "\ud83d\udcb0",
       "tone": "positive",
       "kicker": "Auto-credit pulse",
       "value": "+2.7 pp",
@@ -226310,20 +226314,20 @@
       "tab_id": "credit-pulse"
     },
     {
-      "icon": "🏬",
+      "icon": "\ud83c\udfec",
       "tone": "positive",
       "kicker": "Dealer inventory",
       "value": "29 days",
-      "narrative": "FADA reports PV stock at dealers running 28-30 days — in healthy band. Healthy operating band is 21–30 days.",
+      "narrative": "FADA reports PV stock at dealers running 28-30 days \u2014 in healthy band. Healthy operating band is 21\u201330 days.",
       "section_anchor": "section-channel-pulse",
       "tab_id": "channel-pulse"
     },
     {
-      "icon": "🔁",
+      "icon": "\ud83d\udd01",
       "tone": "neutral",
       "kicker": "Channel balance (PV)",
       "value": "99.5%",
-      "narrative": "In sync. Wholesale tracking retail within 5% — channel stable.",
+      "narrative": "In sync. Wholesale tracking retail within 5% \u2014 channel stable.",
       "section_anchor": "section-wholesale",
       "tab_id": "wholesale"
     }
@@ -227381,7 +227385,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-08T16:18:16.627317+00:00",
+    "generated_at": "2026-05-09T05:52:07.819556+00:00",
     "window_days": 45,
     "group_count": 5,
     "item_count": 20,
@@ -227393,7 +227397,7 @@
           {
             "title": "Spain's EBRO aims to double production to up to 30,000 cars this year",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/spains-ebro-aims-to-double-production-to-up-to-30000-cars-this-year/130882054",
-            "summary": "The company also has a 60 per cent stake in a joint venture ​with Chinese carmaker Chery to manufacture vehicles at a former Nissan plant in Barcelona.",
+            "summary": "The company also has a 60 per cent stake in a joint venture \u200bwith Chinese carmaker Chery to manufacture vehicles at a former Nissan plant in Barcelona.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-07T06:54:06+00:00",
             "published_display": "07 May 2026",
@@ -227409,7 +227413,7 @@
           {
             "title": "Porsche axes board position as part of restructuring",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-axes-board-position-as-part-of-restructuring/130947872",
-            "summary": "Both Porsche ​and its majority-owner Volkswagen are under ​pressure to cut costs.",
+            "summary": "Both Porsche \u200band its majority-owner Volkswagen are under \u200bpressure to cut costs.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-08T04:19:24+00:00",
             "published_display": "08 May 2026",
@@ -227455,7 +227459,7 @@
           {
             "title": "Mercedes-Benz to recall about 144,000 US vehicles over display issues, says NHTSA",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-issues-major-recall-for-144000-vehicles-over-dashboard-display-glitches/130955721",
-            "summary": "The ​infotainment ​control unit, ⁠which is responsible for navigation and ​multimedia features, may reset ​while the vehicle is in motion and cause the instrument ‌panel display to go blank, the ​regulator said.",
+            "summary": "The \u200binfotainment \u200bcontrol unit, \u2060which is responsible for navigation and \u200bmultimedia features, may reset \u200bwhile the vehicle is in motion and cause the instrument \u200cpanel display to go blank, the \u200bregulator said.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-08T09:23:54+00:00",
             "published_display": "08 May 2026",
@@ -227474,6 +227478,21 @@
         "label": "Two-Wheelers",
         "items": [
           {
+            "title": "Honda Airblade Patented In India \u2013 Aerox 155, Xoom 160 Rivaling Maxi Scooter",
+            "url": "https://www.rushlane.com/honda-airblade-patented-in-india-aerox-155-xoom-160-rivaling-maxi-scooter-12546109.html",
+            "summary": "Honda Airblade has been patented in India, sparking launch speculations in the country to take on Aerox 155, Xoom 160 and Burgman Street The post Honda Airblade Patented In India \u2013 Aerox 155, Xoom 160 Rivaling Maxi Scooter appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-09T04:15:15+00:00",
+            "published_display": "09 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Steelbird Launches SB-120 Helmet Starting at Rs 3,999",
             "url": "https://www.autocarpro.in/NEWS/steelbird-launches-sb-120-helmet-starting-at-rs-3999-132388",
             "summary": "Steelbird Helmets has introduced the new SB-120 motorcycle helmet in the Indian market. The new model is priced at Rs 3,999 for the mono color variants and Rs 4,499 for models featuring decals.",
@@ -227488,21 +227507,6 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "New Harley Davidson Sprint 440 Cruiser Announced – Launch Soon",
-            "url": "https://www.rushlane.com/new-harley-davidson-sprint-440-cruiser-announced-launch-soon-12546018.html",
-            "summary": "Manufactured in India, Harley-Davidson entry level bikes have been registering decent sales every month The post New Harley Davidson Sprint 440 Cruiser Announced – Launch Soon appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-08T01:45:26+00:00",
-            "published_display": "08 May 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
           }
         ]
       },
@@ -227511,9 +227515,9 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "CV Retail Sales April 2026 –  Tata, Mahindra, Ashok Leyland, VE, Maruti, Daimler",
+            "title": "CV Retail Sales April 2026 \u2013  Tata, Mahindra, Ashok Leyland, VE, Maruti, Daimler",
             "url": "https://www.rushlane.com/cv-retail-sales-april-2026-tata-mahindra-ashok-leyland-ve-maruti-daimler-12545809.html",
-            "summary": "Tata Motors, Mahindra, and Ashok Leyland continued to hold top three positions in retail sales, commanding significant market share The post CV Retail Sales April 2026 – Tata, Mahindra, Ashok Leyland, VE, Maruti, Daimler appeared first on RushLane .",
+            "summary": "Tata Motors, Mahindra, and Ashok Leyland continued to hold top three positions in retail sales, commanding significant market share The post CV Retail Sales April 2026 \u2013 Tata, Mahindra, Ashok Leyland, VE, Maruti, Daimler appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-05-08T11:55:23+00:00",
             "published_display": "08 May 2026",
@@ -227543,7 +227547,7 @@
             ]
           },
           {
-            "title": "Remsons Industries’ UK subsidiary bags ₹160 crore order from global CV OEM",
+            "title": "Remsons Industries\u2019 UK subsidiary bags \u20b9160 crore order from global CV OEM",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/remsons-industries-uk-subsidiary-bags-160-crore-order-from-global-cv-oem/130953563",
             "summary": "The programme would be executed over 120 months and tooling, validation and capacity planning activities would occur across its India and UK operations in the coming quarters ahead of production ramp-up.",
             "source": "ET Auto Components",
@@ -227564,6 +227568,23 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "Electric Car Sales April 2026 \u2013 Tata, Mahindra, MG, Vinfast, Maruti, Hyundai, BYD, Kia, BMW, Mercedes, Tesla",
+            "url": "https://www.rushlane.com/electric-car-sales-april-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545882.html",
+            "summary": "Electric car sales in India were driven by new product launches and strong demand with Tata Motors dominating the segment The post Electric Car Sales April 2026 \u2013 Tata, Mahindra, MG, Vinfast, Maruti, Hyundai, BYD, Kia, BMW, Mercedes, Tesla appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-09T05:48:40+00:00",
+            "published_display": "09 May 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Electric PV sales jump 75% to 23,506 units in April; penetration rises to 5.8%: FADA",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/electric-pv-sales-up-75-14-at-23506-units-in-april-fada/130850816",
             "summary": "In the luxury segment, BMW India recorded 300 units, more than doubling from 144 units last year, while Mercedes-Benz reported 104 units, up 19.54 per cent.",
@@ -227581,9 +227602,25 @@
             ]
           },
           {
+            "title": "Hyundai Confirms 2 New SUV Launches This FY \u2013 Mid SUV and Compact EV SUV",
+            "url": "https://www.rushlane.com/hyundai-confirms-2-new-suv-launches-this-fy-mid-suv-and-compact-ev-suv-12546102.html",
+            "summary": "By offering more options to buyers, Hyundai will be better positioned to cater to varying customer needs and budgets The post Hyundai Confirms 2 New SUV Launches This FY \u2013 Mid SUV and Compact EV SUV appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-09T01:36:15+00:00",
+            "published_display": "09 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Renault suspends its production plans in Spain over union dispute",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-halts-spanish-production-plans-amidst-union-tensions/130951661",
-            "summary": "The ‌suspension ⁠affects three ⁠new electric and hybrid vehicles that were planned to be ​manufactured from 2028 in the city of Palencia under a new ​manufacturing platform, and maintaining the production of two other hybrid models in a plant in Valladolid.",
+            "summary": "The \u200csuspension \u2060affects three \u2060new electric and hybrid vehicles that were planned to be \u200bmanufactured from 2028 in the city of Palencia under a new \u200bmanufacturing platform, and maintaining the production of two other hybrid models in a plant in Valladolid.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-08T06:32:20+00:00",
             "published_display": "08 May 2026",
@@ -227598,7 +227635,7 @@
           {
             "title": "Tesla's China-made EV sales jump 36% in April, extending rebound",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-china-made-ev-sales-jump-36-in-april-extending-rebound/130895340",
-            "summary": "Deliveries of ​Model 3 and Model Y vehicles built at Tesla's Shanghai plant, including those exported ​to Europe and other markets, totaled 79,478 units, data from China Passenger Car Association showed on Thursday.",
+            "summary": "Deliveries of \u200bModel 3 and Model Y vehicles built at Tesla's Shanghai plant, including those exported \u200bto Europe and other markets, totaled 79,478 units, data from China Passenger Car Association showed on Thursday.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-05-07T12:15:11+00:00",
             "published_display": "07 May 2026",
@@ -227609,38 +227646,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "EV business to grow 1.5–2x faster as Sona Comstar targets 20%+ revenue growth: CFO",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/sona-comstar-projects-20-revenue-growth-driven-by-booming-ev-business/130823192",
-            "summary": "With EVs contributing 70% of its ₹23,700 crore order book, the company expects faster expansion led by domestic demand, traction motors and controller segments.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-05T08:30:57+00:00",
-            "published_display": "05 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "GoMechanic CEO: Our Strategy is Built Around Going the Extra Mile",
-            "url": "https://www.autocarpro.in/Interview/gomechanic-ceo-our-strategy-is-built-around-going-the-extra-mile-132453",
-            "summary": "In an email interaction with Shahkar Abidi, Co‑Founder and CEO Himanshu Arora, GoMechanic talks about how his company is well prepared to lead the competition. Over the past 3-5 years, how has the average age at higher technical demands in areas such as EV battery first visit for vehicles on your platform changed as diagnostics, high-voltage safety and ADAS calibration, OEMs push longer warranties and AMCs?",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-06T17:50:29+00:00",
-            "published_display": "06 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
             ]
           }
         ]
@@ -227666,7 +227671,7 @@
             ]
           },
           {
-            "title": "Tata Motors adds panoramic sunroof to Nexon line-up from ₹9.59 lakh",
+            "title": "Tata Motors adds panoramic sunroof to Nexon line-up from \u20b99.59 lakh",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-adds-panoramic-sunroof-to-nexon-line-up-from-9-59-lakh/130962613",
             "summary": "TMPV said the Nexon remains the only SUV in the country to offer petrol, diesel, CNG and electric powertrain options.",
             "source": "ET Auto Passenger Vehicles",
@@ -227683,7 +227688,7 @@
             ]
           },
           {
-            "title": "Ola Electric’s 4680 Bharat Cell-powered S1 X+ 5.2 kWh gets ICAT certification",
+            "title": "Ola Electric\u2019s 4680 Bharat Cell-powered S1 X+ 5.2 kWh gets ICAT certification",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-launches-longest-range-s1-x-scooter-powered-by-new-4680-bharat-cell-technology/130955940",
             "summary": "The elctric two-wheeler maker said the model leverages the high energy density and thermal capabilities of its 4680 Bharat Cell technology to enable long-distance commuting, particularly in non-metro markets.",
             "source": "ET Auto Components",
@@ -227699,9 +227704,9 @@
             ]
           },
           {
-            "title": "EV Charging Infrastructure is a Critical Component of India’s Energy Security: Kartikey Hariyani",
+            "title": "EV Charging Infrastructure is a Critical Component of India\u2019s Energy Security: Kartikey Hariyani",
             "url": "https://evreporter.com/ev-charging-infrastructure-is-a-critical-component-of-indias-energy-security-kartikey-hariyani",
-            "summary": "The post EV Charging Infrastructure is a Critical Component of India’s Energy Security: Kartikey Hariyani appeared first at EVreporter on EVreporter . Since 2019, ChargeZone has installed over 15,000 charging points at 1,200 locations.",
+            "summary": "The post EV Charging Infrastructure is a Critical Component of India\u2019s Energy Security: Kartikey Hariyani appeared first at EVreporter on EVreporter . Since 2019, ChargeZone has installed over 15,000 charging points at 1,200 locations.",
             "source": "EVReporter",
             "published_at": "2026-05-08T06:28:13+00:00",
             "published_display": "08 May 2026",
@@ -227715,9 +227720,9 @@
             ]
           },
           {
-            "title": "Bharat Forge Takes ₹450-Crore EV Hit, Begins Europe Steel Restructuring",
-            "url": "https://www.autocarpro.in/NEWS/bharat-forge-takes-₹450-crore-ev-hit-begins-europe-steel-restructuring-132478",
-            "summary": "Bharat Forge Ltd has taken a ₹450-crore impairment on its investment in KPTL’s e-mobility division, signalling a reassessment of its electric vehicle strategy at a time when global EV adoption has become more uneven than initially expected. “The Rs 450 Crores impairment during the quarter of our investments in KPTL (E-mobility division) is an acceptance of the need to take a fresh look at how we address the EV opp...",
+            "title": "Bharat Forge Takes \u20b9450-Crore EV Hit, Begins Europe Steel Restructuring",
+            "url": "https://www.autocarpro.in/NEWS/bharat-forge-takes-\u20b9450-crore-ev-hit-begins-europe-steel-restructuring-132478",
+            "summary": "Bharat Forge Ltd has taken a \u20b9450-crore impairment on its investment in KPTL\u2019s e-mobility division, signalling a reassessment of its electric vehicle strategy at a time when global EV adoption has become more uneven than initially expected. \u201cThe Rs 450 Crores impairment during the quarter of our investments in KPTL (E-mobility division) is an acceptance of the need to take a fresh look at how we address the EV opp...",
             "source": "Autocar Professional Components",
             "published_at": "2026-05-07T20:52:54+00:00",
             "published_display": "07 May 2026",
@@ -227752,9 +227757,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 42,
-      "filtered_low_signal": 2,
-      "kept_articles": 68
+      "unmapped_articles": 41,
+      "filtered_low_signal": 0,
+      "kept_articles": 70
     }
   },
   "qa": [
@@ -227780,7 +227785,7 @@
     },
     {
       "status": "ok",
-      "message": "Segment-share explorer rebuilt with FY21–FY26 FADA annual data (Total/3W/CV) and FY18–FY25 SIAM annual splits (PV/2W)."
+      "message": "Segment-share explorer rebuilt with FY21\u2013FY26 FADA annual data (Total/3W/CV) and FY18\u2013FY25 SIAM annual splits (PV/2W)."
     },
     {
       "status": "ok",
@@ -227804,7 +227809,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-08",
+    "as_of_date": "2026-05-09",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
@@ -227854,28 +227859,28 @@
         "id": "E4W",
         "label": "EV 4W",
         "source_name": "RushLane",
-        "source_url": "https://www.rushlane.com/electric-car-sales-cy-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545538.html",
+        "source_url": "https://www.rushlane.com/electric-car-sales-april-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545882.html",
         "growth_label": "YoY growth",
         "compare_label": "Same month, prior year",
         "rows": [
           {
             "oem": "Tata Motors",
-            "units": 8507,
+            "units": 8543,
             "prior_units": 4020
           },
           {
-            "oem": "Mahindra Electric",
-            "units": 3889,
+            "oem": "JSW MG Motor",
+            "units": 5006,
             "prior_units": null
           },
           {
             "oem": "MG Motor",
-            "units": 4978,
+            "units": 5006,
             "prior_units": null
           },
           {
             "oem": "Maruti Suzuki",
-            "units": 2026,
+            "units": 1231,
             "prior_units": 0
           },
           {
@@ -227890,16 +227895,26 @@
           },
           {
             "oem": "Kia",
-            "units": 1443,
+            "units": 3000,
+            "prior_units": null
+          },
+          {
+            "oem": "BMW",
+            "units": 3000,
             "prior_units": null
           },
           {
             "oem": "BYD",
-            "units": 1502,
+            "units": 3000,
             "prior_units": 278
+          },
+          {
+            "oem": "Mercedes-Benz",
+            "units": 104,
+            "prior_units": null
           }
         ],
-        "total_units": 28345,
+        "total_units": 34890,
         "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
         "latest_month": "Mar 2026"
       },
@@ -227912,7 +227927,7 @@
         "growth_label": "MoM growth",
         "source_name": "EVReporter",
         "source_url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-march-2026/",
-        "note": "Mar 2026 e-cargo 3W (L5) OEM mix from EVReporter — Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. Comparable column is Feb 2026 because OEM-level Mar 2025 L5-cargo splits aren't widely published.",
+        "note": "Mar 2026 e-cargo 3W (L5) OEM mix from EVReporter \u2014 Mahindra Last Mile Mobility leads with the highest EV share (56.7%) among legacy 3W players. Comparable column is Feb 2026 because OEM-level Mar 2025 L5-cargo splits aren't widely published.",
         "rows": [
           {
             "oem": "Mahindra Last Mile Mobility",

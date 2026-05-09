@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-05-08",
+  "as_of_date": "2026-05-09",
   "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
   "datasets": [
     {
@@ -50,28 +50,28 @@
       "id": "E4W",
       "label": "EV 4W",
       "source_name": "RushLane",
-      "source_url": "https://www.rushlane.com/electric-car-sales-cy-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545538.html",
+      "source_url": "https://www.rushlane.com/electric-car-sales-april-2026-tata-mahindra-mg-vinfast-maruti-hyundai-12545882.html",
       "growth_label": "YoY growth",
       "compare_label": "Same month, prior year",
       "rows": [
         {
           "oem": "Tata Motors",
-          "units": 8507,
+          "units": 8543,
           "prior_units": 4020
         },
         {
-          "oem": "Mahindra Electric",
-          "units": 3889,
+          "oem": "JSW MG Motor",
+          "units": 5006,
           "prior_units": null
         },
         {
           "oem": "MG Motor",
-          "units": 4978,
+          "units": 5006,
           "prior_units": null
         },
         {
           "oem": "Maruti Suzuki",
-          "units": 2026,
+          "units": 1231,
           "prior_units": 0
         },
         {
@@ -86,16 +86,26 @@
         },
         {
           "oem": "Kia",
-          "units": 1443,
+          "units": 3000,
+          "prior_units": null
+        },
+        {
+          "oem": "BMW",
+          "units": 3000,
           "prior_units": null
         },
         {
           "oem": "BYD",
-          "units": 1502,
+          "units": 3000,
           "prior_units": 278
+        },
+        {
+          "oem": "Mercedes-Benz",
+          "units": 104,
+          "prior_units": null
         }
       ],
-      "total_units": 28345,
+      "total_units": 34890,
       "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
       "latest_month": "Mar 2026"
     },
