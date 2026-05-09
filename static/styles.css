@@ -873,20 +873,19 @@ p {
    since five tiles need to breathe inside a compact card. */
 .category-growth-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 6px;
+  /* Each cell needs to fit the longest realistic value (-99.99% = 7
+     glyphs at the chosen font-size). minmax(54px, 1fr) keeps cells from
+     squeezing the value below its readable width — at narrower
+     viewports the grid gracefully wraps to fewer columns instead of
+     truncating numbers inside the cell. */
+  grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+  gap: 4px;
   margin-top: 12px;
-}
-
-@media (max-width: 920px) {
-  .category-growth-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 .category-growth-grid .stat-block {
   min-width: 0;
-  padding: 7px 8px;
+  padding: 6px 4px;
   text-align: center;
 }
 
@@ -896,7 +895,7 @@ p {
 }
 
 .category-growth-grid .stat-block strong {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   margin-top: 2px;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;

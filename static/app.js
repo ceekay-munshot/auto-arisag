@@ -50,6 +50,12 @@ const state = {
   // the chart's headline narrative), but the dropdown also offers each
   // other category and an "ALL" overlay.
   mixShiftCategory: "PV",
+  // Retail momentum chart selector. Default = TOTAL so the user lands on
+  // a single clean line. "ALL" overlays every category; specific codes
+  // (PV / 2W / …) drill in. Independent of the global `state.category`
+  // filter — this selector only affects the trend chart so the user
+  // doesn't have to flip the page-wide filter just to read one line.
+  retailTrendCategory: "TOTAL",
   sorts: {},
   activeTab: "overview",
   creditPulseExplainerOpen: false,
@@ -2003,6 +2009,7 @@ function render() {
   setupUrbanRuralCategoryPicker();
   setupSubsegmentSelect();
   setupMixShiftSelect();
+  setupRetailTrendSelect();
   setupPngExports();
   setupSorts();
   setupCompanyMapCards();
@@ -2733,14 +2740,26 @@ function renderRetailTrendOnly() {
   const weakest = visibleCategories.length
     ? visibleCategories.reduce((worst, item) => (item.yoy_pct < worst.yoy_pct ? item : worst), visibleCategories[0])
     : retail.latest_snapshot?.bottom_category_yoy;
-  // When the user is on the "Total" filter we render every category line
-  // so they can compare segments. The Total-retail line itself is dropped
-  // — it's just the sum of the other six and dominates the Y-axis scale,
-  // squashing 3W / CV / Tractor / CE at the bottom. Total stays available
-  // via the headline KPI cards above the chart.
-  const chosenCategories = state.category === "TOTAL"
-    ? retail.category_cards.filter((item) => allowed.includes(item.category)).map((item) => item.category)
-    : [state.category];
+  // Chart-local category selector — independent of the page-wide filter.
+  // Default = "TOTAL" (single sum line). "ALL" overlays every category
+  // for compare-segments use; a specific code drills into one line.
+  // Falls back to the global filter if the user pinned a category there.
+  const visibleTrendCategoryIds = retail.category_cards
+    .filter((item) => allowed.includes(item.category))
+    .map((item) => item.category);
+  const trendOptions = ["TOTAL", "ALL", ...visibleTrendCategoryIds];
+  const requestedTrend = state.retailTrendCategory || "TOTAL";
+  const trendSelection = trendOptions.includes(requestedTrend) ? requestedTrend : "TOTAL";
+  // Keep state in sync so the <select> reflects whatever we actually
+  // resolved to (matters when a category filter the user picked earlier
+  // is no longer in the allowed list).
+  state.retailTrendCategory = trendSelection;
+  // "ALL" overlays every visible category. The Total-retail line itself
+  // dominates the Y-axis (it's the sum), so we drop it from "ALL" and
+  // only render it when explicitly selected.
+  const chosenCategories = trendSelection === "ALL"
+    ? visibleTrendCategoryIds
+    : [trendSelection];
 
   // For prior-cycle overlay: build lookup keyed by month so we can find the
   // same month-of-year a year earlier for any current X position.
@@ -2838,6 +2857,16 @@ function renderRetailTrendOnly() {
               ${renderSourceAction(retail.source_meta.url)}
               ${renderDownloadIcon("retail-trend")}
             </div>
+          </div>
+          <div class="state-explorer-controls explorer-controls" style="margin-bottom:12px;">
+            <label class="filter-field compact">
+              <span class="small-label">Show</span>
+              <select data-retail-trend-select>
+                <option value="TOTAL"${trendSelection === "TOTAL" ? " selected" : ""}>Total retail</option>
+                <option value="ALL"${trendSelection === "ALL" ? " selected" : ""}>All categories (overlay)</option>
+                ${visibleTrendCategoryIds.map((cat) => `<option value="${escapeHtml(cat)}"${trendSelection === cat ? " selected" : ""}>${escapeHtml(labelForCategory(cat) || cat)}</option>`).join("")}
+              </select>
+            </label>
           </div>
           ${useExtended ? `
             <div class="compare-banner">
@@ -4351,6 +4380,15 @@ function setupMixShiftSelect() {
   document.querySelectorAll("[data-mix-shift-select]").forEach((node) => {
     node.addEventListener("change", (event) => {
       state.mixShiftCategory = event.target.value;
+      render();
+    });
+  });
+}
+
+function setupRetailTrendSelect() {
+  document.querySelectorAll("[data-retail-trend-select]").forEach((node) => {
+    node.addEventListener("change", (event) => {
+      state.retailTrendCategory = event.target.value;
       render();
     });
   });
@@ -8352,21 +8390,23 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
   }
   // X-tick selection. For monthly "MMM YYYY" series spanning >= 12 months,
   // pin ticks to *January* of each calendar year that exists in the data
-  // (rendered as just the year — "2023", "2024", …) plus the very last
-  // data point as "MMM YYYY". Older approach picked the first label of
-  // each year, which on a series starting Aug 2022 read as
+  // (rendered as the full "Jan YYYY" so the timeline reads consistently)
+  // plus the very last data point as "MMM YYYY". A previous variant
+  // collapsed January ticks to a bare "YYYY" — visually that read as a
+  // mixed scale ("Nov 2024 · 2025 · 2026 · Apr 2026") and confused
+  // readers about whether "2025" meant Jan 2025 or the whole year. Older
+  // approach picked the first label of each year, which on a series
+  // starting Aug 2022 read as
   // "Aug 2022 · Feb 2023 · Jan 2024 · Jan 2025 · Apr 2026" — irregular
-  // intervals = unreadable timeline. Bloomberg / FT convention is year
-  // boundaries; we follow that.
+  // intervals = unreadable timeline.
   // Important: a 12-month window often contains only 1 January, which
   // would yield only 2 ticks (Jan + last) and a giant unlabelled stretch
-  // before the January. We require at least 3 January-anchored ticks for
+  // before the January. We require at least 2 January-anchored ticks for
   // the year strategy; otherwise fall back to evenly-spaced "MMM YYYY".
   const MIN_LABEL_GAP_PX = 60;
   const indexToPx = (idx) => pad.left + (innerWidth / Math.max(labels.length - 1, 1)) * idx;
   const monthYearRe = /^([A-Za-z]{3,})\s+(\d{4})$/;
   const isMonthYearSeries = labels.length >= 12 && labels.every((label) => monthYearRe.test(`${label || ""}`));
-  const yearOnlyDisplay = new Map(); // index -> override display label
   let candidateIndices;
   if (isMonthYearSeries) {
     // Anchor year ticks STRICTLY on January positions. If January of a
@@ -8381,18 +8421,9 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
     });
     if (januaryIndices.length >= 2) {
       candidateIndices = [0];
-      // If the data starts in January, render the data-start as just the
-      // year. Otherwise the data-start renders as its native MMM YYYY so
-      // the user sees exactly when the series begins.
-      const firstLabelMatch = `${labels[0]}`.match(monthYearRe);
-      const firstIsJanuary = firstLabelMatch && firstLabelMatch[1].slice(0, 3).toLowerCase() === "jan";
-      if (firstIsJanuary) {
-        yearOnlyDisplay.set(0, firstLabelMatch[2]);
-      }
-      januaryIndices.forEach(({ idx, year }) => {
+      januaryIndices.forEach(({ idx }) => {
         if (idx === 0) return;  // already in candidates above
         candidateIndices.push(idx);
-        yearOnlyDisplay.set(idx, year);
       });
       if (candidateIndices[candidateIndices.length - 1] !== labels.length - 1) {
         candidateIndices.push(labels.length - 1);
@@ -8482,10 +8513,9 @@ function lineChart(labels, series, formatter, tooltipFormatter = formatter, even
       anchor = "end";
       dx = 2;
     }
-    const displayLabel = yearOnlyDisplay.has(index) ? yearOnlyDisplay.get(index) : label;
     return `<text x="${x + dx}" y="${height - 14}" text-anchor="${anchor}"
                   font-size="10.5" font-weight="500" fill="#8693a3"
-                  font-family="inherit" style="letter-spacing: 0.01em;">${displayLabel}</text>`;
+                  font-family="inherit" style="letter-spacing: 0.01em;">${label}</text>`;
   }).join("");
 
   // Auto-detect anomalous monthly prints using a simple z-score against the

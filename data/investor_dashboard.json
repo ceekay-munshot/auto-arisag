@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T16:35:55.358266+00:00",
+  "generated_at": "2026-05-09T18:10:05.746793+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -17,9 +17,9 @@
       {
         "id": "latest_ev_penetration",
         "label": "Derived EV Penetration",
-        "value": 10.38,
-        "display": "10.4%",
-        "change": "2.80 lakh EV retail units",
+        "value": 9.15,
+        "display": "9.2%",
+        "change": "2.39 lakh EV retail units",
         "detail": "EV units summed from FADA's 2W/3W/PV/CV fuel-mix shares (tractors and CE have negligible EV share); denominator is total retail.",
         "tone": "good"
       },
@@ -8122,6 +8122,38 @@
       ],
       "ev_penetration_series": [
         {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "overall_ev_units": 182156,
+          "overall_ev_pct": 9.97,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 8.093,
+              "ev_units": 104216
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 61.74,
+              "ev_units": 61040
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 5.12,
+              "ev_units": 15328
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 2.18,
+              "ev_units": 1572
+            }
+          ]
+        },
+        {
           "month": "2025-10",
           "label": "Oct 2025",
           "overall_ev_units": 234061,
@@ -8188,7 +8220,7 @@
         {
           "month": "2025-12",
           "label": "Dec 2025",
-          "overall_ev_units": 202729,
+          "overall_ev_units": 202691,
           "overall_ev_pct": 9.99,
           "by_category": [
             {
@@ -8206,8 +8238,8 @@
             {
               "category": "PV",
               "label": "Passenger Vehicles",
-              "ev_share_pct": 3.95,
-              "ev_units": 14997
+              "ev_share_pct": 3.94,
+              "ev_units": 14959
             },
             {
               "category": "CV",
@@ -8312,6 +8344,38 @@
               "ev_units": 2461
             }
           ]
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "overall_ev_units": 239002,
+          "overall_ev_pct": 9.15,
+          "by_category": [
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "ev_share_pct": 7.76,
+              "ev_units": 148702
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "ev_share_pct": 60.38,
+              "ev_units": 64551
+            },
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "ev_share_pct": 5.77,
+              "ev_units": 23504
+            },
+            {
+              "category": "CV",
+              "label": "Commercial Vehicles",
+              "ev_share_pct": 2.26,
+              "ev_units": 2245
+            }
+          ]
         }
       ],
       "fuel_mix_latest": [
@@ -8321,23 +8385,23 @@
           "fuels": [
             {
               "fuel": "EV",
-              "share_pct": 5.11
+              "share_pct": 5.77
             },
             {
               "fuel": "Hybrid",
-              "share_pct": 7.99
+              "share_pct": 8.27
             },
             {
               "fuel": "CNG / LPG",
-              "share_pct": 23.76
+              "share_pct": 22.62
             },
             {
               "fuel": "Petrol / Ethanol",
-              "share_pct": 44.81
+              "share_pct": 45.95
             },
             {
               "fuel": "Diesel",
-              "share_pct": 18.33
+              "share_pct": 17.39
             }
           ]
         },
@@ -8347,7 +8411,7 @@
           "fuels": [
             {
               "fuel": "EV",
-              "share_pct": 9.79
+              "share_pct": 7.76
             },
             {
               "fuel": "CNG / LPG",
@@ -8355,7 +8419,7 @@
             },
             {
               "fuel": "Petrol / Ethanol",
-              "share_pct": 90.13
+              "share_pct": 92.17
             }
           ]
         },
@@ -8365,19 +8429,19 @@
           "fuels": [
             {
               "fuel": "EV",
-              "share_pct": 57.89
+              "share_pct": 60.38
             },
             {
               "fuel": "CNG / LPG",
-              "share_pct": 27.19
+              "share_pct": 25.05
             },
             {
               "fuel": "Petrol / Ethanol",
-              "share_pct": 0.41
+              "share_pct": 0.42
             },
             {
               "fuel": "Diesel",
-              "share_pct": 14.51
+              "share_pct": 14.16
             }
           ]
         },
@@ -8387,23 +8451,23 @@
           "fuels": [
             {
               "fuel": "EV",
-              "share_pct": 2.4
+              "share_pct": 2.26
             },
             {
               "fuel": "Hybrid",
-              "share_pct": 0.03
+              "share_pct": 0.04
             },
             {
               "fuel": "CNG / LPG",
-              "share_pct": 11.2
+              "share_pct": 12.08
             },
             {
               "fuel": "Petrol / Ethanol",
-              "share_pct": 3.35
+              "share_pct": 3.28
             },
             {
               "fuel": "Diesel",
-              "share_pct": 83.01
+              "share_pct": 82.34
             }
           ]
         },
@@ -8412,8 +8476,12 @@
           "label": "Tractors",
           "fuels": [
             {
-              "fuel": "Petrol / Ethanol",
+              "fuel": "EV",
               "share_pct": 0.01
+            },
+            {
+              "fuel": "Petrol / Ethanol",
+              "share_pct": 0.0
             },
             {
               "fuel": "Diesel",
@@ -8431,7 +8499,7 @@
             },
             {
               "fuel": "CNG / LPG",
-              "share_pct": 0.0
+              "share_pct": 0.3
             },
             {
               "fuel": "Petrol / Ethanol",
@@ -32166,8 +32234,8 @@
         "total_units": 2611317,
         "total_yoy_pct": 12.94,
         "total_mom_pct": -3.01,
-        "ev_penetration_pct": 10.38,
-        "ev_units": 279505,
+        "ev_penetration_pct": 9.15,
+        "ev_units": 239002,
         "top_category_yoy": {
           "category": "TRACTOR",
           "label": "Tractors",
@@ -226299,8 +226367,8 @@
       "icon": "\u26a1",
       "tone": "positive",
       "kicker": "EV penetration",
-      "value": "10.4%",
-      "narrative": "EV share of retail at 10.4% in Mar 2026. Up 4.56 pp over the last 6 mo.",
+      "value": "9.2%",
+      "narrative": "EV share of retail at 9.2% in Apr 2026. Up 3.33 pp over the last 6 mo.",
       "section_anchor": "section-ev",
       "tab_id": "retail-ev"
     },
@@ -226358,7 +226426,7 @@
     },
     {
       "title": "EV transition",
-      "body": "Derived EV penetration in Apr 2026 was 10.38% of retail volume. The strongest EV mix remains in Three-Wheelers at 57.89%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
+      "body": "Derived EV penetration in Apr 2026 was 9.15% of retail volume. The strongest EV mix remains in Three-Wheelers at 60.38%, while PV EV share stayed below 4%, which keeps battery, drivetrain and power-electronics suppliers more leveraged than OEM headline units alone.",
       "tags": [
         "ev"
       ]
