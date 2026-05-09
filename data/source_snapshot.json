@@ -4280,6 +4280,26 @@
     },
     "ev_share_series": [
       {
+        "month": "2025-09",
+        "category": "2W",
+        "ev_share_pct": 8.093
+      },
+      {
+        "month": "2025-09",
+        "category": "3W",
+        "ev_share_pct": 61.74
+      },
+      {
+        "month": "2025-09",
+        "category": "CV",
+        "ev_share_pct": 2.18
+      },
+      {
+        "month": "2025-09",
+        "category": "PV",
+        "ev_share_pct": 5.12
+      },
+      {
         "month": "2025-10",
         "category": "2W",
         "ev_share_pct": 4.56
@@ -4337,7 +4357,7 @@
       {
         "month": "2025-12",
         "category": "PV",
-        "ev_share_pct": 3.95
+        "ev_share_pct": 3.94
       },
       {
         "month": "2026-01",
@@ -4398,43 +4418,64 @@
         "month": "2026-03",
         "category": "PV",
         "ev_share_pct": 5.11
+      },
+      {
+        "month": "2026-04",
+        "category": "2W",
+        "ev_share_pct": 7.76
+      },
+      {
+        "month": "2026-04",
+        "category": "3W",
+        "ev_share_pct": 60.38
+      },
+      {
+        "month": "2026-04",
+        "category": "CV",
+        "ev_share_pct": 2.26
+      },
+      {
+        "month": "2026-04",
+        "category": "PV",
+        "ev_share_pct": 5.77
       }
     ],
     "latest_fuel_mix": {
       "2W": {
-        "Petrol / Ethanol": 90.13,
-        "EV": 9.79,
+        "Petrol / Ethanol": 92.17,
+        "EV": 7.76,
         "CNG / LPG": 0.07
       },
       "3W": {
-        "EV": 57.89,
-        "CNG / LPG": 27.19,
-        "Diesel": 14.51,
-        "Petrol / Ethanol": 0.41
+        "EV": 60.38,
+        "CNG / LPG": 25.05,
+        "Diesel": 14.16,
+        "Petrol / Ethanol": 0.42
       },
       "CV": {
-        "Diesel": 83.01,
-        "CNG / LPG": 11.2,
-        "Petrol / Ethanol": 3.35,
-        "EV": 2.4,
-        "Hybrid": 0.03
+        "Diesel": 82.34,
+        "CNG / LPG": 12.08,
+        "Petrol / Ethanol": 3.28,
+        "EV": 2.26,
+        "Hybrid": 0.04
       },
       "CE": {
         "Diesel": 100.0,
-        "CNG / LPG": 0.0,
+        "CNG / LPG": 0.3,
         "Petrol / Ethanol": 0.0,
         "EV": 0.0
       },
       "PV": {
-        "Petrol / Ethanol": 44.81,
-        "Diesel": 18.33,
-        "CNG / LPG": 23.76,
-        "Hybrid": 7.99,
-        "EV": 5.11
+        "Petrol / Ethanol": 45.95,
+        "Diesel": 17.39,
+        "CNG / LPG": 22.62,
+        "Hybrid": 8.27,
+        "EV": 5.77
       },
       "TRACTOR": {
         "Diesel": 99.99,
-        "Petrol / Ethanol": 0.01
+        "Petrol / Ethanol": 0.0,
+        "EV": 0.01
       }
     },
     "latest_oem_tables": {
