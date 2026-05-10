@@ -2005,6 +2005,7 @@ function render() {
   setupNewsPicker();
   setupCompanyTrendPicker();
   setupCompanySpotlightCompare();
+  setupStockVsRetailDivergence();
   setupRefreshAction();
   setupStateRegistrationExplorer();
   setupSegmentShareExplorer();
@@ -6505,24 +6506,78 @@ function renderStockVsRetailDivergence() {
   if (!stocks?.available) return "";
   const stockMap = stocks.stocks || {};
 
-  // Build one YoY-per-company lookup. For multi-category OEMs (M&M plays
-  // in PV / CV / Tractor / 3W) pick the largest category by current_units
-  // so we anchor on the OEM's biggest exposure.
+  // Active window + Y-axis mode chosen by the user. Defaults reproduce
+  // the original card's lens (1M stock vs YoY retail) so first-load
+  // behavior is unchanged for visitors who don't touch the controls.
+  const WINDOW_DEFS = [
+    { key: "1m",  label: "1M",  unitField: "mom_pct",        shareField: "share_change_pp",      stockTradingDays: 21,  stockNativeField: "change_1m_pct", shareTrendBack: 1 },
+    { key: "3m",  label: "3M",  unitField: "growth_3m_pct",  shareField: "share_velocity_3m_pp", stockTradingDays: 63,  stockNativeField: null,             shareTrendBack: 3 },
+    { key: "6m",  label: "6M",  unitField: "growth_6m_pct",  shareField: null,                   stockTradingDays: 126, stockNativeField: null,             shareTrendBack: 6 },
+    { key: "1y",  label: "1Y",  unitField: "cagr_12m_pct",   shareField: null,                   stockTradingDays: 252, stockNativeField: null,             shareTrendBack: 12 },
+  ];
+  const activeWindowKey = state.divergenceWindow || "1m";
+  const win = WINDOW_DEFS.find((w) => w.key === activeWindowKey) || WINDOW_DEFS[0];
+  const yMode = state.divergenceYMode || "units"; // "units" or "share"
   const tables = dashboardData.modules.retail?.latest_oem_tables || {};
-  const oemBestYoy = {};
+  const shareTrends = dashboardData.modules.retail?.oem_share_trends || {};
+
+  // Build per-OEM windowed retail metrics. For each OEM we pick the
+  // category with the largest current_units (its biggest exposure) so
+  // M&M anchors on PV, Bajaj/TVS on 2W, etc. — same heuristic the card
+  // already used. unitWindow / shareWindow may be null when the chosen
+  // window doesn't have a precomputed value (6M / 12M share velocity
+  // is derived from oem_share_trends instead).
+  const findShareDelta = (oem, anchorCat, monthsBack) => {
+    const series = shareTrends[anchorCat]?.series || [];
+    const months = shareTrends[anchorCat]?.months || [];
+    if (!months.length) return null;
+    const oemSeries = series.find((s) => s.oem === oem);
+    if (!oemSeries) return null;
+    const shares = oemSeries.share_pct || [];
+    const lastIdx = shares.length - 1;
+    const priorIdx = lastIdx - monthsBack;
+    if (priorIdx < 0) return null;
+    const latest = shares[lastIdx];
+    const prior = shares[priorIdx];
+    if (latest == null || prior == null) return null;
+    return Number((latest - prior).toFixed(2));
+  };
+  const oemRetail = {};
   for (const [cat, table] of Object.entries(tables)) {
     const rows = (table.periods?.M?.rows) || table.rows || [];
     for (const row of rows) {
       const oem = row.oem;
-      const yoy = row.yoy_pct ?? row.unit_growth_pct;
       const units = Number(row.current_units || row.units || 0);
-      if (!oem || yoy == null || Number.isNaN(Number(yoy))) continue;
-      const existing = oemBestYoy[oem];
-      if (!existing || units > existing.units) {
-        oemBestYoy[oem] = { yoy: Number(yoy), cat, units };
-      }
+      if (!oem) continue;
+      const existing = oemRetail[oem];
+      if (existing && units <= existing.units) continue;
+      const unitVal = win.unitField ? row[win.unitField] : null;
+      let shareVal = win.shareField ? row[win.shareField] : null;
+      if (shareVal == null) shareVal = findShareDelta(oem, cat, win.shareTrendBack);
+      oemRetail[oem] = {
+        cat,
+        units,
+        unitWindow: unitVal != null && !Number.isNaN(Number(unitVal)) ? Number(unitVal) : null,
+        shareWindow: shareVal != null && !Number.isNaN(Number(shareVal)) ? Number(shareVal) : null,
+      };
     }
   }
+
+  // Stock window change. 1M uses the precomputed Yahoo number; 3M / 6M
+  // / 1Y are computed from daily_closes (~10y of NSE closes per
+  // ticker). The lookup walks back a fixed number of trading days
+  // (~21/63/126/252) which is the standard market-week approximation.
+  const stockWindowChange = (stock) => {
+    if (win.stockNativeField && stock[win.stockNativeField] != null) {
+      return Number(stock[win.stockNativeField]);
+    }
+    const closes = stock.daily_closes || [];
+    if (closes.length <= win.stockTradingDays) return null;
+    const latest = closes[closes.length - 1]?.close;
+    const prior = closes[closes.length - 1 - win.stockTradingDays]?.close;
+    if (!latest || !prior) return null;
+    return Number((((latest - prior) / prior) * 100).toFixed(2));
+  };
 
   // Reverse the OEM_TO_COMPANY_ALIASES map so we can look up
   // "Mahindra Group" → "Mahindra & Mahindra" etc. when joining stock
@@ -6534,23 +6589,25 @@ function renderStockVsRetailDivergence() {
   }
 
   const points = Object.entries(stockMap).flatMap(([company, stock]) => {
-    if (stock?.change_1m_pct == null) return [];
-    // Direct match first; fall back to alias lookups.
-    let match = oemBestYoy[company];
+    const stockPct = stockWindowChange(stock);
+    if (stockPct == null) return [];
+    let match = oemRetail[company];
     if (!match) {
       for (const alias of aliasReverse[company] || []) {
-        if (oemBestYoy[alias]) {
-          match = oemBestYoy[alias];
+        if (oemRetail[alias]) {
+          match = oemRetail[alias];
           break;
         }
       }
     }
     if (!match) return [];
+    const retailVal = yMode === "share" ? match.shareWindow : match.unitWindow;
+    if (retailVal == null) return [];
     return [{
       company,
       ticker: stock.ticker,
-      stock_1m_pct: Number(stock.change_1m_pct),
-      retail_yoy_pct: match.yoy,
+      stock_pct: stockPct,
+      retail_val: retailVal,
       anchor_cat: match.cat,
     }];
   });
@@ -6564,10 +6621,13 @@ function renderStockVsRetailDivergence() {
   const pad = { top: 18, right: 30, bottom: 50, left: 60 };
   const innerW = W - pad.left - pad.right;
   const innerH = H - pad.top - pad.bottom;
-  const xs = points.map((p) => p.stock_1m_pct);
-  const ys = points.map((p) => p.retail_yoy_pct);
+  const xs = points.map((p) => p.stock_pct);
+  const ys = points.map((p) => p.retail_val);
   const xAbs = Math.max(5, ...xs.map((v) => Math.abs(v)));
-  const yAbs = Math.max(10, ...ys.map((v) => Math.abs(v)));
+  // Y-axis scale floor varies with mode: unit growth swings ±20%+,
+  // share velocity is in pp and rarely exceeds ±5pp over a year.
+  const yFloor = yMode === "share" ? 1.5 : 10;
+  const yAbs = Math.max(yFloor, ...ys.map((v) => Math.abs(v)));
   const xMin = -xAbs * 1.15;
   const xMax = xAbs * 1.15;
   const yMin = -yAbs * 1.15;
@@ -6593,8 +6653,9 @@ function renderStockVsRetailDivergence() {
     ...xTicks.map((t) => `<line x1="${xToPx(t)}" x2="${xToPx(t)}" y1="${pad.top}" y2="${pad.top + innerH}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
     ...yTicks.map((t) => `<line x1="${pad.left}" x2="${pad.left + innerW}" y1="${yToPx(t)}" y2="${yToPx(t)}" stroke="${t === 0 ? 'rgba(20,39,62,0.3)' : 'rgba(20,39,62,0.07)'}" stroke-width="${t === 0 ? 1.2 : 1}" />`),
   ].join("");
+  const yUnit = yMode === "share" ? "pp" : "%";
   const xLabels = xTicks.map((t) => `<text x="${xToPx(t)}" y="${H - 28}" text-anchor="middle" font-size="10.5" font-weight="500" fill="#8693a3" style="letter-spacing:0.01em;">${t.toFixed(1)}%</text>`).join("");
-  const yLabels = yTicks.map((t) => `<text x="${pad.left - 8}" y="${yToPx(t) + 3}" text-anchor="end" font-size="10.5" font-weight="500" fill="#8693a3" style="letter-spacing:0.01em;">${t.toFixed(0)}%</text>`).join("");
+  const yLabels = yTicks.map((t) => `<text x="${pad.left - 8}" y="${yToPx(t) + 3}" text-anchor="end" font-size="10.5" font-weight="500" fill="#8693a3" style="letter-spacing:0.01em;">${yMode === "share" ? t.toFixed(1) : t.toFixed(0)}${yUnit}</text>`).join("");
 
   // Quadrant captions sit in the four corners — uppercase + tracking so
   // they read as labels rather than competing with the data dots.
@@ -6608,18 +6669,21 @@ function renderStockVsRetailDivergence() {
 
   // Each point: a circle + the company short name to its right. Hover
   // tooltip carries full numbers for both axes.
+  const yLabelText = yMode === "share" ? `share velocity (${win.label}, pp)` : `retail growth (${win.label})`;
   const dots = points.map((p) => {
-    const x = xToPx(p.stock_1m_pct);
-    const y = yToPx(p.retail_yoy_pct);
-    const upRight = p.retail_yoy_pct > 0 && p.stock_1m_pct > 0;
-    const upLeft = p.retail_yoy_pct > 0 && p.stock_1m_pct < 0;
-    const downRight = p.retail_yoy_pct < 0 && p.stock_1m_pct > 0;
+    const x = xToPx(p.stock_pct);
+    const y = yToPx(p.retail_val);
+    const upLeft = p.retail_val > 0 && p.stock_pct < 0;
+    const downRight = p.retail_val < 0 && p.stock_pct > 0;
     const fill = upLeft ? "#3f8f7f" : downRight ? "#b85a5a" : "#3a64a8";
+    const valStr = yMode === "share"
+      ? `${p.retail_val >= 0 ? "+" : ""}${p.retail_val.toFixed(2)}pp share`
+      : `${p.retail_val >= 0 ? "+" : ""}${p.retail_val.toFixed(1)}% retail`;
     const tooltip = JSON.stringify({
       label: p.company,
       period: p.ticker || "",
-      value: `${p.stock_1m_pct >= 0 ? "+" : ""}${p.stock_1m_pct.toFixed(2)}% stock · ${p.retail_yoy_pct >= 0 ? "+" : ""}${p.retail_yoy_pct.toFixed(1)}% retail`,
-      note: `Retail YoY anchored on ${p.anchor_cat} (largest exposure)`,
+      value: `${p.stock_pct >= 0 ? "+" : ""}${p.stock_pct.toFixed(2)}% stock · ${valStr}`,
+      note: `Anchored on ${p.anchor_cat} (largest exposure)`,
     });
     const shortName = p.company.replace(/&/g, "&amp;").length > 14
       ? p.company.split(" ")[0]
@@ -6633,19 +6697,60 @@ function renderStockVsRetailDivergence() {
     `;
   }).join("");
 
+  // Mispricing rank — distance from the y=x diagonal. Positive score
+  // means retail is ahead of stock (mispriced upside / long
+  // candidate). Negative means stock is ahead of retail (short
+  // candidate / overheated). Ranked by absolute magnitude so the
+  // loudest setups appear first regardless of direction. We don't try
+  // to standardize the units across modes; comparing within a single
+  // {window, mode} reading is the point.
+  const ranked = points
+    .map((p) => ({
+      ...p,
+      score: Number((p.retail_val - p.stock_pct).toFixed(2)),
+    }))
+    .sort((a, b) => Math.abs(b.score) - Math.abs(a.score));
+  const thesis = (entry) => {
+    if (entry.score > 0) {
+      return `Retail ${yMode === "share" ? "share gain" : "growth"} ahead of stock — long candidate`;
+    }
+    if (entry.score < 0) {
+      return `Stock ahead of retail ${yMode === "share" ? "share trend" : "growth"} — fade candidate`;
+    }
+    return `In-line — no edge in ${win.label} window`;
+  };
+  const rankRows = ranked.map((entry, idx) => `
+    <tr>
+      <td class="rank-cell">${idx + 1}</td>
+      <td class="company-cell"><strong>${escapeHtml(entry.company)}</strong> <span class="rank-anchor">${entry.anchor_cat}</span></td>
+      <td class="${entry.stock_pct >= 0 ? "positive" : "negative"}">${entry.stock_pct >= 0 ? "+" : ""}${entry.stock_pct.toFixed(2)}%</td>
+      <td class="${entry.retail_val >= 0 ? "positive" : "negative"}">${entry.retail_val >= 0 ? "+" : ""}${yMode === "share" ? `${entry.retail_val.toFixed(2)}pp` : `${entry.retail_val.toFixed(1)}%`}</td>
+      <td class="${entry.score >= 0 ? "positive" : "negative"}"><strong>${entry.score >= 0 ? "+" : ""}${entry.score.toFixed(2)}</strong></td>
+      <td class="thesis-cell">${thesis(entry)}</td>
+    </tr>
+  `).join("");
+
   registerDownload(
     "stock-retail-divergence",
-    "stock_vs_retail_divergence.csv",
-    ["company", "ticker", "stock_1m_pct", "retail_yoy_pct", "anchor_category"],
-    points.map((p) => ({
+    `stock_vs_retail_divergence_${win.key}_${yMode}.csv`,
+    ["company", "ticker", "anchor_category", "window", "y_mode", "stock_pct", "retail_val", "mispricing_score"],
+    ranked.map((p) => ({
       company: p.company,
       ticker: p.ticker,
-      stock_1m_pct: p.stock_1m_pct,
-      retail_yoy_pct: p.retail_yoy_pct,
       anchor_category: p.anchor_cat,
+      window: win.label,
+      y_mode: yMode,
+      stock_pct: p.stock_pct,
+      retail_val: p.retail_val,
+      mispricing_score: p.score,
     })),
   );
 
+  const yModeChips = [
+    { key: "units", label: "Unit growth" },
+    { key: "share", label: "Share velocity (pp)" },
+  ];
+  const xLabelText = `${win.label} stock return →`;
   return `
     <section class="section panel section-anchor" id="section-stock-vs-retail">
       <div class="panel-header">
@@ -6658,7 +6763,31 @@ function renderStockVsRetailDivergence() {
           ${renderDownloadIcon("stock-retail-divergence")}
         </div>
       </div>
-      <p class="section-subtitle">Each dot is a listed OEM. X-axis: 1-month NSE stock return. Y-axis: latest FADA monthly retail YoY for the OEM's largest exposure category. Top-left names have demand momentum the market hasn't priced in yet; bottom-right names have stocks running ahead of their retail print.</p>
+      <p class="section-subtitle">Each dot is a listed OEM. Pick a window and Y-axis below — both axes use the same time horizon. Top-left names have demand momentum the market hasn't priced in yet; bottom-right names have stocks running ahead of their retail print. Mispricing rank below sorts by distance from the y=x diagonal.</p>
+      <div class="divergence-controls">
+        <div class="divergence-control-group" role="group" aria-label="Time window">
+          <span class="divergence-control-label">Window</span>
+          ${WINDOW_DEFS.map((w) => `
+            <button
+              type="button"
+              class="urban-rural-chip${w.key === activeWindowKey ? " is-active" : ""}"
+              data-action="set-divergence-window"
+              data-window="${w.key}"
+            >${w.label}</button>
+          `).join("")}
+        </div>
+        <div class="divergence-control-group" role="group" aria-label="Y-axis mode">
+          <span class="divergence-control-label">Y-axis</span>
+          ${yModeChips.map((c) => `
+            <button
+              type="button"
+              class="urban-rural-chip${c.key === yMode ? " is-active" : ""}"
+              data-action="set-divergence-ymode"
+              data-ymode="${c.key}"
+            >${c.label}</button>
+          `).join("")}
+        </div>
+      </div>
       <div class="chart-frame">
         <svg viewBox="0 0 ${W} ${H}" class="line-chart" role="img" aria-label="Stock vs operating divergence quadrant">
           ${quadRects}
@@ -6667,13 +6796,50 @@ function renderStockVsRetailDivergence() {
           ${xLabels}
           ${yLabels}
           ${dots}
-          <text x="${pad.left + innerW / 2}" y="${H - 8}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a">1M stock return →</text>
-          <text x="14" y="${pad.top + innerH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a" transform="rotate(-90 14 ${pad.top + innerH / 2})">← Retail YoY %</text>
+          <text x="${pad.left + innerW / 2}" y="${H - 8}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a">${xLabelText}</text>
+          <text x="14" y="${pad.top + innerH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#3a4a5a" transform="rotate(-90 14 ${pad.top + innerH / 2})">← ${yLabelText}</text>
         </svg>
       </div>
-      <p class="legend-note">Stock prices refresh on every CI tick (Yahoo Finance NSE close). Retail YoY refreshes monthly when FADA publishes the next OEM annexure. Companies without a clean OEM-name match in the FADA tables (most pure ancillaries — Bharat Forge, Sona BLW, Motherson, Uno Minda) are excluded automatically.</p>
+      ${ranked.length ? `
+        <div class="divergence-rank-wrap">
+          <p class="small-label" style="margin: 12px 0 6px;">Mispricing rank · ${win.label} ${yMode === "share" ? "share velocity" : "unit growth"}</p>
+          <table class="divergence-rank">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Company</th>
+                <th>Stock ${win.label}</th>
+                <th>Retail ${win.label}</th>
+                <th title="Retail metric minus stock %. Positive = retail ahead of price action.">Score</th>
+                <th>Read</th>
+              </tr>
+            </thead>
+            <tbody>${rankRows}</tbody>
+          </table>
+        </div>
+      ` : ""}
+      <p class="legend-note">Stock prices refresh on every CI tick (Yahoo Finance NSE close). Retail data refreshes monthly when FADA publishes the next OEM annexure. 6M / 12M share-velocity values are derived from the OEM share-trend series; 1M / 3M use the periodized OEM table. Companies without a clean OEM-name match in the FADA tables (most pure ancillaries — Bharat Forge, Sona BLW, Motherson, Uno Minda) are excluded automatically.</p>
     </section>
   `;
+}
+
+function setupStockVsRetailDivergence() {
+  document.querySelectorAll("[data-action='set-divergence-window']").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-window");
+      if (!value || value === state.divergenceWindow) return;
+      state.divergenceWindow = value;
+      render();
+    });
+  });
+  document.querySelectorAll("[data-action='set-divergence-ymode']").forEach((node) => {
+    node.addEventListener("click", () => {
+      const value = node.getAttribute("data-ymode");
+      if (!value || value === state.divergenceYMode) return;
+      state.divergenceYMode = value;
+      render();
+    });
+  });
 }
 
 function renderEarningsCalendarPanel() {
@@ -9090,6 +9256,11 @@ const URL_STATE_DEFAULTS = {
   oemShareTrendWindow: "all",
   oemShareTrendHidden: { PV: [], "2W": [], "3W": [], CV: [], TRACTOR: [], CE: [] },
   oemShareTrendFilterOpen: false,
+  // Stock-vs-retail divergence card on the Companies tab. "1m" / "3m" /
+  // "6m" / "1y" — both axes use the same horizon. yMode is "units"
+  // (matches original card) or "share" (share velocity in pp).
+  divergenceWindow: "1m",
+  divergenceYMode: "units",
   registrationState: "all",
   registrationSegment: "PV",
   segmentShareView: "TOTAL",
