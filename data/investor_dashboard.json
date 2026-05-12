@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T06:18:54.033734+00:00",
+  "generated_at": "2026-05-12T11:25:24.452979+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120070,10 +120070,41 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-12T06:18:31.302411+00:00",
+      "generated_at": "2026-05-12T11:25:00.434254+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 5,
       "items": [
+        {
+          "title": "Tata Altroz CNG AMT Launch Price Rs 8.69 Lakh to Rs 10.77 Lakh \u2013 5 Variants",
+          "summary": "Tata Motors PV has launched the new Altroz iCNG AMT in India, making it the first and only premium hatchback in the country to offer an automatic transmission with a factory-fitted CNG powertrain The post Tata Altroz CNG AMT Launch Price Rs 8.69 Lakh to Rs 10.77 Lakh \u2013 5 Variants appeared first on RushLane .",
+          "url": "https://www.rushlane.com/tata-altroz-cng-amt-launch-price-rs-8-69-lakh-12546262.html",
+          "source": "RushLane",
+          "published_at": "2026-05-12T10:01:01+00:00",
+          "published_display": "12 May 2026",
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Components"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2025/05/New-Tata-Altroz-Debuts-2-1.jpeg"
+        },
+        {
+          "title": "Range Rover Sport SV Launch Price Rs 2.05 Cr \u2013 626 bhp, V8, 3.8s 0-100",
+          "summary": "Range Rover Sport SV (Pure SV) has been launched in the country for Rs 2.05 Crore (Ex-sh), below the SV Edition Two The post Range Rover Sport SV Launch Price Rs 2.05 Cr \u2013 626 bhp, V8, 3.8s 0-100 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/range-rover-sport-sv-launch-price-rs-2-05-cr-626-bhp-v8-3-8s-0-100-12546253.html",
+          "source": "RushLane",
+          "published_at": "2026-05-12T09:34:22+00:00",
+          "published_display": "12 May 2026",
+          "company": "JLR India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/range-rover-sport-sv-launched-2.jpg"
+        },
         {
           "title": "2026 Honda NX500 E-Clutch India Launch Price Rs 7.44 Lakh",
           "summary": "The addition of E-Clutch technology has significantly increased the price of the NX500. At Rs 7.44 lakh, the E-Clutch version costs Rs 1.11 lakh more than the outgoing conventional clutch version The post 2026 Honda NX500 E-Clutch India Launch Price Rs 7.44 Lakh appeared first on RushLane .",
@@ -120117,6 +120148,22 @@
         }
       ],
       "companies": [
+        {
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-05-12T10:01:01+00:00",
+          "latest_title": "Tata Altroz CNG AMT Launch Price Rs 8.69 Lakh to Rs 10.77 Lakh \u2013 5 Variants"
+        },
+        {
+          "company": "JLR India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-12T09:34:22+00:00",
+          "latest_title": "Range Rover Sport SV Launch Price Rs 2.05 Cr \u2013 626 bhp, V8, 3.8s 0-100"
+        },
         {
           "company": "Honda Cars India",
           "tone": "pv",
@@ -120266,10 +120313,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.53,
+        "value": 95.62,
         "unit": "\u20b9",
-        "delta_value": 1.1022,
-        "delta_label": "+0.28% in last week (Yahoo Finance)",
+        "delta_value": 1.1927,
+        "delta_label": "+0.38% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130677,7 +130724,7 @@
           },
           {
             "date": "2026-05-12",
-            "close": 95.5275
+            "close": 95.618
           }
         ]
       }
@@ -130692,10 +130739,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13304.0,
-        "change_1d_pct": -1.33,
-        "change_1w_pct": -0.91,
-        "change_1m_pct": -2.95,
+        "price": 13172.0,
+        "change_1d_pct": -2.31,
+        "change_1w_pct": -1.89,
+        "change_1m_pct": -3.92,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12389.0,
@@ -130727,7 +130774,7 @@
           13770.0,
           13726.0,
           13483.0,
-          13304.0
+          13172.0
         ],
         "daily_closes": [
           {
@@ -140612,16 +140659,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 13304.0
+            "close": 13172.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3239.0,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": 0.88,
-        "change_1m_pct": -0.64,
+        "price": 3176.0,
+        "change_1d_pct": -2.15,
+        "change_1w_pct": -1.08,
+        "change_1m_pct": -2.57,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3041.3,
@@ -140653,7 +140700,7 @@
           3370.7,
           3330.4,
           3245.9,
-          3239.0
+          3176.0
         ],
         "daily_closes": [
           {
@@ -150538,16 +150585,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 3239.0
+            "close": 3176.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5177.0,
-        "change_1d_pct": -0.98,
-        "change_1w_pct": 1.33,
-        "change_1m_pct": -5.3,
+        "price": 5082.5,
+        "change_1d_pct": -2.79,
+        "change_1w_pct": -0.52,
+        "change_1m_pct": -7.02,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5143.0,
@@ -150579,7 +150626,7 @@
           5343.0,
           5322.0,
           5228.5,
-          5177.0
+          5082.5
         ],
         "daily_closes": [
           {
@@ -160464,16 +160511,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 5177.0
+            "close": 5082.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3601.0,
-        "change_1d_pct": -0.35,
-        "change_1w_pct": 1.88,
-        "change_1m_pct": -6.22,
+        "price": 3561.0,
+        "change_1d_pct": -1.46,
+        "change_1w_pct": 0.75,
+        "change_1m_pct": -7.26,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3445.2,
@@ -160505,7 +160552,7 @@
           3706.7,
           3695.2,
           3613.7,
-          3601.0
+          3561.0
         ],
         "daily_closes": [
           {
@@ -170390,16 +170437,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 3601.0
+            "close": 3561.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10586.0,
-        "change_1d_pct": -0.09,
-        "change_1w_pct": 5.38,
-        "change_1m_pct": 7.87,
+        "price": 10397.0,
+        "change_1d_pct": -1.87,
+        "change_1w_pct": 3.49,
+        "change_1m_pct": 5.95,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           8901.0,
@@ -170431,7 +170478,7 @@
           10605.0,
           10711.5,
           10595.5,
-          10586.0
+          10397.0
         ],
         "daily_closes": [
           {
@@ -180316,16 +180363,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 10586.0
+            "close": 10397.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1874.5,
-        "change_1d_pct": -1.7,
-        "change_1w_pct": 2.85,
-        "change_1m_pct": 4.35,
+        "price": 1877.9,
+        "change_1d_pct": -1.52,
+        "change_1w_pct": 3.04,
+        "change_1m_pct": 4.54,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1816.7,
@@ -180357,7 +180404,7 @@
           1835.8,
           1852.8,
           1906.9,
-          1874.5
+          1877.9
         ],
         "daily_closes": [
           {
@@ -181898,16 +181945,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 1874.5
+            "close": 1877.9
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7260.5,
-        "change_1d_pct": 0.81,
-        "change_1w_pct": -0.56,
-        "change_1m_pct": -2.2,
+        "price": 7126.0,
+        "change_1d_pct": -1.06,
+        "change_1w_pct": -2.4,
+        "change_1m_pct": -4.01,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           6811.5,
@@ -181939,7 +181986,7 @@
           7327.5,
           7302.5,
           7202.5,
-          7260.5
+          7126.0
         ],
         "daily_closes": [
           {
@@ -191824,16 +191871,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 7260.5
+            "close": 7126.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 340.8,
-        "change_1d_pct": -1.5,
-        "change_1w_pct": 0.19,
-        "change_1m_pct": 2.27,
+        "price": 336.85,
+        "change_1d_pct": -2.64,
+        "change_1w_pct": -0.97,
+        "change_1m_pct": 1.08,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191866,7 +191913,7 @@
           359.25,
           355.45,
           346.0,
-          340.8
+          336.85
         ],
         "daily_closes": [
           {
@@ -192423,16 +192470,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 340.8
+            "close": 336.85
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 406.3,
-        "change_1d_pct": -1.14,
-        "change_1w_pct": -0.06,
-        "change_1m_pct": -8.6,
+        "price": 387.05,
+        "change_1d_pct": -5.83,
+        "change_1w_pct": -4.8,
+        "change_1m_pct": -12.93,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -192465,7 +192512,7 @@
           434.05,
           431.0,
           411.0,
-          406.3
+          387.05
         ],
         "daily_closes": [
           {
@@ -192958,16 +193005,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 406.3
+            "close": 387.05
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 157.77,
-        "change_1d_pct": -2.32,
-        "change_1w_pct": -1.55,
-        "change_1m_pct": -11.38,
+        "price": 155.95,
+        "change_1d_pct": -3.45,
+        "change_1w_pct": -2.68,
+        "change_1m_pct": -12.4,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           163.09,
@@ -192999,7 +193046,7 @@
           170.78,
           168.57,
           161.52,
-          157.77
+          155.95
         ],
         "daily_closes": [
           {
@@ -202884,16 +202931,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 157.77
+            "close": 155.95
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2948.6,
-        "change_1d_pct": -0.61,
-        "change_1w_pct": -8.07,
-        "change_1m_pct": -7.71,
+        "price": 2960.7,
+        "change_1d_pct": -0.2,
+        "change_1w_pct": -7.69,
+        "change_1m_pct": -7.33,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2842.4,
@@ -202925,7 +202972,7 @@
           3345.9,
           3146.6,
           2966.7,
-          2948.6
+          2960.7
         ],
         "daily_closes": [
           {
@@ -212810,16 +212857,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 2948.6
+            "close": 2960.7
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 901.1,
-        "change_1d_pct": -2.23,
-        "change_1w_pct": 2.16,
-        "change_1m_pct": -0.91,
+        "price": 881.25,
+        "change_1d_pct": -4.38,
+        "change_1w_pct": -0.09,
+        "change_1m_pct": -3.09,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           780.7,
@@ -212851,7 +212898,7 @@
           905.55,
           947.25,
           921.65,
-          901.1
+          881.25
         ],
         "daily_closes": [
           {
@@ -222736,16 +222783,16 @@
           },
           {
             "date": "2026-05-12",
-            "close": 901.1
+            "close": 881.25
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 491.05,
-        "change_1d_pct": -0.35,
-        "change_1w_pct": 0.95,
-        "change_1m_pct": 12.74,
+        "price": 476.9,
+        "change_1d_pct": -3.22,
+        "change_1w_pct": -1.96,
+        "change_1m_pct": 9.49,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           400.75,
@@ -222777,7 +222824,7 @@
           493.3,
           498.75,
           492.75,
-          491.05
+          476.9
         ],
         "daily_closes": [
           {
@@ -232662,7 +232709,7 @@
           },
           {
             "date": "2026-05-12",
-            "close": 491.05
+            "close": 476.9
           }
         ]
       }
@@ -233998,10 +234045,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-12T06:18:08.063303+00:00",
+    "generated_at": "2026-05-12T11:24:37.334951+00:00",
     "window_days": 45,
     "group_count": 5,
-    "item_count": 19,
+    "item_count": 20,
     "groups": [
       {
         "id": "pv",
@@ -234039,69 +234086,45 @@
             ]
           },
           {
-            "title": "BMW India CEO urges faster India-EU FTA rollout, warns delays may defer luxury car purchases",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-india-ceo-calls-for-urgent-india-eu-fta-implementation-to-avoid-luxury-car-purchase-delays/130944764",
-            "summary": "Brar highlighted that import duties on fully built cars remain steep, with India currently levying 110 per cent duty on vehicles priced above $40,000 and 70 per cent on vehicles priced below $40,000.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-08T03:00:05+00:00",
-            "published_display": "08 May 2026",
-            "importance_score": 7,
+            "title": "New Kia Seltos Testing Continues Ahead Of Hybrid Launch",
+            "url": "https://www.rushlane.com/new-kia-seltos-testing-continues-ahead-of-hybrid-launch-12546272.html",
+            "summary": "Kia Seltos Hybrid testing may have begun in India and these new spy shots may be showing us the first set of spy shots of this upcoming SUV The post New Kia Seltos Testing Continues Ahead Of Hybrid Launch appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-12T10:37:48+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Product / Launch"
             ]
           },
           {
-            "title": "Tesla's China-made EV sales jump 36% in April, extending rebound",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-china-made-ev-sales-jump-36-in-april-extending-rebound/130895340",
-            "summary": "Deliveries of \u200bModel 3 and Model Y vehicles built at Tesla's Shanghai plant, including those exported \u200bto Europe and other markets, totaled 79,478 units, data from China Passenger Car Association showed on Thursday.",
+            "title": "China's passenger car exports surge nearly 85% in April as domestic sales slump",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-passenger-car-exports-surge-nearly-85-in-april-as-domestic-sales-slump/131032483",
+            "summary": "Exports of passenger cars from China last month jumped almost 85 per cent from a year ago to around 796,000 vehicles, according to the China Association of Automobile Manufacturers. That's up from the 748,000 vehicles exported in March.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-07T12:15:11+00:00",
-            "published_display": "07 May 2026",
-            "importance_score": 7,
+            "published_at": "2026-05-12T07:42:34+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Lotus scales back EV plans, targets 2028 supercar launch",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/lotus-scales-back-ev-plans-targets-2028-supercar-launch/131032290",
+            "summary": "The Geely-owned company, which had previously targeted a \u200cfully electric \u2060lineup \u2060by 2028, now aims for a portfolio split of 60 per cent hybrid and \u200b40 per cent battery electric vehicles under a long-term plan it calls \"Focus 2030.\"",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-12T07:38:36+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
               "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "BorgWarner secures Asian powertrain supply deals for SUV, hybrid programmes",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/borgwarner-secures-asian-powertrain-supply-deals-for-suv-hybrid-programmes/131014222",
-            "summary": "BorgWarner\u2019s new wet dual clutch and variable cam timing systems are aimed at improving efficiency, performance and cost competitiveness in combustion and hybrid powertrains",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-11T12:35:35+00:00",
-            "published_display": "11 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2w",
-        "label": "Two-Wheelers",
-        "items": [
-          {
-            "title": "Steelbird Launches SB-120 Helmet Starting at Rs 3,999",
-            "url": "https://www.autocarpro.in/NEWS/steelbird-launches-sb-120-helmet-starting-at-rs-3999-132388",
-            "summary": "Steelbird Helmets has introduced the new SB-120 motorcycle helmet in the Indian market. The new model is priced at Rs 3,999 for the mono color variants and Rs 4,499 for models featuring decals.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-04T11:07:24+00:00",
-            "published_display": "04 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
             ],
             "signal_tags": [
               "Product / Launch",
@@ -234114,6 +234137,22 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
+          {
+            "title": "Mahua Acharya Takes CESL Playbook to India\u2019s Electric Truck Market",
+            "url": "https://www.autocarpro.in/NEWS/mahua-acharya-takes-cesl-playbook-to-indias-electric-truck-market-132529",
+            "summary": "Mahua Acharya, the architect behind India\u2019s massive government-led electric bus rollout, is shifting her attention to the private sector with a new venture: INTENT. Having previously held senior roles as MD & CEO at Convergence Energy Services Ltd.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-11T17:02:08+00:00",
+            "published_display": "11 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
             "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
@@ -234168,38 +234207,6 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "3W Retail Sales April 2026 \u2013 Bajaj, Mahindra, Piaggio, TVS, Atul, YC, Saera, Dilli",
-            "url": "https://www.rushlane.com/3w-retail-sales-april-2026-bajaj-mahindra-piaggio-tvs-12545796.html",
-            "summary": "Bajaj Leads, Mahindra Sees Strong Gains - Electric 3Ws continued to dominate the market with over 60% share in April 2026 The post 3W Retail Sales April 2026 \u2013 Bajaj, Mahindra, Piaggio, TVS, Atul, YC, Saera, Dilli appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-11T10:07:55+00:00",
-            "published_display": "11 May 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "Ather Rizta Crosses 3 Lakh Sales In 2 Years \u2013 76% Of FY26 Total Sales",
-            "url": "https://www.rushlane.com/ather-rizta-crosses-3-lakh-sales-in-2-years-76-of-fy26-total-sales-12546215.html",
-            "summary": "Ather Energy has announced that its family electric scooter, Rizta, has crossed the 3 lakh sales milestone within two years of launch The post Ather Rizta Crosses 3 Lakh Sales In 2 Years \u2013 76% Of FY26 Total Sales appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-11T13:39:20+00:00",
-            "published_display": "11 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
             "title": "VinFast Middle East appoints Prashanth Rao as CEO",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/vinfast-appoints-prashanth-rao-as-new-ceo-for-middle-east-operations/131002256",
             "summary": "Rao brings nearly 20 years of experience across Toyota, Honda, Nissan and VinFast, and is expected to drive the EV maker\u2019s expansion plans in the Middle East.",
@@ -234212,75 +234219,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Renault suspends its production plans in Spain over union dispute",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-halts-spanish-production-plans-amidst-union-tensions/130951661",
-            "summary": "The \u200csuspension \u2060affects three \u2060new electric and hybrid vehicles that were planned to be \u200bmanufactured from 2028 in the city of Palencia under a new \u200bmanufacturing platform, and maintaining the production of two other hybrid models in a plant in Valladolid.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-08T06:32:20+00:00",
-            "published_display": "08 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "EV Charging Infrastructure is a Critical Component of India\u2019s Energy Security: Kartikey Hariyani",
-            "url": "https://evreporter.com/ev-charging-infrastructure-is-a-critical-component-of-indias-energy-security-kartikey-hariyani",
-            "summary": "The post EV Charging Infrastructure is a Critical Component of India\u2019s Energy Security: Kartikey Hariyani appeared first at EVreporter on EVreporter . Since 2019, ChargeZone has installed over 15,000 charging points at 1,200 locations.",
-            "source": "EVReporter",
-            "published_at": "2026-05-08T06:28:13+00:00",
-            "published_display": "08 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "components",
-        "label": "Components",
-        "items": [
-          {
-            "title": "Abu Dhabi Backs Motherson's Automotive Plant in KEZAD Industrial Zone",
-            "url": "https://www.autocarpro.in/NEWS/abu-dhabi-backs-mothersons-automotive-plant-in-kezad-industrial-zone-132465",
-            "summary": "The Abu Dhabi Investment Office (ADIO) announced on May 6, 2026, its support for a manufacturing hub being set up by Samvardhana Motherson International Limited (Motherson) within the Khalifa Economic Zones Abu Dhabi (KEZAD). The facility will produce a range of automotive components for Motherson's global operations as well as for third-party original equipment manufacturer (OEM) customers, and is positioned to f...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-07T09:43:40+00:00",
-            "published_display": "07 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "2027 Kia Sonet Spied Testing \u2013 First Spy Shots Surface, Launch Next Year",
-            "url": "https://www.rushlane.com/2027-kia-sonet-spied-testing-new-gen-launch-expected-in-2027-12546185.html",
-            "summary": "Next-gen Sonet to get new platform, more space, upgraded tech, safety and possible hybrid powertrain The post 2027 Kia Sonet Spied Testing \u2013 First Spy Shots Surface, Launch Next Year appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-11T08:21:35+00:00",
-            "published_display": "11 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
             ]
           },
           {
@@ -234333,6 +234271,133 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Renault suspends its production plans in Spain over union dispute",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-halts-spanish-production-plans-amidst-union-tensions/130951661",
+            "summary": "The \u200csuspension \u2060affects three \u2060new electric and hybrid vehicles that were planned to be \u200bmanufactured from 2028 in the city of Palencia under a new \u200bmanufacturing platform, and maintaining the production of two other hybrid models in a plant in Valladolid.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-08T06:32:20+00:00",
+            "published_display": "08 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "components",
+        "label": "Components",
+        "items": [
+          {
+            "title": "Tata Altroz CNG AMT Launch Price Rs 8.69 Lakh to Rs 10.77 Lakh \u2013 5 Variants",
+            "url": "https://www.rushlane.com/tata-altroz-cng-amt-launch-price-rs-8-69-lakh-12546262.html",
+            "summary": "Tata Motors PV has launched the new Altroz iCNG AMT in India, making it the first and only premium hatchback in the country to offer an automatic transmission with a factory-fitted CNG powertrain The post Tata Altroz CNG AMT Launch Price Rs 8.69 Lakh to Rs 10.77 Lakh \u2013 5 Variants appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-12T10:01:01+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Munjal Auto Wins New Two-Wheeler Component Contract with Honda",
+            "url": "https://www.autocarpro.in/NEWS/munjal-auto-wins-new-two-wheeler-component-contract-with-honda-132535",
+            "summary": "Munjal Auto Industries Limited announced on May 11, 2026, that it has been awarded a new business contract from Honda Motorcycle and Scooter India Private Limited. The agreement involves the manufacturing and supply of sheet metal stamping and welding parts for the two wheeler manufacturer.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-11T19:36:33+00:00",
+            "published_display": "11 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Abu Dhabi Backs Motherson's Automotive Plant in KEZAD Industrial Zone",
+            "url": "https://www.autocarpro.in/NEWS/abu-dhabi-backs-mothersons-automotive-plant-in-kezad-industrial-zone-132465",
+            "summary": "The Abu Dhabi Investment Office (ADIO) announced on May 6, 2026, its support for a manufacturing hub being set up by Samvardhana Motherson International Limited (Motherson) within the Khalifa Economic Zones Abu Dhabi (KEZAD). The facility will produce a range of automotive components for Motherson's global operations as well as for third-party original equipment manufacturer (OEM) customers, and is positioned to f...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-07T09:43:40+00:00",
+            "published_display": "07 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Battery recycling firm Redwood appoints former Tesla finance head Ahuja as CFO",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/battery-recycling-firm-redwood-appoints-former-tesla-finance-head-ahuja-as-cfo/131033367",
+            "summary": "The appointment comes as Redwood seeks \u200cto \u2060bolster \u2060its financial leadership to support the \u200bexpansion of critical minerals supplies amid surging energy \u200bdemand driven by a rapid build-out of AI data centers.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-12T08:20:52+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Management / Governance",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Sona Comstar\u2019s Strategy for the Post-Bankruptcy European Landscape",
+            "url": "https://www.autocarpro.in/NEWS/sona-comstars-strategy-for-the-post-bankruptcy-european-landscape-132530",
+            "summary": "While several European Tier 1 suppliers are buckling under the weight of miscalculated electric vehicle (EV) bets and mounting inflation, India\u2019s Sona Comstar is positioning itself to capture the fallout. Following the recent bankruptcies of two major regional competitors, Neapco Europe and AIMS, the Gurugram-headquartered supplier is reporting a surge in customer inquiries as global automakers seek more stable, f...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-11T17:26:22+00:00",
+            "published_display": "11 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "policy",
+        "label": "Policy / Regulation",
+        "items": [
+          {
+            "title": "India\u2019s critical minerals sector faces financing constraints despite policy push: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-critical-minerals-sector-faces-financing-constraints-despite-policy-push-report/131033844",
+            "summary": "Volatile demand and supply conditions, sharp fluctuations in critical mineral prices, long gestation periods and high upfront capital requirements are restricting capital flow into the sector.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-12T08:44:00+00:00",
+            "published_display": "12 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
           }
         ]
       }
@@ -234356,8 +234421,8 @@
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 44,
-      "filtered_low_signal": 0,
-      "kept_articles": 70
+      "filtered_low_signal": 1,
+      "kept_articles": 69
     }
   },
   "qa": [
