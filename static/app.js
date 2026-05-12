@@ -6850,7 +6850,6 @@ function renderStockVsRetailDivergence() {
           </table>
         </div>
       ` : ""}
-      <p class="legend-note">Stock prices refresh on every CI tick (Yahoo Finance NSE close). Retail data refreshes monthly when FADA publishes the next OEM annexure. 6M / 12M share-velocity values are derived from the OEM share-trend series; 1M / 3M use the periodized OEM table. Companies without a clean OEM-name match in the FADA tables (most pure ancillaries — Bharat Forge, Sona BLW, Motherson, Uno Minda) are excluded automatically.</p>
     </section>
   `;
 }
