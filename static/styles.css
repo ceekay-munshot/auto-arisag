@@ -1371,6 +1371,81 @@ p {
   font-size: 0.86rem;
 }
 
+.divergence-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 6px 0 12px;
+  padding: 8px 10px;
+  background: rgba(47, 137, 125, 0.05);
+  border-radius: 8px;
+}
+
+.divergence-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.divergence-control-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(20, 39, 62, 0.6);
+}
+
+.divergence-rank-wrap {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+table.divergence-rank {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+table.divergence-rank th,
+table.divergence-rank td {
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(20, 39, 62, 0.08);
+  text-align: left;
+  vertical-align: middle;
+}
+
+table.divergence-rank th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(20, 39, 62, 0.6);
+  background: rgba(20, 39, 62, 0.02);
+}
+
+table.divergence-rank .rank-cell {
+  width: 36px;
+  font-weight: 600;
+  color: rgba(20, 39, 62, 0.55);
+}
+
+table.divergence-rank .rank-anchor {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(20, 39, 62, 0.6);
+  background: rgba(47, 137, 125, 0.1);
+  border-radius: 4px;
+}
+
+table.divergence-rank .thesis-cell {
+  color: rgba(20, 39, 62, 0.7);
+  font-size: 0.82rem;
+}
+
 .urban-rural-chip {
   padding: 5px 11px;
   border-radius: 999px;
