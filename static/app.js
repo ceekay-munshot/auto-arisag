@@ -6697,43 +6697,69 @@ function renderStockVsRetailDivergence() {
     `;
   }).join("");
 
-  // Mispricing rank — distance from the y=x diagonal. Positive score
-  // means retail is ahead of stock (mispriced upside / long
-  // candidate). Negative means stock is ahead of retail (short
-  // candidate / overheated). Ranked by absolute magnitude so the
-  // loudest setups appear first regardless of direction. We don't try
-  // to standardize the units across modes; comparing within a single
-  // {window, mode} reading is the point.
+  // Mispricing rank — cross-sectional z-score so the lens stays
+  // meaningful across the unit/share mode switch. Raw stock % and
+  // raw retail %/pp are NOT directly comparable (a 30% stock move
+  // dwarfs a 1pp share-velocity move in absolute terms even when
+  // both are "loud" for their own distribution). Solution: z-score
+  // both columns within the visible OEM set, then score = retail_z
+  // − stock_z. Positive = retail leading stock = LONG; negative =
+  // stock leading retail = FADE. Magnitude reads as standard
+  // deviations from the peer mean, so ±1σ is moderate, ±2σ is loud.
+  const zscore = (vals) => {
+    const valid = vals.filter((v) => v != null && !Number.isNaN(Number(v)));
+    if (valid.length < 2) return vals.map(() => 0);
+    const mean = valid.reduce((a, b) => a + Number(b), 0) / valid.length;
+    const variance = valid.reduce((a, b) => a + (Number(b) - mean) ** 2, 0) / valid.length;
+    const std = Math.sqrt(variance) || 1;
+    return vals.map((v) => (v == null || Number.isNaN(Number(v))) ? 0 : (Number(v) - mean) / std);
+  };
+  const stockZs = zscore(points.map((p) => p.stock_pct));
+  const retailZs = zscore(points.map((p) => p.retail_val));
+  const verdict = (score) => {
+    if (score >= 1.5) return { tag: "LONG", tone: "long", magnitude: "loud" };
+    if (score >= 0.5) return { tag: "LONG", tone: "long", magnitude: "moderate" };
+    if (score <= -1.5) return { tag: "FADE", tone: "fade", magnitude: "loud" };
+    if (score <= -0.5) return { tag: "FADE", tone: "fade", magnitude: "moderate" };
+    return { tag: "IN LINE", tone: "neutral", magnitude: "subtle" };
+  };
   const ranked = points
-    .map((p) => ({
-      ...p,
-      score: Number((p.retail_val - p.stock_pct).toFixed(2)),
-    }))
+    .map((p, idx) => {
+      const score = Number((retailZs[idx] - stockZs[idx]).toFixed(2));
+      return { ...p, stock_z: stockZs[idx], retail_z: retailZs[idx], score, verdict: verdict(score) };
+    })
     .sort((a, b) => Math.abs(b.score) - Math.abs(a.score));
-  const thesis = (entry) => {
-    if (entry.score > 0) {
-      return `Retail ${yMode === "share" ? "share gain" : "growth"} ahead of stock — long candidate`;
-    }
-    if (entry.score < 0) {
-      return `Stock ahead of retail ${yMode === "share" ? "share trend" : "growth"} — fade candidate`;
-    }
-    return `In-line — no edge in ${win.label} window`;
+  // Color-grade the score cell by absolute z-distance. Clamps at 2σ
+  // so a single outlier doesn't wash out everything else's tint.
+  const scoreTint = (entry) => {
+    const intensity = Math.min(1, Math.abs(entry.score) / 2);
+    if (entry.score > 0) return `background:rgba(47,137,125,${(0.06 + intensity * 0.20).toFixed(3)});`;
+    if (entry.score < 0) return `background:rgba(204,67,67,${(0.06 + intensity * 0.20).toFixed(3)});`;
+    return "";
   };
   const rankRows = ranked.map((entry, idx) => `
     <tr>
       <td class="rank-cell">${idx + 1}</td>
-      <td class="company-cell"><strong>${escapeHtml(entry.company)}</strong> <span class="rank-anchor">${entry.anchor_cat}</span></td>
-      <td class="${entry.stock_pct >= 0 ? "positive" : "negative"}">${entry.stock_pct >= 0 ? "+" : ""}${entry.stock_pct.toFixed(2)}%</td>
-      <td class="${entry.retail_val >= 0 ? "positive" : "negative"}">${entry.retail_val >= 0 ? "+" : ""}${yMode === "share" ? `${entry.retail_val.toFixed(2)}pp` : `${entry.retail_val.toFixed(1)}%`}</td>
-      <td class="${entry.score >= 0 ? "positive" : "negative"}"><strong>${entry.score >= 0 ? "+" : ""}${entry.score.toFixed(2)}</strong></td>
-      <td class="thesis-cell">${thesis(entry)}</td>
+      <td class="company-cell">
+        <span class="rank-company-line">
+          <strong>${escapeHtml(entry.company)}</strong>
+          <span class="rank-anchor">${entry.anchor_cat}</span>
+        </span>
+      </td>
+      <td class="num-cell ${entry.stock_pct >= 0 ? "positive" : "negative"}">${entry.stock_pct >= 0 ? "+" : ""}${entry.stock_pct.toFixed(2)}%</td>
+      <td class="num-cell ${entry.retail_val >= 0 ? "positive" : "negative"}">${entry.retail_val >= 0 ? "+" : ""}${yMode === "share" ? `${entry.retail_val.toFixed(2)}pp` : `${entry.retail_val.toFixed(1)}%`}</td>
+      <td class="num-cell score-cell" style="${scoreTint(entry)}"><strong>${entry.score >= 0 ? "+" : ""}${entry.score.toFixed(2)}σ</strong></td>
+      <td class="verdict-cell">
+        <span class="verdict-pill verdict-${entry.verdict.tone}">${entry.verdict.tag}</span>
+        ${entry.verdict.magnitude !== "subtle" ? `<span class="verdict-magnitude">${entry.verdict.magnitude}</span>` : ""}
+      </td>
     </tr>
   `).join("");
 
   registerDownload(
     "stock-retail-divergence",
     `stock_vs_retail_divergence_${win.key}_${yMode}.csv`,
-    ["company", "ticker", "anchor_category", "window", "y_mode", "stock_pct", "retail_val", "mispricing_score"],
+    ["company", "ticker", "anchor_category", "window", "y_mode", "stock_pct", "retail_val", "stock_z", "retail_z", "mispricing_score_sigma", "verdict"],
     ranked.map((p) => ({
       company: p.company,
       ticker: p.ticker,
@@ -6742,7 +6768,10 @@ function renderStockVsRetailDivergence() {
       y_mode: yMode,
       stock_pct: p.stock_pct,
       retail_val: p.retail_val,
-      mispricing_score: p.score,
+      stock_z: Number(p.stock_z.toFixed(3)),
+      retail_z: Number(p.retail_z.toFixed(3)),
+      mispricing_score_sigma: p.score,
+      verdict: `${p.verdict.tag}${p.verdict.magnitude !== "subtle" ? ` (${p.verdict.magnitude})` : ""}`,
     })),
   );
 
@@ -6802,16 +6831,19 @@ function renderStockVsRetailDivergence() {
       </div>
       ${ranked.length ? `
         <div class="divergence-rank-wrap">
-          <p class="small-label" style="margin: 12px 0 6px;">Mispricing rank · ${win.label} ${yMode === "share" ? "share velocity" : "unit growth"}</p>
+          <div class="divergence-rank-head">
+            <p class="small-label" style="margin: 0;">Mispricing rank · ${win.label} ${yMode === "share" ? "share velocity" : "unit growth"}</p>
+            <button type="button" class="divergence-rank-help" data-explain-open="stock-vs-retail-rank" title="How is the mispricing score calculated?" aria-label="How is the mispricing score calculated?">?</button>
+          </div>
           <table class="divergence-rank">
             <thead>
               <tr>
-                <th>#</th>
+                <th class="rank-cell">#</th>
                 <th>Company</th>
-                <th>Stock ${win.label}</th>
-                <th>Retail ${win.label}</th>
-                <th title="Retail metric minus stock %. Positive = retail ahead of price action.">Score</th>
-                <th>Read</th>
+                <th class="num-cell">Stock ${win.label}</th>
+                <th class="num-cell">Retail ${win.label}</th>
+                <th class="num-cell" title="Cross-sectional z-score: retail z − stock z. ±1σ moderate, ±2σ loud.">Score (σ)</th>
+                <th>Verdict</th>
               </tr>
             </thead>
             <tbody>${rankRows}</tbody>
@@ -8200,10 +8232,45 @@ function _fmtPp(v) {
 
 const EXPLAIN_REGISTRY = {
   "stock-vs-retail": explainStockVsRetail,
+  "stock-vs-retail-rank": explainStockVsRetailRank,
   "mix-shift": explainMixShift,
   "credit-outstanding": explainCreditOutstanding,
   "credit-spread": explainCreditSpread,
 };
+
+function explainStockVsRetailRank() {
+  const win = state.divergenceWindow || "1m";
+  const yMode = state.divergenceYMode || "units";
+  const winLabel = { "1m": "1M", "3m": "3M", "6m": "6M", "1y": "1Y" }[win] || win.toUpperCase();
+  const retailLabel = yMode === "share" ? "share velocity (pp)" : "unit growth (%)";
+  return `
+    <h3>How the mispricing score is calculated</h3>
+    <p>The score is a <strong>cross-sectional z-score</strong> that surfaces OEMs whose stock has moved differently from the underlying retail demand, relative to peers.</p>
+    <ol class="explain-steps">
+      <li><strong>Pick the lens.</strong> Current view: ${winLabel} window, retail measured as ${retailLabel}.</li>
+      <li><strong>For each OEM, take two readings on the same window:</strong>
+        <ul>
+          <li>Stock return % over ${winLabel}</li>
+          <li>Retail metric over ${winLabel} — ${retailLabel}</li>
+        </ul>
+      </li>
+      <li><strong>Standardize each column.</strong> Compute the mean and standard deviation across visible OEMs, then convert each OEM's stock and retail readings to z-scores. This puts a 30% stock move and a 1pp share-velocity move on the same scale.</li>
+      <li><strong>Score = retail z − stock z.</strong> Two readings would line up on the diagonal in z-space if the market were pricing demand perfectly. Distance from the diagonal is the mispricing.</li>
+      <li><strong>Read the sign + magnitude:</strong>
+        <ul>
+          <li><strong>+1.5σ or more</strong> → loud LONG candidate (retail strongly leading stock)</li>
+          <li><strong>+0.5σ to +1.5σ</strong> → moderate LONG</li>
+          <li><strong>−0.5σ to +0.5σ</strong> → in line, no edge</li>
+          <li><strong>−0.5σ to −1.5σ</strong> → moderate FADE</li>
+          <li><strong>−1.5σ or worse</strong> → loud FADE (stock strongly ahead of retail)</li>
+        </ul>
+      </li>
+    </ol>
+    <h4>Why z-scores, not raw subtraction?</h4>
+    <p>Stock returns are in % (a typical 1Y move is ±20-40%). Share velocity is in pp (a typical 1Y move is ±1-3pp). Subtracting a 1pp share gain from a 35% stock return without normalizing falsely tags every OEM as "stock ran ahead" — which is just true of every Indian auto OEM in a bull tape, not an actionable signal. Z-scoring within the peer set strips that out: the lens becomes "who looks most mispriced relative to peers right now?"</p>
+    <p class="explain-fallback">Limitations: the score depends on the visible peer set (currently 8-10 listed OEMs with FADA-mapped retail data). It's a screening tool, not a model — use as a starting point for fundamental work, not a standalone signal.</p>
+  `;
+}
 
 // ──────────────────────── Stock vs Operating Divergence ────────────────
 function explainStockVsRetail() {
