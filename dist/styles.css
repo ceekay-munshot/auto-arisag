@@ -1401,22 +1401,53 @@ p {
   overflow-x: auto;
 }
 
+.divergence-rank-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 6px;
+}
+
+.divergence-rank-help {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(47, 137, 125, 0.35);
+  background: #fff;
+  color: rgba(47, 137, 125, 0.85);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.divergence-rank-help:hover,
+.divergence-rank-help:focus-visible {
+  background: rgba(47, 137, 125, 0.85);
+  color: #fff;
+  outline: none;
+}
+
 table.divergence-rank {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.86rem;
 }
 
 table.divergence-rank th,
 table.divergence-rank td {
-  padding: 7px 10px;
+  padding: 9px 12px;
   border-bottom: 1px solid rgba(20, 39, 62, 0.08);
   text-align: left;
   vertical-align: middle;
 }
 
 table.divergence-rank th {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1424,26 +1455,101 @@ table.divergence-rank th {
   background: rgba(20, 39, 62, 0.02);
 }
 
+table.divergence-rank th.num-cell,
+table.divergence-rank td.num-cell {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 table.divergence-rank .rank-cell {
-  width: 36px;
+  width: 42px;
   font-weight: 600;
-  color: rgba(20, 39, 62, 0.55);
+  color: rgba(20, 39, 62, 0.5);
+  text-align: center;
+}
+
+table.divergence-rank .company-cell {
+  min-width: 200px;
+}
+
+table.divergence-rank .rank-company-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 table.divergence-rank .rank-anchor {
   display: inline-block;
-  margin-left: 6px;
-  padding: 2px 6px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgba(20, 39, 62, 0.6);
-  background: rgba(47, 137, 125, 0.1);
+  padding: 2px 7px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(20, 39, 62, 0.7);
+  background: rgba(47, 137, 125, 0.12);
   border-radius: 4px;
 }
 
-table.divergence-rank .thesis-cell {
-  color: rgba(20, 39, 62, 0.7);
-  font-size: 0.82rem;
+table.divergence-rank tbody tr:hover {
+  background: rgba(47, 137, 125, 0.04);
+}
+
+table.divergence-rank .score-cell {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+table.divergence-rank .verdict-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.verdict-pill.verdict-long {
+  background: rgba(47, 137, 125, 0.16);
+  color: #2a6b5e;
+}
+
+.verdict-pill.verdict-fade {
+  background: rgba(204, 67, 67, 0.16);
+  color: #a13a3a;
+}
+
+.verdict-pill.verdict-neutral {
+  background: rgba(20, 39, 62, 0.08);
+  color: rgba(20, 39, 62, 0.6);
+}
+
+.verdict-magnitude {
+  font-size: 0.74rem;
+  font-style: italic;
+  color: rgba(20, 39, 62, 0.55);
+}
+
+.explain-steps {
+  margin: 8px 0 12px;
+  padding-left: 22px;
+  line-height: 1.55;
+}
+
+.explain-steps > li {
+  margin-bottom: 8px;
+}
+
+.explain-steps ul {
+  margin: 4px 0 0;
+  padding-left: 20px;
 }
 
 .urban-rural-chip {
