@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T11:16:46.500413+00:00",
+  "generated_at": "2026-05-14T17:07:23.439786+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120070,10 +120070,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-14T11:16:22.600089+00:00",
+      "generated_at": "2026-05-14T17:07:00.950818+00:00",
       "window_days": 30,
-      "item_count": 6,
+      "item_count": 7,
       "items": [
+        {
+          "title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27",
+          "summary": "The auto giant, however, also flagged commodity inflation as a key challenge in the ongoing fiscal year due to the ongoing West Asia crisis.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-to-launch-first-flex-fuel-vehicle-by-end-of-2026-aims-for-industry-leading-growth-in-fy27/131097548",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-14T15:39:35+00:00",
+          "published_display": "14 May 2026",
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-651664/131097548.cms"
+        },
         {
           "title": "New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L)",
           "summary": "BYD Fangchengbao Bao 5 and Bao 8 Flash Charging Edition brings 1000V charging, Gen 2 Blade Battery and Disus P Ultra suspension tech The post New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L) appeared first on RushLane .",
@@ -120166,6 +120181,14 @@
       ],
       "companies": [
         {
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 2,
+          "latest_published_at": "2026-05-14T15:39:35+00:00",
+          "latest_title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27"
+        },
+        {
           "company": "BYD India",
           "tone": "ev",
           "scope": "tracked",
@@ -120188,14 +120211,6 @@
           "count": 1,
           "latest_published_at": "2026-05-13T12:45:23+00:00",
           "latest_title": "Kia India launches BaaS financing model for Carens Clavis EV"
-        },
-        {
-          "company": "Tata Motors",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-05-12T12:55:34+00:00",
-          "latest_title": "Tata Motors launches Altroz iCNG AMT at \u20b98.69 lakh"
         },
         {
           "company": "Skoda Auto India",
@@ -232810,6 +232825,14 @@
         "source_url": "https://www.escortskubota.com/investor/financial-results"
       },
       {
+        "company": "Eicher Motors",
+        "ticker": "EICHERMOT",
+        "date": "2026-05-22",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
+      },
+      {
         "company": "Mahindra & Mahindra",
         "ticker": "M&M",
         "date": "2026-05-26",
@@ -232866,6 +232889,14 @@
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.escortskubota.com/investor/financial-results"
+      },
+      {
+        "company": "Eicher Motors",
+        "ticker": "EICHERMOT",
+        "date": "2026-05-22",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
       },
       {
         "company": "Mahindra & Mahindra",
@@ -232926,8 +232957,8 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ESCORTS"
       }
     ],
-    "next_14_count": 7,
-    "upcoming_count": 7
+    "next_14_count": 8,
+    "upcoming_count": 8
   },
   "market_insights": [
     {
@@ -234038,15 +234069,47 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-14T11:15:55.078244+00:00",
+    "generated_at": "2026-05-14T17:06:37.007363+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 23,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-to-launch-first-flex-fuel-vehicle-by-end-of-2026-aims-for-industry-leading-growth-in-fy27/131097548",
+            "summary": "The auto giant, however, also flagged commodity inflation as a key challenge in the ongoing fiscal year due to the ongoing West Asia crisis.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-14T15:39:35+00:00",
+            "published_display": "14 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Duster comeback sparks strong start for Renault India as April sales double",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-india-sees-108-sales-surge-with-duster-launch-a-strong-comeback-in-the-suv-market/131092121",
+            "summary": "Renault\u2019s domestic sales rose to 5,413 units in April 2026 from 2,602 units in the same month last year, aided by a strong initial response to the all-new Duster launched earlier this year.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-14T11:38:17+00:00",
+            "published_display": "14 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand",
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Porsche SE pressures Volkswagen for overhaul amid profit decline",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-se-pressures-volkswagen-for-overhaul-amid-profit-decline/131065391",
@@ -234079,42 +234142,11 @@
             ]
           },
           {
-            "title": "Tesla expands retail presence in India with new experience centre in Bengaluru",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-opens-new-experience-centre-in-bengaluru-showcasing-the-model-y-l/131090016",
-            "summary": "The new centre will showcase the newly launched Model Y L, a six-seater electric SUV with a claimed WLTP range of up to 681 km.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-14T10:30:39+00:00",
-            "published_display": "14 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Honda To Launch New Sub 4m SUV and Mid Size SUV By 2028 in India \u2013 CEO",
-            "url": "https://www.rushlane.com/honda-to-launch-new-sub-4m-suv-and-mid-size-suv-by-2028-in-india-ceo-12546499.html",
-            "summary": "Honda revealed that starting from 2028, it will introduce new India-focused products in two major categories \u2014 vehicles under 4 metres in length and the mid-size segment. The post Honda To Launch New Sub 4m SUV and Mid Size SUV By 2028 in India \u2013 CEO appeared first on RushLane .",
+            "title": "2027 Hyundai Bayon SUV Spied In India \u2013 New Mid Size SUV Below Creta",
+            "url": "https://www.rushlane.com/2027-hyundai-bayon-suv-spied-in-india-new-mid-size-suv-below-creta-12546540.html",
+            "summary": "Internally codenamed BC4i, the new SUV will slot between Venue and Creta in Hyundai\u2019s lineup - Launch by March 2027 The post 2027 Hyundai Bayon SUV Spied In India \u2013 New Mid Size SUV Below Creta appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-05-14T08:09:45+00:00",
-            "published_display": "14 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Honda resets global strategy, to launch 15 hybrid models by 2030",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-announces-ambitious-hybrid-strategy-15-new-models-by-2030/131086208",
-            "summary": "The company also plans to introduce brand-new India-centric models from 2028 with a focus on sub-four-metre and mid-size SUVs for the local market.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-14T07:43:33+00:00",
+            "published_at": "2026-05-14T14:52:06+00:00",
             "published_display": "14 May 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -234130,22 +234162,6 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
-          {
-            "title": "Ola Electric\u2019s 4680 Bharat Cell-powered S1 X+ 5.2 kWh gets ICAT certification",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-launches-longest-range-s1-x-scooter-powered-by-new-4680-bharat-cell-technology/130955940",
-            "summary": "The elctric two-wheeler maker said the model leverages the high energy density and thermal capabilities of its 4680 Bharat Cell technology to enable long-distance commuting, particularly in non-metro markets.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-08T09:38:28+00:00",
-            "published_display": "08 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Musashi to Supply Powertrains for Kinetic Green Two Wheelers",
             "url": "https://www.autocarpro.in/NEWS/musashi-to-supply-powertrains-for-kinetic-green-two-wheelers-132569",
@@ -234305,35 +234321,35 @@
             ]
           },
           {
-            "title": "VinFast Middle East appoints Prashanth Rao as CEO",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/vinfast-appoints-prashanth-rao-as-new-ceo-for-middle-east-operations/131002256",
-            "summary": "Rao brings nearly 20 years of experience across Toyota, Honda, Nissan and VinFast, and is expected to drive the EV maker\u2019s expansion plans in the Middle East.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-11T02:59:04+00:00",
-            "published_display": "11 May 2026",
+            "title": "Ola Electric\u2019s 4680 Bharat Cell-powered S1 X+ 5.2 kWh gets ICAT certification",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-launches-longest-range-s1-x-scooter-powered-by-new-4680-bharat-cell-technology/130955940",
+            "summary": "The elctric two-wheeler maker said the model leverages the high energy density and thermal capabilities of its 4680 Bharat Cell technology to enable long-distance commuting, particularly in non-metro markets.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-08T09:38:28+00:00",
+            "published_display": "08 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Bharat Forge Takes \u20b9450-Crore EV Hit, Begins Europe Steel Restructuring",
+            "url": "https://www.autocarpro.in/NEWS/bharat-forge-takes-\u20b9450-crore-ev-hit-begins-europe-steel-restructuring-132478",
+            "summary": "Bharat Forge Ltd has taken a \u20b9450-crore impairment on its investment in KPTL\u2019s e-mobility division, signalling a reassessment of its electric vehicle strategy at a time when global EV adoption has become more uneven than initially expected. \u201cThe Rs 450 Crores impairment during the quarter of our investments in KPTL (E-mobility division) is an acceptance of the need to take a fresh look at how we address the EV opp...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-07T20:52:54+00:00",
+            "published_display": "07 May 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "BS7 norms may finally end diesel's last stronghold in Indian SUVs",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bs7-norms-may-finally-end-diesels-last-stronghold-in-indian-suvs/130986368",
-            "summary": "This could force buyers to reconsider diesel, potentially shifting them towards CNG, hybrid, or electric vehicles. Automakers are also diversifying their powertrain options to cater to evolving customer needs and regulatory changes.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-10T04:36:55+00:00",
-            "published_display": "10 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
+              "Capacity / Capex",
+              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           }
@@ -234469,7 +234485,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 45,
+      "unmapped_articles": 42,
       "filtered_low_signal": 1,
       "kept_articles": 69
     }
