@@ -539,12 +539,57 @@ def build_retail_module(
         if not category_table:
             continue
         cat_source_meta = category_table.get("source_meta", {})
+        snapshot_month = cat_source_meta.get("latest_month")
+        snapshot_rows = category_table.get("rows") or []
+        # When the OEM annexure history (refreshed monthly by the bulk
+        # PDF ingestion cron) is fresher than the source_snapshot.json
+        # FADA tables, the latest_oem_tables periodized M view used to
+        # render the prior month's rows + label even though the
+        # April-month OEM rows had already landed in oem_history.json.
+        # Prefer the history's latest record when it's strictly newer
+        # so the OEM Tracker M view tracks the most recent annexure.
+        # Raw history rows lack the snapshot enrichment fields
+        # (share_change_pp, unit_growth_pct, listed_companies) — apply
+        # the same derivation here so downstream consumers see a
+        # drop-in replacement.
+        history_latest = category_history[-1] if category_history else {}
+        history_month = history_latest.get("month")
+        if history_month and (not snapshot_month or history_month > snapshot_month):
+            raw_rows = history_latest.get("rows") or []
+            latest_rows = []
+            for row in raw_rows:
+                share_pct = row.get("share_pct")
+                prior_share_pct = row.get("prior_share_pct")
+                share_change = (
+                    round(share_pct - prior_share_pct, 2)
+                    if share_pct is not None and prior_share_pct is not None
+                    else None
+                )
+                prior_units = row.get("prior_units")
+                units = row.get("units")
+                unit_growth_pct = (
+                    round((units - prior_units) / prior_units * 100, 2)
+                    if prior_units and units is not None
+                    else None
+                )
+                latest_rows.append({
+                    **row,
+                    "share_change_pp": share_change,
+                    "unit_growth_pct": unit_growth_pct,
+                    "listed_companies": OEM_TO_LISTED.get(row.get("oem"), []),
+                })
+            effective_month = history_month
+            effective_url = history_latest.get("source_url") or cat_source_meta.get("url") or fada["source_url"]
+        else:
+            latest_rows = snapshot_rows
+            effective_month = snapshot_month or fada["latest_month"]
+            effective_url = cat_source_meta.get("url") or fada["source_url"]
         latest_oem_tables[fada_category] = build_periodized_oem_table_from_history(
             fada_category,
-            category_table.get("rows") or [],
+            latest_rows,
             category_history,
-            cat_source_meta.get("latest_month") or fada["latest_month"],
-            cat_source_meta.get("url") or fada["source_url"],
+            effective_month,
+            effective_url,
         )
 
     for live_category in ["2W", "3W", "CV", "TRACTOR", "CE", "E2W", "E3W", "EPV", "ECV"]:
