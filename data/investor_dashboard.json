@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T06:38:03.496999+00:00",
+  "generated_at": "2026-05-15T11:24:56.093426+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120272,10 +120272,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.92,
+        "value": 95.82,
         "unit": "\u20b9",
-        "delta_value": 0.2242,
-        "delta_label": "+1.77% in last week (Yahoo Finance)",
+        "delta_value": 0.1242,
+        "delta_label": "+1.66% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130687,7 +130687,7 @@
           },
           {
             "date": "2026-05-15",
-            "close": 95.92
+            "close": 95.82
           }
         ]
       }
@@ -130702,10 +130702,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13229.0,
-        "change_1d_pct": 1.18,
-        "change_1w_pct": -3.62,
-        "change_1m_pct": -0.79,
+        "price": 13221.0,
+        "change_1d_pct": 1.12,
+        "change_1w_pct": -3.68,
+        "change_1m_pct": -0.85,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12631.0,
@@ -130737,7 +130737,7 @@
           13172.0,
           13103.0,
           13075.0,
-          13229.0
+          13221.0
         ],
         "daily_closes": [
           {
@@ -140626,16 +140626,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 13229.0
+            "close": 13221.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3152.2,
-        "change_1d_pct": -0.68,
-        "change_1w_pct": -5.35,
-        "change_1m_pct": -2.18,
+        "price": 3123.1,
+        "change_1d_pct": -1.6,
+        "change_1w_pct": -6.22,
+        "change_1m_pct": -3.08,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3011.7,
@@ -140667,7 +140667,7 @@
           3176.0,
           3111.8,
           3173.9,
-          3152.2
+          3123.1
         ],
         "daily_closes": [
           {
@@ -150556,16 +150556,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 3152.2
+            "close": 3123.1
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5096.5,
-        "change_1d_pct": 0.38,
-        "change_1w_pct": -4.24,
-        "change_1m_pct": -1.22,
+        "price": 5064.5,
+        "change_1d_pct": -0.25,
+        "change_1w_pct": -4.84,
+        "change_1m_pct": -1.84,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5011.5,
@@ -150597,7 +150597,7 @@
           5082.5,
           4995.0,
           5077.0,
-          5096.5
+          5064.5
         ],
         "daily_closes": [
           {
@@ -160486,16 +160486,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 5096.5
+            "close": 5064.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3453.7,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": -6.54,
-        "change_1m_pct": -8.08,
+        "price": 3466.8,
+        "change_1d_pct": 0.17,
+        "change_1w_pct": -6.18,
+        "change_1m_pct": -7.73,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3391.4,
@@ -160527,7 +160527,7 @@
           3561.0,
           3527.2,
           3460.8,
-          3453.7
+          3466.8
         ],
         "daily_closes": [
           {
@@ -170416,16 +170416,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 3453.7
+            "close": 3466.8
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10421.0,
-        "change_1d_pct": -0.29,
-        "change_1w_pct": -2.71,
-        "change_1m_pct": 6.07,
+        "price": 10377.5,
+        "change_1d_pct": -0.7,
+        "change_1w_pct": -3.12,
+        "change_1m_pct": 5.62,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           8758.5,
@@ -170457,7 +170457,7 @@
           10397.0,
           10262.0,
           10451.0,
-          10421.0
+          10377.5
         ],
         "daily_closes": [
           {
@@ -180346,16 +180346,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 10421.0
+            "close": 10377.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1847.1,
-        "change_1d_pct": 0.21,
-        "change_1w_pct": -0.31,
-        "change_1m_pct": -0.29,
+        "price": 1825.2,
+        "change_1d_pct": -0.98,
+        "change_1w_pct": -1.49,
+        "change_1m_pct": -1.47,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1711.5,
@@ -180387,7 +180387,7 @@
           1877.9,
           1853.4,
           1843.2,
-          1847.1
+          1825.2
         ],
         "daily_closes": [
           {
@@ -181940,14 +181940,14 @@
           },
           {
             "date": "2026-05-15",
-            "close": 1847.1
+            "close": 1825.2
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7015.0,
-        "change_1d_pct": -0.27,
+        "price": 7014.5,
+        "change_1d_pct": -0.28,
         "change_1w_pct": -3.94,
         "change_1m_pct": -1.63,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
@@ -181981,7 +181981,7 @@
           7126.0,
           6971.5,
           7034.0,
-          7015.0
+          7014.5
         ],
         "daily_closes": [
           {
@@ -191870,16 +191870,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 7015.0
+            "close": 7014.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 360.8,
-        "change_1d_pct": 6.51,
-        "change_1w_pct": 1.51,
-        "change_1m_pct": 0.81,
+        "price": 356.55,
+        "change_1d_pct": 5.25,
+        "change_1w_pct": 0.31,
+        "change_1m_pct": -0.38,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191912,7 +191912,7 @@
           336.85,
           336.85,
           338.75,
-          360.8
+          356.55
         ],
         "daily_closes": [
           {
@@ -192481,16 +192481,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 360.8
+            "close": 356.55
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 381.8,
-        "change_1d_pct": 0.62,
-        "change_1w_pct": -11.42,
-        "change_1m_pct": -13.62,
+        "price": 377.95,
+        "change_1d_pct": -0.4,
+        "change_1w_pct": -12.31,
+        "change_1m_pct": -14.49,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -192523,7 +192523,7 @@
           387.05,
           384.25,
           379.45,
-          381.8
+          377.95
         ],
         "daily_closes": [
           {
@@ -193028,16 +193028,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 381.8
+            "close": 377.95
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 153.95,
-        "change_1d_pct": -0.25,
-        "change_1w_pct": -8.67,
-        "change_1m_pct": -12.89,
+        "price": 153.13,
+        "change_1d_pct": -0.78,
+        "change_1w_pct": -9.16,
+        "change_1m_pct": -13.35,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           148.44,
@@ -193069,7 +193069,7 @@
           155.95,
           153.21,
           154.34,
-          153.95
+          153.13
         ],
         "daily_closes": [
           {
@@ -202958,16 +202958,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 153.95
+            "close": 153.13
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3012.0,
-        "change_1d_pct": 0.43,
-        "change_1w_pct": -4.28,
-        "change_1m_pct": -8.23,
+        "price": 3000.2,
+        "change_1d_pct": 0.03,
+        "change_1w_pct": -4.65,
+        "change_1m_pct": -8.59,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2843.9,
@@ -202999,7 +202999,7 @@
           2960.7,
           2982.7,
           2999.2,
-          3012.0
+          3000.2
         ],
         "daily_closes": [
           {
@@ -212888,16 +212888,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 3012.0
+            "close": 3000.2
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 900.0,
-        "change_1d_pct": 1.66,
-        "change_1w_pct": -4.99,
-        "change_1m_pct": -1.66,
+        "price": 888.25,
+        "change_1d_pct": 0.33,
+        "change_1w_pct": -6.23,
+        "change_1m_pct": -2.94,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           817.6,
@@ -212929,7 +212929,7 @@
           881.25,
           887.65,
           885.3,
-          900.0
+          888.25
         ],
         "daily_closes": [
           {
@@ -222818,16 +222818,16 @@
           },
           {
             "date": "2026-05-15",
-            "close": 900.0
+            "close": 888.25
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 517.5,
-        "change_1d_pct": 5.78,
-        "change_1w_pct": 3.76,
-        "change_1m_pct": 11.06,
+        "price": 517.9,
+        "change_1d_pct": 5.87,
+        "change_1w_pct": 3.84,
+        "change_1m_pct": 11.15,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           408.9,
@@ -222859,7 +222859,7 @@
           476.9,
           491.1,
           489.2,
-          517.5
+          517.9
         ],
         "daily_closes": [
           {
@@ -232748,7 +232748,7 @@
           },
           {
             "date": "2026-05-15",
-            "close": 517.5
+            "close": 517.9
           }
         ]
       }
@@ -234004,10 +234004,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-15T06:37:14.408844+00:00",
+    "generated_at": "2026-05-15T11:24:10.553767+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 22,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -234077,18 +234077,18 @@
             ]
           },
           {
-            "title": "JLR profit collapses to \u00a314 mn in FY26 as tariffs, China slump and cyberattack hit performance",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jaguar-land-rovers-profit-plummets-to-14-million-amid-cyberattack-and-tariff-challenges/131106966",
-            "summary": "The pressure has also intensified due to a decline in luxury vehicle demand in China, one of the brand\u2019s key growth markets.",
+            "title": "Tata Motors shares surge 8% despite Q4 profit drop; brokerages split on outlook",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-shares-surge-8-despite-q4-profit-decline-brokerages-split-on-future-outlook/131112642",
+            "summary": "Tata Motors PV shares surged on Friday following the company's Q4 FY26 results. Despite a profit drop, revenue increased. Brokerages offered varied outlooks on the stock's future performance.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-15T03:05:40+00:00",
+            "published_at": "2026-05-15T08:58:41+00:00",
             "published_display": "15 May 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Luxury"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Filing / Disclosure"
             ]
           }
         ]
@@ -234097,6 +234097,23 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "SKF India Q4 Revenue Rises 20.7%; Profit Declines",
+            "url": "https://www.autocarpro.in/NEWS/skf-india-q4-revenue-rises-207-profit-declines-132613",
+            "summary": "SKF India Limited reported a 20.7% year-on-year increase in standalone revenue from operations for the quarter ended March 31, 2026, at Rs 594.54 crore, driven by demand across automotive segments including two-wheelers, three-wheelers, passenger vehicles and commercial vehicles. The company\u2019s profit before tax (PBT) for the quarter declined 58.4% to Rs 46.1 crore from Rs 110.74 crore in the corresponding quarter...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-14T20:38:28+00:00",
+            "published_display": "14 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Two-Wheelers",
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Musashi to Supply Powertrains for Kinetic Green Two Wheelers",
             "url": "https://www.autocarpro.in/NEWS/musashi-to-supply-powertrains-for-kinetic-green-two-wheelers-132569",
@@ -234330,6 +234347,23 @@
             ]
           },
           {
+            "title": "VIDEO: BKT\u2019s India Push: Branding, Capacity Expansion & EV Readiness",
+            "url": "https://www.autocarpro.in/Video/video-bkts-india-push-branding-capacity-expansion-ev-readiness-132609",
+            "summary": "In this exclusive conversation, Autocar Professional interacts with Balkrishna Industries Limited's Senior President & Director Satish Sharma, who talks about the company\u2019s global strategy, export dependence, India growth plans and the future of the tyre industry amid economic and geopolitical uncertainty. From building a global brand before gaining visibility in India, to expanding in the aftermarket space and pr...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-14T19:28:46+00:00",
+            "published_display": "14 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Munjal Auto Wins New Two-Wheeler Component Contract with Honda",
             "url": "https://www.autocarpro.in/NEWS/munjal-auto-wins-new-two-wheeler-component-contract-with-honda-132535",
             "summary": "Munjal Auto Industries Limited announced on May 11, 2026, that it has been awarded a new business contract from Honda Motorcycle and Scooter India Private Limited. The agreement involves the manufacturing and supply of sheet metal stamping and welding parts for the two wheeler manufacturer.",
@@ -234339,22 +234373,6 @@
             "importance_score": 8,
             "segment_tags": [
               "Two-Wheelers",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Abu Dhabi Backs Motherson's Automotive Plant in KEZAD Industrial Zone",
-            "url": "https://www.autocarpro.in/NEWS/abu-dhabi-backs-mothersons-automotive-plant-in-kezad-industrial-zone-132465",
-            "summary": "The Abu Dhabi Investment Office (ADIO) announced on May 6, 2026, its support for a manufacturing hub being set up by Samvardhana Motherson International Limited (Motherson) within the Khalifa Economic Zones Abu Dhabi (KEZAD). The facility will produce a range of automotive components for Motherson's global operations as well as for third-party original equipment manufacturer (OEM) customers, and is positioned to f...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-07T09:43:40+00:00",
-            "published_display": "07 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
               "Components"
             ],
             "signal_tags": [
@@ -234421,7 +234439,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 42,
+      "unmapped_articles": 43,
       "filtered_low_signal": 1,
       "kept_articles": 69
     }
