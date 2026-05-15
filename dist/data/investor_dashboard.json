@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T03:31:48.420474+00:00",
+  "generated_at": "2026-05-15T06:38:03.496999+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47687,7 +47687,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-14",
+          "latest_release_date": "2026-05-15",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120057,9 +120057,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-14T17:07:00.950818+00:00",
+      "generated_at": "2026-05-15T06:37:39.795109+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 4,
       "items": [
         {
           "title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27",
@@ -120075,37 +120075,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-651664/131097548.cms"
-        },
-        {
-          "title": "New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L)",
-          "summary": "BYD Fangchengbao Bao 5 and Bao 8 Flash Charging Edition brings 1000V charging, Gen 2 Blade Battery and Disus P Ultra suspension tech The post New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L) appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-byd-bao-8-and-bao-5-flash-charging-editions-launched-with-disus-p-ultra-12546500.html",
-          "source": "RushLane",
-          "published_at": "2026-05-14T08:11:31+00:00",
-          "published_display": "14 May 2026",
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/byd-suv-can-drive-on-3-wheels.jpeg"
-        },
-        {
-          "title": "Honda To Launch New Sub 4m SUV and Mid Size SUV By 2028 in India \u2013 CEO",
-          "summary": "Honda revealed that starting from 2028, it will introduce new India-focused products in two major categories \u2014 vehicles under 4 metres in length and the mid-size segment. The post Honda To Launch New Sub 4m SUV and Mid Size SUV By 2028 in India \u2013 CEO appeared first on RushLane .",
-          "url": "https://www.rushlane.com/honda-to-launch-new-sub-4m-suv-and-mid-size-suv-by-2028-in-india-ceo-12546499.html",
-          "source": "RushLane",
-          "published_at": "2026-05-14T08:09:45+00:00",
-          "published_display": "14 May 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/honda-ceo-2-new-suvs-launch-india-sub-4m-mid-size-2.jpeg"
         },
         {
           "title": "Honda resets global strategy, to launch 15 hybrid models by 2030",
@@ -120151,19 +120120,6 @@
             "Components"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-71368/131039300.cms"
-        },
-        {
-          "title": "Skoda Auto India unveils upgraded Kodiaq range with Lounge variant, ADAS upgrades",
-          "summary": "The Kodiaq Sportline gets a key upgrade for 2026 with the addition of a full suite of advanced driver assistance systems (ADAS), including adaptive cruise control, lane assist, blind spot detection, rear traffic alert and exit warning.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/skoda-auto-india-launches-upgraded-kodiaq-range-with-exciting-lounge-variant-and-adas-features/131007447",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-11T08:04:08+00:00",
-          "published_display": "11 May 2026",
-          "company": "Skoda Auto India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-124566/131007447.cms"
         }
       ],
       "companies": [
@@ -120176,20 +120132,12 @@
           "latest_title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27"
         },
         {
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-05-14T08:11:31+00:00",
-          "latest_title": "New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L)"
-        },
-        {
           "company": "Honda Cars India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-05-14T08:09:45+00:00",
-          "latest_title": "Honda To Launch New Sub 4m SUV and Mid Size SUV By 2028 in India \u2013 CEO"
+          "count": 1,
+          "latest_published_at": "2026-05-14T07:43:33+00:00",
+          "latest_title": "Honda resets global strategy, to launch 15 hybrid models by 2030"
         },
         {
           "company": "Kia India",
@@ -120198,14 +120146,6 @@
           "count": 1,
           "latest_published_at": "2026-05-13T12:45:23+00:00",
           "latest_title": "Kia India launches BaaS financing model for Carens Clavis EV"
-        },
-        {
-          "company": "Skoda Auto India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-05-11T08:04:08+00:00",
-          "latest_title": "Skoda Auto India unveils upgraded Kodiaq range with Lounge variant, ADAS upgrades"
         }
       ],
       "source_meta": {
@@ -120216,7 +120156,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-14",
+    "as_of_date": "2026-05-15",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -120332,10 +120272,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.75,
+        "value": 95.92,
         "unit": "\u20b9",
-        "delta_value": 0.12,
-        "delta_label": "+1.21% in last week (Yahoo Finance)",
+        "delta_value": 0.2242,
+        "delta_label": "+1.77% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130742,8 +130682,12 @@
             "close": 95.633
           },
           {
-            "date": "2026-05-14",
-            "close": 95.753
+            "date": "2026-05-13",
+            "close": 95.6958
+          },
+          {
+            "date": "2026-05-15",
+            "close": 95.92
           }
         ]
       }
@@ -130751,20 +130695,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-14",
+    "as_of_date": "2026-05-15",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13075.0,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": -5.05,
-        "change_1m_pct": -1.61,
+        "price": 13229.0,
+        "change_1d_pct": 1.18,
+        "change_1w_pct": -3.62,
+        "change_1m_pct": -0.79,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          12509.0,
           12631.0,
           12688.0,
           12798.0,
@@ -130793,7 +130736,8 @@
           13483.0,
           13172.0,
           13103.0,
-          13075.0
+          13075.0,
+          13229.0
         ],
         "daily_closes": [
           {
@@ -140679,18 +140623,21 @@
           {
             "date": "2026-05-14",
             "close": 13075.0
+          },
+          {
+            "date": "2026-05-15",
+            "close": 13229.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3173.9,
-        "change_1d_pct": 2.0,
-        "change_1w_pct": -5.84,
-        "change_1m_pct": -2.54,
+        "price": 3152.2,
+        "change_1d_pct": -0.68,
+        "change_1w_pct": -5.35,
+        "change_1m_pct": -2.18,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3031.5,
           3011.7,
           3021.6,
           3006.6,
@@ -140719,7 +140666,8 @@
           3245.9,
           3176.0,
           3111.8,
-          3173.9
+          3173.9,
+          3152.2
         ],
         "daily_closes": [
           {
@@ -150605,18 +150553,21 @@
           {
             "date": "2026-05-14",
             "close": 3173.9
+          },
+          {
+            "date": "2026-05-15",
+            "close": 3152.2
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5077.0,
-        "change_1d_pct": 1.64,
-        "change_1w_pct": -4.98,
-        "change_1m_pct": -3.98,
+        "price": 5096.5,
+        "change_1d_pct": 0.38,
+        "change_1w_pct": -4.24,
+        "change_1m_pct": -1.22,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5122.0,
           5011.5,
           5103.5,
           5051.0,
@@ -150645,7 +150596,8 @@
           5228.5,
           5082.5,
           4995.0,
-          5077.0
+          5077.0,
+          5096.5
         ],
         "daily_closes": [
           {
@@ -160531,18 +160483,21 @@
           {
             "date": "2026-05-14",
             "close": 5077.0
+          },
+          {
+            "date": "2026-05-15",
+            "close": 5096.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3460.8,
-        "change_1d_pct": -1.88,
-        "change_1w_pct": -6.63,
-        "change_1m_pct": -8.52,
+        "price": 3453.7,
+        "change_1d_pct": -0.21,
+        "change_1w_pct": -6.54,
+        "change_1m_pct": -8.08,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3425.8,
           3391.4,
           3487.8,
           3470.6,
@@ -160571,7 +160526,8 @@
           3613.7,
           3561.0,
           3527.2,
-          3460.8
+          3460.8,
+          3453.7
         ],
         "daily_closes": [
           {
@@ -170457,18 +170413,21 @@
           {
             "date": "2026-05-14",
             "close": 3460.8
+          },
+          {
+            "date": "2026-05-15",
+            "close": 3453.7
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10451.0,
-        "change_1d_pct": 1.84,
-        "change_1w_pct": -1.45,
-        "change_1m_pct": 5.94,
+        "price": 10421.0,
+        "change_1d_pct": -0.29,
+        "change_1w_pct": -2.71,
+        "change_1m_pct": 6.07,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          8895.5,
           8758.5,
           8942.5,
           9049.5,
@@ -170497,7 +170456,8 @@
           10595.5,
           10397.0,
           10262.0,
-          10451.0
+          10451.0,
+          10421.0
         ],
         "daily_closes": [
           {
@@ -180383,18 +180343,21 @@
           {
             "date": "2026-05-14",
             "close": 10451.0
+          },
+          {
+            "date": "2026-05-15",
+            "close": 10421.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1843.2,
-        "change_1d_pct": -0.55,
-        "change_1w_pct": 0.4,
-        "change_1m_pct": 3.47,
+        "price": 1847.1,
+        "change_1d_pct": 0.21,
+        "change_1w_pct": -0.31,
+        "change_1m_pct": -0.29,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1716.2,
           1711.5,
           1691.4,
           1706.1,
@@ -180423,7 +180386,8 @@
           1906.9,
           1877.9,
           1853.4,
-          1843.2
+          1843.2,
+          1847.1
         ],
         "daily_closes": [
           {
@@ -181973,18 +181937,21 @@
           {
             "date": "2026-05-14",
             "close": 1843.2
+          },
+          {
+            "date": "2026-05-15",
+            "close": 1847.1
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7034.0,
-        "change_1d_pct": 0.9,
-        "change_1w_pct": -4.01,
-        "change_1m_pct": -1.32,
+        "price": 7015.0,
+        "change_1d_pct": -0.27,
+        "change_1w_pct": -3.94,
+        "change_1m_pct": -1.63,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          6825.5,
           6649.5,
           6596.0,
           6605.5,
@@ -182013,7 +181980,8 @@
           7202.5,
           7126.0,
           6971.5,
-          7034.0
+          7034.0,
+          7015.0
         ],
         "daily_closes": [
           {
@@ -191899,19 +191867,22 @@
           {
             "date": "2026-05-14",
             "close": 7034.0
+          },
+          {
+            "date": "2026-05-15",
+            "close": 7015.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 338.75,
-        "change_1d_pct": 0.56,
-        "change_1w_pct": -5.71,
-        "change_1m_pct": -1.95,
+        "price": 360.8,
+        "change_1d_pct": 6.51,
+        "change_1w_pct": 1.51,
+        "change_1m_pct": 0.81,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          296.2,
           302.95,
           303.3,
           307.4,
@@ -191940,7 +191911,8 @@
           346.0,
           336.85,
           336.85,
-          338.75
+          338.75,
+          360.8
         ],
         "daily_closes": [
           {
@@ -192506,19 +192478,22 @@
           {
             "date": "2026-05-14",
             "close": 338.75
+          },
+          {
+            "date": "2026-05-15",
+            "close": 360.8
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 379.45,
-        "change_1d_pct": -1.25,
-        "change_1w_pct": -12.58,
-        "change_1m_pct": -12.81,
+        "price": 381.8,
+        "change_1d_pct": 0.62,
+        "change_1w_pct": -11.42,
+        "change_1m_pct": -13.62,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          396.05,
           388.1,
           391.3,
           396.05,
@@ -192547,7 +192522,8 @@
           411.0,
           387.05,
           384.25,
-          379.45
+          379.45,
+          381.8
         ],
         "daily_closes": [
           {
@@ -193049,18 +193025,21 @@
           {
             "date": "2026-05-14",
             "close": 379.45
+          },
+          {
+            "date": "2026-05-15",
+            "close": 381.8
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 154.34,
-        "change_1d_pct": 0.74,
-        "change_1w_pct": -9.63,
-        "change_1m_pct": -12.05,
+        "price": 153.95,
+        "change_1d_pct": -0.25,
+        "change_1w_pct": -8.67,
+        "change_1m_pct": -12.89,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          149.11,
           148.44,
           150.91,
           152.93,
@@ -193089,7 +193068,8 @@
           161.52,
           155.95,
           153.21,
-          154.34
+          154.34,
+          153.95
         ],
         "daily_closes": [
           {
@@ -202975,18 +202955,21 @@
           {
             "date": "2026-05-14",
             "close": 154.34
+          },
+          {
+            "date": "2026-05-15",
+            "close": 153.95
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2999.2,
-        "change_1d_pct": 0.55,
-        "change_1w_pct": -10.36,
-        "change_1m_pct": -7.17,
+        "price": 3012.0,
+        "change_1d_pct": 0.43,
+        "change_1w_pct": -4.28,
+        "change_1m_pct": -8.23,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2827.2,
           2843.9,
           2893.3,
           2909.8,
@@ -203015,7 +202998,8 @@
           2966.7,
           2960.7,
           2982.7,
-          2999.2
+          2999.2,
+          3012.0
         ],
         "daily_closes": [
           {
@@ -212901,18 +212885,21 @@
           {
             "date": "2026-05-14",
             "close": 2999.2
+          },
+          {
+            "date": "2026-05-15",
+            "close": 3012.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 885.3,
-        "change_1d_pct": -0.26,
-        "change_1w_pct": -2.24,
-        "change_1m_pct": -2.86,
+        "price": 900.0,
+        "change_1d_pct": 1.66,
+        "change_1w_pct": -4.99,
+        "change_1m_pct": -1.66,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          811.5,
           817.6,
           828.15,
           835.0,
@@ -212941,7 +212928,8 @@
           921.65,
           881.25,
           887.65,
-          885.3
+          885.3,
+          900.0
         ],
         "daily_closes": [
           {
@@ -222827,18 +222815,21 @@
           {
             "date": "2026-05-14",
             "close": 885.3
+          },
+          {
+            "date": "2026-05-15",
+            "close": 900.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 489.2,
-        "change_1d_pct": -0.39,
-        "change_1w_pct": -0.83,
-        "change_1m_pct": 3.68,
+        "price": 517.5,
+        "change_1d_pct": 5.78,
+        "change_1w_pct": 3.76,
+        "change_1m_pct": 11.06,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          413.1,
           408.9,
           414.6,
           412.3,
@@ -222867,7 +222858,8 @@
           492.75,
           476.9,
           491.1,
-          489.2
+          489.2,
+          517.5
         ],
         "daily_closes": [
           {
@@ -232753,6 +232745,10 @@
           {
             "date": "2026-05-14",
             "close": 489.2
+          },
+          {
+            "date": "2026-05-15",
+            "close": 517.5
           }
         ]
       }
@@ -232760,7 +232756,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-14",
+    "as_of_date": "2026-05-15",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -234008,7 +234004,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-14T17:06:37.007363+00:00",
+    "generated_at": "2026-05-15T06:37:14.408844+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 22,
@@ -234081,18 +234077,18 @@
             ]
           },
           {
-            "title": "2027 Hyundai Bayon SUV Spied In India \u2013 New Mid Size SUV Below Creta",
-            "url": "https://www.rushlane.com/2027-hyundai-bayon-suv-spied-in-india-new-mid-size-suv-below-creta-12546540.html",
-            "summary": "Internally codenamed BC4i, the new SUV will slot between Venue and Creta in Hyundai\u2019s lineup - Launch by March 2027 The post 2027 Hyundai Bayon SUV Spied In India \u2013 New Mid Size SUV Below Creta appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-14T14:52:06+00:00",
-            "published_display": "14 May 2026",
+            "title": "JLR profit collapses to \u00a314 mn in FY26 as tariffs, China slump and cyberattack hit performance",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jaguar-land-rovers-profit-plummets-to-14-million-amid-cyberattack-and-tariff-challenges/131106966",
+            "summary": "The pressure has also intensified due to a decline in luxury vehicle demand in China, one of the brand\u2019s key growth markets.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-15T03:05:40+00:00",
+            "published_display": "15 May 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles"
+              "Luxury"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "General"
             ]
           }
         ]
@@ -234211,6 +234207,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "New Maruti Electric Car Spied Ahead Of Launch \u2013 Upcoming YMC EV?",
+            "url": "https://www.rushlane.com/new-maruti-electric-car-spied-ahead-of-launch-upcoming-ymc-ev-12546563.html",
+            "summary": "New Maruti electric car has been spied in detail for the first time, showing its rear, side and front design ahead of its formal launch The post New Maruti Electric Car Spied Ahead Of Launch \u2013 Upcoming YMC EV? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-15T04:52:12+00:00",
+            "published_display": "15 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "GM-LG's restart date at Ohio battery plant uncertain",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/gm-lgs-restart-date-at-ohio-battery-plant-uncertain/131058011",
             "summary": "GM and its partner on \u200cthe factory, \u2060South Korea's \u2060LG Energy Solution, in January idled the facility for six months in response \u200bto weak demand for electric vehicles. That put the timeline for the return \u200bof about 850 workers sometime in June.",
@@ -234274,23 +234286,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Bharat Forge Takes \u20b9450-Crore EV Hit, Begins Europe Steel Restructuring",
-            "url": "https://www.autocarpro.in/NEWS/bharat-forge-takes-\u20b9450-crore-ev-hit-begins-europe-steel-restructuring-132478",
-            "summary": "Bharat Forge Ltd has taken a \u20b9450-crore impairment on its investment in KPTL\u2019s e-mobility division, signalling a reassessment of its electric vehicle strategy at a time when global EV adoption has become more uneven than initially expected. \u201cThe Rs 450 Crores impairment during the quarter of our investments in KPTL (E-mobility division) is an acceptance of the need to take a fresh look at how we address the EV opp...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-07T20:52:54+00:00",
-            "published_display": "07 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -234299,20 +234294,39 @@
         "label": "Components",
         "items": [
           {
-            "title": "New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L)",
-            "url": "https://www.rushlane.com/2026-byd-bao-8-and-bao-5-flash-charging-editions-launched-with-disus-p-ultra-12546500.html",
-            "summary": "BYD Fangchengbao Bao 5 and Bao 8 Flash Charging Edition brings 1000V charging, Gen 2 Blade Battery and Disus P Ultra suspension tech The post New BYD SUV Can Drive On 3 Wheels \u2013 Launch Price 305k Yuan (Rs 43 L) appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-14T08:11:31+00:00",
-            "published_display": "14 May 2026",
+            "title": "India's EV battery demand to grow 10 times to 200 GWh by 2032: IESA",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-ev-battery-demand-to-grow-10-times-to-200-gwh-by-2032-iesa/131108393",
+            "summary": "The market is transforming with advancements in batteries, motors, and manufacturing. Electric two-wheelers lead sales, but passenger cars and light commercial fleets will drive future expansion. New battery chemistries and motor technologies are emerging.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-15T04:53:57+00:00",
+            "published_display": "15 May 2026",
             "importance_score": 8,
             "segment_tags": [
               "Passenger Vehicles",
+              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
+              "Capacity / Capex",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Clean Electric Deploys 3,000+ FLO150 Battery Packs for Electric L5 3Ws",
+            "url": "https://evreporter.com/clean-electric-deploys-3000-flo150-battery-packs-for-electric-l5-3ws",
+            "summary": "The post Clean Electric Deploys 3,000+ FLO150 Battery Packs for Electric L5 3Ws appeared first at EVreporter on EVreporter . Clean Electric is a Series-A funded company focused on designing and manufacturing lithium-ion batteries for electric vehicles and energy storage The post Clean Electric Deploys 3,000+ FLO150 Battery Packs for Electric L5 3Ws appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-05-15T04:41:00+00:00",
+            "published_display": "15 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           },
           {
@@ -234361,23 +234375,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Musashi India signs LOI with Kinetic Green for 2W EV powertrain supply",
-            "url": "https://evreporter.com/musashi-india-signs-loi-with-kinetic-green-for-2w-ev-powertrain-supply",
-            "summary": "The post Musashi India signs LOI with Kinetic Green for 2W EV powertrain supply appeared first at EVreporter on EVreporter . Musashi India Pvt. Ltd. has signed a Letter of Intent (LOI) with Kinetic Green Energy & Power Solutions Limited for The post Musashi India signs LOI with Kinetic Green for 2W EV powertrain supply appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-05-13T07:16:27+00:00",
-            "published_display": "13 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -234476,7 +234473,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-14",
+    "as_of_date": "2026-05-15",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
