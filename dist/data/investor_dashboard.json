@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T17:00:29.215881+00:00",
+  "generated_at": "2026-05-16T05:58:52.202549+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47687,7 +47687,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-15",
+          "latest_release_date": "2026-05-16",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120141,7 +120141,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-15",
+    "as_of_date": "2026-05-16",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -120259,8 +120259,8 @@
         "label": "USD / INR",
         "value": 95.95,
         "unit": "\u20b9",
-        "delta_value": 0.2592,
-        "delta_label": "+1.81% in last week (Yahoo Finance)",
+        "delta_value": 0.2451,
+        "delta_label": "+1.62% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130671,7 +130671,11 @@
             "close": 95.6958
           },
           {
-            "date": "2026-05-15",
+            "date": "2026-05-14",
+            "close": 95.7099
+          },
+          {
+            "date": "2026-05-16",
             "close": 95.955
           }
         ]
@@ -130680,7 +130684,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-15",
+    "as_of_date": "2026-05-16",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -232741,7 +232745,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-15",
+    "as_of_date": "2026-05-16",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -233989,7 +233993,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-15T16:59:16.146773+00:00",
+    "generated_at": "2026-05-16T05:57:56.033923+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -234224,6 +234228,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "Tata Sierra EV Launch Soon \u2013 2 New Cars,  4 Facelifts In 2026",
+            "url": "https://www.rushlane.com/tata-sierra-ev-launch-soon-2-new-cars-4-facelifts-in-2026-12546644.html",
+            "summary": "Along with the new products, Tata is also likely to introduce the facelift versions of Tiago/EV and Tigor/EV The post Tata Sierra EV Launch Soon \u2013 2 New Cars, 4 Facelifts In 2026 appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-16T03:18:31+00:00",
+            "published_display": "16 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Hyundai Sales Breakup April 2026 \u2013 Creta, Venue, Aura, Exter, i20, i10, Verna, Alcazar",
             "url": "https://www.rushlane.com/hyundai-sales-breakup-april-2026-creta-venue-aura-exter-12546283.html",
             "summary": "Hyundai plans extensive expansion of their product lineup both across both ICE and EV segments The post Hyundai Sales Breakup April 2026 \u2013 Creta, Venue, Aura, Exter, i20, i10, Verna, Alcazar appeared first on RushLane .",
@@ -234284,22 +234304,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "GM-LG's restart date at Ohio battery plant uncertain",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/gm-lgs-restart-date-at-ohio-battery-plant-uncertain/131058011",
-            "summary": "GM and its partner on \u200cthe factory, \u2060South Korea's \u2060LG Energy Solution, in January idled the facility for six months in response \u200bto weak demand for electric vehicles. That put the timeline for the return \u200bof about 850 workers sometime in June.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-13T06:55:05+00:00",
-            "published_display": "13 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           }
@@ -234507,7 +234511,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-15",
+    "as_of_date": "2026-05-16",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
