@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T16:03:52.025384+00:00",
+  "generated_at": "2026-05-17T06:28:39.174030+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47687,7 +47687,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-16",
+          "latest_release_date": "2026-05-17",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120141,7 +120141,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-16",
+    "as_of_date": "2026-05-17",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -130684,7 +130684,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-16",
+    "as_of_date": "2026-05-17",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -232745,17 +232745,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-16",
+    "as_of_date": "2026-05-17",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-05-16",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
       {
         "company": "Action Construction Equipment",
         "ticker": "ACE",
@@ -232791,14 +232783,6 @@
     ],
     "upcoming_all": [
       {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-05-16",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
-      {
         "company": "Action Construction Equipment",
         "ticker": "ACE",
         "date": "2026-05-20",
@@ -232832,6 +232816,14 @@
       }
     ],
     "recent_past": [
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-05-16",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
+      },
       {
         "company": "Hero MotoCorp",
         "ticker": "HEROMOTOCO",
@@ -232871,18 +232863,10 @@
         "period_label": "Financial Results/Dividend",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
-      },
-      {
-        "company": "TVS Motor",
-        "ticker": "TVSMOTOR",
-        "date": "2026-05-13",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TVSMOTOR"
       }
     ],
-    "next_14_count": 5,
-    "upcoming_count": 5
+    "next_14_count": 4,
+    "upcoming_count": 4
   },
   "market_insights": [
     {
@@ -234546,7 +234530,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-16",
+    "as_of_date": "2026-05-17",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
