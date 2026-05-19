@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T06:53:00.541641+00:00",
+  "generated_at": "2026-05-19T12:15:22.699891+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120057,24 +120057,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-18T17:34:15.512787+00:00",
+      "generated_at": "2026-05-19T12:14:58.303653+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
         {
-          "title": "Upcoming Mid-Size SUV Launches \u2013 Creta, Chery, FJ, Hybrid (Seltos, Duster, XUV7XO)",
-          "summary": "Upcoming Mid-Size SUV launches in the country include offerings from Tata, Mahindra, JSW, Hyundai, Kia, Toyota, Renault, Nissan and more The post Upcoming Mid-Size SUV Launches \u2013 Creta, Chery, FJ, Hybrid (Seltos, Duster, XUV7XO) appeared first on RushLane .",
-          "url": "https://www.rushlane.com/upcoming-mid-size-suv-launches-creta-chery-fj-hybrid-seltos-duster-xuv7xo-12546743.html",
-          "source": "RushLane",
-          "published_at": "2026-05-18T10:30:20+00:00",
-          "published_display": "18 May 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
+          "title": "BYD unveils upgraded flagship Denza SUV to bolster premium market push",
+          "summary": "Li Hui, \u200cgeneral manager \u2060of the \u2060Denza brand, said during an event attended by car owners and social media influencers in Guangzhou that \u200bthe revamped model offers over 100 upgrades, including extended battery range and a fast-charging capability that BYD \u200bhad previously described as setting \"an industry benchmark.\"",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-unveils-upgraded-flagship-denza-suv-to-bolster-premium-market-push/131195065",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-19T08:22:26+00:00",
+          "published_display": "19 May 2026",
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
           "segment_tags": [
-            "Passenger Vehicles"
+            "Passenger Vehicles",
+            "EV"
           ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2025/10/2026-toyota-fj-cruiser-revealed-baby-land-cruiser-new-8.jpg"
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-52710/131195065.cms"
         },
         {
           "title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27",
@@ -120090,31 +120091,16 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-651664/131097548.cms"
-        },
-        {
-          "title": "Honda resets global strategy, to launch 15 hybrid models by 2030",
-          "summary": "The company also plans to introduce brand-new India-centric models from 2028 with a focus on sub-four-metre and mid-size SUVs for the local market.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-announces-ambitious-hybrid-strategy-15-new-models-by-2030/131086208",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-14T07:43:33+00:00",
-          "published_display": "14 May 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1368509/131086208.cms"
         }
       ],
       "companies": [
         {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-05-18T10:30:20+00:00",
-          "latest_title": "Upcoming Mid-Size SUV Launches \u2013 Creta, Chery, FJ, Hybrid (Seltos, Duster, XUV7XO)"
+          "latest_published_at": "2026-05-19T08:22:26+00:00",
+          "latest_title": "BYD unveils upgraded flagship Denza SUV to bolster premium market push"
         },
         {
           "company": "Tata Motors",
@@ -120123,19 +120109,11 @@
           "count": 1,
           "latest_published_at": "2026-05-14T15:39:35+00:00",
           "latest_title": "Tata Motors PV to launch first flex-fuel vehicle by year-end; targets industry-beating growth in FY27"
-        },
-        {
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-05-14T07:43:33+00:00",
-          "latest_title": "Honda resets global strategy, to launch 15 hybrid models by 2030"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-18"
+        "latest_release_date": "2026-05-19"
       }
     }
   },
@@ -120257,10 +120235,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 96.39,
+        "value": 96.53,
         "unit": "\u20b9",
-        "delta_value": 0.4147,
-        "delta_label": "+1.04% in last week (Yahoo Finance)",
+        "delta_value": 0.5622,
+        "delta_label": "+1.20% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130668,7 +130646,7 @@
           },
           {
             "date": "2026-05-19",
-            "close": 96.385
+            "close": 96.5325
           }
         ]
       }
@@ -130683,10 +130661,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13060.0,
-        "change_1d_pct": 0.34,
-        "change_1w_pct": -0.85,
-        "change_1m_pct": -2.9,
+        "price": 12956.0,
+        "change_1d_pct": -0.46,
+        "change_1w_pct": -1.64,
+        "change_1m_pct": -3.67,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12798.0,
@@ -130718,7 +130696,7 @@
           13075.0,
           13221.0,
           13016.0,
-          13060.0
+          12956.0
         ],
         "daily_closes": [
           {
@@ -140603,16 +140581,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 13060.0
+            "close": 12956.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3147.9,
-        "change_1d_pct": 2.08,
-        "change_1w_pct": -0.88,
-        "change_1m_pct": -2.29,
+        "price": 3092.3,
+        "change_1d_pct": 0.28,
+        "change_1w_pct": -2.64,
+        "change_1m_pct": -4.01,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3006.6,
@@ -140644,7 +140622,7 @@
           3173.9,
           3123.1,
           3083.7,
-          3147.9
+          3092.3
         ],
         "daily_closes": [
           {
@@ -150529,16 +150507,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 3147.9
+            "close": 3092.3
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5025.5,
-        "change_1d_pct": 1.38,
-        "change_1w_pct": -1.12,
-        "change_1m_pct": -4.87,
+        "price": 5007.5,
+        "change_1d_pct": 1.02,
+        "change_1w_pct": -1.48,
+        "change_1m_pct": -5.21,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5051.0,
@@ -150570,7 +150548,7 @@
           5077.0,
           5064.5,
           4957.0,
-          5025.5
+          5007.5
         ],
         "daily_closes": [
           {
@@ -160455,16 +160433,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 5025.5
+            "close": 5007.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3285.5,
-        "change_1d_pct": -0.17,
-        "change_1w_pct": -7.74,
-        "change_1m_pct": -12.66,
+        "price": 3283.4,
+        "change_1d_pct": -0.23,
+        "change_1w_pct": -7.8,
+        "change_1m_pct": -12.72,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3470.6,
@@ -160496,7 +160474,7 @@
           3460.8,
           3466.8,
           3291.0,
-          3285.5
+          3283.4
         ],
         "daily_closes": [
           {
@@ -170381,16 +170359,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 3285.5
+            "close": 3283.4
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10249.5,
-        "change_1d_pct": 0.5,
-        "change_1w_pct": -1.42,
-        "change_1m_pct": 4.55,
+        "price": 10205.0,
+        "change_1d_pct": 0.06,
+        "change_1w_pct": -1.85,
+        "change_1m_pct": 4.1,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9049.5,
@@ -170422,7 +170400,7 @@
           10451.0,
           10377.5,
           10198.5,
-          10249.5
+          10205.0
         ],
         "daily_closes": [
           {
@@ -180307,16 +180285,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 10249.5
+            "close": 10205.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1787.3,
-        "change_1d_pct": 0.3,
-        "change_1w_pct": -4.82,
-        "change_1m_pct": -5.23,
+        "price": 1780.3,
+        "change_1d_pct": -0.09,
+        "change_1w_pct": -5.2,
+        "change_1m_pct": -5.6,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1706.1,
@@ -180348,7 +180326,7 @@
           1843.2,
           1825.2,
           1781.9,
-          1787.3
+          1780.3
         ],
         "daily_closes": [
           {
@@ -181909,16 +181887,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 1787.3
+            "close": 1780.3
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 6903.5,
-        "change_1d_pct": -0.14,
-        "change_1w_pct": -3.12,
-        "change_1m_pct": -4.69,
+        "price": 6882.5,
+        "change_1d_pct": -0.44,
+        "change_1w_pct": -3.42,
+        "change_1m_pct": -4.98,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           6605.5,
@@ -181950,7 +181928,7 @@
           7034.0,
           7014.5,
           6913.0,
-          6903.5
+          6882.5
         ],
         "daily_closes": [
           {
@@ -191835,16 +191813,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 6903.5
+            "close": 6882.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 364.8,
-        "change_1d_pct": 3.3,
-        "change_1w_pct": 8.3,
-        "change_1m_pct": 1.31,
+        "price": 361.2,
+        "change_1d_pct": 2.28,
+        "change_1w_pct": 7.23,
+        "change_1m_pct": 0.31,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191877,7 +191855,7 @@
           338.75,
           356.55,
           353.15,
-          364.8
+          361.2
         ],
         "daily_closes": [
           {
@@ -192454,16 +192432,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 364.8
+            "close": 361.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 378.3,
-        "change_1d_pct": -0.39,
-        "change_1w_pct": -2.26,
-        "change_1m_pct": -13.71,
+        "price": 378.65,
+        "change_1d_pct": -0.3,
+        "change_1w_pct": -2.17,
+        "change_1m_pct": -13.63,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -192496,7 +192474,7 @@
           379.45,
           377.95,
           379.8,
-          378.3
+          378.65
         ],
         "daily_closes": [
           {
@@ -193009,16 +192987,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 378.3
+            "close": 378.65
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 152.78,
-        "change_1d_pct": 1.09,
-        "change_1w_pct": -2.03,
-        "change_1m_pct": -13.17,
+        "price": 151.38,
+        "change_1d_pct": 0.16,
+        "change_1w_pct": -2.93,
+        "change_1m_pct": -13.97,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           152.93,
@@ -193050,7 +193028,7 @@
           154.34,
           153.13,
           151.14,
-          152.78
+          151.38
         ],
         "daily_closes": [
           {
@@ -202935,16 +202913,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 152.78
+            "close": 151.38
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2879.0,
-        "change_1d_pct": -3.1,
-        "change_1w_pct": -2.76,
-        "change_1m_pct": -13.18,
+        "price": 2890.8,
+        "change_1d_pct": -2.7,
+        "change_1w_pct": -2.36,
+        "change_1m_pct": -12.82,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2909.8,
@@ -202976,7 +202954,7 @@
           2999.2,
           3000.2,
           2971.0,
-          2879.0
+          2890.8
         ],
         "daily_closes": [
           {
@@ -212861,16 +212839,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 2879.0
+            "close": 2890.8
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 882.0,
-        "change_1d_pct": 0.14,
-        "change_1w_pct": 0.09,
-        "change_1m_pct": -2.49,
+        "price": 881.95,
+        "change_1d_pct": 0.13,
+        "change_1w_pct": 0.08,
+        "change_1m_pct": -2.5,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           835.0,
@@ -212902,7 +212880,7 @@
           885.3,
           888.25,
           880.8,
-          882.0
+          881.95
         ],
         "daily_closes": [
           {
@@ -222787,16 +222765,16 @@
           },
           {
             "date": "2026-05-19",
-            "close": 882.0
+            "close": 881.95
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 499.4,
-        "change_1d_pct": -1.43,
-        "change_1w_pct": 4.72,
-        "change_1m_pct": 8.53,
+        "price": 496.95,
+        "change_1d_pct": -1.91,
+        "change_1w_pct": 4.2,
+        "change_1m_pct": 8.0,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           412.3,
@@ -222828,7 +222806,7 @@
           489.2,
           517.9,
           506.65,
-          499.4
+          496.95
         ],
         "daily_closes": [
           {
@@ -232713,7 +232691,7 @@
           },
           {
             "date": "2026-05-19",
-            "close": 499.4
+            "close": 496.95
           }
         ]
       }
@@ -233969,10 +233947,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-19T06:52:12.900060+00:00",
+    "generated_at": "2026-05-19T12:14:32.586503+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -233991,21 +233969,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Upcoming Mid-Size SUV Launches \u2013 Creta, Chery, FJ, Hybrid (Seltos, Duster, XUV7XO)",
-            "url": "https://www.rushlane.com/upcoming-mid-size-suv-launches-creta-chery-fj-hybrid-seltos-duster-xuv7xo-12546743.html",
-            "summary": "Upcoming Mid-Size SUV launches in the country include offerings from Tata, Mahindra, JSW, Hyundai, Kia, Toyota, Renault, Nissan and more The post Upcoming Mid-Size SUV Launches \u2013 Creta, Chery, FJ, Hybrid (Seltos, Duster, XUV7XO) appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-18T10:30:20+00:00",
-            "published_display": "18 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           },
           {
@@ -234054,6 +234017,21 @@
               "Monthly Sales / Demand",
               "Product / Launch"
             ]
+          },
+          {
+            "title": "New Honda ZR-V Hybrid SUV Teased Ahead Of India Launch",
+            "url": "https://www.rushlane.com/new-honda-zr-v-hybrid-suv-teased-ahead-of-india-launch-12546898.html",
+            "summary": "Honda ZR-V Hybrid SUV has been teased officially for the Indian market and will be launched on May 22nd, 2026 via the CBU route The post New Honda ZR-V Hybrid SUV Teased Ahead Of India Launch appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-19T09:26:05+00:00",
+            "published_display": "19 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
           }
         ]
       },
@@ -234062,52 +234040,34 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Top 10 Scooters April 2026 \u2013 Activa, Jupiter, Access, iQube, Chetak, Destini, Burgman, Rizta",
-            "url": "https://www.rushlane.com/top-10-scooters-april-2026-activa-jupiter-access-iqube-chetak-destini-burgman-rizta-12546731.html",
-            "summary": "India\u2019s scooter market registered strong growth in April 2026 with total sales of the top 10 scooters reaching 5,94,443 units - Total scooter sales at 6.91 lakh units The post Top 10 Scooters April 2026 \u2013 Activa, Jupiter, Access, iQube, Chetak, Destini, Burgman, Rizta appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-18T11:20:42+00:00",
+            "title": "Endurance Targets September Start For Expanded ABS Capacity",
+            "url": "https://www.autocarpro.in/NEWS/endurance-targets-september-start-for-expanded-abs-capacity-132657",
+            "summary": "Endurance Technologies Ltd plans to bring its expanded anti-lock braking system capacity on stream by September 2026, as the auto component maker prepares for rising safety adoption in India\u2019s two-wheeler market. The company is adding 12 lakh ABS units per annum to its existing installed capacity of 6.4 lakh units, taking total annual capacity to 18.4 lakh units.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-18T18:13:03+00:00",
             "published_display": "18 May 2026",
             "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Top 10 Motorcycles April 2026 \u2013 Splendor, Shine, Pulsar, Apache, Unicorn, Classic, Bullet",
+            "url": "https://www.rushlane.com/top-10-motorcycles-april-2026-splendor-shine-pulsar-apache-12546883.html",
+            "summary": "Motorcycles continued to dominate India\u2019s two-wheeler market in April 2026, accounting for nearly 61% share of total sales. Motorcycle sales stood at 11,38,452 units The post Top 10 Motorcycles April 2026 \u2013 Splendor, Shine, Pulsar, Apache, Unicorn, Classic, Bullet appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-19T07:01:58+00:00",
+            "published_display": "19 May 2026",
+            "importance_score": 5,
             "segment_tags": [
               "Two-Wheelers"
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "SKF India Q4 Revenue Rises 20.7%; Profit Declines",
-            "url": "https://www.autocarpro.in/NEWS/skf-india-q4-revenue-rises-207-profit-declines-132613",
-            "summary": "SKF India Limited reported a 20.7% year-on-year increase in standalone revenue from operations for the quarter ended March 31, 2026, at Rs 594.54 crore, driven by demand across automotive segments including two-wheelers, three-wheelers, passenger vehicles and commercial vehicles. The company\u2019s profit before tax (PBT) for the quarter declined 58.4% to Rs 46.1 crore from Rs 110.74 crore in the corresponding quarter...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-14T20:38:28+00:00",
-            "published_display": "14 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Musashi to Supply Powertrains for Kinetic Green Two Wheelers",
-            "url": "https://www.autocarpro.in/NEWS/musashi-to-supply-powertrains-for-kinetic-green-two-wheelers-132569",
-            "summary": "Musashi India Private Limited and Kinetic Green Energy and Power Solutions Limited have signed a letter of intent for the supply of electric powertrain systems. The agreement focuses on providing integrated components for the upcoming electric two wheeler platforms of the Pune based vehicle manufacturer.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-13T14:53:22+00:00",
-            "published_display": "13 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           },
           {
@@ -234132,35 +234092,18 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "BorgWarner Secures Supply Contract for Turbocharger and EGR Cooler for European Heavy-duty Diesel Platform",
-            "url": "https://www.autocarpro.in/NEWS/borgwarner-secures-supply-contract-for-turbocharger-and-egr-cooler-for-european-heavy-duty-diesel-platform-132572",
-            "summary": "BorgWarner has secured a contract to supply a variable turbine geometry (VTG) turbocharger and an exhaust gas recirculation (EGR) cooler to an unnamed major European commercial vehicle OEM for a Euro 7-compliant, 6-cylinder heavy-duty diesel engine, the Michigan-based company announced on May 13, 2026. The components will be used in long-haul truck applications, with production scheduled to start at the end of 2028.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-13T14:57:05+00:00",
-            "published_display": "13 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Praj, ARAI Deepen Diesel-Isobutanol Trials for Vehicle Compatibility",
-            "url": "https://www.autocarpro.in/NEWS/praj-arai-deepen-diesel-isobutanol-trials-for-vehicle-compatibility-132561",
-            "summary": "India's auto industry heavyweights, which include commercial vehicle OEMs, testing agency ARAI, the Council of Scientific and Industrial Research (CSIR), oil marketing companies, and others, are moving to break a decades-long deadlock in diesel decarbonization by launching a nationwide validation program for isobutanol blending. Beginning this June, the Automotive Research Association of India (ARAI) will lead a 1...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-13T09:21:29+00:00",
-            "published_display": "13 May 2026",
+            "title": "Renault Duster Pickup Is Named Niagara \u2013 First Teaser Out",
+            "url": "https://www.rushlane.com/renault-duster-pickup-is-named-niagara-first-teaser-out-12546907.html",
+            "summary": "Renault Duster pickup truck will be called Niagara and is based on the Niagara Concept, showcased in 2023 and is set to debut on Sep 10th The post Renault Duster Pickup Is Named Niagara \u2013 First Teaser Out appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-19T10:52:04+00:00",
+            "published_display": "19 May 2026",
             "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles"
             ],
             "signal_tags": [
-              "Input Costs / Commodities",
-              "Supply Chain / Components"
+              "Product / Launch"
             ]
           },
           {
@@ -234218,18 +234161,35 @@
             ]
           },
           {
-            "title": "Keto Motors Debuts on Bombay Stock Exchange",
-            "url": "https://evreporter.com/keto-motors-debuts-on-bombay-stock-exchange",
-            "summary": "The post Keto Motors Debuts on Bombay Stock Exchange appeared first at EVreporter on EVreporter . Keto Motors (BSE: KETOMOTORS 537392), a Hyderabad-based commercial electric vehicle manufacturer, has been listed on the Bombay Stock Exchange (BSE) The post Keto Motors Debuts on Bombay Stock Exchange appeared first at EVreporter on EVreporter .",
+            "title": "Metz Energy Enters Last-Mile Delivery Space with E-3W Midi TwoX",
+            "url": "https://evreporter.com/metz-energy-enters-last-mile-delivery-space-wins-amazon-india-approval-for-e-3w-midi-twox",
+            "summary": "The post Metz Energy Enters Last-Mile Delivery Space with E-3W Midi TwoX appeared first at EVreporter on EVreporter . Gurugram-headquartered Metz Energy has begun commercial deployment of its Midi TwoX, an electric 3W for last-mile delivery operations. The vehicle The post Metz Energy Enters Last-Mile Delivery Space with E-3W Midi TwoX appeared first at EVreporter on EVreporter .",
             "source": "EVReporter",
-            "published_at": "2026-05-19T06:43:16+00:00",
+            "published_at": "2026-05-19T10:00:14+00:00",
             "published_display": "19 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Epsilon Advanced Materials Debuts Anode Material for Sodium Ion Batteries",
+            "url": "https://www.autocarpro.in/NEWS/epsilon-advanced-materials-debuts-anode-material-for-sodium-ion-batteries-132649",
+            "summary": "Epsilon Advanced Materials Private Limited announced the launch of an in-house developed hard carbon anode material designed for sodium-ion batteries on May 18, 2026. The newly introduced material specifically targets grid-scale energy storage systems at a time when sodium-ion chemistry is gaining commercial traction due to its lower environmental footprint and material abundance compared to lithium-ion alternatives.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-18T14:19:51+00:00",
+            "published_display": "18 May 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
               "Product / Launch",
+              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           },
@@ -234265,22 +234225,6 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "GM-LG's restart date at Ohio battery plant uncertain",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/gm-lgs-restart-date-at-ohio-battery-plant-uncertain/131058011",
-            "summary": "GM and its partner on \u200cthe factory, \u2060South Korea's \u2060LG Energy Solution, in January idled the facility for six months in response \u200bto weak demand for electric vehicles. That put the timeline for the return \u200bof about 850 workers sometime in June.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-13T06:55:05+00:00",
-            "published_display": "13 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -234288,6 +234232,23 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "BYD unveils upgraded flagship Denza SUV to bolster premium market push",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-unveils-upgraded-flagship-denza-suv-to-bolster-premium-market-push/131195065",
+            "summary": "Li Hui, \u200cgeneral manager \u2060of the \u2060Denza brand, said during an event attended by car owners and social media influencers in Guangzhou that \u200bthe revamped model offers over 100 upgrades, including extended battery range and a fast-charging capability that BYD \u200bhad previously described as setting \"an industry benchmark.\"",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-19T08:22:26+00:00",
+            "published_display": "19 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Reliance in talks with CATL, global suppliers for battery storage parts for Jamnagar project: Report",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/reliance-engages-with-catl-and-global-suppliers-for-jamnagar-battery-storage-project/131189754",
@@ -234359,23 +234320,6 @@
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
-          },
-          {
-            "title": "VIDEO: BKT\u2019s India Push: Branding, Capacity Expansion & EV Readiness",
-            "url": "https://www.autocarpro.in/Video/video-bkts-india-push-branding-capacity-expansion-ev-readiness-132609",
-            "summary": "In this exclusive conversation, Autocar Professional interacts with Balkrishna Industries Limited's Senior President & Director Satish Sharma, who talks about the company\u2019s global strategy, export dependence, India growth plans and the future of the tyre industry amid economic and geopolitical uncertainty. From building a global brand before gaining visibility in India, to expanding in the aftermarket space and pr...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-14T19:28:46+00:00",
-            "published_display": "14 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -234432,6 +234376,22 @@
               "Policy / Regulation",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Lumax Auto Technologies Finalises Amalgamation with IAC International",
+            "url": "https://www.autocarpro.in/NEWS/lumax-auto-technologies-finalises-amalgamation-with-iac-international-132655",
+            "summary": "Lumax Auto Technologies Limited announced that its scheme of amalgamation with IAC International Automotive India Private Limited is officially effective as of May 18, 2026. The company confirmed the development in a regulatory filing to the Bombay Stock Exchange on Monday.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-18T17:39:24+00:00",
+            "published_display": "18 May 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
           }
         ]
       }
@@ -234454,7 +234414,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 51,
+      "unmapped_articles": 50,
       "filtered_low_signal": 2,
       "kept_articles": 68
     }
