@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T06:15:10.072081+00:00",
+  "generated_at": "2026-05-23T10:28:32.280423+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120121,10 +120121,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-23T06:14:47.729122+00:00",
+      "generated_at": "2026-05-23T10:28:10.448108+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 4,
       "items": [
+        {
+          "title": "Honda City Facelift vs Rivals \u2013 Verna, Slavia, Virtus",
+          "summary": "City Facelift vs Rivals comparison across specs, features and prices against Verna, Virtus and Slavia (on paper) give interesting results The post Honda City Facelift vs Rivals \u2013 Verna, Slavia, Virtus appeared first on RushLane .",
+          "url": "https://www.rushlane.com/honda-city-facelift-vs-rivals-verna-slavia-virtus-12547291.html",
+          "source": "RushLane",
+          "published_at": "2026-05-23T08:02:30+00:00",
+          "published_display": "23 May 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/honda-city-facelift-vs-rivals-compared-cover-1.jpg"
+        },
         {
           "title": "Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details",
           "summary": "2026 Honda City facelift has sharper exterior styling, a better-equipped cabin and enhanced safety and connectivity features The post Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details appeared first on RushLane .",
@@ -120176,9 +120189,9 @@
           "company": "Honda Cars India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-05-23T03:10:32+00:00",
-          "latest_title": "Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details"
+          "count": 3,
+          "latest_published_at": "2026-05-23T08:02:30+00:00",
+          "latest_title": "Honda City Facelift vs Rivals \u2013 Verna, Slavia, Virtus"
         },
         {
           "company": "Mercedes-Benz India",
@@ -234061,10 +234074,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-23T06:14:02.692529+00:00",
+    "generated_at": "2026-05-23T10:27:27.332413+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 23,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
@@ -234136,12 +234149,12 @@
             ]
           },
           {
-            "title": "Jeep SUV Built On Tata Platform \u2013 2028 Launch, India and Exports",
-            "url": "https://www.rushlane.com/jeep-suv-built-on-tata-platform-2028-launch-india-and-exports-12547136.html",
-            "summary": "An India-developed next gen Jeep SUV is cooking for Indian market and 50 export countries by 2028, positioned on a Tata Motors platform The post Jeep SUV Built On Tata Platform \u2013 2028 Launch, India and Exports appeared first on RushLane .",
+            "title": "Maruti E100 Flex Fuel Car Launch On Environment Day (5th June) \u2013 Says Minister Gadkari",
+            "url": "https://www.rushlane.com/maruti-e100-flex-fuel-car-launch-on-environment-day-5th-june-12547300.html",
+            "summary": "Maruti E100 Flex Fuel car is set to be launched on Environment Day this year (5th June, 2026) in Delhi, as per Union Minister Nitin Gadkari The post Maruti E100 Flex Fuel Car Launch On Environment Day (5th June) \u2013 Says Minister Gadkari appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-05-22T15:47:16+00:00",
-            "published_display": "22 May 2026",
+            "published_at": "2026-05-23T09:38:46+00:00",
+            "published_display": "23 May 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
@@ -234156,22 +234169,6 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
-          {
-            "title": "Endurance Targets September Start For Expanded ABS Capacity",
-            "url": "https://www.autocarpro.in/NEWS/endurance-targets-september-start-for-expanded-abs-capacity-132657",
-            "summary": "Endurance Technologies Ltd plans to bring its expanded anti-lock braking system capacity on stream by September 2026, as the auto component maker prepares for rising safety adoption in India\u2019s two-wheeler market. The company is adding 12 lakh ABS units per annum to its existing installed capacity of 6.4 lakh units, taking total annual capacity to 18.4 lakh units.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-18T18:13:03+00:00",
-            "published_display": "18 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Bosch Ltd Q4 Revenue Rises 13.3%; FY26 PAT at Rs 2,770 Crore",
             "url": "https://www.autocarpro.in/NEWS/bosch-ltd-q4-revenue-rises-133-fy26-pat-at-rs-2770-crore-132710",
@@ -234232,6 +234229,39 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "IIT Roorkee Partners With Cathion Energy to Commercialise Lithium Ion Battery Technologies",
+            "url": "https://www.autocarpro.in/NEWS/iit-roorkee-partners-with-cathion-energy-to-commercialise-lithium-ion-battery-technologies-132752",
+            "summary": "The Indian Institute of Technology (IIT) Roorkee has signed two technology transfer agreements with Cathion Energy Private Limited to commercialise advanced lithium ion battery components. The agreements, finalised on May 22, cover the transfer of novel composite electrode technologies developed by Professor Anjan Sil.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-22T18:30:28+00:00",
+            "published_display": "22 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
+            "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
+            "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-05-21T08:15:55+00:00",
+            "published_display": "21 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Stellantis to build Voyah brand EV for China's Dongfeng in French plant, say sources",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-partners-with-dongfeng-to-produce-voyah-ev-in-france-eyeing-european-market/131220522",
             "summary": "Stellantis is reportedly forming a joint venture with Dongfeng, planning to build at least one all-electric Voyah vehicle at its Rennes, France factory. This move aims to circumvent EU tariffs on Chinese EVs and leverages underutilized European factory capacity.",
@@ -234271,39 +234301,6 @@
             "source": "ET Auto Components",
             "published_at": "2026-05-19T12:54:31+00:00",
             "published_display": "19 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Germany's ZF to keep electric motor production in-house but with fewer staff",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/germanys-zf-to-keep-electric-motor-production-in-house-but-with-fewer-staff/131199623",
-            "summary": "After investing heavily \u200bin new technologies, European carmakers and suppliers have \u200bfaced a slower-than-expected uptake of electric vehicles, although demand is now \u200bpicking up.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-19T11:39:52+00:00",
-            "published_display": "19 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Ola Electric board approves \u20b92,000 crore investment in EV, cell subsidiaries",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-commits-2000-crore-to-ev-and-battery-manufacturing-subsidiaries/131113988",
-            "summary": "The announcement comes as Ola Electric sharpens its focus on expanding its electric vehicle and battery manufacturing footprint amid rising competition in India\u2019s EV market and the government\u2019s push for localised battery cell production.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-15T10:42:03+00:00",
-            "published_display": "15 May 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV"
@@ -234389,18 +234386,19 @@
             ]
           },
           {
-            "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
-            "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
-            "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-05-21T08:15:55+00:00",
-            "published_display": "21 May 2026",
+            "title": "Bosch\u2019s India Recast",
+            "url": "https://www.autocarpro.in/feature/boschs-india-recast-132757",
+            "summary": "On May 21, 2026, the German engineering giant Bosch Ltd announced a 50:50 joint venture with the TSF Group\u2019s Brakes India and Wheels India. While the deal might appear to be a localized expansion of air systems for commercial vehicles (CVs), it serves as a microcosm for a much larger, more aggressive transformation as the automotive industry in India is set to evolve rapidly by 2030 and beyond.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-23T09:00:00+00:00",
+            "published_display": "23 May 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "Commercial Vehicles"
             ],
             "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A",
               "Supply Chain / Components"
             ]
           }
@@ -234497,9 +234495,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 48,
-      "filtered_low_signal": 1,
-      "kept_articles": 69
+      "unmapped_articles": 47,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [
