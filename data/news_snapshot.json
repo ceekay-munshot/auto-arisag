@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-05-22T17:10:32.305921+00:00",
+  "generated_at": "2026-05-23T06:14:02.692529+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 22,
+  "item_count": 23,
   "groups": [
     {
       "id": "pv",
@@ -56,19 +56,22 @@
           ]
         },
         {
-          "title": "Stellantis plans $17,500 small EV to revive European market",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-plans-17500-small-ev-to-revive-european-market/131199043",
-          "summary": "The Fiat, Opel and Citroen owner said production of the affordable, compact and fully electric \"E-Car\" will start \u200cin 2028 at its \u2060Pomigliano d'Arco \u2060plant in Italy, with potential for \"significant\" volumes.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-19T11:18:11+00:00",
-          "published_display": "19 May 2026",
+          "title": "India's EV battery demand to grow 10 times to 200 GWh by 2032: IESA",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-ev-battery-demand-to-grow-10-times-to-200-gwh-by-2032-iesa/131108393",
+          "summary": "The market is transforming with advancements in batteries, motors, and manufacturing. Electric two-wheelers lead sales, but passenger cars and light commercial fleets will drive future expansion. New battery chemistries and motor technologies are emerging.",
+          "source": "ET Auto Components",
+          "published_at": "2026-05-15T04:53:57+00:00",
+          "published_display": "15 May 2026",
           "importance_score": 7,
           "segment_tags": [
             "Passenger Vehicles",
+            "Two-Wheelers",
             "EV"
           ],
           "signal_tags": [
-            "Capacity / Capex"
+            "Capacity / Capex",
+            "Supply Chain / Components",
+            "Input Costs / Commodities"
           ]
         },
         {
@@ -168,22 +171,6 @@
       "label": "EV / Transition",
       "items": [
         {
-          "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
-          "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
-          "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-05-21T08:15:55+00:00",
-          "published_display": "21 May 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Two-Wheelers",
-            "EV"
-          ],
-          "signal_tags": [
-            "Supply Chain / Components"
-          ]
-        },
-        {
           "title": "Stellantis to build Voyah brand EV for China's Dongfeng in French plant, say sources",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-partners-with-dongfeng-to-produce-voyah-ev-in-france-eyeing-european-market/131220522",
           "summary": "Stellantis is reportedly forming a joint venture with Dongfeng, planning to build at least one all-electric Voyah vehicle at its Rennes, France factory. This move aims to circumvent EU tariffs on Chinese EVs and leverages underutilized European factory capacity.",
@@ -243,6 +230,22 @@
           "segment_tags": [
             "EV",
             "Components"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Ola Electric board approves \u20b92,000 crore investment in EV, cell subsidiaries",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-commits-2000-crore-to-ev-and-battery-manufacturing-subsidiaries/131113988",
+          "summary": "The announcement comes as Ola Electric sharpens its focus on expanding its electric vehicle and battery manufacturing footprint amid rising competition in India\u2019s EV market and the government\u2019s push for localised battery cell production.",
+          "source": "ET Auto Components",
+          "published_at": "2026-05-15T10:42:03+00:00",
+          "published_display": "15 May 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "EV"
           ],
           "signal_tags": [
             "Capacity / Capex",
@@ -325,22 +328,19 @@
           ]
         },
         {
-          "title": "India's EV battery demand to grow 10 times to 200 GWh by 2032: IESA",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-ev-battery-demand-to-grow-10-times-to-200-gwh-by-2032-iesa/131108393",
-          "summary": "The market is transforming with advancements in batteries, motors, and manufacturing. Electric two-wheelers lead sales, but passenger cars and light commercial fleets will drive future expansion. New battery chemistries and motor technologies are emerging.",
-          "source": "ET Auto Components",
-          "published_at": "2026-05-15T04:53:57+00:00",
-          "published_display": "15 May 2026",
-          "importance_score": 8,
+          "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
+          "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
+          "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-05-21T08:15:55+00:00",
+          "published_display": "21 May 2026",
+          "importance_score": 7,
           "segment_tags": [
-            "Passenger Vehicles",
             "Two-Wheelers",
             "EV"
           ],
           "signal_tags": [
-            "Capacity / Capex",
-            "Supply Chain / Components",
-            "Input Costs / Commodities"
+            "Supply Chain / Components"
           ]
         }
       ]
@@ -349,6 +349,23 @@
       "id": "policy",
       "label": "Policy / Regulation",
       "items": [
+        {
+          "title": "Tesla to establish sales and service centre in Hyderabad",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-to-establish-sales-and-service-centre-in-hyderabad/131271080",
+          "summary": "The minister congratulated Tesla India General Manager Sharad Agarwal and Lead Public Policy and Business Development Director Rajat for choosing Hyderabad as the next destination for Tesla's sales and service expansion in India.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-23T02:32:59+00:00",
+          "published_display": "23 May 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "General"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
+            "Policy / Regulation",
+            "Input Costs / Commodities"
+          ]
+        },
         {
           "title": "Fiem Industries CEO Vineet Sahni Steps Down",
           "url": "https://www.autocarpro.in/NEWS/fiem-industries-ceo-vineet-sahni-steps-down-132684",
@@ -420,7 +437,7 @@
     ],
     "duplicates_removed": 0,
     "unmapped_articles": 48,
-    "filtered_low_signal": 2,
-    "kept_articles": 68
+    "filtered_low_signal": 1,
+    "kept_articles": 69
   }
 }

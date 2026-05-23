@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T17:11:22.607006+00:00",
+  "generated_at": "2026-05-23T06:15:10.072081+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47751,7 +47751,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-22",
+          "latest_release_date": "2026-05-23",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120121,10 +120121,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-22T11:47:24.622050+00:00",
+      "generated_at": "2026-05-23T06:14:47.729122+00:00",
       "window_days": 30,
       "item_count": 3,
       "items": [
+        {
+          "title": "Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details",
+          "summary": "2026 Honda City facelift has sharper exterior styling, a better-equipped cabin and enhanced safety and connectivity features The post Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details appeared first on RushLane .",
+          "url": "https://www.rushlane.com/honda-city-facelift-variant-wise-features-petrol-hybrid-details-12547232.html",
+          "source": "RushLane",
+          "published_at": "2026-05-23T03:10:32+00:00",
+          "published_display": "23 May 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/honda-city-facelift-variant-wise-features.jpg"
+        },
         {
           "title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV",
           "summary": "The new City features refreshed styling, new technology features and both petrol and strong hybrid powertrain options, while the ZR-V is powered by Honda\u2019s 2.0-litre e:HEV strong hybrid system.",
@@ -120140,19 +120153,6 @@
             "Components"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-31694/131260544.cms"
-        },
-        {
-          "title": "Honda City Facelift Launch Price Rs 12 Lakh \u2013 Petrol, Hybrid (27.26 Km/l)",
-          "summary": "Honda City Facelift has been launched in the country with revised fascia with a sporty flair along with a better equipped interior The post Honda City Facelift Launch Price Rs 12 Lakh \u2013 Petrol, Hybrid (27.26 Km/l) appeared first on RushLane .",
-          "url": "https://www.rushlane.com/honda-city-facelift-launch-price-rs-12-lakh-petrol-hybrid-27-26-km-l-12547141.html",
-          "source": "RushLane",
-          "published_at": "2026-05-22T07:31:13+00:00",
-          "published_display": "22 May 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/honda-city-facelift-launched-7.jpg"
         },
         {
           "title": "Mercedes-Benz launches limited-run Night Edition GLE, GLS SUVs in India",
@@ -120177,8 +120177,8 @@
           "tone": "pv",
           "scope": "tracked",
           "count": 2,
-          "latest_published_at": "2026-05-22T09:08:22+00:00",
-          "latest_title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV"
+          "latest_published_at": "2026-05-23T03:10:32+00:00",
+          "latest_title": "Honda City Facelift Variant-Wise Features \u2013 Petrol, Hybrid, Details"
         },
         {
           "company": "Mercedes-Benz India",
@@ -120191,13 +120191,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-22"
+        "latest_release_date": "2026-05-23"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-22",
+    "as_of_date": "2026-05-23",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -120315,8 +120315,8 @@
         "label": "USD / INR",
         "value": 95.68,
         "unit": "\u20b9",
-        "delta_value": -0.8483,
-        "delta_label": "-0.03% in last week (Yahoo Finance)",
+        "delta_value": -0.4939,
+        "delta_label": "-0.30% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130727,7 +130727,11 @@
             "close": 96.5283
           },
           {
-            "date": "2026-05-22",
+            "date": "2026-05-21",
+            "close": 96.1739
+          },
+          {
+            "date": "2026-05-23",
             "close": 95.68
           }
         ]
@@ -130736,7 +130740,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-22",
+    "as_of_date": "2026-05-23",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -232857,25 +232861,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-22",
+    "as_of_date": "2026-05-23",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Escorts Kubota",
-        "ticker": "ESCORTS",
-        "date": "2026-05-22",
-        "period_label": "Q4 FY26 results",
-        "event_type": "earnings",
-        "source_url": "https://www.escortskubota.com/investor/financial-results"
-      },
-      {
-        "company": "Eicher Motors",
-        "ticker": "EICHERMOT",
-        "date": "2026-05-22",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
-      },
       {
         "company": "Mahindra & Mahindra",
         "ticker": "M&M",
@@ -232895,22 +232883,6 @@
     ],
     "upcoming_all": [
       {
-        "company": "Escorts Kubota",
-        "ticker": "ESCORTS",
-        "date": "2026-05-22",
-        "period_label": "Q4 FY26 results",
-        "event_type": "earnings",
-        "source_url": "https://www.escortskubota.com/investor/financial-results"
-      },
-      {
-        "company": "Eicher Motors",
-        "ticker": "EICHERMOT",
-        "date": "2026-05-22",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
-      },
-      {
         "company": "Mahindra & Mahindra",
         "ticker": "M&M",
         "date": "2026-05-26",
@@ -232928,6 +232900,22 @@
       }
     ],
     "recent_past": [
+      {
+        "company": "Escorts Kubota",
+        "ticker": "ESCORTS",
+        "date": "2026-05-22",
+        "period_label": "Q4 FY26 results",
+        "event_type": "earnings",
+        "source_url": "https://www.escortskubota.com/investor/financial-results"
+      },
+      {
+        "company": "Eicher Motors",
+        "ticker": "EICHERMOT",
+        "date": "2026-05-22",
+        "period_label": "Financial Results/Dividend",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
+      },
       {
         "company": "Action Construction Equipment",
         "ticker": "ACE",
@@ -232959,26 +232947,10 @@
         "period_label": "Q4 FY26 results",
         "event_type": "earnings",
         "source_url": "https://www.eicher.in/investors/financials-and-reports/financial-results"
-      },
-      {
-        "company": "Tata Motors",
-        "ticker": "TMPV",
-        "date": "2026-05-14",
-        "period_label": "Financial Results/Dividend",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
-      },
-      {
-        "company": "Tata Motors",
-        "ticker": "TMPV",
-        "date": "2026-05-13",
-        "period_label": "Q4 FY26 results",
-        "event_type": "earnings",
-        "source_url": "https://investors.tatamotors.com/financials.aspx"
       }
     ],
-    "next_14_count": 4,
-    "upcoming_count": 4
+    "next_14_count": 2,
+    "upcoming_count": 2
   },
   "market_insights": [
     {
@@ -234089,10 +234061,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-22T17:10:32.305921+00:00",
+    "generated_at": "2026-05-23T06:14:02.692529+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 22,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -234145,19 +234117,22 @@
             ]
           },
           {
-            "title": "Stellantis plans $17,500 small EV to revive European market",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-plans-17500-small-ev-to-revive-european-market/131199043",
-            "summary": "The Fiat, Opel and Citroen owner said production of the affordable, compact and fully electric \"E-Car\" will start \u200cin 2028 at its \u2060Pomigliano d'Arco \u2060plant in Italy, with potential for \"significant\" volumes.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-19T11:18:11+00:00",
-            "published_display": "19 May 2026",
+            "title": "India's EV battery demand to grow 10 times to 200 GWh by 2032: IESA",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-ev-battery-demand-to-grow-10-times-to-200-gwh-by-2032-iesa/131108393",
+            "summary": "The market is transforming with advancements in batteries, motors, and manufacturing. Electric two-wheelers lead sales, but passenger cars and light commercial fleets will drive future expansion. New battery chemistries and motor technologies are emerging.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-15T04:53:57+00:00",
+            "published_display": "15 May 2026",
             "importance_score": 7,
             "segment_tags": [
               "Passenger Vehicles",
+              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex"
+              "Capacity / Capex",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           },
           {
@@ -234257,22 +234232,6 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
-            "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
-            "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-05-21T08:15:55+00:00",
-            "published_display": "21 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Stellantis to build Voyah brand EV for China's Dongfeng in French plant, say sources",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-partners-with-dongfeng-to-produce-voyah-ev-in-france-eyeing-european-market/131220522",
             "summary": "Stellantis is reportedly forming a joint venture with Dongfeng, planning to build at least one all-electric Voyah vehicle at its Rennes, France factory. This move aims to circumvent EU tariffs on Chinese EVs and leverages underutilized European factory capacity.",
@@ -234332,6 +234291,22 @@
             "segment_tags": [
               "EV",
               "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Ola Electric board approves \u20b92,000 crore investment in EV, cell subsidiaries",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ola-electric-commits-2000-crore-to-ev-and-battery-manufacturing-subsidiaries/131113988",
+            "summary": "The announcement comes as Ola Electric sharpens its focus on expanding its electric vehicle and battery manufacturing footprint amid rising competition in India\u2019s EV market and the government\u2019s push for localised battery cell production.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-15T10:42:03+00:00",
+            "published_display": "15 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
             ],
             "signal_tags": [
               "Capacity / Capex",
@@ -234414,22 +234389,19 @@
             ]
           },
           {
-            "title": "India's EV battery demand to grow 10 times to 200 GWh by 2032: IESA",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/indias-ev-battery-demand-to-grow-10-times-to-200-gwh-by-2032-iesa/131108393",
-            "summary": "The market is transforming with advancements in batteries, motors, and manufacturing. Electric two-wheelers lead sales, but passenger cars and light commercial fleets will drive future expansion. New battery chemistries and motor technologies are emerging.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-15T04:53:57+00:00",
-            "published_display": "15 May 2026",
-            "importance_score": 8,
+            "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
+            "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
+            "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-05-21T08:15:55+00:00",
+            "published_display": "21 May 2026",
+            "importance_score": 7,
             "segment_tags": [
-              "Passenger Vehicles",
               "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -234438,6 +234410,23 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
+          {
+            "title": "Tesla to establish sales and service centre in Hyderabad",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-to-establish-sales-and-service-centre-in-hyderabad/131271080",
+            "summary": "The minister congratulated Tesla India General Manager Sharad Agarwal and Lead Public Policy and Business Development Director Rajat for choosing Hyderabad as the next destination for Tesla's sales and service expansion in India.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-23T02:32:59+00:00",
+            "published_display": "23 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Policy / Regulation",
+              "Input Costs / Commodities"
+            ]
+          },
           {
             "title": "Fiem Industries CEO Vineet Sahni Steps Down",
             "url": "https://www.autocarpro.in/NEWS/fiem-industries-ceo-vineet-sahni-steps-down-132684",
@@ -234509,8 +234498,8 @@
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 48,
-      "filtered_low_signal": 2,
-      "kept_articles": 68
+      "filtered_low_signal": 1,
+      "kept_articles": 69
     }
   },
   "qa": [
@@ -234560,7 +234549,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-22",
+    "as_of_date": "2026-05-23",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
