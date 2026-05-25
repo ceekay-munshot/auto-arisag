@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T07:17:42.720028+00:00",
+  "generated_at": "2026-05-25T12:33:59.346404+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120300,10 +120300,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.34,
+        "value": 95.22,
         "unit": "\u20b9",
-        "delta_value": -0.8364,
-        "delta_label": "-0.66% in last week (Yahoo Finance)",
+        "delta_value": -0.9539,
+        "delta_label": "-0.78% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130711,7 +130711,7 @@
           },
           {
             "date": "2026-05-25",
-            "close": 95.3375
+            "close": 95.22
           }
         ]
       }
@@ -130726,10 +130726,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13122.0,
-        "change_1d_pct": 1.04,
-        "change_1w_pct": 0.81,
-        "change_1m_pct": 0.57,
+        "price": 13170.0,
+        "change_1d_pct": 1.41,
+        "change_1w_pct": 1.18,
+        "change_1m_pct": 0.94,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13076.0,
@@ -130761,7 +130761,7 @@
           13003.0,
           13010.0,
           12987.0,
-          13122.0
+          13170.0
         ],
         "daily_closes": [
           {
@@ -140646,16 +140646,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 13122.0
+            "close": 13170.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3133.7,
-        "change_1d_pct": 1.7,
-        "change_1w_pct": 1.62,
-        "change_1m_pct": 3.14,
+        "price": 3139.0,
+        "change_1d_pct": 1.87,
+        "change_1w_pct": 1.79,
+        "change_1m_pct": 3.31,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3220.2,
@@ -140687,7 +140687,7 @@
           3122.2,
           3099.0,
           3081.3,
-          3133.7
+          3139.0
         ],
         "daily_closes": [
           {
@@ -150572,16 +150572,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 3133.7
+            "close": 3139.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4977.0,
-        "change_1d_pct": 0.22,
-        "change_1w_pct": 0.4,
-        "change_1m_pct": 0.31,
+        "price": 4979.0,
+        "change_1d_pct": 0.26,
+        "change_1w_pct": 0.44,
+        "change_1m_pct": 0.35,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5247.0,
@@ -150613,7 +150613,7 @@
           4968.0,
           4969.5,
           4966.0,
-          4977.0
+          4979.0
         ],
         "daily_closes": [
           {
@@ -160498,16 +160498,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 4977.0
+            "close": 4979.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3452.0,
-        "change_1d_pct": 1.01,
-        "change_1w_pct": 4.89,
-        "change_1m_pct": -1.04,
+        "price": 3469.5,
+        "change_1d_pct": 1.52,
+        "change_1w_pct": 5.42,
+        "change_1m_pct": -0.54,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3738.1,
@@ -160539,7 +160539,7 @@
           3361.9,
           3380.7,
           3417.5,
-          3452.0
+          3469.5
         ],
         "daily_closes": [
           {
@@ -170424,13 +170424,13 @@
           },
           {
             "date": "2026-05-25",
-            "close": 3452.0
+            "close": 3469.5
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10491.5,
+        "price": 10491.0,
         "change_1d_pct": -0.55,
         "change_1w_pct": 2.87,
         "change_1m_pct": 9.56,
@@ -170465,7 +170465,7 @@
           10462.5,
           10667.0,
           10549.5,
-          10491.5
+          10491.0
         ],
         "daily_closes": [
           {
@@ -180350,16 +180350,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 10491.5
+            "close": 10491.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1877.4,
-        "change_1d_pct": 1.56,
-        "change_1w_pct": 5.36,
-        "change_1m_pct": 5.26,
+        "price": 1880.9,
+        "change_1d_pct": 1.75,
+        "change_1w_pct": 5.56,
+        "change_1m_pct": 5.46,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1746.2,
@@ -180391,7 +180391,7 @@
           1787.4,
           1845.2,
           1848.6,
-          1877.4
+          1880.9
         ],
         "daily_closes": [
           {
@@ -181968,16 +181968,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 1877.4
+            "close": 1880.9
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7354.5,
-        "change_1d_pct": 5.34,
-        "change_1w_pct": 6.39,
-        "change_1m_pct": 3.42,
+        "price": 7414.0,
+        "change_1d_pct": 6.19,
+        "change_1w_pct": 7.25,
+        "change_1m_pct": 4.25,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7050.0,
@@ -182009,7 +182009,7 @@
           6849.5,
           6892.0,
           6981.5,
-          7354.5
+          7414.0
         ],
         "daily_closes": [
           {
@@ -191894,16 +191894,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 7354.5
+            "close": 7414.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 372.35,
-        "change_1d_pct": 2.48,
-        "change_1w_pct": 5.44,
-        "change_1m_pct": 5.8,
+        "price": 373.25,
+        "change_1d_pct": 2.72,
+        "change_1w_pct": 5.69,
+        "change_1m_pct": 6.05,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191936,7 +191936,7 @@
           361.25,
           361.35,
           363.35,
-          372.35
+          373.25
         ],
         "daily_closes": [
           {
@@ -192529,16 +192529,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 372.35
+            "close": 373.25
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 396.25,
-        "change_1d_pct": 3.47,
-        "change_1w_pct": 4.33,
-        "change_1m_pct": -6.67,
+        "price": 395.65,
+        "change_1d_pct": 3.32,
+        "change_1w_pct": 4.17,
+        "change_1m_pct": -6.81,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -192571,7 +192571,7 @@
           379.7,
           379.9,
           382.95,
-          396.25
+          395.65
         ],
         "daily_closes": [
           {
@@ -193100,16 +193100,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 396.25
+            "close": 395.65
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 163.2,
-        "change_1d_pct": 3.15,
-        "change_1w_pct": 7.98,
-        "change_1m_pct": -3.94,
+        "price": 164.08,
+        "change_1d_pct": 3.71,
+        "change_1w_pct": 8.56,
+        "change_1m_pct": -3.43,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           172.06,
@@ -193141,7 +193141,7 @@
           153.61,
           154.48,
           158.21,
-          163.2
+          164.08
         ],
         "daily_closes": [
           {
@@ -203026,16 +203026,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 163.2
+            "close": 164.08
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2975.0,
-        "change_1d_pct": 1.49,
-        "change_1w_pct": 0.13,
-        "change_1m_pct": -7.93,
+        "price": 2976.5,
+        "change_1d_pct": 1.54,
+        "change_1w_pct": 0.19,
+        "change_1m_pct": -7.89,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3134.4,
@@ -203067,7 +203067,7 @@
           2895.6,
           2904.1,
           2931.4,
-          2975.0
+          2976.5
         ],
         "daily_closes": [
           {
@@ -212952,16 +212952,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 2975.0
+            "close": 2976.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 891.25,
-        "change_1d_pct": 1.06,
-        "change_1w_pct": 1.19,
-        "change_1m_pct": -1.76,
+        "price": 885.45,
+        "change_1d_pct": 0.4,
+        "change_1w_pct": 0.53,
+        "change_1m_pct": -2.4,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           888.0,
@@ -212993,7 +212993,7 @@
           896.85,
           867.7,
           881.9,
-          891.25
+          885.45
         ],
         "daily_closes": [
           {
@@ -222878,16 +222878,16 @@
           },
           {
             "date": "2026-05-25",
-            "close": 891.25
+            "close": 885.45
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 489.3,
-        "change_1d_pct": 0.88,
-        "change_1w_pct": -3.42,
-        "change_1m_pct": -1.88,
+        "price": 490.05,
+        "change_1d_pct": 1.03,
+        "change_1w_pct": -3.28,
+        "change_1m_pct": -1.72,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           485.05,
@@ -222919,7 +222919,7 @@
           485.0,
           487.75,
           485.05,
-          489.3
+          490.05
         ],
         "daily_closes": [
           {
@@ -232804,7 +232804,7 @@
           },
           {
             "date": "2026-05-25",
-            "close": 489.3
+            "close": 490.05
           }
         ]
       }
@@ -234012,10 +234012,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-25T07:16:56.432874+00:00",
+    "generated_at": "2026-05-25T12:33:14.597470+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 23,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -234109,6 +234109,21 @@
         "label": "Two-Wheelers",
         "items": [
           {
+            "title": "150cc to 200cc Motorcycle Sales April 2026 \u2013 Apache, Pulsar, FZ, R15, Gixxer",
+            "url": "https://www.rushlane.com/150cc-to-200cc-motorcycle-sales-april-2026-apache-pulsar-fz-r15-gixxer-12547427.html",
+            "summary": "150cc to 200cc Motorcycle Sales for the month of April 2026 was led by TVS Motor's Apache lineup, followed by Bajaj Auto's Pulsar lineup The post 150cc to 200cc Motorcycle Sales April 2026 \u2013 Apache, Pulsar, FZ, R15, Gixxer appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-25T11:19:01+00:00",
+            "published_display": "25 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Royal Enfield Sales Breakup April 2026 \u2013 Classic, Bullet, Hunter, Meteor, 650 Twin, Himalayan",
             "url": "https://www.rushlane.com/royal-enfield-sales-breakup-april-2026-classic-bullet-hunter-12547372.html",
             "summary": "Royal Enfield registered strong domestic sales growth in April 2026, driven primarily by its 350cc motorcycle lineup, which accounted for 91.25% of total domestic sales The post Royal Enfield Sales Breakup April 2026 \u2013 Classic, Bullet, Hunter, Meteor, 650 Twin, Himalayan appeared first on RushLane .",
@@ -234144,6 +234159,23 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
+          {
+            "title": "Bosch\u2019s India Recast",
+            "url": "https://www.autocarpro.in/feature/boschs-india-recast-132757",
+            "summary": "On May 21, 2026, the German engineering giant Bosch Ltd announced a 50:50 joint venture with the TSF Group\u2019s Brakes India and Wheels India. While the deal might appear to be a localized expansion of air systems for commercial vehicles (CVs), it serves as a microcosm for a much larger, more aggressive transformation as the automotive industry in India is set to evolve rapidly by 2030 and beyond.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-23T09:00:00+00:00",
+            "published_display": "23 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Remsons Industries UK Subsidiary Secures Rs 30 Crore International Supply Contract",
             "url": "https://www.autocarpro.in/NEWS/remsons-industries-uk-subsidiary-secures-rs-30-crore-international-supply-contract-132690",
@@ -234183,51 +234215,36 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "2026 Tata Tiago EV Interiors \u2013 New Dashboard, Twin Screens, 360 Camera",
-            "url": "https://www.rushlane.com/2026-tata-tiago-ev-interiors-new-dashboard-twin-screens-360-camera-12547352.html",
-            "summary": "Tata Motors has now officially showcased the interiors ahead of launch on 28th May 2026. The electric hatchback gets a significantly redesigned cabin with a more premium layout The post 2026 Tata Tiago EV Interiors \u2013 New Dashboard, Twin Screens, 360 Camera appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-24T11:49:12+00:00",
-            "published_display": "24 May 2026",
+            "title": "EVs to drive \u20b93.5 lakh crore capex in India's PV sector: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/indias-passenger-vehicle-sector-set-for-35-lakh-crore-investment-driven-by-evs/131305736",
+            "summary": "India Ratings and Research said the top five original equipment manufacturers (OEMs) are expected to account for over \u20b92 lakh crore of the planned investments.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-25T09:43:16+00:00",
+            "published_display": "25 May 2026",
             "importance_score": 7,
             "segment_tags": [
               "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Capacity / Capex"
             ]
           },
           {
-            "title": "Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology",
-            "url": "https://evreporter.com/emobis-electric-two-wheeler-akx-to-use-musashis-e-axle-technology",
-            "summary": "The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter . Emobi, a Bengaluru-based electric vehicle (EV) start-up, announced that its new electric two-wheeler model, AKX, will use the e-Axle EV The post Emobi\u2019s electric two-wheeler AKX to use Musashi\u2019s e-Axle technology appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-05-21T08:15:55+00:00",
-            "published_display": "21 May 2026",
+            "title": "IIT Roorkee Partners With Cathion Energy to Commercialise Lithium Ion Battery Technologies",
+            "url": "https://www.autocarpro.in/NEWS/iit-roorkee-partners-with-cathion-energy-to-commercialise-lithium-ion-battery-technologies-132752",
+            "summary": "The Indian Institute of Technology (IIT) Roorkee has signed two technology transfer agreements with Cathion Energy Private Limited to commercialise advanced lithium ion battery components. The agreements, finalised on May 22, cover the transfer of novel composite electrode technologies developed by Professor Anjan Sil.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-22T18:30:28+00:00",
+            "published_display": "22 May 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "EV",
+              "Components"
             ],
             "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Stellantis to build Voyah brand EV for China's Dongfeng in French plant, say sources",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-partners-with-dongfeng-to-produce-voyah-ev-in-france-eyeing-european-market/131220522",
-            "summary": "Stellantis is reportedly forming a joint venture with Dongfeng, planning to build at least one all-electric Voyah vehicle at its Rennes, France factory. This move aims to circumvent EU tariffs on Chinese EVs and leverages underutilized European factory capacity.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-20T07:39:25+00:00",
-            "published_display": "20 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A"
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           },
           {
@@ -234262,6 +234279,23 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Germany's ZF to keep electric motor production in-house but with fewer staff",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/germanys-zf-to-keep-electric-motor-production-in-house-but-with-fewer-staff/131199623",
+            "summary": "After investing heavily \u200bin new technologies, European carmakers and suppliers have \u200bfaced a slower-than-expected uptake of electric vehicles, although demand is now \u200bpicking up.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-19T11:39:52+00:00",
+            "published_display": "19 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -234269,6 +234303,23 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "Warivo Electric unveils four new EV scooters",
+            "url": "https://evreporter.com/warivo-electric-unveils-four-new-ev-scooters",
+            "summary": "The post Warivo Electric unveils four new EV scooters appeared first at EVreporter on EVreporter . Warivo Electric, an electric mobility company based in Gurugram, introduced four upcoming electric scooter models \u2014 CRX High Speed, Majesty, The post Warivo Electric unveils four new EV scooters appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-05-25T12:19:29+00:00",
+            "published_display": "25 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-launches-facelifted-city-at-11-99-lakh-debuts-zr-v-hybrid-as-new-flagship-suv/131260544",
@@ -234322,37 +234373,19 @@
             ]
           },
           {
-            "title": "Bosch\u2019s India Recast",
-            "url": "https://www.autocarpro.in/feature/boschs-india-recast-132757",
-            "summary": "On May 21, 2026, the German engineering giant Bosch Ltd announced a 50:50 joint venture with the TSF Group\u2019s Brakes India and Wheels India. While the deal might appear to be a localized expansion of air systems for commercial vehicles (CVs), it serves as a microcosm for a much larger, more aggressive transformation as the automotive industry in India is set to evolve rapidly by 2030 and beyond.",
+            "title": "NGK To Invest \u20b94,200 Crore In New Ishikawa Plant For Semiconductor Ceramics",
+            "url": "https://www.autocarpro.in/NEWS/ngk-to-invest-\u20b94200-crore-in-new-ishikawa-plant-for-semiconductor-ceramics-132767",
+            "summary": "NGK Corporation has announced plans to establish a new production facility for ceramics used in semiconductor manufacturing equipment in Nomi City, Ishikawa Prefecture, Japan. The company will invest approximately \u20b94,200 crore (\u00a570 billion) in the project, with mass production expected to begin in October 2029.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-05-23T09:00:00+00:00",
-            "published_display": "23 May 2026",
+            "published_at": "2026-05-25T12:50:01+00:00",
+            "published_display": "25 May 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "IIT Roorkee Partners With Cathion Energy to Commercialise Lithium Ion Battery Technologies",
-            "url": "https://www.autocarpro.in/NEWS/iit-roorkee-partners-with-cathion-energy-to-commercialise-lithium-ion-battery-technologies-132752",
-            "summary": "The Indian Institute of Technology (IIT) Roorkee has signed two technology transfer agreements with Cathion Energy Private Limited to commercialise advanced lithium ion battery components. The agreements, finalised on May 22, cover the transfer of novel composite electrode technologies developed by Professor Anjan Sil.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-22T18:30:28+00:00",
-            "published_display": "22 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
               "Components"
             ],
             "signal_tags": [
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           }
         ]
