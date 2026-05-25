@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-05-24T16:02:22.898933+00:00",
+  "generated_at": "2026-05-25T07:16:56.432874+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 22,
+  "item_count": 23,
   "groups": [
     {
       "id": "pv",
@@ -75,15 +75,16 @@
           ]
         },
         {
-          "title": "4.5m to 4.8m SUV Sales April 2026 \u2013 Scorpio, XUV7XO, XEV9S, Harrier, Fortuner, Safari, Hector",
-          "url": "https://www.rushlane.com/4-5m-to-4-8m-suv-sales-april-2026-scorpio-xuv7xo-xev9s-harrier-12547304.html",
-          "summary": "Mahindra continued to dominate this space with multiple products including Scorpio, XUV7XO and XEV lineup contributing a majority share of segment volumes The post 4.5m to 4.8m SUV Sales April 2026 \u2013 Scorpio, XUV7XO, XEV9S, Harrier, Fortuner, Safari, Hector appeared first on RushLane .",
+          "title": "Renault Bridger SUV Design Patented In India \u2013 Jimny, Vision S Rival",
+          "url": "https://www.rushlane.com/renault-bridger-suv-design-patented-in-india-jimny-vision-s-rival-12547376.html",
+          "summary": "Renault Bridger PHEV design has been patented in the country as it possesses two fuel filler caps typical of a plug-in hybrid EV The post Renault Bridger SUV Design Patented In India \u2013 Jimny, Vision S Rival appeared first on RushLane .",
           "source": "RushLane",
-          "published_at": "2026-05-23T12:09:51+00:00",
-          "published_display": "23 May 2026",
+          "published_at": "2026-05-25T05:20:27+00:00",
+          "published_display": "25 May 2026",
           "importance_score": 6,
           "segment_tags": [
-            "Passenger Vehicles"
+            "Passenger Vehicles",
+            "EV"
           ],
           "signal_tags": [
             "General"
@@ -95,6 +96,21 @@
       "id": "2w",
       "label": "Two-Wheelers",
       "items": [
+        {
+          "title": "Royal Enfield Sales Breakup April 2026 \u2013 Classic, Bullet, Hunter, Meteor, 650 Twin, Himalayan",
+          "url": "https://www.rushlane.com/royal-enfield-sales-breakup-april-2026-classic-bullet-hunter-12547372.html",
+          "summary": "Royal Enfield registered strong domestic sales growth in April 2026, driven primarily by its 350cc motorcycle lineup, which accounted for 91.25% of total domestic sales The post Royal Enfield Sales Breakup April 2026 \u2013 Classic, Bullet, Hunter, Meteor, 650 Twin, Himalayan appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-05-25T04:12:30+00:00",
+          "published_display": "25 May 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "signal_tags": [
+            "Monthly Sales / Demand"
+          ]
+        },
         {
           "title": "Bosch Ltd Q4 Revenue Rises 13.3%; FY26 PAT at Rs 2,770 Crore",
           "url": "https://www.autocarpro.in/NEWS/bosch-ltd-q4-revenue-rises-133-fy26-pat-at-rs-2770-crore-132710",
@@ -117,23 +133,6 @@
       "label": "Commercial Vehicles",
       "items": [
         {
-          "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
-          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
-          "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
-          "source": "ET Auto Commercial Vehicles",
-          "published_at": "2026-04-24T05:40:51+00:00",
-          "published_display": "24 Apr 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "Commercial Vehicles",
-            "EV"
-          ],
-          "signal_tags": [
-            "Capacity / Capex",
-            "Supply Chain / Components"
-          ]
-        },
-        {
           "title": "Remsons Industries UK Subsidiary Secures Rs 30 Crore International Supply Contract",
           "url": "https://www.autocarpro.in/NEWS/remsons-industries-uk-subsidiary-secures-rs-30-crore-international-supply-contract-132690",
           "summary": "Remsons Industries Limited announced that its step down subsidiary in the United Kingdom has secured a new international supply contract valued at approximately Rs 30 crore. Remsons Automotive Limited received the formal nomination from a global commercial vehicle original equipment manufacturer.",
@@ -145,6 +144,23 @@
             "Commercial Vehicles"
           ],
           "signal_tags": [
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Atul Auto, Exponent Energy partner to roll out 15-minute charging electric three-wheelers",
+          "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/lcv/atul-auto-exponent-energy-partner-to-roll-out-15-minute-charging-electric-three-wheelers/130484747",
+          "summary": "The tie-up will integrate 15-minute rapid charging technology into factory-built vehicles, aiming to accelerate EV adoption in the commercial segment.",
+          "source": "ET Auto Commercial Vehicles",
+          "published_at": "2026-04-24T05:40:51+00:00",
+          "published_display": "24 Apr 2026",
+          "importance_score": 5,
+          "segment_tags": [
+            "Commercial Vehicles",
+            "EV"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
             "Supply Chain / Components"
           ]
         }
@@ -420,8 +436,8 @@
       "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 46,
-    "filtered_low_signal": 2,
-    "kept_articles": 68
+    "unmapped_articles": 47,
+    "filtered_low_signal": 1,
+    "kept_articles": 69
   }
 }
