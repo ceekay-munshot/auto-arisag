@@ -61191,11 +61191,10 @@
       "price": 400.95,
       "change_1d_pct": 3.98,
       "change_1w_pct": 10.99,
-      "change_1m_pct": 13.15,
+      "change_1m_pct": 14.3,
       "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
       "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
       "closes_30d": [
-        357.9,
         356.3,
         360.1,
         355.7,
@@ -61206,6 +61205,7 @@
         354.35,
         350.8,
         352.7,
+        341.55,
         341.55,
         343.05,
         340.15,
@@ -61477,6 +61477,10 @@
         },
         {
           "date": "2026-01-14",
+          "close": 349.8
+        },
+        {
+          "date": "2026-01-15",
           "close": 349.8
         },
         {
@@ -61753,6 +61757,10 @@
         },
         {
           "date": "2026-04-30",
+          "close": 341.55
+        },
+        {
+          "date": "2026-05-01",
           "close": 341.55
         },
         {
