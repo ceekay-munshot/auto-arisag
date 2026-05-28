@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T12:30:56.988748+00:00",
+  "generated_at": "2026-05-28T18:14:49.243799+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120121,9 +120121,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-28T12:30:34.879822+00:00",
+      "generated_at": "2026-05-28T18:14:25.584660+00:00",
       "window_days": 30,
-      "item_count": 8,
+      "item_count": 7,
       "items": [
         {
           "title": "Tata Motors PV launches next-gen Tiago range from \u20b94.69 lakh with EV, CNG options",
@@ -120228,22 +120228,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-177684/131344632.cms"
-        },
-        {
-          "title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV",
-          "summary": "The new City features refreshed styling, new technology features and both petrol and strong hybrid powertrain options, while the ZR-V is powered by Honda\u2019s 2.0-litre e:HEV strong hybrid system.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-launches-facelifted-city-at-11-99-lakh-debuts-zr-v-hybrid-as-new-flagship-suv/131260544",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-22T09:08:22+00:00",
-          "published_display": "22 May 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "Components"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-31694/131260544.cms"
         }
       ],
       "companies": [
@@ -120286,14 +120270,6 @@
           "count": 1,
           "latest_published_at": "2026-05-27T08:01:35+00:00",
           "latest_title": "JSW MG Motor launches Majestor SUV at \u20b940.99 lakh"
-        },
-        {
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-05-22T09:08:22+00:00",
-          "latest_title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV"
         }
       ],
       "source_meta": {
@@ -243380,32 +243356,15 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-28T12:30:10.889427+00:00",
+    "generated_at": "2026-05-28T18:14:01.379998+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 22,
+    "item_count": 21,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "Honda launches facelifted City at \u20b911.99 lakh, debuts ZR-V hybrid as new flagship SUV",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-launches-facelifted-city-at-11-99-lakh-debuts-zr-v-hybrid-as-new-flagship-suv/131260544",
-            "summary": "The new City features refreshed styling, new technology features and both petrol and strong hybrid powertrain options, while the ZR-V is powered by Honda\u2019s 2.0-litre e:HEV strong hybrid system.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-22T09:08:22+00:00",
-            "published_display": "22 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Tata Motors PV eyes reigniting India\u2019s hatchback market with new Tiago",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-reinvigorates-indias-hatchback-market-with-new-tiago-ev-and-cng-models/131366095",
@@ -243453,6 +243412,22 @@
             ]
           },
           {
+            "title": "Rising fuel prices driving demand for sub-\u20b915 lakh EVs: Shailesh Chandra",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/surge-in-demand-for-affordable-evs-amid-rising-fuel-prices-insights-from-tata-motors/131368258",
+            "summary": "Chandra, MD, Tata Motors PV & Tata Passenger Electric Mobility, said the company has witnessed a 2.5X growth in EV bookings over the last two months, with the carmaker also planning to increase capacity to 15,000 units a month from the current 10,000 units.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-28T10:44:32+00:00",
+            "published_display": "28 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "BYD Dolphin Plug-in Hybrid For Europe Debuts \u2013 4.1m Long, 1000 Kms Range",
             "url": "https://www.rushlane.com/byd-dolphin-plug-in-hybrid-for-europe-debuts-4-1m-long-1000-kms-range-12547576.html",
             "summary": "BYD Dolphin G plug-in hybrid hatchback is designed for European markets with deliveries to commence from Fall of 2026 The post BYD Dolphin Plug-in Hybrid For Europe Debuts \u2013 4.1m Long, 1000 Kms Range appeared first on RushLane .",
@@ -243484,21 +243459,6 @@
             "segment_tags": [
               "Two-Wheelers",
               "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "2026 Hero Splendor XTEC 2.0 125cc Launch Price Rs 86.5k \u2013 5 New Colours",
-            "url": "https://www.rushlane.com/2026-hero-splendor-xtec-2-0-125cc-launch-price-rs-86-5k-5-new-colours-12547603.html",
-            "summary": "Positioned as an upgraded version of one of India\u2019s most popular commuter motorcycles, the new Super Splendor XTEC 2.0 gets refreshed styling, improved fuel efficiency and multiple new technology features The post 2026 Hero Splendor XTEC 2.0 125cc Launch Price Rs 86.5k \u2013 5 New Colours appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-27T13:28:07+00:00",
-            "published_display": "27 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
             ],
             "signal_tags": [
               "Product / Launch"
@@ -243634,11 +243594,11 @@
             ]
           },
           {
-            "title": "Rising fuel prices driving demand for sub-\u20b915 lakh EVs: Shailesh Chandra",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/surge-in-demand-for-affordable-evs-amid-rising-fuel-prices-insights-from-tata-motors/131368258",
-            "summary": "Chandra, MD, Tata Motors PV & Tata Passenger Electric Mobility, said the company has witnessed a 2.5X growth in EV bookings over the last two months, with the carmaker also planning to increase capacity to 15,000 units a month from the current 10,000 units.",
+            "title": "\u2018Even budget car buyers have premium expectations\u2019: Tata Motors' Martin Uhlarik",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-tiago-bridging-affordable-and-premium-design-expectations/131372851",
+            "summary": "As Tata Motors refreshes the Tiago amid a shrinking hatchback market, Tata Motors' Global Design Head Martin Uhlarik tells ETAuto why affordability no longer means compromising on aspiration. In this exclusive conversation, he discusses Tata\u2019s evolving design philosophy, rising demand for premium interiors in budget cars, and how EVs are moving into the mainstream.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-28T10:44:32+00:00",
+            "published_at": "2026-05-28T15:07:27+00:00",
             "published_display": "28 May 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -243650,19 +243610,19 @@
             ]
           },
           {
-            "title": "New Tata Tiago Launch Price \u2013 Rs 4.69 L (Petrol), Rs 5.79 L (CNG), Rs 6.99 L (EV), Rs 4.69 L (EV BaaS)",
-            "url": "https://www.rushlane.com/new-tata-tiago-launch-price-rs-4-69-l-petrol-rs-5-79-l-cng-12547685.html",
-            "summary": "Prices start from Rs 4.69 lakh (ex-sh) for the petrol variant, while Tiago EV starts from Rs 6.99 lakh. Tata is also offering the Tiago.ev with Battery-as-a-Service (BaaS) The post New Tata Tiago Launch Price \u2013 Rs 4.69 L (Petrol), Rs 5.79 L (CNG), Rs 6.99 L (EV), Rs 4.69 L (EV BaaS) appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-28T07:29:35+00:00",
+            "title": "Ferrari aims to prove doubters wrong after divisive EV debut",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ferrari-aims-to-prove-doubters-wrong-after-divisive-ev-debut/131371602",
+            "summary": "Ferrari's first all-electric car, the Luce, has sparked global shock and outrage with its departure from the brand's traditional sports car image. The four-door, five-seat family car, designed by Jony Ive and Marc Newson, has drawn widespread criticism and a significant drop in Ferrari's stock price.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-28T13:39:13+00:00",
             "published_display": "28 May 2026",
             "importance_score": 6,
             "segment_tags": [
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
+              "Product / Launch"
             ]
           }
         ]
@@ -243805,9 +243765,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 45,
-      "filtered_low_signal": 1,
-      "kept_articles": 69
+      "unmapped_articles": 47,
+      "filtered_low_signal": 0,
+      "kept_articles": 70
     }
   },
   "qa": [
