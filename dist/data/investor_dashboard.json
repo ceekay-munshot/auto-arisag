@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T12:17:22.889308+00:00",
+  "generated_at": "2026-05-29T18:14:16.014069+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120121,10 +120121,38 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-29T12:17:03.099560+00:00",
+      "generated_at": "2026-05-29T18:13:54.067303+00:00",
       "window_days": 30,
-      "item_count": 6,
+      "item_count": 8,
       "items": [
+        {
+          "title": "BYD Unveils Xuanji A3 \u2013 First Automotive-Grade 4nm Smart Driving Chip For Next Gen ADAS L3, L4",
+          "summary": "Xuanji A3, built on a 4nm process, together delivers over 2,100 TOPS of computing power, relating to 20% lower power consumption per unit The post BYD Unveils Xuanji A3 \u2013 First Automotive-Grade 4nm Smart Driving Chip For Next Gen ADAS L3, L4 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/byd-unveils-xuanji-a3-first-automotive-grade-4nm-smart-driving-chip-12547749.html",
+          "source": "RushLane",
+          "published_at": "2026-05-29T13:56:43+00:00",
+          "published_display": "29 May 2026",
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/byd-automotive-chip-first-adas-1.jpeg"
+        },
+        {
+          "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
+          "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-the-taigun-and-virtus-in-sri-lanka/131390821",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-05-29T12:34:43+00:00",
+          "published_display": "29 May 2026",
+          "company": "Volkswagen India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-112648/131390821.cms"
+        },
         {
           "title": "Toyota Puts Next Gen Lexus EV On Hold Amid Slowing Global EV Demand",
           "summary": "Toyota Lexus LF-ZC production which was slated to start around mid-2027, but recent reports suggest that development may be halted The post Toyota Puts Next Gen Lexus EV On Hold Amid Slowing Global EV Demand appeared first on RushLane .",
@@ -120218,6 +120246,22 @@
         }
       ],
       "companies": [
+        {
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-29T13:56:43+00:00",
+          "latest_title": "BYD Unveils Xuanji A3 \u2013 First Automotive-Grade 4nm Smart Driving Chip For Next Gen ADAS L3, L4"
+        },
+        {
+          "company": "Volkswagen India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-05-29T12:34:43+00:00",
+          "latest_title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus"
+        },
         {
           "company": "Toyota Kirloskar",
           "tone": "pv",
@@ -120375,10 +120419,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.0,
+        "value": 94.99,
         "unit": "\u20b9",
-        "delta_value": -1.0489,
-        "delta_label": "-1.22% in last week (Yahoo Finance)",
+        "delta_value": -1.0589,
+        "delta_label": "-1.23% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130790,7 +130834,7 @@
           },
           {
             "date": "2026-05-29",
-            "close": 95.0
+            "close": 94.99
           }
         ]
       }
@@ -243373,15 +243417,63 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-29T12:16:38.861426+00:00",
+    "generated_at": "2026-05-29T18:13:30.134310+00:00",
     "window_days": 45,
     "group_count": 5,
-    "item_count": 18,
+    "item_count": 19,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "SAIC to sell additional 10% stake in JSW MG Motor India to JSW: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/saic-to-sell-additional-10-stake-in-jsw-mg-motor-india-to-jsw-report/131392197",
+            "summary": "SAIC Motor is set to sell an additional 10% stake in JSW MG Motor India to JSW Group, which would become the company\u2019s largest shareholder, as the Chinese automaker navigates India\u2019s investment restrictions and prepares for new vehicle launches.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-29T13:37:31+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
+              "Funding / M&A"
+            ]
+          },
+          {
+            "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-the-taigun-and-virtus-in-sri-lanka/131390821",
+            "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-29T12:34:43+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Stellantis plays down European scope for JLR and Tata partnerships",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-plays-down-european-scope-for-jlr-and-tata-partnerships/131390409",
+            "summary": "Stellantis will not expand its new partnerships with Jaguar Land Rover and Tata Motors into Europe. The company's Europe chief, Emanuele Cappellano, confirmed these collaborations are focused on the US and India. A niche Jeep model made in China with Dongfeng may also be sold in Europe.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-29T12:10:03+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
           {
             "title": "Tata Motors PV eyes reigniting India\u2019s hatchback market with new Tiago",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-reinvigorates-indias-hatchback-market-with-new-tiago-ev-and-cng-models/131366095",
@@ -243399,21 +243491,6 @@
             ]
           },
           {
-            "title": "JSW MG Motor India begins production of Majestor premium SUV at Halol plant",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mg-motor-india-launches-majestor-premium-suv-production-in-gujarat/131325303",
-            "summary": "The company positions the model as India\u2019s first D+ segment SUV, featuring triple differential locks, advanced off-road capabilities and a 5-year ownership package.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-26T10:03:12+00:00",
-            "published_display": "26 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
             "title": "Battery maker ProLogium to list on Nasdaq in $3.8 billion SPAC deal",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/battery-maker-prologium-to-list-on-nasdaq-in-3-8-billion-spac-deal/131381012",
             "summary": "Taiwanese battery maker ProLogium Technology is set to go public in New York via a $3.8 billion merger with Translational Development Acquisition Corp.",
@@ -243427,38 +243504,6 @@
             "signal_tags": [
               "Funding / M&A",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "\u2018Even budget car buyers have premium expectations\u2019: Tata Motors' Martin Uhlarik",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-tiago-bridging-affordable-and-premium-design-expectations/131372851",
-            "summary": "As Tata Motors refreshes the Tiago amid a shrinking hatchback market, Tata Motors' Global Design Head Martin Uhlarik tells ETAuto why affordability no longer means compromising on aspiration. In this exclusive conversation, he discusses Tata\u2019s evolving design philosophy, rising demand for premium interiors in budget cars, and how EVs are moving into the mainstream.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-28T15:07:27+00:00",
-            "published_display": "28 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Ferrari aims to prove doubters wrong after divisive EV debut",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ferrari-aims-to-prove-doubters-wrong-after-divisive-ev-debut/131371602",
-            "summary": "Ferrari's first all-electric car, the Luce, has sparked global shock and outrage with its departure from the brand's traditional sports car image. The four-door, five-seat family car, designed by Jony Ive and Marc Newson, has drawn widespread criticism and a significant drop in Ferrari's stock price.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-28T13:39:13+00:00",
-            "published_display": "28 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           }
         ]
@@ -243482,6 +243527,21 @@
             "signal_tags": [
               "Supply Chain / Components",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Triumph 350cc Range Price Hike June 2026 \u2013 New Prices Out",
+            "url": "https://www.rushlane.com/triumph-350cc-price-hike-june-2026-new-prices-out-12547867.html",
+            "summary": "Triumph Motorcycles India has officially revised prices of its recently launched 350cc motorcycle lineup. The updated prices come into effect from June 2026 The post Triumph 350cc Range Price Hike June 2026 \u2013 New Prices Out appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-29T13:25:31+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
             ]
           }
         ]
@@ -243583,22 +243643,6 @@
             ]
           },
           {
-            "title": "EVs to drive \u20b93.5 lakh crore capex in India's PV sector: Report",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/indias-passenger-vehicle-sector-set-for-35-lakh-crore-investment-driven-by-evs/131305736",
-            "summary": "India Ratings and Research said the top five original equipment manufacturers (OEMs) are expected to account for over \u20b92 lakh crore of the planned investments.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-25T09:43:16+00:00",
-            "published_display": "25 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
             "title": "IIT Roorkee Partners With Cathion Energy to Commercialise Lithium Ion Battery Technologies",
             "url": "https://www.autocarpro.in/NEWS/iit-roorkee-partners-with-cathion-energy-to-commercialise-lithium-ion-battery-technologies-132752",
             "summary": "The Indian Institute of Technology (IIT) Roorkee has signed two technology transfer agreements with Cathion Energy Private Limited to commercialise advanced lithium ion battery components. The agreements, finalised on May 22, cover the transfer of novel composite electrode technologies developed by Professor Anjan Sil.",
@@ -243613,6 +243657,21 @@
             "signal_tags": [
               "Supply Chain / Components",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh",
+            "url": "https://www.rushlane.com/toyota-ebella-electric-launch-price-rs-23-6-lakh-61-kwh-12547834.html",
+            "summary": "Toyota Kirloskar Motor has announced the launch price of the all-electric Urban Cruiser Ebella in India. Offered in a single fully-loaded E3 variant The post Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-29T07:17:49+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
             ]
           }
         ]
@@ -243732,9 +243791,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 46,
-      "filtered_low_signal": 1,
-      "kept_articles": 69
+      "unmapped_articles": 44,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [
