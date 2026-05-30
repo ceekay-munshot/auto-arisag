@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T18:14:16.014069+00:00",
+  "generated_at": "2026-05-30T06:26:09.261558+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47751,7 +47751,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-05-29",
+          "latest_release_date": "2026-05-30",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120121,10 +120121,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-05-29T18:13:54.067303+00:00",
+      "generated_at": "2026-05-30T06:25:48.996580+00:00",
       "window_days": 30,
       "item_count": 8,
       "items": [
+        {
+          "title": "Hero Splendor Flex Fuel Ethanol E85 Petrol Launch On 3rd June",
+          "summary": "It is possible that Hero's first Flex Fuel bike could be Splendor E85 or HF Deluxe E85, two of the brand's bestselling models The post Hero Splendor Flex Fuel Ethanol E85 Petrol Launch On 3rd June appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hero-splendor-flex-fuel-e85-petrol-launch-on-3rd-june-12547875.html",
+          "source": "RushLane",
+          "published_at": "2026-05-30T03:02:58+00:00",
+          "published_display": "30 May 2026",
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/04/new-hero-splendor-sales-target.jpeg"
+        },
         {
           "title": "BYD Unveils Xuanji A3 \u2013 First Automotive-Grade 4nm Smart Driving Chip For Next Gen ADAS L3, L4",
           "summary": "Xuanji A3, built on a 4nm process, together delivers over 2,100 TOPS of computing power, relating to 20% lower power consumption per unit The post BYD Unveils Xuanji A3 \u2013 First Automotive-Grade 4nm Smart Driving Chip For Next Gen ADAS L3, L4 appeared first on RushLane .",
@@ -120167,21 +120182,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/lexus-lf-zc-electric-sedan-concept-7.jpg"
-        },
-        {
-          "title": "Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh",
-          "summary": "Toyota Kirloskar Motor has announced the launch price of the all-electric Urban Cruiser Ebella in India. Offered in a single fully-loaded E3 variant The post Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh appeared first on RushLane .",
-          "url": "https://www.rushlane.com/toyota-ebella-electric-launch-price-rs-23-6-lakh-61-kwh-12547834.html",
-          "source": "RushLane",
-          "published_at": "2026-05-29T07:17:49+00:00",
-          "published_display": "29 May 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/01/New-Toyota-Ebella-7.jpeg"
         },
         {
           "title": "Tata Motors PV launches next-gen Tiago range from \u20b94.69 lakh with EV, CNG options",
@@ -120247,6 +120247,14 @@
       ],
       "companies": [
         {
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-05-30T03:02:58+00:00",
+          "latest_title": "Hero Splendor Flex Fuel Ethanol E85 Petrol Launch On 3rd June"
+        },
+        {
           "company": "BYD India",
           "tone": "ev",
           "scope": "tracked",
@@ -120266,7 +120274,7 @@
           "company": "Toyota Kirloskar",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-05-29T11:28:51+00:00",
           "latest_title": "Toyota Puts Next Gen Lexus EV On Hold Amid Slowing Global EV Demand"
         },
@@ -120297,13 +120305,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-29"
+        "latest_release_date": "2026-05-30"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-05-29",
+    "as_of_date": "2026-05-30",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -120421,8 +120429,8 @@
         "label": "USD / INR",
         "value": 94.99,
         "unit": "\u20b9",
-        "delta_value": -1.0589,
-        "delta_label": "-1.23% in last week (Yahoo Finance)",
+        "delta_value": -1.0582,
+        "delta_label": "-0.76% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130833,6 +130841,10 @@
             "close": 96.0489
           },
           {
+            "date": "2026-05-28",
+            "close": 96.0482
+          },
+          {
             "date": "2026-05-29",
             "close": 94.99
           }
@@ -130842,7 +130854,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-05-29",
+    "as_of_date": "2026-05-30",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -140777,11 +140789,10 @@
         "ticker": "M&M",
         "price": 3045.6,
         "change_1d_pct": -2.43,
-        "change_1w_pct": -1.72,
-        "change_1m_pct": -3.38,
+        "change_1w_pct": -1.16,
+        "change_1m_pct": -1.68,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3200.2,
           3221.6,
           3247.3,
           3149.7,
@@ -140809,6 +140820,7 @@
           3081.3,
           3139.0,
           3107.3,
+          3121.6,
           3121.6,
           3045.6
         ],
@@ -150691,6 +150703,10 @@
           },
           {
             "date": "2026-05-27",
+            "close": 3121.6
+          },
+          {
+            "date": "2026-05-28",
             "close": 3121.6
           },
           {
@@ -160629,11 +160645,10 @@
         "ticker": "TVSMOTOR",
         "price": 3355.7,
         "change_1d_pct": -0.85,
-        "change_1w_pct": -0.74,
-        "change_1m_pct": -5.58,
+        "change_1w_pct": -1.81,
+        "change_1m_pct": -3.93,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3735.8,
           3761.9,
           3752.7,
           3660.7,
@@ -160661,6 +160676,7 @@
           3417.5,
           3469.5,
           3454.9,
+          3384.6,
           3384.6,
           3355.7
         ],
@@ -170546,6 +170562,10 @@
             "close": 3384.6
           },
           {
+            "date": "2026-05-28",
+            "close": 3384.6
+          },
+          {
             "date": "2026-05-29",
             "close": 3355.7
           }
@@ -170555,11 +170575,10 @@
         "ticker": "BAJAJ-AUTO",
         "price": 10460.0,
         "change_1d_pct": -3.22,
-        "change_1w_pct": -1.94,
-        "change_1m_pct": 9.6,
+        "change_1w_pct": -0.85,
+        "change_1m_pct": 4.66,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          9773.5,
           9803.0,
           9793.0,
           9602.0,
@@ -170587,6 +170606,7 @@
           10549.5,
           10491.0,
           10593.0,
+          10808.5,
           10808.5,
           10460.0
         ],
@@ -180472,6 +180492,10 @@
             "close": 10808.5
           },
           {
+            "date": "2026-05-28",
+            "close": 10808.5
+          },
+          {
             "date": "2026-05-29",
             "close": 10460.0
           }
@@ -180481,11 +180505,10 @@
         "ticker": "HYUNDAI",
         "price": 1924.0,
         "change_1d_pct": 0.54,
-        "change_1w_pct": 4.27,
-        "change_1m_pct": 5.87,
+        "change_1w_pct": 4.08,
+        "change_1m_pct": 5.85,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1902.8,
           1886.0,
           1885.7,
           1849.5,
@@ -180513,6 +180536,7 @@
           1848.6,
           1880.9,
           1884.0,
+          1913.6,
           1913.6,
           1924.0
         ],
@@ -182099,6 +182123,10 @@
           },
           {
             "date": "2026-05-27",
+            "close": 1913.6
+          },
+          {
+            "date": "2026-05-28",
             "close": 1913.6
           },
           {
@@ -192037,12 +192065,11 @@
         "ticker": "TMPV",
         "price": 393.9,
         "change_1d_pct": -1.76,
-        "change_1w_pct": 9.01,
-        "change_1m_pct": 11.68,
+        "change_1w_pct": 8.41,
+        "change_1m_pct": 15.33,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          360.1,
           355.7,
           355.9,
           361.85,
@@ -192070,6 +192097,7 @@
           363.35,
           373.25,
           385.6,
+          400.95,
           400.95,
           393.9
         ],
@@ -201955,6 +201983,10 @@
             "close": 400.95
           },
           {
+            "date": "2026-05-28",
+            "close": 400.95
+          },
+          {
             "date": "2026-05-29",
             "close": 393.9
           }
@@ -201964,12 +201996,11 @@
         "ticker": "TMCV",
         "price": 379.5,
         "change_1d_pct": -1.13,
-        "change_1w_pct": -0.11,
-        "change_1m_pct": -8.98,
+        "change_1w_pct": -0.9,
+        "change_1m_pct": -7.42,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          439.1,
           438.4,
           442.55,
           447.8,
@@ -201997,6 +202028,7 @@
           382.95,
           395.65,
           385.1,
+          383.85,
           383.85,
           379.5
         ],
@@ -202538,6 +202570,10 @@
             "close": 383.85
           },
           {
+            "date": "2026-05-28",
+            "close": 383.85
+          },
+          {
             "date": "2026-05-29",
             "close": 379.5
           }
@@ -202547,11 +202583,10 @@
         "ticker": "ASHOKLEY",
         "price": 155.44,
         "change_1d_pct": -5.0,
-        "change_1w_pct": 0.62,
-        "change_1m_pct": -6.21,
+        "change_1w_pct": -1.75,
+        "change_1m_pct": -4.1,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          174.78,
           175.96,
           176.61,
           178.97,
@@ -202579,6 +202614,7 @@
           158.21,
           164.08,
           160.54,
+          163.62,
           163.62,
           155.44
         ],
@@ -212461,6 +212497,10 @@
           },
           {
             "date": "2026-05-27",
+            "close": 163.62
+          },
+          {
+            "date": "2026-05-28",
             "close": 163.62
           },
           {
@@ -222399,11 +222439,10 @@
         "ticker": "ACE",
         "price": 884.95,
         "change_1d_pct": -2.35,
-        "change_1w_pct": 1.99,
-        "change_1m_pct": -1.56,
+        "change_1w_pct": 0.35,
+        "change_1m_pct": -0.3,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          917.05,
           904.55,
           912.8,
           934.4,
@@ -222431,6 +222470,7 @@
           881.9,
           885.45,
           894.9,
+          906.25,
           906.25,
           884.95
         ],
@@ -232313,6 +232353,10 @@
           },
           {
             "date": "2026-05-27",
+            "close": 906.25
+          },
+          {
+            "date": "2026-05-28",
             "close": 906.25
           },
           {
@@ -242251,7 +242295,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-05-29",
+    "as_of_date": "2026-05-30",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -243417,10 +243461,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-05-29T18:13:30.134310+00:00",
+    "generated_at": "2026-05-30T06:25:26.212788+00:00",
     "window_days": 45,
     "group_count": 5,
-    "item_count": 19,
+    "item_count": 20,
     "groups": [
       {
         "id": "pv",
@@ -243491,19 +243535,19 @@
             ]
           },
           {
-            "title": "Battery maker ProLogium to list on Nasdaq in $3.8 billion SPAC deal",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/battery-maker-prologium-to-list-on-nasdaq-in-3-8-billion-spac-deal/131381012",
-            "summary": "Taiwanese battery maker ProLogium Technology is set to go public in New York via a $3.8 billion merger with Translational Development Acquisition Corp.",
+            "title": "\u2018Even budget car buyers have premium expectations\u2019: Tata Motors' Martin Uhlarik",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-tiago-bridging-affordable-and-premium-design-expectations/131372851",
+            "summary": "As Tata Motors refreshes the Tiago amid a shrinking hatchback market, Tata Motors' Global Design Head Martin Uhlarik tells ETAuto why affordability no longer means compromising on aspiration. In this exclusive conversation, he discusses Tata\u2019s evolving design philosophy, rising demand for premium interiors in budget cars, and how EVs are moving into the mainstream.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-29T04:10:05+00:00",
-            "published_display": "29 May 2026",
+            "published_at": "2026-05-28T15:07:27+00:00",
+            "published_display": "28 May 2026",
             "importance_score": 6,
             "segment_tags": [
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
+              "General"
             ]
           }
         ]
@@ -243512,6 +243556,21 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Hero Splendor Flex Fuel Ethanol E85 Petrol Launch On 3rd June",
+            "url": "https://www.rushlane.com/hero-splendor-flex-fuel-e85-petrol-launch-on-3rd-june-12547875.html",
+            "summary": "It is possible that Hero's first Flex Fuel bike could be Splendor E85 or HF Deluxe E85, two of the brand's bestselling models The post Hero Splendor Flex Fuel Ethanol E85 Petrol Launch On 3rd June appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-05-30T03:02:58+00:00",
+            "published_display": "30 May 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Auto demand healthy despite rise in input costs: Nirmal Minda",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/nirmal-minda-optimistic-on-indias-auto-demand-amid-rising-input-costs/131215168",
@@ -243660,18 +243719,19 @@
             ]
           },
           {
-            "title": "Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh",
-            "url": "https://www.rushlane.com/toyota-ebella-electric-launch-price-rs-23-6-lakh-61-kwh-12547834.html",
-            "summary": "Toyota Kirloskar Motor has announced the launch price of the all-electric Urban Cruiser Ebella in India. Offered in a single fully-loaded E3 variant The post Toyota Ebella Electric Launch Price Rs 23.6 Lakh \u2013 61 kWh appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-05-29T07:17:49+00:00",
+            "title": "Battery maker ProLogium to list on Nasdaq in $3.8 billion SPAC deal",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/battery-maker-prologium-to-list-on-nasdaq-in-3-8-billion-spac-deal/131381012",
+            "summary": "Taiwanese battery maker ProLogium Technology is set to go public in New York via a $3.8 billion merger with Translational Development Acquisition Corp.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-29T04:10:05+00:00",
             "published_display": "29 May 2026",
             "importance_score": 6,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Funding / M&A",
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -243791,7 +243851,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 44,
+      "unmapped_articles": 43,
       "filtered_low_signal": 2,
       "kept_articles": 68
     }
@@ -243843,7 +243903,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-05-29",
+    "as_of_date": "2026-05-30",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
