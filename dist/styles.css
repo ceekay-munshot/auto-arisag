@@ -5302,13 +5302,13 @@ th:hover {
 }
 
 /* ───────── Print / Export-PDF stylesheet ─────────
-   Strips non-essential UI (search bar, side nav, hero toolbar, news
-   panel, refresh dropdowns) and forces a clean A4 layout for the
-   active tab content. */
+   Strips non-essential UI and builds a paginated A4 investor handout:
+   cover → executive snapshot → one tab per section, with table headers
+   that repeat across pages and blocks that never split mid-row. */
 @media print {
   @page {
     size: A4;
-    margin: 14mm 12mm;
+    margin: 13mm 12mm 17mm;
   }
 
   /* Force full colour to print. Without this, browsers strip background
@@ -5325,6 +5325,58 @@ th:hover {
 
   .background-grid {
     display: none;
+  }
+
+  body { orphans: 3; widows: 3; }
+
+  /* ─────── Pagination primitives — the core "nothing breaks" rules ───────
+     Repeat table headers on every page, never slice a row, never split a
+     chart or image down the middle. */
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  img, svg {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* Self-contained blocks that must stay whole across a page boundary. */
+  .summary-card,
+  .info-card,
+  .macro-tile,
+  .insight-ribbon-card,
+  .takeaway-box,
+  .freshness-pill,
+  .stock-chip,
+  .stock-snapshot-card,
+  .spread-bar-block,
+  .festive-hero-card,
+  .explainer-kpi,
+  .premium-summary-tile,
+  .premium-card,
+  .quad-card,
+  .leaderboard-card,
+  figure,
+  .legend-note,
+  .compare-banner,
+  .launch-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  /* Keep a heading welded to whatever follows it. */
+  h1, h2, h3, h4,
+  .section-title,
+  .section-subtitle,
+  .small-label,
+  .print-section-head,
+  .card-head,
+  .chart-card > header {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   /* Hide all interactive chrome — search, side nav, hero toolbar, filters,
@@ -5350,6 +5402,7 @@ th:hover {
   .news-feed,
   .hero-news,
   .hero-news + *,
+  .hero-meta,
   .hero-meta-list,
   .premium-card .premium-cta,
   .stock-chip-link {
@@ -5371,48 +5424,97 @@ th:hover {
   }
   .panel-grid > * + * { margin-top: 10pt; }
 
-  /* ─────── Cover page (only present when printAllTabs flag is on) ─────── */
+  /* ─────── Cover page (page 1 of the handout) ───────
+     Fixed height so the cover always occupies exactly one A4 page — the old
+     min-height + tall top padding overflowed a navy sliver onto page 2. */
   .print-cover {
+    break-inside: avoid;
     page-break-after: always;
-    padding: 38mm 8mm 0 !important;
-    background: linear-gradient(135deg, #14273e 0%, #1c324c 100%) !important;
+    box-sizing: border-box;
+    height: 245mm;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 30mm 14mm 16mm !important;
+    background: linear-gradient(150deg, #14273e 0%, #1c324c 52%, #25415f 100%) !important;
     color: #f7f1e4 !important;
-    border-radius: 12pt;
-    min-height: 240mm;
+    border-radius: 10pt;
     position: relative;
   }
 
   .print-cover-eyebrow {
-    margin: 0 0 12pt;
+    margin: 0 0 14pt;
     font-size: 9pt;
-    letter-spacing: 0.20em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #c26c3a !important;
+    color: #e0995a !important;
     font-weight: 700;
   }
 
   .print-cover-title {
     margin: 0 0 12pt;
-    font-size: 36pt;
-    line-height: 1.05;
+    font-size: 34pt;
+    line-height: 1.04;
     color: #f7f1e4 !important;
     font-weight: 700;
     letter-spacing: -0.02em;
+    max-width: 155mm;
   }
 
   .print-cover-lede {
-    font-size: 13pt;
+    margin: 0;
+    font-size: 12.5pt;
     line-height: 1.5;
     color: rgba(247, 241, 228, 0.82) !important;
-    max-width: 140mm;
+    max-width: 155mm;
+  }
+
+  /* Contents list — a quiet "what's inside" index, two balanced columns. */
+  .print-cover-toc-wrap { margin-top: 22pt; }
+  .print-cover-toc-head {
+    margin: 0 0 8pt;
+    font-size: 8pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(247, 241, 228, 0.6) !important;
+    font-weight: 700;
+  }
+  .print-cover-toc {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 14mm;
+  }
+  .print-toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8pt;
+    padding: 5pt 0;
+    border-top: 1px solid rgba(247, 241, 228, 0.16);
+    break-inside: avoid;
+  }
+  .print-toc-num {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #e0995a !important;
+    min-width: 15pt;
+  }
+  .print-toc-label {
+    flex: 1;
+    font-size: 9.5pt;
+    color: #f7f1e4 !important;
+    font-weight: 600;
+  }
+  .print-toc-group {
+    font-size: 7pt;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(247, 241, 228, 0.5) !important;
   }
 
   .print-cover-meta {
-    position: absolute;
-    bottom: 12mm;
-    left: 8mm;
-    right: 8mm;
-    margin: 0;
+    margin: auto 0 0;
     font-size: 9pt;
     letter-spacing: 0.04em;
     color: rgba(247, 241, 228, 0.72) !important;
@@ -5421,8 +5523,26 @@ th:hover {
   }
 
   /* ─────── Per-tab section header ─────── */
-  .print-section { padding-top: 4mm; }
-  .print-page-break { page-break-before: always; }
+  .print-section { padding-top: 2mm; }
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* ─────── Executive snapshot page ───────
+     Reuse the live hero KPI grid + macro strip + insight ribbon as a one-page
+     snapshot, minus the duplicated title/lede and the interactive aside. */
+  .print-exec-summary .hero {
+    padding: 0 !important;
+    border: none !important;
+    margin: 0 0 12pt !important;
+  }
+  .print-exec-summary .hero-copy > .eyebrow,
+  .print-exec-summary .hero-copy > h1,
+  .print-exec-summary .hero-lede { display: none !important; }
+  .print-exec-summary .hero-grid { margin-top: 0 !important; }
+  .print-exec-summary .macro-strip,
+  .print-exec-summary .insight-ribbon { margin-top: 14pt !important; }
 
   .print-section-head {
     border-bottom: 2px solid var(--accent);
@@ -5504,20 +5624,19 @@ th:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
-  /* ─────── Common cards: keep colour, avoid splitting across pages ─────── */
+  /* ─────── Large container cards ───────
+     A tall table or a deep chart stack can legitimately exceed one page, so we
+     let these break — but strip their box chrome so a break never slices a
+     visible border or shadow. The rows/charts inside are already protected by
+     the pagination primitives above, so the split lands on clean whitespace. */
   .chart-card,
-  .summary-card,
-  .info-card,
-  .premium-card,
-  .freshness-pill,
-  .stock-chip,
-  .stock-snapshot-card,
-  .takeaway-box,
-  .spread-bar-block,
-  .festive-hero-card,
-  .explainer-kpi {
-    page-break-inside: avoid;
+  .channel-card {
+    break-inside: auto;
+    background: transparent !important;
+    border: none !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 16pt !important;
   }
 
   /* SVG charts: keep their colours. */
@@ -5527,35 +5646,35 @@ th:hover {
     print-color-adjust: exact !important;
   }
 
-  /* Tables: keep alternating-row tint for readability. */
-  table { border-collapse: collapse !important; }
+  /* Tables: compact, full-width, with a repeating dark header. */
+  .table-scroll { overflow: visible !important; }
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 8pt;
+    break-inside: auto;
+  }
   table th,
   table td {
-    border: 1px solid #d0c8b6 !important;
-    padding: 4pt 6pt !important;
+    border: 1px solid #d8d0bf !important;
+    padding: 3pt 5pt !important;
+    vertical-align: middle;
   }
-  table th {
+  table thead th {
     background: #14273e !important;
     color: #f7f1e4 !important;
     font-weight: 700;
+    white-space: normal;
   }
-  table tbody tr:nth-child(even) { background: #fbf6eb !important; }
+  table tbody tr:nth-child(even) { background: #faf5ea !important; }
+  /* Keep numeric cells on one line (no "-8.28 %" wrap); let the label
+     column and the headers wrap instead. */
+  table tbody td { white-space: nowrap; }
+  table tbody td:first-child { white-space: normal; }
 
   /* Hide tooltip overlays. */
   .metric-tooltip,
   #explainer-tooltip { display: none !important; }
-
-  /* Footer line on every page. */
-  body::after {
-    content: "India Auto Demand Monitor · Investor handout · Printed " attr(data-print-date);
-    display: block;
-    margin-top: 12pt;
-    padding-top: 6pt;
-    border-top: 1px solid #cfc6b5;
-    color: #888;
-    font-size: 8pt;
-    text-align: center;
-  }
 }
 
 /* ===========================================================
