@@ -5308,7 +5308,14 @@ th:hover {
 @media print {
   @page {
     size: A4;
-    margin: 13mm 12mm 17mm;
+    margin: 14mm 13mm;
+  }
+  /* Wide data tables turn sideways onto their own landscape page (see
+     .oem-table-frame below) so the columns have room and the table never has
+     to split across a page boundary. */
+  @page wide {
+    size: A4 landscape;
+    margin: 12mm 13mm;
   }
 
   /* Force full colour to print. Without this, browsers strip background
@@ -5416,6 +5423,9 @@ th:hover {
     max-width: 100% !important;
   }
 
+  /* Single tall column for the portrait body — charts and tables get the full
+     page width and stack vertically. (Wide tables break out to their own
+     landscape page instead; see .oem-table-frame.) */
   .panel-grid,
   .panel-grid.one,
   .panel-grid.two,
@@ -5425,8 +5435,7 @@ th:hover {
   .panel-grid > * + * { margin-top: 10pt; }
 
   /* ─────── Cover page (page 1 of the handout) ───────
-     Fixed height so the cover always occupies exactly one A4 page — the old
-     min-height + tall top padding overflowed a navy sliver onto page 2. */
+     Fixed height so the cover always occupies exactly one portrait page. */
   .print-cover {
     break-inside: avoid;
     page-break-after: always;
@@ -5435,7 +5444,7 @@ th:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 30mm 14mm 16mm !important;
+    padding: 32mm 16mm 18mm !important;
     background: linear-gradient(150deg, #14273e 0%, #1c324c 52%, #25415f 100%) !important;
     color: #f7f1e4 !important;
     border-radius: 10pt;
@@ -5453,12 +5462,12 @@ th:hover {
 
   .print-cover-title {
     margin: 0 0 12pt;
-    font-size: 34pt;
+    font-size: 36pt;
     line-height: 1.04;
     color: #f7f1e4 !important;
     font-weight: 700;
     letter-spacing: -0.02em;
-    max-width: 155mm;
+    max-width: 160mm;
   }
 
   .print-cover-lede {
@@ -5466,11 +5475,11 @@ th:hover {
     font-size: 12.5pt;
     line-height: 1.5;
     color: rgba(247, 241, 228, 0.82) !important;
-    max-width: 155mm;
+    max-width: 160mm;
   }
 
   /* Contents list — a quiet "what's inside" index, two balanced columns. */
-  .print-cover-toc-wrap { margin-top: 22pt; }
+  .print-cover-toc-wrap { margin-top: 24pt; }
   .print-cover-toc-head {
     margin: 0 0 8pt;
     font-size: 8pt;
@@ -5624,14 +5633,14 @@ th:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
-  /* ─────── Large container cards ───────
-     A tall table or a deep chart stack can legitimately exceed one page, so we
-     let these break — but strip their box chrome so a break never slices a
-     visible border or shadow. The rows/charts inside are already protected by
-     the pagination primitives above, so the split lands on clean whitespace. */
+  /* ─────── Container cards stay whole ───────
+     Strip the box chrome (so nothing boxy reads as cramped in print) and keep
+     each card on a single page — if it doesn't fit in the space left, it moves
+     whole to the next page rather than splitting across the boundary. */
   .chart-card,
   .channel-card {
-    break-inside: auto;
+    break-inside: avoid;
+    page-break-inside: avoid;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -5646,14 +5655,57 @@ th:hover {
     print-color-adjust: exact !important;
   }
 
-  /* Tables: compact, full-width, with a repeating dark header. */
+  /* Tables: a whole table stays on one page. It never starts on one page and
+     finishes on another — if it doesn't fit in the space left, the entire
+     table (with its heading frame) moves to the next page. Landscape width
+     keeps rows on a single line so they actually fit. */
   .table-scroll { overflow: visible !important; }
+  .table-scroll,
+  .oem-table-frame,
+  .leaderboard-cat,
+  .leaderboard-grid,
+  .divergence-rank-wrap,
+  table {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
   table {
     border-collapse: collapse !important;
     width: 100% !important;
     font-size: 8pt;
-    break-inside: auto;
   }
+
+  /* The OEM leaderboard (10 columns) is too wide to read in portrait, so it
+     turns sideways onto its own landscape page — roomy columns, single-line
+     rows, and it stays whole. Its heading + period toggle ride along.
+     Strip the surrounding card chrome so no empty cream panel bleeds onto the
+     landscape page across the orientation break, and so the table can use the
+     full landscape width. */
+  .oem-section {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    gap: 12pt !important;
+  }
+  .oem-table-frame {
+    page: wide;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .oem-table-frame table { font-size: 8pt; }
+  .oem-table-frame table th,
+  .oem-table-frame table td { padding: 2pt 5pt !important; line-height: 1.15; }
+  /* Long headers may wrap; data cells and OEM names stay on one line so rows
+     are short enough that the whole table — heading, rows and note — fits on a
+     single landscape page. */
+  .oem-table-frame table thead th { white-space: normal !important; }
+  .oem-table-frame table tbody td { white-space: nowrap !important; }
+  .oem-table-heading { margin-bottom: 6pt !important; }
+  .oem-table-frame .table-note { margin-top: 6pt !important; font-size: 7.5pt; }
   table th,
   table td {
     border: 1px solid #d8d0bf !important;
