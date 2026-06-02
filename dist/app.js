@@ -1851,9 +1851,11 @@ function renderAllTabsForPrint() {
   // dashboard renders identically when state.printAllTabs flips back.
   const tabs = visibleTabs();
   const today = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
-  const sections = tabs.map((tab, i) => {
+  // Each tab becomes its own page so nothing from one section bleeds into the
+  // next. Page-level breaks are uniform (every section starts on a fresh page).
+  const sections = tabs.map((tab) => {
     return `
-      <section class="print-section ${i > 0 ? "print-page-break" : ""}">
+      <section class="print-section print-page-break">
         <header class="print-section-head">
           <span class="print-section-kicker">${tab.group || "Section"}</span>
           <h1 class="print-section-title">${tab.label}</h1>
@@ -1863,12 +1865,37 @@ function renderAllTabsForPrint() {
       </section>
     `;
   });
+  const tocItems = tabs
+    .map(
+      (tab, i) => `
+        <li class="print-toc-item">
+          <span class="print-toc-num">${String(i + 1).padStart(2, "0")}</span>
+          <span class="print-toc-label">${tab.label}</span>
+          <span class="print-toc-group">${tab.group || ""}</span>
+        </li>`
+    )
+    .join("");
   return `
     <section class="print-cover">
-      <p class="print-cover-eyebrow">Institutional Auto Dashboard</p>
-      <h1 class="print-cover-title">${dashboardData.title || "India Auto Demand Monitor"}</h1>
-      <p class="print-cover-lede">${dashboardData.subtitle || ""}</p>
+      <div class="print-cover-top">
+        <p class="print-cover-eyebrow">Institutional Auto Dashboard</p>
+        <h1 class="print-cover-title">${dashboardData.title || "India Auto Demand Monitor"}</h1>
+        <p class="print-cover-lede">${dashboardData.subtitle || ""}</p>
+      </div>
+      <div class="print-cover-toc-wrap">
+        <p class="print-cover-toc-head">Inside this handout</p>
+        <ol class="print-cover-toc">${tocItems}</ol>
+      </div>
       <p class="print-cover-meta">Investor handout · Generated ${today} · Data through ${dashboardData.as_of_date || ""}</p>
+    </section>
+    <section class="print-section print-page-break print-exec-summary">
+      <header class="print-section-head">
+        <span class="print-section-kicker">Executive snapshot</span>
+        <h1 class="print-section-title">Demand at a glance</h1>
+      </header>
+      ${renderHero()}
+      ${renderMacroOverlayStrip()}
+      ${renderMarketInsightsRibbon()}
     </section>
     ${sections.join("")}
   `;
@@ -1984,21 +2011,29 @@ function render() {
   }
   const activeTab = activeTabDefinition();
   const app = document.getElementById("app");
-  app.innerHTML = [
-    renderHero(),
-    renderMacroOverlayStrip(),
-    renderMarketInsightsRibbon(),
-    renderDataGapsPanel(),
-    renderFilters(),
-    state.printAllTabs
-      ? `<main class="dashboard-content print-all-tabs">${renderAllTabsForPrint()}</main>`
-      : `<div class="dashboard-body">
+  // In export mode the whole page becomes a self-contained handout: a cover,
+  // an executive snapshot, then one tab per section. We deliberately drop the
+  // live chrome (sticky hero, macro strip, insight ribbon, filters, side nav)
+  // from the top so the cover is genuinely page 1 of the PDF.
+  app.innerHTML = state.printAllTabs
+    ? [
+        `<main class="dashboard-content print-all-tabs">${renderAllTabsForPrint()}</main>`,
+        renderCreditPulseExplainerModal(),
+        renderExplainModal(),
+      ].join("")
+    : [
+        renderHero(),
+        renderMacroOverlayStrip(),
+        renderMarketInsightsRibbon(),
+        renderDataGapsPanel(),
+        renderFilters(),
+        `<div class="dashboard-body">
            ${renderSideNav(activeTab.id)}
            <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
          </div>`,
-    renderCreditPulseExplainerModal(),
-    renderExplainModal(),
-  ].join("");
+        renderCreditPulseExplainerModal(),
+        renderExplainModal(),
+      ].join("");
 
   setupFilters();
   setupTabBar();
