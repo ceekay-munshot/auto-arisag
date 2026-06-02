@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T07:27:00.626955+00:00",
+  "generated_at": "2026-06-02T12:45:11.721719+00:00",
   "as_of_date": "2026-05-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120121,10 +120121,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-01T15:23:24.581126+00:00",
+      "generated_at": "2026-06-02T12:44:49.852716+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 2,
       "items": [
+        {
+          "title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh",
+          "summary": "2026 Bajaj Avenger 220 Street seems to have been launched in the country for a price tag of Rs 1.3 lakh (Ex-sh) The post 2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-bajaj-avenger-220-street-launch-price-rs-1-3-lakh-12548067.html",
+          "source": "RushLane",
+          "published_at": "2026-06-02T07:47:11+00:00",
+          "published_display": "02 Jun 2026",
+          "company": "Bajaj Auto",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/bajaj-avenger-220-street-launched-cover.jpg"
+        },
         {
           "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
           "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
@@ -120143,6 +120156,14 @@
       ],
       "companies": [
         {
+          "company": "Bajaj Auto",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-06-02T07:47:11+00:00",
+          "latest_title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh"
+        },
+        {
           "company": "Volkswagen India",
           "tone": "pv",
           "scope": "tracked",
@@ -120153,7 +120174,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-05-29"
+        "latest_release_date": "2026-06-02"
       }
     }
   },
@@ -120275,11 +120296,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.17,
+        "value": 95.27,
         "unit": "\u20b9",
-        "delta_value": 0.172,
-        "delta_label": "-0.08% in last week (Yahoo Finance)",
-        "delta_tone": "positive",
+        "delta_value": 0.262,
+        "delta_label": "+0.01% in last week (Yahoo Finance)",
+        "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -130686,7 +130707,7 @@
           },
           {
             "date": "2026-06-02",
-            "close": 95.175
+            "close": 95.265
           }
         ]
       }
@@ -130701,10 +130722,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 12940.0,
-        "change_1d_pct": -0.05,
-        "change_1w_pct": -1.75,
-        "change_1m_pct": -2.81,
+        "price": 13022.0,
+        "change_1d_pct": 0.59,
+        "change_1w_pct": -1.12,
+        "change_1m_pct": -2.19,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13461.0,
@@ -130736,7 +130757,7 @@
           13364.0,
           13127.0,
           12946.0,
-          12940.0
+          13022.0
         ],
         "daily_closes": [
           {
@@ -140617,16 +140638,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 12940.0
+            "close": 13022.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3000.3,
-        "change_1d_pct": 1.01,
-        "change_1w_pct": -3.44,
-        "change_1m_pct": -3.42,
+        "price": 2998.3,
+        "change_1d_pct": 0.95,
+        "change_1w_pct": -3.51,
+        "change_1m_pct": -3.48,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3149.7,
@@ -140658,7 +140679,7 @@
           3121.6,
           3045.6,
           2970.2,
-          3000.3
+          2998.3
         ],
         "daily_closes": [
           {
@@ -150543,16 +150564,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 3000.3
+            "close": 2998.3
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4871.9,
-        "change_1d_pct": 1.08,
-        "change_1w_pct": -2.23,
-        "change_1m_pct": -3.84,
+        "price": 4875.0,
+        "change_1d_pct": 1.14,
+        "change_1w_pct": -2.17,
+        "change_1m_pct": -3.78,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5189.0,
@@ -150584,7 +150605,7 @@
           5075.0,
           4903.0,
           4819.9,
-          4871.9
+          4875.0
         ],
         "daily_closes": [
           {
@@ -160469,16 +160490,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 4871.9
+            "close": 4875.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3370.0,
-        "change_1d_pct": 0.77,
-        "change_1w_pct": -2.46,
-        "change_1m_pct": -3.59,
+        "price": 3366.9,
+        "change_1d_pct": 0.67,
+        "change_1w_pct": -2.55,
+        "change_1m_pct": -3.68,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3660.7,
@@ -160510,7 +160531,7 @@
           3384.6,
           3355.7,
           3344.4,
-          3370.0
+          3366.9
         ],
         "daily_closes": [
           {
@@ -170395,16 +170416,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 3370.0
+            "close": 3366.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10328.0,
-        "change_1d_pct": -0.46,
-        "change_1w_pct": -2.5,
-        "change_1m_pct": 1.93,
+        "price": 10281.0,
+        "change_1d_pct": -0.92,
+        "change_1w_pct": -2.95,
+        "change_1m_pct": 1.47,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9602.0,
@@ -170436,7 +170457,7 @@
           10808.5,
           10460.0,
           10376.0,
-          10328.0
+          10281.0
         ],
         "daily_closes": [
           {
@@ -180321,16 +180342,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 10328.0
+            "close": 10281.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1878.3,
-        "change_1d_pct": -0.22,
-        "change_1w_pct": -0.3,
-        "change_1m_pct": 1.83,
+        "price": 1871.8,
+        "change_1d_pct": -0.56,
+        "change_1w_pct": -0.65,
+        "change_1m_pct": 1.48,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1849.5,
@@ -180362,7 +180383,7 @@
           1913.6,
           1924.0,
           1882.4,
-          1878.3
+          1871.8
         ],
         "daily_closes": [
           {
@@ -181963,16 +181984,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 1878.3
+            "close": 1871.8
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7097.5,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": -4.27,
-        "change_1m_pct": -0.16,
+        "price": 7141.5,
+        "change_1d_pct": 0.58,
+        "change_1w_pct": -3.68,
+        "change_1m_pct": 0.46,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7240.5,
@@ -182004,7 +182025,7 @@
           7419.0,
           7177.0,
           7100.5,
-          7097.5
+          7141.5
         ],
         "daily_closes": [
           {
@@ -191885,16 +191906,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 7097.5
+            "close": 7141.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 384.5,
-        "change_1d_pct": -0.1,
-        "change_1w_pct": -0.29,
-        "change_1m_pct": 12.08,
+        "price": 390.2,
+        "change_1d_pct": 1.38,
+        "change_1w_pct": 1.19,
+        "change_1m_pct": 13.74,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191927,7 +191948,7 @@
           400.95,
           393.9,
           384.9,
-          384.5
+          390.2
         ],
         "daily_closes": [
           {
@@ -201812,16 +201833,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 384.5
+            "close": 390.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 371.6,
-        "change_1d_pct": -0.71,
-        "change_1w_pct": -3.51,
-        "change_1m_pct": -10.0,
+        "price": 370.55,
+        "change_1d_pct": -0.99,
+        "change_1w_pct": -3.78,
+        "change_1m_pct": -10.26,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -201854,7 +201875,7 @@
           383.85,
           379.5,
           374.25,
-          371.6
+          370.55
         ],
         "daily_closes": [
           {
@@ -202407,16 +202428,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 371.6
+            "close": 370.55
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 149.49,
-        "change_1d_pct": -0.19,
-        "change_1w_pct": -6.88,
-        "change_1m_pct": -7.02,
+        "price": 149.05,
+        "change_1d_pct": -0.49,
+        "change_1w_pct": -7.16,
+        "change_1m_pct": -7.29,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           178.97,
@@ -202448,7 +202469,7 @@
           163.62,
           155.44,
           149.78,
-          149.49
+          149.05
         ],
         "daily_closes": [
           {
@@ -212333,16 +212354,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 149.49
+            "close": 149.05
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2748.2,
-        "change_1d_pct": -0.53,
-        "change_1w_pct": -6.51,
-        "change_1m_pct": -14.26,
+        "price": 2750.3,
+        "change_1d_pct": -0.45,
+        "change_1w_pct": -6.44,
+        "change_1m_pct": -14.19,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3338.6,
@@ -212374,7 +212395,7 @@
           2880.4,
           2859.8,
           2762.8,
-          2748.2
+          2750.3
         ],
         "daily_closes": [
           {
@@ -222259,16 +222280,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 2748.2
+            "close": 2750.3
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 870.7,
-        "change_1d_pct": -0.42,
-        "change_1w_pct": -2.7,
-        "change_1m_pct": -2.14,
+        "price": 876.8,
+        "change_1d_pct": 0.27,
+        "change_1w_pct": -2.02,
+        "change_1m_pct": -1.46,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           934.4,
@@ -222300,7 +222321,7 @@
           906.25,
           884.95,
           874.4,
-          870.7
+          876.8
         ],
         "daily_closes": [
           {
@@ -232185,16 +232206,16 @@
           },
           {
             "date": "2026-06-02",
-            "close": 870.7
+            "close": 876.8
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 472.95,
-        "change_1d_pct": -0.98,
-        "change_1w_pct": -3.49,
-        "change_1m_pct": -3.14,
+        "price": 476.3,
+        "change_1d_pct": -0.28,
+        "change_1w_pct": -2.81,
+        "change_1m_pct": -2.46,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           469.15,
@@ -232226,7 +232247,7 @@
           478.35,
           480.85,
           477.65,
-          472.95
+          476.3
         ],
         "daily_closes": [
           {
@@ -242107,7 +242128,7 @@
           },
           {
             "date": "2026-06-02",
-            "close": 472.95
+            "close": 476.3
           }
         ]
       }
@@ -243281,10 +243302,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-02T07:26:11.047767+00:00",
+    "generated_at": "2026-06-02T12:44:25.351962+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 21,
+    "item_count": 20,
     "groups": [
       {
         "id": "pv",
@@ -243322,22 +243343,6 @@
             ]
           },
           {
-            "title": "It ain't a Ferrari, if it don't look Ferrari",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/it-aint-a-ferrari-if-it-dont-look-ferrari/131432833",
-            "summary": "With a design that diverges from the classic Ferrari aesthetic, responses from enthusiasts have been polarizing, stirring discussions about the brand's evolution. Luxury electric vehicles are under scrutiny as their hefty price tags raise eyebrows among potential buyers.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T03:52:01+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Funding / M&A"
-            ]
-          },
-          {
             "title": "EV sales in fast lane but motown treads the middle path",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/automakers-embrace-multi-powertrain-strategy-amidst-rising-ev-demand/131418880",
             "summary": "Carmakers are simultaneously investing in EV architectures, hybrid systems, alternative fuels, and cleaner combustion technologies. Suppliers too are getting impacted, having to spread resources across multiple technology platforms.",
@@ -243370,6 +243375,22 @@
               "Product / Launch",
               "Funding / M&A"
             ]
+          },
+          {
+            "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-the-taigun-and-virtus-in-sri-lanka/131390821",
+            "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-05-29T12:34:43+00:00",
+            "published_display": "29 May 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
+            ]
           }
         ]
       },
@@ -243393,13 +243414,13 @@
             ]
           },
           {
-            "title": "New Bajaj ADV Motorcycle Spied \u2013 Xpulse Rival In The Making?",
-            "url": "https://www.rushlane.com/new-bajaj-adv-motorcycle-spied-xpulse-rival-in-the-making-12548026.html",
-            "summary": "This motorcycle could be Bajaj\u2019s first serious entry into the growing ADV segment. While Bajaj has long manufactured adventure motorcycles for KTM, it has never offered a dedicated adventure tourer under its own brand. The post New Bajaj ADV Motorcycle Spied \u2013 Xpulse Rival In The Making? appeared first on RushLane .",
+            "title": "Royal Enfield Sales May 2026 Grow 15% \u2013 Domestic Demand Remains Strong",
+            "url": "https://www.rushlane.com/royal-enfield-sales-may-2026-grow-15-domestic-demand-remains-strong-12548076.html",
+            "summary": "Royal Enfield continued its growth momentum in May 2026, reporting total sales of 1,03,231 motorcycles. The company registered a 15.43% year-on-year (YoY) growth The post Royal Enfield Sales May 2026 Grow 15% \u2013 Domestic Demand Remains Strong appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-06-01T11:34:50+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 5,
+            "published_at": "2026-06-02T10:49:18+00:00",
+            "published_display": "02 Jun 2026",
+            "importance_score": 4,
             "segment_tags": [
               "Two-Wheelers"
             ],
@@ -243427,23 +243448,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Bosch\u2019s India Recast",
-            "url": "https://www.autocarpro.in/feature/boschs-india-recast-132757",
-            "summary": "On May 21, 2026, the German engineering giant Bosch Ltd announced a 50:50 joint venture with the TSF Group\u2019s Brakes India and Wheels India. While the deal might appear to be a localized expansion of air systems for commercial vehicles (CVs), it serves as a microcosm for a much larger, more aggressive transformation as the automotive industry in India is set to evolve rapidly by 2030 and beyond.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-23T09:00:00+00:00",
-            "published_display": "23 May 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
             ]
           },
           {
@@ -243503,24 +243507,6 @@
             ]
           },
           {
-            "title": "Tata AutoComp forms JV with Korea\u2019s Jahwa Electronics for EV heater systems",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tata-autocomp-teams-up-with-jahwa-electronics-for-pioneering-ev-heater-solutions-in-india/131380502",
-            "summary": "T\u200bhe joint venture will position India as a strategic manufacturing and supply hub for Jahwa Electronics, leveraging growing demand for electrified mobility solutions in the country.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-29T02:46:30+00:00",
-            "published_display": "29 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Tata AutoComp Partners With Jahwa Electronics for EV Component Manufacturing",
             "url": "https://www.autocarpro.in/NEWS/tata-autocomp-partners-with-jahwa-electronics-for-ev-component-manufacturing-132815",
             "summary": "Tata AutoComp Systems Limited has entered into a joint venture agreement with South Korea based Jahwa Electronics to locally manufacture and supply advanced thermal management solutions for the Indian automotive market. The partnership will focus on the production of low-voltage and high-voltage positive temperature coefficient (PTC) heaters to address growing component demand in the electric and hybrid vehicle se...",
@@ -243551,6 +243537,22 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "It ain't a Ferrari, if it don't look Ferrari",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/it-aint-a-ferrari-if-it-dont-look-ferrari/131432833",
+            "summary": "With a design that diverges from the classic Ferrari aesthetic, responses from enthusiasts have been polarizing, stirring discussions about the brand's evolution. Luxury electric vehicles are under scrutiny as their hefty price tags raise eyebrows among potential buyers.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-01T03:52:01+00:00",
+            "published_display": "01 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Funding / M&A"
             ]
           }
         ]
@@ -243633,15 +243635,16 @@
             ]
           },
           {
-            "title": "Spiro raises $215 million for African EV expansion | Pune Tech Center to support growth",
-            "url": "https://evreporter.com/spiro-raises-215-million-for-african-ev-expansion-pune-tech-center-to-support-growth",
-            "summary": "The post Spiro raises $215 million for African EV expansion | Pune Tech Center to support growth appeared first at EVreporter on EVreporter . African EV platform Spiro has raised $215 million in an investment round backed by major institutional investors, including Impact Fund The post Spiro raises $215 million for African EV expansion | Pune Tech Center to support growth appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-01T11:56:36+00:00",
-            "published_display": "01 Jun 2026",
+            "title": "Tata AutoComp forms JV with Korea\u2019s Jahwa Electronics for EV heater systems",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tata-autocomp-teams-up-with-jahwa-electronics-for-pioneering-ev-heater-solutions-in-india/131380502",
+            "summary": "T\u200bhe joint venture will position India as a strategic manufacturing and supply hub for Jahwa Electronics, leveraging growing demand for electrified mobility solutions in the country.",
+            "source": "ET Auto Components",
+            "published_at": "2026-05-29T02:46:30+00:00",
+            "published_display": "29 May 2026",
             "importance_score": 8,
             "segment_tags": [
-              "EV"
+              "EV",
+              "Components"
             ],
             "signal_tags": [
               "Capacity / Capex",
@@ -243691,7 +243694,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 39,
+      "unmapped_articles": 41,
       "filtered_low_signal": 1,
       "kept_articles": 69
     }
