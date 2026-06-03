@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T13:19:20.301876+00:00",
+  "generated_at": "2026-06-03T18:45:56.097879+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120150,37 +120150,64 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-02T18:41:35.735983+00:00",
+      "generated_at": "2026-06-03T18:45:34.387380+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 2,
       "items": [
         {
-          "title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh",
-          "summary": "2026 Bajaj Avenger 220 Street seems to have been launched in the country for a price tag of Rs 1.3 lakh (Ex-sh) The post 2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-bajaj-avenger-220-street-launch-price-rs-1-3-lakh-12548067.html",
+          "title": "Hero Flex Fuel E85 Splendor and HF Deluxe Launch Price Rs 73k Onwards",
+          "summary": "The new motorcycles are compatible with ethanol-blended fuels ranging from E20 to E85. Hero says the products have been developed to offer a practical and affordable mobility solution The post Hero Flex Fuel E85 Splendor and HF Deluxe Launch Price Rs 73k Onwards appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hero-flex-fuel-e85-splendor-and-hf-deluxe-launch-price-rs-74k-onwards-12548129.html",
           "source": "RushLane",
-          "published_at": "2026-06-02T07:47:11+00:00",
-          "published_display": "02 Jun 2026",
-          "company": "Bajaj Auto",
+          "published_at": "2026-06-03T14:23:55+00:00",
+          "published_display": "03 Jun 2026",
+          "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/bajaj-avenger-220-street-launched-cover.jpg"
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/hero-splendor-flex-fuel-deluxe-launch-price-5.jpeg"
+        },
+        {
+          "title": "New Car Launches June 2026 \u2013 Tata, Honda, BYD, Merc, BMW, Skoda, Mini",
+          "summary": "This month, new car launches include a good mix of ICE, hybrid and pure electric models The post New Car Launches June 2026 \u2013 Tata, Honda, BYD, Merc, BMW, Skoda, Mini appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-car-launches-june-2026-tata-honda-byd-merc-bmw-skoda-mini-12548090.html",
+          "source": "RushLane",
+          "published_at": "2026-06-03T03:44:28+00:00",
+          "published_display": "03 Jun 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV",
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2025/11/new-tata-sierra-launch-tvc-9.jpeg"
         }
       ],
       "companies": [
         {
-          "company": "Bajaj Auto",
+          "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
           "count": 1,
-          "latest_published_at": "2026-06-02T07:47:11+00:00",
-          "latest_title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh"
+          "latest_published_at": "2026-06-03T14:23:55+00:00",
+          "latest_title": "Hero Flex Fuel E85 Splendor and HF Deluxe Launch Price Rs 73k Onwards"
+        },
+        {
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-06-03T03:44:28+00:00",
+          "latest_title": "New Car Launches June 2026 \u2013 Tata, Honda, BYD, Merc, BMW, Skoda, Mini"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-06-02"
+        "latest_release_date": "2026-06-03"
       }
     }
   },
@@ -130728,12 +130755,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13044.0,
-        "change_1d_pct": 0.17,
-        "change_1w_pct": -2.39,
-        "change_1m_pct": -2.85,
+        "price": 13022.0,
+        "change_1d_pct": 0.59,
+        "change_1w_pct": -1.41,
+        "change_1m_pct": -4.11,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13337.0,
           13160.0,
           13048.0,
           13222.0,
@@ -130762,8 +130790,7 @@
           13364.0,
           13127.0,
           12946.0,
-          13022.0,
-          13044.0
+          13022.0
         ],
         "daily_closes": [
           {
@@ -140645,21 +140672,18 @@
           {
             "date": "2026-06-02",
             "close": 13022.0
-          },
-          {
-            "date": "2026-06-03",
-            "close": 13044.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3011.1,
-        "change_1d_pct": 0.43,
-        "change_1w_pct": -3.54,
-        "change_1m_pct": -6.22,
+        "price": 2998.3,
+        "change_1d_pct": 0.95,
+        "change_1w_pct": -3.51,
+        "change_1m_pct": -3.48,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          3149.7,
           3047.7,
           3038.4,
           3102.4,
@@ -140688,8 +140712,7 @@
           3121.6,
           3045.6,
           2970.2,
-          2998.3,
-          3011.1
+          2998.3
         ],
         "daily_closes": [
           {
@@ -150571,21 +150594,18 @@
           {
             "date": "2026-06-02",
             "close": 2998.3
-          },
-          {
-            "date": "2026-06-03",
-            "close": 3011.1
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4840.9,
-        "change_1d_pct": -0.7,
-        "change_1w_pct": -4.61,
-        "change_1m_pct": -5.25,
+        "price": 4875.0,
+        "change_1d_pct": 1.14,
+        "change_1w_pct": -2.17,
+        "change_1m_pct": -3.78,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          5189.0,
           5032.0,
           4961.5,
           5043.0,
@@ -150614,8 +150634,7 @@
           5075.0,
           4903.0,
           4819.9,
-          4875.0,
-          4840.9
+          4875.0
         ],
         "daily_closes": [
           {
@@ -160497,21 +160516,18 @@
           {
             "date": "2026-06-02",
             "close": 4875.0
-          },
-          {
-            "date": "2026-06-03",
-            "close": 4840.9
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3316.9,
-        "change_1d_pct": -1.49,
-        "change_1w_pct": -2.0,
-        "change_1m_pct": -6.15,
+        "price": 3366.9,
+        "change_1d_pct": 0.67,
+        "change_1w_pct": -2.55,
+        "change_1m_pct": -3.68,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3660.7,
           3513.0,
           3488.2,
           3552.6,
@@ -160540,8 +160556,7 @@
           3384.6,
           3355.7,
           3344.4,
-          3366.9,
-          3316.9
+          3366.9
         ],
         "daily_closes": [
           {
@@ -170423,21 +170438,18 @@
           {
             "date": "2026-06-02",
             "close": 3366.9
-          },
-          {
-            "date": "2026-06-03",
-            "close": 3316.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10259.0,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": -5.08,
-        "change_1m_pct": 2.12,
+        "price": 10281.0,
+        "change_1d_pct": -0.92,
+        "change_1w_pct": -2.95,
+        "change_1m_pct": 1.47,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9602.0,
           9550.5,
           9576.0,
           9662.0,
@@ -170466,8 +170478,7 @@
           10808.5,
           10460.0,
           10376.0,
-          10281.0,
-          10259.0
+          10281.0
         ],
         "daily_closes": [
           {
@@ -180349,21 +180360,18 @@
           {
             "date": "2026-06-02",
             "close": 10281.0
-          },
-          {
-            "date": "2026-06-03",
-            "close": 10259.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1866.4,
-        "change_1d_pct": -0.29,
-        "change_1w_pct": -2.47,
-        "change_1m_pct": 2.41,
+        "price": 1871.8,
+        "change_1d_pct": -0.56,
+        "change_1w_pct": -0.65,
+        "change_1m_pct": 1.48,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          1849.5,
           1844.2,
           1783.6,
           1837.6,
@@ -180392,8 +180400,7 @@
           1913.6,
           1924.0,
           1882.4,
-          1871.8,
-          1866.4
+          1871.8
         ],
         "daily_closes": [
           {
@@ -181995,21 +182002,18 @@
           {
             "date": "2026-06-02",
             "close": 1871.8
-          },
-          {
-            "date": "2026-06-03",
-            "close": 1866.4
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7130.0,
-        "change_1d_pct": -0.16,
-        "change_1w_pct": -3.34,
-        "change_1m_pct": -2.72,
+        "price": 7141.5,
+        "change_1d_pct": 0.58,
+        "change_1w_pct": -3.68,
+        "change_1m_pct": 0.46,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7240.5,
           7230.0,
           7092.5,
           7111.5,
@@ -182038,8 +182042,7 @@
           7419.0,
           7177.0,
           7100.5,
-          7141.5,
-          7130.0
+          7141.5
         ],
         "daily_closes": [
           {
@@ -191917,22 +191920,19 @@
           {
             "date": "2026-06-02",
             "close": 7141.5
-          },
-          {
-            "date": "2026-06-03",
-            "close": 7130.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 398.15,
-        "change_1d_pct": 2.04,
-        "change_1w_pct": -0.7,
-        "change_1m_pct": 17.05,
+        "price": 390.2,
+        "change_1d_pct": 1.38,
+        "change_1w_pct": 1.19,
+        "change_1m_pct": 13.74,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          361.85,
           351.95,
           350.5,
           354.35,
@@ -191961,8 +191961,7 @@
           400.95,
           393.9,
           384.9,
-          390.2,
-          398.15
+          390.2
         ],
         "daily_closes": [
           {
@@ -201844,22 +201843,19 @@
           {
             "date": "2026-06-02",
             "close": 390.2
-          },
-          {
-            "date": "2026-06-03",
-            "close": 398.15
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 373.95,
-        "change_1d_pct": 0.92,
-        "change_1w_pct": -2.58,
-        "change_1m_pct": -8.02,
+        "price": 370.55,
+        "change_1d_pct": -0.99,
+        "change_1w_pct": -3.78,
+        "change_1m_pct": -10.26,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          447.8,
           431.85,
           424.55,
           420.75,
@@ -201888,8 +201884,7 @@
           383.85,
           379.5,
           374.25,
-          370.55,
-          373.95
+          370.55
         ],
         "daily_closes": [
           {
@@ -202443,21 +202438,18 @@
           {
             "date": "2026-06-02",
             "close": 370.55
-          },
-          {
-            "date": "2026-06-03",
-            "close": 373.95
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 145.84,
-        "change_1d_pct": -2.15,
-        "change_1w_pct": -10.87,
-        "change_1m_pct": -8.99,
+        "price": 149.05,
+        "change_1d_pct": -0.49,
+        "change_1w_pct": -7.16,
+        "change_1m_pct": -7.29,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          178.97,
           170.63,
           169.9,
           169.3,
@@ -202486,8 +202478,7 @@
           163.62,
           155.44,
           149.78,
-          149.05,
-          145.84
+          149.05
         ],
         "daily_closes": [
           {
@@ -212369,21 +212360,18 @@
           {
             "date": "2026-06-02",
             "close": 149.05
-          },
-          {
-            "date": "2026-06-03",
-            "close": 145.84
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2765.0,
-        "change_1d_pct": 0.53,
-        "change_1w_pct": -4.01,
-        "change_1m_pct": -13.8,
+        "price": 2750.3,
+        "change_1d_pct": -0.45,
+        "change_1w_pct": -6.44,
+        "change_1m_pct": -14.19,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          3338.6,
           3309.0,
           3231.3,
           3262.5,
@@ -212412,8 +212400,7 @@
           2880.4,
           2859.8,
           2762.8,
-          2750.3,
-          2765.0
+          2750.3
         ],
         "daily_closes": [
           {
@@ -222295,21 +222282,18 @@
           {
             "date": "2026-06-02",
             "close": 2750.3
-          },
-          {
-            "date": "2026-06-03",
-            "close": 2765.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 867.1,
-        "change_1d_pct": -1.11,
-        "change_1w_pct": -4.32,
-        "change_1m_pct": -1.69,
+        "price": 876.8,
+        "change_1d_pct": 0.27,
+        "change_1w_pct": -2.02,
+        "change_1m_pct": -1.46,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          934.4,
           916.55,
           907.25,
           916.45,
@@ -222338,8 +222322,7 @@
           906.25,
           884.95,
           874.4,
-          876.8,
-          867.1
+          876.8
         ],
         "daily_closes": [
           {
@@ -232221,21 +232204,18 @@
           {
             "date": "2026-06-02",
             "close": 876.8
-          },
-          {
-            "date": "2026-06-03",
-            "close": 867.1
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 468.55,
-        "change_1d_pct": -1.63,
-        "change_1w_pct": -3.08,
-        "change_1m_pct": -5.65,
+        "price": 476.3,
+        "change_1d_pct": -0.28,
+        "change_1w_pct": -2.81,
+        "change_1m_pct": -2.46,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          469.15,
           472.0,
           473.55,
           498.65,
@@ -232264,8 +232244,7 @@
           478.35,
           480.85,
           477.65,
-          476.3,
-          468.55
+          476.3
         ],
         "daily_closes": [
           {
@@ -242143,10 +242122,6 @@
           {
             "date": "2026-06-02",
             "close": 476.3
-          },
-          {
-            "date": "2026-06-03",
-            "close": 468.55
           }
         ]
       }
@@ -243320,10 +243295,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-03T13:18:35.857163+00:00",
+    "generated_at": "2026-06-03T18:45:09.646731+00:00",
     "window_days": 45,
-    "group_count": 5,
-    "item_count": 19,
+    "group_count": 6,
+    "item_count": 21,
     "groups": [
       {
         "id": "pv",
@@ -243346,6 +243321,54 @@
             ]
           },
           {
+            "title": "JK Tyre Q4 Net Profit Rises 83%; Approves Rs 4,980 Crore Capacity Expansion Plan",
+            "url": "https://www.autocarpro.in/NEWS/jk-tyre-q4-net-profit-rises-83-approves-rs-4980-crore-capacity-expansion-plan-132785",
+            "summary": "JK Tyre & Industries reported an 83 percent year-on-year increase in consolidated net profit for the fourth quarter of FY2026 and announced a Rs 4,980 crore capacity expansion programme for truck, bus and passenger car radial tyres as it prepares for rising domestic demand. The company\u2019s board approved phased expansion of Truck & Bus Radial (TBR) tyre capacity at its Chennai Tyre Plant and Vikrant Tyre Plant, alon...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-05-26T17:00:32+00:00",
+            "published_display": "26 May 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Commercial Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Nissan Tekton SUV Spied During Final Testing Before July Launch",
+            "url": "https://www.rushlane.com/nissan-tekton-suv-spied-during-final-testing-before-july-launch-12548092.html",
+            "summary": "While having a distinctive, sporty profile, Nissan Tekton will borrow its powertrains and much of the equipment from all-new Renault Duster The post Nissan Tekton SUV Spied During Final Testing Before July Launch appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-03T03:15:56+00:00",
+            "published_display": "03 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "BYD snaps longest streak of sales declines",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-snaps-longest-streak-of-sales-declines/131444045",
+            "summary": "Chinese EV giant BYD broke its sales decline streak in May, with global sales rising 0.3 per cent to 383,453 units. This growth was driven by strong overseas shipments, which surged 80.4 per cent, offsetting a 24 per cent drop in domestic sales amid fierce competition and weakening demand.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-01T13:37:12+00:00",
+            "published_display": "01 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "Maruti Suzuki\u2019s domestic sales surge 39.5% to record 1.94 lakh units in May",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzukis-domestic-sales-surge-39-5-to-record-1-94-lakh-units-in-may/131435975",
             "summary": "The highest-ever monthly domestic sales helped the carmaker achieve a record total sales volume of 2.43 lakh units, supported by robust demand for SUVs and compact cars.",
@@ -243359,50 +243382,41 @@
             "signal_tags": [
               "Monthly Sales / Demand"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "id": "2w",
+        "label": "Two-Wheelers",
+        "items": [
           {
-            "title": "Tata Advanced Systems adds navigation, optronics capabilities to JLR vehicles, says Chandrasekaran",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-advanced-systems-enhances-jaguar-land-rover-vehicles-with-military-technology/131474269",
-            "summary": "Tata Sons Chairman N Chandrasekaran highlighted the growing synergies within the Tata Group, citing Tata Advanced Systems' contributions to Jaguar Land Rover vehicles for military applications through advanced navigation, optronics and armouring solutions.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-03T02:27:31+00:00",
+            "title": "Hero Flex Fuel E85 Splendor and HF Deluxe Launch Price Rs 73k Onwards",
+            "url": "https://www.rushlane.com/hero-flex-fuel-e85-splendor-and-hf-deluxe-launch-price-rs-74k-onwards-12548129.html",
+            "summary": "The new motorcycles are compatible with ethanol-blended fuels ranging from E20 to E85. Hero says the products have been developed to offer a practical and affordable mobility solution The post Hero Flex Fuel E85 Splendor and HF Deluxe Launch Price Rs 73k Onwards appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-03T14:23:55+00:00",
             "published_display": "03 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Luxury"
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Suzuki 2W Sales May 2026 At 1.32 Lakh Units \u2013 Highest Ever",
+            "url": "https://www.rushlane.com/suzuki-2w-sales-may-2026-at-1-32-lakh-units-highest-ever-12548106.html",
+            "summary": "Suzuki Motorcycle India Pvt Ltd (SMIPL) has reported its highest-ever monthly sales in May 2026. The company sold a total of 1,32,244 two-wheelers during the month The post Suzuki 2W Sales May 2026 At 1.32 Lakh Units \u2013 Highest Ever appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-03T07:46:38+00:00",
+            "published_display": "03 Jun 2026",
+            "importance_score": 4,
+            "segment_tags": [
+              "Two-Wheelers"
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "China's SAIC plans to build first EU car plant in Spain's Galicia",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-saic-plans-to-build-first-eu-car-plant-in-spains-galicia/131459291",
-            "summary": "China's SAIC Motor Corp plans its first EU production facility in Spain's Galicia region, with an initial \u20ac200 million investment. This move aligns with a broader trend of Chinese automakers establishing production in Spain.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-02T08:23:30+00:00",
-            "published_display": "02 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Kia India posts highest-ever May sales, wholesale dispatches rise 24% to 27,586 units",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-achieves-record-sales-in-may-2026-with-24-increase-in-wholesale-dispatches/131435578",
-            "summary": "The automaker said the performance was supported by sustained demand across its product portfolio, particularly the new Seltos, Sonet, Carens Clavis, Clavis EV and the MY26 Syros.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T09:55:19+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -243484,6 +243498,23 @@
             ]
           },
           {
+            "title": "New Car Launches June 2026 \u2013 Tata, Honda, BYD, Merc, BMW, Skoda, Mini",
+            "url": "https://www.rushlane.com/new-car-launches-june-2026-tata-honda-byd-merc-bmw-skoda-mini-12548090.html",
+            "summary": "This month, new car launches include a good mix of ICE, hybrid and pure electric models The post New Car Launches June 2026 \u2013 Tata, Honda, BYD, Merc, BMW, Skoda, Mini appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-03T03:44:28+00:00",
+            "published_display": "03 Jun 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "PV sales stay resilient in May despite fuel price hike; Maruti, Mahindra and Tata lead the pack",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-tata-and-mahindra-dominate-passenger-vehicle-sales-in-may-2026-despite-fuel-price-hikes/131445542",
             "summary": "Industry clocks around 4.4 lakh units in May as strong demand for CNG vehicles and EVs helps offset concerns over rising fuel prices and geopolitical uncertainty.",
@@ -243518,31 +243549,16 @@
             ]
           },
           {
-            "title": "BYD snaps longest streak of sales declines",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-snaps-longest-streak-of-sales-declines/131444045",
-            "summary": "Chinese EV giant BYD broke its sales decline streak in May, with global sales rising 0.3 per cent to 383,453 units. This growth was driven by strong overseas shipments, which surged 80.4 per cent, offsetting a 24 per cent drop in domestic sales amid fierce competition and weakening demand.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T13:37:12+00:00",
-            "published_display": "01 Jun 2026",
+            "title": "Upcoming Tata Avinya EV To Use Freelander Platform From Chery-JLR",
+            "url": "https://www.rushlane.com/upcoming-tata-avinya-ev-to-use-freelander-platform-from-chery-jlr-12548123.html",
+            "summary": "Tata Avinya X EV is said to be positioned on the Chery JLR platform that is underpinning the new Land Rover Freelander EV The post Upcoming Tata Avinya EV To Use Freelander Platform From Chery-JLR appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-03T12:58:57+00:00",
+            "published_display": "03 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "Tata Motors PV sales rise 42% to 59,090 units in May; EV volumes hit record 10,517",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-sees-42-surge-in-passenger-vehicle-sales-in-may-2026-ev-sales-reach-all-time-high/131439653",
-            "summary": "Electric vehicle sales emerged as a key growth driver, with combined domestic and export volumes rising 85% year-on-year to a record 10,517 units, compared with 5,685 units in May 2025.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T09:59:44+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
+              "EV",
+              "Luxury"
             ],
             "signal_tags": [
               "General"
@@ -243610,20 +243626,18 @@
             ]
           },
           {
-            "title": "JK Tyre Q4 Net Profit Rises 83%; Approves Rs 4,980 Crore Capacity Expansion Plan",
-            "url": "https://www.autocarpro.in/NEWS/jk-tyre-q4-net-profit-rises-83-approves-rs-4980-crore-capacity-expansion-plan-132785",
-            "summary": "JK Tyre & Industries reported an 83 percent year-on-year increase in consolidated net profit for the fourth quarter of FY2026 and announced a Rs 4,980 crore capacity expansion programme for truck, bus and passenger car radial tyres as it prepares for rising domestic demand. The company\u2019s board approved phased expansion of Truck & Bus Radial (TBR) tyre capacity at its Chennai Tyre Plant and Vikrant Tyre Plant, alon...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-05-26T17:00:32+00:00",
-            "published_display": "26 May 2026",
-            "importance_score": 9,
+            "title": "Green Drive Mobility to deploy 100 electric refrigerated trucks for More Retail operations",
+            "url": "https://evreporter.com/green-drive-mobility-deploys-100-electric-refrigerated-trucks-for-more-retail-operations",
+            "summary": "The post Green Drive Mobility to deploy 100 electric refrigerated trucks for More Retail operations appeared first at EVreporter on EVreporter . EV fleet operator Green Drive Mobility, in partnership with Montra Electric and TVS Vehicle Mobility Solution, has partnered to deploy The post Green Drive Mobility to deploy 100 electric refrigerated trucks for More Retail operations appeared first at EVreporter on EVrep...",
+            "source": "EVReporter",
+            "published_at": "2026-06-03T07:09:03+00:00",
+            "published_display": "03 Jun 2026",
+            "importance_score": 8,
             "segment_tags": [
-              "Passenger Vehicles",
               "Commercial Vehicles",
-              "Components"
+              "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           },
@@ -243673,23 +243687,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
-      "Autocar Professional Components"
+      "Autocar Professional Components",
+      "RushLane",
+      "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 4,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane",
-        "EVReporter"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 39,
+      "unmapped_articles": 42,
       "filtered_low_signal": 0,
-      "kept_articles": 61
+      "kept_articles": 70
     }
   },
   "qa": [
