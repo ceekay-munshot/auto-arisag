@@ -5432,6 +5432,36 @@ th:hover {
   .panel-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   .panel-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
 
+  /* ─────── Two-up chart packing ───────
+     Each section is a 2-column grid. EVERYTHING spans both columns by default
+     (section headers, tables, and the existing 2-/3-up grids keep their own
+     layout and never get crammed). ONLY single-chart panels take one cell, so
+     two lone full-width charts sit side-by-side instead of one per page. Using
+     grid (not inline-block/multicol) means items never overlap or cram. */
+  .print-section:not(.print-exec-summary),
+  .print-section:not(.print-exec-summary) .section.panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 11mm;
+    row-gap: 12pt;
+    align-items: start;
+  }
+  .print-section:not(.print-exec-summary) > *,
+  .print-section:not(.print-exec-summary) .section.panel > * { grid-column: 1 / -1; }
+  .print-section:not(.print-exec-summary) > .panel-grid.one,
+  .print-section:not(.print-exec-summary) .section.panel > .panel-grid.one { grid-column: auto; }
+  /* A single-chart panel that's actually a wrapper for several cards
+     (.channel-grid) must keep the full width and lay its cards out two-up
+     rather than collapsing into a half-column. */
+  .print-section:not(.print-exec-summary) .panel-grid.one.channel-grid {
+    grid-column: 1 / -1 !important;
+  }
+  .panel-grid.one.channel-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12pt !important;
+  }
+
   /* ─────── Cover page (page 1 of the handout) ───────
      Fixed height so the cover always occupies exactly one portrait page. */
   .print-cover {
