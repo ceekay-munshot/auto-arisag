@@ -1845,6 +1845,102 @@ function freshnessLevel(isoDate) {
   return { tone, days };
 }
 
+// ── Source-release status ──────────────────────────────────────────────────
+// freshnessLevel() above measures how OLD the data we already hold is. This
+// answers a different, more actionable question: has the source's NEXT report
+// most likely been published but not yet ingested — i.e. is there fresh data
+// out there to go fetch? It's cadence-aware on purpose: FADA and SIAM publish
+// monthly, but ACMA is half-yearly, so a naive "behind the current month" rule
+// would flag ACMA red forever.
+const SOURCE_RELEASE_CADENCE = {
+  retail: { source: "FADA", kind: "monthly", releaseDom: 7, graceDays: 4 },
+  wholesale: { source: "SIAM", kind: "monthly", releaseDom: 14, graceDays: 5 },
+  components: { source: "ACMA", kind: "halfyearly", graceDays: 21 },
+};
+
+function monthIdToLabel(monthId) {
+  if (!monthId || !/^\d{4}-\d{2}$/.test(monthId)) return monthId || "";
+  const [y, mo] = monthId.split("-").map(Number);
+  return new Date(y, mo - 1, 1).toLocaleDateString("en-IN", { month: "short", year: "numeric" });
+}
+
+function sourceReleaseStatus(moduleKey) {
+  const cadence = SOURCE_RELEASE_CADENCE[moduleKey];
+  if (!cadence) return null;
+  const mod = dashboardData.modules[moduleKey];
+  if (!mod || !mod.available) return null;
+  const meta = mod.source_meta || {};
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  if (cadence.kind === "monthly") {
+    const latest = meta.latest_month || mod.latest_month;
+    if (!latest || !/^\d{4}-\d{2}$/.test(latest)) return null;
+    const [y, mo] = latest.split("-").map(Number);
+    // Data month M is published in M+1, so the next month (M+1) lands in M+2
+    // around `releaseDom` (April data shipped early May → May ships early June).
+    const expected = new Date(y, mo - 1 + 2, cadence.releaseDom);
+    const overdueDays = Math.floor((today - expected) / 86400000);
+    const nextLabel = new Date(y, mo - 1 + 1, 1)
+      .toLocaleDateString("en-IN", { month: "short", year: "numeric" });
+    return {
+      source: cadence.source,
+      overdue: overdueDays > cadence.graceDays,
+      latestLabel: monthIdToLabel(latest),
+      nextLabel,
+      overdueDays: Math.max(0, overdueDays),
+    };
+  }
+
+  // Half-yearly (ACMA): anchor off the last release date. A fresh half-year
+  // window has definitively closed ~6 months on, so anything past ~183d + grace
+  // means the next report is out there and waiting to be ingested.
+  const rel = meta.latest_release_date || meta.release_date;
+  const relDate = rel ? new Date(rel) : null;
+  if (!relDate || Number.isNaN(relDate.getTime())) return null;
+  const daysSince = Math.floor((today - relDate) / 86400000);
+  return {
+    source: cadence.source,
+    overdue: daysSince > 183 + cadence.graceDays,
+    latestLabel: meta.period || monthIdToLabel(meta.latest_month) || "latest period",
+    nextLabel: "next report",
+    overdueDays: Math.max(0, daysSince - 183),
+  };
+}
+
+// Always-on freshness strip at the top of the dashboard content: one chip per
+// source (FADA / SIAM / ACMA) showing "up to date" vs an amber alert when the
+// next report looks published but hasn't been ingested.
+function renderDataFreshnessStrip() {
+  const statuses = ["retail", "wholesale", "components"]
+    .map(sourceReleaseStatus)
+    .filter(Boolean);
+  if (!statuses.length) return "";
+  const alerts = statuses.filter((s) => s.overdue);
+  const chips = statuses
+    .map((s) => {
+      const title = s.overdue
+        ? `${s.source}: ${s.nextLabel} looks published but isn't ingested yet (latest held: ${s.latestLabel}, ~${s.overdueDays}d overdue)`
+        : `${s.source}: up to date — latest ${s.latestLabel}`;
+      return `
+        <span class="source-fresh-chip ${s.overdue ? "is-alert" : "is-ok"}" title="${title}">
+          <span class="source-fresh-icon" aria-hidden="true">${s.overdue ? "⚠" : "✓"}</span>
+          <span class="source-fresh-name">${s.source}</span>
+          <span class="source-fresh-detail">${s.overdue ? `${s.nextLabel} due` : s.latestLabel}</span>
+        </span>`;
+    })
+    .join("");
+  const headline = alerts.length
+    ? `<span class="source-fresh-headline">${alerts.map((a) => a.source).join(" & ")} ${alerts.length === 1 ? "has" : "have"} new data out — drop the report to ingest</span>`
+    : `<span class="source-fresh-headline is-ok">All sources up to date</span>`;
+  return `
+    <div class="source-fresh-strip ${alerts.length ? "has-alert" : ""}" role="status" aria-label="Source data freshness">
+      <span class="source-fresh-label">Data status</span>
+      ${chips}
+      ${headline}
+    </div>`;
+}
+
 function renderAllTabsForPrint() {
   // Render every visible tab one after another, each on its own page,
   // with a section header. Preserves the active tab's state so the
@@ -1944,9 +2040,13 @@ function renderSideNav(activeId) {
           ${group.tabs.map((tab) => {
             const meta = tabSourceMeta(tab.id);
             const f = meta && meta.releaseDate ? freshnessLevel(meta.releaseDate) : null;
-            const dot = f
-              ? `<span class="side-nav-dot dot-${f.tone}" title="${meta.source || tab.label} · ${meta.periodLabel || ""} · ${f.days} days old"></span>`
-              : "";
+            const rs = sourceReleaseStatus(TAB_SOURCE_MAP[tab.id]);
+            let dot = "";
+            if (rs && rs.overdue) {
+              dot = `<span class="side-nav-dot dot-alert" title="${rs.source} · ${rs.nextLabel} likely out, not yet ingested"></span>`;
+            } else if (f) {
+              dot = `<span class="side-nav-dot dot-${f.tone}" title="${meta.source || tab.label} · ${meta.periodLabel || ""} · ${f.days} days old"></span>`;
+            }
             return `
               <button
                 class="side-nav-item${tab.id === activeId ? " is-active" : ""}"
@@ -2029,7 +2129,7 @@ function render() {
         renderFilters(),
         `<div class="dashboard-body">
            ${renderSideNav(activeTab.id)}
-           <main class="dashboard-content">${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
+           <main class="dashboard-content">${renderDataFreshnessStrip()}${renderActiveTabFreshness(activeTab.id)}${activeTab.render()}</main>
          </div>`,
         renderCreditPulseExplainerModal(),
         renderExplainModal(),

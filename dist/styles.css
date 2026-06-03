@@ -3652,6 +3652,74 @@ th:hover {
 .side-nav-dot.dot-aging    { background: #4c74c7; }
 .side-nav-dot.dot-stale    { background: #d99547; }
 .side-nav-dot.dot-critical { background: #cc4343; }
+.side-nav-dot.dot-alert {
+  background: #cc4343;
+  border-color: rgba(204, 67, 67, 0.5);
+  animation: dot-pulse-alert 1.6s ease-out infinite;
+}
+@keyframes dot-pulse-alert {
+  0%   { box-shadow: 0 0 0 0 rgba(204, 67, 67, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(204, 67, 67, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(204, 67, 67, 0); }
+}
+
+/* Source-release alert strip — "is the next FADA / SIAM / ACMA report out?".
+   Distinct from the freshness pill: the pill says how old the data we hold is,
+   this says whether the NEXT release is due but not yet ingested. */
+.source-fresh-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 9px 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(102, 118, 135, 0.22);
+  border-radius: 12px;
+  background: var(--panel);
+  font-size: 0.82rem;
+}
+.source-fresh-strip.has-alert {
+  border-color: rgba(204, 67, 67, 0.42);
+  background: linear-gradient(180deg, rgba(217, 149, 71, 0.10), rgba(217, 149, 71, 0.03));
+}
+.source-fresh-label {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+.source-fresh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: default;
+}
+.source-fresh-chip.is-ok {
+  background: linear-gradient(180deg, rgba(47, 137, 125, 0.10), rgba(47, 137, 125, 0.04));
+  border-color: rgba(47, 137, 125, 0.30);
+  color: #1d5a4f;
+}
+.source-fresh-chip.is-alert {
+  background: linear-gradient(180deg, rgba(204, 67, 67, 0.12), rgba(204, 67, 67, 0.04));
+  border-color: rgba(204, 67, 67, 0.45);
+  color: #8a2727;
+}
+.source-fresh-icon { font-size: 0.8rem; line-height: 1; }
+.source-fresh-chip.is-ok .source-fresh-icon { color: #2f897d; }
+.source-fresh-chip.is-alert .source-fresh-icon { color: #cc4343; }
+.source-fresh-name { font-weight: 700; }
+.source-fresh-detail { opacity: 0.85; }
+.source-fresh-headline {
+  margin-left: auto;
+  font-weight: 600;
+  color: #8a2727;
+}
+.source-fresh-headline.is-ok { color: var(--muted); font-weight: 500; }
 
 .side-nav-item-label {
   flex: 1;
