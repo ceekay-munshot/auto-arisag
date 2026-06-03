@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T06:51:58.492873+00:00",
+  "generated_at": "2026-06-03T07:16:33.095982+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120150,9 +120150,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-02T12:44:49.852716+00:00",
+      "generated_at": "2026-06-02T18:41:35.735983+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 1,
       "items": [
         {
           "title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh",
@@ -120166,21 +120166,6 @@
           "scope": "listed",
           "segment_tags": [],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/bajaj-avenger-220-street-launched-cover.jpg"
-        },
-        {
-          "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
-          "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-the-taigun-and-virtus-in-sri-lanka/131390821",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-05-29T12:34:43+00:00",
-          "published_display": "29 May 2026",
-          "company": "Volkswagen India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-112648/131390821.cms"
         }
       ],
       "companies": [
@@ -120191,14 +120176,6 @@
           "count": 1,
           "latest_published_at": "2026-06-02T07:47:11+00:00",
           "latest_title": "2026 Bajaj Avenger 220 Street Launch Price Rs 1.3 Lakh"
-        },
-        {
-          "company": "Volkswagen India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-05-29T12:34:43+00:00",
-          "latest_title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus"
         }
       ],
       "source_meta": {
@@ -120325,11 +120302,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.27,
+        "value": 95.25,
         "unit": "\u20b9",
-        "delta_value": 0.262,
-        "delta_label": "+0.01% in last week (Yahoo Finance)",
-        "delta_tone": "negative",
+        "delta_value": 0.252,
+        "delta_label": "+0.00% in last week (Yahoo Finance)",
+        "delta_tone": "neutral",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -130736,7 +130713,7 @@
           },
           {
             "date": "2026-06-02",
-            "close": 95.265
+            "close": 95.255
           }
         ]
       }
@@ -130751,12 +130728,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13022.0,
-        "change_1d_pct": 0.59,
-        "change_1w_pct": -1.12,
-        "change_1m_pct": -2.19,
+        "price": 12946.0,
+        "change_1d_pct": -1.38,
+        "change_1w_pct": -0.32,
+        "change_1m_pct": -2.76,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13450.0,
           13461.0,
           13337.0,
           13160.0,
@@ -130785,8 +130763,7 @@
           13208.0,
           13364.0,
           13127.0,
-          12946.0,
-          13022.0
+          12946.0
         ],
         "daily_closes": [
           {
@@ -140664,21 +140641,18 @@
           {
             "date": "2026-06-01",
             "close": 12946.0
-          },
-          {
-            "date": "2026-06-02",
-            "close": 13022.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2998.3,
-        "change_1d_pct": 0.95,
-        "change_1w_pct": -3.51,
-        "change_1m_pct": -3.48,
+        "price": 2970.2,
+        "change_1d_pct": -2.48,
+        "change_1w_pct": -5.38,
+        "change_1m_pct": -4.11,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          3247.3,
           3149.7,
           3047.7,
           3038.4,
@@ -140707,8 +140681,7 @@
           3121.6,
           3121.6,
           3045.6,
-          2970.2,
-          2998.3
+          2970.2
         ],
         "daily_closes": [
           {
@@ -150590,21 +150563,18 @@
           {
             "date": "2026-06-01",
             "close": 2970.2
-          },
-          {
-            "date": "2026-06-02",
-            "close": 2998.3
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4875.0,
-        "change_1d_pct": 1.14,
-        "change_1w_pct": -2.17,
-        "change_1m_pct": -3.78,
+        "price": 4819.9,
+        "change_1d_pct": -1.69,
+        "change_1w_pct": -3.2,
+        "change_1m_pct": -5.47,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          5259.0,
           5189.0,
           5032.0,
           4961.5,
@@ -150633,8 +150603,7 @@
           5075.0,
           5075.0,
           4903.0,
-          4819.9,
-          4875.0
+          4819.9
         ],
         "daily_closes": [
           {
@@ -160516,21 +160485,18 @@
           {
             "date": "2026-06-01",
             "close": 4819.9
-          },
-          {
-            "date": "2026-06-02",
-            "close": 4875.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3366.9,
-        "change_1d_pct": 0.67,
-        "change_1w_pct": -2.55,
-        "change_1m_pct": -3.68,
+        "price": 3344.4,
+        "change_1d_pct": -0.34,
+        "change_1w_pct": -3.61,
+        "change_1m_pct": -4.25,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3752.7,
           3660.7,
           3513.0,
           3488.2,
@@ -160559,8 +160525,7 @@
           3384.6,
           3384.6,
           3355.7,
-          3344.4,
-          3366.9
+          3344.4
         ],
         "daily_closes": [
           {
@@ -170442,21 +170407,18 @@
           {
             "date": "2026-06-01",
             "close": 3344.4
-          },
-          {
-            "date": "2026-06-02",
-            "close": 3366.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10281.0,
-        "change_1d_pct": -0.92,
-        "change_1w_pct": -2.95,
-        "change_1m_pct": 1.47,
+        "price": 10376.0,
+        "change_1d_pct": -0.8,
+        "change_1w_pct": -1.1,
+        "change_1m_pct": 3.82,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9793.0,
           9602.0,
           9550.5,
           9576.0,
@@ -170485,8 +170447,7 @@
           10808.5,
           10808.5,
           10460.0,
-          10376.0,
-          10281.0
+          10376.0
         ],
         "daily_closes": [
           {
@@ -180368,21 +180329,18 @@
           {
             "date": "2026-06-01",
             "close": 10376.0
-          },
-          {
-            "date": "2026-06-02",
-            "close": 10281.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1871.8,
-        "change_1d_pct": -0.56,
-        "change_1w_pct": -0.65,
-        "change_1m_pct": 1.48,
+        "price": 1882.4,
+        "change_1d_pct": -2.16,
+        "change_1w_pct": 0.08,
+        "change_1m_pct": 3.57,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          1885.7,
           1849.5,
           1844.2,
           1783.6,
@@ -180411,8 +180369,7 @@
           1913.6,
           1913.6,
           1924.0,
-          1882.4,
-          1871.8
+          1882.4
         ],
         "daily_closes": [
           {
@@ -182010,21 +181967,18 @@
           {
             "date": "2026-06-01",
             "close": 1882.4
-          },
-          {
-            "date": "2026-06-02",
-            "close": 1871.8
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7141.5,
-        "change_1d_pct": 0.58,
-        "change_1w_pct": -3.68,
-        "change_1m_pct": 0.46,
+        "price": 7100.5,
+        "change_1d_pct": -1.07,
+        "change_1w_pct": 1.7,
+        "change_1m_pct": -0.12,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7243.0,
           7240.5,
           7230.0,
           7092.5,
@@ -182053,8 +182007,7 @@
           7376.0,
           7419.0,
           7177.0,
-          7100.5,
-          7141.5
+          7100.5
         ],
         "daily_closes": [
           {
@@ -191932,22 +191885,19 @@
           {
             "date": "2026-06-01",
             "close": 7100.5
-          },
-          {
-            "date": "2026-06-02",
-            "close": 7141.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 390.2,
-        "change_1d_pct": 1.38,
-        "change_1w_pct": 1.19,
-        "change_1m_pct": 13.74,
+        "price": 384.9,
+        "change_1d_pct": -2.28,
+        "change_1w_pct": 3.12,
+        "change_1m_pct": 12.69,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          355.9,
           361.85,
           351.95,
           350.5,
@@ -191976,8 +191926,7 @@
           400.95,
           400.95,
           393.9,
-          384.9,
-          390.2
+          384.9
         ],
         "daily_closes": [
           {
@@ -201859,22 +201808,19 @@
           {
             "date": "2026-06-01",
             "close": 384.9
-          },
-          {
-            "date": "2026-06-02",
-            "close": 390.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 370.55,
-        "change_1d_pct": -0.99,
-        "change_1w_pct": -3.78,
-        "change_1m_pct": -10.26,
+        "price": 374.25,
+        "change_1d_pct": -1.38,
+        "change_1w_pct": -5.41,
+        "change_1m_pct": -8.7,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          442.55,
           447.8,
           431.85,
           424.55,
@@ -201903,8 +201849,7 @@
           383.85,
           383.85,
           379.5,
-          374.25,
-          370.55
+          374.25
         ],
         "daily_closes": [
           {
@@ -202454,21 +202399,18 @@
           {
             "date": "2026-06-01",
             "close": 374.25
-          },
-          {
-            "date": "2026-06-02",
-            "close": 370.55
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 149.05,
-        "change_1d_pct": -0.49,
-        "change_1w_pct": -7.16,
-        "change_1m_pct": -7.29,
+        "price": 149.78,
+        "change_1d_pct": -3.64,
+        "change_1w_pct": -8.72,
+        "change_1m_pct": -7.59,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          176.61,
           178.97,
           170.63,
           169.9,
@@ -202497,8 +202439,7 @@
           163.62,
           163.62,
           155.44,
-          149.78,
-          149.05
+          149.78
         ],
         "daily_closes": [
           {
@@ -212380,21 +212321,18 @@
           {
             "date": "2026-06-01",
             "close": 149.78
-          },
-          {
-            "date": "2026-06-02",
-            "close": 149.05
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2750.3,
-        "change_1d_pct": -0.45,
-        "change_1w_pct": -6.44,
-        "change_1m_pct": -14.19,
+        "price": 2762.8,
+        "change_1d_pct": -3.39,
+        "change_1w_pct": -7.18,
+        "change_1m_pct": -14.77,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          3359.9,
           3338.6,
           3309.0,
           3231.3,
@@ -212423,8 +212361,7 @@
           2880.4,
           2880.4,
           2859.8,
-          2762.8,
-          2750.3
+          2762.8
         ],
         "daily_closes": [
           {
@@ -222306,21 +222243,18 @@
           {
             "date": "2026-06-01",
             "close": 2762.8
-          },
-          {
-            "date": "2026-06-02",
-            "close": 2750.3
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 876.8,
-        "change_1d_pct": 0.27,
-        "change_1w_pct": -2.02,
-        "change_1m_pct": -1.46,
+        "price": 874.4,
+        "change_1d_pct": -1.19,
+        "change_1w_pct": -1.25,
+        "change_1m_pct": -1.49,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          912.8,
           934.4,
           916.55,
           907.25,
@@ -222349,8 +222283,7 @@
           906.25,
           906.25,
           884.95,
-          874.4,
-          876.8
+          874.4
         ],
         "daily_closes": [
           {
@@ -232232,21 +232165,18 @@
           {
             "date": "2026-06-01",
             "close": 874.4
-          },
-          {
-            "date": "2026-06-02",
-            "close": 876.8
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 476.3,
-        "change_1d_pct": -0.28,
-        "change_1w_pct": -2.81,
-        "change_1m_pct": -2.46,
+        "price": 477.65,
+        "change_1d_pct": -0.67,
+        "change_1w_pct": -1.53,
+        "change_1m_pct": -2.18,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          460.15,
           469.15,
           472.0,
           473.55,
@@ -232275,8 +232205,7 @@
           483.45,
           478.35,
           480.85,
-          477.65,
-          476.3
+          477.65
         ],
         "daily_closes": [
           {
@@ -242154,10 +242083,6 @@
           {
             "date": "2026-06-01",
             "close": 477.65
-          },
-          {
-            "date": "2026-06-02",
-            "close": 476.3
           }
         ]
       }
@@ -243331,10 +243256,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-02T12:44:25.351962+00:00",
+    "generated_at": "2026-06-02T18:41:10.060841+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 20,
+    "item_count": 21,
     "groups": [
       {
         "id": "pv",
@@ -243357,6 +243282,21 @@
             ]
           },
           {
+            "title": "Honda Cars India Sales Grow 31% In May 2026 \u2013 New City, Elevate Drive Demand",
+            "url": "https://www.rushlane.com/honda-cars-india-sales-grow-31-in-may-2026-12548086.html",
+            "summary": "Honda Cars India has reported strong sales growth in May 2026, registering total sales of 7,853 units. This includes domestic sales of 5,111 units and exports of 2,742 units The post Honda Cars India Sales Grow 31% In May 2026 \u2013 New City, Elevate Drive Demand appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-02T15:07:01+00:00",
+            "published_display": "02 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "Maruti Suzuki\u2019s domestic sales surge 39.5% to record 1.94 lakh units in May",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzukis-domestic-sales-surge-39-5-to-record-1-94-lakh-units-in-may/131435975",
             "summary": "The highest-ever monthly domestic sales helped the carmaker achieve a record total sales volume of 2.43 lakh units, supported by robust demand for SUVs and compact cars.",
@@ -243369,6 +243309,22 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "It ain't a Ferrari, if it don't look Ferrari",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/it-aint-a-ferrari-if-it-dont-look-ferrari/131432833",
+            "summary": "With a design that diverges from the classic Ferrari aesthetic, responses from enthusiasts have been polarizing, stirring discussions about the brand's evolution. Luxury electric vehicles are under scrutiny as their hefty price tags raise eyebrows among potential buyers.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-01T03:52:01+00:00",
+            "published_display": "01 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Funding / M&A"
             ]
           },
           {
@@ -243386,39 +243342,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "SAIC to sell additional 10% stake in JSW MG Motor India to JSW: Report",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/saic-to-sell-additional-10-stake-in-jsw-mg-motor-india-to-jsw-report/131392197",
-            "summary": "SAIC Motor is set to sell an additional 10% stake in JSW MG Motor India to JSW Group, which would become the company\u2019s largest shareholder, as the Chinese automaker navigates India\u2019s investment restrictions and prepares for new vehicle launches.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-29T13:37:31+00:00",
-            "published_display": "29 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch",
-              "Funding / M&A"
-            ]
-          },
-          {
-            "title": "Volkswagen debuts in Sri Lanka with India-built Taigun and Virtus",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-the-taigun-and-virtus-in-sri-lanka/131390821",
-            "summary": "\u0160koda Auto Volkswagen India has launched the brand in Sri Lanka through Continental Cars, expanding its export-led regional footprint from the Pune manufacturing hub.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-29T12:34:43+00:00",
-            "published_display": "29 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch"
             ]
           }
         ]
@@ -243463,6 +243386,23 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
+          {
+            "title": "RSB Transmissions acquires Setco Auto Systems to strengthen commercial vehicle components business",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/rsb-transmissions-acquires-setco-auto-systems-to-strengthen-commercial-vehicle-components-market/131464438",
+            "summary": "The acquisition expands RSB's footprint in the automotive components sector and adds clutch systems to its portfolio of drivetrain products.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-02T12:50:39+00:00",
+            "published_display": "02 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Mahindra posts 11% growth in May SUV sales at 58,021 units",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mahindra-reports-11-increase-in-suv-sales-for-may-2026/131434505",
@@ -243554,6 +243494,21 @@
             ]
           },
           {
+            "title": "JSW MG Motor Sales May 2026 at 6k \u2013 Windsor, Hector, Comet, ZS EV, Majestor",
+            "url": "https://www.rushlane.com/jsw-mg-motor-sales-may-2026-at-6k-windsor-hector-comet-12548018.html",
+            "summary": "Domestic sales decline YoY, while monthly volumes remain largely stable with marginal growth over April 2026 The post JSW MG Motor Sales May 2026 at 6k \u2013 Windsor, Hector, Comet, ZS EV, Majestor appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-02T14:19:30+00:00",
+            "published_display": "02 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "BYD snaps longest streak of sales declines",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-snaps-longest-streak-of-sales-declines/131444045",
             "summary": "Chinese EV giant BYD broke its sales decline streak in May, with global sales rising 0.3 per cent to 383,453 units. This growth was driven by strong overseas shipments, which surged 80.4 per cent, offsetting a 24 per cent drop in domestic sales amid fierce competition and weakening demand.",
@@ -243566,22 +243521,6 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "It ain't a Ferrari, if it don't look Ferrari",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/it-aint-a-ferrari-if-it-dont-look-ferrari/131432833",
-            "summary": "With a design that diverges from the classic Ferrari aesthetic, responses from enthusiasts have been polarizing, stirring discussions about the brand's evolution. Luxury electric vehicles are under scrutiny as their hefty price tags raise eyebrows among potential buyers.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T03:52:01+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Funding / M&A"
             ]
           }
         ]
@@ -243723,7 +243662,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
+      "unmapped_articles": 42,
       "filtered_low_signal": 1,
       "kept_articles": 69
     }
