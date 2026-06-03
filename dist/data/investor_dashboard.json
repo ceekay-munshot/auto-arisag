@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-02T18:41:56.229687+00:00",
-  "as_of_date": "2026-05-07",
+  "generated_at": "2026-06-03T07:16:33.095982+00:00",
+  "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
   "summary": {
@@ -44,10 +44,10 @@
       {
         "id": "pv_retail_vs_wholesale",
         "label": "PV Retail / Wholesale",
-        "value": 99.5,
-        "display": "99.5%",
-        "change": "-2,316 unit gap",
-        "detail": "FADA Apr 2026 retail vs SIAM Mar 2026 wholesale \u2014 SIAM is one cycle behind, so this gap mixes months.",
+        "value": 93.1,
+        "display": "93.1%",
+        "change": "-29,957 unit gap",
+        "detail": "FADA Apr 2026 retail vs SIAM Apr 2026 wholesale.",
         "tone": "neutral"
       },
       {
@@ -73,7 +73,7 @@
         "source": "SIAM",
         "status": "active",
         "module": "Wholesale",
-        "last_updated": "2026-04-14",
+        "last_updated": "2026-05-14",
         "detail": "",
         "url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605"
       },
@@ -45451,12 +45451,12 @@
       "title": "Wholesale Lens",
       "source_meta": {
         "name": "SIAM",
-        "latest_month": "2026-03",
-        "latest_release_date": "2026-04-14",
+        "latest_month": "2026-04",
+        "latest_release_date": "2026-05-14",
         "url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
         "note": ""
       },
-      "latest_month": "2026-03",
+      "latest_month": "2026-04",
       "months": [
         {
           "month": "2020-06",
@@ -47487,53 +47487,82 @@
           ],
           "domestic_total": 2494861,
           "exports": []
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "release_date": "2026-05-14",
+          "source_url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-april-2026",
+          "production_total": 2922427,
+          "domestic_sales": [
+            {
+              "category": "PV",
+              "label": "Passenger Vehicles",
+              "units": 437312,
+              "yoy_pct": 25.4
+            },
+            {
+              "category": "2W",
+              "label": "Two-Wheelers",
+              "units": 1872691,
+              "yoy_pct": 28.4
+            },
+            {
+              "category": "3W",
+              "label": "Three-Wheelers",
+              "units": 65668,
+              "yoy_pct": 32.8
+            }
+          ],
+          "domestic_total": 2375671,
+          "exports": []
         }
       ],
       "latest_snapshot": {
-        "month": "2026-03",
-        "label": "Mar 2026",
-        "release_date": "2026-04-14",
-        "source_url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
-        "production_total": 2978173,
+        "month": "2026-04",
+        "label": "Apr 2026",
+        "release_date": "2026-05-14",
+        "source_url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-april-2026",
+        "production_total": 2922427,
         "domestic_sales": [
           {
             "category": "PV",
             "label": "Passenger Vehicles",
-            "units": 442460,
-            "yoy_pct": null
+            "units": 437312,
+            "yoy_pct": 25.4
           },
           {
             "category": "2W",
             "label": "Two-Wheelers",
-            "units": 1976128,
-            "yoy_pct": null
+            "units": 1872691,
+            "yoy_pct": 28.4
           },
           {
             "category": "3W",
             "label": "Three-Wheelers",
-            "units": 76273,
-            "yoy_pct": null
+            "units": 65668,
+            "yoy_pct": 32.8
           }
         ],
-        "domestic_total": 2494861,
+        "domestic_total": 2375671,
         "exports": []
       },
       "retail_vs_wholesale": [
         {
           "category": "PV",
           "label": "Passenger Vehicles",
-          "retail_units": 440144,
-          "wholesale_units": 442460,
-          "gap_units": -2316,
-          "ratio_pct": 99.5
+          "retail_units": 407355,
+          "wholesale_units": 437312,
+          "gap_units": -29957,
+          "ratio_pct": 93.1
         },
         {
           "category": "2W",
           "label": "Two-Wheelers",
-          "retail_units": 1951006,
-          "wholesale_units": 1976128,
-          "gap_units": -25122,
-          "ratio_pct": 98.7
+          "retail_units": 1916258,
+          "wholesale_units": 1872691,
+          "gap_units": 43567,
+          "ratio_pct": 102.3
         }
       ],
       "quarter_summary": {
@@ -242166,10 +242195,10 @@
     },
     {
       "icon": "\ud83d\udd01",
-      "tone": "neutral",
+      "tone": "negative",
       "kicker": "Channel balance (PV)",
-      "value": "99.5%",
-      "narrative": "In sync. Wholesale tracking retail within 5% \u2014 channel stable.",
+      "value": "93.1%",
+      "narrative": "Wholesale > retail. Factories are outshipping dealer offtake \u2014 channel inventory building. Watch next month.",
       "section_anchor": "section-wholesale",
       "tab_id": "wholesale"
     }
@@ -242192,7 +242221,7 @@
     },
     {
       "title": "Retail vs wholesale",
-      "body": "PV retail ran at 99.5% of wholesale with FADA Apr 2026 retail over SIAM Mar 2026 wholesale, versus 98.7% for 2W. The tighter PV ratio sits alongside FADA's 28-30 days inventory signal, suggesting channel conditions have improved materially.",
+      "body": "PV retail ran at 93.1% of wholesale in Apr 2026, versus 102.3% for 2W. The tighter PV ratio sits alongside FADA's 28-30 days inventory signal, suggesting channel conditions have improved materially.",
       "tags": [
         "retail",
         "wholesale"

@@ -5096,8 +5096,8 @@
   },
   "siam": {
     "source_name": "SIAM",
-    "latest_month": "2026-03",
-    "latest_release_date": "2026-04-14",
+    "latest_month": "2026-04",
+    "latest_release_date": "2026-05-14",
     "source_url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-q4-jan--march-2026-fy-2025-26/605",
     "coverage_note": "",
     "monthly_series": [
@@ -5252,6 +5252,28 @@
             "yoy_pct": null
           }
         }
+      },
+      {
+        "month": "2026-04",
+        "release_date": "2026-05-14",
+        "source_url": "https://www.siam.in/news-%26-updates/press-releases/auto-industry-performance-of-april-2026",
+        "production_total": 2922427,
+        "domestic_sales": {
+          "PV": {
+            "units": 437312,
+            "yoy_pct": 25.4
+          },
+          "3W": {
+            "units": 65668,
+            "yoy_pct": 32.8
+          },
+          "2W": {
+            "units": 1872691,
+            "yoy_pct": 28.4
+          }
+        },
+        "exports": {},
+        "coverage_note": "BMW, Mercedes, JLR & Volvo Auto data not available; production also excludes Tata Motors. PV domestic sales include Tata Motors this month; ex-Tata 'Total PV' would be 3,78,312 units."
       }
     ],
     "q3_2025_26": {
@@ -5303,7 +5325,7 @@
     "period_label": "H1 FY2025-26",
     "release_date": "2026-01-14",
     "source_url": "https://www.acma.in/press-release.php",
-    "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 \u2014 steady demand despite a swing into trade deficit.",
+    "headline": "Indian auto component industry grew 6.8% to Rs 3.56 lakh crore in H1 FY26 — steady demand despite a swing into trade deficit.",
     "metrics": [
       {
         "label": "Industry turnover",
@@ -5339,8 +5361,8 @@
     "insights": [
       "Industry growth slowed from 9.6% (FY25) to 6.8% (H1 FY26) on softer global demand and selective domestic moderation.",
       "OEM demand still leads, with passenger vehicles and LCVs the strongest contributors.",
-      "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves \u2014 supports the larger-vehicle-parc thesis.",
-      "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports \u2014 an early warning for ancillary cap-ex priorities.",
+      "Aftermarket growth (+9%) outpaced OEM supplies for the first time in several halves — supports the larger-vehicle-parc thesis.",
+      "Trade swung from a USD 150M H1 FY25 surplus to a USD 180M H1 FY26 deficit on faster-growing imports — an early warning for ancillary cap-ex priorities.",
       "EV components now contribute 4.6% of total OEM supplies as electrification accelerates."
     ],
     "scope_note": "ACMA notes that tyres, batteries, paints and consumables are excluded from industry scope; EV component sales to domestic OEMs are included under OEM supply figures, excluding batteries."
