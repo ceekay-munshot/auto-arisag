@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T08:21:07.203610+00:00",
+  "generated_at": "2026-06-03T13:19:20.301876+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120302,10 +120302,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.77,
+        "value": 95.69,
         "unit": "\u20b9",
-        "delta_value": 0.2186,
-        "delta_label": "-0.14% in last week (Yahoo Finance)",
+        "delta_value": 0.1436,
+        "delta_label": "-0.22% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130713,7 +130713,7 @@
           },
           {
             "date": "2026-06-03",
-            "close": 95.77
+            "close": 95.695
           }
         ]
       }
@@ -130728,10 +130728,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13165.0,
-        "change_1d_pct": 1.1,
-        "change_1w_pct": -1.49,
-        "change_1m_pct": -1.94,
+        "price": 13044.0,
+        "change_1d_pct": 0.17,
+        "change_1w_pct": -2.39,
+        "change_1m_pct": -2.85,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13160.0,
@@ -130763,7 +130763,7 @@
           13127.0,
           12946.0,
           13022.0,
-          13165.0
+          13044.0
         ],
         "daily_closes": [
           {
@@ -140648,16 +140648,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 13165.0
+            "close": 13044.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3021.5,
-        "change_1d_pct": 0.77,
-        "change_1w_pct": -3.21,
-        "change_1m_pct": -5.9,
+        "price": 3011.1,
+        "change_1d_pct": 0.43,
+        "change_1w_pct": -3.54,
+        "change_1m_pct": -6.22,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3047.7,
@@ -140689,7 +140689,7 @@
           3045.6,
           2970.2,
           2998.3,
-          3021.5
+          3011.1
         ],
         "daily_closes": [
           {
@@ -150574,16 +150574,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 3021.5
+            "close": 3011.1
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4845.4,
-        "change_1d_pct": -0.61,
-        "change_1w_pct": -4.52,
-        "change_1m_pct": -5.16,
+        "price": 4840.9,
+        "change_1d_pct": -0.7,
+        "change_1w_pct": -4.61,
+        "change_1m_pct": -5.25,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5032.0,
@@ -150615,7 +150615,7 @@
           4903.0,
           4819.9,
           4875.0,
-          4845.4
+          4840.9
         ],
         "daily_closes": [
           {
@@ -160500,16 +160500,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 4845.4
+            "close": 4840.9
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3334.4,
-        "change_1d_pct": -0.97,
-        "change_1w_pct": -1.48,
-        "change_1m_pct": -5.66,
+        "price": 3316.9,
+        "change_1d_pct": -1.49,
+        "change_1w_pct": -2.0,
+        "change_1m_pct": -6.15,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3513.0,
@@ -160541,7 +160541,7 @@
           3355.7,
           3344.4,
           3366.9,
-          3334.4
+          3316.9
         ],
         "daily_closes": [
           {
@@ -170426,16 +170426,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 3334.4
+            "close": 3316.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10279.0,
-        "change_1d_pct": -0.02,
-        "change_1w_pct": -4.9,
-        "change_1m_pct": 2.32,
+        "price": 10259.0,
+        "change_1d_pct": -0.21,
+        "change_1w_pct": -5.08,
+        "change_1m_pct": 2.12,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9550.5,
@@ -170467,7 +170467,7 @@
           10460.0,
           10376.0,
           10281.0,
-          10279.0
+          10259.0
         ],
         "daily_closes": [
           {
@@ -180352,16 +180352,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 10279.0
+            "close": 10259.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1883.5,
-        "change_1d_pct": 0.63,
-        "change_1w_pct": -1.57,
-        "change_1m_pct": 3.35,
+        "price": 1866.4,
+        "change_1d_pct": -0.29,
+        "change_1w_pct": -2.47,
+        "change_1m_pct": 2.41,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1844.2,
@@ -180393,7 +180393,7 @@
           1924.0,
           1882.4,
           1871.8,
-          1883.5
+          1866.4
         ],
         "daily_closes": [
           {
@@ -181998,16 +181998,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 1883.5
+            "close": 1866.4
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7139.0,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": -3.21,
-        "change_1m_pct": -2.59,
+        "price": 7130.0,
+        "change_1d_pct": -0.16,
+        "change_1w_pct": -3.34,
+        "change_1m_pct": -2.72,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7230.0,
@@ -182039,7 +182039,7 @@
           7177.0,
           7100.5,
           7141.5,
-          7139.0
+          7130.0
         ],
         "daily_closes": [
           {
@@ -191920,16 +191920,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 7139.0
+            "close": 7130.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 396.0,
-        "change_1d_pct": 1.49,
-        "change_1w_pct": -1.23,
-        "change_1m_pct": 16.42,
+        "price": 398.15,
+        "change_1d_pct": 2.04,
+        "change_1w_pct": -0.7,
+        "change_1m_pct": 17.05,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -191962,7 +191962,7 @@
           393.9,
           384.9,
           390.2,
-          396.0
+          398.15
         ],
         "daily_closes": [
           {
@@ -201847,16 +201847,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 396.0
+            "close": 398.15
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 375.45,
-        "change_1d_pct": 1.32,
-        "change_1w_pct": -2.19,
-        "change_1m_pct": -7.65,
+        "price": 373.95,
+        "change_1d_pct": 0.92,
+        "change_1w_pct": -2.58,
+        "change_1m_pct": -8.02,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -201889,7 +201889,7 @@
           379.5,
           374.25,
           370.55,
-          375.45
+          373.95
         ],
         "daily_closes": [
           {
@@ -202446,16 +202446,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 375.45
+            "close": 373.95
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 144.58,
-        "change_1d_pct": -3.0,
-        "change_1w_pct": -11.64,
-        "change_1m_pct": -9.78,
+        "price": 145.84,
+        "change_1d_pct": -2.15,
+        "change_1w_pct": -10.87,
+        "change_1m_pct": -8.99,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           170.63,
@@ -202487,7 +202487,7 @@
           155.44,
           149.78,
           149.05,
-          144.58
+          145.84
         ],
         "daily_closes": [
           {
@@ -212372,16 +212372,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 144.58
+            "close": 145.84
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2773.3,
-        "change_1d_pct": 0.84,
-        "change_1w_pct": -3.72,
-        "change_1m_pct": -13.54,
+        "price": 2765.0,
+        "change_1d_pct": 0.53,
+        "change_1w_pct": -4.01,
+        "change_1m_pct": -13.8,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3309.0,
@@ -212413,7 +212413,7 @@
           2859.8,
           2762.8,
           2750.3,
-          2773.3
+          2765.0
         ],
         "daily_closes": [
           {
@@ -222298,16 +222298,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 2773.3
+            "close": 2765.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 864.0,
-        "change_1d_pct": -1.46,
-        "change_1w_pct": -4.66,
-        "change_1m_pct": -2.05,
+        "price": 867.1,
+        "change_1d_pct": -1.11,
+        "change_1w_pct": -4.32,
+        "change_1m_pct": -1.69,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           916.55,
@@ -222339,7 +222339,7 @@
           884.95,
           874.4,
           876.8,
-          864.0
+          867.1
         ],
         "daily_closes": [
           {
@@ -232224,16 +232224,16 @@
           },
           {
             "date": "2026-06-03",
-            "close": 864.0
+            "close": 867.1
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 470.1,
-        "change_1d_pct": -1.3,
-        "change_1w_pct": -2.76,
-        "change_1m_pct": -5.34,
+        "price": 468.55,
+        "change_1d_pct": -1.63,
+        "change_1w_pct": -3.08,
+        "change_1m_pct": -5.65,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           472.0,
@@ -232265,7 +232265,7 @@
           480.85,
           477.65,
           476.3,
-          470.1
+          468.55
         ],
         "daily_closes": [
           {
@@ -242146,7 +242146,7 @@
           },
           {
             "date": "2026-06-03",
-            "close": 470.1
+            "close": 468.55
           }
         ]
       }
@@ -243320,7 +243320,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-03T08:20:23.214159+00:00",
+    "generated_at": "2026-06-03T13:18:35.857163+00:00",
     "window_days": 45,
     "group_count": 5,
     "item_count": 19,
@@ -243391,19 +243391,18 @@
             ]
           },
           {
-            "title": "Tata Motors PV sales rise 42% to 59,090 units in May; EV volumes hit record 10,517",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-sees-42-surge-in-passenger-vehicle-sales-in-may-2026-ev-sales-reach-all-time-high/131439653",
-            "summary": "Electric vehicle sales emerged as a key growth driver, with combined domestic and export volumes rising 85% year-on-year to a record 10,517 units, compared with 5,685 units in May 2025.",
+            "title": "Kia India posts highest-ever May sales, wholesale dispatches rise 24% to 27,586 units",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-achieves-record-sales-in-may-2026-with-24-increase-in-wholesale-dispatches/131435578",
+            "summary": "The automaker said the performance was supported by sustained demand across its product portfolio, particularly the new Seltos, Sonet, Carens Clavis, Clavis EV and the MY26 Syros.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T09:59:44+00:00",
+            "published_at": "2026-06-01T09:55:19+00:00",
             "published_display": "01 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "General"
+              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -243469,6 +243468,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "Tata Motors turns to Chery platform for Avinya EVs after JLR roadmap setback",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-partners-with-chery-for-avinya-ev-launch-after-jlr-setback/131481839",
+            "summary": "The first Avinya model based on Chery's platform is expected to be launched in 2027, with a second model planned for 2029.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-03T10:19:02+00:00",
+            "published_display": "03 Jun 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "PV sales stay resilient in May despite fuel price hike; Maruti, Mahindra and Tata lead the pack",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-tata-and-mahindra-dominate-passenger-vehicle-sales-in-may-2026-despite-fuel-price-hikes/131445542",
             "summary": "Industry clocks around 4.4 lakh units in May as strong demand for CNG vehicles and EVs helps offset concerns over rising fuel prices and geopolitical uncertainty.",
@@ -243518,36 +243533,19 @@
             ]
           },
           {
-            "title": "It ain't a Ferrari, if it don't look Ferrari",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/it-aint-a-ferrari-if-it-dont-look-ferrari/131432833",
-            "summary": "With a design that diverges from the classic Ferrari aesthetic, responses from enthusiasts have been polarizing, stirring discussions about the brand's evolution. Luxury electric vehicles are under scrutiny as their hefty price tags raise eyebrows among potential buyers.",
+            "title": "Tata Motors PV sales rise 42% to 59,090 units in May; EV volumes hit record 10,517",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-sees-42-surge-in-passenger-vehicle-sales-in-may-2026-ev-sales-reach-all-time-high/131439653",
+            "summary": "Electric vehicle sales emerged as a key growth driver, with combined domestic and export volumes rising 85% year-on-year to a record 10,517 units, compared with 5,685 units in May 2025.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T03:52:01+00:00",
+            "published_at": "2026-06-01T09:59:44+00:00",
             "published_display": "01 Jun 2026",
-            "importance_score": 7,
+            "importance_score": 6,
             "segment_tags": [
-              "EV",
-              "Luxury"
+              "Passenger Vehicles",
+              "EV"
             ],
             "signal_tags": [
-              "Funding / M&A"
-            ]
-          },
-          {
-            "title": "EV sales in fast lane but motown treads the middle path",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/automakers-embrace-multi-powertrain-strategy-amidst-rising-ev-demand/131418880",
-            "summary": "Carmakers are simultaneously investing in EV architectures, hybrid systems, alternative fuels, and cleaner combustion technologies. Suppliers too are getting impacted, having to spread resources across multiple technology platforms.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-05-31T04:46:28+00:00",
-            "published_display": "31 May 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
+              "General"
             ]
           }
         ]
