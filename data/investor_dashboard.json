@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T11:56:52.973731+00:00",
+  "generated_at": "2026-06-04T17:47:22.413010+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120364,10 +120364,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.8,
+        "value": 95.78,
         "unit": "\u20b9",
-        "delta_value": 0.537,
-        "delta_label": "-0.26% in last week (Yahoo Finance)",
+        "delta_value": 0.512,
+        "delta_label": "-0.29% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130775,7 +130775,7 @@
           },
           {
             "date": "2026-06-04",
-            "close": 95.8
+            "close": 95.775
           }
         ]
       }
@@ -243398,10 +243398,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-04T11:56:03.905069+00:00",
+    "generated_at": "2026-06-04T17:46:33.810126+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 21,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
@@ -243457,33 +243457,34 @@
             ]
           },
           {
-            "title": "BYD snaps longest streak of sales declines",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-snaps-longest-streak-of-sales-declines/131444045",
-            "summary": "Chinese EV giant BYD broke its sales decline streak in May, with global sales rising 0.3 per cent to 383,453 units. This growth was driven by strong overseas shipments, which surged 80.4 per cent, offsetting a 24 per cent drop in domestic sales amid fierce competition and weakening demand.",
+            "title": "Toyota launches refreshed Innova Crysta with updated styling; price starts at \u20b919.72 lakh",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-unveils-refreshed-innova-crysta-with-enhanced-features-starting-at-1972-lakh/131498957",
+            "summary": "The company has additionally introduced a wireless charger and tyre pressure monitoring system (TPMS) to improve convenience and safety.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T13:37:12+00:00",
-            "published_display": "01 Jun 2026",
+            "published_at": "2026-06-04T06:54:42+00:00",
+            "published_display": "04 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV"
+              "EV",
+              "Components"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
+              "Product / Launch"
             ]
           },
           {
-            "title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-unveils-indias-first-flex-fuel-wagonr-to-enhance-ethanol-usage/131504257",
-            "summary": "Describing it as the country's first flex-fuel passenger vehicle, company\u2019s MD and CEO, Hisashi Takeuchi, said flex-fuel technology could support India's goals of reducing oil imports and carbon emissions.",
+            "title": "Tata Motors targets 20% PV market share by 2030: Chairman Chandrasekaran",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-targets-20-pv-market-share-by-2030-chairman-chandrasekaran/131508333",
+            "summary": "Addressing the company's dealer business planning meet 2026 in Goa, N Chandrasekaran said the automaker has already committed \u20b935,000 crore in capital expenditure through 2030 and could recalibrate investment plans as market conditions evolve.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-04T10:43:23+00:00",
+            "published_at": "2026-06-04T13:14:10+00:00",
             "published_display": "04 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Capacity / Capex"
             ]
           }
         ]
@@ -243492,6 +243493,37 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Top 50 Two Wheeler Exports FY 2026 \u2013 Bajaj, TVS, Honda, Hero, Yamaha, Suzuki, RE, KTM, Triumph",
+            "url": "https://www.rushlane.com/top-50-two-wheeler-exports-fy-2026-bajaj-tvs-honda-hero-yamaha-12548230.html",
+            "summary": "TVS Star City 125 emerged as India\u2019s most exported two-wheeler in FY2026, while Bajaj Boxer range continued to dominate overseas markets The post Top 50 Two Wheeler Exports FY 2026 \u2013 Bajaj, TVS, Honda, Hero, Yamaha, Suzuki, RE, KTM, Triumph appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-04T14:23:43+00:00",
+            "published_display": "04 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Hero Vida VxZ Electric Motorcycle Might Be Heading To USA",
+            "url": "https://www.rushlane.com/hero-vida-vxz-electric-motorcycle-might-be-heading-to-usa-12548256.html",
+            "summary": "Hero Vida VxZ electric motorcycle might be heading to USA as Zero Lompico, which could be manufactured by Hero in India and shipped to USA The post Hero Vida VxZ Electric Motorcycle Might Be Heading To USA appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-04T12:42:12+00:00",
+            "published_display": "04 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
           {
             "title": "Hero To Launch Flex Fuel Versions Of All Motorcycles And Scooters",
             "url": "https://www.rushlane.com/hero-to-launch-flex-fuel-versions-of-all-motorcycles-and-scooters-12548184.html",
@@ -243602,6 +243634,22 @@
             ]
           },
           {
+            "title": "Hyundai to make Tamil Nadu its EV hub, targets 90% localisation by 2032",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-to-make-tamil-nadu-its-ev-hub-targets-90-localisation-by-2032/131505927",
+            "summary": "The automaker said it plans to launch two new models from its Chennai plant this year, including its first mass-market dedicated EV.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-04T11:37:34+00:00",
+            "published_display": "04 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026",
             "url": "https://www.rushlane.com/hyundai-to-make-tamil-nadu-its-ev-hub-for-india-compact-esuv-launch-in-2026-12548227.html",
             "summary": "Internally codenamed HE1i, the upcoming electric SUV will be positioned in the sub-4 metre segment and is expected to take on rivals such as Tata Nexon EV The post Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026 appeared first on RushLane .",
@@ -243631,22 +243679,6 @@
             ],
             "signal_tags": [
               "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Toyota launches refreshed Innova Crysta with updated styling; price starts at \u20b919.72 lakh",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-unveils-refreshed-innova-crysta-with-enhanced-features-starting-at-1972-lakh/131498957",
-            "summary": "The company has additionally introduced a wireless charger and tyre pressure monitoring system (TPMS) to improve convenience and safety.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-04T06:54:42+00:00",
-            "published_display": "04 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           }
         ]
@@ -243768,21 +243800,6 @@
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
-          },
-          {
-            "title": "Tesla May registrations jump in several European markets as recovery continues",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-may-registrations-jump-in-several-european-markets-as-recovery-continues/131443941",
-            "summary": "Tesla car sales are showing a strong comeback in Europe. Registrations surged in countries like Sweden, Denmark, and Spain. France saw a remarkable jump in new Tesla vehicles. Policy support and fuel costs are driving buyers towards cleaner vehicles.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T13:32:07+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Policy / Regulation"
-            ]
           }
         ]
       }
@@ -243805,9 +243822,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 43,
-      "filtered_low_signal": 0,
-      "kept_articles": 70
+      "unmapped_articles": 42,
+      "filtered_low_signal": 1,
+      "kept_articles": 69
     }
   },
   "qa": [
