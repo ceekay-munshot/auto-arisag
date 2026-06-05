@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T07:10:48.975658+00:00",
+  "generated_at": "2026-06-05T12:11:11.879005+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -120150,9 +120150,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-05T07:10:27.778550+00:00",
+      "generated_at": "2026-06-05T12:10:23.539356+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 2,
       "items": [
         {
           "title": "Audi Nuvolari Supercar Unveiled \u2013 Hybrid V8 Lambo Engine, 1000 PS, 0-100 in 2.6s",
@@ -120170,22 +120170,6 @@
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/audi-nuvolari-supercar-unveiled.jpg"
         },
         {
-          "title": "Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026",
-          "summary": "Internally codenamed HE1i, the upcoming electric SUV will be positioned in the sub-4 metre segment and is expected to take on rivals such as Tata Nexon EV The post Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026 appeared first on RushLane .",
-          "url": "https://www.rushlane.com/hyundai-to-make-tamil-nadu-its-ev-hub-for-india-compact-esuv-launch-in-2026-12548227.html",
-          "source": "RushLane",
-          "published_at": "2026-06-04T10:49:07+00:00",
-          "published_display": "04 Jun 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2020/10/hyundai-india-plant-i20-13.jpg"
-        },
-        {
           "title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push",
           "summary": "Describing it as the country's first flex-fuel passenger vehicle, company\u2019s MD and CEO, Hisashi Takeuchi, said flex-fuel technology could support India's goals of reducing oil imports and carbon emissions.",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-unveils-indias-first-flex-fuel-wagonr-to-enhance-ethanol-usage/131504257",
@@ -120199,19 +120183,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-3416063/131504257.cms"
-        },
-        {
-          "title": "2026 Toyota Innova Crysta Facelift Launch Price Rs 19.72 Lakh",
-          "summary": "2026 Toyota Innova Crysta has been launched starting from Rs 19.72 lakh (Ex-sh) with a few cosmetic changes and added features The post 2026 Toyota Innova Crysta Facelift Launch Price Rs 19.72 Lakh appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-toyota-innova-crysta-facelift-launch-price-rs-19-72-lakh-12548196.html",
-          "source": "RushLane",
-          "published_at": "2026-06-04T07:56:22+00:00",
-          "published_display": "04 Jun 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/2026-toyota-innova-crysta-facelift-launch-price-8.jpeg"
         }
       ],
       "companies": [
@@ -120224,28 +120195,12 @@
           "latest_title": "Audi Nuvolari Supercar Unveiled \u2013 Hybrid V8 Lambo Engine, 1000 PS, 0-100 in 2.6s"
         },
         {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-06-04T10:49:07+00:00",
-          "latest_title": "Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026"
-        },
-        {
           "company": "Maruti Suzuki",
           "tone": "pv",
           "scope": "listed",
           "count": 1,
           "latest_published_at": "2026-06-04T10:43:23+00:00",
           "latest_title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push"
-        },
-        {
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-06-04T07:56:22+00:00",
-          "latest_title": "2026 Toyota Innova Crysta Facelift Launch Price Rs 19.72 Lakh"
         }
       ],
       "source_meta": {
@@ -120372,10 +120327,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.46,
+        "value": 94.94,
         "unit": "\u20b9",
-        "delta_value": -0.707,
-        "delta_label": "-0.62% in last week (Yahoo Finance)",
+        "delta_value": -1.2295,
+        "delta_label": "-1.16% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130787,7 +130742,7 @@
           },
           {
             "date": "2026-06-05",
-            "close": 95.4575
+            "close": 94.935
           }
         ]
       }
@@ -130802,10 +130757,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13097.0,
-        "change_1d_pct": 0.25,
-        "change_1w_pct": -0.23,
-        "change_1m_pct": -4.89,
+        "price": 13050.0,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": -0.59,
+        "change_1m_pct": -5.23,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13222.0,
@@ -130837,7 +130792,7 @@
           13022.0,
           13044.0,
           13064.0,
-          13097.0
+          13050.0
         ],
         "daily_closes": [
           {
@@ -140726,16 +140681,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 13097.0
+            "close": 13050.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3035.0,
-        "change_1d_pct": 0.63,
-        "change_1w_pct": -0.35,
-        "change_1m_pct": -9.96,
+        "price": 3040.5,
+        "change_1d_pct": 0.81,
+        "change_1w_pct": -0.17,
+        "change_1m_pct": -9.8,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3102.4,
@@ -140767,7 +140722,7 @@
           2998.3,
           3011.1,
           3016.1,
-          3035.0
+          3040.5
         ],
         "daily_closes": [
           {
@@ -150656,16 +150611,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 3035.0
+            "close": 3040.5
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4857.5,
-        "change_1d_pct": -0.51,
-        "change_1w_pct": -0.93,
-        "change_1m_pct": -9.09,
+        "price": 4835.0,
+        "change_1d_pct": -0.97,
+        "change_1w_pct": -1.39,
+        "change_1m_pct": -9.51,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5043.0,
@@ -150697,7 +150652,7 @@
           4875.0,
           4840.9,
           4882.3,
-          4857.5
+          4835.0
         ],
         "daily_closes": [
           {
@@ -160586,16 +160541,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 4857.5
+            "close": 4835.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3384.6,
-        "change_1d_pct": 0.66,
-        "change_1w_pct": 0.86,
-        "change_1m_pct": -8.69,
+        "price": 3383.9,
+        "change_1d_pct": 0.64,
+        "change_1w_pct": 0.84,
+        "change_1m_pct": -8.71,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3552.6,
@@ -160627,7 +160582,7 @@
           3366.9,
           3316.9,
           3362.5,
-          3384.6
+          3383.9
         ],
         "daily_closes": [
           {
@@ -170516,16 +170471,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 3384.6
+            "close": 3383.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10370.0,
-        "change_1d_pct": 0.08,
-        "change_1w_pct": -0.86,
-        "change_1m_pct": -2.22,
+        "price": 10342.0,
+        "change_1d_pct": -0.19,
+        "change_1w_pct": -1.13,
+        "change_1m_pct": -2.48,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9662.0,
@@ -170557,7 +170512,7 @@
           10281.0,
           10259.0,
           10362.0,
-          10370.0
+          10342.0
         ],
         "daily_closes": [
           {
@@ -180446,16 +180401,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 10370.0
+            "close": 10342.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1938.2,
-        "change_1d_pct": 0.3,
-        "change_1w_pct": 0.74,
-        "change_1m_pct": 5.58,
+        "price": 1913.6,
+        "change_1d_pct": -0.97,
+        "change_1w_pct": -0.54,
+        "change_1m_pct": 4.24,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1837.6,
@@ -180487,7 +180442,7 @@
           1871.8,
           1866.4,
           1932.4,
-          1938.2
+          1913.6
         ],
         "daily_closes": [
           {
@@ -182100,16 +182055,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 1938.2
+            "close": 1913.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7090.0,
-        "change_1d_pct": -0.28,
-        "change_1w_pct": -1.21,
-        "change_1m_pct": -3.24,
+        "price": 7070.0,
+        "change_1d_pct": -0.56,
+        "change_1w_pct": -1.49,
+        "change_1m_pct": -3.51,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7174.0,
@@ -182141,7 +182096,7 @@
           7141.5,
           7130.0,
           7110.0,
-          7090.0
+          7070.0
         ],
         "daily_closes": [
           {
@@ -192030,16 +191985,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 7090.0
+            "close": 7070.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 399.8,
-        "change_1d_pct": 0.03,
-        "change_1w_pct": 1.5,
-        "change_1m_pct": 11.29,
+        "price": 397.8,
+        "change_1d_pct": -0.48,
+        "change_1w_pct": 0.99,
+        "change_1m_pct": 10.73,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -192072,7 +192027,7 @@
           390.2,
           398.15,
           399.7,
-          399.8
+          397.8
         ],
         "daily_closes": [
           {
@@ -201961,16 +201916,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 399.8
+            "close": 397.8
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 372.1,
-        "change_1d_pct": -0.4,
-        "change_1w_pct": -1.95,
-        "change_1m_pct": -14.27,
+        "price": 369.15,
+        "change_1d_pct": -1.19,
+        "change_1w_pct": -2.73,
+        "change_1m_pct": -14.95,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -202003,7 +201958,7 @@
           370.55,
           373.95,
           373.6,
-          372.1
+          369.15
         ],
         "daily_closes": [
           {
@@ -202568,16 +202523,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 372.1
+            "close": 369.15
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 145.32,
-        "change_1d_pct": 0.61,
-        "change_1w_pct": -6.51,
-        "change_1m_pct": -14.91,
+        "price": 145.29,
+        "change_1d_pct": 0.59,
+        "change_1w_pct": -6.53,
+        "change_1m_pct": -14.93,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           169.3,
@@ -202609,7 +202564,7 @@
           149.05,
           145.84,
           144.44,
-          145.32
+          145.29
         ],
         "daily_closes": [
           {
@@ -212498,16 +212453,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 145.32
+            "close": 145.29
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2789.8,
-        "change_1d_pct": 1.41,
-        "change_1w_pct": -2.45,
-        "change_1m_pct": -16.62,
+        "price": 2781.5,
+        "change_1d_pct": 1.11,
+        "change_1w_pct": -2.74,
+        "change_1m_pct": -16.87,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3262.5,
@@ -212539,7 +212494,7 @@
           2750.3,
           2765.0,
           2751.1,
-          2789.8
+          2781.5
         ],
         "daily_closes": [
           {
@@ -222428,16 +222383,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 2789.8
+            "close": 2781.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 871.35,
-        "change_1d_pct": 0.26,
-        "change_1w_pct": -1.54,
-        "change_1m_pct": -3.78,
+        "price": 900.3,
+        "change_1d_pct": 3.6,
+        "change_1w_pct": 1.73,
+        "change_1m_pct": -0.58,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           916.45,
@@ -222469,7 +222424,7 @@
           876.8,
           867.1,
           869.05,
-          871.35
+          900.3
         ],
         "daily_closes": [
           {
@@ -232358,16 +232313,16 @@
           },
           {
             "date": "2026-06-05",
-            "close": 871.35
+            "close": 900.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 470.5,
-        "change_1d_pct": -0.01,
-        "change_1w_pct": -2.15,
-        "change_1m_pct": -4.62,
+        "price": 468.75,
+        "change_1d_pct": -0.38,
+        "change_1w_pct": -2.52,
+        "change_1m_pct": -4.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           491.55,
@@ -232399,7 +232354,7 @@
           476.3,
           468.55,
           470.55,
-          470.5
+          468.75
         ],
         "daily_closes": [
           {
@@ -242288,7 +242243,7 @@
           },
           {
             "date": "2026-06-05",
-            "close": 470.5
+            "close": 468.75
           }
         ]
       }
@@ -243462,7 +243417,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-05T07:10:03.440646+00:00",
+    "generated_at": "2026-06-05T12:09:57.091227+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 22,
@@ -243521,34 +243476,33 @@
             ]
           },
           {
-            "title": "Toyota launches refreshed Innova Crysta with updated styling; price starts at \u20b919.72 lakh",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-unveils-refreshed-innova-crysta-with-enhanced-features-starting-at-1972-lakh/131498957",
-            "summary": "The company has additionally introduced a wireless charger and tyre pressure monitoring system (TPMS) to improve convenience and safety.",
+            "title": "Maruti Suzuki to invest \u20b9925 crore by FY31 towards green energy initiatives",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-to-invest-925-crore-by-fy31-towards-green-energy-initiatives/131526390",
+            "summary": "Maruti Suzuki India Ltd will invest \u20b9925 crore by FY 2030-31 in green energy. This includes a new 10 Tonnes Per Day biogas plant at its Kharkhoda facility by FY 2026-27. The company is also expanding its Manesar biogas plant capacity.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-04T06:54:42+00:00",
-            "published_display": "04 Jun 2026",
-            "importance_score": 7,
+            "published_at": "2026-06-05T08:34:47+00:00",
+            "published_display": "05 Jun 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "EV",
-              "Components"
+              "General"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Capacity / Capex"
             ]
           },
           {
-            "title": "Tata Motors targets 20% PV market share by 2030: Chairman Chandrasekaran",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-targets-20-pv-market-share-by-2030-chairman-chandrasekaran/131508333",
-            "summary": "Addressing the company's dealer business planning meet 2026 in Goa, N Chandrasekaran said the automaker has already committed \u20b935,000 crore in capital expenditure through 2030 and could recalibrate investment plans as market conditions evolve.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-04T13:14:10+00:00",
-            "published_display": "04 Jun 2026",
+            "title": "Top 10 Cars, SUVs May 2026 \u2013 Dzire, Fronx, Ertiga, Punch, Nexon, Scorpio, Creta, Seltos",
+            "url": "https://www.rushlane.com/top-10-cars-suvs-may-2026-dzire-fronx-ertiga-punch-12548303.html",
+            "summary": "Maruti dominates passenger vehicle rankings while Tata Punch, Nexon and Hyundai Creta continue strong SUV performance The post Top 10 Cars, SUVs May 2026 \u2013 Dzire, Fronx, Ertiga, Punch, Nexon, Scorpio, Creta, Seltos appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-05T07:52:49+00:00",
+            "published_display": "05 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Capacity / Capex"
+              "General"
             ]
           }
         ]
@@ -243557,6 +243511,21 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Two Wheeler Sales May 2026 \u2013 Hero, Honda, TVS, Bajaj, Royal Enfield, Suzuki",
+            "url": "https://www.rushlane.com/two-wheeler-sales-may-2026-hero-honda-tvs-bajaj-royal-enfield-suzuki-12548333.html",
+            "summary": "Domestic sales cross 17.9 lakh units while exports surge 33% YoY; total industry volumes rise 16.5% The post Two Wheeler Sales May 2026 \u2013 Hero, Honda, TVS, Bajaj, Royal Enfield, Suzuki appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-05T11:31:58+00:00",
+            "published_display": "05 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "Top 50 Two Wheeler Exports FY 2026 \u2013 Bajaj, TVS, Honda, Hero, Yamaha, Suzuki, RE, KTM, Triumph",
             "url": "https://www.rushlane.com/top-50-two-wheeler-exports-fy-2026-bajaj-tvs-honda-hero-yamaha-12548230.html",
@@ -243594,22 +243563,6 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
-          {
-            "title": "EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications",
-            "url": "https://evreporter.com/emo-energy-enters-heavy-commercial-ev-battery-segment-for-buses-trucks-and-fleet-applications",
-            "summary": "The post EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications appeared first at EVreporter on EVreporter . EMO Energy has announced its entry into the heavy commercial vehicle (HCV) segment with a battery platform designed for electric The post EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications appeared first at EVreporter on EVr...",
-            "source": "EVReporter",
-            "published_at": "2026-06-04T06:35:50+00:00",
-            "published_display": "04 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "RSB Transmissions acquires Setco Auto Systems to strengthen commercial vehicle components business",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/rsb-transmissions-acquires-setco-auto-systems-to-strengthen-commercial-vehicle-components-market/131464438",
@@ -243699,35 +243652,35 @@
             ]
           },
           {
-            "title": "Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026",
-            "url": "https://www.rushlane.com/hyundai-to-make-tamil-nadu-its-ev-hub-for-india-compact-esuv-launch-in-2026-12548227.html",
-            "summary": "Internally codenamed HE1i, the upcoming electric SUV will be positioned in the sub-4 metre segment and is expected to take on rivals such as Tata Nexon EV The post Hyundai To Make Tamil Nadu Its EV Hub For India \u2013 Compact eSUV Launch In 2026 appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-04T10:49:07+00:00",
+            "title": "Toyota launches refreshed Innova Crysta with updated styling; price starts at \u20b919.72 lakh",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-unveils-refreshed-innova-crysta-with-enhanced-features-starting-at-1972-lakh/131498957",
+            "summary": "The company has additionally introduced a wireless charger and tyre pressure monitoring system (TPMS) to improve convenience and safety.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-04T06:54:42+00:00",
             "published_display": "04 Jun 2026",
-            "importance_score": 8,
+            "importance_score": 7,
             "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
+              "EV",
+              "Components"
             ],
             "signal_tags": [
               "Product / Launch"
             ]
           },
           {
-            "title": "PV sales stay resilient in May despite fuel price hike; Maruti, Mahindra and Tata lead the pack",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-tata-and-mahindra-dominate-passenger-vehicle-sales-in-may-2026-despite-fuel-price-hikes/131445542",
-            "summary": "Industry clocks around 4.4 lakh units in May as strong demand for CNG vehicles and EVs helps offset concerns over rising fuel prices and geopolitical uncertainty.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-01T15:24:16+00:00",
-            "published_display": "01 Jun 2026",
-            "importance_score": 8,
+            "title": "EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications",
+            "url": "https://evreporter.com/emo-energy-enters-heavy-commercial-ev-battery-segment-for-buses-trucks-and-fleet-applications",
+            "summary": "The post EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications appeared first at EVreporter on EVreporter . EMO Energy has announced its entry into the heavy commercial vehicle (HCV) segment with a battery platform designed for electric The post EMO Energy enters heavy commercial EV battery segment for buses, trucks and fleet applications appeared first at EVreporter on EVr...",
+            "source": "EVReporter",
+            "published_at": "2026-06-04T06:35:50+00:00",
+            "published_display": "04 Jun 2026",
+            "importance_score": 7,
             "segment_tags": [
-              "Passenger Vehicles",
+              "Commercial Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Input Costs / Commodities"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -243887,7 +243840,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
+      "unmapped_articles": 40,
       "filtered_low_signal": 2,
       "kept_articles": 68
     }
