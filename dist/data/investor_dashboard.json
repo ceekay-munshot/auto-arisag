@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T17:22:00.256573+00:00",
+  "generated_at": "2026-06-06T06:32:36.693046+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47780,7 +47780,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-06-05",
+          "latest_release_date": "2026-06-06",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120150,25 +120150,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-05T12:10:23.539356+00:00",
+      "generated_at": "2026-06-06T06:32:14.630312+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 1,
       "items": [
-        {
-          "title": "Audi Nuvolari Supercar Unveiled \u2013 Hybrid V8 Lambo Engine, 1000 PS, 0-100 in 2.6s",
-          "summary": "Audi Nuvolari supercar has been unveiled, taking R8's place and it gets the same 4L V8 Hybrid engine as Lambo Temerario with 1,0001 PS power The post Audi Nuvolari Supercar Unveiled \u2013 Hybrid V8 Lambo Engine, 1000 PS, 0-100 in 2.6s appeared first on RushLane .",
-          "url": "https://www.rushlane.com/audi-nuvolari-supercar-unveiled-hybrid-v8-lambo-engine-1000-ps-0-100-in-2-6s-12548293.html",
-          "source": "RushLane",
-          "published_at": "2026-06-05T06:04:17+00:00",
-          "published_display": "05 Jun 2026",
-          "company": "Audi India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Luxury"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/audi-nuvolari-supercar-unveiled.jpg"
-        },
         {
           "title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push",
           "summary": "Describing it as the country's first flex-fuel passenger vehicle, company\u2019s MD and CEO, Hisashi Takeuchi, said flex-fuel technology could support India's goals of reducing oil imports and carbon emissions.",
@@ -120187,14 +120172,6 @@
       ],
       "companies": [
         {
-          "company": "Audi India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-06-05T06:04:17+00:00",
-          "latest_title": "Audi Nuvolari Supercar Unveiled \u2013 Hybrid V8 Lambo Engine, 1000 PS, 0-100 in 2.6s"
-        },
-        {
           "company": "Maruti Suzuki",
           "tone": "pv",
           "scope": "listed",
@@ -120205,13 +120182,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-06-05"
+        "latest_release_date": "2026-06-04"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-06-05",
+    "as_of_date": "2026-06-06",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -120327,10 +120304,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.94,
+        "value": 94.95,
         "unit": "\u20b9",
-        "delta_value": -1.2295,
-        "delta_label": "-1.16% in last week (Yahoo Finance)",
+        "delta_value": -0.8403,
+        "delta_label": "-0.06% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -130741,8 +130718,12 @@
             "close": 96.1645
           },
           {
-            "date": "2026-06-05",
-            "close": 94.935
+            "date": "2026-06-04",
+            "close": 95.7903
+          },
+          {
+            "date": "2026-06-06",
+            "close": 94.95
           }
         ]
       }
@@ -130750,7 +130731,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-06-05",
+    "as_of_date": "2026-06-06",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -242251,7 +242232,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-06-05",
+    "as_of_date": "2026-06-06",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -243417,7 +243398,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-05T17:20:52.084521+00:00",
+    "generated_at": "2026-06-06T06:31:49.411081+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 19,
@@ -243674,24 +243655,6 @@
             ]
           },
           {
-            "title": "Tata AutoComp forms JV with Korea\u2019s Jahwa Electronics for EV heater systems",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tata-autocomp-teams-up-with-jahwa-electronics-for-pioneering-ev-heater-solutions-in-india/131380502",
-            "summary": "T\u200bhe joint venture will position India as a strategic manufacturing and supply hub for Jahwa Electronics, leveraging growing demand for electrified mobility solutions in the country.",
-            "source": "ET Auto Components",
-            "published_at": "2026-05-29T02:46:30+00:00",
-            "published_display": "29 May 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "JK Tyre Unveils One Of Its Largest Capex Plans As Capacity Utilisation Crosses 90%",
             "url": "https://www.autocarpro.in/NEWS/jk-tyre-unveils-one-of-its-largest-capex-plans-as-capacity-utilisation-crosses-90-132791",
             "summary": "JK Tyre & Industries Ltd has announced one of its largest-ever capital expenditure plans, approving a Rs 4,980 crore phased expansion of its truck and passenger car radial tyre capacities amid strong demand across domestic and export markets. The expansion, approved by the company\u2019s board, will increase overall capacity by 24% over the next three years and will primarily focus on the Chennai and Mysore plants.",
@@ -243743,6 +243706,23 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "LOHUM Secures Rights to Upgrades and Restart Hindustan Copper's Gujarat Plant",
+            "url": "https://www.autocarpro.in/NEWS/lohum-secures-rights-to-upgrades-and-restart-hindustan-coppers-gujarat-plant-132931",
+            "summary": "Hindustan Copper Limited has awarded critical minerals producer LOHUM the operational rights to restart, upgrade, and maintain its defunct copper refining project in Jhagadia, Gujarat. The public-private partnership will function under a 20-year revenue-sharing contract, which includes an option for a five-year extension.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-04T18:18:39+00:00",
+            "published_display": "04 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -243787,9 +243767,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 42,
-      "filtered_low_signal": 3,
-      "kept_articles": 67
+      "unmapped_articles": 43,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [
@@ -243839,7 +243819,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-06-05",
+    "as_of_date": "2026-06-06",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
