@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T16:07:13.173932+00:00",
+  "generated_at": "2026-06-07T07:07:52.825947+00:00",
   "as_of_date": "2026-05-14",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -47780,7 +47780,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-06-06",
+          "latest_release_date": "2026-06-07",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -120150,10 +120150,38 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-06T06:32:14.630312+00:00",
+      "generated_at": "2026-06-07T07:07:31.466302+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 3,
       "items": [
+        {
+          "title": "2026 Suzuki Fronx Sport Edition Launch Price RM 131k (Rs 30.71 L) \u2013 New Features",
+          "summary": "While Suzuki Fronx Sport has a striking presence, it has the same hybrid powertrain and largely the same specs as the base variant The post 2026 Suzuki Fronx Sport Edition Launch Price RM 131k (Rs 30.71 L) \u2013 New Features appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-suzuki-fronx-sport-edition-launch-price-rm-131k-rs-30-71-l-12548440.html",
+          "source": "RushLane",
+          "published_at": "2026-06-07T05:22:37+00:00",
+          "published_display": "07 Jun 2026",
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Components"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/2026-suzuki-fronx-sport-edition-launch-price-17.jpeg"
+        },
+        {
+          "title": "Suzuki Jimny Rhino Edition With ADAS \u2013 Launch Price RM 174k (Rs 40.8 Lakh)",
+          "summary": "With the new Jimny variants in Malaysia, the focus is on improving comfort, convenience and safety The post Suzuki Jimny Rhino Edition With ADAS \u2013 Launch Price RM 174k (Rs 40.8 Lakh) appeared first on RushLane .",
+          "url": "https://www.rushlane.com/suzuki-jimmy-rhino-edition-with-adas-launch-price-rm-174k-rs-40-8-lakh-12548357.html",
+          "source": "RushLane",
+          "published_at": "2026-06-06T03:30:38+00:00",
+          "published_display": "06 Jun 2026",
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/suzuki-jimny-rhino-plus-allgrip-plus-launched-in-malaysia-12.jpg"
+        },
         {
           "title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push",
           "summary": "Describing it as the country's first flex-fuel passenger vehicle, company\u2019s MD and CEO, Hisashi Takeuchi, said flex-fuel technology could support India's goals of reducing oil imports and carbon emissions.",
@@ -120175,20 +120203,20 @@
           "company": "Maruti Suzuki",
           "tone": "pv",
           "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-06-04T10:43:23+00:00",
-          "latest_title": "Maruti Suzuki launches flex-fuel WagonR to support India\u2019s ethanol push"
+          "count": 3,
+          "latest_published_at": "2026-06-07T05:22:37+00:00",
+          "latest_title": "2026 Suzuki Fronx Sport Edition Launch Price RM 131k (Rs 30.71 L) \u2013 New Features"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-06-04"
+        "latest_release_date": "2026-06-07"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-06-06",
+    "as_of_date": "2026-06-07",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -130731,7 +130759,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-06-06",
+    "as_of_date": "2026-06-07",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -242232,7 +242260,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-06-06",
+    "as_of_date": "2026-06-07",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -243398,7 +243426,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-06T16:06:27.416321+00:00",
+    "generated_at": "2026-06-07T07:07:06.146242+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 20,
@@ -243689,6 +243717,22 @@
             ]
           },
           {
+            "title": "2026 Suzuki Fronx Sport Edition Launch Price RM 131k (Rs 30.71 L) \u2013 New Features",
+            "url": "https://www.rushlane.com/2026-suzuki-fronx-sport-edition-launch-price-rm-131k-rs-30-71-l-12548440.html",
+            "summary": "While Suzuki Fronx Sport has a striking presence, it has the same hybrid powertrain and largely the same specs as the base variant The post 2026 Suzuki Fronx Sport Edition Launch Price RM 131k (Rs 30.71 L) \u2013 New Features appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-07T05:22:37+00:00",
+            "published_display": "07 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Napino Auto and Electronics Appoints Vikrant Sharma as Dual Chief Business and Strategy Head",
             "url": "https://www.autocarpro.in/NEWS/napino-auto-and-electronics-appoints-vikrant-sharma-as-dual-chief-business-and-strategy-head-132958",
             "summary": "Napino Auto and Electronics Limited has appointed Vikrant Sharma as its new Chief Business Officer and Group Chief Strategy Officer. The executive transitions to the manufacturing enterprise to lead dual corporate mandates focused on scaling long-term industrial operations and steering next-generation commercial frameworks.",
@@ -243719,23 +243763,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "LOHUM Secures Rights to Upgrades and Restart Hindustan Copper's Gujarat Plant",
-            "url": "https://www.autocarpro.in/NEWS/lohum-secures-rights-to-upgrades-and-restart-hindustan-coppers-gujarat-plant-132931",
-            "summary": "Hindustan Copper Limited has awarded critical minerals producer LOHUM the operational rights to restart, upgrade, and maintain its defunct copper refining project in Jhagadia, Gujarat. The public-private partnership will function under a 20-year revenue-sharing contract, which includes an option for a five-year extension.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-04T18:18:39+00:00",
-            "published_display": "04 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           }
@@ -243782,7 +243809,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 45,
+      "unmapped_articles": 46,
       "filtered_low_signal": 2,
       "kept_articles": 68
     }
@@ -243834,7 +243861,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-06-06",
+    "as_of_date": "2026-06-07",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
