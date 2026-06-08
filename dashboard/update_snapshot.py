@@ -717,7 +717,12 @@ def extract_pdf_pages(pdf_bytes: bytes) -> list[str]:
     from pypdf import PdfReader
 
     reader = PdfReader(BytesIO(pdf_bytes))
-    return [(page.extract_text() or "") for page in reader.pages]
+    # Normalize typographic apostrophes (U+2019 ’ / U+2018 ‘) to a straight
+    # ASCII '. FADA renders month-tag headings like "All India Vehicle Retail
+    # Data for May’26" with a curly apostrophe, but the table/fuel-mix markers
+    # below search for a straight one ("May'26"), so an un-normalized heading
+    # makes str.find() miss and the whole monthly parse aborts.
+    return [(page.extract_text() or "").replace("’", "'").replace("‘", "'") for page in reader.pages]
 
 
 _MONTH_NAME_ALT = (
