@@ -863,6 +863,28 @@ def parse_fada_oem_annexure_tables(pages: list[str], current: dict, month_id: st
     return result
 
 
+def _parse_fada_optional(parse, fallback, label: str, month_id: str):
+    """Run a secondary FADA sub-table parser, returning ``(value, ok)``.
+
+    FADA revises the fuel-mix / urban-rural / commentary table layouts between
+    releases, and historically any one of those raising discarded the *entire*
+    FADA update — stranding the dashboard on the prior month even though the
+    headline retail table parsed fine. These secondary sections are therefore
+    best-effort: on failure we keep the previously stored value and let the
+    retail month advance. Returns ``ok=False`` so callers can skip month-keyed
+    upserts (avoiding a stale value mislabelled under the new month).
+    """
+    try:
+        return parse(), True
+    except Exception as exc:  # noqa: BLE001 - resilience is the whole point
+        print(
+            f"  FADA {label} parse skipped for {month_label(month_id)} "
+            f"({describe_exception(exc)}); retained prior value.",
+            flush=True,
+        )
+        return fallback, False
+
+
 def update_fada_monthly_snapshot_from_pdf(
     current: dict,
     pages: list[str],
@@ -870,47 +892,77 @@ def update_fada_monthly_snapshot_from_pdf(
     release_date: str,
     source_url: str,
 ) -> dict:
-    monthly_pages = compact_pdf_pages(pages[5:10])
-    prose_pages = compact_pdf_pages(pages[:6])
-    fuel_pages = compact_pdf_pages(pages[6:8])
-    urban_rural_pages = compact_pdf_pages(pages[8:10])
+    # The retail table and each sub-table can sit on different pages across
+    # releases (FY/CY-closing PDFs prepend cumulative annexures; ordinary
+    # months don't), and every parser anchors on its own text marker, so parse
+    # against the whole compacted document instead of fixed page windows. A
+    # hard-coded slice silently missed the table whenever the layout moved —
+    # which is exactly what stranded the dashboard on the prior month.
+    whole_pages = compact_pdf_pages(pages)
 
-    monthly_record = parse_fada_monthly_record(monthly_pages, month_id, release_date, source_url)
-    monthly_fuel_mix = parse_fada_monthly_fuel_mix(fuel_pages, month_id)
-    urban_rural_growth = parse_fada_urban_rural_growth(urban_rural_pages)
-    coverage_note = parse_fada_coverage_note(urban_rural_pages)
-    latest_commentary = parse_fada_latest_commentary(prose_pages, month_id)
+    # Headline retail table is mandatory: without it we cannot honestly claim
+    # to have advanced the month, so let a failure here propagate (the caller
+    # retains the prior validated snapshot).
+    monthly_record = parse_fada_monthly_record(whole_pages, month_id, release_date, source_url)
 
+    # Secondary sections are best-effort (see _parse_fada_optional).
+    monthly_fuel_mix, fuel_ok = _parse_fada_optional(
+        lambda: parse_fada_monthly_fuel_mix(whole_pages, month_id),
+        current.get("latest_fuel_mix"), "fuel-mix", month_id,
+    )
+    urban_rural_growth, _ = _parse_fada_optional(
+        lambda: parse_fada_urban_rural_growth(whole_pages),
+        current.get("latest_urban_rural_growth"), "urban/rural growth", month_id,
+    )
+    coverage_note, _ = _parse_fada_optional(
+        lambda: parse_fada_coverage_note(whole_pages),
+        current.get("coverage_note"), "coverage note", month_id,
+    )
+    latest_commentary, commentary_ok = _parse_fada_optional(
+        lambda: parse_fada_latest_commentary(whole_pages, month_id),
+        None, "commentary", month_id,
+    )
+    latest_subsegments, _ = _parse_fada_optional(
+        lambda: build_fada_latest_subsegments(whole_pages),
+        current.get("latest_subsegments"), "subsegments", month_id,
+    )
+
+    # refreshed starts as a copy of current, so any field we don't touch below
+    # (e.g. when a secondary parse failed) transparently retains its prior value.
     refreshed = dict(current)
     refreshed["source_url"] = source_url
     refreshed["latest_month"] = month_id
     refreshed["latest_release_date"] = release_date
     refreshed["coverage_note"] = coverage_note
     refreshed["monthly_series"] = upsert_fada_monthly_record(current.get("monthly_series") or [], monthly_record)
-    refreshed["inventory_days_pv"] = upsert_month_keyed_record(
-        current.get("inventory_days_pv") or [],
-        {"month": month_id, "days_low": latest_commentary["inventory_days"], "days_high": latest_commentary["inventory_days"]},
-    )
-    refreshed["dealer_growth_expectation"] = upsert_month_keyed_record(
-        current.get("dealer_growth_expectation") or [],
-        {
-            "month": month_id,
-            "next_month_growth_pct": latest_commentary["growth_expectation_next_month_pct"],
-            "next_three_months_growth_pct": latest_commentary["growth_expectation_next_three_months_pct"],
-        },
-    )
-    refreshed["latest_commentary"] = {
-        "inventory_days_pv": str(latest_commentary["inventory_days"]),
-        "growth_expectation_next_month_pct": latest_commentary["growth_expectation_next_month_pct"],
-        "growth_expectation_next_three_months_pct": latest_commentary["growth_expectation_next_three_months_pct"],
-        "liquidity_good_pct": latest_commentary["liquidity_good_pct"],
-        "sentiment_good_pct": latest_commentary["sentiment_good_pct"],
-        "bullets": build_fada_bullets(month_id, monthly_record, latest_commentary["inventory_days"]),
-    }
+
+    if commentary_ok and latest_commentary:
+        refreshed["inventory_days_pv"] = upsert_month_keyed_record(
+            current.get("inventory_days_pv") or [],
+            {"month": month_id, "days_low": latest_commentary["inventory_days"], "days_high": latest_commentary["inventory_days"]},
+        )
+        refreshed["dealer_growth_expectation"] = upsert_month_keyed_record(
+            current.get("dealer_growth_expectation") or [],
+            {
+                "month": month_id,
+                "next_month_growth_pct": latest_commentary["growth_expectation_next_month_pct"],
+                "next_three_months_growth_pct": latest_commentary["growth_expectation_next_three_months_pct"],
+            },
+        )
+        refreshed["latest_commentary"] = {
+            "inventory_days_pv": str(latest_commentary["inventory_days"]),
+            "growth_expectation_next_month_pct": latest_commentary["growth_expectation_next_month_pct"],
+            "growth_expectation_next_three_months_pct": latest_commentary["growth_expectation_next_three_months_pct"],
+            "liquidity_good_pct": latest_commentary["liquidity_good_pct"],
+            "sentiment_good_pct": latest_commentary["sentiment_good_pct"],
+            "bullets": build_fada_bullets(month_id, monthly_record, latest_commentary["inventory_days"]),
+        }
+
     refreshed["latest_urban_rural_growth"] = urban_rural_growth
-    refreshed["latest_subsegments"] = build_fada_latest_subsegments(monthly_pages)
+    refreshed["latest_subsegments"] = latest_subsegments
     refreshed["latest_fuel_mix"] = monthly_fuel_mix
-    refreshed["ev_share_series"] = upsert_fada_ev_share_series(current.get("ev_share_series") or [], month_id, monthly_fuel_mix)
+    if fuel_ok and monthly_fuel_mix:
+        refreshed["ev_share_series"] = upsert_fada_ev_share_series(current.get("ev_share_series") or [], month_id, monthly_fuel_mix)
     return refreshed
 
 
