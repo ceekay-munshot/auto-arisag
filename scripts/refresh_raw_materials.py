@@ -135,43 +135,21 @@ def _download_pink_sheet() -> bytes | None:
     return resp.content
 
 
-def _read_pink_sheet() -> dict[str, list[dict]] | None:
-    """Returns {material_id: [{period, label, value}, ...]} from the World Bank
-    Pink Sheet. Prefers a freshly downloaded workbook so the series self-updates
-    each month; falls back to the committed PINK_SHEET_PATH when the download is
-    unavailable. Returns None if neither source / openpyxl is available, or the
-    workbook structure isn't what we expect."""
+def _buckets_from_bytes(blob: bytes, tag: str):
+    """Parse one Pink Sheet workbook (bytes) into
+    {material_id: [{period, label, value}, ...]}, or None on failure."""
     try:
         from openpyxl import load_workbook  # noqa: WPS433
     except ImportError:
         print("  openpyxl not installed; can't read Pink Sheet Excel.", flush=True)
         return None
-
-    blob = _download_pink_sheet()
-    source = "World Bank download"
-    if blob is None:
-        if not PINK_SHEET_PATH.exists():
-            return None
-        blob = PINK_SHEET_PATH.read_bytes()
-        source = "local committed copy"
-
     try:
         wb = load_workbook(io.BytesIO(blob), data_only=True, read_only=True)
     except Exception as exc:
-        print(f"  Pink Sheet xlsx read failed ({source}): {exc}", flush=True)
-        # A corrupt download shouldn't lose us the local fallback.
-        if source != "local committed copy" and PINK_SHEET_PATH.exists():
-            try:
-                wb = load_workbook(io.BytesIO(PINK_SHEET_PATH.read_bytes()), data_only=True, read_only=True)
-                source = "local committed copy"
-            except Exception as exc2:
-                print(f"  Local Pink Sheet read also failed: {exc2}", flush=True)
-                return None
-        else:
-            return None
-    print(f"  Pink Sheet source: {source}.", flush=True)
+        print(f"  Pink Sheet xlsx read failed ({tag}): {exc}", flush=True)
+        return None
     if "Monthly Prices" not in wb.sheetnames:
-        print(f"  Pink Sheet missing 'Monthly Prices' tab (got: {wb.sheetnames})", flush=True)
+        print(f"  Pink Sheet ({tag}) missing 'Monthly Prices' tab (got: {wb.sheetnames})", flush=True)
         return None
     ws = wb["Monthly Prices"]
 
@@ -197,6 +175,42 @@ def _read_pink_sheet() -> dict[str, list[dict]] | None:
                     "value": round(float(v), 4),
                 })
     return buckets if any(buckets.values()) else None
+
+
+def _buckets_latest(buckets: dict[str, list[dict]]) -> str:
+    periods = [series[-1]["period"] for series in buckets.values() if series]
+    return max(periods) if periods else ""
+
+
+def _read_pink_sheet() -> dict[str, list[dict]] | None:
+    """Returns {material_id: [{period, label, value}, ...]} from the World Bank
+    Pink Sheet, choosing whichever of the freshly downloaded workbook and the
+    committed local copy reaches the *later* month.
+
+    The download self-updates the series each month, but some World Bank
+    document URLs serve a frozen historical snapshot — so blindly trusting the
+    download once dragged the series backwards (to Dec 2024). Comparing the two
+    and keeping the more recent one means the download can only ever move the
+    data forward, never regress it."""
+    candidates: list[tuple[str, dict[str, list[dict]]]] = []
+
+    blob = _download_pink_sheet()
+    if blob is not None:
+        parsed = _buckets_from_bytes(blob, "World Bank download")
+        if parsed:
+            candidates.append(("World Bank download", parsed))
+    if PINK_SHEET_PATH.exists():
+        parsed = _buckets_from_bytes(PINK_SHEET_PATH.read_bytes(), "local committed copy")
+        if parsed:
+            candidates.append(("local committed copy", parsed))
+
+    if not candidates:
+        return None
+    # Keep the source that reaches the latest month; on a tie prefer the
+    # download (listed first), since it's the fresher fetch.
+    best_tag, best = max(candidates, key=lambda item: _buckets_latest(item[1]))
+    print(f"  Pink Sheet source: {best_tag} (latest {_buckets_latest(best)}).", flush=True)
+    return best
 
 
 # ─────────────────────────────── FRED fallback ────────────────────────────────
