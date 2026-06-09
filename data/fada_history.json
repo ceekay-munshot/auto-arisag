@@ -1194,6 +1194,46 @@
       "urban_yoy_pct": 12.12,
       "rural_mom_pct": -8.11,
       "rural_yoy_pct": 25.88
+    },
+    {
+      "month": "2026-05",
+      "category": "2W",
+      "urban_mom_pct": -6.75,
+      "urban_yoy_pct": 11.75,
+      "rural_mom_pct": -7.5,
+      "rural_yoy_pct": 4.74
+    },
+    {
+      "month": "2026-05",
+      "category": "CV",
+      "urban_mom_pct": -19.15,
+      "urban_yoy_pct": 2.62,
+      "rural_mom_pct": -17.5,
+      "rural_yoy_pct": 8.1
+    },
+    {
+      "month": "2026-05",
+      "category": "PV",
+      "urban_mom_pct": -6.39,
+      "urban_yoy_pct": 18.8,
+      "rural_mom_pct": -5.67,
+      "rural_yoy_pct": 30.35
+    },
+    {
+      "month": "2026-05",
+      "category": "TOTAL",
+      "urban_mom_pct": -6.97,
+      "urban_yoy_pct": 11.95,
+      "rural_mom_pct": -6.58,
+      "rural_yoy_pct": 7.74
+    },
+    {
+      "month": "2026-05",
+      "category": "TRACTOR",
+      "urban_mom_pct": 0.52,
+      "urban_yoy_pct": 7.55,
+      "rural_mom_pct": 7.19,
+      "rural_yoy_pct": 11.97
     }
   ],
   "subsegment_series": {
@@ -3017,6 +3057,34 @@
         "units": 43,
         "mom_pct": -23.21,
         "yoy_pct": -33.85
+      },
+      {
+        "month": "2026-05",
+        "label": "HCV",
+        "units": 25797,
+        "mom_pct": -26.48,
+        "yoy_pct": 1.13
+      },
+      {
+        "month": "2026-05",
+        "label": "LCV",
+        "units": 50348,
+        "mom_pct": -13.28,
+        "yoy_pct": 7.66
+      },
+      {
+        "month": "2026-05",
+        "label": "MCV",
+        "units": 7630,
+        "mom_pct": -19.28,
+        "yoy_pct": 4.71
+      },
+      {
+        "month": "2026-05",
+        "label": "Others",
+        "units": 48,
+        "mom_pct": 9.09,
+        "yoy_pct": -5.88
       }
     ],
     "3W": [
@@ -4209,6 +4277,41 @@
         "units": 28154,
         "mom_pct": -2.74,
         "yoy_pct": -28.73
+      },
+      {
+        "month": "2026-05",
+        "label": "3W goods",
+        "units": 13482,
+        "mom_pct": -1.98,
+        "yoy_pct": 25.23
+      },
+      {
+        "month": "2026-05",
+        "label": "3W passenger",
+        "units": 60643,
+        "mom_pct": 0.48,
+        "yoy_pct": 25.8
+      },
+      {
+        "month": "2026-05",
+        "label": "3W personal",
+        "units": 102,
+        "mom_pct": -8.93,
+        "yoy_pct": -25.0
+      },
+      {
+        "month": "2026-05",
+        "label": "E-rickshaw goods",
+        "units": 7487,
+        "mom_pct": -3.38,
+        "yoy_pct": -5.95
+      },
+      {
+        "month": "2026-05",
+        "label": "E-rickshaw passenger",
+        "units": 29812,
+        "mom_pct": 5.95,
+        "yoy_pct": -26.61
       }
     ]
   },
@@ -4298,6 +4401,7 @@
     "2025-08": "168be66c36b877FADA releases August 2025 Vehicle Retail Data.pdf",
     "2025-09": "168e48945da69dFADA releases September 2025 and Navratri Vehicle Retail Data.pdf",
     "2026-04": "169f9644078df6FADA Releases April 2026 Vehicle Retail Data.pdf",
-    "2023-01": "163e073fa5b2d1FADA Releases January23 Vehicle Retail Data.pdf"
+    "2023-01": "163e073fa5b2d1FADA Releases January23 Vehicle Retail Data.pdf",
+    "2026-05": "https://www.fada.in/images/press-release/16a26372eac5e2FADA%20Releases%20May%202026%20Vehicle%20Retail%20Data.pdf"
   }
 }
