@@ -296,6 +296,44 @@
         "Diesel": 99.99,
         "Petrol / Ethanol": 0.0
       }
+    },
+    "2026-05": {
+      "2W": {
+        "Petrol / Ethanol": 90.68,
+        "EV": 9.25,
+        "CNG / LPG": 0.07
+      },
+      "3W": {
+        "EV": 64.45,
+        "CNG / LPG": 22.08,
+        "Diesel": 13.04,
+        "Petrol / Ethanol": 0.43
+      },
+      "CV": {
+        "Diesel": 81.12,
+        "CNG / LPG": 12.39,
+        "Petrol / Ethanol": 3.58,
+        "EV": 2.86,
+        "Hybrid": 0.05
+      },
+      "CE": {
+        "Diesel": 100.0,
+        "CNG / LPG": 0.0,
+        "Petrol / Ethanol": 0.0,
+        "EV": 0.0
+      },
+      "PV": {
+        "Petrol / Ethanol": 45.76,
+        "Diesel": 16.23,
+        "CNG / LPG": 23.34,
+        "Hybrid": 8.05,
+        "EV": 6.63
+      },
+      "TRACTOR": {
+        "Diesel": 99.99,
+        "Petrol / Ethanol": 0.01,
+        "EV": 0.0
+      }
     }
   },
   "urban_rural_growth_series": [

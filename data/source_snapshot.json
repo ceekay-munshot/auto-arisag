@@ -5,7 +5,7 @@
     "latest_month": "2026-05",
     "latest_release_date": "2026-06-08",
     "source_url": "https://www.fada.in/images/press-release/16a26372eac5e2FADA%20Releases%20May%202026%20Vehicle%20Retail%20Data.pdf",
-    "coverage_note": "Vehicle Retail Data has been collated as on 02.04.26 in collaboration with Ministry of Road Transport & Highways, Government of India and has been gathered from 1,463 out of 1,466 RTOs.",
+    "coverage_note": "Vehicle Retail Data has been collated as on 05.06.26 in collaboration with Ministry of Road Transport & Highways, Government of India and has been gathered from 1,464 out of 1,467 RTOs.",
     "monthly_series": [
       {
         "month": "2018-12",
@@ -4027,6 +4027,11 @@
         "month": "2026-04",
         "days_low": 28,
         "days_high": 30
+      },
+      {
+        "month": "2026-05",
+        "days_low": 32,
+        "days_high": 32
       }
     ],
     "dealer_growth_expectation": [
@@ -4194,18 +4199,23 @@
         "month": "2026-04",
         "next_month_growth_pct": 55.6,
         "next_three_months_growth_pct": 50.9
+      },
+      {
+        "month": "2026-05",
+        "next_month_growth_pct": 50.52,
+        "next_three_months_growth_pct": 59.07
       }
     ],
     "latest_commentary": {
-      "inventory_days_pv": "28",
-      "growth_expectation_next_month_pct": 50.56,
-      "growth_expectation_next_three_months_pct": 49.81,
-      "liquidity_good_pct": 51.3,
-      "sentiment_good_pct": 36.06,
+      "inventory_days_pv": "32",
+      "growth_expectation_next_month_pct": 50.52,
+      "growth_expectation_next_three_months_pct": 59.07,
+      "liquidity_good_pct": 45.6,
+      "sentiment_good_pct": 37.05,
       "bullets": [
-        "Mar 2026 retail closed at 2,692,449 units with +25.28% YoY growth and +11.75% MoM momentum.",
-        "Two-wheelers led volumes at 1,951,006 units (+28.68% YoY), while passenger vehicles hit 440,144 units (+21.48% YoY).",
-        "PV inventory stayed healthy at about 28 days, keeping wholesale-retail alignment much tighter than a year ago.",
+        "May 2026 retail closed at 2,531,067 units with +9.55% YoY growth and -6.75% MoM momentum.",
+        "Two-wheelers led volumes at 1,844,947 units (+7.54% YoY), while passenger vehicles hit 402,591 units (+23.25% YoY).",
+        "PV inventory stayed healthy at about 32 days, keeping wholesale-retail alignment much tighter than a year ago.",
         "Dealer outlook stayed constructive but measured, with positive demand expectations for both the next month and the next three months."
       ]
     },
@@ -4466,44 +4476,64 @@
         "month": "2026-04",
         "category": "PV",
         "ev_share_pct": 5.77
+      },
+      {
+        "month": "2026-05",
+        "category": "2W",
+        "ev_share_pct": 9.25
+      },
+      {
+        "month": "2026-05",
+        "category": "3W",
+        "ev_share_pct": 64.45
+      },
+      {
+        "month": "2026-05",
+        "category": "CV",
+        "ev_share_pct": 2.86
+      },
+      {
+        "month": "2026-05",
+        "category": "PV",
+        "ev_share_pct": 6.63
       }
     ],
     "latest_fuel_mix": {
       "2W": {
-        "Petrol / Ethanol": 92.17,
-        "EV": 7.76,
+        "Petrol / Ethanol": 90.68,
+        "EV": 9.25,
         "CNG / LPG": 0.07
       },
       "3W": {
-        "EV": 60.38,
-        "CNG / LPG": 25.05,
-        "Diesel": 14.16,
-        "Petrol / Ethanol": 0.42
+        "EV": 64.45,
+        "CNG / LPG": 22.08,
+        "Diesel": 13.04,
+        "Petrol / Ethanol": 0.43
       },
       "CV": {
-        "Diesel": 82.34,
-        "CNG / LPG": 12.08,
-        "Petrol / Ethanol": 3.28,
-        "EV": 2.26,
-        "Hybrid": 0.04
+        "Diesel": 81.12,
+        "CNG / LPG": 12.39,
+        "Petrol / Ethanol": 3.58,
+        "EV": 2.86,
+        "Hybrid": 0.05
       },
       "CE": {
         "Diesel": 100.0,
-        "CNG / LPG": 0.3,
+        "CNG / LPG": 0.0,
         "Petrol / Ethanol": 0.0,
         "EV": 0.0
       },
       "PV": {
-        "Petrol / Ethanol": 45.95,
-        "Diesel": 17.39,
-        "CNG / LPG": 22.62,
-        "Hybrid": 8.27,
-        "EV": 5.77
+        "Petrol / Ethanol": 45.76,
+        "Diesel": 16.23,
+        "CNG / LPG": 23.34,
+        "Hybrid": 8.05,
+        "EV": 6.63
       },
       "TRACTOR": {
         "Diesel": 99.99,
-        "Petrol / Ethanol": 0.0,
-        "EV": 0.01
+        "Petrol / Ethanol": 0.01,
+        "EV": 0.0
       }
     },
     "latest_oem_tables": {
