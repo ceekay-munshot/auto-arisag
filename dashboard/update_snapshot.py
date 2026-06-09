@@ -1055,130 +1055,112 @@ def parse_fada_monthly_record(compact_pages: str, month_id: str, release_date: s
     }
 
 
+_FUEL_LABEL_CANONICAL = {
+    "PETROL/ETHANOL": "Petrol / Ethanol",
+    "CNG/LPG": "CNG / LPG",
+    "EV": "EV",
+    "DIESEL": "Diesel",
+    "HYBRID": "Hybrid",
+    "HYDROGEN": "Hydrogen",
+}
+# Side-by-side category pairs as FADA lays them out, left then right.
+_FUEL_MIX_PAIRS = [
+    ("Two-Wheeler", "2W", "Three-Wheeler", "3W"),
+    ("Commercial Vehicle", "CV", "Construction Equipment", "CE"),
+    ("Passenger Vehicle", "PV", "Tractor", "TRACTOR"),
+]
+# A single fuel cell: "<LABEL> <cur>% <prior>% <yoy>%" (label is one token,
+# may contain a slash, e.g. PETROL/ETHANOL or CNG/LPG; or "Total").
+_FUEL_CELL_RE = re.compile(r"([A-Za-z][A-Za-z/]*)\s+(-?[\d.]+)%\s+(-?[\d.]+)%\s+(-?[\d.]+)%")
+
+
+def _split_fuel_mix_columns(chunk: str) -> tuple[list[tuple[str, float]], list[tuple[str, float]]]:
+    """Rebuild the two side-by-side fuel columns from their interleaved text.
+
+    FADA prints a category pair row-major: left row 1, right row 1, left row 2,
+    right row 2, …, and each column ends with a "Total 100% …" row. The old
+    parser hard-coded the exact fuel ordering with one giant regex, so it broke
+    the moment FADA added or dropped a fuel row (which is exactly what the
+    Apr/May 2026 redesign did — a new EV row in Tractor shifted the interleave).
+    Here we just walk the cells, alternating columns and treating each column's
+    Total row as its terminator, which survives rows being added or removed.
+    Returns ``(left, right)`` as lists of ``(canonical_fuel, current_pct)``
+    excluding the Total rows.
+    """
+    cells = [
+        (label, float(cur))
+        for label, cur, _prior, _yoy in _FUEL_CELL_RE.findall(chunk)
+    ]
+    left: list[tuple[str, float]] = []
+    right: list[tuple[str, float]] = []
+    left_done = right_done = False
+    turn_left = True
+    for label, cur in cells:
+        if left_done and right_done:
+            break
+        target_left = turn_left if not (left_done or right_done) else not left_done
+        is_total = label.lower() == "total"
+        if target_left:
+            if not is_total:
+                left.append((label, cur))
+            else:
+                left_done = True
+        else:
+            if not is_total:
+                right.append((label, cur))
+            else:
+                right_done = True
+        turn_left = not turn_left
+    return left, right
+
+
 def parse_fada_monthly_fuel_mix(compact_pages: str, month_id: str) -> dict[str, dict[str, float]]:
     parsed = datetime.strptime(month_id, "%Y-%m")
-    month_name = parsed.strftime("%b")
-    year_suffix = parsed.strftime("%y")
-    # FADA's fuel-mix table prints three columns: current month, prior
-    # month (one back, with year-rollover), and the same month a year ago.
-    # The previous version hardcoded "Feb'<yy>" for the prior column and
-    # "<MMM>'25" for the YoY column, so it only matched the Mar 2026 PDF.
-    # Compute both dynamically so the parser works for every release.
-    prior_dt = parsed - timedelta(days=1)
-    prior_dt = prior_dt.replace(day=1)
-    prior_marker = f"{prior_dt.strftime('%b')}'{prior_dt.strftime('%y')}"
-    yoy_dt = parsed.replace(year=parsed.year - 1)
-    yoy_marker = f"{yoy_dt.strftime('%b')}'{yoy_dt.strftime('%y')}"
-    cur_marker = f"{month_name}'{year_suffix}"
-
-    def header_triplet(category_label: str) -> str:
-        return f"{category_label} {cur_marker} {prior_marker} {yoy_marker}"
+    cur_marker = f"{parsed.strftime('%b')}'{parsed.strftime('%y')}"
 
     marker = f"All India Fuel Wise Vehicle Retail Data for {cur_marker}"
     start_index = compact_pages.find(marker)
     if start_index == -1:
         raise ValueError(f"could not locate FADA fuel-mix table for {month_label(month_id)}")
-    section = compact_pages[start_index:]
-    pct = r"(-?[\d.]+)%"
-    pair_2w_3w_chunk = extract_between(
-        section,
-        f"{header_triplet('Two-Wheeler')} {header_triplet('Three-Wheeler')}",
-        "Media Contact|",
-    )
-    pair_cv_ce_chunk = extract_between(
-        section,
-        f"{header_triplet('Commercial Vehicle')} {header_triplet('Construction Equipment')}",
-        f"{header_triplet('Passenger Vehicle')} {header_triplet('Tractor')}",
-    )
-    pair_pv_tractor_chunk = extract_between(
-        section,
-        f"{header_triplet('Passenger Vehicle')} {header_triplet('Tractor')}",
-        "Source: FADA Research",
-    )
+    end_index = compact_pages.find("Source: FADA Research", start_index)
+    section = compact_pages[start_index:end_index if end_index != -1 else len(compact_pages)]
 
-    pair_2w_3w = re.search(
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"EV\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"EV\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"CNG/LPG\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"CNG/LPG\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"DIESEL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Total\s+100%\s+100%\s+100%\s+"
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Total\s+100%\s+100%\s+100%",
-        pair_2w_3w_chunk,
-        flags=re.IGNORECASE,
-    )
-    pair_cv_ce = re.search(
-        rf"Diesel\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Diesel\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"CNG/LPG\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"CNG/LPG\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"EV\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"EV\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"HYBRID\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Total\s+100%\s+100%\s+100%\s+Total\s+100%\s+100%\s+100%",
-        pair_cv_ce_chunk,
-        flags=re.IGNORECASE,
-    )
-    pair_pv_tractor = re.search(
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Diesel\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Diesel\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"PETROL/ETHANOL\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"CNG/LPG\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Total\s+100%\s+100%\s+100%\s+"
-        rf"HYBRID\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"EV\s+{pct}\s+{pct}\s+{pct}\s+"
-        rf"Total\s+100%\s+100%\s+100%",
-        pair_pv_tractor_chunk,
-        flags=re.IGNORECASE,
-    )
-    if not all([pair_2w_3w, pair_cv_ce, pair_pv_tractor]):
+    # Locate each pair's header so we can carve out its data chunk. The header
+    # is "<Left> <Right>" with each name immediately followed by the cur/prior/
+    # yoy month tags; we only need the category names to anchor, so match the
+    # left name followed (eventually) by the right name.
+    header_positions = []
+    for left_name, left_cat, right_name, right_cat in _FUEL_MIX_PAIRS:
+        hdr = re.search(
+            rf"{re.escape(left_name)}\s+{re.escape(cur_marker)}.*?{re.escape(right_name)}\s+{re.escape(cur_marker)}\s+\S+\s+\S+",
+            section,
+        )
+        if not hdr:
+            raise ValueError(f"could not locate FADA fuel-mix header for {left_cat}/{right_cat}")
+        header_positions.append((hdr.end(), left_cat, right_cat))
+
+    result: dict[str, dict[str, float]] = {}
+    for idx, (chunk_start, left_cat, right_cat) in enumerate(header_positions):
+        chunk_end = header_positions[idx + 1][0] if idx + 1 < len(header_positions) else len(section)
+        # Trim the trailing header text of the next pair out of this chunk.
+        if idx + 1 < len(header_positions):
+            next_left = _FUEL_MIX_PAIRS[idx + 1][0]
+            nxt = section.find(next_left, chunk_start)
+            if nxt != -1:
+                chunk_end = nxt
+        left_cells, right_cells = _split_fuel_mix_columns(section[chunk_start:chunk_end])
+        for cat, cells in ((left_cat, left_cells), (right_cat, right_cells)):
+            mix: dict[str, float] = {}
+            for label, value in cells:
+                canonical = _FUEL_LABEL_CANONICAL.get(label.upper())
+                if canonical:
+                    mix[canonical] = value
+            result[cat] = mix
+
+    expected = {cat for _l, cat, _r, cat2 in _FUEL_MIX_PAIRS for cat in (cat, cat2)}
+    if not expected.issubset(result) or any(not result[cat] for cat in expected):
         raise ValueError(f"could not parse FADA fuel-mix pairs for {month_label(month_id)}")
-
-    two_w_vals = [float(item) for item in pair_2w_3w.groups()]
-    cv_vals = [float(item) for item in pair_cv_ce.groups()]
-    pv_vals = [float(item) for item in pair_pv_tractor.groups()]
-    return {
-        "2W": {
-            "Petrol / Ethanol": two_w_vals[0],
-            "EV": two_w_vals[6],
-            "CNG / LPG": two_w_vals[12],
-        },
-        "3W": {
-            "EV": two_w_vals[3],
-            "CNG / LPG": two_w_vals[9],
-            "Diesel": two_w_vals[15],
-            "Petrol / Ethanol": two_w_vals[18],
-        },
-        "CV": {
-            "Diesel": cv_vals[0],
-            "CNG / LPG": cv_vals[6],
-            "Petrol / Ethanol": cv_vals[12],
-            "EV": cv_vals[18],
-            "Hybrid": cv_vals[24],
-        },
-        "CE": {
-            "Diesel": cv_vals[3],
-            "CNG / LPG": cv_vals[9],
-            "Petrol / Ethanol": cv_vals[15],
-            "EV": cv_vals[21],
-        },
-        "PV": {
-            "Petrol / Ethanol": pv_vals[0],
-            "Diesel": pv_vals[6],
-            "CNG / LPG": pv_vals[12],
-            "Hybrid": pv_vals[15],
-            "EV": pv_vals[18],
-        },
-        "TRACTOR": {
-            "Diesel": pv_vals[3],
-            "Petrol / Ethanol": pv_vals[9],
-        },
-    }
+    return result
 
 
 def extract_between(value: str, start_marker: str, end_marker: str) -> str:
@@ -1292,31 +1274,43 @@ def parse_fada_urban_rural_growth(compact_pages: str) -> list[dict[str, float | 
 
 
 def parse_fada_coverage_note(compact_pages: str) -> str:
-    match = re.search(
-        r"Vehicle Retail Data has been collated as on\s+(.+?)\.\s*3- Commercial",
-        compact_pages,
-        flags=re.IGNORECASE,
+    # The coverage sentence ("…collated as on <date> … gathered from N RTOs.")
+    # is followed by a varying disclaimer tail across releases. Try the precise
+    # historical anchor first (so existing output is unchanged), then fall back
+    # to terminating at the RTO count or the end of the sentence — the Apr 2026
+    # redesign reflowed the surrounding disclaimer and broke the strict form.
+    patterns = (
+        r"Vehicle Retail Data has been collated as on\s+(.+?)\.\s*\d+- Commercial",
+        r"Vehicle Retail Data has been collated as on\s+(.+?\bRTOs?)\b",
+        r"Vehicle Retail Data has been collated as on\s+(.+?)\.\s*\d+-",
+        r"Vehicle Retail Data has been collated as on\s+(.+?)\.\s",
     )
-    if not match:
-        raise ValueError("could not parse FADA coverage note")
-    return f"Vehicle Retail Data has been collated as on {match.group(1).strip()}."
+    for pattern in patterns:
+        match = re.search(pattern, compact_pages, flags=re.IGNORECASE)
+        if match:
+            return f"Vehicle Retail Data has been collated as on {match.group(1).strip().rstrip('.')}."
+    raise ValueError("could not parse FADA coverage note")
 
 
 def parse_fada_latest_commentary(compact_pages: str, month_id: str) -> dict[str, float | int]:
     month_name = datetime.strptime(month_id, "%Y-%m").strftime("%B")
     month_suffix = datetime.strptime(month_id, "%Y-%m").strftime("%y")
 
-    inventory_match = re.search(
-        r"PV inventory (?:normalised|normalized) to ~?(\d+) days",
-        compact_pages,
-        flags=re.IGNORECASE,
-    ) or re.search(
-        r"inventory at approximately (\d+) days",
-        compact_pages,
-        flags=re.IGNORECASE,
+    # FADA's PV-inventory phrasing varies release to release: "normalised to
+    # ~28 days", "inventory at approximately 28 days", and (Apr 2026 redesign)
+    # "PV inventory range stands at 28-30 days". Accept all; for a range, use
+    # the midpoint so the single int contract downstream is preserved.
+    inventory_match = (
+        re.search(r"PV inventory (?:normalised|normalized) to ~?(\d+) days", compact_pages, flags=re.IGNORECASE)
+        or re.search(r"inventory at approximately (\d+) days", compact_pages, flags=re.IGNORECASE)
+        or re.search(r"PV inventory range stands at ~?(\d+)\s*(?:-\s*(\d+))? days", compact_pages, flags=re.IGNORECASE)
+        or re.search(r"PV inventory[^.]{0,40}?\b(\d+)\s*-\s*(\d+)\s*days", compact_pages, flags=re.IGNORECASE)
+        or re.search(r"PV inventory[^.]{0,40}?\bat\s+~?(\d+)\s*days", compact_pages, flags=re.IGNORECASE)
     )
     if not inventory_match:
         raise ValueError("could not parse FADA PV inventory days")
+    inventory_bounds = [int(group) for group in inventory_match.groups() if group]
+    inventory_days = round(sum(inventory_bounds) / len(inventory_bounds))
 
     next_month_match = re.search(
         rf"Expectation from (?:{month_name}|[A-Za-z]+)'?{month_suffix}\s*o\s*Growth\s+([\d.]+)%",
@@ -1330,14 +1324,18 @@ def parse_fada_latest_commentary(compact_pages: str, month_id: str) -> dict[str,
         compact_pages,
         flags=re.IGNORECASE,
     )
-    liquidity_match = re.search(r"Liquidity[:\s|o-]*Good\s+([\d.]+)%", compact_pages, flags=re.IGNORECASE)
-    sentiment_match = re.search(r"Sentiment[:\s|o-]*Good\s+([\d.]+)%", compact_pages, flags=re.IGNORECASE)
+    # The dealer-survey block now reads "Liquidity o Neutral X% o Good Y% o Bad
+    # Z%" (and likewise for Sentiment), so skip any intervening Neutral/Bad
+    # figures to reach the "Good" share rather than requiring it to follow
+    # immediately.
+    liquidity_match = re.search(r"Liquidity\b.{0,120}?Good\s+([\d.]+)%", compact_pages, flags=re.IGNORECASE)
+    sentiment_match = re.search(r"Sentiment\b.{0,120}?Good\s+([\d.]+)%", compact_pages, flags=re.IGNORECASE)
 
     if not all([next_month_match, next_three_match, liquidity_match, sentiment_match]):
         raise ValueError("could not parse FADA dealer survey metrics")
 
     return {
-        "inventory_days": int(inventory_match.group(1)),
+        "inventory_days": inventory_days,
         "growth_expectation_next_month_pct": float(next_month_match.group(1)),
         "growth_expectation_next_three_months_pct": float(next_three_match.group(1)),
         "liquidity_good_pct": float(liquidity_match.group(1)),
