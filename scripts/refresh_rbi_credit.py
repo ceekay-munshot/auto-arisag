@@ -88,6 +88,13 @@ MAX_NEW_ATTEMPTS_PER_RUN = 12
 # RBI rarely publishes back-fills, so 90 days is a generous retry window
 # without burning HEAD-request budget every tick.
 NEGATIVE_CACHE_TTL_DAYS = 90
+# ...but the most recent reference months are a special case: when first
+# probed they may simply not be published yet, and the long TTL above would
+# then hide them for ~3 months after RBI finally posts the Excel. Re-probe
+# the newest months frequently so they're picked up promptly once available;
+# older months stay on the long TTL since they're stable dead-ends.
+RECENT_MONTH_WINDOW = 4
+RECENT_NEGATIVE_CACHE_TTL_DAYS = 10
 TIMEOUT = 60
 # Throttle fetches so RBI's Cloudflare WAF doesn't rate-limit us with
 # 418 ("I'm a teapot" — Cloudflare's polite "you look like a bot" reply).
@@ -203,6 +210,17 @@ def _target_months(today: date | None = None) -> list[str]:
             month += 12
             year -= 1
     return out
+
+
+def _negative_cache_ttl_days(month_id: str, today: date) -> int:
+    """Negative-cache lifetime for a reference month. Short for the most
+    recent months (which may just be awaiting publication) and long for older
+    months (genuine dead-ends not worth re-probing every tick)."""
+    ref = datetime.strptime(month_id, "%Y-%m").date()
+    months_old = (today.year - ref.year) * 12 + (today.month - ref.month)
+    if months_old <= RECENT_MONTH_WINDOW:
+        return RECENT_NEGATIVE_CACHE_TTL_DAYS
+    return NEGATIVE_CACHE_TTL_DAYS
 
 
 def _try_fetch_excel(url: str) -> bytes | None:
@@ -324,8 +342,14 @@ def _save_history(payload: dict) -> None:
 def _is_already_verified(record: dict | None) -> bool:
     if not record:
         return False
-    src = record.get("source_url", "")
-    return src.startswith("https://rbi.org.in/upload/PressReleases/Excel/")
+    # A month counts as already-captured if it carries a usable Vehicle Loans
+    # outstanding figure, regardless of which source URL recorded it. Earlier
+    # months were ingested from the press-release listing and stored a
+    # BS_PressReleaseDisplay.aspx source_url rather than the Excel-attachment
+    # path the current scraper uses; keying off the Excel URL prefix mis-flagged
+    # every one of them as missing, which both re-probed months we already have
+    # and made the script exit non-zero despite holding a full history.
+    return record.get("outstanding_cr") is not None
 
 
 def main() -> int:
@@ -336,7 +360,6 @@ def main() -> int:
     # re-tried when the entry is older than NEGATIVE_CACHE_TTL_DAYS.
     not_found_cache: dict[str, str] = dict(history.get("not_found_months") or {})
     today = date.today()
-    cutoff = today - timedelta(days=NEGATIVE_CACHE_TTL_DAYS)
 
     target_months = _target_months()
     print(
@@ -366,6 +389,7 @@ def main() -> int:
                 last_attempt = datetime.strptime(last_attempt_iso, "%Y-%m-%d").date()
             except ValueError:
                 last_attempt = None
+            cutoff = today - timedelta(days=_negative_cache_ttl_days(month_id, today))
             if last_attempt and last_attempt > cutoff:
                 skipped_negative += 1
                 continue
@@ -451,9 +475,9 @@ def main() -> int:
         flush=True,
     )
     # Exit 0 even when no months are added — most cron runs will find nothing
-    # new because RBI publishes once a month. Exit non-zero only if we never
-    # had any verified data in the file at all (genuine failure state).
-    return 0 if (added + refreshed + skipped) > 0 else 2
+    # new because RBI publishes once a month. Exit non-zero only in the genuine
+    # failure state where we hold no Vehicle Loans history at all.
+    return 0 if (added or refreshed or skipped or history.get("series")) else 2
 
 
 def _last_reporting_friday(month_id: str) -> str:
