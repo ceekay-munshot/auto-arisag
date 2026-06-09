@@ -94,7 +94,15 @@ NEGATIVE_CACHE_TTL_DAYS = 90
 # the newest months frequently so they're picked up promptly once available;
 # older months stay on the long TTL since they're stable dead-ends.
 RECENT_MONTH_WINDOW = 4
-RECENT_NEGATIVE_CACHE_TTL_DAYS = 10
+RECENT_NEGATIVE_CACHE_TTL_DAYS = 21
+# Circuit breaker: RBI's Cloudflare WAF currently answers the GitHub Actions
+# runner IP with HTTP 418 ("bot challenge") on every Excel request. Once we've
+# seen this many 418s in a run, the WAF is clearly blocking us wholesale, so
+# stop probing — continuing just burns minutes of back-off loops and pollutes
+# the negative cache with false "not found" entries for months that are merely
+# unreachable, not unpublished.
+HTTP_418_ABORT_THRESHOLD = 6
+HTTP_418_BACKOFF_SECONDS = 3.0
 TIMEOUT = 60
 # Throttle fetches so RBI's Cloudflare WAF doesn't rate-limit us with
 # 418 ("I'm a teapot" — Cloudflare's polite "you look like a bot" reply).
@@ -130,6 +138,10 @@ HEADERS = {
 # particular) persist across all GETs in one CI run. Without this, every
 # request looks like a brand-new client and gets re-challenged.
 _session: requests.Session | None = None
+
+# Per-run counter of Cloudflare 418 ("bot challenge") responses, used by the
+# circuit breaker in main(). Reset at the start of each run.
+_http_418_count = 0
 
 
 def _get_session() -> requests.Session:
@@ -239,9 +251,13 @@ def _try_fetch_excel(url: str) -> bytes | None:
     if response.status_code == 404:
         return None
     if response.status_code == 418:
-        # Cloudflare bot challenge — back off harder so we don't escalate.
-        print(f"    {url}: HTTP 418 (bot challenge); backing off 3s", flush=True)
-        time.sleep(3.0)
+        # Cloudflare bot challenge — back off harder so we don't escalate, and
+        # count it so the caller's circuit breaker can give up once the WAF is
+        # clearly blocking the whole run.
+        global _http_418_count
+        _http_418_count += 1
+        print(f"    {url}: HTTP 418 (bot challenge); backing off {HTTP_418_BACKOFF_SECONDS:g}s", flush=True)
+        time.sleep(HTTP_418_BACKOFF_SECONDS)
         return None
     if response.status_code != 200:
         print(f"    {url}: HTTP {response.status_code}", flush=True)
@@ -353,6 +369,8 @@ def _is_already_verified(record: dict | None) -> bool:
 
 
 def main() -> int:
+    global _http_418_count
+    _http_418_count = 0
     history = _load_history()
     by_month: dict[str, dict] = {row["month"]: row for row in history.get("series", []) if row.get("month")}
     # Negative cache — months we've already exhaustively searched but found
@@ -417,6 +435,20 @@ def main() -> int:
                 successful_url = url
                 excel_bytes = content
                 break
+            if _http_418_count >= HTTP_418_ABORT_THRESHOLD:
+                break
+
+        # Circuit breaker: if Cloudflare is wholesale-blocking this run with
+        # 418s, stop probing entirely. Crucially, break *before* the not-found
+        # caching below so we don't poison the negative cache for months that
+        # are merely unreachable right now (not genuinely unpublished).
+        if _http_418_count >= HTTP_418_ABORT_THRESHOLD:
+            print(
+                f"  Aborting probes: RBI's Cloudflare WAF returned HTTP 418 "
+                f"{_http_418_count}× this run (bot challenge). Will retry next CI tick.",
+                flush=True,
+            )
+            break
 
         if not excel_bytes or not successful_url:
             not_yet_published += 1
