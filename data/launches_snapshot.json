@@ -1,9 +1,24 @@
 {
   "available": true,
-  "generated_at": "2026-06-09T17:29:14.148328+00:00",
+  "generated_at": "2026-06-10T07:11:36.272092+00:00",
   "window_days": 30,
-  "item_count": 1,
+  "item_count": 2,
   "items": [
+    {
+      "title": "3rd Gen Audi Q7 Debuts – V6, V8 Engines, Up To 600 PS, Clever Lighting",
+      "summary": "3rd Gen Audi Q7 debuts, ditching its sober aesthetics in favour of the brand's new design language and borrow's Q9's interiors The post 3rd Gen Audi Q7 Debuts – V6, V8 Engines, Up To 600 PS, Clever Lighting appeared first on RushLane .",
+      "url": "https://www.rushlane.com/3rd-gen-audi-q7-debuts-v6-v8-engines-up-to-600-ps-clever-lighting-12548667.html",
+      "source": "RushLane",
+      "published_at": "2026-06-10T05:02:06+00:00",
+      "published_display": "10 Jun 2026",
+      "company": "Audi India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/3rd-gen-audi-q7-debuts-16.jpg"
+    },
     {
       "title": "Maruti Suzuki launches flex-fuel WagonR to support India’s ethanol push",
       "summary": "Describing it as the country's first flex-fuel passenger vehicle, company’s MD and CEO, Hisashi Takeuchi, said flex-fuel technology could support India's goals of reducing oil imports and carbon emissions.",
@@ -22,6 +37,14 @@
   ],
   "companies": [
     {
+      "company": "Audi India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-10T05:02:06+00:00",
+      "latest_title": "3rd Gen Audi Q7 Debuts – V6, V8 Engines, Up To 600 PS, Clever Lighting"
+    },
+    {
       "company": "Maruti Suzuki",
       "tone": "pv",
       "scope": "listed",
@@ -32,6 +55,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 3
+    "sources_live": 5
   }
 }
