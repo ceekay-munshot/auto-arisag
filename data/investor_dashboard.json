@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T12:23:24.643633+00:00",
+  "generated_at": "2026-06-10T17:59:37.485250+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,10 +121182,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-10T12:23:01.563465+00:00",
+      "generated_at": "2026-06-10T17:59:12.636588+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 2,
       "items": [
+        {
+          "title": "Mercedes launches mass production of electric motor for high-performance AMG brand",
+          "summary": "Mercedes-Benz has begun series production of a new lightweight axial flux electric motor at its Berlin-Marienfelde plant. This innovative technology, designed to be lighter and more efficient than traditional motors, aims to address the challenges of electrifying high-performance AMG vehicles.",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/mercedes-launches-mass-production-of-electric-motor-for-high-performance-amg-brand/131636609",
+          "source": "ET Auto Components",
+          "published_at": "2026-06-10T13:10:06+00:00",
+          "published_display": "10 Jun 2026",
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "EV",
+            "Luxury"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-79966/131636609.cms"
+        },
         {
           "title": "3rd Gen Audi Q7 Debuts \u2013 V6, V8 Engines, Up To 600 PS, Clever Lighting",
           "summary": "3rd Gen Audi Q7 debuts, ditching its sober aesthetics in favour of the brand's new design language and borrow's Q9's interiors The post 3rd Gen Audi Q7 Debuts \u2013 V6, V8 Engines, Up To 600 PS, Clever Lighting appeared first on RushLane .",
@@ -121203,6 +121219,14 @@
         }
       ],
       "companies": [
+        {
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-06-10T13:10:06+00:00",
+          "latest_title": "Mercedes launches mass production of electric motor for high-performance AMG brand"
+        },
         {
           "company": "Audi India",
           "tone": "pv",
@@ -121336,11 +121360,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.28,
+        "value": 95.25,
         "unit": "\u20b9",
-        "delta_value": -0.4108,
-        "delta_label": "+0.02% in last week (Yahoo Finance)",
-        "delta_tone": "negative",
+        "delta_value": -0.4333,
+        "delta_label": "-0.01% in last week (Yahoo Finance)",
+        "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -131747,7 +131771,7 @@
           },
           {
             "date": "2026-06-10",
-            "close": 95.2775
+            "close": 95.255
           }
         ]
       }
@@ -244402,7 +244426,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-10T12:22:36.700560+00:00",
+    "generated_at": "2026-06-10T17:58:49.092122+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 20,
@@ -244425,6 +244449,37 @@
             "signal_tags": [
               "Capacity / Capex",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Electric PV sales in fast lane in May with 81% growth: FADA",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/electric-pv-sales-in-fast-lane-in-may-with-81-growth-fada/131609613",
+            "summary": "Penetration rises to record 6.6% during the month. Tata Motors retained its leadership position, followed by Mahindra & Mahindra and JSW MG Motor India.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-09T11:31:14+00:00",
+            "published_display": "09 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Honda America recalls more than 880,000 vehicles over rear suspension components failure",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-america-recalls-more-than-880000-vehicles-over-rear-suspension-components-failure/131635880",
+            "summary": "Honda has recalled over 880,000 vehicles in the United States. This recall affects models like the Honda Pilot, Ridgeline, Passport, and Acura MDX. The issue involves rear suspension components, potentially leading to loss of control.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-10T12:41:28+00:00",
+            "published_display": "10 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
             ]
           },
           {
@@ -244455,36 +244510,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Maruti Suzuki to invest \u20b9925 crore by FY31 towards green energy initiatives",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-to-invest-925-crore-by-fy31-towards-green-energy-initiatives/131526390",
-            "summary": "Maruti Suzuki India Ltd will invest \u20b9925 crore by FY 2030-31 in green energy. This includes a new 10 Tonnes Per Day biogas plant at its Kharkhoda facility by FY 2026-27. The company is also expanding its Manesar biogas plant capacity.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-05T08:34:47+00:00",
-            "published_display": "05 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Tata Motors targets 20% PV market share by 2030: Chairman Chandrasekaran",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-targets-20-pv-market-share-by-2030-chairman-chandrasekaran/131508333",
-            "summary": "Addressing the company's dealer business planning meet 2026 in Goa, N Chandrasekaran said the automaker has already committed \u20b935,000 crore in capital expenditure through 2030 and could recalibrate investment plans as market conditions evolve.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-04T13:14:10+00:00",
-            "published_display": "04 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           }
         ]
@@ -244521,7 +244546,7 @@
             "source": "ET Auto Components",
             "published_at": "2026-06-02T12:50:39+00:00",
             "published_display": "02 Jun 2026",
-            "importance_score": 7,
+            "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
               "Components"
@@ -244603,19 +244628,19 @@
             ]
           },
           {
-            "title": "Electric PV sales in fast lane in May with 81% growth: FADA",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/electric-pv-sales-in-fast-lane-in-may-with-81-growth-fada/131609613",
-            "summary": "Penetration rises to record 6.6% during the month. Tata Motors retained its leadership position, followed by Mahindra & Mahindra and JSW MG Motor India.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-09T11:31:14+00:00",
+            "title": "Omega Seiki Mobility Integrates Honda e:Swap Battery Ecosystem With Rage+ Electric Cargo Three-Wheeler",
+            "url": "https://www.autocarpro.in/NEWS/omega-seiki-mobility-integrates-honda-eswap-battery-ecosystem-with-rage-electric-cargo-three-wheeler-133011",
+            "summary": "Omega Seiki Mobility (OSM) has announced the integration of Honda\u2019s e battery-swapping ecosystem with its Rage+ electric cargo three-wheeler, expanding battery-swapping options for commercial electric vehicle operators in India. Under the arrangement, the OSM Rage+ will be compatible with Honda\u2019s battery-swapping infrastructure, allowing users to exchange depleted batteries for fully charged units within minutes i...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-09T17:19:18+00:00",
             "published_display": "09 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Passenger Vehicles",
+              "Commercial Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -244624,6 +244649,24 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "Mercedes launches mass production of electric motor for high-performance AMG brand",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/mercedes-launches-mass-production-of-electric-motor-for-high-performance-amg-brand/131636609",
+            "summary": "Mercedes-Benz has begun series production of a new lightweight axial flux electric motor at its Berlin-Marienfelde plant. This innovative technology, designed to be lighter and more efficient than traditional motors, aims to address the challenges of electrifying high-performance AMG vehicles.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-10T13:10:06+00:00",
+            "published_display": "10 Jun 2026",
+            "importance_score": 11,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Hyundai expects Chennai Plant 1 production to normalise by June 22 after supplier fire disruption",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-targets-june-22-for-normal-production-at-chennai-plant-after-supplier-fire/131625989",
@@ -244689,22 +244732,6 @@
             ],
             "signal_tags": [
               "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Omega Seiki Mobility Integrates Honda e:Swap Battery Ecosystem With Rage+ Electric Cargo Three-Wheeler",
-            "url": "https://www.autocarpro.in/NEWS/omega-seiki-mobility-integrates-honda-eswap-battery-ecosystem-with-rage-electric-cargo-three-wheeler-133011",
-            "summary": "Omega Seiki Mobility (OSM) has announced the integration of Honda\u2019s e battery-swapping ecosystem with its Rage+ electric cargo three-wheeler, expanding battery-swapping options for commercial electric vehicle operators in India. Under the arrangement, the OSM Rage+ will be compatible with Honda\u2019s battery-swapping infrastructure, allowing users to exchange depleted batteries for fully charged units within minutes i...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-09T17:19:18+00:00",
-            "published_display": "09 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -244784,9 +244811,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
-      "filtered_low_signal": 1,
-      "kept_articles": 68
+      "unmapped_articles": 40,
+      "filtered_low_signal": 0,
+      "kept_articles": 69
     }
   },
   "qa": [
