@@ -1,9 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-06-11T08:06:13.297968+00:00",
+  "generated_at": "2026-06-11T12:48:23.060492+00:00",
   "window_days": 30,
-  "item_count": 1,
+  "item_count": 3,
   "items": [
+    {
+      "title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push",
+      "summary": "Changchun is planning a major overhaul of its auto industry by 2030. The city aims to attract electric vehicle manufacturers such as BYD and Xiaomi. This initiative seeks to boost production and sales, with a projected consolidation of automaker groups.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-changchun-unveils-auto-revamp-plan-seeks-byd-and-xiaomi-to-boost-ev-push/131654134",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-06-11T08:45:50+00:00",
+      "published_display": "11 Jun 2026",
+      "company": "BYD India",
+      "tone": "ev",
+      "scope": "tracked",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-298930/131654134.cms"
+    },
+    {
+      "title": "Škoda India announces Kodiaq RS launch; bookings to open on June 22",
+      "summary": "The Kodiaq RS will be the company’s first model in India to combine its RS (Rally Sport) performance badge with a seven-seat SUV format.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/koda-india-announces-kodiaq-rs-launch-bookings-to-open-on-june-22/131653705",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-06-11T08:22:27+00:00",
+      "published_display": "11 Jun 2026",
+      "company": "Skoda Auto India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Passenger Vehicles"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-932291/131653705.cms"
+    },
     {
       "title": "Mercedes launches mass production of electric motor for high-performance AMG brand",
       "summary": "Mercedes-Benz has begun series production of a new lightweight axial flux electric motor at its Berlin-Marienfelde plant. This innovative technology, designed to be lighter and more efficient than traditional motors, aims to address the challenges of electrifying high-performance AMG vehicles.",
@@ -23,6 +53,22 @@
   ],
   "companies": [
     {
+      "company": "BYD India",
+      "tone": "ev",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-11T08:45:50+00:00",
+      "latest_title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push"
+    },
+    {
+      "company": "Skoda Auto India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-11T08:22:27+00:00",
+      "latest_title": "Škoda India announces Kodiaq RS launch; bookings to open on June 22"
+    },
+    {
       "company": "Mercedes-Benz India",
       "tone": "pv",
       "scope": "tracked",
@@ -33,6 +79,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5
+    "sources_live": 3
   }
 }
