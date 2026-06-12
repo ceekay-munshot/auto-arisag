@@ -1,9 +1,24 @@
 {
   "available": true,
-  "generated_at": "2026-06-12T12:21:46.125789+00:00",
+  "generated_at": "2026-06-12T17:39:22.550526+00:00",
   "window_days": 30,
-  "item_count": 3,
+  "item_count": 4,
   "items": [
+    {
+      "title": "Honda Launches 4 New Big Bikes In India – Price Rs 10.49 L to Rs 44.3 L",
+      "summary": "4 new Honda big bikes launched including CBR1000RR-R Fireblade SP, Gold Wing and then E-Clutch versions of CB750 Hornet and XL750 Transalp The post Honda Launches 4 New Big Bikes In India – Price Rs 10.49 L to Rs 44.3 L appeared first on RushLane .",
+      "url": "https://www.rushlane.com/honda-launches-4-new-big-bikes-in-india-price-rs-10-49-l-to-rs-44-3-l-12548871.html",
+      "source": "RushLane",
+      "published_at": "2026-06-12T09:30:48+00:00",
+      "published_display": "12 Jun 2026",
+      "company": "Honda Cars India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Two-Wheelers"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/4-new-honda-big-bikes-launched-in-india.jpg"
+    },
     {
       "title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push",
       "summary": "Changchun is planning a major overhaul of its auto industry by 2030. The city aims to attract electric vehicle manufacturers such as BYD and Xiaomi. This initiative seeks to boost production and sales, with a projected consolidation of automaker groups.",
@@ -53,6 +68,14 @@
   ],
   "companies": [
     {
+      "company": "Honda Cars India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-12T09:30:48+00:00",
+      "latest_title": "Honda Launches 4 New Big Bikes In India – Price Rs 10.49 L to Rs 44.3 L"
+    },
+    {
       "company": "BYD India",
       "tone": "ev",
       "scope": "tracked",
@@ -79,6 +102,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 3
+    "sources_live": 5
   }
 }
