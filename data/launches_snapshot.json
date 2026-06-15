@@ -1,9 +1,50 @@
 {
   "available": true,
-  "generated_at": "2026-06-14T16:23:51.311466+00:00",
+  "generated_at": "2026-06-15T09:24:47.578001+00:00",
   "window_days": 30,
-  "item_count": 3,
+  "item_count": 6,
   "items": [
+    {
+      "title": "Maruti Launches Service Package With Up To 10-Year Coverage",
+      "summary": "Maruti Suzuki Smart Maintenance Plan (SMP) have been launched, which are flexible and offered with both private and commercial owners The post Maruti Launches Service Package With Up To 10-Year Coverage appeared first on RushLane .",
+      "url": "https://www.rushlane.com/maruti-launches-service-package-with-up-to-10-year-coverage-12549037.html",
+      "source": "RushLane",
+      "published_at": "2026-06-15T07:58:09+00:00",
+      "published_display": "15 Jun 2026",
+      "company": "Maruti Suzuki",
+      "tone": "pv",
+      "scope": "listed",
+      "segment_tags": [],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2024/12/car-retail-sales-nov-2024-cover-dzire.jpg"
+    },
+    {
+      "title": "Maruti Suzuki launches prepaid Smart Maintenance Plan for existing vehicle owners",
+      "summary": "The plan lets customers prepay maintenance expenses, offering protection against future service cost inflation while providing flexible tenure and mileage options across passenger and commercial vehicles.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-launches-prepaid-smart-maintenance-plan-for-existing-vehicle-owners/131737378",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-06-15T07:42:42+00:00",
+      "published_display": "15 Jun 2026",
+      "company": "Maruti Suzuki",
+      "tone": "pv",
+      "scope": "listed",
+      "segment_tags": [
+        "Commercial Vehicles"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-586546/131737378.cms"
+    },
+    {
+      "title": "New Gen Toyota Hilux India Debut Soon",
+      "summary": "New Toyota Hilux India debut is expected to happen very soon and will bring a major transformation to its interiors and exteriors The post New Gen Toyota Hilux India Debut Soon appeared first on RushLane .",
+      "url": "https://www.rushlane.com/new-gen-toyota-hilux-india-debut-soon-12549014.html",
+      "source": "RushLane",
+      "published_at": "2026-06-15T03:33:03+00:00",
+      "published_display": "15 Jun 2026",
+      "company": "Toyota Kirloskar",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/new-toyota-hilux-accessories-revealed-in-japan-33.jpg"
+    },
     {
       "title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push",
       "summary": "Changchun is planning a major overhaul of its auto industry by 2030. The city aims to attract electric vehicle manufacturers such as BYD and Xiaomi. This initiative seeks to boost production and sales, with a projected consolidation of automaker groups.",
@@ -53,6 +94,22 @@
   ],
   "companies": [
     {
+      "company": "Maruti Suzuki",
+      "tone": "pv",
+      "scope": "listed",
+      "count": 2,
+      "latest_published_at": "2026-06-15T07:58:09+00:00",
+      "latest_title": "Maruti Launches Service Package With Up To 10-Year Coverage"
+    },
+    {
+      "company": "Toyota Kirloskar",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-15T03:33:03+00:00",
+      "latest_title": "New Gen Toyota Hilux India Debut Soon"
+    },
+    {
       "company": "BYD India",
       "tone": "ev",
       "scope": "tracked",
@@ -79,6 +136,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 3
+    "sources_live": 5
   }
 }
