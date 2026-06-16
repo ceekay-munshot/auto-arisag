@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T08:48:20.787041+00:00",
+  "generated_at": "2026-06-16T13:29:54.469633+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121412,10 +121412,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.57,
+        "value": 94.55,
         "unit": "\u20b9",
-        "delta_value": -0.5428,
-        "delta_label": "-1.17% in last week (Yahoo Finance)",
+        "delta_value": -0.5603,
+        "delta_label": "-1.19% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131823,7 +131823,7 @@
           },
           {
             "date": "2026-06-16",
-            "close": 94.5675
+            "close": 94.55
           }
         ]
       }
@@ -131838,10 +131838,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13722.0,
-        "change_1d_pct": -0.6,
-        "change_1w_pct": 4.59,
-        "change_1m_pct": 5.42,
+        "price": 13691.0,
+        "change_1d_pct": -0.83,
+        "change_1w_pct": 4.35,
+        "change_1m_pct": 5.19,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13722.0,
@@ -131873,7 +131873,7 @@
           13098.0,
           13366.0,
           13805.0,
-          13722.0
+          13691.0
         ],
         "daily_closes": [
           {
@@ -141758,16 +141758,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 13722.0
+            "close": 13691.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3151.2,
-        "change_1d_pct": 0.54,
-        "change_1w_pct": 5.39,
-        "change_1m_pct": 2.19,
+        "price": 3137.9,
+        "change_1d_pct": 0.11,
+        "change_1w_pct": 4.94,
+        "change_1m_pct": 1.76,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3300.8,
@@ -141799,7 +141799,7 @@
           3000.9,
           3042.9,
           3134.3,
-          3151.2
+          3137.9
         ],
         "daily_closes": [
           {
@@ -151684,16 +151684,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 3151.2
+            "close": 3137.9
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5033.4,
-        "change_1d_pct": 0.19,
-        "change_1w_pct": 3.67,
-        "change_1m_pct": 1.54,
+        "price": 5031.0,
+        "change_1d_pct": 0.14,
+        "change_1w_pct": 3.62,
+        "change_1m_pct": 1.49,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5170.0,
@@ -151725,7 +151725,7 @@
           4836.2,
           4962.6,
           5024.0,
-          5033.4
+          5031.0
         ],
         "daily_closes": [
           {
@@ -161610,16 +161610,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 5033.4
+            "close": 5031.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3450.5,
-        "change_1d_pct": -0.26,
-        "change_1w_pct": 2.75,
-        "change_1m_pct": 4.85,
+        "price": 3435.5,
+        "change_1d_pct": -0.69,
+        "change_1w_pct": 2.31,
+        "change_1m_pct": 4.39,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3617.9,
@@ -161651,7 +161651,7 @@
           3287.4,
           3312.8,
           3459.5,
-          3450.5
+          3435.5
         ],
         "daily_closes": [
           {
@@ -171536,16 +171536,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 3450.5
+            "close": 3435.5
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 9954.0,
-        "change_1d_pct": 0.11,
-        "change_1w_pct": -2.26,
-        "change_1m_pct": -2.4,
+        "price": 9939.0,
+        "change_1d_pct": -0.04,
+        "change_1w_pct": -2.41,
+        "change_1m_pct": -2.54,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10319.0,
@@ -171577,7 +171577,7 @@
           10114.0,
           10063.0,
           9943.0,
-          9954.0
+          9939.0
         ],
         "daily_closes": [
           {
@@ -181462,16 +181462,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 9954.0
+            "close": 9939.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1990.0,
-        "change_1d_pct": -1.98,
-        "change_1w_pct": 4.81,
-        "change_1m_pct": 11.68,
+        "price": 1974.7,
+        "change_1d_pct": -2.73,
+        "change_1w_pct": 4.01,
+        "change_1m_pct": 10.82,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1839.9,
@@ -181503,7 +181503,7 @@
           1940.1,
           1990.1,
           2030.1,
-          1990.0
+          1974.7
         ],
         "daily_closes": [
           {
@@ -183144,16 +183144,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 1990.0
+            "close": 1974.7
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7587.5,
-        "change_1d_pct": -0.49,
-        "change_1w_pct": 5.34,
-        "change_1m_pct": 9.76,
+        "price": 7560.5,
+        "change_1d_pct": -0.84,
+        "change_1w_pct": 4.96,
+        "change_1m_pct": 9.37,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7310.5,
@@ -183185,7 +183185,7 @@
           7179.5,
           7312.0,
           7624.5,
-          7587.5
+          7560.5
         ],
         "daily_closes": [
           {
@@ -193070,16 +193070,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 7587.5
+            "close": 7560.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 394.1,
-        "change_1d_pct": -0.58,
-        "change_1w_pct": 1.62,
-        "change_1m_pct": 11.6,
+        "price": 393.6,
+        "change_1d_pct": -0.71,
+        "change_1w_pct": 1.5,
+        "change_1m_pct": 11.45,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193112,7 +193112,7 @@
           375.9,
           390.0,
           396.4,
-          394.1
+          393.6
         ],
         "daily_closes": [
           {
@@ -202997,16 +202997,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 394.1
+            "close": 393.6
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 403.75,
-        "change_1d_pct": -0.7,
-        "change_1w_pct": 11.13,
-        "change_1m_pct": 6.31,
+        "price": 406.7,
+        "change_1d_pct": 0.02,
+        "change_1w_pct": 11.95,
+        "change_1m_pct": 7.08,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203039,7 +203039,7 @@
           358.35,
           390.3,
           406.6,
-          403.75
+          406.7
         ],
         "daily_closes": [
           {
@@ -203632,16 +203632,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 403.75
+            "close": 406.7
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 159.29,
-        "change_1d_pct": 1.01,
-        "change_1w_pct": 10.77,
-        "change_1m_pct": 5.39,
+        "price": 158.5,
+        "change_1d_pct": 0.51,
+        "change_1w_pct": 10.22,
+        "change_1m_pct": 4.87,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           167.8,
@@ -203673,7 +203673,7 @@
           138.58,
           152.45,
           157.7,
-          159.29
+          158.5
         ],
         "daily_closes": [
           {
@@ -213558,16 +213558,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 159.29
+            "close": 158.5
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2838.6,
-        "change_1d_pct": 1.34,
-        "change_1w_pct": 1.75,
-        "change_1m_pct": -4.46,
+        "price": 2830.0,
+        "change_1d_pct": 1.03,
+        "change_1w_pct": 1.44,
+        "change_1m_pct": -4.75,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3317.1,
@@ -213599,7 +213599,7 @@
           2724.7,
           2761.4,
           2801.1,
-          2838.6
+          2830.0
         ],
         "daily_closes": [
           {
@@ -223484,16 +223484,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 2838.6
+            "close": 2830.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 931.9,
-        "change_1d_pct": 0.32,
-        "change_1w_pct": 4.22,
-        "change_1m_pct": 5.8,
+        "price": 930.5,
+        "change_1d_pct": 0.17,
+        "change_1w_pct": 4.07,
+        "change_1m_pct": 5.64,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           887.55,
@@ -223525,7 +223525,7 @@
           891.95,
           931.05,
           928.95,
-          931.9
+          930.5
         ],
         "daily_closes": [
           {
@@ -233410,16 +233410,16 @@
           },
           {
             "date": "2026-06-16",
-            "close": 931.9
+            "close": 930.5
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 461.95,
-        "change_1d_pct": -0.68,
-        "change_1w_pct": 0.13,
-        "change_1m_pct": -8.82,
+        "price": 462.2,
+        "change_1d_pct": -0.62,
+        "change_1w_pct": 0.18,
+        "change_1m_pct": -8.77,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           494.5,
@@ -233451,7 +233451,7 @@
           437.65,
           455.7,
           465.1,
-          461.95
+          462.2
         ],
         "daily_closes": [
           {
@@ -243336,7 +243336,7 @@
           },
           {
             "date": "2026-06-16",
-            "close": 461.95
+            "close": 462.2
           }
         ]
       }
@@ -244510,10 +244510,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-16T08:47:30.986770+00:00",
+    "generated_at": "2026-06-16T13:29:01.585128+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 22,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -244525,21 +244525,6 @@
             "summary": "Skoda Kodiaq RS has been spied in Mumbai city ahead of its grand launch as the brand's first ever RS badged SUV for the Indian market The post New Skoda Kodiaq RS Spied In Mumbai Ahead Of Launch appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-06-16T05:57:17+00:00",
-            "published_display": "16 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "New Hyundai Bayon Rendered Based On Spy Shots \u2013 Could Debut 1.2 Turbo, Hybrid",
-            "url": "https://www.rushlane.com/new-hyundai-bayon-rendered-based-on-spy-shots-could-debut-1-2-turbo-hybrid-12549091.html",
-            "summary": "In India, the new Bayon is expected to be a midsize SUV offering, positioned between the Venue and the Creta The post New Hyundai Bayon Rendered Based On Spy Shots \u2013 Could Debut 1.2 Turbo, Hybrid appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-16T03:29:50+00:00",
             "published_display": "16 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -244580,6 +244565,21 @@
             ]
           },
           {
+            "title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-changchun-unveils-auto-revamp-plan-seeks-byd-and-xiaomi-to-boost-ev-push/131654134",
+            "summary": "Changchun is planning a major overhaul of its auto industry by 2030. The city aims to attract electric vehicle manufacturers such as BYD and Xiaomi. This initiative seeks to boost production and sales, with a projected consolidation of automaker groups.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-11T08:45:50+00:00",
+            "published_display": "11 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Maruti Suzuki introduces prepaid smart maintenance plan",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-introduces-prepaid-smart-maintenance-plan/131745528",
             "summary": "Maruti Suzuki India Ltd has launched its 'smart maintenance plan,' a prepaid after-sales service for existing customers. This new offering allows vehicle owners to select customized service packages, including options for labor-only, parts and labor, and specific vehicle types.",
@@ -244601,13 +244601,29 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Upcoming Hero Xpulse 421 ADV Spied At Khardung La \u2013 New Details",
-            "url": "https://www.rushlane.com/upcoming-hero-xpulse-421-adv-spied-at-khardung-la-new-details-12549077.html",
-            "summary": "Hero MotoCorp\u2019s upcoming mid-capacity adventure motorcycle, widely expected to be called the Xpulse 421, has been spotted testing once again The post Upcoming Hero Xpulse 421 ADV Spied At Khardung La \u2013 New Details appeared first on RushLane .",
+            "title": "Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital",
+            "url": "https://evreporter.com/speedioo-raises-%e2%82%b910-crore-in-seed-funding-round-led-by-atomic-capital",
+            "summary": "The post Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital appeared first at EVreporter on EVreporter . Speedioo, a consumer technology platform operating in the used two-wheeler segment, has raised \u20b910 crore in a seed funding round The post Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-16T11:31:43+00:00",
+            "published_display": "16 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Harley Davidson X440 Price Hike June 2026 \u2013 New vs Old",
+            "url": "https://www.rushlane.com/harley-davidson-x440-price-hike-june-2026-new-vs-old-12549130.html",
+            "summary": "Harley-Davidson has revised prices of the X440 motorcycle range in India, with all three variants receiving a price hike The post Harley Davidson X440 Price Hike June 2026 \u2013 New vs Old appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-06-15T18:49:21+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 5,
+            "published_at": "2026-06-16T12:12:14+00:00",
+            "published_display": "16 Jun 2026",
+            "importance_score": 4,
             "segment_tags": [
               "Two-Wheelers"
             ],
@@ -244635,6 +244651,21 @@
             "signal_tags": [
               "Product / Launch"
             ]
+          },
+          {
+            "title": "UltraTech deploys 45 e-trucks for clinker transportation in northern India",
+            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/mhcv/ultratech-deploys-45-e-trucks-for-clinker-transportation-in-northern-india/131770653",
+            "summary": "The initiative is expected to reduce more than 8,900 tonnes of CO2 emissions annually and displace around 2.9 million litres of diesel consumption each year.",
+            "source": "ET Auto Commercial Vehicles",
+            "published_at": "2026-06-16T11:47:11+00:00",
+            "published_display": "16 Jun 2026",
+            "importance_score": 4,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "General"
+            ]
           }
         ]
       },
@@ -244642,6 +244673,23 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "Tsuyo Manufacturing to represent India at VivaTech 2026 in Paris",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-selected-to-showcase-indias-innovations-at-vivatech-2026/131737214",
+            "summary": "The company plans to showcase its electric powertrain and patented motor technologies at the event as it looks to engage with global industry stakeholders and explore international opportunities.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-15T07:33:13+00:00",
+            "published_display": "15 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "From 'Made in India' to 'Made for India': Renault's engineering vision for India",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renaults-engineering-strategy-redefining-made-for-india-in-automotive-innovation/131731471",
@@ -244676,50 +244724,35 @@
             ]
           },
           {
-            "title": "China's Changchun unveils auto revamp plan, seeks BYD and Xiaomi to boost EV push",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-changchun-unveils-auto-revamp-plan-seeks-byd-and-xiaomi-to-boost-ev-push/131654134",
-            "summary": "Changchun is planning a major overhaul of its auto industry by 2030. The city aims to attract electric vehicle manufacturers such as BYD and Xiaomi. This initiative seeks to boost production and sales, with a projected consolidation of automaker groups.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-11T08:45:50+00:00",
-            "published_display": "11 Jun 2026",
+            "title": "Omega Seiki Mobility Integrates Honda e:Swap Battery Ecosystem With Rage+ Electric Cargo Three-Wheeler",
+            "url": "https://www.autocarpro.in/NEWS/omega-seiki-mobility-integrates-honda-eswap-battery-ecosystem-with-rage-electric-cargo-three-wheeler-133011",
+            "summary": "Omega Seiki Mobility (OSM) has announced the integration of Honda\u2019s e battery-swapping ecosystem with its Rage+ electric cargo three-wheeler, expanding battery-swapping options for commercial electric vehicle operators in India. Under the arrangement, the OSM Rage+ will be compatible with Honda\u2019s battery-swapping infrastructure, allowing users to exchange depleted batteries for fully charged units within minutes i...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-09T17:19:18+00:00",
+            "published_display": "09 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "New Avore Electric Motorcycle Spied In Ahmedabad",
+            "url": "https://www.rushlane.com/new-avore-electric-motorcycle-spied-in-ahmedabad-12549120.html",
+            "summary": "New Avore electric motorcycle is spied testing for the first time and looks like it is production-ready and waiting to make a grand debut The post New Avore Electric Motorcycle Spied In Ahmedabad appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-16T10:31:13+00:00",
+            "published_display": "16 Jun 2026",
             "importance_score": 6,
             "segment_tags": [
+              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "GM may ditch LFP batteries for future EVs",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/gm-may-ditch-lfp-batteries-for-future-evs/131648713",
-            "summary": "Chinese carmakers pioneered the use of the lower-cost LFP chemistry, which is less dense - resulting in shorter driving ranges - but also \u200ccheaper and considered safer and more durable than the nickel-rich batteries used by many US and European automakers.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-11T04:04:19+00:00",
-            "published_display": "11 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Input Costs / Commodities",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "South Africa proposes extending auto incentives to battery materials",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/south-africa-proposes-extending-auto-incentives-to-battery-materials/131627000",
-            "summary": "South Africa's automotive programme supports the industry through customs duty rebates and refunds, production-linked incentives, investment support, and a volume-based allowance that rewards carmakers for producing vehicles at scale in South Africa.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-10T06:21:41+00:00",
-            "published_display": "10 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -244780,36 +244813,36 @@
             ]
           },
           {
-            "title": "AutoVRse raises $2.4 million to expand AI and VR training for automotive manufacturing",
-            "url": "https://evreporter.com/autovrse-raises-2-4-million-to-expand-ai-and-vr-training-for-automotive-manufacturing",
-            "summary": "The post AutoVRse raises $2.4 million to expand AI and VR training for automotive manufacturing appeared first at EVreporter on EVreporter . Bengaluru-based AutoVRse has raised $2.4 million in a funding round co-led by Singularity AMC and existing investor Lumikai. The company The post AutoVRse raises $2.4 million to expand AI and VR training for automotive manufacturing appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-15T12:01:40+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 7,
+            "title": "Top Indian Tyre Makers Line Up Over \u20b97,500 Crore Capex For FY27",
+            "url": "https://www.autocarpro.in/NEWS/top-indian-tyre-makers-line-up-over-\u20b97500-crore-capex-for-fy27-133027",
+            "summary": "India\u2019s leading tyre makers are preparing a fresh round of capital expenditure for FY27 and the years ahead, as capacity utilisation across key product categories moves close to peak levels and demand remains steady across replacement and original equipment channels. Apollo Tyres, CEAT, JK Tyre & Industries and Balkrishna Industries have together outlined large capex plans covering truck and bus radial tyres, pass...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-10T19:22:12+00:00",
+            "published_display": "10 Jun 2026",
+            "importance_score": 8,
             "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Tsuyo Manufacturing to represent India at VivaTech 2026 in Paris",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-selected-to-showcase-indias-innovations-at-vivatech-2026/131737214",
-            "summary": "The company plans to showcase its electric powertrain and patented motor technologies at the event as it looks to engage with global industry stakeholders and explore international opportunities.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-15T07:33:13+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
+              "Commercial Vehicles",
               "Components"
             ],
             "signal_tags": [
               "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tyre Makers Walk Tightrope In FY27 As Demand Holds Firm, But Costs Surge",
+            "url": "https://www.autocarpro.in/NEWS/tyre-makers-walk-tightrope-in-fy27-as-demand-holds-firm-but-costs-surge-132973",
+            "summary": "India\u2019s tyre makers are entering FY27 with strong demand visibility, high plant utilisation and a fresh capex cycle. But they are also facing one of the sharpest input cost shocks in recent quarters, triggered by the West Asia crisis, crude-linked raw material volatility, higher natural rubber prices, rupee depreciation and rising logistics costs.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-07T12:56:01+00:00",
+            "published_display": "07 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           }
@@ -244854,21 +244887,6 @@
             ]
           },
           {
-            "title": "E20 Fuel Won\u2019t Void Insurance, Says ICICI Lombard \u2013 Mechanical Breakdowns Outside Policy Scope",
-            "url": "https://www.rushlane.com/e20-fuel-wont-void-insurance-says-icici-lombard-12549071.html",
-            "summary": "ICICI Lombard\u2019s clarification settles the insurance question. But what happens if a vehicle suffers a mechanical breakdown that is attributed to E20 fuel? The post E20 Fuel Won\u2019t Void Insurance, Says ICICI Lombard \u2013 Mechanical Breakdowns Outside Policy Scope appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-15T15:19:16+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Policy / Regulation"
-            ]
-          },
-          {
             "title": "PMO to examine battery PLI scheme amid SEBI allegations on Rajesh Exports",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/sebi-allegations-rock-rajesh-exports-as-pmo-reviews-battery-pli-scheme/131581792",
             "summary": "In its interim order, SEBI has alleged that ACC Energy Storage Pvt Ltd was set up in 2022 as a wholly owned subsidiary of Rajesh Exports Limited and was used as a vehicle for non-transparent related-party transactions and the diversion of company funds.",
@@ -244905,25 +244923,25 @@
     ],
     "sources_live": [
       "ET Auto Passenger Vehicles",
+      "ET Auto Commercial Vehicles",
       "ET Auto Components",
+      "Autocar Professional Components",
       "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 4,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
-        "ET Auto Commercial Vehicles",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "Autocar Professional Components"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 26,
+      "unmapped_articles": 45,
       "filtered_low_signal": 5,
-      "kept_articles": 44
+      "kept_articles": 65
     }
   },
   "qa": [
