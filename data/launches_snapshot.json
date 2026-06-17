@@ -1,9 +1,24 @@
 {
   "available": true,
-  "generated_at": "2026-06-17T12:53:16.132682+00:00",
+  "generated_at": "2026-06-17T17:50:25.432289+00:00",
   "window_days": 30,
-  "item_count": 8,
+  "item_count": 9,
   "items": [
+    {
+      "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
+      "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
+      "url": "https://auto.economictimes.indiatimes.com/news/auto-components/force-motors-rolls-out-200000th-mercedes-benz-engine-in-india/131803570",
+      "source": "ET Auto Components",
+      "published_at": "2026-06-17T14:07:02+00:00",
+      "published_display": "17 Jun 2026",
+      "company": "Mercedes-Benz India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-138284/131803570.cms"
+    },
     {
       "title": "BMW’s MINI launches locally made Countryman C in India at ₹47.5 lakh",
       "summary": "The petrol-powered sport utility vehicle is being manufactured at the company’s Chennai plant, marking the latest addition to MINI’s India lineup under local production.",
@@ -128,6 +143,14 @@
   ],
   "companies": [
     {
+      "company": "Mercedes-Benz India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 3,
+      "latest_published_at": "2026-06-17T14:07:02+00:00",
+      "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
+    },
+    {
       "company": "BMW India",
       "tone": "pv",
       "scope": "tracked",
@@ -150,14 +173,6 @@
       "count": 2,
       "latest_published_at": "2026-06-15T12:35:36+00:00",
       "latest_title": "Maruti Suzuki introduces prepaid smart maintenance plan"
-    },
-    {
-      "company": "Mercedes-Benz India",
-      "tone": "pv",
-      "scope": "tracked",
-      "count": 2,
-      "latest_published_at": "2026-06-15T10:36:48+00:00",
-      "latest_title": "Mercedes-Benz launches S-Class plug-in hybrid in India at ₹2.20 crore"
     }
   ],
   "audit": {

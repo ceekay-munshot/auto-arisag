@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T12:53:39.477191+00:00",
+  "generated_at": "2026-06-17T17:50:47.864031+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,10 +121182,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-17T12:53:16.132682+00:00",
+      "generated_at": "2026-06-17T17:50:25.432289+00:00",
       "window_days": 30,
-      "item_count": 8,
+      "item_count": 9,
       "items": [
+        {
+          "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
+          "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/force-motors-rolls-out-200000th-mercedes-benz-engine-in-india/131803570",
+          "source": "ET Auto Components",
+          "published_at": "2026-06-17T14:07:02+00:00",
+          "published_display": "17 Jun 2026",
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-138284/131803570.cms"
+        },
         {
           "title": "BMW\u2019s MINI launches locally made Countryman C in India at \u20b947.5 lakh",
           "summary": "The petrol-powered sport utility vehicle is being manufactured at the company\u2019s Chennai plant, marking the latest addition to MINI\u2019s India lineup under local production.",
@@ -121310,6 +121325,14 @@
       ],
       "companies": [
         {
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 3,
+          "latest_published_at": "2026-06-17T14:07:02+00:00",
+          "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
+        },
+        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -121332,14 +121355,6 @@
           "count": 2,
           "latest_published_at": "2026-06-15T12:35:36+00:00",
           "latest_title": "Maruti Suzuki introduces prepaid smart maintenance plan"
-        },
-        {
-          "company": "Mercedes-Benz India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-06-15T10:36:48+00:00",
-          "latest_title": "Mercedes-Benz launches S-Class plug-in hybrid in India at \u20b92.20 crore"
         }
       ],
       "source_meta": {
@@ -121466,10 +121481,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.5,
+        "value": 94.52,
         "unit": "\u20b9",
-        "delta_value": -0.2417,
-        "delta_label": "-0.90% in last week (Yahoo Finance)",
+        "delta_value": -0.2267,
+        "delta_label": "-0.89% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131877,7 +131892,7 @@
           },
           {
             "date": "2026-06-17",
-            "close": 94.5
+            "close": 94.515
           }
         ]
       }
@@ -244572,7 +244587,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-17T12:52:53.208151+00:00",
+    "generated_at": "2026-06-17T17:50:01.675199+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 22,
@@ -244680,6 +244695,21 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Top 10 Two Wheelers May 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache",
+            "url": "https://www.rushlane.com/top-10-two-wheelers-may-2026-splendor-activa-shine-jupiter-12549262.html",
+            "summary": "India\u2019s top 10 best-selling two-wheelers recorded combined sales of 12,68,886 units in May 2026, up from 11,76,627 units sold in May 2025 The post Top 10 Two Wheelers May 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-17T15:26:25+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
+            ]
           }
         ]
       },
@@ -244703,39 +244733,6 @@
             ]
           },
           {
-            "title": "Top Indian Tyre Makers Line Up Over \u20b97,500 Crore Capex For FY27",
-            "url": "https://www.autocarpro.in/NEWS/top-indian-tyre-makers-line-up-over-\u20b97500-crore-capex-for-fy27-133027",
-            "summary": "India\u2019s leading tyre makers are preparing a fresh round of capital expenditure for FY27 and the years ahead, as capacity utilisation across key product categories moves close to peak levels and demand remains steady across replacement and original equipment channels. Apollo Tyres, CEAT, JK Tyre & Industries and Balkrishna Industries have together outlined large capex plans covering truck and bus radial tyres, pass...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-10T19:22:12+00:00",
-            "published_display": "10 Jun 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Omega Seiki Mobility Integrates Honda e:Swap Battery Ecosystem With Rage+ Electric Cargo Three-Wheeler",
-            "url": "https://www.autocarpro.in/NEWS/omega-seiki-mobility-integrates-honda-eswap-battery-ecosystem-with-rage-electric-cargo-three-wheeler-133011",
-            "summary": "Omega Seiki Mobility (OSM) has announced the integration of Honda\u2019s e battery-swapping ecosystem with its Rage+ electric cargo three-wheeler, expanding battery-swapping options for commercial electric vehicle operators in India. Under the arrangement, the OSM Rage+ will be compatible with Honda\u2019s battery-swapping infrastructure, allowing users to exchange depleted batteries for fully charged units within minutes i...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-09T17:19:18+00:00",
-            "published_display": "09 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Maruti Suzuki launches prepaid Smart Maintenance Plan for existing vehicle owners",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-launches-prepaid-smart-maintenance-plan-for-existing-vehicle-owners/131737378",
             "summary": "The plan lets customers prepay maintenance expenses, offering protection against future service cost inflation while providing flexible tenure and mileage options across passenger and commercial vehicles.",
@@ -244748,6 +244745,22 @@
             ],
             "signal_tags": [
               "Product / Launch"
+            ]
+          },
+          {
+            "title": "Omega Seiki Mobility Integrates Honda e:Swap Battery Ecosystem With Rage+ Electric Cargo Three-Wheeler",
+            "url": "https://www.autocarpro.in/NEWS/omega-seiki-mobility-integrates-honda-eswap-battery-ecosystem-with-rage-electric-cargo-three-wheeler-133011",
+            "summary": "Omega Seiki Mobility (OSM) has announced the integration of Honda\u2019s e battery-swapping ecosystem with its Rage+ electric cargo three-wheeler, expanding battery-swapping options for commercial electric vehicle operators in India. Under the arrangement, the OSM Rage+ will be compatible with Honda\u2019s battery-swapping infrastructure, allowing users to exchange depleted batteries for fully charged units within minutes i...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-09T17:19:18+00:00",
+            "published_display": "09 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
             ]
           },
           {
@@ -244895,22 +244908,6 @@
             ]
           },
           {
-            "title": "EV demand surges in India as fuel prices rise; Maruti, Mercedes-Benz face delivery delays",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ev-demand-surges-in-india-as-fuel-prices-rise-maruti-mercedes-benz-face-delivery-delays/131696611",
-            "summary": "Companies like Maruti, Mercedes-Benz, and BMW are experiencing unprecedented interest in their electric vehicles. Supply chain issues are now limiting production more than customer interest.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-13T02:49:29+00:00",
-            "published_display": "13 Jun 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Ampere launches Reo VYB low-speed electric scooter at \u20b969,499",
             "url": "https://evreporter.com/ampere-launches-reo-vyb-low-speed-electric-scooter-at-%e2%82%b969499",
             "summary": "The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter . Ampere, the electric two-wheeler brand of Greaves Electric Mobility, has launched the Reo VYB low-speed electric scooter at an introductory The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter .",
@@ -244938,6 +244935,23 @@
             "segment_tags": [
               "Passenger Vehicles",
               "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Top Indian Tyre Makers Line Up Over \u20b97,500 Crore Capex For FY27",
+            "url": "https://www.autocarpro.in/NEWS/top-indian-tyre-makers-line-up-over-\u20b97500-crore-capex-for-fy27-133027",
+            "summary": "India\u2019s leading tyre makers are preparing a fresh round of capital expenditure for FY27 and the years ahead, as capacity utilisation across key product categories moves close to peak levels and demand remains steady across replacement and original equipment channels. Apollo Tyres, CEAT, JK Tyre & Industries and Balkrishna Industries have together outlined large capex plans covering truck and bus radial tyres, pass...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-10T19:22:12+00:00",
+            "published_display": "10 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "Components"
             ],
             "signal_tags": [
               "Capacity / Capex",
