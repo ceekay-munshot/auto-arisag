@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T08:31:04.779789+00:00",
+  "generated_at": "2026-06-17T12:53:39.477191+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,10 +121182,40 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-17T08:30:12.286197+00:00",
+      "generated_at": "2026-06-17T12:53:16.132682+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 8,
       "items": [
+        {
+          "title": "BMW\u2019s MINI launches locally made Countryman C in India at \u20b947.5 lakh",
+          "summary": "The petrol-powered sport utility vehicle is being manufactured at the company\u2019s Chennai plant, marking the latest addition to MINI\u2019s India lineup under local production.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-mini-launches-locally-made-countryman-c-in-india-at-47-5-lakh/131799188",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-06-17T11:38:51+00:00",
+          "published_display": "17 Jun 2026",
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-53428/131799188.cms"
+        },
+        {
+          "title": "MINI Countryman C Launch Price Rs 47.5 Lakh \u2013 Rolls Out Of BMW India Plant",
+          "summary": "New MINI Countryman C gets 156 hp turbo petrol engine, larger dimensions, 505-litre boot and circular OLED display The post MINI Countryman C Launch Price Rs 47.5 Lakh \u2013 Rolls Out Of BMW India Plant appeared first on RushLane .",
+          "url": "https://www.rushlane.com/mini-countryman-c-launch-price-rs-47-5-lakh-rolls-out-of-bmw-india-plant-12549227.html",
+          "source": "RushLane",
+          "published_at": "2026-06-17T09:37:26+00:00",
+          "published_display": "17 Jun 2026",
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-mini-countryman-india-launch-price-5.jpeg"
+        },
         {
           "title": "New Audi A6 Allroad Debuts \u2013 Diesel, PHEV 95 Km EV Range",
           "summary": "New Audi A6 Allroad has just debuted bringing the widebody treatment from RS6 to mainstream buyers along with Diesel and PHEV engine options The post New Audi A6 Allroad Debuts \u2013 Diesel, PHEV 95 Km EV Range appeared first on RushLane .",
@@ -121216,19 +121246,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-citroen-ec3x-electrid-launch-price-10.jpeg"
-        },
-        {
-          "title": "2026 Maruti Brezza Facelift Launch Nears",
-          "summary": "Maruti Suzuki appears to be in the final stages of preparing the updated Brezza for launch. It has now been spotted in production guise The post 2026 Maruti Brezza Facelift Launch Nears appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-maruti-brezza-facelift-spied-during-tvc-shoot-launch-nears-12549141.html",
-          "source": "RushLane",
-          "published_at": "2026-06-16T13:08:56+00:00",
-          "published_display": "16 Jun 2026",
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/2026-maruti-brezza-suv-spied-shimla-2.jpeg"
         },
         {
           "title": "Maruti Suzuki introduces prepaid smart maintenance plan",
@@ -121293,6 +121310,14 @@
       ],
       "companies": [
         {
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 2,
+          "latest_published_at": "2026-06-17T11:38:51+00:00",
+          "latest_title": "BMW\u2019s MINI launches locally made Countryman C in India at \u20b947.5 lakh"
+        },
+        {
           "company": "Audi India",
           "tone": "pv",
           "scope": "tracked",
@@ -121304,9 +121329,9 @@
           "company": "Maruti Suzuki",
           "tone": "pv",
           "scope": "listed",
-          "count": 3,
-          "latest_published_at": "2026-06-16T13:08:56+00:00",
-          "latest_title": "2026 Maruti Brezza Facelift Launch Nears"
+          "count": 2,
+          "latest_published_at": "2026-06-15T12:35:36+00:00",
+          "latest_title": "Maruti Suzuki introduces prepaid smart maintenance plan"
         },
         {
           "company": "Mercedes-Benz India",
@@ -121441,10 +121466,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.49,
+        "value": 94.5,
         "unit": "\u20b9",
-        "delta_value": -0.2517,
-        "delta_label": "-0.91% in last week (Yahoo Finance)",
+        "delta_value": -0.2417,
+        "delta_label": "-0.90% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131852,7 +131877,7 @@
           },
           {
             "date": "2026-06-17",
-            "close": 94.49
+            "close": 94.5
           }
         ]
       }
@@ -131867,10 +131892,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13592.0,
-        "change_1d_pct": -0.72,
-        "change_1w_pct": 3.97,
-        "change_1m_pct": 4.91,
+        "price": 13630.0,
+        "change_1d_pct": -0.45,
+        "change_1w_pct": 4.26,
+        "change_1m_pct": 5.2,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13770.0,
@@ -131902,7 +131927,7 @@
           13366.0,
           13805.0,
           13691.0,
-          13592.0
+          13630.0
         ],
         "daily_closes": [
           {
@@ -141787,16 +141812,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 13592.0
+            "close": 13630.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3120.0,
-        "change_1d_pct": -0.57,
-        "change_1w_pct": 5.67,
-        "change_1m_pct": 0.9,
+        "price": 3132.9,
+        "change_1d_pct": -0.16,
+        "change_1w_pct": 6.11,
+        "change_1m_pct": 1.31,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3370.7,
@@ -141828,7 +141853,7 @@
           3042.9,
           3134.3,
           3137.9,
-          3120.0
+          3132.9
         ],
         "daily_closes": [
           {
@@ -151713,16 +151738,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 3120.0
+            "close": 3132.9
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4991.1,
-        "change_1d_pct": -0.79,
-        "change_1w_pct": 2.77,
-        "change_1m_pct": -0.33,
+        "price": 5016.4,
+        "change_1d_pct": -0.29,
+        "change_1w_pct": 3.29,
+        "change_1m_pct": 0.18,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5343.0,
@@ -151754,7 +151779,7 @@
           4962.6,
           5024.0,
           5031.0,
-          4991.1
+          5016.4
         ],
         "daily_closes": [
           {
@@ -161639,16 +161664,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 4991.1
+            "close": 5016.4
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3426.8,
-        "change_1d_pct": -0.25,
-        "change_1w_pct": 2.76,
-        "change_1m_pct": 4.37,
+        "price": 3448.7,
+        "change_1d_pct": 0.38,
+        "change_1w_pct": 3.41,
+        "change_1m_pct": 5.03,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3706.7,
@@ -161680,7 +161705,7 @@
           3312.8,
           3459.5,
           3435.5,
-          3426.8
+          3448.7
         ],
         "daily_closes": [
           {
@@ -171565,16 +171590,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 3426.8
+            "close": 3448.7
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 9978.0,
-        "change_1d_pct": 0.39,
-        "change_1w_pct": -1.64,
-        "change_1m_pct": -2.22,
+        "price": 10042.0,
+        "change_1d_pct": 1.04,
+        "change_1w_pct": -1.01,
+        "change_1m_pct": -1.6,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10605.0,
@@ -171606,7 +171631,7 @@
           10063.0,
           9943.0,
           9939.0,
-          9978.0
+          10042.0
         ],
         "daily_closes": [
           {
@@ -181491,16 +181516,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 9978.0
+            "close": 10042.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1978.6,
-        "change_1d_pct": 0.2,
-        "change_1w_pct": 4.63,
-        "change_1m_pct": 11.14,
+        "price": 1976.7,
+        "change_1d_pct": 0.1,
+        "change_1w_pct": 4.53,
+        "change_1m_pct": 11.03,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1835.8,
@@ -181532,7 +181557,7 @@
           1990.1,
           2030.1,
           1974.7,
-          1978.6
+          1976.7
         ],
         "daily_closes": [
           {
@@ -183177,16 +183202,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 1978.6
+            "close": 1976.7
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7474.0,
-        "change_1d_pct": -1.14,
-        "change_1w_pct": 3.53,
-        "change_1m_pct": 8.59,
+        "price": 7509.0,
+        "change_1d_pct": -0.68,
+        "change_1w_pct": 4.01,
+        "change_1m_pct": 9.1,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7327.5,
@@ -183218,7 +183243,7 @@
           7312.0,
           7624.5,
           7560.5,
-          7474.0
+          7509.0
         ],
         "daily_closes": [
           {
@@ -193103,16 +193128,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 7474.0
+            "close": 7509.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 363.2,
-        "change_1d_pct": -7.72,
-        "change_1w_pct": -4.67,
-        "change_1m_pct": 0.55,
+        "price": 360.95,
+        "change_1d_pct": -8.3,
+        "change_1w_pct": -5.26,
+        "change_1m_pct": -0.07,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193145,7 +193170,7 @@
           390.0,
           396.4,
           393.6,
-          363.2
+          360.95
         ],
         "daily_closes": [
           {
@@ -203030,16 +203055,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 363.2
+            "close": 360.95
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 400.8,
-        "change_1d_pct": -1.45,
-        "change_1w_pct": 9.84,
-        "change_1m_pct": 5.85,
+        "price": 402.8,
+        "change_1d_pct": -0.96,
+        "change_1w_pct": 10.39,
+        "change_1m_pct": 6.38,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203072,7 +203097,7 @@
           390.3,
           406.6,
           406.7,
-          400.8
+          402.8
         ],
         "daily_closes": [
           {
@@ -203669,16 +203694,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 400.8
+            "close": 402.8
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 159.32,
-        "change_1d_pct": 0.52,
-        "change_1w_pct": 12.56,
-        "change_1m_pct": 5.25,
+        "price": 159.57,
+        "change_1d_pct": 0.68,
+        "change_1w_pct": 12.74,
+        "change_1m_pct": 5.41,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           170.78,
@@ -203710,7 +203735,7 @@
           152.45,
           157.7,
           158.5,
-          159.32
+          159.57
         ],
         "daily_closes": [
           {
@@ -213595,16 +213620,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 159.32
+            "close": 159.57
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2829.0,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": 3.23,
-        "change_1m_pct": -2.14,
+        "price": 2831.0,
+        "change_1d_pct": 0.04,
+        "change_1w_pct": 3.3,
+        "change_1m_pct": -2.07,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3345.9,
@@ -213636,7 +213661,7 @@
           2761.4,
           2801.1,
           2830.0,
-          2829.0
+          2831.0
         ],
         "daily_closes": [
           {
@@ -223521,16 +223546,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 2829.0
+            "close": 2831.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 964.95,
-        "change_1d_pct": 3.7,
-        "change_1w_pct": 9.93,
-        "change_1m_pct": 9.41,
+        "price": 962.1,
+        "change_1d_pct": 3.4,
+        "change_1w_pct": 9.6,
+        "change_1m_pct": 9.09,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           905.55,
@@ -223562,7 +223587,7 @@
           931.05,
           928.95,
           930.5,
-          964.95
+          962.1
         ],
         "daily_closes": [
           {
@@ -233447,16 +233472,16 @@
           },
           {
             "date": "2026-06-17",
-            "close": 964.95
+            "close": 962.1
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 469.0,
-        "change_1d_pct": 1.47,
-        "change_1w_pct": 4.31,
-        "change_1m_pct": -5.62,
+        "price": 468.0,
+        "change_1d_pct": 1.25,
+        "change_1w_pct": 4.09,
+        "change_1m_pct": -5.83,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           493.3,
@@ -233488,7 +233513,7 @@
           455.7,
           465.1,
           462.2,
-          469.0
+          468.0
         ],
         "daily_closes": [
           {
@@ -243373,7 +243398,7 @@
           },
           {
             "date": "2026-06-17",
-            "close": 469.0
+            "close": 468.0
           }
         ]
       }
@@ -244547,15 +244572,31 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-17T08:29:46.172216+00:00",
+    "generated_at": "2026-06-17T12:52:53.208151+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 21,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "BMW\u2019s MINI launches locally made Countryman C in India at \u20b947.5 lakh",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-mini-launches-locally-made-countryman-c-in-india-at-47-5-lakh/131799188",
+            "summary": "The petrol-powered sport utility vehicle is being manufactured at the company\u2019s Chennai plant, marking the latest addition to MINI\u2019s India lineup under local production.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-17T11:38:51+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Tata Motors confident of delivering industry-leading growth in FY27 despite global uncertainties: Chandrasekaran",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-aims-for-industry-leading-growth-by-fy27-amid-global-challenges/131773159",
@@ -244569,6 +244610,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "BMW shares sink after profit warning highlights China and Iran risk",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-shares-sink-after-profit-warning-highlights-china-and-iran-risk/131798164",
+            "summary": "German carmaker BMW's shares tumbled after a profit warning. The company cited challenges from China's weak car market and the Iran war. These issues are expected to affect BMW's targets for 2026. This development has also impacted other European carmakers. Analysts suggest this could be the beginning of wider industry challenges.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-17T11:11:09+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -244587,48 +244644,19 @@
             ]
           },
           {
-            "title": "BMW cuts 2026 outlook on China downturn, Iran war",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-cuts-2026-outlook-on-china-downturn-iran-war/131779228",
-            "summary": "BMW has significantly lowered its 2026 profit outlook, citing an accelerated downturn in the Chinese market and the impact of the Iran war. The company now anticipates a much lower EBIT margin for its automotive segment and expects a decrease in core deliveries.",
+            "title": "From 'Made in India' to 'Made for India': Renault's engineering vision for India",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renaults-engineering-strategy-redefining-made-for-india-in-automotive-innovation/131731471",
+            "summary": "In this interview, Dr. Vikraman V, Chief of Renault Engineering, Renault Group India, explains why \u2018Made in India\u2019 must evolve into \u2018Made for India\u2019 through India-specific engineering. He also outlines Renault's roadmap for hybrids and EVs, discusses the country's evolving powertrain mix, and shares why OEMs can no longer afford to be mono-fuel companies.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-16T17:48:03+00:00",
-            "published_display": "16 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Mercedes-Benz India confident of sustaining growth on strong demand this year",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-aims-for-sustained-growth-amid-strong-demand-and-economic-challenges/131749969",
-            "summary": "Mercedes-Benz India is confident in achieving growth this year, driven by strong demand despite economic and geopolitical challenges. The premium automaker plans a price increase due to the depreciating Indian Rupee and other cost pressures.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-15T16:17:42+00:00",
+            "published_at": "2026-06-15T02:41:15+00:00",
             "published_display": "15 Jun 2026",
-            "importance_score": 6,
+            "importance_score": 7,
             "segment_tags": [
-              "Luxury"
+              "EV",
+              "Components"
             ],
             "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Tata Motors PV to hike vehicle prices across portfolio by up to 1.5% from July 1",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-to-increase-passenger-vehicle-prices-by-up-to-15-starting-july-1-2026/131675917",
-            "summary": "The automaker said the price revision is aimed at partially offsetting the impact of rising input costs and persistent inflationary pressures.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-12T06:32:28+00:00",
-            "published_display": "12 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Input Costs / Commodities"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -244672,6 +244700,23 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Top Indian Tyre Makers Line Up Over \u20b97,500 Crore Capex For FY27",
+            "url": "https://www.autocarpro.in/NEWS/top-indian-tyre-makers-line-up-over-\u20b97500-crore-capex-for-fy27-133027",
+            "summary": "India\u2019s leading tyre makers are preparing a fresh round of capital expenditure for FY27 and the years ahead, as capacity utilisation across key product categories moves close to peak levels and demand remains steady across replacement and original equipment channels. Apollo Tyres, CEAT, JK Tyre & Industries and Balkrishna Industries have together outlined large capex plans covering truck and bus radial tyres, pass...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-10T19:22:12+00:00",
+            "published_display": "10 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -244727,6 +244772,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "JLR eyes double-digit revenue growth, bets on North America as growth engine",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jaguar-land-rover-targets-double-digit-growth-with-multi-powertrain-strategy-in-north-america/131794683",
+            "summary": "The luxury carmaker aims to lower its breakeven point to 300,000 units while gearing up for key launches, including the Range Rover Electric and next-generation Jaguar.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-17T11:05:48+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "New Audi A6 Allroad Debuts \u2013 Diesel, PHEV 95 Km EV Range",
             "url": "https://www.rushlane.com/new-audi-a6-allroad-debuts-diesel-phev-95-km-ev-range-12549211.html",
             "summary": "New Audi A6 Allroad has just debuted bringing the widebody treatment from RS6 to mainstream buyers along with Diesel and PHEV engine options The post New Audi A6 Allroad Debuts \u2013 Diesel, PHEV 95 Km EV Range appeared first on RushLane .",
@@ -244759,6 +244820,23 @@
             ]
           },
           {
+            "title": "Citroen launches updated e-C3X electric crossover with BaaS model",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/citroen-unveils-the-updated-c3x-electric-crossover-with-revolutionary-battery-as-a-service-financing/131793798",
+            "summary": "The company said the introductory BaaS pricing starts at \u20b96.89 lakh, with battery charges of \u20b92.26 per km. The standard range starts at \u20b910.25 lakh.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-17T09:05:49+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Germany's battery production hits record high in 2025 on EV",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/germanys-battery-production-hits-record-high-in-2025-on-ev/131779856",
             "summary": "Germany's battery production hit a record \u20ac8.1 billion in 2025, fueled by electric vehicles and energy storage. Lithium-ion battery output surged 28 per cent. While domestic production is growing, China remains the dominant supplier, raising concerns about European competitiveness and dependence on Asian supply chains.",
@@ -244773,39 +244851,6 @@
             "signal_tags": [
               "Supply Chain / Components",
               "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Tsuyo Manufacturing to represent India at VivaTech 2026 in Paris",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tsuyo-manufacturing-selected-to-showcase-indias-innovations-at-vivatech-2026/131737214",
-            "summary": "The company plans to showcase its electric powertrain and patented motor technologies at the event as it looks to engage with global industry stakeholders and explore international opportunities.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-15T07:33:13+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "From 'Made in India' to 'Made for India': Renault's engineering vision for India",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renaults-engineering-strategy-redefining-made-for-india-in-automotive-innovation/131731471",
-            "summary": "In this interview, Dr. Vikraman V, Chief of Renault Engineering, Renault Group India, explains why \u2018Made in India\u2019 must evolve into \u2018Made for India\u2019 through India-specific engineering. He also outlines Renault's roadmap for hybrids and EVs, discusses the country's evolving powertrain mix, and shares why OEMs can no longer afford to be mono-fuel companies.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-15T02:41:15+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -244866,6 +244911,23 @@
             ]
           },
           {
+            "title": "Ampere launches Reo VYB low-speed electric scooter at \u20b969,499",
+            "url": "https://evreporter.com/ampere-launches-reo-vyb-low-speed-electric-scooter-at-%e2%82%b969499",
+            "summary": "The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter . Ampere, the electric two-wheeler brand of Greaves Electric Mobility, has launched the Reo VYB low-speed electric scooter at an introductory The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-17T09:12:46+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "China's BYD ramps up battery production in Brazil",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/chinas-byd-ramps-up-battery-production-in-brazil/131779747",
             "summary": "Chinese electric carmaker BYD is boosting battery production in Brazil. The company plans significant investment in energy storage systems to support Brazil's national grid. This expansion is part of a strategy to become Brazil's top car brand by 2030.",
@@ -244876,23 +244938,6 @@
             "segment_tags": [
               "Passenger Vehicles",
               "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Top Indian Tyre Makers Line Up Over \u20b97,500 Crore Capex For FY27",
-            "url": "https://www.autocarpro.in/NEWS/top-indian-tyre-makers-line-up-over-\u20b97500-crore-capex-for-fy27-133027",
-            "summary": "India\u2019s leading tyre makers are preparing a fresh round of capital expenditure for FY27 and the years ahead, as capacity utilisation across key product categories moves close to peak levels and demand remains steady across replacement and original equipment channels. Apollo Tyres, CEAT, JK Tyre & Industries and Balkrishna Industries have together outlined large capex plans covering truck and bus radial tyres, pass...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-10T19:22:12+00:00",
-            "published_display": "10 Jun 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "Components"
             ],
             "signal_tags": [
               "Capacity / Capex",
@@ -244943,9 +244988,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 40,
-      "filtered_low_signal": 4,
-      "kept_articles": 66
+      "unmapped_articles": 42,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [

@@ -1,9 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-06-17T08:30:12.286197+00:00",
+  "generated_at": "2026-06-17T12:53:16.132682+00:00",
   "window_days": 30,
-  "item_count": 7,
+  "item_count": 8,
   "items": [
+    {
+      "title": "BMW’s MINI launches locally made Countryman C in India at ₹47.5 lakh",
+      "summary": "The petrol-powered sport utility vehicle is being manufactured at the company’s Chennai plant, marking the latest addition to MINI’s India lineup under local production.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-mini-launches-locally-made-countryman-c-in-india-at-47-5-lakh/131799188",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-06-17T11:38:51+00:00",
+      "published_display": "17 Jun 2026",
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-53428/131799188.cms"
+    },
+    {
+      "title": "MINI Countryman C Launch Price Rs 47.5 Lakh – Rolls Out Of BMW India Plant",
+      "summary": "New MINI Countryman C gets 156 hp turbo petrol engine, larger dimensions, 505-litre boot and circular OLED display The post MINI Countryman C Launch Price Rs 47.5 Lakh – Rolls Out Of BMW India Plant appeared first on RushLane .",
+      "url": "https://www.rushlane.com/mini-countryman-c-launch-price-rs-47-5-lakh-rolls-out-of-bmw-india-plant-12549227.html",
+      "source": "RushLane",
+      "published_at": "2026-06-17T09:37:26+00:00",
+      "published_display": "17 Jun 2026",
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-mini-countryman-india-launch-price-5.jpeg"
+    },
     {
       "title": "New Audi A6 Allroad Debuts – Diesel, PHEV 95 Km EV Range",
       "summary": "New Audi A6 Allroad has just debuted bringing the widebody treatment from RS6 to mainstream buyers along with Diesel and PHEV engine options The post New Audi A6 Allroad Debuts – Diesel, PHEV 95 Km EV Range appeared first on RushLane .",
@@ -34,19 +64,6 @@
         "EV"
       ],
       "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-citroen-ec3x-electrid-launch-price-10.jpeg"
-    },
-    {
-      "title": "2026 Maruti Brezza Facelift Launch Nears",
-      "summary": "Maruti Suzuki appears to be in the final stages of preparing the updated Brezza for launch. It has now been spotted in production guise The post 2026 Maruti Brezza Facelift Launch Nears appeared first on RushLane .",
-      "url": "https://www.rushlane.com/2026-maruti-brezza-facelift-spied-during-tvc-shoot-launch-nears-12549141.html",
-      "source": "RushLane",
-      "published_at": "2026-06-16T13:08:56+00:00",
-      "published_display": "16 Jun 2026",
-      "company": "Maruti Suzuki",
-      "tone": "pv",
-      "scope": "listed",
-      "segment_tags": [],
-      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/2026-maruti-brezza-suv-spied-shimla-2.jpeg"
     },
     {
       "title": "Maruti Suzuki introduces prepaid smart maintenance plan",
@@ -111,6 +128,14 @@
   ],
   "companies": [
     {
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 2,
+      "latest_published_at": "2026-06-17T11:38:51+00:00",
+      "latest_title": "BMW’s MINI launches locally made Countryman C in India at ₹47.5 lakh"
+    },
+    {
       "company": "Audi India",
       "tone": "pv",
       "scope": "tracked",
@@ -122,9 +147,9 @@
       "company": "Maruti Suzuki",
       "tone": "pv",
       "scope": "listed",
-      "count": 3,
-      "latest_published_at": "2026-06-16T13:08:56+00:00",
-      "latest_title": "2026 Maruti Brezza Facelift Launch Nears"
+      "count": 2,
+      "latest_published_at": "2026-06-15T12:35:36+00:00",
+      "latest_title": "Maruti Suzuki introduces prepaid smart maintenance plan"
     },
     {
       "company": "Mercedes-Benz India",
