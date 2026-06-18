@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T08:10:16.144986+00:00",
+  "generated_at": "2026-06-18T12:29:03.896818+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,10 +121182,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-18T08:09:52.909060+00:00",
+      "generated_at": "2026-06-18T12:28:40.920933+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 6,
       "items": [
+        {
+          "title": "Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s",
+          "summary": "Porsche 911 GT3 India launch price is Rs 3.33 Crore and the optional Weissach Pack costs Rs 43.9 lakh extra and Manthey Kit Rs 1 Cr extra The post Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s appeared first on RushLane .",
+          "url": "https://www.rushlane.com/porsche-911-gt3-india-launch-price-rs-3-33-cr-510-bhp-0-100-3-4s-12549359.html",
+          "source": "RushLane",
+          "published_at": "2026-06-18T12:07:00+00:00",
+          "published_display": "18 Jun 2026",
+          "company": "Porsche India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/porsche-911-gt3-992.2-india-launch.jpg"
+        },
         {
           "title": "2026 Bajaj Pulsar 220F Launch Price Rs 1.36 L \u2013 Full LED Headlights, Rs 8k Costlier",
           "summary": "2026 Bajaj Pulsar 220F has been launched at Rs 1.36 lakh (Ex-sh) and gets a new full LED headlight setup, marking a design update since 2007 The post 2026 Bajaj Pulsar 220F Launch Price Rs 1.36 L \u2013 Full LED Headlights, Rs 8k Costlier appeared first on RushLane .",
@@ -121243,37 +121258,6 @@
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-586546/131745528.cms"
         },
         {
-          "title": "Mercedes-Benz launches S-Class plug-in hybrid in India at \u20b92.20 crore",
-          "summary": "The S 450e combines a 3.0-litre inline six-cylinder turbo-petrol engine with an electric motor and a 22-kWh battery pack, producing a combined output of 435 hp and 680 Nm of torque.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-launches-s-class-plug-in-hybrid-in-india-at-2-20-crore/131740350",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-06-15T10:36:48+00:00",
-          "published_display": "15 Jun 2026",
-          "company": "Mercedes-Benz India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "EV",
-            "Luxury"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-23302/131740350.cms"
-        },
-        {
-          "title": "Maruti Suzuki launches prepaid Smart Maintenance Plan for existing vehicle owners",
-          "summary": "The plan lets customers prepay maintenance expenses, offering protection against future service cost inflation while providing flexible tenure and mileage options across passenger and commercial vehicles.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-launches-prepaid-smart-maintenance-plan-for-existing-vehicle-owners/131737378",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-06-15T07:42:42+00:00",
-          "published_display": "15 Jun 2026",
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "Commercial Vehicles"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-586546/131737378.cms"
-        },
-        {
           "title": "Mercedes launches mass production of electric motor for high-performance AMG brand",
           "summary": "Mercedes-Benz has begun series production of a new lightweight axial flux electric motor at its Berlin-Marienfelde plant. This innovative technology, designed to be lighter and more efficient than traditional motors, aims to address the challenges of electrifying high-performance AMG vehicles.",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/mercedes-launches-mass-production-of-electric-motor-for-high-performance-amg-brand/131636609",
@@ -121292,6 +121276,14 @@
       ],
       "companies": [
         {
+          "company": "Porsche India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-06-18T12:07:00+00:00",
+          "latest_title": "Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s"
+        },
+        {
           "company": "Bajaj Auto",
           "tone": "tw",
           "scope": "listed",
@@ -121303,7 +121295,7 @@
           "company": "Mercedes-Benz India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 3,
+          "count": 2,
           "latest_published_at": "2026-06-17T14:07:02+00:00",
           "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
         },
@@ -121319,7 +121311,7 @@
           "company": "Maruti Suzuki",
           "tone": "pv",
           "scope": "listed",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-06-15T12:35:36+00:00",
           "latest_title": "Maruti Suzuki introduces prepaid smart maintenance plan"
         }
@@ -121448,10 +121440,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.23,
+        "value": 94.32,
         "unit": "\u20b9",
-        "delta_value": -0.6586,
-        "delta_label": "-1.48% in last week (Yahoo Finance)",
+        "delta_value": -0.5656,
+        "delta_label": "-1.38% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131859,7 +131851,7 @@
           },
           {
             "date": "2026-06-18",
-            "close": 94.23
+            "close": 94.323
           }
         ]
       }
@@ -131874,10 +131866,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13490.0,
-        "change_1d_pct": -1.03,
-        "change_1w_pct": 2.99,
-        "change_1m_pct": 3.75,
+        "price": 13484.0,
+        "change_1d_pct": -1.07,
+        "change_1w_pct": 2.95,
+        "change_1m_pct": 3.7,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13726.0,
@@ -131909,7 +131901,7 @@
           13805.0,
           13691.0,
           13630.0,
-          13490.0
+          13484.0
         ],
         "daily_closes": [
           {
@@ -141794,16 +141786,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 13490.0
+            "close": 13484.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3141.0,
-        "change_1d_pct": 0.26,
-        "change_1w_pct": 4.67,
-        "change_1m_pct": 0.6,
+        "price": 3136.5,
+        "change_1d_pct": 0.11,
+        "change_1w_pct": 4.52,
+        "change_1m_pct": 0.46,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3330.4,
@@ -141835,7 +141827,7 @@
           3134.3,
           3137.9,
           3132.9,
-          3141.0
+          3136.5
         ],
         "daily_closes": [
           {
@@ -151720,16 +151712,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 3141.0
+            "close": 3136.5
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5005.8,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": 3.51,
-        "change_1m_pct": 0.76,
+        "price": 5021.6,
+        "change_1d_pct": 0.1,
+        "change_1w_pct": 3.83,
+        "change_1m_pct": 1.08,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5322.0,
@@ -151761,7 +151753,7 @@
           5024.0,
           5031.0,
           5016.4,
-          5005.8
+          5021.6
         ],
         "daily_closes": [
           {
@@ -161646,16 +161638,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 5005.8
+            "close": 5021.6
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3460.3,
-        "change_1d_pct": 0.34,
-        "change_1w_pct": 5.26,
-        "change_1m_pct": 2.93,
+        "price": 3457.6,
+        "change_1d_pct": 0.26,
+        "change_1w_pct": 5.18,
+        "change_1m_pct": 2.85,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3695.2,
@@ -161687,7 +161679,7 @@
           3459.5,
           3435.5,
           3448.7,
-          3460.3
+          3457.6
         ],
         "daily_closes": [
           {
@@ -171572,16 +171564,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 3460.3
+            "close": 3457.6
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10047.0,
-        "change_1d_pct": 0.05,
-        "change_1w_pct": -0.66,
-        "change_1m_pct": -3.97,
+        "price": 10077.0,
+        "change_1d_pct": 0.35,
+        "change_1w_pct": -0.37,
+        "change_1m_pct": -3.68,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10711.5,
@@ -171613,7 +171605,7 @@
           9943.0,
           9939.0,
           10042.0,
-          10047.0
+          10077.0
         ],
         "daily_closes": [
           {
@@ -181498,16 +181490,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 10047.0
+            "close": 10077.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1980.8,
-        "change_1d_pct": 0.21,
-        "change_1w_pct": 2.1,
-        "change_1m_pct": 10.82,
+        "price": 1976.6,
+        "change_1d_pct": -0.01,
+        "change_1w_pct": 1.88,
+        "change_1m_pct": 10.59,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1852.8,
@@ -181539,7 +181531,7 @@
           2030.1,
           1974.7,
           1976.7,
-          1980.8
+          1976.6
         ],
         "daily_closes": [
           {
@@ -183188,16 +183180,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 1980.8
+            "close": 1976.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7636.0,
-        "change_1d_pct": 1.69,
-        "change_1w_pct": 6.36,
-        "change_1m_pct": 11.48,
+        "price": 7601.0,
+        "change_1d_pct": 1.23,
+        "change_1w_pct": 5.87,
+        "change_1m_pct": 10.97,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7302.5,
@@ -183229,7 +183221,7 @@
           7624.5,
           7560.5,
           7509.0,
-          7636.0
+          7601.0
         ],
         "daily_closes": [
           {
@@ -193114,16 +193106,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 7636.0
+            "close": 7601.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 362.35,
-        "change_1d_pct": 0.39,
-        "change_1w_pct": -3.6,
-        "change_1m_pct": 0.3,
+        "price": 364.65,
+        "change_1d_pct": 1.03,
+        "change_1w_pct": -2.99,
+        "change_1m_pct": 0.94,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193156,7 +193148,7 @@
           396.4,
           393.6,
           360.95,
-          362.35
+          364.65
         ],
         "daily_closes": [
           {
@@ -203041,16 +203033,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 362.35
+            "close": 364.65
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 402.0,
-        "change_1d_pct": -0.2,
-        "change_1w_pct": 12.18,
-        "change_1m_pct": 5.87,
+        "price": 407.05,
+        "change_1d_pct": 1.06,
+        "change_1w_pct": 13.59,
+        "change_1m_pct": 7.2,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203083,7 +203075,7 @@
           406.6,
           406.7,
           402.8,
-          402.0
+          407.05
         ],
         "daily_closes": [
           {
@@ -203684,16 +203676,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 402.0
+            "close": 407.05
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 157.81,
-        "change_1d_pct": -1.1,
-        "change_1w_pct": 13.88,
-        "change_1m_pct": 2.73,
+        "price": 158.45,
+        "change_1d_pct": -0.7,
+        "change_1w_pct": 14.34,
+        "change_1m_pct": 3.15,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           168.57,
@@ -203725,7 +203717,7 @@
           157.7,
           158.5,
           159.57,
-          157.81
+          158.45
         ],
         "daily_closes": [
           {
@@ -213610,16 +213602,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 157.81
+            "close": 158.45
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2811.5,
-        "change_1d_pct": -0.69,
-        "change_1w_pct": 3.19,
-        "change_1m_pct": -2.9,
+        "price": 2809.7,
+        "change_1d_pct": -0.75,
+        "change_1w_pct": 3.12,
+        "change_1m_pct": -2.97,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3146.6,
@@ -213651,7 +213643,7 @@
           2801.1,
           2830.0,
           2831.0,
-          2811.5
+          2809.7
         ],
         "daily_closes": [
           {
@@ -223536,16 +223528,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 2811.5
+            "close": 2809.7
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 976.95,
-        "change_1d_pct": 1.54,
-        "change_1w_pct": 9.53,
-        "change_1m_pct": 8.93,
+        "price": 976.45,
+        "change_1d_pct": 1.49,
+        "change_1w_pct": 9.47,
+        "change_1m_pct": 8.88,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           947.25,
@@ -223577,7 +223569,7 @@
           928.95,
           930.5,
           962.1,
-          976.95
+          976.45
         ],
         "daily_closes": [
           {
@@ -233462,16 +233454,16 @@
           },
           {
             "date": "2026-06-18",
-            "close": 976.95
+            "close": 976.45
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 470.35,
-        "change_1d_pct": 0.5,
-        "change_1w_pct": 7.47,
-        "change_1m_pct": -3.02,
+        "price": 468.9,
+        "change_1d_pct": 0.19,
+        "change_1w_pct": 7.14,
+        "change_1m_pct": -3.32,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           498.75,
@@ -233503,7 +233495,7 @@
           465.1,
           462.2,
           468.0,
-          470.35
+          468.9
         ],
         "daily_closes": [
           {
@@ -243388,7 +243380,7 @@
           },
           {
             "date": "2026-06-18",
-            "close": 470.35
+            "close": 468.9
           }
         ]
       }
@@ -244562,10 +244554,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-18T08:09:29.680531+00:00",
+    "generated_at": "2026-06-18T12:28:15.169521+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 25,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -244603,6 +244595,21 @@
             ]
           },
           {
+            "title": "Porsche India opens largest dealership in Hyderabad, expands network to 14 sales touchpoints",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-india-opens-largest-dealership-in-hyderabad-expands-network-to-14-sales-touchpoints/131830062",
+            "summary": "The centre adopts Porsche's global 'Destination Porsche' retail concept, offering an experience-led environment aimed at enhancing customer engagement with the brand beyond conventional vehicle retail.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-18T11:58:59+00:00",
+            "published_display": "18 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "BMW shares hit 2020 lows after China weakness and Iran war prompt profit warning",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-shares-hit-2020-lows-after-china-weakness-and-iran-war-prompt-profit-warning/131817483",
             "summary": "Oliver Blume, CEO \u200bof Volkswagen, Europe's largest \u200bcarmaker by sales, has \u2060warned that the traditional export model that buoyed Germany's auto industry for years no longer delivers.",
@@ -244631,21 +244638,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Volkswagen reduces production at German plant amid uncertain future for site",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-reduces-production-at-german-plant-amid-uncertain-future-for-site/131781258",
-            "summary": "Volkswagen is reducing production of the T-Roc Cabrio SUV at its Osnabrueck plant. This move is linked to seasonal demand for convertibles. Employee representatives are worried about the plant's future and the jobs of its 2,300 workers.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-16T19:52:49+00:00",
-            "published_display": "16 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           }
         ]
@@ -244685,21 +244677,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Top 10 Two Wheelers May 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache",
-            "url": "https://www.rushlane.com/top-10-two-wheelers-may-2026-splendor-activa-shine-jupiter-12549262.html",
-            "summary": "India\u2019s top 10 best-selling two-wheelers recorded combined sales of 12,68,886 units in May 2026, up from 11,76,627 units sold in May 2025 The post Top 10 Two Wheelers May 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-17T15:26:25+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "General"
-            ]
           }
         ]
       },
@@ -244722,21 +244699,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Maruti Suzuki launches prepaid Smart Maintenance Plan for existing vehicle owners",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-launches-prepaid-smart-maintenance-plan-for-existing-vehicle-owners/131737378",
-            "summary": "The plan lets customers prepay maintenance expenses, offering protection against future service cost inflation while providing flexible tenure and mileage options across passenger and commercial vehicles.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-15T07:42:42+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           },
           {
@@ -244916,16 +244878,16 @@
             ]
           },
           {
-            "title": "Mercedes-Benz launches S-Class plug-in hybrid in India at \u20b92.20 crore",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-launches-s-class-plug-in-hybrid-in-india-at-2-20-crore/131740350",
-            "summary": "The S 450e combines a 3.0-litre inline six-cylinder turbo-petrol engine with an electric motor and a 22-kWh battery pack, producing a combined output of 435 hp and 680 Nm of torque.",
+            "title": "Dacia launches 2nd-generation Spring EV, retains focus on affordable electric mobility",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/dacia-unveils-2nd-generation-spring-ev-a-step-towards-affordable-electric-mobility/131826133",
+            "summary": "The Renault Group-owned brand said the new Spring will continue to offer a fully electric powertrain, four-seat configuration and practical boot space, staying true to Dacia's value-oriented approach.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-15T10:36:48+00:00",
-            "published_display": "15 Jun 2026",
-            "importance_score": 9,
+            "published_at": "2026-06-18T11:26:47+00:00",
+            "published_display": "18 Jun 2026",
+            "importance_score": 8,
             "segment_tags": [
               "EV",
-              "Luxury"
+              "Components"
             ],
             "signal_tags": [
               "Product / Launch",
