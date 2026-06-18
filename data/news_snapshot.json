@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-06-18T12:28:15.169521+00:00",
+  "generated_at": "2026-06-18T18:06:07.732465+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 23,
+  "item_count": 22,
   "groups": [
     {
       "id": "pv",
@@ -164,21 +164,6 @@
           ]
         },
         {
-          "title": "Mahindra Crosses 70 Lakh Tractor Production Milestone Globally",
-          "url": "https://www.rushlane.com/mahindra-crosses-70-lakh-tractor-production-milestone-globally-12549348.html",
-          "summary": "World\u2019s largest tractor manufacturer by volume reaches another major milestone as FY26 sales exceed 5.26 lakh units The post Mahindra Crosses 70 Lakh Tractor Production Milestone Globally appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-06-18T08:04:20+00:00",
-          "published_display": "18 Jun 2026",
-          "importance_score": 5,
-          "segment_tags": [
-            "Commercial Vehicles"
-          ],
-          "signal_tags": [
-            "General"
-          ]
-        },
-        {
           "title": "UltraTech deploys 45 e-trucks for clinker transportation in northern India",
           "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/mhcv/ultratech-deploys-45-e-trucks-for-clinker-transportation-in-northern-india/131770653",
           "summary": "The initiative is expected to reduce more than 8,900 tonnes of CO2 emissions annually and displace around 2.9 million litres of diesel consumption each year.",
@@ -249,25 +234,9 @@
           ]
         },
         {
-          "title": "Upcoming Hyundai Sub 4m Electric SUV Spied \u2013 2026 Diwali Launch",
-          "url": "https://www.rushlane.com/upcoming-hyundai-sub-4m-electric-suv-spied-2026-diwali-launch-12549268.html",
-          "summary": "It is expected that Hyundai's new sub-4-meter electric SUV could be launched by year end or in early 2027 The post Upcoming Hyundai Sub 4m Electric SUV Spied \u2013 2026 Diwali Launch appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-06-18T03:14:03+00:00",
-          "published_display": "18 Jun 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "signal_tags": [
-            "Product / Launch"
-          ]
-        },
-        {
           "title": "Citroen launches updated e-C3X electric crossover with BaaS model",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/citroen-unveils-the-updated-c3x-electric-crossover-with-revolutionary-battery-as-a-service-financing/131793798",
-          "summary": "The company said the introductory BaaS pricing starts at \u20b96.89 lakh, with battery charges of \u20b92.26 per km. The standard range starts at \u20b910.25 lakh.",
+          "summary": "The company said the introductory BaaS pricing starts at \u20b96.98 lakh, with battery charges of \u20b92.26 per km. The standard range starts at \u20b910.49 lakh.",
           "source": "ET Auto Passenger Vehicles",
           "published_at": "2026-06-17T09:05:49+00:00",
           "published_display": "17 Jun 2026",
@@ -279,6 +248,23 @@
           "signal_tags": [
             "Product / Launch",
             "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Germany's battery production hits record high in 2025 on EV",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/germanys-battery-production-hits-record-high-in-2025-on-ev/131779856",
+          "summary": "Germany's battery production hit a record \u20ac8.1 billion in 2025, fueled by electric vehicles and energy storage. Lithium-ion battery output surged 28 per cent. While domestic production is growing, China remains the dominant supplier, raising concerns about European competitiveness and dependence on Asian supply chains.",
+          "source": "ET Auto Components",
+          "published_at": "2026-06-16T18:11:59+00:00",
+          "published_display": "16 Jun 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "EV",
+            "Components"
+          ],
+          "signal_tags": [
+            "Supply Chain / Components",
+            "Input Costs / Commodities"
           ]
         }
       ]
@@ -294,7 +280,7 @@
           "source": "ET Auto Components",
           "published_at": "2026-06-10T13:10:06+00:00",
           "published_display": "10 Jun 2026",
-          "importance_score": 11,
+          "importance_score": 10,
           "segment_tags": [
             "EV",
             "Luxury"
@@ -424,22 +410,22 @@
     "ET Auto Passenger Vehicles",
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
-    "Autocar Professional Components",
-    "RushLane",
-    "EVReporter"
+    "Autocar Professional Components"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6,
+    "sources_live": 4,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV"
+      "Autocar Professional EV",
+      "RushLane",
+      "EVReporter"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 40,
-    "filtered_low_signal": 1,
-    "kept_articles": 69
+    "unmapped_articles": 37,
+    "filtered_low_signal": 0,
+    "kept_articles": 61
   }
 }
