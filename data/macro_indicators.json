@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-06-17",
+  "as_of_date": "2026-06-18",
   "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
   "indicators": [
     {
@@ -115,19 +115,15 @@
     {
       "id": "usd_inr",
       "label": "USD / INR",
-      "value": 94.52,
+      "value": 94.23,
       "unit": "₹",
-      "delta_value": -0.2267,
-      "delta_label": "-0.89% in last week (Yahoo Finance)",
+      "delta_value": -0.6586,
+      "delta_label": "-1.48% in last week (Yahoo Finance)",
       "delta_tone": "positive",
       "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
       "source_name": "Yahoo Finance — USDINR=X",
       "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
       "daily_closes": [
-        {
-          "date": "2016-06-16",
-          "close": 67.307
-        },
         {
           "date": "2016-06-19",
           "close": 67.066
@@ -10525,8 +10521,12 @@
           "close": 94.7417
         },
         {
-          "date": "2026-06-17",
-          "close": 94.515
+          "date": "2026-06-16",
+          "close": 94.8886
+        },
+        {
+          "date": "2026-06-18",
+          "close": 94.23
         }
       ]
     }
