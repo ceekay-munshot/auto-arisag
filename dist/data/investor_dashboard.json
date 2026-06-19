@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T08:34:18.552997+00:00",
+  "generated_at": "2026-06-19T12:49:41.660650+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,25 +121182,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-19T08:33:56.105424+00:00",
+      "generated_at": "2026-06-19T12:49:18.722582+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
-        {
-          "title": "Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s",
-          "summary": "Porsche 911 GT3 India launch price is Rs 3.33 Crore and the optional Weissach Pack costs Rs 43.9 lakh extra and Manthey Kit Rs 1 Cr extra The post Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s appeared first on RushLane .",
-          "url": "https://www.rushlane.com/porsche-911-gt3-india-launch-price-rs-3-33-cr-510-bhp-0-100-3-4s-12549359.html",
-          "source": "RushLane",
-          "published_at": "2026-06-18T12:07:00+00:00",
-          "published_display": "18 Jun 2026",
-          "company": "Porsche India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Luxury"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/porsche-911-gt3-992.2-india-launch.jpg"
-        },
         {
           "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
           "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
@@ -121250,14 +121235,6 @@
       ],
       "companies": [
         {
-          "company": "Porsche India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-06-18T12:07:00+00:00",
-          "latest_title": "Porsche 911 GT3 India Launch Price Rs 3.33 Cr \u2013 510 bhp, 0-100 3.4s"
-        },
-        {
           "company": "Mercedes-Benz India",
           "tone": "pv",
           "scope": "tracked",
@@ -121276,7 +121253,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-06-18"
+        "latest_release_date": "2026-06-17"
       }
     }
   },
@@ -121398,10 +121375,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.48,
+        "value": 94.31,
         "unit": "\u20b9",
-        "delta_value": -0.3814,
-        "delta_label": "-1.34% in last week (Yahoo Finance)",
+        "delta_value": -0.5489,
+        "delta_label": "-1.51% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131813,7 +131790,7 @@
           },
           {
             "date": "2026-06-19",
-            "close": 94.4775
+            "close": 94.31
           }
         ]
       }
@@ -131828,10 +131805,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13427.0,
-        "change_1d_pct": -0.42,
-        "change_1w_pct": 0.46,
-        "change_1m_pct": 3.21,
+        "price": 13395.0,
+        "change_1d_pct": -0.66,
+        "change_1w_pct": 0.22,
+        "change_1m_pct": 2.96,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13483.0,
@@ -131863,7 +131840,7 @@
           13691.0,
           13630.0,
           13484.0,
-          13427.0
+          13395.0
         ],
         "daily_closes": [
           {
@@ -141752,16 +141729,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 13427.0
+            "close": 13395.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3081.6,
-        "change_1d_pct": -1.75,
-        "change_1w_pct": 1.27,
-        "change_1m_pct": -0.56,
+        "price": 3074.8,
+        "change_1d_pct": -1.97,
+        "change_1w_pct": 1.05,
+        "change_1m_pct": -0.78,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3245.9,
@@ -141793,7 +141770,7 @@
           3137.9,
           3132.9,
           3136.5,
-          3081.6
+          3074.8
         ],
         "daily_closes": [
           {
@@ -151682,13 +151659,13 @@
           },
           {
             "date": "2026-06-19",
-            "close": 3081.6
+            "close": 3074.8
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4975.0,
+        "price": 4974.9,
         "change_1d_pct": -0.93,
         "change_1w_pct": 0.25,
         "change_1m_pct": 0.11,
@@ -151723,7 +151700,7 @@
           5031.0,
           5016.4,
           5021.6,
-          4975.0
+          4974.9
         ],
         "daily_closes": [
           {
@@ -161612,16 +161589,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 4975.0
+            "close": 4974.9
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3443.6,
-        "change_1d_pct": -0.4,
-        "change_1w_pct": 3.95,
-        "change_1m_pct": 1.86,
+        "price": 3442.9,
+        "change_1d_pct": -0.43,
+        "change_1w_pct": 3.93,
+        "change_1m_pct": 1.84,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3613.7,
@@ -161653,7 +161630,7 @@
           3435.5,
           3448.7,
           3457.6,
-          3443.6
+          3442.9
         ],
         "daily_closes": [
           {
@@ -171542,16 +171519,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 3443.6
+            "close": 3442.9
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10031.0,
-        "change_1d_pct": -0.46,
-        "change_1w_pct": -0.32,
-        "change_1m_pct": -5.96,
+        "price": 10066.0,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": 0.03,
+        "change_1m_pct": -5.63,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10595.5,
@@ -171583,7 +171560,7 @@
           9939.0,
           10042.0,
           10077.0,
-          10031.0
+          10066.0
         ],
         "daily_closes": [
           {
@@ -181472,16 +181449,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 10031.0
+            "close": 10066.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1978.4,
-        "change_1d_pct": 0.09,
-        "change_1w_pct": -0.59,
-        "change_1m_pct": 7.22,
+        "price": 1973.2,
+        "change_1d_pct": -0.17,
+        "change_1w_pct": -0.85,
+        "change_1m_pct": 6.94,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1906.9,
@@ -181513,7 +181490,7 @@
           1974.7,
           1976.7,
           1976.6,
-          1978.4
+          1973.2
         ],
         "daily_closes": [
           {
@@ -183166,16 +183143,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 1978.4
+            "close": 1973.2
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7570.0,
-        "change_1d_pct": -0.41,
-        "change_1w_pct": 3.53,
-        "change_1m_pct": 9.84,
+        "price": 7611.0,
+        "change_1d_pct": 0.13,
+        "change_1w_pct": 4.09,
+        "change_1m_pct": 10.43,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7202.5,
@@ -183207,7 +183184,7 @@
           7560.5,
           7509.0,
           7601.0,
-          7570.0
+          7611.0
         ],
         "daily_closes": [
           {
@@ -193096,16 +193073,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 7570.0
+            "close": 7611.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 359.4,
-        "change_1d_pct": -1.44,
-        "change_1w_pct": -7.85,
-        "change_1m_pct": -0.54,
+        "price": 359.5,
+        "change_1d_pct": -1.41,
+        "change_1w_pct": -7.82,
+        "change_1m_pct": -0.51,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193138,7 +193115,7 @@
           393.6,
           360.95,
           364.65,
-          359.4
+          359.5
         ],
         "daily_closes": [
           {
@@ -203027,16 +203004,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 359.4
+            "close": 359.5
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 400.65,
-        "change_1d_pct": -1.57,
-        "change_1w_pct": 2.65,
-        "change_1m_pct": 5.46,
+        "price": 402.1,
+        "change_1d_pct": -1.22,
+        "change_1w_pct": 3.02,
+        "change_1m_pct": 5.84,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203069,7 +203046,7 @@
           406.7,
           402.8,
           407.05,
-          400.65
+          402.1
         ],
         "daily_closes": [
           {
@@ -203674,16 +203651,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 400.65
+            "close": 402.1
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 156.53,
-        "change_1d_pct": -1.21,
-        "change_1w_pct": 2.68,
-        "change_1m_pct": 1.33,
+        "price": 156.66,
+        "change_1d_pct": -1.13,
+        "change_1w_pct": 2.76,
+        "change_1m_pct": 1.41,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           161.52,
@@ -203715,7 +203692,7 @@
           158.5,
           159.57,
           158.45,
-          156.53
+          156.66
         ],
         "daily_closes": [
           {
@@ -213604,16 +213581,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 156.53
+            "close": 156.66
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2802.3,
-        "change_1d_pct": -0.26,
-        "change_1w_pct": 1.48,
-        "change_1m_pct": -3.51,
+        "price": 2821.2,
+        "change_1d_pct": 0.41,
+        "change_1w_pct": 2.17,
+        "change_1m_pct": -2.85,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2966.7,
@@ -213645,7 +213622,7 @@
           2830.0,
           2831.0,
           2809.7,
-          2802.3
+          2821.2
         ],
         "daily_closes": [
           {
@@ -223534,16 +223511,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 2802.3
+            "close": 2821.2
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 975.15,
-        "change_1d_pct": -0.13,
-        "change_1w_pct": 4.74,
-        "change_1m_pct": 12.38,
+        "price": 975.65,
+        "change_1d_pct": -0.08,
+        "change_1w_pct": 4.79,
+        "change_1m_pct": 12.44,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           921.65,
@@ -223575,7 +223552,7 @@
           930.5,
           962.1,
           976.45,
-          975.15
+          975.65
         ],
         "daily_closes": [
           {
@@ -233464,16 +233441,16 @@
           },
           {
             "date": "2026-06-19",
-            "close": 975.15
+            "close": 975.65
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 472.6,
-        "change_1d_pct": 0.79,
-        "change_1w_pct": 3.71,
-        "change_1m_pct": -3.11,
+        "price": 473.95,
+        "change_1d_pct": 1.08,
+        "change_1w_pct": 4.0,
+        "change_1m_pct": -2.83,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           492.75,
@@ -233505,7 +233482,7 @@
           462.2,
           468.0,
           468.9,
-          472.6
+          473.95
         ],
         "daily_closes": [
           {
@@ -243394,7 +243371,7 @@
           },
           {
             "date": "2026-06-19",
-            "close": 472.6
+            "close": 473.95
           }
         ]
       }
@@ -244568,7 +244545,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-19T08:33:31.206085+00:00",
+    "generated_at": "2026-06-19T12:48:52.986586+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 23,
@@ -244818,35 +244795,35 @@
             ]
           },
           {
-            "title": "Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom",
-            "url": "https://www.rushlane.com/mahindra-xev-9e-base-pack-one-arrives-at-dealer-showroom-12549406.html",
-            "summary": "Mahindra XEV 9e base Pack One variant has been reaching showrooms and it has been priced at Rs 21.9 lakh (Ex-sh) for a 59 kWh battery The post Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom appeared first on RushLane .",
+            "title": "Tata Sierra EV Teased Ahead Of Launch On 30th June",
+            "url": "https://www.rushlane.com/tata-sierra-ev-teased-ahead-of-launch-on-30th-june-12549454.html",
+            "summary": "Tata Sierra EV has been teased for the first time ahead of its official launch on 30th of June, 2026 and is expected to take on Mahindra BE 6 The post Tata Sierra EV Teased Ahead Of Launch On 30th June appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-06-19T06:24:53+00:00",
+            "published_at": "2026-06-19T11:03:57+00:00",
             "published_display": "19 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
+              "Product / Launch"
             ]
           },
           {
-            "title": "Land Rover Baby Defender To Get Strong Hybrid and BEV Options",
-            "url": "https://www.rushlane.com/land-rover-baby-defender-to-get-strong-hybrid-and-bev-options-12549380.html",
-            "summary": "Addition of a hybrid option for the baby Defender indicates that the shift to electric may take longer in certain markets The post Land Rover Baby Defender To Get Strong Hybrid and BEV Options appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-19T03:38:32+00:00",
+            "title": "NAN GreenMet forms JV with Belgium's Silox for battery recycling",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/nan-greenmet-and-silox-join-forces-for-revolutionary-battery-recycling-venture-in-india/131856407",
+            "summary": "NAN GreenMet and Silox are partnering to establish a Li-ion battery recycling and critical mineral recovery facility in Andhra Pradesh. This joint venture will process spent batteries to recover valuable materials like lithium, cobalt, nickel, and manganese.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-19T10:27:48+00:00",
             "published_display": "19 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV",
-              "Luxury"
+              "EV"
             ],
             "signal_tags": [
-              "General"
+              "Funding / M&A",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           }
         ]
@@ -244952,23 +244929,6 @@
         "label": "Policy / Regulation",
         "items": [
           {
-            "title": "Marelli marks 300 F1 events with SDR, unveils upgraded system",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/marelli-marks-300-f1-events-with-sdr-unveils-upgraded-system/131659333",
-            "summary": "The system, developed with the F\u00e9d\u00e9ration Internationale de l'Automobile, is installed on all Formula 1 cars and provides real-time data to support safety monitoring and regulatory compliance during races.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-11T12:20:19+00:00",
-            "published_display": "11 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Customs Department Levies \u20b997.6 Lakh Tax and Penalty Order on Uno Minda",
             "url": "https://www.autocarpro.in/NEWS/customs-department-levies-\u20b9976-lakh-tax-and-penalty-order-on-uno-minda-133130",
             "summary": "Uno Minda Limited has received an official assessment order from the Office of the Commissioner of Customs demanding payment for unpaid anti-dumping duties related to the import of industrial machinery. The regulatory disclosure, submitted to the domestic stock exchanges on June 17, 2026, outlines an aggregate monetary demand of 97.62 lakh rupees.",
@@ -244982,6 +244942,23 @@
             "signal_tags": [
               "Policy / Regulation",
               "Filing / Disclosure",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Marelli marks 300 F1 events with SDR, unveils upgraded system",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/marelli-marks-300-f1-events-with-sdr-unveils-upgraded-system/131659333",
+            "summary": "The system, developed with the F\u00e9d\u00e9ration Internationale de l'Automobile, is installed on all Formula 1 cars and provides real-time data to support safety monitoring and regulatory compliance during races.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-11T12:20:19+00:00",
+            "published_display": "11 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           }
@@ -245006,7 +244983,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 39,
+      "unmapped_articles": 40,
       "filtered_low_signal": 0,
       "kept_articles": 70
     }
