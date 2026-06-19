@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-06-18T18:06:07.732465+00:00",
+  "generated_at": "2026-06-19T08:33:31.206085+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 22,
+  "item_count": 23,
   "groups": [
     {
       "id": "pv",
@@ -93,6 +93,22 @@
       "label": "Two-Wheelers",
       "items": [
         {
+          "title": "Reliance New Energy prepares battery-swapping rollout for EV two-wheelers in logistics, delivery segment",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/reliance-new-energy-prepares-battery-swapping-rollout-for-ev-two-wheelers-in-logistics-delivery-segment/131844905",
+          "summary": "This move targets the delivery and logistics sector. The company has secured necessary certifications for batteries and vehicles. Initial trials will occur within Reliance's own fleet.",
+          "source": "ET Auto Components",
+          "published_at": "2026-06-19T02:33:39+00:00",
+          "published_display": "19 Jun 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "Two-Wheelers",
+            "EV"
+          ],
+          "signal_tags": [
+            "Supply Chain / Components"
+          ]
+        },
+        {
           "title": "Brembo, Ningbo SAFE Form Joint Venture To Manufacture Motorcycle ABS Systems In India",
           "url": "https://www.autocarpro.in/NEWS/brembo-ningbo-safe-form-joint-venture-to-manufacture-motorcycle-abs-systems-in-india-133109",
           "summary": "Brembo and China's Ningbo SAFE Brakes Systems have signed a joint venture agreement to establish a new company, BRSF Active Safety Solutions, focused on the production of anti-lock braking systems (ABS) for motorcycles in India. The venture aims to address growing demand for advanced braking technologies in the country's two-wheeler market, which accounts for up to 25 million registered vehicles annually.",
@@ -137,7 +153,7 @@
           "source": "Autocar Professional Components",
           "published_at": "2026-06-10T19:22:12+00:00",
           "published_display": "10 Jun 2026",
-          "importance_score": 8,
+          "importance_score": 7,
           "segment_tags": [
             "Commercial Vehicles",
             "Components"
@@ -234,15 +250,14 @@
           ]
         },
         {
-          "title": "Citroen launches updated e-C3X electric crossover with BaaS model",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/citroen-unveils-the-updated-c3x-electric-crossover-with-revolutionary-battery-as-a-service-financing/131793798",
-          "summary": "The company said the introductory BaaS pricing starts at \u20b96.98 lakh, with battery charges of \u20b92.26 per km. The standard range starts at \u20b910.49 lakh.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-06-17T09:05:49+00:00",
-          "published_display": "17 Jun 2026",
+          "title": "Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom",
+          "url": "https://www.rushlane.com/mahindra-xev-9e-base-pack-one-arrives-at-dealer-showroom-12549406.html",
+          "summary": "Mahindra XEV 9e base Pack One variant has been reaching showrooms and it has been priced at Rs 21.9 lakh (Ex-sh) for a 59 kWh battery The post Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-06-19T06:24:53+00:00",
+          "published_display": "19 Jun 2026",
           "importance_score": 7,
           "segment_tags": [
-            "Passenger Vehicles",
             "EV"
           ],
           "signal_tags": [
@@ -251,20 +266,19 @@
           ]
         },
         {
-          "title": "Germany's battery production hits record high in 2025 on EV",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/germanys-battery-production-hits-record-high-in-2025-on-ev/131779856",
-          "summary": "Germany's battery production hit a record \u20ac8.1 billion in 2025, fueled by electric vehicles and energy storage. Lithium-ion battery output surged 28 per cent. While domestic production is growing, China remains the dominant supplier, raising concerns about European competitiveness and dependence on Asian supply chains.",
-          "source": "ET Auto Components",
-          "published_at": "2026-06-16T18:11:59+00:00",
-          "published_display": "16 Jun 2026",
+          "title": "Land Rover Baby Defender To Get Strong Hybrid and BEV Options",
+          "url": "https://www.rushlane.com/land-rover-baby-defender-to-get-strong-hybrid-and-bev-options-12549380.html",
+          "summary": "Addition of a hybrid option for the baby Defender indicates that the shift to electric may take longer in certain markets The post Land Rover Baby Defender To Get Strong Hybrid and BEV Options appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-06-19T03:38:32+00:00",
+          "published_display": "19 Jun 2026",
           "importance_score": 7,
           "segment_tags": [
             "EV",
-            "Components"
+            "Luxury"
           ],
           "signal_tags": [
-            "Supply Chain / Components",
-            "Input Costs / Commodities"
+            "General"
           ]
         }
       ]
@@ -410,22 +424,22 @@
     "ET Auto Passenger Vehicles",
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
-    "Autocar Professional Components"
+    "Autocar Professional Components",
+    "RushLane",
+    "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 4,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV",
-      "RushLane",
-      "EVReporter"
+      "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 37,
+    "unmapped_articles": 39,
     "filtered_low_signal": 0,
-    "kept_articles": 61
+    "kept_articles": 70
   }
 }
