@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T17:21:05.547401+00:00",
+  "generated_at": "2026-06-20T07:03:02.354028+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -48268,7 +48268,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-06-19",
+          "latest_release_date": "2026-06-20",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -121243,7 +121243,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-06-19",
+    "as_of_date": "2026-06-20",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -121361,8 +121361,8 @@
         "label": "USD / INR",
         "value": 94.31,
         "unit": "\u20b9",
-        "delta_value": -0.5489,
-        "delta_label": "-1.51% in last week (Yahoo Finance)",
+        "delta_value": -0.0299,
+        "delta_label": "-0.84% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131773,6 +131773,10 @@
             "close": 94.8589
           },
           {
+            "date": "2026-06-18",
+            "close": 94.3399
+          },
+          {
             "date": "2026-06-19",
             "close": 94.31
           }
@@ -131782,7 +131786,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-06-19",
+    "as_of_date": "2026-06-20",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -243363,7 +243367,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-06-19",
+    "as_of_date": "2026-06-20",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -244529,7 +244533,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-19T17:20:18.564771+00:00",
+    "generated_at": "2026-06-20T07:02:16.781582+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 24,
@@ -244570,6 +244574,22 @@
             ]
           },
           {
+            "title": "Existing Cars Cannot Be Upgraded For E30 Fuel \u2013 Confirms BMW India Boss",
+            "url": "https://www.rushlane.com/existing-cars-cannot-be-upgraded-for-e30-fuel-confirms-bmw-india-boss-12549481.html",
+            "summary": "With the availability of surplus ethanol, higher blends like E22, E25, E27 and E30 are being considered alongside the existing E20 The post Existing Cars Cannot Be Upgraded For E30 Fuel \u2013 Confirms BMW India Boss appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-20T04:18:00+00:00",
+            "published_display": "20 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Porsche India opens largest dealership in Hyderabad, expands network to 14 sales touchpoints",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-india-opens-largest-dealership-in-hyderabad-expands-network-to-14-sales-touchpoints/131830062",
             "summary": "The centre adopts Porsche's global 'Destination Porsche' retail concept, offering an experience-led environment aimed at enhancing customer engagement with the brand beyond conventional vehicle retail.",
@@ -244593,22 +244613,6 @@
             "published_display": "18 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "BMW shares sink after profit warning highlights China and Iran risk",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-shares-sink-after-profit-warning-highlights-china-and-iran-risk/131798164",
-            "summary": "German carmaker BMW's shares tumbled after a profit warning. The company cited challenges from China's weak car market and the Iran war. These issues are expected to affect BMW's targets for 2026. This development has also impacted other European carmakers. Analysts suggest this could be the beginning of wider industry challenges.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-17T11:11:09+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
               "Luxury"
             ],
             "signal_tags": [
@@ -244778,6 +244782,39 @@
             ]
           },
           {
+            "title": "RIL Sets Sights on 120 GWh Capacity Expansion Beyond Initial 40 GWh",
+            "url": "https://www.autocarpro.in/NEWS/ril-sets-sights-on-120-gwh-capacity-expansion-beyond-initial-40-gwh-133161",
+            "summary": "\"The first phase of our 40 GWh annual BESS and Cell Giga Factory is on track to be commissioned this year, with plans to enhance this up to 120 GWh of annual capacity\", Mukesh Ambani, Chairman and Managing Director of Reliance India Ltd stated in his address during company's 49th annual general meeting held on Friday. \"All the equipment has already been delivered at the site\" Ambani noted.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-19T19:21:21+00:00",
+            "published_display": "19 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Passenger vehicle sales expected to grow 4-6%in FY27: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/passenger-vehicle-sales-expected-to-grow-4-6in-fy27-report/131865462",
+            "summary": "Passenger vehicle sales are poised for a 4-6% per cent expansion this fiscal year, fueled by strong consumer demand, enhanced affordability post-GST rate adjustments, and the enduring popularity of utility vehicles. While exports remain robust and electric vehicle adoption is accelerating, rising fuel costs and monsoon concerns are key watchpoints.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-19T18:32:42+00:00",
+            "published_display": "19 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Policy / Regulation"
+            ]
+          },
+          {
             "title": "Tata Sierra EV Teased Ahead Of Launch On 30th June",
             "url": "https://www.rushlane.com/tata-sierra-ev-teased-ahead-of-launch-on-30th-june-12549454.html",
             "summary": "Tata Sierra EV has been teased for the first time ahead of its official launch on 30th of June, 2026 and is expected to take on Mahindra BE 6 The post Tata Sierra EV Teased Ahead Of Launch On 30th June appeared first on RushLane .",
@@ -244790,39 +244827,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "NAN GreenMet forms JV with Belgium's Silox for battery recycling",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/nan-greenmet-and-silox-join-forces-for-revolutionary-battery-recycling-venture-in-india/131856407",
-            "summary": "NAN GreenMet and Silox are partnering to establish a Li-ion battery recycling and critical mineral recovery facility in Andhra Pradesh. This joint venture will process spent batteries to recover valuable materials like lithium, cobalt, nickel, and manganese.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-19T10:27:48+00:00",
-            "published_display": "19 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom",
-            "url": "https://www.rushlane.com/mahindra-xev-9e-base-pack-one-arrives-at-dealer-showroom-12549406.html",
-            "summary": "Mahindra XEV 9e base Pack One variant has been reaching showrooms and it has been priced at Rs 21.9 lakh (Ex-sh) for a 59 kWh battery The post Mahindra XEV 9e Base Pack One Arrives At Dealer Showroom appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-19T06:24:53+00:00",
-            "published_display": "19 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -244981,7 +244985,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 42,
+      "unmapped_articles": 44,
       "filtered_low_signal": 0,
       "kept_articles": 70
     }
@@ -245033,7 +245037,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-06-19",
+    "as_of_date": "2026-06-20",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
