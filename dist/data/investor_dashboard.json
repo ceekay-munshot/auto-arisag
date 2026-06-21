@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T16:21:21.458154+00:00",
+  "generated_at": "2026-06-21T08:02:27.458729+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -48268,7 +48268,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-06-20",
+          "latest_release_date": "2026-06-21",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -121243,7 +121243,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-06-20",
+    "as_of_date": "2026-06-21",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -131786,7 +131786,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-06-20",
+    "as_of_date": "2026-06-21",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -243367,7 +243367,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-06-20",
+    "as_of_date": "2026-06-21",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -244533,10 +244533,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-20T16:20:31.259893+00:00",
+    "generated_at": "2026-06-21T08:01:42.559586+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 24,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -244556,21 +244556,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Tata Motors confident of delivering industry-leading growth in FY27 despite global uncertainties: Chandrasekaran",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-aims-for-industry-leading-growth-by-fy27-amid-global-challenges/131773159",
-            "summary": "Chairman N Chandrasekaran said the company will continue to deepen collaboration with Jaguar Land Rover while investing in electrification, technology and manufacturing capabilities.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-16T13:11:33+00:00",
-            "published_display": "16 Jun 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           },
           {
@@ -244617,6 +244602,21 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "BMW shares hit 2020 lows after China weakness and Iran war prompt profit warning",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-shares-hit-2020-lows-after-china-weakness-and-iran-war-prompt-profit-warning/131817483",
+            "summary": "Oliver Blume, CEO \u200bof Volkswagen, Europe's largest \u200bcarmaker by sales, has \u2060warned that the traditional export model that buoyed Germany's auto industry for years no longer delivers.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-18T04:40:58+00:00",
+            "published_display": "18 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           }
         ]
@@ -244782,6 +244782,22 @@
             ]
           },
           {
+            "title": "Maruti, Mahindra and Tata Motors eye UK market to sell India-made EVs under FTA",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/indian-passenger-vehicle-makers-eye-opportunity-in-uks-ev-market-via-fta/131886429",
+            "summary": "The agreement, set to come into force on July 15, permits duty-free exports of electric, hybrid and hydrogen-powered passenger vehicles from the sixth year onwards across price bands ranging from under \u00a320,000 to \u00a380,000.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-21T05:27:14+00:00",
+            "published_display": "21 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Uno Minda gets MHI nod for Hong Kong-based Inovance's investment in EV JV",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/uno-minda-gets-mhi-nod-for-hong-kong-based-inovances-investment-in-ev-jv/131877156",
             "summary": "The approval under Press Note 3 marks a key milestone for the \u20b9423-crore venture focused on high-voltage EV powertrain components.",
@@ -244812,23 +244828,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "PLI, duty incentives soon for lithium, nickel processing units in India",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/pli-duty-incentives-soon-for-lithium-nickel-processing-units-in-india/131871448",
-            "summary": "This strategic move aims to reduce reliance on overseas processors and bolster the nation's critical minerals ecosystem. The initiative supports the National Critical Minerals Mission and aligns with projected growth in demand for electric vehicle batteries.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-20T06:55:30+00:00",
-            "published_display": "20 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           }
@@ -244933,6 +244932,23 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
+          {
+            "title": "PLI, duty incentives soon for lithium, nickel processing units in India",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/pli-duty-incentives-soon-for-lithium-nickel-processing-units-in-india/131871448",
+            "summary": "This strategic move aims to reduce reliance on overseas processors and bolster the nation's critical minerals ecosystem. The initiative supports the National Critical Minerals Mission and aligns with projected growth in demand for electric vehicle batteries.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-20T06:55:30+00:00",
+            "published_display": "20 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Passenger vehicle sales expected to grow 4-6%in FY27: Report",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/passenger-vehicle-sales-expected-to-grow-4-6in-fy27-report/131865462",
@@ -245040,7 +245056,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-06-20",
+    "as_of_date": "2026-06-21",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
