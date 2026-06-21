@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T11:47:47.997054+00:00",
+  "generated_at": "2026-06-21T16:47:18.532299+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,10 +121182,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-19T17:20:42.948313+00:00",
+      "generated_at": "2026-06-21T16:46:56.503191+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "2026 Aprilia Tuono 457 Special Edition Launch Price Rs 3.99 Lakh",
+          "summary": "Aprilia says the Special Edition pays tribute to the 2006 Tuono 1000R, one of the brand\u2019s most celebrated naked motorcycles The post 2026 Aprilia Tuono 457 Special Edition Launch Price Rs 3.99 Lakh appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-aprilia-tuono-457-special-edition-launch-price-rs-3-99-lakh-12549532.html",
+          "source": "RushLane",
+          "published_at": "2026-06-21T14:59:36+00:00",
+          "published_display": "21 Jun 2026",
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/2026-Tuono-457-Special-Edition-launch-price.jpeg"
+        },
         {
           "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
           "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
@@ -121219,6 +121234,14 @@
       ],
       "companies": [
         {
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-06-21T14:59:36+00:00",
+          "latest_title": "2026 Aprilia Tuono 457 Special Edition Launch Price Rs 3.99 Lakh"
+        },
+        {
           "company": "Mercedes-Benz India",
           "tone": "pv",
           "scope": "tracked",
@@ -121237,7 +121260,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-06-17"
+        "latest_release_date": "2026-06-21"
       }
     }
   },
@@ -131777,7 +131800,7 @@
             "close": 94.3399
           },
           {
-            "date": "2026-06-19",
+            "date": "2026-06-21",
             "close": 94.31
           }
         ]
@@ -244533,10 +244556,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-21T11:46:56.496470+00:00",
+    "generated_at": "2026-06-21T16:46:32.807159+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 27,
     "groups": [
       {
         "id": "pv",
@@ -244687,6 +244710,21 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "2026 Aprilia Tuono 457 Special Edition Launch Price Rs 3.99 Lakh",
+            "url": "https://www.rushlane.com/2026-aprilia-tuono-457-special-edition-launch-price-rs-3-99-lakh-12549532.html",
+            "summary": "Aprilia says the Special Edition pays tribute to the 2006 Tuono 1000R, one of the brand\u2019s most celebrated naked motorcycles The post 2026 Aprilia Tuono 457 Special Edition Launch Price Rs 3.99 Lakh appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-21T14:59:36+00:00",
+            "published_display": "21 Jun 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
             ]
           }
         ]
