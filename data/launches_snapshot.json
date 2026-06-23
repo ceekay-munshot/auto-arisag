@@ -1,9 +1,24 @@
 {
   "available": true,
-  "generated_at": "2026-06-22T18:47:48.299597+00:00",
+  "generated_at": "2026-06-23T12:09:10.683490+00:00",
   "window_days": 30,
-  "item_count": 5,
+  "item_count": 4,
   "items": [
+    {
+      "title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion",
+      "summary": "Volkswagen has officially launched its Volkswagen and Jetta brands in Uzbekistan, a significant move marking its first export market managed entirely through its China operations.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-expands-into-uzbekistans-booming-auto-market-with-china-supplied-cars/131930757",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-06-23T08:13:55+00:00",
+      "published_display": "23 Jun 2026",
+      "company": "Volkswagen India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Passenger Vehicles"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-353762/131930757.cms"
+    },
     {
       "title": "Renault begins exports of all-new Duster from India, ships first batch to South Africa",
       "summary": "The firm aims to achieve annual exports worth €2 billion from India by 2030.",
@@ -16,21 +31,6 @@
       "scope": "tracked",
       "segment_tags": [],
       "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1502728/131907520.cms"
-    },
-    {
-      "title": "2026 Tata Tigor Facelift Design Patented – New Front, Connected LED, 360 Cam Likely",
-      "summary": "Ahead of its official debut, Tata Motors has patented the design of the 2026 Tigor Facelift, giving a clear look at the exterior changes planned for the compact sedan. The post 2026 Tata Tigor Facelift Design Patented – New Front, Connected LED, 360 Cam Likely appeared first on RushLane .",
-      "url": "https://www.rushlane.com/2026-tata-tigor-facelift-design-patented-new-front-12549569.html",
-      "source": "RushLane",
-      "published_at": "2026-06-22T08:34:48+00:00",
-      "published_display": "22 Jun 2026",
-      "company": "Tata Motors",
-      "tone": "pv",
-      "scope": "listed",
-      "segment_tags": [
-        "Passenger Vehicles"
-      ],
-      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/2026-tata-tigor-facelift-patent-sketch-leaks-11.jpeg"
     },
     {
       "title": "Hyundai launches nationwide Smart Care Clinic across 1,600 service centres",
@@ -59,24 +59,17 @@
         "Luxury"
       ],
       "image_url": "https://etimg.etb2bimg.com/thumb/img-size-138284/131803570.cms"
-    },
-    {
-      "title": "BMW’s MINI launches locally made Countryman C in India at ₹47.5 lakh",
-      "summary": "The petrol-powered sport utility vehicle is being manufactured at the company’s Chennai plant, marking the latest addition to MINI’s India lineup under local production.",
-      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmws-mini-launches-locally-made-countryman-c-in-india-at-47-5-lakh/131799188",
-      "source": "ET Auto Passenger Vehicles",
-      "published_at": "2026-06-17T11:38:51+00:00",
-      "published_display": "17 Jun 2026",
-      "company": "BMW India",
-      "tone": "pv",
-      "scope": "tracked",
-      "segment_tags": [
-        "Luxury"
-      ],
-      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-53428/131799188.cms"
     }
   ],
   "companies": [
+    {
+      "company": "Volkswagen India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-06-23T08:13:55+00:00",
+      "latest_title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion"
+    },
     {
       "company": "Renault India",
       "tone": "pv",
@@ -84,14 +77,6 @@
       "count": 1,
       "latest_published_at": "2026-06-22T11:04:25+00:00",
       "latest_title": "Renault begins exports of all-new Duster from India, ships first batch to South Africa"
-    },
-    {
-      "company": "Tata Motors",
-      "tone": "pv",
-      "scope": "listed",
-      "count": 1,
-      "latest_published_at": "2026-06-22T08:34:48+00:00",
-      "latest_title": "2026 Tata Tigor Facelift Design Patented – New Front, Connected LED, 360 Cam Likely"
     },
     {
       "company": "Hyundai Motor India",
@@ -108,14 +93,6 @@
       "count": 1,
       "latest_published_at": "2026-06-17T14:07:02+00:00",
       "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
-    },
-    {
-      "company": "BMW India",
-      "tone": "pv",
-      "scope": "tracked",
-      "count": 1,
-      "latest_published_at": "2026-06-17T11:38:51+00:00",
-      "latest_title": "BMW’s MINI launches locally made Countryman C in India at ₹47.5 lakh"
     }
   ],
   "audit": {
