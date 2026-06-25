@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T06:50:46.052094+00:00",
+  "generated_at": "2026-06-25T11:41:37.081230+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,9 +121182,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-25T06:50:23.068704+00:00",
+      "generated_at": "2026-06-25T11:41:14.148283+00:00",
       "window_days": 30,
-      "item_count": 8,
+      "item_count": 6,
       "items": [
         {
           "title": "New Honda Vario Evo 160 Launch Price IDR 28.5 M (Rs 1.49 L) \u2013 Aerox Rival",
@@ -121213,35 +121213,6 @@
           "scope": "listed",
           "segment_tags": [],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/norton-atlas-india-production-start.jpeg"
-        },
-        {
-          "title": "Skoda Peaq Electric SUV Debuts \u2013 91 kWh, 299 bhp, 647 km Range",
-          "summary": "Skoda Peaq electric SUV has just made its global debut, promising up to 647 km of range from its 91 kWh battery pack The post Skoda Peaq Electric SUV Debuts \u2013 91 kWh, 299 bhp, 647 km Range appeared first on RushLane .",
-          "url": "https://www.rushlane.com/skoda-peaq-electric-suv-debuts-91-kwh-299-bhp-647-km-range-12549732.html",
-          "source": "RushLane",
-          "published_at": "2026-06-24T10:25:11+00:00",
-          "published_display": "24 Jun 2026",
-          "company": "Skoda Auto India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-skoda-peaq-debuts-global-flagship-electric-suv.jpg"
-        },
-        {
-          "title": "2026 Maruti Brezza Facelift Launch In July \u2013 New 1.0 Turbo Petrol, Underbody CNG",
-          "summary": "Alongside the existing 1.5-litre naturally aspirated petrol engine, Maruti Suzuki is expected to offer its heavily localised 1.0-litre turbo petrol engine. The post 2026 Maruti Brezza Facelift Launch In July \u2013 New 1.0 Turbo Petrol, Underbody CNG appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-maruti-brezza-facelift-launch-in-july-new-1-0-turbo-petrol-12549724.html",
-          "source": "RushLane",
-          "published_at": "2026-06-24T08:00:04+00:00",
-          "published_display": "24 Jun 2026",
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/05/2026-brezza-facelift-emission-testing-5.jpg"
         },
         {
           "title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion",
@@ -121316,22 +121287,6 @@
           "count": 1,
           "latest_published_at": "2026-06-24T13:07:11+00:00",
           "latest_title": "First Norton Atlas Rolls Out From TVS Plant In Hosur Ahead Of Global Launch"
-        },
-        {
-          "company": "Skoda Auto India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-06-24T10:25:11+00:00",
-          "latest_title": "Skoda Peaq Electric SUV Debuts \u2013 91 kWh, 299 bhp, 647 km Range"
-        },
-        {
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-06-24T08:00:04+00:00",
-          "latest_title": "2026 Maruti Brezza Facelift Launch In July \u2013 New 1.0 Turbo Petrol, Underbody CNG"
         },
         {
           "company": "Volkswagen India",
@@ -121490,10 +121445,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.48,
+        "value": 94.39,
         "unit": "\u20b9",
-        "delta_value": -0.7037,
-        "delta_label": "-0.40% in last week (Yahoo Finance)",
+        "delta_value": -0.7887,
+        "delta_label": "-0.49% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131901,7 +131856,7 @@
           },
           {
             "date": "2026-06-25",
-            "close": 94.48
+            "close": 94.395
           }
         ]
       }
@@ -131916,10 +131871,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13898.0,
-        "change_1d_pct": 4.91,
-        "change_1w_pct": 3.07,
-        "change_1m_pct": 4.0,
+        "price": 13745.0,
+        "change_1d_pct": 3.75,
+        "change_1w_pct": 1.94,
+        "change_1m_pct": 2.85,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13221.0,
@@ -131951,7 +131906,7 @@
           13421.0,
           13451.0,
           13248.0,
-          13898.0
+          13745.0
         ],
         "daily_closes": [
           {
@@ -141836,16 +141791,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 13898.0
+            "close": 13745.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3193.8,
-        "change_1d_pct": 4.22,
-        "change_1w_pct": 1.83,
-        "change_1m_pct": 2.31,
+        "price": 3182.2,
+        "change_1d_pct": 3.84,
+        "change_1w_pct": 1.46,
+        "change_1m_pct": 1.94,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3123.1,
@@ -141877,7 +141832,7 @@
           3063.4,
           3037.3,
           3064.5,
-          3193.8
+          3182.2
         ],
         "daily_closes": [
           {
@@ -151762,16 +151717,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 3193.8
+            "close": 3182.2
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5022.9,
-        "change_1d_pct": 2.57,
-        "change_1w_pct": 0.03,
-        "change_1m_pct": -1.03,
+        "price": 4896.1,
+        "change_1d_pct": -0.02,
+        "change_1w_pct": -2.5,
+        "change_1m_pct": -3.53,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5064.5,
@@ -151803,7 +151758,7 @@
           4983.7,
           4974.6,
           4897.2,
-          5022.9
+          4896.1
         ],
         "daily_closes": [
           {
@@ -161688,16 +161643,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 5022.9
+            "close": 4896.1
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3587.0,
-        "change_1d_pct": 4.26,
-        "change_1w_pct": 3.74,
-        "change_1m_pct": 5.98,
+        "price": 3569.7,
+        "change_1d_pct": 3.75,
+        "change_1w_pct": 3.24,
+        "change_1m_pct": 5.47,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3466.8,
@@ -161729,7 +161684,7 @@
           3488.7,
           3456.2,
           3440.6,
-          3587.0
+          3569.7
         ],
         "daily_closes": [
           {
@@ -171614,16 +171569,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 3587.0
+            "close": 3569.7
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 9914.0,
-        "change_1d_pct": 1.68,
-        "change_1w_pct": -1.62,
-        "change_1m_pct": -8.28,
+        "price": 9843.0,
+        "change_1d_pct": 0.95,
+        "change_1w_pct": -2.32,
+        "change_1m_pct": -8.93,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10377.5,
@@ -171655,7 +171610,7 @@
           10191.0,
           10025.0,
           9750.0,
-          9914.0
+          9843.0
         ],
         "daily_closes": [
           {
@@ -181540,16 +181495,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 9914.0
+            "close": 9843.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1971.3,
-        "change_1d_pct": 1.5,
-        "change_1w_pct": -0.27,
-        "change_1m_pct": 3.02,
+        "price": 1969.4,
+        "change_1d_pct": 1.4,
+        "change_1w_pct": -0.36,
+        "change_1m_pct": 2.92,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1825.2,
@@ -181581,7 +181536,7 @@
           1988.9,
           1968.9,
           1942.2,
-          1971.3
+          1969.4
         ],
         "daily_closes": [
           {
@@ -183250,16 +183205,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 1971.3
+            "close": 1969.4
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7744.0,
-        "change_1d_pct": 2.27,
-        "change_1w_pct": 1.88,
-        "change_1m_pct": 4.38,
+        "price": 7598.0,
+        "change_1d_pct": 0.34,
+        "change_1w_pct": -0.04,
+        "change_1m_pct": 2.41,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7014.5,
@@ -183291,7 +183246,7 @@
           7639.5,
           7578.0,
           7572.0,
-          7744.0
+          7598.0
         ],
         "daily_closes": [
           {
@@ -193176,16 +193131,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 7744.0
+            "close": 7598.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 354.35,
-        "change_1d_pct": 1.33,
-        "change_1w_pct": -2.82,
-        "change_1m_pct": -11.62,
+        "price": 353.2,
+        "change_1d_pct": 1.0,
+        "change_1w_pct": -3.14,
+        "change_1m_pct": -11.91,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193218,7 +193173,7 @@
           361.5,
           354.55,
           349.7,
-          354.35
+          353.2
         ],
         "daily_closes": [
           {
@@ -203103,16 +203058,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 354.35
+            "close": 353.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 433.65,
-        "change_1d_pct": 5.41,
-        "change_1w_pct": 6.53,
-        "change_1m_pct": 12.97,
+        "price": 431.9,
+        "change_1d_pct": 4.98,
+        "change_1w_pct": 6.1,
+        "change_1m_pct": 12.52,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203145,7 +203100,7 @@
           408.35,
           400.05,
           411.4,
-          433.65
+          431.9
         ],
         "daily_closes": [
           {
@@ -203766,16 +203721,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 433.65
+            "close": 431.9
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 161.52,
-        "change_1d_pct": 4.27,
-        "change_1w_pct": 1.94,
-        "change_1m_pct": -1.28,
+        "price": 160.68,
+        "change_1d_pct": 3.72,
+        "change_1w_pct": 1.41,
+        "change_1m_pct": -1.8,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           153.13,
@@ -203807,7 +203762,7 @@
           157.19,
           151.46,
           154.91,
-          161.52
+          160.68
         ],
         "daily_closes": [
           {
@@ -213692,16 +213647,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 161.52
+            "close": 160.68
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2961.0,
-        "change_1d_pct": 1.04,
-        "change_1w_pct": 5.38,
-        "change_1m_pct": 2.8,
+        "price": 2949.7,
+        "change_1d_pct": 0.65,
+        "change_1w_pct": 4.98,
+        "change_1m_pct": 2.41,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3000.2,
@@ -213733,7 +213688,7 @@
           2950.4,
           2951.8,
           2930.6,
-          2961.0
+          2949.7
         ],
         "daily_closes": [
           {
@@ -223618,16 +223573,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 2961.0
+            "close": 2949.7
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 998.6,
-        "change_1d_pct": -0.47,
-        "change_1w_pct": 2.27,
-        "change_1m_pct": 10.19,
+        "price": 988.1,
+        "change_1d_pct": -1.52,
+        "change_1w_pct": 1.19,
+        "change_1m_pct": 9.03,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           888.25,
@@ -223659,7 +223614,7 @@
           1011.7,
           1007.85,
           1003.35,
-          998.6
+          988.1
         ],
         "daily_closes": [
           {
@@ -233544,16 +233499,16 @@
           },
           {
             "date": "2026-06-25",
-            "close": 998.6
+            "close": 988.1
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 471.2,
-        "change_1d_pct": 0.44,
-        "change_1w_pct": 0.49,
-        "change_1m_pct": -1.49,
+        "price": 467.8,
+        "change_1d_pct": -0.29,
+        "change_1w_pct": -0.23,
+        "change_1m_pct": -2.21,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           517.9,
@@ -233585,7 +233540,7 @@
           474.25,
           467.75,
           469.15,
-          471.2
+          467.8
         ],
         "daily_closes": [
           {
@@ -243470,7 +243425,7 @@
           },
           {
             "date": "2026-06-25",
-            "close": 471.2
+            "close": 467.8
           }
         ]
       }
@@ -244644,10 +244599,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-25T06:49:55.399924+00:00",
+    "generated_at": "2026-06-25T11:40:49.860118+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 27,
     "groups": [
       {
         "id": "pv",
@@ -244685,23 +244640,6 @@
             ]
           },
           {
-            "title": "China's BYD ramps up battery production in Brazil",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/chinas-byd-ramps-up-battery-production-in-brazil/131779747",
-            "summary": "Chinese electric carmaker BYD is boosting battery production in Brazil. The company plans significant investment in energy storage systems to support Brazil's national grid. This expansion is part of a strategy to become Brazil's top car brand by 2030.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-16T18:06:08+00:00",
-            "published_display": "16 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Porsche's promised comeback does little to calm investors over China",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsches-promised-comeback-does-little-to-calm-investors-over-china/131948349",
             "summary": "Porsche's new CEO, Michael Leiters, has urged shareholders for patience, promising a detailed turnaround plan by October 7. Investors are demanding urgent action following a significant profit margin slump and declining sales in China.",
@@ -244731,6 +244669,21 @@
             "signal_tags": [
               "General"
             ]
+          },
+          {
+            "title": "Porsche CEO sticks to targets as he navigates road to recovery",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-ceo-sticks-to-targets-as-he-navigates-road-to-recovery/131918055",
+            "summary": "Porsche is sticking to its financial targets despite weak margins and growing pressure from key markets like China and the US. CEO Michael Leiters is expected to acknowledge near-term challenges, including tariffs and competition, while confirming the 2026 outlook and outlining a recovery plan due in October.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-22T18:15:27+00:00",
+            "published_display": "22 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
           }
         ]
       },
@@ -244738,6 +244691,21 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "150cc to 200cc Motorcycle Sales May 2026 \u2013 Apache, Pulsar, Unicorn, FZ, R15, MT15, XSR, SP160",
+            "url": "https://www.rushlane.com/150cc-to-200cc-motorcycle-sales-may-2026-apache-pulsar-unicorn-12549827.html",
+            "summary": "The 150cc-200cc motorcycle segment recorded healthy growth in May 2026, with total domestic sales rising to 1,92,576 units The post 150cc to 200cc Motorcycle Sales May 2026 \u2013 Apache, Pulsar, Unicorn, FZ, R15, MT15, XSR, SP160 appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-25T10:06:09+00:00",
+            "published_display": "25 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "New Honda Vario Evo 160 Launch Price IDR 28.5 M (Rs 1.49 L) \u2013 Aerox Rival",
             "url": "https://www.rushlane.com/new-honda-vario-evo-160-launch-price-idr-28-5-m-rs-1-49-l-aerox-rival-12549786.html",
@@ -244786,19 +244754,18 @@
             ]
           },
           {
-            "title": "Motovolt Deploys Over 200 MVS7 Electric Vehicles Through GBG EV Partnership in Delhi NCR",
-            "url": "https://www.autocarpro.in/NEWS/motovolt-deploys-over-200-mvs7-electric-vehicles-through-gbg-ev-partnership-in-delhi-ncr-133095",
-            "summary": "Motovolt Mobility has expanded its partnership with electric vehicle fleet rental operator GBG EV, deploying more than 200 units of its MVS7 electric two-wheelers for last-mile delivery operations across Delhi NCR. The vehicles are equipped with battery-swapping technology supplied by Indofast.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-16T11:58:10+00:00",
-            "published_display": "16 Jun 2026",
+            "title": "Hero Patents New Budget Commuter Bike \u2013 Likely For Export Markets",
+            "url": "https://www.rushlane.com/hero-patents-new-budget-commuter-bike-likely-for-export-markets-12549751.html",
+            "summary": "Hero MotoCorp has filed a design patent for a new commuter motorcycle in India, revealing what appears to be a rugged, utility-focused model The post Hero Patents New Budget Commuter Bike \u2013 Likely For Export Markets appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-25T08:07:55+00:00",
+            "published_display": "25 Jun 2026",
             "importance_score": 5,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "Two-Wheelers"
             ],
             "signal_tags": [
-              "Supply Chain / Components"
+              "General"
             ]
           }
         ]
@@ -244879,6 +244846,22 @@
             ]
           },
           {
+            "title": "Tata Motors to invest up to \u20b940,000 crore by FY31",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-to-invest-up-to-40000-crore-by-fy31/131953210",
+            "summary": "The company targets a 20% domestic market share by FY31, with electric and CNG vehicles driving significant growth. This ambitious plan includes expanding its EV lineup and enhancing battery technology to address adoption barriers, positioning Tata Motors for a multi-powertrain future.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-24T02:42:49+00:00",
+            "published_display": "24 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Tata Motors, Mahindra grab top two spots in ICCT's Global Automaker Ranking 2025 for EV energy efficiency",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-and-mahindra-top-iccts-global-automaker-ranking-for-ev-energy-efficiency-2025/131909047",
             "summary": "The report says stronger regulations and faster EV adoption could help India reduce oil imports, improve energy security and boost domestic manufacturing.",
@@ -244908,23 +244891,6 @@
             "signal_tags": [
               "General"
             ]
-          },
-          {
-            "title": "Uno Minda gets MHI nod for Hong Kong-based Inovance's investment in EV JV",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/uno-minda-gets-mhi-nod-for-hong-kong-based-inovances-investment-in-ev-jv/131877156",
-            "summary": "The approval under Press Note 3 marks a key milestone for the \u20b9423-crore venture focused on high-voltage EV powertrain components.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-20T13:22:41+00:00",
-            "published_display": "20 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -244951,19 +244917,19 @@
             ]
           },
           {
-            "title": "Skoda Peaq Electric SUV Debuts \u2013 91 kWh, 299 bhp, 647 km Range",
-            "url": "https://www.rushlane.com/skoda-peaq-electric-suv-debuts-91-kwh-299-bhp-647-km-range-12549732.html",
-            "summary": "Skoda Peaq electric SUV has just made its global debut, promising up to 647 km of range from its 91 kWh battery pack The post Skoda Peaq Electric SUV Debuts \u2013 91 kWh, 299 bhp, 647 km Range appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-06-24T10:25:11+00:00",
-            "published_display": "24 Jun 2026",
+            "title": "JSW Green Mobility invests in Lithium Urban Technologies",
+            "url": "https://evreporter.com/jsw-green-mobility-invests-in-lithium-urban-technologies",
+            "summary": "The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter . JSW Green Mobility has announced a strategic investment in Lithium Urban Technologies, an enterprise mobility platform backed by Eversource Capital. The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-25T11:07:25+00:00",
+            "published_display": "25 Jun 2026",
             "importance_score": 8,
             "segment_tags": [
-              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
+              "Capacity / Capex",
+              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           },
@@ -245005,18 +244971,18 @@
             ]
           },
           {
-            "title": "Tata Motors to invest up to \u20b940,000 crore by FY31",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-to-invest-up-to-40000-crore-by-fy31/131953210",
-            "summary": "The company targets a 20% domestic market share by FY31, with electric and CNG vehicles driving significant growth. This ambitious plan includes expanding its EV lineup and enhancing battery technology to address adoption barriers, positioning Tata Motors for a multi-powertrain future.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-24T02:42:49+00:00",
-            "published_display": "24 Jun 2026",
+            "title": "India poised to clear Renault-Geely JV's $370 million hybrid engine manufacturing project: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/india-poised-to-clear-renault-geely-jvs-370-million-hybrid-engine-manufacturing-project-report/131988283",
+            "summary": "The proposal would allow Horse Powertrain to invest in Renault\u2019s manufacturing operations in India and produce hybrid engines and powertrains locally.",
+            "source": "ET Auto Components",
+            "published_at": "2026-06-25T08:32:50+00:00",
+            "published_display": "25 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV",
               "Components"
             ],
             "signal_tags": [
+              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           }
@@ -245130,9 +245096,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 39,
-      "filtered_low_signal": 3,
-      "kept_articles": 67
+      "unmapped_articles": 41,
+      "filtered_low_signal": 2,
+      "kept_articles": 68
     }
   },
   "qa": [
