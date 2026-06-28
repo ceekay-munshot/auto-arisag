@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T11:09:43.439651+00:00",
+  "generated_at": "2026-06-28T16:13:21.021560+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121399,11 +121399,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.3,
+        "value": 94.39,
         "unit": "\u20b9",
-        "delta_value": -0.1004,
-        "delta_label": "-0.03% in last week (Yahoo Finance)",
-        "delta_tone": "positive",
+        "delta_value": -0.0154,
+        "delta_label": "+0.06% in last week (Yahoo Finance)",
+        "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -131817,8 +131817,8 @@
             "close": 94.4004
           },
           {
-            "date": "2026-06-26",
-            "close": 94.3
+            "date": "2026-06-28",
+            "close": 94.385
           }
         ]
       }
@@ -244570,7 +244570,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-28T11:08:57.064109+00:00",
+    "generated_at": "2026-06-28T16:12:30.416389+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -244579,6 +244579,40 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "Volkswagen key shareholder pitches producing Chinese car models in Germany",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-key-shareholder-pitches-producing-chinese-car-models-in-germany/132050532",
+            "summary": "This comes amid reports of potential factory closures and significant job cuts at the automaker. The move could foster innovation and stabilize employment, countering the trend of production shifting abroad. Porsche is also reportedly considering bringing Cayenne SUV production back to Germany.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-28T11:57:28+00:00",
+            "published_display": "28 Jun 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Force Motors Assembles 200,000th Mercedes-Benz Engine at Chakan Manufacturing Facility",
+            "url": "https://www.autocarpro.in/NEWS/force-motors-assembles-200000th-mercedes-benz-engine-at-chakan-manufacturing-facility-133128",
+            "summary": "Force Motors Limited has completed the assembly of its 200,000th engine for Mercedes-Benz India at its dedicated powertrain manufacturing facility in Chakan, Pune. The milestone unit, a six-cylinder M256 engine, was allocated for installation into a Mercedes-Benz GLS 450 luxury SUV.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-17T17:54:18+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Components",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-expands-into-uzbekistans-booming-auto-market-with-china-supplied-cars/131930757",
@@ -244624,38 +244658,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "After 5-year hot run, luxe car sales may slow down",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/after-5-year-hot-run-luxe-car-sales-may-slow-down/132027676",
-            "summary": "Luxury carmakers have also increased prices, further impacting demand. This contrasts sharply with the booming mass-market segment, highlighting a shift in buyer sentiment among the wealthy.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-27T02:40:33+00:00",
-            "published_display": "27 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Bosch names Christian Fischer as CEO from July 1 in surprise exit of Stefan Hartung",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/christian-fischer-named-new-ceo-of-bosch-in-surprise-leadership-shake-up/132016817",
-            "summary": "In a surprising move, Bosch, the world's largest car parts supplier, announced Christian Fischer will take over as CEO on July 1, succeeding Stefan Hartung. Hartung, who recently had his contract extended, is stepping down after leading the company through a challenging period marked by a profit slump.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-26T12:58:19+00:00",
-            "published_display": "26 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -244867,12 +244869,12 @@
             ]
           },
           {
-            "title": "Uno Minda gets MHI nod for Hong Kong-based Inovance's investment in EV JV",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/uno-minda-gets-mhi-nod-for-hong-kong-based-inovances-investment-in-ev-jv/131877156",
-            "summary": "The approval under Press Note 3 marks a key milestone for the \u20b9423-crore venture focused on high-voltage EV powertrain components.",
+            "title": "India readies \u20b912,000 crore push for local battery component manufacturing",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/india-readies-12000-crore-push-for-local-battery-component-manufacturing/131815677",
+            "summary": "India is set to launch a new incentive scheme to boost local manufacturing of advanced cell battery components. This initiative aims to reduce import dependence for crucial materials like cathode and anode active materials, electrolysers, and copper foil separators.",
             "source": "ET Auto Components",
-            "published_at": "2026-06-20T13:22:41+00:00",
-            "published_display": "20 Jun 2026",
+            "published_at": "2026-06-18T02:35:42+00:00",
+            "published_display": "18 Jun 2026",
             "importance_score": 7,
             "segment_tags": [
               "EV",
@@ -244880,7 +244882,10 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
-              "Supply Chain / Components"
+              "Policy / Regulation",
+              "Product / Launch",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
             ]
           }
         ]
@@ -244904,6 +244909,23 @@
             ],
             "signal_tags": [
               "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tata Motors Passenger Vehicles to accelerate EV push with 4 new models, 10+ refreshes by FY31",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-passenger-vehicles-to-accelerate-ev-push-with-4-new-models-10-refreshes-by-fy31/132049538",
+            "summary": "The expansion includes models like the Sierra.ev and vehicles based on the Avinya concept, alongside significant improvements in battery range and charging speed.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-28T10:50:54+00:00",
+            "published_display": "28 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           },
@@ -244956,24 +244978,6 @@
               "Funding / M&A",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Force Motors Assembles 200,000th Mercedes-Benz Engine at Chakan Manufacturing Facility",
-            "url": "https://www.autocarpro.in/NEWS/force-motors-assembles-200000th-mercedes-benz-engine-at-chakan-manufacturing-facility-133128",
-            "summary": "Force Motors Limited has completed the assembly of its 200,000th engine for Mercedes-Benz India at its dedicated powertrain manufacturing facility in Chakan, Pune. The milestone unit, a six-cylinder M256 engine, was allocated for installation into a Mercedes-Benz GLS 450 luxury SUV.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-17T17:54:18+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -244981,26 +244985,6 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
-          {
-            "title": "India readies \u20b912,000 crore push for local battery component manufacturing",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/india-readies-12000-crore-push-for-local-battery-component-manufacturing/131815677",
-            "summary": "India is set to launch a new incentive scheme to boost local manufacturing of advanced cell battery components. This initiative aims to reduce import dependence for crucial materials like cathode and anode active materials, electrolysers, and copper foil separators.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-18T02:35:42+00:00",
-            "published_display": "18 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
-              "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
           {
             "title": "Heavy Industries Ministry Extends Global Tender Deadline for Rare Earth Magnet Manufacturing Scheme",
             "url": "https://www.autocarpro.in/NEWS/heavy-industries-ministry-extends-global-tender-deadline-for-rare-earth-magnet-manufacturing-scheme-133240",
@@ -245066,6 +245050,23 @@
               "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Customs Department Levies \u20b997.6 Lakh Tax and Penalty Order on Uno Minda",
+            "url": "https://www.autocarpro.in/NEWS/customs-department-levies-\u20b9976-lakh-tax-and-penalty-order-on-uno-minda-133130",
+            "summary": "Uno Minda Limited has received an official assessment order from the Office of the Commissioner of Customs demanding payment for unpaid anti-dumping duties related to the import of industrial machinery. The regulatory disclosure, submitted to the domestic stock exchanges on June 17, 2026, outlines an aggregate monetary demand of 97.62 lakh rupees.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-17T18:25:31+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Filing / Disclosure",
+              "Supply Chain / Components"
+            ]
           }
         ]
       }
@@ -245088,7 +245089,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 59,
+      "unmapped_articles": 58,
       "filtered_low_signal": 2,
       "kept_articles": 86
     }
