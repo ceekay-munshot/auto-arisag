@@ -1,8 +1,8 @@
 {
   "available": true,
-  "generated_at": "2026-06-27T16:06:31.438756+00:00",
+  "generated_at": "2026-06-29T08:14:23.329248+00:00",
   "window_days": 30,
-  "item_count": 4,
+  "item_count": 2,
   "items": [
     {
       "title": "BMW launches X6 M60i xDrive at ₹1.77 crore with 530 hp mild-hybrid V8",
@@ -22,21 +22,6 @@
       "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1153105/132014178.cms"
     },
     {
-      "title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion",
-      "summary": "Volkswagen has officially launched its Volkswagen and Jetta brands in Uzbekistan, a significant move marking its first export market managed entirely through its China operations.",
-      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-expands-into-uzbekistans-booming-auto-market-with-china-supplied-cars/131930757",
-      "source": "ET Auto Passenger Vehicles",
-      "published_at": "2026-06-23T08:13:55+00:00",
-      "published_display": "23 Jun 2026",
-      "company": "Volkswagen India",
-      "tone": "pv",
-      "scope": "tracked",
-      "segment_tags": [
-        "Passenger Vehicles"
-      ],
-      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-353762/131930757.cms"
-    },
-    {
       "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
       "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
       "url": "https://auto.economictimes.indiatimes.com/news/auto-components/force-motors-rolls-out-200000th-mercedes-benz-engine-in-india/131803570",
@@ -50,21 +35,6 @@
         "Luxury"
       ],
       "image_url": "https://etimg.etb2bimg.com/thumb/img-size-138284/131803570.cms"
-    },
-    {
-      "title": "Mercedes-Benz launches first S-Class plug-in hybrid in India at ₹2.20 crore",
-      "summary": "The post Mercedes-Benz launches first S-Class plug-in hybrid in India at ₹2.20 crore appeared first at EVreporter on EVreporter . Mercedes-Benz India has introduced the S 450 e, bringing a plug-in hybrid option to the S-Class range in India for The post Mercedes-Benz launches first S-Class plug-in hybrid in India at ₹2.20 crore appeared first at EVreporter on EVreporter .",
-      "url": "https://evreporter.com/mercedes-benz-launches-first-s-class-plug-in-hybrid-in-india-at-%e2%82%b92-20-crore",
-      "source": "EVReporter",
-      "published_at": "2026-06-15T09:51:06+00:00",
-      "published_display": "15 Jun 2026",
-      "company": "Mercedes-Benz India",
-      "tone": "pv",
-      "scope": "tracked",
-      "segment_tags": [
-        "Luxury"
-      ],
-      "image_url": null
     }
   ],
   "companies": [
@@ -77,24 +47,16 @@
       "latest_title": "BMW launches X6 M60i xDrive at ₹1.77 crore with 530 hp mild-hybrid V8"
     },
     {
-      "company": "Volkswagen India",
-      "tone": "pv",
-      "scope": "tracked",
-      "count": 1,
-      "latest_published_at": "2026-06-23T08:13:55+00:00",
-      "latest_title": "Volkswagen launches China-supplied cars in Uzbekistan, eyes growth markets expansion"
-    },
-    {
       "company": "Mercedes-Benz India",
       "tone": "pv",
       "scope": "tracked",
-      "count": 2,
+      "count": 1,
       "latest_published_at": "2026-06-17T14:07:02+00:00",
       "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
     }
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6
+    "sources_live": 4
   }
 }
