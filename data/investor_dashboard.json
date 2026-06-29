@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T08:14:43.355534+00:00",
+  "generated_at": "2026-06-29T13:09:58.116037+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,7 +121182,7 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-06-29T08:14:23.329248+00:00",
+      "generated_at": "2026-06-29T13:09:34.008352+00:00",
       "window_days": 30,
       "item_count": 2,
       "items": [
@@ -121204,19 +121204,19 @@
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1153105/132014178.cms"
         },
         {
-          "title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India",
-          "summary": "The 200,000th unit, a six-cylinder M256 engine, has been fitted into a Mercedes-Benz GLS 450, the company said.",
-          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/force-motors-rolls-out-200000th-mercedes-benz-engine-in-india/131803570",
-          "source": "ET Auto Components",
-          "published_at": "2026-06-17T14:07:02+00:00",
-          "published_display": "17 Jun 2026",
+          "title": "Mercedes-Benz launches first S-Class plug-in hybrid in India at \u20b92.20 crore",
+          "summary": "The post Mercedes-Benz launches first S-Class plug-in hybrid in India at \u20b92.20 crore appeared first at EVreporter on EVreporter . Mercedes-Benz India has introduced the S 450 e, bringing a plug-in hybrid option to the S-Class range in India for The post Mercedes-Benz launches first S-Class plug-in hybrid in India at \u20b92.20 crore appeared first at EVreporter on EVreporter .",
+          "url": "https://evreporter.com/mercedes-benz-launches-first-s-class-plug-in-hybrid-in-india-at-%e2%82%b92-20-crore",
+          "source": "EVReporter",
+          "published_at": "2026-06-15T09:51:06+00:00",
+          "published_display": "15 Jun 2026",
           "company": "Mercedes-Benz India",
           "tone": "pv",
           "scope": "tracked",
           "segment_tags": [
             "Luxury"
           ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-138284/131803570.cms"
+          "image_url": null
         }
       ],
       "companies": [
@@ -121233,8 +121233,8 @@
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-06-17T14:07:02+00:00",
-          "latest_title": "Force Motors rolls out 200,000th Mercedes-Benz engine in India"
+          "latest_published_at": "2026-06-15T09:51:06+00:00",
+          "latest_title": "Mercedes-Benz launches first S-Class plug-in hybrid in India at \u20b92.20 crore"
         }
       ],
       "source_meta": {
@@ -121361,10 +121361,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.38,
+        "value": 94.53,
         "unit": "\u20b9",
-        "delta_value": -0.0179,
-        "delta_label": "+0.06% in last week (Yahoo Finance)",
+        "delta_value": 0.1296,
+        "delta_label": "+0.21% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131772,7 +131772,7 @@
           },
           {
             "date": "2026-06-29",
-            "close": 94.3825
+            "close": 94.53
           }
         ]
       }
@@ -131787,10 +131787,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13420.0,
-        "change_1d_pct": -2.36,
-        "change_1w_pct": 0.19,
-        "change_1m_pct": 0.42,
+        "price": 13412.0,
+        "change_1d_pct": -2.42,
+        "change_1w_pct": 0.13,
+        "change_1m_pct": 0.36,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13016.0,
@@ -131822,7 +131822,7 @@
           13451.0,
           13248.0,
           13745.0,
-          13420.0
+          13412.0
         ],
         "daily_closes": [
           {
@@ -141703,16 +141703,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 13420.0
+            "close": 13412.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3087.0,
-        "change_1d_pct": -2.99,
-        "change_1w_pct": 0.4,
-        "change_1m_pct": -1.11,
+        "price": 3093.0,
+        "change_1d_pct": -2.8,
+        "change_1w_pct": 0.59,
+        "change_1m_pct": -0.92,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3083.7,
@@ -141744,7 +141744,7 @@
           3037.3,
           3064.5,
           3182.2,
-          3087.0
+          3093.0
         ],
         "daily_closes": [
           {
@@ -151625,16 +151625,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 3087.0
+            "close": 3093.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4802.3,
-        "change_1d_pct": -1.92,
-        "change_1w_pct": -3.47,
-        "change_1m_pct": -5.37,
+        "price": 4813.6,
+        "change_1d_pct": -1.69,
+        "change_1w_pct": -3.24,
+        "change_1m_pct": -5.15,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4957.0,
@@ -151666,7 +151666,7 @@
           4974.6,
           4897.2,
           4896.1,
-          4802.3
+          4813.6
         ],
         "daily_closes": [
           {
@@ -161547,16 +161547,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 4802.3
+            "close": 4813.6
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3437.1,
-        "change_1d_pct": -3.71,
-        "change_1w_pct": -0.17,
-        "change_1m_pct": 1.55,
+        "price": 3456.8,
+        "change_1d_pct": -3.16,
+        "change_1w_pct": 0.4,
+        "change_1m_pct": 2.13,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3291.0,
@@ -161588,7 +161588,7 @@
           3456.2,
           3440.6,
           3569.7,
-          3437.1
+          3456.8
         ],
         "daily_closes": [
           {
@@ -171469,16 +171469,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 3437.1
+            "close": 3456.8
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 9638.0,
-        "change_1d_pct": -2.08,
-        "change_1w_pct": -4.25,
-        "change_1m_pct": -10.83,
+        "price": 9630.0,
+        "change_1d_pct": -2.16,
+        "change_1w_pct": -4.33,
+        "change_1m_pct": -10.9,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10198.5,
@@ -171510,7 +171510,7 @@
           10025.0,
           9750.0,
           9843.0,
-          9638.0
+          9630.0
         ],
         "daily_closes": [
           {
@@ -181391,16 +181391,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 9638.0
+            "close": 9630.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1905.4,
-        "change_1d_pct": -3.25,
-        "change_1w_pct": -3.44,
-        "change_1m_pct": -0.43,
+        "price": 1892.6,
+        "change_1d_pct": -3.9,
+        "change_1w_pct": -4.08,
+        "change_1m_pct": -1.1,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1781.9,
@@ -181432,7 +181432,7 @@
           1968.9,
           1942.2,
           1969.4,
-          1905.4
+          1892.6
         ],
         "daily_closes": [
           {
@@ -183105,16 +183105,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 1905.4
+            "close": 1892.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7378.5,
-        "change_1d_pct": -2.89,
-        "change_1w_pct": -3.05,
-        "change_1m_pct": -0.55,
+        "price": 7426.0,
+        "change_1d_pct": -2.26,
+        "change_1w_pct": -2.43,
+        "change_1m_pct": 0.09,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           6913.0,
@@ -183146,7 +183146,7 @@
           7578.0,
           7572.0,
           7598.0,
-          7378.5
+          7426.0
         ],
         "daily_closes": [
           {
@@ -193027,16 +193027,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 7378.5
+            "close": 7426.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 346.3,
-        "change_1d_pct": -1.95,
-        "change_1w_pct": -3.67,
-        "change_1m_pct": -13.63,
+        "price": 345.05,
+        "change_1d_pct": -2.31,
+        "change_1w_pct": -4.02,
+        "change_1m_pct": -13.94,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193069,7 +193069,7 @@
           354.55,
           349.7,
           353.2,
-          346.3
+          345.05
         ],
         "daily_closes": [
           {
@@ -202950,16 +202950,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 346.3
+            "close": 345.05
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 422.45,
-        "change_1d_pct": -2.19,
-        "change_1w_pct": 5.06,
-        "change_1m_pct": 10.06,
+        "price": 423.1,
+        "change_1d_pct": -2.04,
+        "change_1w_pct": 5.22,
+        "change_1m_pct": 10.23,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -202992,7 +202992,7 @@
           400.05,
           411.4,
           431.9,
-          422.45
+          423.1
         ],
         "daily_closes": [
           {
@@ -203617,16 +203617,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 422.45
+            "close": 423.1
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 157.06,
-        "change_1d_pct": -2.25,
-        "change_1w_pct": 0.26,
-        "change_1m_pct": -4.01,
+        "price": 157.36,
+        "change_1d_pct": -2.07,
+        "change_1w_pct": 0.45,
+        "change_1m_pct": -3.83,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           151.14,
@@ -203658,7 +203658,7 @@
           151.46,
           154.91,
           160.68,
-          157.06
+          157.36
         ],
         "daily_closes": [
           {
@@ -213539,16 +213539,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 157.06
+            "close": 157.36
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2939.1,
-        "change_1d_pct": -0.36,
-        "change_1w_pct": 4.18,
-        "change_1m_pct": 2.04,
+        "price": 2897.2,
+        "change_1d_pct": -1.78,
+        "change_1w_pct": 2.69,
+        "change_1m_pct": 0.58,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2971.0,
@@ -213580,7 +213580,7 @@
           2951.8,
           2930.6,
           2949.7,
-          2939.1
+          2897.2
         ],
         "daily_closes": [
           {
@@ -223461,16 +223461,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 2939.1
+            "close": 2897.2
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 985.1,
+        "price": 985.15,
         "change_1d_pct": -0.3,
         "change_1w_pct": 0.97,
-        "change_1m_pct": 8.7,
+        "change_1m_pct": 8.71,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           880.8,
@@ -223502,7 +223502,7 @@
           1007.85,
           1003.35,
           988.1,
-          985.1
+          985.15
         ],
         "daily_closes": [
           {
@@ -233383,16 +233383,16 @@
           },
           {
             "date": "2026-06-29",
-            "close": 985.1
+            "close": 985.15
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 460.9,
-        "change_1d_pct": -1.47,
-        "change_1w_pct": -2.75,
-        "change_1m_pct": -3.65,
+        "price": 474.85,
+        "change_1d_pct": 1.51,
+        "change_1w_pct": 0.19,
+        "change_1m_pct": -0.73,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           506.65,
@@ -233424,7 +233424,7 @@
           467.75,
           469.15,
           467.8,
-          460.9
+          474.85
         ],
         "daily_closes": [
           {
@@ -243305,7 +243305,7 @@
           },
           {
             "date": "2026-06-29",
-            "close": 460.9
+            "close": 474.85
           }
         ]
       }
@@ -244488,10 +244488,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-06-29T08:14:00.373864+00:00",
+    "generated_at": "2026-06-29T13:09:08.941249+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 27,
     "groups": [
       {
         "id": "pv",
@@ -244511,6 +244511,40 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Force Motors Assembles 200,000th Mercedes-Benz Engine at Chakan Manufacturing Facility",
+            "url": "https://www.autocarpro.in/NEWS/force-motors-assembles-200000th-mercedes-benz-engine-at-chakan-manufacturing-facility-133128",
+            "summary": "Force Motors Limited has completed the assembly of its 200,000th engine for Mercedes-Benz India at its dedicated powertrain manufacturing facility in Chakan, Pune. The milestone unit, a six-cylinder M256 engine, was allocated for installation into a Mercedes-Benz GLS 450 luxury SUV.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-06-17T17:54:18+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Components",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "VinFast bets on local manufacturing, retail network to tap India's growing EV market",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/vinfast-expands-electric-vehicle-ecosystem-in-india-through-local-manufacturing-and-retail-networks/132072263",
+            "summary": "The company said its strategy extends beyond launching electric vehicles to building an ecosystem around ownership, as improving economics, increasing model availability and expanding charging infrastructure support India's transition towards electric mobility.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-06-29T07:37:00+00:00",
+            "published_display": "29 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -244543,38 +244577,6 @@
               "Capacity / Capex",
               "Product / Launch"
             ]
-          },
-          {
-            "title": "In top gear: Electric passenger vehicle sales may cross 3 lakhs in 2026",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/in-top-gear-electric-passenger-vehicle-sales-may-cross-3-lakhs-in-2026/132061376",
-            "summary": "This surge is fueled by an expanding model range, particularly in the affordable segment, and advancements easing range anxiety. Extended battery warranties and evolving ownership models are also boosting consumer confidence, while rising fuel prices further enhance EVs' cost-competitiveness.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-29T02:31:51+00:00",
-            "published_display": "29 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Geely\u2019s Lotus EVs to enter Canada next month under China\u2013Canada tariff deal, says ambassador",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/geelys-lotus-evs-to-enter-canada-next-month-under-chinacanada-tariff-deal-says-ambassador/132030265",
-            "summary": "Lotus electric vehicles from Geely Holding Group are set to launch in Canada next month, marking the first Chinese-owned and manufactured cars under a new trade agreement.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-27T06:57:26+00:00",
-            "published_display": "27 Jun 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
           }
         ]
       },
@@ -244582,6 +244584,54 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Ampere launches Reo VYB low-speed electric scooter at \u20b969,499",
+            "url": "https://evreporter.com/ampere-launches-reo-vyb-low-speed-electric-scooter-at-%e2%82%b969499",
+            "summary": "The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter . Ampere, the electric two-wheeler brand of Greaves Electric Mobility, has launched the Reo VYB low-speed electric scooter at an introductory The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-17T09:12:46+00:00",
+            "published_display": "17 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "TVS Sales Breakup May 2026 \u2013 Jupiter, Apache, XL, iQube, Raider, Ntorq, Radeon, Sport",
+            "url": "https://www.rushlane.com/tvs-sales-breakup-may-2026-jupiter-apache-xl-iqube-12550038.html",
+            "summary": "TVS Motor Company reported strong domestic 2W sales performance in May 2026, registering sales of 3,84,565 units, compared to 3,09,287 units sold in May 2025 The post TVS Sales Breakup May 2026 \u2013 Jupiter, Apache, XL, iQube, Raider, Ntorq, Radeon, Sport appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-28T07:41:29+00:00",
+            "published_display": "28 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital",
+            "url": "https://evreporter.com/speedioo-raises-%e2%82%b910-crore-in-seed-funding-round-led-by-atomic-capital",
+            "summary": "The post Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital appeared first at EVreporter on EVreporter . Speedioo, a consumer technology platform operating in the used two-wheeler segment, has raised \u20b910 crore in a seed funding round The post Speedioo raises \u20b910 crore in seed funding round led by Atomic Capital appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-16T11:31:43+00:00",
+            "published_display": "16 Jun 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Bharat Seats Targets Rs 1,000 Crore in Supplies for Suzuki Motorcycle's Expanding Business",
             "url": "https://www.autocarpro.in/NEWS/bharat-seats-targets-rs-1000-crore-in-supplies-for-suzuki-motorcycles-expanding-business-133242",
@@ -244604,38 +244654,6 @@
             "source": "ET Auto Components",
             "published_at": "2026-06-19T02:33:39+00:00",
             "published_display": "19 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Brembo, Ningbo SAFE Form Joint Venture To Manufacture Motorcycle ABS Systems In India",
-            "url": "https://www.autocarpro.in/NEWS/brembo-ningbo-safe-form-joint-venture-to-manufacture-motorcycle-abs-systems-in-india-133109",
-            "summary": "Brembo and China's Ningbo SAFE Brakes Systems have signed a joint venture agreement to establish a new company, BRSF Active Safety Solutions, focused on the production of anti-lock braking systems (ABS) for motorcycles in India. The venture aims to address growing demand for advanced braking technologies in the country's two-wheeler market, which accounts for up to 25 million registered vehicles annually.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-17T12:57:05+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Motovolt Deploys Over 200 MVS7 Electric Vehicles Through GBG EV Partnership in Delhi NCR",
-            "url": "https://www.autocarpro.in/NEWS/motovolt-deploys-over-200-mvs7-electric-vehicles-through-gbg-ev-partnership-in-delhi-ncr-133095",
-            "summary": "Motovolt Mobility has expanded its partnership with electric vehicle fleet rental operator GBG EV, deploying more than 200 units of its MVS7 electric two-wheelers for last-mile delivery operations across Delhi NCR. The vehicles are equipped with battery-swapping technology supplied by Indofast.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-16T11:58:10+00:00",
-            "published_display": "16 Jun 2026",
             "importance_score": 5,
             "segment_tags": [
               "Two-Wheelers",
@@ -244689,20 +244707,19 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "Ferrari names new marketing chief after Luce EV debut",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ferrari-names-new-marketing-chief-after-luce-ev-debut/131948790",
-            "summary": "Ferrari has appointed Massimiliano Di Silvestre, formerly of BMW Italy, as its new chief marketing and commercial officer, replacing Enrico Galliera after 16 years. Di Silvestre, with over two decades of automotive experience, will join Ferrari's leadership team on July 1.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-06-23T19:00:35+00:00",
-            "published_display": "23 Jun 2026",
-            "importance_score": 9,
+            "title": "Bajaj Sales Breakup May 2026 \u2013 Pulsar, Chetak, Platina, CT, Avenger, Dominar, Freedom",
+            "url": "https://www.rushlane.com/bajaj-sales-breakup-may-2026-pulsar-chetak-platina-ct-12550048.html",
+            "summary": "Chetak electric scooter and Pulsar range continues to drive Bajaj\u2019s domestic sales growth, while entry-level commuter motorcycles witness a decline The post Bajaj Sales Breakup May 2026 \u2013 Pulsar, Chetak, Platina, CT, Avenger, Dominar, Freedom appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-06-29T03:51:41+00:00",
+            "published_display": "29 Jun 2026",
+            "importance_score": 8,
             "segment_tags": [
-              "EV",
-              "Luxury"
+              "Two-Wheelers",
+              "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Management / Governance"
+              "Monthly Sales / Demand"
             ]
           },
           {
@@ -244719,6 +244736,22 @@
             ],
             "signal_tags": [
               "Funding / M&A"
+            ]
+          },
+          {
+            "title": "N.A.N GreenMet and Silox Form Joint Venture for Battery Recycling and Critical Minerals Recovery",
+            "url": "https://evreporter.com/greenmet-and-silox-form-joint-venture-for-battery-recycling-and-critical-minerals-recovery",
+            "summary": "The post N.A.N GreenMet and Silox Form Joint Venture for Battery Recycling and Critical Minerals Recovery appeared first at EVreporter on EVreporter . N.A.N GreenMet, founded by Navin Agarwal, and Silox have formed a 50:50 joint venture called NAN Silox GreenMet Pvt.",
+            "source": "EVReporter",
+            "published_at": "2026-06-26T07:03:38+00:00",
+            "published_display": "26 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -244753,23 +244786,6 @@
               "Capacity / Capex",
               "Policy / Regulation",
               "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Endurance Technologies Commences Commercial Output at Mindewadi Battery Pack Plant",
-            "url": "https://www.autocarpro.in/NEWS/endurance-technologies-commences-commercial-output-at-mindewadi-battery-pack-plant-133133",
-            "summary": "Endurance Technologies Limited has commenced commercial production of lithium ion battery packs at its newly constructed greenfield manufacturing facility in Mindewadi, located in the Maval taluka of Pune district, Maharashtra. The operational milestone follows a capital expenditure approval originally finalized by the company board of directors on 29 April 2025.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-17T20:30:13+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
@@ -244832,37 +244848,36 @@
             ]
           },
           {
-            "title": "Force Motors Assembles 200,000th Mercedes-Benz Engine at Chakan Manufacturing Facility",
-            "url": "https://www.autocarpro.in/NEWS/force-motors-assembles-200000th-mercedes-benz-engine-at-chakan-manufacturing-facility-133128",
-            "summary": "Force Motors Limited has completed the assembly of its 200,000th engine for Mercedes-Benz India at its dedicated powertrain manufacturing facility in Chakan, Pune. The milestone unit, a six-cylinder M256 engine, was allocated for installation into a Mercedes-Benz GLS 450 luxury SUV.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-17T17:54:18+00:00",
-            "published_display": "17 Jun 2026",
+            "title": "JSW Green Mobility invests in Lithium Urban Technologies",
+            "url": "https://evreporter.com/jsw-green-mobility-invests-in-lithium-urban-technologies",
+            "summary": "The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter . JSW Green Mobility has announced a strategic investment in Lithium Urban Technologies, an enterprise mobility platform backed by Eversource Capital. The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-25T11:07:25+00:00",
+            "published_display": "25 Jun 2026",
             "importance_score": 8,
             "segment_tags": [
-              "Passenger Vehicles",
-              "Components",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Auto ancillary sector revenue grew 12.5% in FY26 on volume gains and improved product mix: Report",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/auto-ancillary-sector-revenue-grew-12-5-in-fy26-on-volume-gains-and-improved-product-mix-report/132063665",
-            "summary": "While EBITDA also climbed, operating margins held steady. Looking ahead, the demand outlook remains positive across various vehicle segments, though rising input costs pose a near-term challenge. Companies are focusing on expansion strategies to drive future outperformance.",
-            "source": "ET Auto Components",
-            "published_at": "2026-06-29T05:16:07+00:00",
-            "published_display": "29 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Components"
+              "EV"
             ],
             "signal_tags": [
               "Capacity / Capex",
               "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Spiro closes $270 million funding round with $55 million investment from NewTrails Capital",
+            "url": "https://evreporter.com/spiro-closes-270-million-funding-round-with-55-million-investment-from-newtrails-capital",
+            "summary": "The post Spiro closes $270 million funding round with $55 million investment from NewTrails Capital appeared first at EVreporter on EVreporter . African EV platform Spiro has announced the closing of its latest funding round at $270 million, following a $55 million investment The post Spiro closes $270 million funding round with $55 million investment from NewTrails Capital appeared first at EVreporter on EVreport...",
+            "source": "EVReporter",
+            "published_at": "2026-06-22T09:01:43+00:00",
+            "published_display": "22 Jun 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A",
               "Supply Chain / Components"
             ]
           }
@@ -244962,23 +244977,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
-      "Autocar Professional Components"
+      "Autocar Professional Components",
+      "RushLane",
+      "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 4,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane",
-        "EVReporter"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 40,
+      "unmapped_articles": 61,
       "filtered_low_signal": 2,
-      "kept_articles": 59
+      "kept_articles": 86
     }
   },
   "qa": [
