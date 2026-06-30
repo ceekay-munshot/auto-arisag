@@ -1,15 +1,7 @@
 {
-  "as_of_date": "2026-06-29",
+  "as_of_date": "2026-06-30",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
-    {
-      "company": "TVS Motor",
-      "ticker": "TVSMOTOR",
-      "date": "2026-04-30",
-      "period_label": "Q4 FY26 results (already announced)",
-      "event_type": "earnings",
-      "source_url": "https://www.tvsmotor.com/investors/financial-results"
-    },
     {
       "company": "Hero MotoCorp",
       "ticker": "HEROMOTOCO",
