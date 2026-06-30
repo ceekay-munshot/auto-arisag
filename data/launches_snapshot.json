@@ -1,25 +1,52 @@
 {
   "available": true,
-  "generated_at": "2026-06-30T06:57:28.397140+00:00",
+  "generated_at": "2026-06-30T17:07:44.505217+00:00",
   "window_days": 30,
-  "item_count": 2,
+  "item_count": 4,
   "items": [
     {
-      "title": "BMW launches X6 M60i xDrive at ₹1.77 crore with 530 hp mild-hybrid V8",
-      "summary": "Imported as a CBU, the flagship Sports Activity Coupé combines a 530 hp V8 mild-hybrid powertrain, M performance, ADAS and connected-car technologies.",
-      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-launches-x6-m60i-xdrive-at-1-77-crore-with-530-hp-mild-hybrid-v8/132014178",
+      "title": "Tata Motors launches Sierra.ev at introductory price of ₹18.79 lakh; deliveries from July 15",
+      "summary": "Electric SUV offers claimed real-world range of 510–530 km, dual-motor AWD option, lifetime battery warranty.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-launches-sierra-ev-at-introductory-price-of-18-79-lakh-deliveries-from-july-15/132096482",
       "source": "ET Auto Passenger Vehicles",
-      "published_at": "2026-06-26T11:04:48+00:00",
-      "published_display": "26 Jun 2026",
-      "company": "BMW India",
+      "published_at": "2026-06-30T15:52:47+00:00",
+      "published_display": "30 Jun 2026",
+      "company": "Tata Motors",
       "tone": "pv",
-      "scope": "tracked",
+      "scope": "listed",
       "segment_tags": [
         "Passenger Vehicles",
-        "Components",
-        "Luxury"
+        "EV"
       ],
-      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1153105/132014178.cms"
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1382950/132096482.cms"
+    },
+    {
+      "title": "Tata Sierra EV Launch Price Rs 18.79 L – 63/75 kWh, 500+ Kms Range, 0-100 5.8s",
+      "summary": "Tata Sierra EV has been launched in India and it will directly lock horns with other C Segment EVs like BE 6, Creta Electric, VF 6 and others The post Tata Sierra EV Launch Price Rs 18.79 L – 63/75 kWh, 500+ Kms Range, 0-100 5.8s appeared first on RushLane .",
+      "url": "https://www.rushlane.com/tata-sierra-ev-launch-price-rs-18-79-l-63-75-kwh-500-kms-range-0-100-5-8s-12550178.html",
+      "source": "RushLane",
+      "published_at": "2026-06-30T12:53:32+00:00",
+      "published_display": "30 Jun 2026",
+      "company": "Tata Motors",
+      "tone": "pv",
+      "scope": "listed",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-tata-sierra-ev-price-launch-4.jpg"
+    },
+    {
+      "title": "Bajaj Pulsar N125 Discontinued Within 2 Years Of Launch",
+      "summary": "While it may not be offered in India, Pulsar N125 will continue to be available in select markets across Africa and South America The post Bajaj Pulsar N125 Discontinued Within 2 Years Of Launch appeared first on RushLane .",
+      "url": "https://www.rushlane.com/bajaj-pulsar-n125-discontinued-within-2-years-of-launch-12550141.html",
+      "source": "RushLane",
+      "published_at": "2026-06-30T02:48:46+00:00",
+      "published_display": "30 Jun 2026",
+      "company": "Bajaj Auto",
+      "tone": "tw",
+      "scope": "listed",
+      "segment_tags": [],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2024/10/bajaj-pulsar-n125-first-ride-review-17.jpg"
     },
     {
       "title": "Mercedes-Benz launches first S-Class plug-in hybrid in India at ₹2.20 crore",
@@ -39,12 +66,20 @@
   ],
   "companies": [
     {
-      "company": "BMW India",
+      "company": "Tata Motors",
       "tone": "pv",
-      "scope": "tracked",
+      "scope": "listed",
+      "count": 2,
+      "latest_published_at": "2026-06-30T15:52:47+00:00",
+      "latest_title": "Tata Motors launches Sierra.ev at introductory price of ₹18.79 lakh; deliveries from July 15"
+    },
+    {
+      "company": "Bajaj Auto",
+      "tone": "tw",
+      "scope": "listed",
       "count": 1,
-      "latest_published_at": "2026-06-26T11:04:48+00:00",
-      "latest_title": "BMW launches X6 M60i xDrive at ₹1.77 crore with 530 hp mild-hybrid V8"
+      "latest_published_at": "2026-06-30T02:48:46+00:00",
+      "latest_title": "Bajaj Pulsar N125 Discontinued Within 2 Years Of Launch"
     },
     {
       "company": "Mercedes-Benz India",
@@ -57,6 +92,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5
+    "sources_live": 6
   }
 }
