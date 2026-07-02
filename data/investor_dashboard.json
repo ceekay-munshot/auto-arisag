@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T11:35:56.131760+00:00",
+  "generated_at": "2026-07-02T16:50:56.456841+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,22 +121182,52 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-02T11:35:33.698149+00:00",
+      "generated_at": "2026-07-02T16:50:34.730883+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 7,
       "items": [
         {
-          "title": "Skoda Kodiaq RS India Launch Price Rs 66.99 Lakh",
-          "summary": "Limited to 50 units, Skoda Kodiaq RS becomes the quickest Skoda ever sold in India with a 0-100 km/h time of just 6.3 seconds The post Skoda Kodiaq RS India Launch Price Rs 66.99 Lakh appeared first on RushLane .",
-          "url": "https://www.rushlane.com/skoda-kodiaq-rs-india-launch-price-rs-66-99-lakh-12550339.html",
+          "title": "New Mahindra XEV 9e Cineluxe Satin Desert Myst Colour Launched",
+          "summary": "Mahindra has expanded the colour palette of its flagship XEV 9e Cineluxe Edition with the introduction of a new Satin Desert Myst exterior finish The post New Mahindra XEV 9e Cineluxe Satin Desert Myst Colour Launched appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-mahindra-xev-9e-cineluxe-satin-desert-myst-colour-launched-12550377.html",
           "source": "RushLane",
-          "published_at": "2026-07-02T06:59:17+00:00",
+          "published_at": "2026-07-02T13:19:25+00:00",
           "published_display": "02 Jul 2026",
-          "company": "Skoda Auto India",
+          "company": "Mahindra & Mahindra",
           "tone": "pv",
-          "scope": "tracked",
+          "scope": "listed",
           "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/06/new-skoda-kodiaq-rs-review.jpg"
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/mahindra-xev-9e-cineluxe-satin-desert-myst-colour-launch-2.jpeg"
+        },
+        {
+          "title": "Hyundai introduces BaaS for Creta Electric, cuts entry price to \u20b910.99 lakh",
+          "summary": "Battery subscription model lowers upfront purchase cost; battery available on EMI at \u20b93.9 per km.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-introduces-baas-for-creta-electric-cuts-entry-price-to-10-99-lakh/132139051",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-02T12:13:35+00:00",
+          "published_display": "02 Jul 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-406296/132139051.cms"
+        },
+        {
+          "title": "Hyundai Creta Electric Gets BaaS Option Launch Price Rs 10.99 L",
+          "summary": "A day after Tata launched Sierra EV, Hyundai has introduced a Battery-as-a-Service option for Creta Electric, lowering its entry price to Rs 10.99 lakh The post Hyundai Creta Electric Gets BaaS Option Launch Price Rs 10.99 L appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hyundai-creta-electric-gets-baas-option-launch-price-rs-10-99-l-12550363.html",
+          "source": "RushLane",
+          "published_at": "2026-07-02T12:05:05+00:00",
+          "published_display": "02 Jul 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/hyundai-creta-electric-baas-launched.jpeg"
         },
         {
           "title": "BYD India introduces prices hike in select electric car variants by up to \u20b91 lakh",
@@ -121262,12 +121292,20 @@
       ],
       "companies": [
         {
-          "company": "Skoda Auto India",
+          "company": "Mahindra & Mahindra",
           "tone": "pv",
-          "scope": "tracked",
+          "scope": "listed",
           "count": 1,
-          "latest_published_at": "2026-07-02T06:59:17+00:00",
-          "latest_title": "Skoda Kodiaq RS India Launch Price Rs 66.99 Lakh"
+          "latest_published_at": "2026-07-02T13:19:25+00:00",
+          "latest_title": "New Mahindra XEV 9e Cineluxe Satin Desert Myst Colour Launched"
+        },
+        {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 2,
+          "latest_published_at": "2026-07-02T12:13:35+00:00",
+          "latest_title": "Hyundai introduces BaaS for Creta Electric, cuts entry price to \u20b910.99 lakh"
         },
         {
           "company": "BYD India",
@@ -121426,10 +121464,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.39,
+        "value": 95.38,
         "unit": "\u20b9",
-        "delta_value": 0.472,
-        "delta_label": "+1.01% in last week (Yahoo Finance)",
+        "delta_value": 0.464,
+        "delta_label": "+1.00% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -131837,7 +131875,7 @@
           },
           {
             "date": "2026-07-02",
-            "close": 95.39
+            "close": 95.382
           }
         ]
       }
@@ -244633,15 +244671,77 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-02T11:35:08.040811+00:00",
+    "generated_at": "2026-07-02T16:50:11.170246+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 28,
+    "item_count": 27,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "JLR Q1 sales fall 9.2% amid supply disruptions and model transition",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jlr-q1-sales-fall-9-2-amid-supply-disruptions-and-model-transition/132140217",
+            "summary": "Retail sales declined 15.3%; Range Rover, Range Rover Sport and Defender accounted for more than 80% of wholesale volumes.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-02T13:32:18+00:00",
+            "published_display": "02 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "BMW Group India rolls out annual monsoon service campaign",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-group-india-rolls-out-annual-monsoon-service-campaign/132138455",
+            "summary": "Campaign offers complimentary vehicle health checks across authorised dealerships; customers with cars older than five years will receive additional discounts under Joy Rewards.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-02T12:04:15+00:00",
+            "published_display": "02 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Rivian raises 2026 delivery forecast on strong demand, R2 boost",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/rivian-raises-2026-delivery-forecast-on-strong-demand-r2-boost/132140523",
+            "summary": "Rivian has boosted its 2026 delivery outlook, anticipating strong sales for its electric vans and R1 lineup, bolstered by the new, more affordable R2 model. Second-quarter deliveries exceeded expectations, driven by demand across its range. Uber's significant investment further signals confidence in Rivian's future.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-02T14:00:07+00:00",
+            "published_display": "02 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A"
+            ]
+          },
+          {
+            "title": "Hyundai introduces BaaS for Creta Electric, cuts entry price to \u20b910.99 lakh",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-introduces-baas-for-creta-electric-cuts-entry-price-to-10-99-lakh/132139051",
+            "summary": "Battery subscription model lowers upfront purchase cost; battery available on EMI at \u20b93.9 per km.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-02T12:13:35+00:00",
+            "published_display": "02 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Maruti stays on top, Tata edges past Mahindra in June PV sales race",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-stays-on-top-tata-edges-past-mahindra-in-june-pv-sales-race/132115874",
@@ -244655,68 +244755,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Urus SE Performante is Lamborghini's 812 hp answer to the EV debate",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/urus-se-performante-is-lamborghinis-812-hp-answer-to-the-ev-debate/132113855",
-            "summary": "Lamborghini has unveiled the 812 hp Urus SE Performante, positioning the plug-in hybrid Super SUV as a showcase of its performance-led electrification strategy while reiterating that it is not rushing into fully electric vehicles.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-01T11:19:03+00:00",
-            "published_display": "01 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Tata Motors PV sales jump 69% in June to 62,076 units",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-pv-sales-jump-69-in-june-to-62076-units/132111148",
-            "summary": "EV sales across domestic and international markets climbed 183% year-on-year to a record 14,800 units in June, marking the company's highest-ever monthly EV volumes.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-01T09:21:27+00:00",
-            "published_display": "01 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "JSW MG Motor India\u2019s June wholesales rise 30% to record 7,568 units",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jsw-mg-motor-india-achieves-record-30-growth-in-june-wholesales-with-7568-units-sold/132110027",
-            "summary": "EVs contribute over 75% of monthly sales as the automaker begins deliveries of the newly launched MG Majestor.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-01T08:15:23+00:00",
-            "published_display": "01 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Toyota Kirloskar June domestic sales rise 8% to 28,441 units",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-kirloskar-june-domestic-sales-rise-8-to-28441-units/132109611",
-            "summary": "For the first-half of the calender year, total sales rose 15% to 201,338 units, with the new Innova Crysta receiving an encouraging market response.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-01T07:55:20+00:00",
-            "published_display": "01 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -244740,6 +244778,22 @@
             "signal_tags": [
               "Product / Launch",
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "TVS Sales June 2026 Grows 47% \u2013 Highest Ever Quarterly Sales Of 16.31 Lakh",
+            "url": "https://www.rushlane.com/tvs-sales-june-2026-grows-47-highest-ever-quarterly-sales-12550371.html",
+            "summary": "TVS Motor Company has reported strong sales growth in June 2026 as well as the first quarter of FY27, driven by healthy demand across scooters, electric scooters and exports The post TVS Sales June 2026 Grows 47% \u2013 Highest Ever Quarterly Sales Of 16.31 Lakh appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-02T12:49:37+00:00",
+            "published_display": "02 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -244788,21 +244842,6 @@
             "signal_tags": [
               "General"
             ]
-          },
-          {
-            "title": "Bharat Seats Targets Rs 1,000 Crore in Supplies for Suzuki Motorcycle's Expanding Business",
-            "url": "https://www.autocarpro.in/NEWS/bharat-seats-targets-rs-1000-crore-in-supplies-for-suzuki-motorcycles-expanding-business-133242",
-            "summary": "Bharat Seats Ltd. is moving to significantly expand its business with Suzuki Motorcycle India Pvt.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-25T20:07:56+00:00",
-            "published_display": "25 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -244810,22 +244849,6 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
-          {
-            "title": "Drivn, BillionE Mobility partner to deploy 200 electric trucks",
-            "url": "https://evreporter.com/drivn-billione-mobility-partner-to-deploy-200-electric-trucks",
-            "summary": "The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter . Drivn, an electric vehicle leasing platform for heavy commercial fleets, has partnered with BillionE Mobility to lease and deploy 200 The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-30T09:41:49+00:00",
-            "published_display": "30 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Inside Tata Motors' Data Bet: What 12 Petabytes Actually Buys an OEM",
             "url": "https://www.autocarpro.in/NEWS/inside-tata-motors-data-bet-what-12-petabytes-actually-buys-an-oem-133258",
@@ -244881,23 +244904,6 @@
             ]
           },
           {
-            "title": "Hero June 2026 Sales at 5.41 Lakh, VIDA Gets New Logo \u2013 Rs 3,200 Cr AP Investment",
-            "url": "https://www.rushlane.com/hero-june-2026-sales-at-5-41-lakh-vida-gets-new-logo-12550342.html",
-            "summary": "Hero MotoCorp dispatched 5.41 lakh two-wheelers in June 2026, while Q1 FY27 volumes crossed 16.77 lakh units with strong growth across scooters, exports and EVs. The post Hero June 2026 Sales at 5.41 Lakh, VIDA Gets New Logo \u2013 Rs 3,200 Cr AP Investment appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-02T07:08:00+00:00",
-            "published_display": "02 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
             "title": "BYD India introduces prices hike in select electric car variants by up to \u20b91 lakh",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/byd-india-introduces-prices-hike-in-select-electric-car-variants-by-up-to-1-lakh/132118139",
             "summary": "Revised prices take effect from July 1; company also introduces new eMAX 7 Comfort variant starting at \u20b927.90 lakh.",
@@ -244945,6 +244951,22 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Drivn, BillionE Mobility partner to deploy 200 electric trucks",
+            "url": "https://evreporter.com/drivn-billione-mobility-partner-to-deploy-200-electric-trucks",
+            "summary": "The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter . Drivn, an electric vehicle leasing platform for heavy commercial fleets, has partnered with BillionE Mobility to lease and deploy 200 The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-30T09:41:49+00:00",
+            "published_display": "30 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -244970,18 +244992,18 @@
             ]
           },
           {
-            "title": "Hyundai Motor India sales decline 10% to 39,635 units in June",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-motor-india-reports-10-decline-in-june-sales-due-to-production-disruption/132107635",
-            "summary": "The company said the fire at the supplier's plant resulted in a production loss of approximately 13,900 units during the month.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-01T07:04:00+00:00",
-            "published_display": "01 Jul 2026",
+            "title": "Hyundai Creta Electric Gets BaaS Option Launch Price Rs 10.99 L",
+            "url": "https://www.rushlane.com/hyundai-creta-electric-gets-baas-option-launch-price-rs-10-99-l-12550363.html",
+            "summary": "A day after Tata launched Sierra EV, Hyundai has introduced a Battery-as-a-Service option for Creta Electric, lowering its entry price to Rs 10.99 lakh The post Hyundai Creta Electric Gets BaaS Option Launch Price Rs 10.99 L appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-02T12:05:05+00:00",
+            "published_display": "02 Jul 2026",
             "importance_score": 8,
             "segment_tags": [
-              "Components"
+              "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           },
