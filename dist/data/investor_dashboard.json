@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T10:55:34.106562+00:00",
+  "generated_at": "2026-07-04T16:04:48.490653+00:00",
   "as_of_date": "2026-06-09",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121182,9 +121182,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-04T10:55:12.760576+00:00",
+      "generated_at": "2026-07-04T16:04:19.573242+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 6,
       "items": [
         {
           "title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years",
@@ -121200,6 +121200,19 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-6494655/132159099.cms"
+        },
+        {
+          "title": "2026 Renault Kwid Launch Price Rs 4.53 L To Rs 5.61 L",
+          "summary": "2026 Renault Kwid has been launched in the country, priced between Rs 4.53 lakh and Rs 5.61 lakh (Ex-sh) with two trims only The post 2026 Renault Kwid Launch Price Rs 4.53 L To Rs 5.61 L appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-renault-kwid-launch-price-rs-4-53-l-to-rs-5-61-l-12550421.html",
+          "source": "RushLane",
+          "published_at": "2026-07-03T10:27:16+00:00",
+          "published_display": "03 Jul 2026",
+          "company": "Renault India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/2026-renault-kwid-updated-2.jpg"
         },
         {
           "title": "Renault India refreshes Renault Kwid, launches Climber from \u20b94.99 lakh",
@@ -121274,9 +121287,9 @@
           "company": "Renault India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-03T10:21:51+00:00",
-          "latest_title": "Renault India refreshes Renault Kwid, launches Climber from \u20b94.99 lakh"
+          "count": 2,
+          "latest_published_at": "2026-07-03T10:27:16+00:00",
+          "latest_title": "2026 Renault Kwid Launch Price Rs 4.53 L To Rs 5.61 L"
         },
         {
           "company": "Hyundai Motor India",
@@ -213726,10 +213739,9 @@
         "price": 2964.9,
         "change_1d_pct": 0.53,
         "change_1w_pct": 0.52,
-        "change_1m_pct": 7.23,
+        "change_1m_pct": 7.77,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2931.4,
           2976.5,
           2939.6,
           2880.4,
@@ -213753,6 +213765,7 @@
           2950.4,
           2951.8,
           2930.6,
+          2949.7,
           2949.7,
           2897.2,
           2935.9,
@@ -223623,6 +223636,10 @@
           },
           {
             "date": "2026-06-25",
+            "close": 2949.7
+          },
+          {
+            "date": "2026-06-26",
             "close": 2949.7
           },
           {
@@ -244694,7 +244711,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-04T10:54:49.957330+00:00",
+    "generated_at": "2026-07-04T16:03:54.827480+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 23,
@@ -244719,6 +244736,21 @@
             ]
           },
           {
+            "title": "Mercedes demos set stage for wave of German auto protests",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-demos-set-stage-for-wave-of-german-auto-protests/132180071",
+            "summary": "Thousands of workers demonstrated outside Mercedes-Benz factories in Germany over the premium carmaker's cost-saving plans, kicking off an expected wave of protests in the country's crisis-wracked auto industry that it had launched a savings drive because \"structural costs in Germany -- particularly labour costs -- are not competitive by international standards\".",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-04T11:05:30+00:00",
+            "published_display": "04 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "BMW Group India rolls out annual monsoon service campaign",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-group-india-rolls-out-annual-monsoon-service-campaign/132138455",
             "summary": "Campaign offers complimentary vehicle health checks across authorised dealerships; customers with cars older than five years will receive additional discounts under Joy Rewards.",
@@ -244729,6 +244761,21 @@
             "segment_tags": [
               "Passenger Vehicles",
               "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "Govt Calls Industry Experts To Address E20 Petrol Concerns Following Viral Allegations",
+            "url": "https://www.rushlane.com/govt-calls-industry-experts-to-address-e20-petrol-concerns-12550478.html",
+            "summary": "Toyota says viral Innova Hycross case was caused by contaminated fuel, while Maruti reveals data from 2.84 crore serviced cars to back E20 compatibility The post Govt Calls Industry Experts To Address E20 Petrol Concerns Following Viral Allegations appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-04T13:37:02+00:00",
+            "published_display": "04 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles"
             ],
             "signal_tags": [
               "General"
@@ -244747,37 +244794,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Tesla launches six-seater Model Y L in US to boost sales",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-launches-six-seater-model-y-l-in-us-to-boost-sales/132159288",
-            "summary": "Tesla has introduced a six-seater, long-wheelbase Model Y SUV in the US, priced from $61,990, to invigorate electric vehicle sales following a tax credit removal. This extended variant, already successful in China and Asia-Pacific, offers 325 miles of range and aims to boost US demand.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-03T10:42:38+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-india-celebrates-4-years-of-virtus-sedan-with-exciting-anniversary-benefits/132159099",
-            "summary": "The company stated that it has sold one Virtus nearly every 24 minutes since the sedan's launch in 2022 and the model has led the premium sedan segment for more than two years.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-03T10:35:11+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           }
         ]
@@ -244878,6 +244894,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "Upcoming Mahindra BE 7 Electric SUV Spied \u2013 Frameless Doors",
+            "url": "https://www.rushlane.com/mahindra-be-7-spied-testing-up-close-debut-this-year-12550452.html",
+            "summary": "Mahindra BE 7 has been spied testing up close with crisp details, revealing more details about this upcoming electric SUV The post Upcoming Mahindra BE 7 Electric SUV Spied \u2013 Frameless Doors appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-04T04:02:40+00:00",
+            "published_display": "04 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Forvia Hella unveils first integrated 12-volt lithium-ion battery pack",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/forvia-hella-launches-innovative-12-volt-lithium-ion-battery-pack-for-electric-vehicles/132159696",
             "summary": "The battery pack integrates lithium-ion cells with a low-voltage battery management system into a single unit, reducing system complexity and installation space while cutting weight by around 20 per cent compared with conventional lead-acid batteries.",
@@ -244940,23 +244972,6 @@
               "EV"
             ],
             "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "JSW Green Mobility invests in Lithium Urban Technologies",
-            "url": "https://evreporter.com/jsw-green-mobility-invests-in-lithium-urban-technologies",
-            "summary": "The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter . JSW Green Mobility has announced a strategic investment in Lithium Urban Technologies, an enterprise mobility platform backed by Eversource Capital. The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-25T11:07:25+00:00",
-            "published_display": "25 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           }
@@ -245117,22 +245132,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 59,
+      "unmapped_articles": 60,
       "filtered_low_signal": 3,
-      "kept_articles": 77
+      "kept_articles": 85
     }
   },
   "qa": [
