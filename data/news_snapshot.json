@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-07-04T16:03:54.827480+00:00",
+  "generated_at": "2026-07-05T11:05:19.124834+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 23,
+  "item_count": 24,
   "groups": [
     {
       "id": "pv",
@@ -56,6 +56,21 @@
           ]
         },
         {
+          "title": "JSW MG Motor eyes over 70% localisation for Windsor EV, targets double-digit sales growth",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jsw-mg-motor-targets-over-70-localisation-for-windsor-ev-aims-for-double-digit-growth/132191599",
+          "summary": "Windsor crosses 75,000-unit sales milestone in 21 months; localisation drive aimed at reducing supply chain risks.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-05T06:06:16+00:00",
+          "published_display": "05 Jul 2026",
+          "importance_score": 6,
+          "segment_tags": [
+            "EV"
+          ],
+          "signal_tags": [
+            "Supply Chain / Components"
+          ]
+        },
+        {
           "title": "Govt Calls Industry Experts To Address E20 Petrol Concerns Following Viral Allegations",
           "url": "https://www.rushlane.com/govt-calls-industry-experts-to-address-e20-petrol-concerns-12550478.html",
           "summary": "Toyota says viral Innova Hycross case was caused by contaminated fuel, while Maruti reveals data from 2.84 crore serviced cars to back E20 compatibility The post Govt Calls Industry Experts To Address E20 Petrol Concerns Following Viral Allegations appeared first on RushLane .",
@@ -68,21 +83,6 @@
           ],
           "signal_tags": [
             "General"
-          ]
-        },
-        {
-          "title": "China's Chery takes over former Nissan car factory in South Africa",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-chery-takes-over-former-nissan-car-factory-in-south-africa/132174584",
-          "summary": "Chinese \u200bautomakers, faced with mounting competition and excess capacity in their domestic market, have been accelerating overseas expansion in search of growth, increasing their manufacturing and sales footprints globally.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-04T04:17:24+00:00",
-          "published_display": "04 Jul 2026",
-          "importance_score": 6,
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "signal_tags": [
-            "Capacity / Capex"
           ]
         }
       ]
@@ -152,13 +152,29 @@
           "source": "Autocar Professional Components",
           "published_at": "2026-06-26T20:49:59+00:00",
           "published_display": "26 Jun 2026",
-          "importance_score": 7,
+          "importance_score": 6,
           "segment_tags": [
             "Commercial Vehicles",
             "Components"
           ],
           "signal_tags": [
             "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Euro NCAP Reveals Why Even 5-Star Cars Can Fail In Truck Underrun Crashes",
+          "url": "https://www.rushlane.com/euro-ncap-reveals-why-even-5-star-cars-can-fail-in-truck-underrun-crashes-12550448.html",
+          "summary": "Since the current certified underrun protection barriers failed to protect car occupants, Euro NCAP has requested European and UK regulators to upgrade their standards The post Euro NCAP Reveals Why Even 5-Star Cars Can Fail In Truck Underrun Crashes appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-07-05T10:43:36+00:00",
+          "published_display": "05 Jul 2026",
+          "importance_score": 5,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Commercial Vehicles"
+          ],
+          "signal_tags": [
+            "General"
           ]
         },
         {
@@ -434,7 +450,7 @@
       "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 60,
+    "unmapped_articles": 61,
     "filtered_low_signal": 3,
     "kept_articles": 85
   }
