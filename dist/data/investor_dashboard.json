@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T07:15:22.386300+00:00",
+  "generated_at": "2026-07-06T12:49:35.263746+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121939,10 +121939,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.43,
+        "value": 95.39,
         "unit": "\u20b9",
-        "delta_value": -0.0946,
-        "delta_label": "+1.14% in last week (Yahoo Finance)",
+        "delta_value": -0.1321,
+        "delta_label": "+1.10% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132350,7 +132350,7 @@
           },
           {
             "date": "2026-07-06",
-            "close": 95.4325
+            "close": 95.395
           }
         ]
       }
@@ -132365,10 +132365,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14417.0,
-        "change_1d_pct": 0.36,
-        "change_1w_pct": 7.49,
-        "change_1m_pct": 10.48,
+        "price": 14456.0,
+        "change_1d_pct": 0.63,
+        "change_1w_pct": 7.78,
+        "change_1m_pct": 10.77,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13208.0,
@@ -132400,7 +132400,7 @@
           14395.0,
           14348.0,
           14366.0,
-          14417.0
+          14456.0
         ],
         "daily_closes": [
           {
@@ -142285,16 +142285,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 14417.0
+            "close": 14456.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3204.9,
-        "change_1d_pct": 2.17,
-        "change_1w_pct": 3.62,
-        "change_1m_pct": 5.41,
+        "price": 3201.2,
+        "change_1d_pct": 2.05,
+        "change_1w_pct": 3.5,
+        "change_1m_pct": 5.29,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3107.3,
@@ -142326,7 +142326,7 @@
           3130.0,
           3175.4,
           3136.9,
-          3204.9
+          3201.2
         ],
         "daily_closes": [
           {
@@ -152211,16 +152211,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 3204.9
+            "close": 3201.2
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4929.0,
-        "change_1d_pct": 1.57,
-        "change_1w_pct": 2.4,
-        "change_1m_pct": 1.94,
+        "price": 4944.4,
+        "change_1d_pct": 1.89,
+        "change_1w_pct": 2.72,
+        "change_1m_pct": 2.26,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4983.0,
@@ -152252,7 +152252,7 @@
           4834.9,
           4867.1,
           4852.6,
-          4929.0
+          4944.4
         ],
         "daily_closes": [
           {
@@ -162137,16 +162137,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 4929.0
+            "close": 4944.4
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3703.2,
-        "change_1d_pct": 2.09,
-        "change_1w_pct": 7.13,
-        "change_1m_pct": 9.44,
+        "price": 3705.0,
+        "change_1d_pct": 2.14,
+        "change_1w_pct": 7.18,
+        "change_1m_pct": 9.49,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3454.9,
@@ -162178,7 +162178,7 @@
           3494.0,
           3626.8,
           3627.4,
-          3703.2
+          3705.0
         ],
         "daily_closes": [
           {
@@ -172063,16 +172063,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 3703.2
+            "close": 3705.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 9995.0,
-        "change_1d_pct": 2.14,
-        "change_1w_pct": 3.79,
-        "change_1m_pct": -3.36,
+        "price": 10036.5,
+        "change_1d_pct": 2.57,
+        "change_1w_pct": 4.22,
+        "change_1m_pct": -2.95,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10593.0,
@@ -172104,7 +172104,7 @@
           9842.0,
           9857.0,
           9785.5,
-          9995.0
+          10036.5
         ],
         "daily_closes": [
           {
@@ -181989,16 +181989,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 9995.0
+            "close": 10036.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1988.0,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": 5.04,
-        "change_1m_pct": 3.89,
+        "price": 2004.4,
+        "change_1d_pct": 0.55,
+        "change_1w_pct": 5.91,
+        "change_1m_pct": 4.74,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1884.0,
@@ -182030,7 +182030,7 @@
           1918.3,
           1950.7,
           1993.4,
-          1988.0
+          2004.4
         ],
         "daily_closes": [
           {
@@ -183727,16 +183727,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 1988.0
+            "close": 2004.4
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7450.5,
-        "change_1d_pct": 1.51,
-        "change_1w_pct": 0.33,
-        "change_1m_pct": 5.38,
+        "price": 7471.5,
+        "change_1d_pct": 1.8,
+        "change_1w_pct": 0.61,
+        "change_1m_pct": 5.68,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7376.0,
@@ -183768,7 +183768,7 @@
           7139.0,
           7250.0,
           7339.5,
-          7450.5
+          7471.5
         ],
         "daily_closes": [
           {
@@ -193653,16 +193653,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 7450.5
+            "close": 7471.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 346.5,
-        "change_1d_pct": 0.7,
-        "change_1w_pct": 0.42,
-        "change_1m_pct": -12.9,
+        "price": 347.05,
+        "change_1d_pct": 0.86,
+        "change_1w_pct": 0.58,
+        "change_1m_pct": -12.76,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193695,7 +193695,7 @@
           347.8,
           345.95,
           344.1,
-          346.5
+          347.05
         ],
         "daily_closes": [
           {
@@ -203580,16 +203580,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 346.5
+            "close": 347.05
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 437.15,
-        "change_1d_pct": 1.19,
-        "change_1w_pct": 3.32,
-        "change_1m_pct": 18.42,
+        "price": 429.9,
+        "change_1d_pct": -0.49,
+        "change_1w_pct": 1.61,
+        "change_1m_pct": 16.46,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203622,7 +203622,7 @@
           431.45,
           440.5,
           432.0,
-          437.15
+          429.9
         ],
         "daily_closes": [
           {
@@ -204271,16 +204271,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 437.15
+            "close": 429.9
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 166.71,
-        "change_1d_pct": 1.44,
-        "change_1w_pct": 5.94,
-        "change_1m_pct": 14.74,
+        "price": 166.12,
+        "change_1d_pct": 1.08,
+        "change_1w_pct": 5.57,
+        "change_1m_pct": 14.34,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           160.54,
@@ -204312,7 +204312,7 @@
           162.32,
           164.73,
           164.35,
-          166.71
+          166.12
         ],
         "daily_closes": [
           {
@@ -214197,16 +214197,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 166.71
+            "close": 166.12
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2992.0,
-        "change_1d_pct": 0.91,
-        "change_1w_pct": 3.27,
-        "change_1m_pct": 7.57,
+        "price": 2982.6,
+        "change_1d_pct": 0.6,
+        "change_1w_pct": 2.95,
+        "change_1m_pct": 7.23,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2939.6,
@@ -214238,7 +214238,7 @@
           2945.3,
           2949.4,
           2964.9,
-          2992.0
+          2982.6
         ],
         "daily_closes": [
           {
@@ -224123,16 +224123,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 2992.0
+            "close": 2982.6
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1005.9,
-        "change_1d_pct": 1.62,
-        "change_1w_pct": 2.11,
-        "change_1m_pct": 11.73,
+        "price": 1006.4,
+        "change_1d_pct": 1.67,
+        "change_1w_pct": 2.16,
+        "change_1m_pct": 11.78,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           894.9,
@@ -224164,7 +224164,7 @@
           999.1,
           1016.7,
           989.9,
-          1005.9
+          1006.4
         ],
         "daily_closes": [
           {
@@ -234049,16 +234049,16 @@
           },
           {
             "date": "2026-07-06",
-            "close": 1005.9
+            "close": 1006.4
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 502.05,
-        "change_1d_pct": 2.48,
-        "change_1w_pct": 5.73,
-        "change_1m_pct": 7.1,
+        "price": 503.25,
+        "change_1d_pct": 2.73,
+        "change_1w_pct": 5.98,
+        "change_1m_pct": 7.36,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           483.45,
@@ -234090,7 +234090,7 @@
           491.5,
           494.5,
           489.9,
-          502.05
+          503.25
         ],
         "daily_closes": [
           {
@@ -243975,7 +243975,7 @@
           },
           {
             "date": "2026-07-06",
-            "close": 502.05
+            "close": 503.25
           }
         ]
       }
@@ -245166,10 +245166,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-06T07:14:28.308812+00:00",
+    "generated_at": "2026-07-06T12:48:52.122568+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 23,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -245221,19 +245221,18 @@
             ]
           },
           {
-            "title": "BMW Group India rolls out annual monsoon service campaign",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-group-india-rolls-out-annual-monsoon-service-campaign/132138455",
-            "summary": "Campaign offers complimentary vehicle health checks across authorised dealerships; customers with cars older than five years will receive additional discounts under Joy Rewards.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-02T12:04:15+00:00",
-            "published_display": "02 Jul 2026",
-            "importance_score": 7,
+            "title": "Kia Ownership Service Camp 2026 \u2013 Exclusive Benefits",
+            "url": "https://www.rushlane.com/kia-ownership-service-camp-2026-exclusive-benefits-12550544.html",
+            "summary": "Kia Ownership Service Camp 2026 has been launched with exclusive benefits for customers and then a 36-point complementary car checkup The post Kia Ownership Service Camp 2026 \u2013 Exclusive Benefits appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-06T10:36:17+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Product / Launch"
             ]
           },
           {
@@ -245259,20 +245258,18 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Ampere launches Reo VYB low-speed electric scooter at \u20b969,499",
-            "url": "https://evreporter.com/ampere-launches-reo-vyb-low-speed-electric-scooter-at-%e2%82%b969499",
-            "summary": "The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter . Ampere, the electric two-wheeler brand of Greaves Electric Mobility, has launched the Reo VYB low-speed electric scooter at an introductory The post Ampere launches Reo VYB low-speed electric scooter at \u20b969,499 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-17T09:12:46+00:00",
-            "published_display": "17 Jun 2026",
-            "importance_score": 7,
+            "title": "Two Wheeler Sales June 2026 \u2013 TVS, Hero, Honda, Bajaj, Suzuki, Royal Enfield",
+            "url": "https://www.rushlane.com/two-wheeler-sales-june-2026-tvs-hero-honda-bajaj-suzuki-royal-enfield-12550548.html",
+            "summary": "Hero retained its leadership in the domestic market, while TVS emerged as the highest-selling two-wheeler brand overall in June 2026, driven by strong exports The post Two Wheeler Sales June 2026 \u2013 TVS, Hero, Honda, Bajaj, Suzuki, Royal Enfield appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-06T11:24:15+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "Two-Wheelers"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
+              "General"
             ]
           },
           {
@@ -245289,6 +245286,21 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "New Hero Xpulse 420 Spied Up Close \u2013 Features, Equipment, Details",
+            "url": "https://www.rushlane.com/new-hero-xpulse-420-spied-up-close-features-equipment-details-12550524.html",
+            "summary": "New Hero Xpulse 420 has been spied high altitude testing in Leh Ladakh region showing this upcoming flagship ADV bike from up close The post New Hero Xpulse 420 Spied Up Close \u2013 Features, Equipment, Details appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-06T07:29:04+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -245312,6 +245324,22 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
+          {
+            "title": "Drivn, BillionE Mobility partner to deploy 200 electric trucks",
+            "url": "https://evreporter.com/drivn-billione-mobility-partner-to-deploy-200-electric-trucks",
+            "summary": "The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter . Drivn, an electric vehicle leasing platform for heavy commercial fleets, has partnered with BillionE Mobility to lease and deploy 200 The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-06-30T09:41:49+00:00",
+            "published_display": "30 Jun 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Inside Tata Motors' Data Bet: What 12 Petabytes Actually Buys an OEM",
             "url": "https://www.autocarpro.in/NEWS/inside-tata-motors-data-bet-what-12-petabytes-actually-buys-an-oem-133258",
@@ -245349,6 +245377,40 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "Uno Minda to Step Up Capacity, New-Technology Investments in FY27: MD Mehra",
+            "url": "https://www.autocarpro.in/NEWS/uno-minda-to-step-up-capacity-new-technology-investments-in-fy27-md-mehra-133394",
+            "summary": "Uno Minda will maintain a strong investment focus on capacity expansion and new capabilities in FY27 as it seeks higher value addition and market-share gains in its existing businesses while scaling electric-vehicle and other emerging technology platforms, Managing Director Ravi Mehra said. The auto-component maker expects the automotive industry to sustain its growth momentum during the current financial year and...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-03T16:51:57+00:00",
+            "published_display": "03 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Keeway India Launches Hypevolt-R Electric Scooter in India",
+            "url": "https://evreporter.com/keeway-india-launches-hypevolt-r-electric-scooter-in-india",
+            "summary": "The post Keeway India Launches Hypevolt-R Electric Scooter in India appeared first at EVreporter on EVreporter . Keeway India has launched the Keeway Hypevolt-R electric scooter in India, entering the premium performance electric scooter segment. The scooter The post Keeway India Launches Hypevolt-R Electric Scooter in India appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-03T08:00:52+00:00",
+            "published_display": "03 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Forvia Hella unveils first integrated 12-volt lithium-ion battery pack",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/forvia-hella-launches-innovative-12-volt-lithium-ion-battery-pack-for-electric-vehicles/132159696",
@@ -245398,39 +245460,6 @@
               "Funding / M&A",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Drivn, BillionE Mobility partner to deploy 200 electric trucks",
-            "url": "https://evreporter.com/drivn-billione-mobility-partner-to-deploy-200-electric-trucks",
-            "summary": "The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter . Drivn, an electric vehicle leasing platform for heavy commercial fleets, has partnered with BillionE Mobility to lease and deploy 200 The post Drivn, BillionE Mobility partner to deploy 200 electric trucks appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-30T09:41:49+00:00",
-            "published_display": "30 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "JSW Green Mobility invests in Lithium Urban Technologies",
-            "url": "https://evreporter.com/jsw-green-mobility-invests-in-lithium-urban-technologies",
-            "summary": "The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter . JSW Green Mobility has announced a strategic investment in Lithium Urban Technologies, an enterprise mobility platform backed by Eversource Capital. The post JSW Green Mobility invests in Lithium Urban Technologies appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-06-25T11:07:25+00:00",
-            "published_display": "25 Jun 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -245474,6 +245503,40 @@
             ]
           },
           {
+            "title": "TOCAL raises \u20b99 crore, partners with K-Indev Logistics for EV logistics expansion",
+            "url": "https://evreporter.com/tocal-raises-%e2%82%b99-crore-partners-with-k-indev-logistics-for-ev-logistics-expansion",
+            "summary": "The post TOCAL raises \u20b99 crore, partners with K-Indev Logistics for EV logistics expansion appeared first at EVreporter on EVreporter . TOCAL (DbyT Dynamics Mobility Solutions Pvt.",
+            "source": "EVReporter",
+            "published_at": "2026-07-06T09:11:50+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Komaki Introduces MG Pro Electric Scooters with 2.2 kW Motor",
+            "url": "https://evreporter.com/komaki-introduces-mg-pro-electric-scooters-with-2-2-kw-motor",
+            "summary": "The post Komaki Introduces MG Pro Electric Scooters with 2.2 kW Motor appeared first at EVreporter on EVreporter . Komaki has launched the MG Pro V and MG Pro+ electric scooters at \u20b973,999 and \u20b979,999, respectively. The key highlight of both models is their all-metal body, replacing The post Komaki Introduces MG Pro Electric Scooters with 2.2 kW Motor appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-06T07:25:31+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Hungary to launch new pollution watchdog for EV battery makers",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/hungary-to-launch-new-pollution-watchdog-for-ev-battery-makers/132176913",
             "summary": "The move follows a late-June decision by a government \u200boffice to suspend Chinese battery parts maker Semcorp's production licence after authorities found \u200blarge-scale aluminium pollution in water samples taken from monitoring wells around the plant.",
@@ -245489,40 +245552,6 @@
               "Product / Launch",
               "Supply Chain / Components",
               "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Uno Minda to Step Up Capacity, New-Technology Investments in FY27: MD Mehra",
-            "url": "https://www.autocarpro.in/NEWS/uno-minda-to-step-up-capacity-new-technology-investments-in-fy27-md-mehra-133394",
-            "summary": "Uno Minda will maintain a strong investment focus on capacity expansion and new capabilities in FY27 as it seeks higher value addition and market-share gains in its existing businesses while scaling electric-vehicle and other emerging technology platforms, Managing Director Ravi Mehra said. The auto-component maker expects the automotive industry to sustain its growth momentum during the current financial year and...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-03T16:51:57+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Keeway India Launches Hypevolt-R Electric Scooter in India",
-            "url": "https://evreporter.com/keeway-india-launches-hypevolt-r-electric-scooter-in-india",
-            "summary": "The post Keeway India Launches Hypevolt-R Electric Scooter in India appeared first at EVreporter on EVreporter . Keeway India has launched the Keeway Hypevolt-R electric scooter in India, entering the premium performance electric scooter segment. The scooter The post Keeway India Launches Hypevolt-R Electric Scooter in India appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-03T08:00:52+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -245589,22 +245618,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 58,
+      "unmapped_articles": 61,
       "filtered_low_signal": 3,
-      "kept_articles": 77
+      "kept_articles": 85
     }
   },
   "qa": [
