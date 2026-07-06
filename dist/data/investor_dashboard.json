@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T12:49:35.263746+00:00",
+  "generated_at": "2026-07-06T17:45:29.735019+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-06T07:14:52.769501+00:00",
+      "generated_at": "2026-07-06T17:45:06.559779+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 4,
       "items": [
         {
           "title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years",
@@ -121727,21 +121727,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-946699/132158811.cms"
-        },
-        {
-          "title": "Hyundai introduces BaaS for Creta Electric, cuts entry price to \u20b910.99 lakh",
-          "summary": "Battery subscription model lowers upfront purchase cost; battery available on EMI at \u20b93.9 per km.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-introduces-baas-for-creta-electric-cuts-entry-price-to-10-99-lakh/132139051",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-02T12:13:35+00:00",
-          "published_display": "02 Jul 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-406296/132139051.cms"
         },
         {
           "title": "Tata Motors launches Sierra.ev at introductory price of \u20b918.79 lakh",
@@ -121789,14 +121774,6 @@
           "count": 1,
           "latest_published_at": "2026-07-03T10:21:51+00:00",
           "latest_title": "Renault India refreshes Renault Kwid, launches Climber from \u20b94.99 lakh"
-        },
-        {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-07-02T12:13:35+00:00",
-          "latest_title": "Hyundai introduces BaaS for Creta Electric, cuts entry price to \u20b910.99 lakh"
         },
         {
           "company": "Tata Motors",
@@ -121941,8 +121918,8 @@
         "label": "USD / INR",
         "value": 95.39,
         "unit": "\u20b9",
-        "delta_value": -0.1321,
-        "delta_label": "+1.10% in last week (Yahoo Finance)",
+        "delta_value": -0.1421,
+        "delta_label": "+1.09% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132350,7 +132327,7 @@
           },
           {
             "date": "2026-07-06",
-            "close": 95.395
+            "close": 95.385
           }
         ]
       }
@@ -245166,7 +245143,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-06T12:48:52.122568+00:00",
+    "generated_at": "2026-07-06T17:44:39.610808+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245175,21 +245152,6 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "JLR Q1 sales fall 9.2% amid supply disruptions and model transition",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jlr-q1-sales-fall-9-2-amid-supply-disruptions-and-model-transition/132140217",
-            "summary": "Retail sales declined 15.3%; Range Rover, Range Rover Sport and Defender accounted for more than 80% of wholesale volumes.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-02T13:32:18+00:00",
-            "published_display": "02 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
           {
             "title": "German car parts co Webasto plans to take local unit public",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/webasto-plans-500-million-ipo-for-indian-unit-amid-rising-demand-for-sunroofs/132206057",
@@ -245241,6 +245203,22 @@
             "summary": "JSW MG Motor says demand across metros and smaller towns helped the electric crossover retain its leadership in India's passenger EV market.",
             "source": "ET Auto Passenger Vehicles",
             "published_at": "2026-07-06T06:55:27+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "2027 Mahindra Vision S Interiors Spied \u2013 Space, Features, Seats",
+            "url": "https://www.rushlane.com/2027-mahindra-vision-s-interiors-spied-space-features-seats-12550510.html",
+            "summary": "Upcoming Mahindra Vision S interiors are spied, showing steering wheel from BE 6 electric SUV and other parts from Thar Roxx and Scorpio N The post 2027 Mahindra Vision S Interiors Spied \u2013 Space, Features, Seats appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-06T05:30:08+00:00",
             "published_display": "06 Jul 2026",
             "importance_score": 6,
             "segment_tags": [
