@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T06:49:11.636498+00:00",
+  "generated_at": "2026-07-07T11:52:25.802930+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-06T17:45:06.559779+00:00",
+      "generated_at": "2026-07-07T11:52:02.719784+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
         {
           "title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years",
@@ -121712,21 +121712,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-6494655/132159099.cms"
-        },
-        {
-          "title": "Renault India refreshes Renault Kwid, launches Climber from \u20b94.99 lakh",
-          "summary": "The entry-level hatchback gets updated branding, simplified two-variant range and online purchase benefit.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-india-refreshes-renault-kwid-launches-climber-from-4-99-lakh/132158811",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-03T10:21:51+00:00",
-          "published_display": "03 Jul 2026",
-          "company": "Renault India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-946699/132158811.cms"
         },
         {
           "title": "Tata Motors launches Sierra.ev at introductory price of \u20b918.79 lakh",
@@ -121766,14 +121751,6 @@
           "count": 1,
           "latest_published_at": "2026-07-03T10:35:11+00:00",
           "latest_title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years"
-        },
-        {
-          "company": "Renault India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-03T10:21:51+00:00",
-          "latest_title": "Renault India refreshes Renault Kwid, launches Climber from \u20b94.99 lakh"
         },
         {
           "company": "Tata Motors",
@@ -121916,10 +121893,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.3,
+        "value": 94.97,
         "unit": "\u20b9",
-        "delta_value": 0.0802,
-        "delta_label": "+0.53% in last week (Yahoo Finance)",
+        "delta_value": -0.2473,
+        "delta_label": "+0.19% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132327,7 +132304,7 @@
           },
           {
             "date": "2026-07-07",
-            "close": 95.295
+            "close": 94.9675
           }
         ]
       }
@@ -132342,10 +132319,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14524.0,
-        "change_1d_pct": 0.47,
-        "change_1w_pct": 2.9,
-        "change_1m_pct": 12.48,
+        "price": 14538.0,
+        "change_1d_pct": 0.57,
+        "change_1w_pct": 3.0,
+        "change_1m_pct": 12.59,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13364.0,
@@ -132377,7 +132354,7 @@
           14348.0,
           14366.0,
           14456.0,
-          14524.0
+          14538.0
         ],
         "daily_closes": [
           {
@@ -142266,19 +142243,18 @@
           },
           {
             "date": "2026-07-07",
-            "close": 14524.0
+            "close": 14538.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3196.0,
-        "change_1d_pct": 1.88,
-        "change_1w_pct": 3.33,
-        "change_1m_pct": 5.11,
+        "price": 3196.4,
+        "change_1d_pct": -0.15,
+        "change_1w_pct": 4.16,
+        "change_1m_pct": 7.77,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3107.3,
           3121.6,
           3121.6,
           3045.6,
@@ -142307,7 +142283,8 @@
           3130.0,
           3175.4,
           3136.9,
-          3196.0
+          3201.2,
+          3196.4
         ],
         "daily_closes": [
           {
@@ -152191,17 +152168,21 @@
             "close": 3136.9
           },
           {
+            "date": "2026-07-06",
+            "close": 3201.2
+          },
+          {
             "date": "2026-07-07",
-            "close": 3196.0
+            "close": 3196.4
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4995.5,
+        "price": 4995.4,
         "change_1d_pct": 1.03,
-        "change_1w_pct": 4.2,
-        "change_1m_pct": 4.61,
+        "change_1w_pct": 4.19,
+        "change_1m_pct": 4.6,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5075.0,
@@ -152233,7 +152214,7 @@
           4867.1,
           4852.6,
           4944.4,
-          4995.5
+          4995.4
         ],
         "daily_closes": [
           {
@@ -162122,19 +162103,18 @@
           },
           {
             "date": "2026-07-07",
-            "close": 4995.5
+            "close": 4995.4
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3744.4,
-        "change_1d_pct": 3.23,
-        "change_1w_pct": 8.32,
-        "change_1m_pct": 10.65,
+        "price": 3712.7,
+        "change_1d_pct": 0.21,
+        "change_1w_pct": 7.28,
+        "change_1m_pct": 11.91,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3454.9,
           3384.6,
           3384.6,
           3355.7,
@@ -162163,7 +162143,8 @@
           3494.0,
           3626.8,
           3627.4,
-          3744.4
+          3705.0,
+          3712.7
         ],
         "daily_closes": [
           {
@@ -172047,17 +172028,21 @@
             "close": 3627.4
           },
           {
+            "date": "2026-07-06",
+            "close": 3705.0
+          },
+          {
             "date": "2026-07-07",
-            "close": 3744.4
+            "close": 3712.7
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10108.5,
-        "change_1d_pct": 0.72,
-        "change_1w_pct": 4.04,
-        "change_1m_pct": -1.2,
+        "price": 10109.5,
+        "change_1d_pct": 0.73,
+        "change_1w_pct": 4.05,
+        "change_1m_pct": -1.19,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10808.5,
@@ -172089,7 +172074,7 @@
           9857.0,
           9785.5,
           10036.5,
-          10108.5
+          10109.5
         ],
         "daily_closes": [
           {
@@ -181978,19 +181963,18 @@
           },
           {
             "date": "2026-07-07",
-            "close": 10108.5
+            "close": 10109.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1976.0,
-        "change_1d_pct": -0.87,
-        "change_1w_pct": 4.41,
-        "change_1m_pct": 3.26,
+        "price": 1980.5,
+        "change_1d_pct": -1.19,
+        "change_1w_pct": 3.94,
+        "change_1m_pct": 4.53,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1884.0,
           1913.6,
           1913.6,
           1924.0,
@@ -182019,7 +182003,8 @@
           1918.3,
           1950.7,
           1993.4,
-          1976.0
+          2004.4,
+          1980.5
         ],
         "daily_closes": [
           {
@@ -183715,20 +183700,23 @@
             "close": 1993.4
           },
           {
+            "date": "2026-07-06",
+            "close": 2004.4
+          },
+          {
             "date": "2026-07-07",
-            "close": 1976.0
+            "close": 1980.5
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7577.0,
-        "change_1d_pct": 3.24,
-        "change_1w_pct": 2.03,
-        "change_1m_pct": 7.17,
+        "price": 7536.0,
+        "change_1d_pct": 0.86,
+        "change_1w_pct": 6.54,
+        "change_1m_pct": 6.89,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7376.0,
           7419.0,
           7419.0,
           7177.0,
@@ -183757,7 +183745,8 @@
           7139.0,
           7250.0,
           7339.5,
-          7577.0
+          7471.5,
+          7536.0
         ],
         "daily_closes": [
           {
@@ -193641,17 +193630,21 @@
             "close": 7339.5
           },
           {
+            "date": "2026-07-06",
+            "close": 7471.5
+          },
+          {
             "date": "2026-07-07",
-            "close": 7577.0
+            "close": 7536.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 343.7,
-        "change_1d_pct": -0.97,
-        "change_1w_pct": -2.41,
-        "change_1m_pct": -11.65,
+        "price": 342.3,
+        "change_1d_pct": -1.37,
+        "change_1w_pct": -2.81,
+        "change_1m_pct": -12.01,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193684,7 +193677,7 @@
           345.95,
           344.1,
           347.05,
-          343.7
+          342.3
         ],
         "daily_closes": [
           {
@@ -203573,16 +203566,16 @@
           },
           {
             "date": "2026-07-07",
-            "close": 343.7
+            "close": 342.3
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 422.85,
-        "change_1d_pct": -1.64,
-        "change_1w_pct": -0.02,
-        "change_1m_pct": 16.49,
+        "price": 425.0,
+        "change_1d_pct": -1.14,
+        "change_1w_pct": 0.48,
+        "change_1m_pct": 17.08,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203615,7 +203608,7 @@
           440.5,
           432.0,
           429.9,
-          422.85
+          425.0
         ],
         "daily_closes": [
           {
@@ -204268,16 +204261,16 @@
           },
           {
             "date": "2026-07-07",
-            "close": 422.85
+            "close": 425.0
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 164.26,
-        "change_1d_pct": -1.12,
-        "change_1w_pct": 4.16,
-        "change_1m_pct": 16.48,
+        "price": 164.16,
+        "change_1d_pct": -1.18,
+        "change_1w_pct": 4.1,
+        "change_1m_pct": 16.41,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           163.62,
@@ -204309,7 +204302,7 @@
           164.73,
           164.35,
           166.12,
-          164.26
+          164.16
         ],
         "daily_closes": [
           {
@@ -214198,19 +214191,18 @@
           },
           {
             "date": "2026-07-07",
-            "close": 164.26
+            "close": 164.16
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2966.3,
-        "change_1d_pct": 0.05,
-        "change_1w_pct": 2.39,
-        "change_1m_pct": 6.64,
+        "price": 2978.9,
+        "change_1d_pct": -0.12,
+        "change_1w_pct": 1.46,
+        "change_1m_pct": 6.44,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2939.6,
           2880.4,
           2880.4,
           2859.8,
@@ -214239,7 +214231,8 @@
           2945.3,
           2949.4,
           2964.9,
-          2966.3
+          2982.6,
+          2978.9
         ],
         "daily_closes": [
           {
@@ -224123,20 +224116,23 @@
             "close": 2964.9
           },
           {
+            "date": "2026-07-06",
+            "close": 2982.6
+          },
+          {
             "date": "2026-07-07",
-            "close": 2966.3
+            "close": 2978.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 999.6,
-        "change_1d_pct": 0.98,
-        "change_1w_pct": 1.47,
-        "change_1m_pct": 11.03,
+        "price": 998.2,
+        "change_1d_pct": -0.81,
+        "change_1w_pct": -2.52,
+        "change_1m_pct": 12.92,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          894.9,
           906.25,
           906.25,
           884.95,
@@ -224165,7 +224161,8 @@
           999.1,
           1016.7,
           989.9,
-          999.6
+          1006.4,
+          998.2
         ],
         "daily_closes": [
           {
@@ -234049,17 +234046,21 @@
             "close": 989.9
           },
           {
+            "date": "2026-07-06",
+            "close": 1006.4
+          },
+          {
             "date": "2026-07-07",
-            "close": 999.6
+            "close": 998.2
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 494.0,
-        "change_1d_pct": -1.84,
-        "change_1w_pct": 2.53,
-        "change_1m_pct": 8.18,
+        "price": 493.1,
+        "change_1d_pct": -2.02,
+        "change_1w_pct": 2.35,
+        "change_1m_pct": 7.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           478.35,
@@ -234091,7 +234092,7 @@
           494.5,
           489.9,
           503.25,
-          494.0
+          493.1
         ],
         "daily_closes": [
           {
@@ -243980,7 +243981,7 @@
           },
           {
             "date": "2026-07-07",
-            "close": 494.0
+            "close": 493.1
           }
         ]
       }
@@ -245180,10 +245181,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-07T06:48:20.202983+00:00",
+    "generated_at": "2026-07-07T11:51:38.841195+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -245203,6 +245204,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws",
+            "url": "https://evreporter.com/nepals-electric-car-revolution-and-whats-next-for-2ws",
+            "summary": "The post Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws appeared first at EVreporter on EVreporter . The landlocked Himalayan nation of Nepal has achieved something that most of the world is still working toward: nearly 80 The post Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-07T05:15:29+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
             ]
           },
           {
@@ -245236,34 +245253,18 @@
             ]
           },
           {
-            "title": "To ride the EV wave, M&M takes premium path, TaMo bets on scale",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mahindra-vs-tata-competing-strategies-in-indias-ev-market/132228805",
-            "summary": "Mahindra expects e-SUVs to comprise 18-20 per cent of its EV penetration over the next five years. Tata is targeting EVs at around 30 per cent of its passenger vehicle sales by the turn of the decade.",
+            "title": "Tata Motors' EV strategy: Sierra EV, Gen Z buyers, and resale value concerns addressed",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-ev-strategy-sierra-ev-gen-z-buyers-and-resale-value-concerns-addressed/132232121",
+            "summary": "In an exclusive interview with ET, Vivek Srivatsa, Chief Commercial Officer of Tata Passenger Electric Mobility, speaks about the Sierra EV's target audience, the resale value challenge, Battery-as-a-Service, Gen Zs as the next wave of buyers, and Tata's road to closing the price gap between EVs and their petrol equivalents.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-07T02:44:06+00:00",
+            "published_at": "2026-07-07T06:15:43+00:00",
             "published_display": "07 Jul 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Kia Ownership Service Camp 2026 \u2013 Exclusive Benefits",
-            "url": "https://www.rushlane.com/kia-ownership-service-camp-2026-exclusive-benefits-12550544.html",
-            "summary": "Kia Ownership Service Camp 2026 has been launched with exclusive benefits for customers and then a 36-point complementary car checkup The post Kia Ownership Service Camp 2026 \u2013 Exclusive Benefits appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-06T10:36:17+00:00",
-            "published_display": "06 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Product / Launch"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245336,18 +245337,18 @@
             ]
           },
           {
-            "title": "New Hero Xpulse 420 Spied Up Close \u2013 Features, Equipment, Details",
-            "url": "https://www.rushlane.com/new-hero-xpulse-420-spied-up-close-features-equipment-details-12550524.html",
-            "summary": "New Hero Xpulse 420 has been spied high altitude testing in Leh Ladakh region showing this upcoming flagship ADV bike from up close The post New Hero Xpulse 420 Spied Up Close \u2013 Features, Equipment, Details appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-06T07:29:04+00:00",
+            "title": "How Nippon Paint Is Reengineering Automotive Coatings for New-Age Vehicles and Fuels",
+            "url": "https://www.autocarpro.in/NEWS/how-nippon-paint-is-reengineering-automotive-coatings-for-new-age-vehicles-and-fuels-133435",
+            "summary": "Nippon Paint India is preparing its automotive coatings business for a market in which paint will have to do more than provide colour and shine. The company already supplies E20-compatible coatings for metal two-wheeler fuel tanks, is working with customers on E30 and E40 formulations, and says it has developed a product capable of withstanding E60.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-06T13:21:31+00:00",
             "published_display": "06 Jul 2026",
             "importance_score": 5,
             "segment_tags": [
               "Two-Wheelers"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245427,6 +245428,40 @@
             ]
           },
           {
+            "title": "Electric passenger vehicle retail sales jump 108% to 31,823 units in June: FADA",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/electric-passenger-vehicle-retail-sales-jump-108-to-31823-units-in-june-fada/132235971",
+            "summary": "EV penetration in the passenger vehicle segment rose to 7.7%, with Tata Motors leading retail sales, followed by Mahindra & Mahindra and JSW MG Motor India.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-07T09:35:36+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Hungary to launch new pollution watchdog for EV battery makers",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/hungary-to-launch-new-pollution-watchdog-for-ev-battery-makers/132176913",
+            "summary": "The move follows a late-June decision by a government \u200boffice to suspend Chinese battery parts maker Semcorp's production licence after authorities found \u200blarge-scale aluminium pollution in water samples taken from monitoring wells around the plant.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-04T07:35:10+00:00",
+            "published_display": "04 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
+            ]
+          },
+          {
             "title": "Uno Minda to Step Up Capacity, New-Technology Investments in FY27: MD Mehra",
             "url": "https://www.autocarpro.in/NEWS/uno-minda-to-step-up-capacity-new-technology-investments-in-fy27-md-mehra-133394",
             "summary": "Uno Minda will maintain a strong investment focus on capacity expansion and new capabilities in FY27 as it seeks higher value addition and market-share gains in its existing businesses while scaling electric-vehicle and other emerging technology platforms, Managing Director Ravi Mehra said. The auto-component maker expects the automotive industry to sustain its growth momentum during the current financial year and...",
@@ -245457,38 +245492,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "No room for downtime: What most demanding EV use cases tell us about the state of electrification",
-            "url": "https://evreporter.com/no-room-for-downtime-what-most-demanding-ev-use-cases-tell-us-about-the-state-of-electrification",
-            "summary": "The post No room for downtime: What most demanding EV use cases tell us about the state of electrification appeared first at EVreporter on EVreporter . The most revealing marker of EV adoption is when commercial operators stake their businesses on them.",
-            "source": "EVReporter",
-            "published_at": "2026-07-07T05:37:00+00:00",
-            "published_display": "07 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws",
-            "url": "https://evreporter.com/nepals-electric-car-revolution-and-whats-next-for-2ws",
-            "summary": "The post Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws appeared first at EVreporter on EVreporter . The landlocked Himalayan nation of Nepal has achieved something that most of the world is still working toward: nearly 80 The post Nepal\u2019s Electric Car Revolution \u2014 and What\u2019s Next for 2Ws appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-07T05:15:29+00:00",
-            "published_display": "07 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -245534,6 +245537,23 @@
             ]
           },
           {
+            "title": "Apollo Tyres To Scale AI, Digital Tools Across Manufacturing Plants",
+            "url": "https://www.autocarpro.in/NEWS/apollo-tyres-to-scale-ai-digital-tools-across-manufacturing-plants-133444",
+            "summary": "Apollo Tyres is expanding the use of digital and artificial intelligence-led tools across its manufacturing plants after technology deployed in tyre curing helped shorten production cycles. \u201cCure data analysis through digital technologies has reduced curing cycle times and is being expanded across plants,\u201d the company said in its FY26 annual report.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-06T18:08:10+00:00",
+            "published_display": "06 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Filing / Disclosure",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "TOCAL raises \u20b99 crore, partners with K-Indev Logistics for EV logistics expansion",
             "url": "https://evreporter.com/tocal-raises-%e2%82%b99-crore-partners-with-k-indev-logistics-for-ev-logistics-expansion",
             "summary": "The post TOCAL raises \u20b99 crore, partners with K-Indev Logistics for EV logistics expansion appeared first at EVreporter on EVreporter . TOCAL (DbyT Dynamics Mobility Solutions Pvt.",
@@ -245565,24 +245585,6 @@
             "signal_tags": [
               "Product / Launch",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Hungary to launch new pollution watchdog for EV battery makers",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/hungary-to-launch-new-pollution-watchdog-for-ev-battery-makers/132176913",
-            "summary": "The move follows a late-June decision by a government \u200boffice to suspend Chinese battery parts maker Semcorp's production licence after authorities found \u200blarge-scale aluminium pollution in water samples taken from monitoring wells around the plant.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-04T07:35:10+00:00",
-            "published_display": "04 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
             ]
           }
         ]
@@ -245623,23 +245625,6 @@
               "Funding / M&A",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Heavy Industries Ministry Extends Global Tender Deadline for Rare Earth Magnet Manufacturing Scheme",
-            "url": "https://www.autocarpro.in/NEWS/heavy-industries-ministry-extends-global-tender-deadline-for-rare-earth-magnet-manufacturing-scheme-133240",
-            "summary": "The Ministry of Heavy Industries has extended the bid submission timeline for its global tender under the Scheme to Promote Manufacturing of Sintered Rare Earth Permanent Magnet. Following requests from multiple industry stakeholders, the bid due date has been moved from June 29 to July 29, 2026.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-06-25T19:56:14+00:00",
-            "published_display": "25 Jun 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
           }
         ]
       }
@@ -245663,8 +245648,8 @@
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 61,
-      "filtered_low_signal": 3,
-      "kept_articles": 85
+      "filtered_low_signal": 4,
+      "kept_articles": 84
     }
   },
   "qa": [
