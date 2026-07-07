@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T11:52:25.802930+00:00",
+  "generated_at": "2026-07-07T17:16:24.889035+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,25 +121694,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-07T11:52:02.719784+00:00",
+      "generated_at": "2026-07-07T17:16:01.723668+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
-        {
-          "title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years",
-          "summary": "The company stated that it has sold one Virtus nearly every 24 minutes since the sedan's launch in 2022 and the model has led the premium sedan segment for more than two years.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-india-celebrates-4-years-of-virtus-sedan-with-exciting-anniversary-benefits/132159099",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-03T10:35:11+00:00",
-          "published_display": "03 Jul 2026",
-          "company": "Volkswagen India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-6494655/132159099.cms"
-        },
         {
           "title": "Tata Motors launches Sierra.ev at introductory price of \u20b918.79 lakh",
           "summary": "The post Tata Motors launches Sierra.ev at introductory price of \u20b918.79 lakh appeared first at EVreporter on EVreporter . Tata Motors has launched the Sierra.ev, an electric SUV, at an introductory ex-showroom price starting at \u20b918.79 lakh. Bookings are The post Tata Motors launches Sierra.ev at introductory price of \u20b918.79 lakh appeared first at EVreporter on EVreporter .",
@@ -121745,14 +121730,6 @@
       ],
       "companies": [
         {
-          "company": "Volkswagen India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-03T10:35:11+00:00",
-          "latest_title": "Volkswagen India rolls out anniversary benefits for Virtus as sedan completes four years"
-        },
-        {
           "company": "Tata Motors",
           "tone": "pv",
           "scope": "listed",
@@ -121771,7 +121748,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-07-03"
+        "latest_release_date": "2026-07-01"
       }
     }
   },
@@ -121893,10 +121870,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.97,
+        "value": 94.96,
         "unit": "\u20b9",
-        "delta_value": -0.2473,
-        "delta_label": "+0.19% in last week (Yahoo Finance)",
+        "delta_value": -0.2578,
+        "delta_label": "+0.18% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132304,7 +132281,7 @@
           },
           {
             "date": "2026-07-07",
-            "close": 94.9675
+            "close": 94.957
           }
         ]
       }
@@ -245181,7 +245158,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-07T11:51:38.841195+00:00",
+    "generated_at": "2026-07-07T17:15:35.463383+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245204,6 +245181,38 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Uno Minda to invest \u20b9320 crore in greenfield passenger vehicle seating systems plant",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/uno-minda-to-invest-320-crore-in-greenfield-passenger-vehicle-seating-systems-plant/132240284",
+            "summary": "The facility, to be set up through its JV with Japan's Tachi-S, will add annual capacity of 2.4 lakh units with phased commissioning by FY31.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-07T13:00:47+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Mercedes-Benz India says price-linked EV incentives could slow premium EV uptake",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-warns-price-linked-ev-incentives-may-hinder-premium-ev-growth/132238869",
+            "summary": "As the CLA EV drives record EV sales and lifts its penetration to 14%, the luxury carmaker says that Delhi's \u20b930 lakh cap on EV incentives could slow premium EV adoption by favouring comparable ICE models.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-07T12:32:40+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -245236,36 +245245,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Mercedes demos set stage for wave of German auto protests",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-demos-set-stage-for-wave-of-german-auto-protests/132180071",
-            "summary": "Thousands of workers demonstrated outside Mercedes-Benz factories in Germany over the premium carmaker's cost-saving plans, kicking off an expected wave of protests in the country's crisis-wracked auto industry that it had launched a savings drive because \"structural costs in Germany -- particularly labour costs -- are not competitive by international standards\".",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-04T11:05:30+00:00",
-            "published_display": "04 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Tata Motors' EV strategy: Sierra EV, Gen Z buyers, and resale value concerns addressed",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-ev-strategy-sierra-ev-gen-z-buyers-and-resale-value-concerns-addressed/132232121",
-            "summary": "In an exclusive interview with ET, Vivek Srivatsa, Chief Commercial Officer of Tata Passenger Electric Mobility, speaks about the Sierra EV's target audience, the resale value challenge, Battery-as-a-Service, Gen Zs as the next wave of buyers, and Tata's road to closing the price gap between EVs and their petrol equivalents.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-07T06:15:43+00:00",
-            "published_display": "07 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -245273,6 +245252,21 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "2W Retail Sales June 2026 \u2013 Hero, Honda, TVS, Bajaj, Suzuki, RE, Yamaha, Ather, Ola",
+            "url": "https://www.rushlane.com/2w-retail-sales-june-2026-hero-honda-tvs-bajaj-suzuki-12550575.html",
+            "summary": "Two-wheeler retail sales registered healthy year-on-year growth in June 2026, although volumes saw a marginal decline compared to May 2026 The post 2W Retail Sales June 2026 \u2013 Hero, Honda, TVS, Bajaj, Suzuki, RE, Yamaha, Ather, Ola appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-07T12:09:55+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "India ICE vs EV sales | For top 2W, 3W, 4W OEMs in June 2026",
             "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-june-2026",
@@ -245334,21 +245328,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "How Nippon Paint Is Reengineering Automotive Coatings for New-Age Vehicles and Fuels",
-            "url": "https://www.autocarpro.in/NEWS/how-nippon-paint-is-reengineering-automotive-coatings-for-new-age-vehicles-and-fuels-133435",
-            "summary": "Nippon Paint India is preparing its automotive coatings business for a market in which paint will have to do more than provide colour and shine. The company already supplies E20-compatible coatings for metal two-wheeler fuel tanks, is working with customers on E30 and E40 formulations, and says it has developed a product capable of withstanding E60.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-06T13:21:31+00:00",
-            "published_display": "06 Jul 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -245647,9 +245626,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 61,
-      "filtered_low_signal": 4,
-      "kept_articles": 84
+      "unmapped_articles": 59,
+      "filtered_low_signal": 3,
+      "kept_articles": 85
     }
   },
   "qa": [
