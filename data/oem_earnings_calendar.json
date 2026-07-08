@@ -1,15 +1,7 @@
 {
-  "as_of_date": "2026-07-07",
+  "as_of_date": "2026-07-08",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
-    {
-      "company": "Hyundai Motor India",
-      "ticker": "HYUNDAI",
-      "date": "2026-05-08",
-      "period_label": "Financial Results/Dividend",
-      "event_type": "earnings",
-      "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HYUNDAI"
-    },
     {
       "company": "Ashok Leyland",
       "ticker": "ASHOKLEY",
