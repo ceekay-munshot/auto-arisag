@@ -1,15 +1,7 @@
 {
-  "as_of_date": "2026-07-08",
+  "as_of_date": "2026-07-09",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
-    {
-      "company": "Ashok Leyland",
-      "ticker": "ASHOKLEY",
-      "date": "2026-05-09",
-      "period_label": "Q4 FY26 results",
-      "event_type": "earnings",
-      "source_url": "https://www.ashokleyland.com/in/investors/financial-results"
-    },
     {
       "company": "Tata Motors",
       "ticker": "TMPV",
