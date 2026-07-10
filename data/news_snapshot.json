@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-10T06:47:38.898741+00:00",
+  "generated_at": "2026-07-10T11:52:46.995546+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 24,
@@ -9,22 +9,6 @@
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
-        {
-          "title": "Toyota to build $3.6 billion Texas plant, shift some truck production from Mexico",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-invests-36-billion-in-new-texas-plant-to-boost-truck-production/132231565",
-          "summary": "The car company said it will move \u200bproduction of its mid-size Tacoma pickup truck from the Toyota Manufacturing Baja California plant in Mexico \u200bto the Texas plant when completed.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-07T05:51:29+00:00",
-          "published_display": "07 Jul 2026",
-          "importance_score": 8,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "Commercial Vehicles"
-          ],
-          "signal_tags": [
-            "Capacity / Capex"
-          ]
-        },
         {
           "title": "China's passenger car exports are up 80% in June as EV demand grows, while sales drop at home",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-passenger-car-exports-are-up-80-in-june-as-ev-demand-grows-while-sales-drop-at-home/132286315",
@@ -91,6 +75,23 @@
           ],
           "signal_tags": [
             "General"
+          ]
+        },
+        {
+          "title": "Uno Minda to Expand Into Four-Wheeler Passenger Vehicle Seating Market",
+          "url": "https://www.autocarpro.in/NEWS/uno-minda-to-expand-into-four-wheeler-passenger-vehicle-seating-market-133471",
+          "summary": "Automotive component supplier Uno Minda Limited has announced a commercial expansion into the assembly of complete four-wheeler passenger vehicle seating systems. To support the production rollout, the company's board of directors has approved a capital expenditure plan of approximately \u20b9320 crore to establish a greenfield manufacturing facility in Chhatrapati Sambhajinagar, Maharashtra.",
+          "source": "Autocar Professional Components",
+          "published_at": "2026-07-07T19:11:22+00:00",
+          "published_display": "07 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Components"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
+            "Supply Chain / Components"
           ]
         }
       ]
@@ -333,7 +334,7 @@
         {
           "title": "JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0",
           "url": "https://evreporter.com/jbm-electric-vehicles-launches-galaxy-electric-luxury-coach-at-prawaas-5-0",
-          "summary": "The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter . JBM Electric Vehicles (JBM EV), part of JBM Auto, launched its next-generation GALAXY electric luxury coach at Prawaas 5.0 in The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter .",
+          "summary": "The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter . JBM Electric Vehicles (JBM EV), part of JBM Group, launched its next-generation GALAXY electric luxury coach at Prawaas 5.0 in The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter .",
           "source": "EVReporter",
           "published_at": "2026-07-10T06:40:32+00:00",
           "published_display": "10 Jul 2026",
@@ -461,7 +462,7 @@
     ],
     "duplicates_removed": 1,
     "unmapped_articles": 58,
-    "filtered_low_signal": 2,
-    "kept_articles": 77
+    "filtered_low_signal": 0,
+    "kept_articles": 79
   }
 }
