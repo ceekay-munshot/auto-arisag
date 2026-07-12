@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T15:58:21.649678+00:00",
+  "generated_at": "2026-07-12T06:06:19.941597+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -48780,7 +48780,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-07-11",
+          "latest_release_date": "2026-07-12",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -121755,7 +121755,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-07-11",
+    "as_of_date": "2026-07-12",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -132298,7 +132298,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-07-11",
+    "as_of_date": "2026-07-12",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -244043,7 +244043,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-07-11",
+    "as_of_date": "2026-07-12",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -245267,10 +245267,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-11T15:57:33.789868+00:00",
+    "generated_at": "2026-07-12T06:05:34.672936+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 25,
     "groups": [
       {
         "id": "pv",
@@ -245492,23 +245492,6 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "BMW overtakes Mercedes-Benz in India's luxury car retail in H1 2026",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-overtakes-mercedes-benz-in-indias-luxury-car-retail-in-h1-2026/132266883",
-            "summary": "BMW Group India moved ahead of Mercedes-Benz in H1 2026 retail sales, aided by a strong EV and SUV portfolio. With the luxury car market growing 4%, the latest Vahan data highlights a changing competitive landscape.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-08T15:09:06+00:00",
-            "published_display": "08 Jul 2026",
-            "importance_score": 10,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
             "title": "German automakers hit by sharp China sales drop in second quarter",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/german-automakers-hit-by-sharp-china-sales-drop-in-second-quarter/132315147",
             "summary": "German automakers Volkswagen, Mercedes-Benz and BMW reported sharp sales declines of over 30 per cent in China during the second quarter, as weakening demand and intensifying competition from domestic EV players deepened challenges in the world\u2019s largest auto market.",
@@ -245575,6 +245558,24 @@
               "Supply Chain / Components",
               "Input Costs / Commodities"
             ]
+          },
+          {
+            "title": "Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh",
+            "url": "https://evreporter.com/revolt-motors-launches-rvx-electric-motorcycle-in-india-at-%e2%82%b91-24-lakh",
+            "summary": "The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter . Revolt Motors has launched the RVX electric motorcycle in India at an introductory ex-showroom price of \u20b91.24 lakh (including applicable PM E-DRIVE incentives), and The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-03T12:47:17+00:00",
+            "published_display": "03 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -245596,6 +245597,22 @@
             ],
             "signal_tags": [
               "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tata Sierra EV review: More than an icon, it's Tata's statement of intent",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-sierra-ev-review-a-bold-step-into-the-electric-future/132340974",
+            "summary": "The Tata Sierra EV marks the return of one of India's most iconic nameplates, but this time with an all-electric powertrain and a premium positioning. Here's whether Tata's flagship EV has what it takes to take on rivals such as the Mahindra BE 6 and Hyundai Creta Electric.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-12T05:31:14+00:00",
+            "published_display": "12 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
               "Supply Chain / Components"
             ]
           },
@@ -245649,23 +245666,6 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Apollo Tyres To Scale AI, Digital Tools Across Manufacturing Plants",
-            "url": "https://www.autocarpro.in/NEWS/apollo-tyres-to-scale-ai-digital-tools-across-manufacturing-plants-133444",
-            "summary": "Apollo Tyres is expanding the use of digital and artificial intelligence-led tools across its manufacturing plants after technology deployed in tyre curing helped shorten production cycles. \u201cCure data analysis through digital technologies has reduced curing cycle times and is being expanded across plants,\u201d the company said in its FY26 annual report.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-06T18:08:10+00:00",
-            "published_display": "06 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Filing / Disclosure",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -245673,24 +245673,6 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
-          {
-            "title": "Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh",
-            "url": "https://evreporter.com/revolt-motors-launches-rvx-electric-motorcycle-in-india-at-%e2%82%b91-24-lakh",
-            "summary": "The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter . Revolt Motors has launched the RVX electric motorcycle in India at an introductory ex-showroom price of \u20b91.24 lakh (including applicable PM E-DRIVE incentives), and The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-03T12:47:17+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "NDR Auto Components Subsidiary Inaugurates New Manufacturing Facility in Andhra Pradesh",
             "url": "https://www.autocarpro.in/NEWS/ndr-auto-components-subsidiary-inaugurates-new-manufacturing-facility-in-andhra-pradesh-133552",
@@ -245818,7 +245800,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-07-11",
+    "as_of_date": "2026-07-12",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
