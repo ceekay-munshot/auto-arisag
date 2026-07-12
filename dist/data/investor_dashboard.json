@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T06:06:19.941597+00:00",
+  "generated_at": "2026-07-12T10:36:50.514002+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,10 +121694,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-11T15:57:59.733172+00:00",
+      "generated_at": "2026-07-12T10:36:27.819025+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "Hero Vida VX2 Plus 4.4 kWh Launched \u2013 187 Kms Range, 90 Kmph Top Speed",
+          "summary": "With the new 4.4 kWh Vida VX2 Plus variant, Hero will target users who want uninterrupted longer journeys or fewer charging cycles The post Hero Vida VX2 Plus 4.4 kWh Launched \u2013 187 Kms Range, 90 Kmph Top Speed appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hero-vida-vx2-plus-4-4-kwh-launched-187-kms-range-90-kmph-top-speed-12550810.html",
+          "source": "RushLane",
+          "published_at": "2026-07-12T04:48:16+00:00",
+          "published_display": "12 Jul 2026",
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/Hero-Vida-VX2-Plus-launched.jpeg"
+        },
         {
           "title": "Volkswagen launches Tayron Life at \u20b941.99 lakh, expands premium SUV portfolio",
           "summary": "Five-seater SUV gets 2.0-litre TSI engine, Level 2 ADAS and 4Motion all-wheel drive; becomes Volkswagen India's second locally assembled model launched this year.",
@@ -121731,6 +121746,14 @@
       ],
       "companies": [
         {
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-07-12T04:48:16+00:00",
+          "latest_title": "Hero Vida VX2 Plus 4.4 kWh Launched \u2013 187 Kms Range, 90 Kmph Top Speed"
+        },
+        {
           "company": "Volkswagen India",
           "tone": "pv",
           "scope": "tracked",
@@ -121749,7 +121772,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-07-10"
+        "latest_release_date": "2026-07-12"
       }
     }
   },
@@ -245267,7 +245290,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-12T06:05:34.672936+00:00",
+    "generated_at": "2026-07-12T10:36:02.819330+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245276,23 +245299,6 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "MG unveils GO! hatchback, Cyber SUV concepts at Goodwood, previews future EV design direction",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mg-unveils-go-hatchback-cyber-suv-concepts-at-goodwood-previews-future-ev-design-direction/132313993",
-            "summary": "Concept models signal brand's expansion into compact electric hatchback and performance SUV segments, with GO! production version planned for 2027.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-10T14:10:25+00:00",
-            "published_display": "10 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch"
-            ]
-          },
           {
             "title": "China's passenger car exports are up 80% in June as EV demand grows, while sales drop at home",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-passenger-car-exports-are-up-80-in-june-as-ev-demand-grows-while-sales-drop-at-home/132286315",
@@ -245355,6 +245361,22 @@
             "segment_tags": [
               "Passenger Vehicles",
               "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Uno Minda to invest \u20b9320 crore in greenfield passenger vehicle seating systems plant",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/uno-minda-to-invest-320-crore-in-greenfield-passenger-vehicle-seating-systems-plant/132240284",
+            "summary": "The facility, to be set up through its JV with Japan's Tachi-S, will add annual capacity of 2.4 lakh units with phased commissioning by FY31.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-07T13:00:47+00:00",
+            "published_display": "07 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
             ],
             "signal_tags": [
               "Capacity / Capex",
@@ -245542,24 +245564,6 @@
             ]
           },
           {
-            "title": "Hungary to launch new pollution watchdog for EV battery makers",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/hungary-to-launch-new-pollution-watchdog-for-ev-battery-makers/132176913",
-            "summary": "The move follows a late-June decision by a government \u200boffice to suspend Chinese battery parts maker Semcorp's production licence after authorities found \u200blarge-scale aluminium pollution in water samples taken from monitoring wells around the plant.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-04T07:35:10+00:00",
-            "published_display": "04 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
             "title": "Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh",
             "url": "https://evreporter.com/revolt-motors-launches-rvx-electric-motorcycle-in-india-at-%e2%82%b91-24-lakh",
             "summary": "The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter . Revolt Motors has launched the RVX electric motorcycle in India at an introductory ex-showroom price of \u20b91.24 lakh (including applicable PM E-DRIVE incentives), and The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter .",
@@ -245575,6 +245579,23 @@
               "Policy / Regulation",
               "Product / Launch",
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "MG unveils GO! hatchback, Cyber SUV concepts at Goodwood, previews future EV design direction",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mg-unveils-go-hatchback-cyber-suv-concepts-at-goodwood-previews-future-ev-design-direction/132313993",
+            "summary": "Concept models signal brand's expansion into compact electric hatchback and performance SUV segments, with GO! production version planned for 2027.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-10T14:10:25+00:00",
+            "published_display": "10 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
             ]
           }
         ]
