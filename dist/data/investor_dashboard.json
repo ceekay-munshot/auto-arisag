@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T12:08:21.963514+00:00",
+  "generated_at": "2026-07-13T17:14:34.582510+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-13T12:07:57.123373+00:00",
+      "generated_at": "2026-07-13T17:14:10.924877+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
         {
           "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
@@ -121713,21 +121713,6 @@
             "EV"
           ],
           "image_url": null
-        },
-        {
-          "title": "Hero Vida VX2 Plus 4.4 kWh Launched \u2013 187 Kms Range, 90 Kmph Top Speed",
-          "summary": "With the new 4.4 kWh Vida VX2 Plus variant, Hero will target users who want uninterrupted longer journeys or fewer charging cycles The post Hero Vida VX2 Plus 4.4 kWh Launched \u2013 187 Kms Range, 90 Kmph Top Speed appeared first on RushLane .",
-          "url": "https://www.rushlane.com/hero-vida-vx2-plus-4-4-kwh-launched-187-kms-range-90-kmph-top-speed-12550810.html",
-          "source": "RushLane",
-          "published_at": "2026-07-12T04:48:16+00:00",
-          "published_display": "12 Jul 2026",
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/Hero-Vida-VX2-Plus-launched.jpeg"
         },
         {
           "title": "Volkswagen launches Tayron Life at \u20b941.99 lakh, expands premium SUV portfolio",
@@ -121750,7 +121735,7 @@
           "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-07-13T09:27:05+00:00",
           "latest_title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh"
         },
@@ -121887,10 +121872,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.72,
+        "value": 95.61,
         "unit": "\u20b9",
-        "delta_value": 0.3298,
-        "delta_label": "+0.53% in last week (Yahoo Finance)",
+        "delta_value": 0.2198,
+        "delta_label": "+0.42% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132298,7 +132283,7 @@
           },
           {
             "date": "2026-07-13",
-            "close": 95.72
+            "close": 95.61
           }
         ]
       }
