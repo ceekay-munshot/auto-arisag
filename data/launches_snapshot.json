@@ -1,9 +1,22 @@
 {
   "available": true,
-  "generated_at": "2026-07-13T17:14:10.924877+00:00",
+  "generated_at": "2026-07-14T10:48:22.684640+00:00",
   "window_days": 30,
-  "item_count": 2,
+  "item_count": 3,
   "items": [
+    {
+      "title": "Renault India launches Duster Adventure Edition at ₹12.99 lakh",
+      "summary": "The special edition adds exclusive exterior graphics and interior enhancements while continuing with the existing mechanical package.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/renault-india-unveils-duster-adventure-edition-starting-at-1299-lakh/132381632",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-07-14T05:45:33+00:00",
+      "published_display": "14 Jul 2026",
+      "company": "Renault India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-584014/132381632.cms"
+    },
     {
       "title": "Hero MotoCorp’s VIDA launches VX2 Plus 4.4 kWh electric scooter at ₹1.44 lakh",
       "summary": "The post Hero MotoCorp’s VIDA launches VX2 Plus 4.4 kWh electric scooter at ₹1.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp’s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp’s VIDA launches VX2 Plus 4.4 kWh electric scooter at ₹1.44 lakh appeared first at EVreporter on EVreporter .",
@@ -38,6 +51,14 @@
   ],
   "companies": [
     {
+      "company": "Renault India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-07-14T05:45:33+00:00",
+      "latest_title": "Renault India launches Duster Adventure Edition at ₹12.99 lakh"
+    },
+    {
       "company": "Hero MotoCorp",
       "tone": "tw",
       "scope": "listed",
@@ -56,6 +77,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6
+    "sources_live": 5
   }
 }
