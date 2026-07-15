@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T10:51:58.551298+00:00",
+  "generated_at": "2026-07-15T16:24:11.449674+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121872,8 +121872,8 @@
         "label": "USD / INR",
         "value": 96.25,
         "unit": "\u20b9",
-        "delta_value": -0.0439,
-        "delta_label": "+0.69% in last week (Yahoo Finance)",
+        "delta_value": -0.0539,
+        "delta_label": "+0.68% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132281,7 +132281,7 @@
           },
           {
             "date": "2026-07-15",
-            "close": 96.255
+            "close": 96.245
           }
         ]
       }
@@ -244076,6 +244076,22 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=M&M"
       },
       {
+        "company": "Maruti Suzuki",
+        "ticker": "MARUTI",
+        "date": "2026-07-31",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=MARUTI"
+      },
+      {
+        "company": "Escorts Kubota",
+        "ticker": "ESCORTS",
+        "date": "2026-08-03",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ESCORTS"
+      },
+      {
         "company": "Atul Auto",
         "ticker": "ATULAUTO",
         "date": "2026-08-08",
@@ -244135,7 +244151,7 @@
       }
     ],
     "next_14_count": 3,
-    "upcoming_count": 5
+    "upcoming_count": 7
   },
   "market_insights": [
     {
@@ -245246,10 +245262,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-15T10:51:14.315515+00:00",
+    "generated_at": "2026-07-15T16:23:21.411460+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 25,
+    "item_count": 24,
     "groups": [
       {
         "id": "pv",
@@ -245360,21 +245376,6 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "2026 Hero Karizma XMR 250 Spied \u2013 Launch Soon",
-            "url": "https://www.rushlane.com/2026-hero-karizma-xmr-250-spied-launch-soon-12550993.html",
-            "summary": "Hero Karizma XMR 250 is expected to become the flagship fully-faired motorcycle in Hero MotoCorp\u2019s premium ICE portfolio The post 2026 Hero Karizma XMR 250 Spied \u2013 Launch Soon appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-14T10:44:38+00:00",
-            "published_display": "14 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
           }
         ]
       },
@@ -245468,6 +245469,23 @@
             ]
           },
           {
+            "title": "LICO Materials, Ather Energy partner to recycle end-of-life EV batteries",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/lico-materials-and-ather-energy-join-forces-for-sustainable-ev-battery-recycling-in-india/132279955",
+            "summary": "The partnership aims to establish a circular battery supply chain by recovering critical minerals from end-of-life lithium-ion batteries and reintroducing them into EV battery manufacturing.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-09T07:11:57+00:00",
+            "published_display": "09 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components",
+              "Input Costs / Commodities"
+            ]
+          },
+          {
             "title": "EKA Mobility launches 9-metre electric school bus",
             "url": "https://evreporter.com/eka-mobility-launches-9-metre-electric-school-bus",
             "summary": "The post EKA Mobility launches 9-metre electric school bus appeared first at EVreporter on EVreporter . EKA Mobility has launched the EKA 9M Electric School Bus at Prawaas 5.0 in Gandhinagar, expanding its electric commercial vehicle The post EKA Mobility launches 9-metre electric school bus appeared first at EVreporter on EVreporter .",
@@ -245485,20 +245503,18 @@
             ]
           },
           {
-            "title": "Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh",
-            "url": "https://evreporter.com/revolt-motors-launches-rvx-electric-motorcycle-in-india-at-%e2%82%b91-24-lakh",
-            "summary": "The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter . Revolt Motors has launched the RVX electric motorcycle in India at an introductory ex-showroom price of \u20b91.24 lakh (including applicable PM E-DRIVE incentives), and The post Revolt Motors Launches RVX Electric Motorcycle in India at \u20b91.24 Lakh appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-03T12:47:17+00:00",
-            "published_display": "03 Jul 2026",
-            "importance_score": 8,
+            "title": "Kia India opens bookings for Syros EV, to offer up to 526 km driving range",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-bookings-for-syros-ev-to-offer-up-to-526-km-driving-range/132416152",
+            "summary": "The second mass-market electric SUV by Kia comes with 42 kWh and 51.4 kWh battery pack options with a claimed range of up to 526 km.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-15T12:29:30+00:00",
+            "published_display": "15 Jul 2026",
+            "importance_score": 7,
             "segment_tags": [
-              "Two-Wheelers",
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Policy / Regulation",
-              "Product / Launch",
               "Supply Chain / Components"
             ]
           },
@@ -245517,22 +245533,6 @@
               "Funding / M&A",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "New Kia Syros EV Spied At Charging Station \u2013 Days Before Launch",
-            "url": "https://www.rushlane.com/new-kia-syros-ev-spied-at-charging-station-days-before-launch-12551066.html",
-            "summary": "Ahead of its grand debut or launch on July 23rd, new Kia Syros EV has been spied while it was being charged at a public DC charging station The post New Kia Syros EV Spied At Charging Station \u2013 Days Before Launch appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-15T05:22:51+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -245540,6 +245540,23 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
+            "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
+            "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-15T11:58:00+00:00",
+            "published_display": "15 Jul 2026",
+            "importance_score": 10,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
             "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
@@ -245597,23 +245614,6 @@
             "source": "ET Auto Components",
             "published_at": "2026-07-11T05:06:35+00:00",
             "published_display": "11 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "LICO Materials, Ather Energy partner to recycle end-of-life EV batteries",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/lico-materials-and-ather-energy-join-forces-for-sustainable-ev-battery-recycling-in-india/132279955",
-            "summary": "The partnership aims to establish a circular battery supply chain by recovering critical minerals from end-of-life lithium-ion batteries and reintroducing them into EV battery manufacturing.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-09T07:11:57+00:00",
-            "published_display": "09 Jul 2026",
             "importance_score": 8,
             "segment_tags": [
               "EV"
@@ -245709,22 +245709,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 6,
+      "sources_live": 5,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 63,
-      "filtered_low_signal": 3,
-      "kept_articles": 85
+      "unmapped_articles": 59,
+      "filtered_low_signal": 2,
+      "kept_articles": 78
     }
   },
   "qa": [
