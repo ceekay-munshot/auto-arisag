@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-15T16:23:21.411460+00:00",
+  "generated_at": "2026-07-16T05:42:11.261733+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 24,
@@ -9,6 +9,22 @@
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
+        {
+          "title": "Volvo Cars to receive financial support for its Ghent plant",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-secures-119-million-investment-for-ghent-plant-expansion/132421925",
+          "summary": "Volvo Cars has signed an MoU with Belgium's federal and Flanders regional governments to support the long-term competitiveness of its Ghent plant, backed by a potential \u20ac119 million support package.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-15T17:30:33+00:00",
+          "published_display": "15 Jul 2026",
+          "importance_score": 9,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Luxury"
+          ],
+          "signal_tags": [
+            "Capacity / Capex"
+          ]
+        },
         {
           "title": "Stellantis' Alfa Romeo plans launch of new mid-sized SUV by end 2027",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/stellantis-alfa-romeo-plans-launch-of-new-mid-sized-suv-by-end-2027/132394536",
@@ -73,22 +89,6 @@
           ],
           "signal_tags": [
             "Input Costs / Commodities",
-            "Supply Chain / Components"
-          ]
-        },
-        {
-          "title": "Nearly 85,000 Electric Cars Sold in India During Q1 FY 2026 \u2013 2027",
-          "url": "https://evreporter.com/electric-4-wheeler-market-landscape-in-india-q1-fy-2026-2027",
-          "summary": "The post Nearly 85,000 Electric Cars Sold in India During Q1 FY 2026 \u2013 2027 appeared first at EVreporter on EVreporter . Q1 FY26-27 reflects a market in transition, where overall passenger vehicle sales moderated, but electrification continued to gain pace, supported The post Nearly 85,000 Electric Cars Sold in India During Q1 FY 2026 \u2013 2027 appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-07-09T09:35:24+00:00",
-          "published_display": "09 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "signal_tags": [
             "Supply Chain / Components"
           ]
         }
@@ -447,21 +447,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
+    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV",
-      "RushLane"
+      "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 59,
-    "filtered_low_signal": 2,
-    "kept_articles": 78
+    "unmapped_articles": 61,
+    "filtered_low_signal": 3,
+    "kept_articles": 85
   }
 }
