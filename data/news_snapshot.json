@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-17T16:16:35.044091+00:00",
+  "generated_at": "2026-07-18T05:27:55.614930+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 27,
@@ -23,6 +23,22 @@
           ],
           "signal_tags": [
             "Capacity / Capex"
+          ]
+        },
+        {
+          "title": "Volvo Cars sees stronger second half despite steep China decline, rising costs",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-sees-stronger-second-half-despite-steep-china-decline-rising-costs/132473435",
+          "summary": "Sales in the world's largest auto market slumped a sharper-than-expected 35 per cent, dragging Volvo's operating margin down to 1.1 per cent from 1.6 per cent.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-18T03:53:45+00:00",
+          "published_display": "18 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Luxury"
+          ],
+          "signal_tags": [
+            "General"
           ]
         },
         {
@@ -67,22 +83,6 @@
           "importance_score": 7,
           "segment_tags": [
             "Passenger Vehicles"
-          ],
-          "signal_tags": [
-            "Supply Chain / Components"
-          ]
-        },
-        {
-          "title": "Kia India opens bookings for Syros EV, to offer up to 526 km driving range",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-bookings-for-syros-ev-to-offer-up-to-526-km-driving-range/132416152",
-          "summary": "The second mass-market electric SUV by Kia comes with 42 kWh and 51.4 kWh battery pack options with a claimed range of up to 526 km.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-15T12:29:30+00:00",
-          "published_display": "15 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
           ],
           "signal_tags": [
             "Supply Chain / Components"
@@ -289,15 +289,15 @@
           ]
         },
         {
-          "title": "Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged",
-          "url": "https://www.rushlane.com/ather-updates-battery-configurations-nmc-lfp-size-changes-price-12551150.html",
-          "summary": "While the battery chemistry and sizes have been adjusted for Ather scooters, there is no change in performance or charging time The post Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-07-17T11:29:04+00:00",
-          "published_display": "17 Jul 2026",
+          "title": "Kia India opens bookings for Syros EV, to offer up to 526 km driving range",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-bookings-for-syros-ev-to-offer-up-to-526-km-driving-range/132416152",
+          "summary": "The second mass-market electric SUV by Kia comes with 42 kWh and 51.4 kWh battery pack options with a claimed range of up to 526 km.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-15T12:29:30+00:00",
+          "published_display": "15 Jul 2026",
           "importance_score": 7,
           "segment_tags": [
-            "Two-Wheelers",
+            "Passenger Vehicles",
             "EV"
           ],
           "signal_tags": [
@@ -305,19 +305,19 @@
           ]
         },
         {
-          "title": "JSW MG Motor India Unveils New ADAPT Platform \u2013 EV, PHEV Confirmed",
-          "url": "https://www.rushlane.com/jsw-mg-motor-india-unveils-new-adapt-platform-ev-phev-confirmed-12551129.html",
-          "summary": "With recent spy shots of Starlight-based hybrid and electric SUVs already surfacing, today\u2019s platform announcement suggests MG\u2019s next wave of products may not be far away The post JSW MG Motor India Unveils New ADAPT Platform \u2013 EV, PHEV Confirmed appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-07-16T07:19:29+00:00",
-          "published_display": "16 Jul 2026",
+          "title": "E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding",
+          "url": "https://evreporter.com/e3-electric-ai-raises-%e2%82%b9100-crore-series-a-funding-ahead-of-ai-electric-scooter-launch",
+          "summary": "The post E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding appeared first at EVreporter on EVreporter . E3 Electric.Ai, a Bengaluru-based electric mobility company, has raised \u20b9100 crore through a combination of equity and debt as part of its Series A funding The post E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-15T07:33:49+00:00",
+          "published_display": "15 Jul 2026",
           "importance_score": 7,
           "segment_tags": [
-            "Passenger Vehicles",
             "EV"
           ],
           "signal_tags": [
-            "Product / Launch"
+            "Funding / M&A",
+            "Supply Chain / Components"
           ]
         }
       ]
@@ -496,21 +496,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
-    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6,
+    "sources_live": 5,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV"
+      "Autocar Professional EV",
+      "RushLane"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 59,
-    "filtered_low_signal": 2,
-    "kept_articles": 86
+    "unmapped_articles": 57,
+    "filtered_low_signal": 1,
+    "kept_articles": 79
   }
 }

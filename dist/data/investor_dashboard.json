@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T16:17:23.858689+00:00",
+  "generated_at": "2026-07-18T05:29:03.219509+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -48780,7 +48780,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-07-17",
+          "latest_release_date": "2026-07-18",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-17T16:17:02.556142+00:00",
+      "generated_at": "2026-07-18T05:28:42.378226+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
         {
           "title": "JSW MG Motor lines up two new-energy SUVs for FY27 launch, plans \u20b91,400 cr investment",
@@ -121712,19 +121712,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-164366/132442360.cms"
-        },
-        {
-          "title": "Mahindra Chakan Plant Rolls Out 3 Millionth Vehicle \u2013 BE 6 Marks Milestone",
-          "summary": "Latest one million vehicles produced in just 27 months, highlighting rapid growth at Mahindra\u2019s flagship manufacturing facility The post Mahindra Chakan Plant Rolls Out 3 Millionth Vehicle \u2013 BE 6 Marks Milestone appeared first on RushLane .",
-          "url": "https://www.rushlane.com/mahindra-chakan-plant-rolls-out-3-millionth-vehicle-be-6-marks-milestone-12551124.html",
-          "source": "RushLane",
-          "published_at": "2026-07-16T07:01:14+00:00",
-          "published_display": "16 Jul 2026",
-          "company": "Mahindra & Mahindra",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/mahindra-chakan-plant-production-milestone-3-million-1.jpeg"
         },
         {
           "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
@@ -121753,14 +121740,6 @@
           "latest_title": "JSW MG Motor lines up two new-energy SUVs for FY27 launch, plans \u20b91,400 cr investment"
         },
         {
-          "company": "Mahindra & Mahindra",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-07-16T07:01:14+00:00",
-          "latest_title": "Mahindra Chakan Plant Rolls Out 3 Millionth Vehicle \u2013 BE 6 Marks Milestone"
-        },
-        {
           "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
@@ -121777,7 +121756,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-07-17",
+    "as_of_date": "2026-07-18",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -121893,10 +121872,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 96.27,
+        "value": 96.28,
         "unit": "\u20b9",
-        "delta_value": -0.2286,
-        "delta_label": "+0.92% in last week (Yahoo Finance)",
+        "delta_value": -0.3722,
+        "delta_label": "+1.00% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132307,8 +132286,12 @@
             "close": 96.4986
           },
           {
-            "date": "2026-07-17",
-            "close": 96.27
+            "date": "2026-07-16",
+            "close": 96.6522
+          },
+          {
+            "date": "2026-07-18",
+            "close": 96.28
           }
         ]
       }
@@ -132316,19 +132299,20 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-07-17",
+    "as_of_date": "2026-07-18",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13803.0,
-        "change_1d_pct": 0.15,
-        "change_1w_pct": -0.37,
-        "change_1m_pct": 2.37,
+        "price": 13783.0,
+        "change_1d_pct": 1.47,
+        "change_1w_pct": 0.4,
+        "change_1m_pct": 1.12,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13050.0,
           12912.0,
           13120.0,
           13073.0,
@@ -132357,8 +132341,7 @@
           13695.0,
           13489.0,
           13583.0,
-          13783.0,
-          13803.0
+          13783.0
         ],
         "daily_closes": [
           {
@@ -142248,10 +142231,6 @@
           {
             "date": "2026-07-16",
             "close": 13783.0
-          },
-          {
-            "date": "2026-07-17",
-            "close": 13803.0
           }
         ]
       },
@@ -152191,12 +152170,13 @@
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4909.9,
-        "change_1d_pct": 0.24,
-        "change_1w_pct": -0.79,
-        "change_1m_pct": -2.22,
+        "price": 4898.0,
+        "change_1d_pct": 0.45,
+        "change_1w_pct": -0.01,
+        "change_1m_pct": -2.36,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          4835.0,
           4775.5,
           4855.4,
           4856.7,
@@ -152225,8 +152205,7 @@
           4952.1,
           4878.3,
           4876.2,
-          4898.0,
-          4909.9
+          4898.0
         ],
         "daily_closes": [
           {
@@ -162116,21 +162095,18 @@
           {
             "date": "2026-07-16",
             "close": 4898.0
-          },
-          {
-            "date": "2026-07-17",
-            "close": 4909.9
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3618.2,
-        "change_1d_pct": 1.54,
-        "change_1w_pct": -0.14,
-        "change_1m_pct": 4.64,
+        "price": 3563.5,
+        "change_1d_pct": -1.35,
+        "change_1w_pct": -1.73,
+        "change_1m_pct": 3.33,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3383.9,
           3317.6,
           3358.0,
           3334.9,
@@ -162159,8 +162135,7 @@
           3676.9,
           3608.4,
           3612.3,
-          3563.5,
-          3618.2
+          3563.5
         ],
         "daily_closes": [
           {
@@ -172050,10 +172025,6 @@
           {
             "date": "2026-07-16",
             "close": 3563.5
-          },
-          {
-            "date": "2026-07-17",
-            "close": 3618.2
           }
         ]
       },
@@ -181993,12 +181964,13 @@
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1993.3,
-        "change_1d_pct": -1.57,
-        "change_1w_pct": 0.42,
-        "change_1m_pct": 0.84,
+        "price": 2025.0,
+        "change_1d_pct": 1.1,
+        "change_1w_pct": 5.13,
+        "change_1m_pct": 2.44,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          1913.6,
           1894.7,
           1898.6,
           1891.0,
@@ -182027,8 +181999,7 @@
           1994.4,
           1959.7,
           2002.9,
-          2025.0,
-          1993.3
+          2025.0
         ],
         "daily_closes": [
           {
@@ -183758,10 +183729,6 @@
           {
             "date": "2026-07-16",
             "close": 2025.0
-          },
-          {
-            "date": "2026-07-17",
-            "close": 1993.3
           }
         ]
       },
@@ -214297,12 +214264,13 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2937.0,
-        "change_1d_pct": -0.26,
-        "change_1w_pct": -0.16,
-        "change_1m_pct": 4.53,
+        "price": 2944.8,
+        "change_1d_pct": 0.89,
+        "change_1w_pct": 1.24,
+        "change_1m_pct": 4.02,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2781.5,
           2798.7,
           2789.9,
           2740.6,
@@ -214331,8 +214299,7 @@
           2969.7,
           2928.4,
           2918.9,
-          2944.8,
-          2937.0
+          2944.8
         ],
         "daily_closes": [
           {
@@ -224222,10 +224189,6 @@
           {
             "date": "2026-07-16",
             "close": 2944.8
-          },
-          {
-            "date": "2026-07-17",
-            "close": 2937.0
           }
         ]
       },
@@ -244101,7 +244064,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-07-17",
+    "as_of_date": "2026-07-18",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -245357,7 +245320,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-17T16:16:35.044091+00:00",
+    "generated_at": "2026-07-18T05:27:55.614930+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -245380,6 +245343,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Volvo Cars sees stronger second half despite steep China decline, rising costs",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-sees-stronger-second-half-despite-steep-china-decline-rising-costs/132473435",
+            "summary": "Sales in the world's largest auto market slumped a sharper-than-expected 35 per cent, dragging Volvo's operating margin down to 1.1 per cent from 1.6 per cent.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-18T03:53:45+00:00",
+            "published_display": "18 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -245424,22 +245403,6 @@
             "importance_score": 7,
             "segment_tags": [
               "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Kia India opens bookings for Syros EV, to offer up to 526 km driving range",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-bookings-for-syros-ev-to-offer-up-to-526-km-driving-range/132416152",
-            "summary": "The second mass-market electric SUV by Kia comes with 42 kWh and 51.4 kWh battery pack options with a claimed range of up to 526 km.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-15T12:29:30+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
             ],
             "signal_tags": [
               "Supply Chain / Components"
@@ -245646,15 +245609,15 @@
             ]
           },
           {
-            "title": "Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged",
-            "url": "https://www.rushlane.com/ather-updates-battery-configurations-nmc-lfp-size-changes-price-12551150.html",
-            "summary": "While the battery chemistry and sizes have been adjusted for Ather scooters, there is no change in performance or charging time The post Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-17T11:29:04+00:00",
-            "published_display": "17 Jul 2026",
+            "title": "Kia India opens bookings for Syros EV, to offer up to 526 km driving range",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-bookings-for-syros-ev-to-offer-up-to-526-km-driving-range/132416152",
+            "summary": "The second mass-market electric SUV by Kia comes with 42 kWh and 51.4 kWh battery pack options with a claimed range of up to 526 km.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-15T12:29:30+00:00",
+            "published_display": "15 Jul 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Two-Wheelers",
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
@@ -245662,19 +245625,19 @@
             ]
           },
           {
-            "title": "JSW MG Motor India Unveils New ADAPT Platform \u2013 EV, PHEV Confirmed",
-            "url": "https://www.rushlane.com/jsw-mg-motor-india-unveils-new-adapt-platform-ev-phev-confirmed-12551129.html",
-            "summary": "With recent spy shots of Starlight-based hybrid and electric SUVs already surfacing, today\u2019s platform announcement suggests MG\u2019s next wave of products may not be far away The post JSW MG Motor India Unveils New ADAPT Platform \u2013 EV, PHEV Confirmed appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-16T07:19:29+00:00",
-            "published_display": "16 Jul 2026",
+            "title": "E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding",
+            "url": "https://evreporter.com/e3-electric-ai-raises-%e2%82%b9100-crore-series-a-funding-ahead-of-ai-electric-scooter-launch",
+            "summary": "The post E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding appeared first at EVreporter on EVreporter . E3 Electric.Ai, a Bengaluru-based electric mobility company, has raised \u20b9100 crore through a combination of equity and debt as part of its Series A funding The post E3 Electric.Ai Raises \u20b9100 Crore Through Equity and Debt Funding appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-15T07:33:49+00:00",
+            "published_display": "15 Jul 2026",
             "importance_score": 7,
             "segment_tags": [
-              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Funding / M&A",
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245853,22 +245816,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 6,
+      "sources_live": 5,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 59,
-      "filtered_low_signal": 2,
-      "kept_articles": 86
+      "unmapped_articles": 57,
+      "filtered_low_signal": 1,
+      "kept_articles": 79
     }
   },
   "qa": [
@@ -245918,7 +245881,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-07-17",
+    "as_of_date": "2026-07-18",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
