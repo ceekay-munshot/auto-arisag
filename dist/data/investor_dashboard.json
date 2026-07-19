@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T10:36:32.066416+00:00",
+  "generated_at": "2026-07-19T15:59:55.372447+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121872,10 +121872,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 96.28,
+        "value": 96.27,
         "unit": "\u20b9",
-        "delta_value": -0.3722,
-        "delta_label": "+1.00% in last week (Yahoo Finance)",
+        "delta_value": -0.3822,
+        "delta_label": "+0.99% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132291,7 +132291,7 @@
           },
           {
             "date": "2026-07-19",
-            "close": 96.28
+            "close": 96.27
           }
         ]
       }
@@ -245340,10 +245340,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-19T10:35:25.783983+00:00",
+    "generated_at": "2026-07-19T15:58:50.945886+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 28,
     "groups": [
       {
         "id": "pv",
@@ -245464,6 +245464,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged",
+            "url": "https://www.rushlane.com/ather-updates-battery-configurations-nmc-lfp-size-changes-price-12551150.html",
+            "summary": "While the battery chemistry and sizes have been adjusted for Ather scooters, there is no change in performance or charging time The post Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-17T11:29:04+00:00",
+            "published_display": "17 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
               "Supply Chain / Components"
             ]
           },
@@ -245836,22 +245852,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
-      "filtered_low_signal": 1,
-      "kept_articles": 79
+      "unmapped_articles": 58,
+      "filtered_low_signal": 2,
+      "kept_articles": 86
     }
   },
   "qa": [
