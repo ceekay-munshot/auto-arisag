@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-07-20T06:19:14.489338+00:00",
+  "generated_at": "2026-07-20T11:46:19.879443+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 27,
+  "item_count": 28,
   "groups": [
     {
       "id": "pv",
@@ -125,6 +125,21 @@
           "signal_tags": [
             "Capacity / Capex",
             "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Top 10 Two Wheelers June 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache",
+          "url": "https://www.rushlane.com/top-10-two-wheelers-june-2026-splendor-activa-shine-jupiter-12551232.html",
+          "summary": "India\u2019s two-wheeler market registered strong growth in June 2026, with domestic sales rising 18.58% YoY to 18,51,400 units, up from 15,61,283 units sold in June 2025 The post Top 10 Two Wheelers June 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-07-20T11:03:41+00:00",
+          "published_display": "20 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "signal_tags": [
+            "Monthly Sales / Demand"
           ]
         },
         {
@@ -495,21 +510,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
+    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV",
-      "RushLane"
+      "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 56,
-    "filtered_low_signal": 2,
-    "kept_articles": 78
+    "unmapped_articles": 58,
+    "filtered_low_signal": 1,
+    "kept_articles": 87
   }
 }
