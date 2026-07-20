@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-07-19T15:58:50.945886+00:00",
+  "generated_at": "2026-07-20T06:19:14.489338+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 28,
+  "item_count": 27,
   "groups": [
     {
       "id": "pv",
@@ -124,22 +124,6 @@
           ],
           "signal_tags": [
             "Capacity / Capex",
-            "Supply Chain / Components"
-          ]
-        },
-        {
-          "title": "Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged",
-          "url": "https://www.rushlane.com/ather-updates-battery-configurations-nmc-lfp-size-changes-price-12551150.html",
-          "summary": "While the battery chemistry and sizes have been adjusted for Ather scooters, there is no change in performance or charging time The post Ather Updates Battery Configurations \u2013 NMC, LFP, Size Changes, Prices Unchanged appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-07-17T11:29:04+00:00",
-          "published_display": "17 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Two-Wheelers",
-            "EV"
-          ],
-          "signal_tags": [
             "Supply Chain / Components"
           ]
         },
@@ -273,6 +257,22 @@
           ]
         },
         {
+          "title": "TVS Srichakra arm to acquire 51% stake in EV motor maker Weber Drivetrain for \u20b91.43 crore",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tvs-srichakra-acquires-51-stake-in-ev-company-weber-drivetrain-for-143-crore/132504729",
+          "summary": "The acquisition, approved by the subsidiary's board on July 19, will be completed within six months from the execution of the share purchase agreement through a cash transaction.",
+          "source": "ET Auto Components",
+          "published_at": "2026-07-20T02:52:04+00:00",
+          "published_display": "20 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "EV"
+          ],
+          "signal_tags": [
+            "Funding / M&A",
+            "Supply Chain / Components"
+          ]
+        },
+        {
           "title": "EV transition pushes auto component makers to reinvent business models in Haryana",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ev-transition-pushes-auto-component-makers-to-reinvent-business-models-in-haryana/132477871",
           "summary": "Industry leaders urged manufacturers to diversify into EV components, invest in innovation, localisation, quality and advanced manufacturing, while leveraging Haryana's supportive policies to strengthen domestic and global competitiveness.",
@@ -302,23 +302,6 @@
           ],
           "signal_tags": [
             "Capacity / Capex"
-          ]
-        },
-        {
-          "title": "Haryana Govt Urges Auto Component Firms to Localize EV Supply Chains",
-          "url": "https://www.autocarpro.in/NEWS/haryana-govt-urges-auto-component-firms-to-localize-ev-supply-chains-133646",
-          "summary": "Automotive component manufacturers must prioritize research investment, intellectual property documentation, and domestic patent filings to capture emerging supply chain opportunities as national electric vehicle penetration scales, according to Sanjeev Chawla, Additional Development Commissioner for the MSME Development and Facilitation Office under the Government of Haryana Speaking at the ASSOCHAM Northern Regi...",
-          "source": "Autocar Professional Components",
-          "published_at": "2026-07-17T15:54:32+00:00",
-          "published_display": "17 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "EV",
-            "Components"
-          ],
-          "signal_tags": [
-            "Capacity / Capex",
-            "Supply Chain / Components"
           ]
         }
       ]
@@ -512,21 +495,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
-    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6,
+    "sources_live": 5,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV"
+      "Autocar Professional EV",
+      "RushLane"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 58,
+    "unmapped_articles": 56,
     "filtered_low_signal": 2,
-    "kept_articles": 86
+    "kept_articles": 78
   }
 }
