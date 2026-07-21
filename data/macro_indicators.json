@@ -115,11 +115,11 @@
     {
       "id": "usd_inr",
       "label": "USD / INR",
-      "value": 96.33,
+      "value": 96.23,
       "unit": "₹",
-      "delta_value": 0.0452,
-      "delta_label": "+0.03% in last week (Yahoo Finance)",
-      "delta_tone": "negative",
+      "delta_value": -0.0498,
+      "delta_label": "-0.07% in last week (Yahoo Finance)",
+      "delta_tone": "positive",
       "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
       "source_name": "Yahoo Finance — USDINR=X",
       "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -10526,7 +10526,7 @@
         },
         {
           "date": "2026-07-21",
-          "close": 96.33
+          "close": 96.235
         }
       ]
     }

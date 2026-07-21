@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T05:53:22.822186+00:00",
+  "generated_at": "2026-07-21T11:10:40.687407+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-21T05:53:00.184391+00:00",
+      "generated_at": "2026-07-21T11:10:18.921530+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
         {
           "title": "Tata Motors to launch Osprey SUV in South Africa in Q3 2026",
@@ -121712,19 +121712,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-265006/132512109.cms"
-        },
-        {
-          "title": "Tata Osprey Launch Confirmed For South Africa \u2013 Nexon Rebranded",
-          "summary": "Tata Motors has confirmed that Nexon will be sold as the \u2018Osprey\u2019 in South Africa, with the launch scheduled for the third quarter of 2026 The post Tata Osprey Launch Confirmed For South Africa \u2013 Nexon Rebranded appeared first on RushLane .",
-          "url": "https://www.rushlane.com/tata-osprey-launch-confirmed-for-south-africa-nexon-rebranded-12551224.html",
-          "source": "RushLane",
-          "published_at": "2026-07-20T07:38:03+00:00",
-          "published_display": "20 Jul 2026",
-          "company": "Tata Motors",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/tata-osprey-south-african-nexon.jpeg"
         },
         {
           "title": "JSW MG Motor lines up two new-energy SUVs for FY27 launch, plans \u20b91,400 cr investment",
@@ -121763,7 +121750,7 @@
           "company": "Tata Motors",
           "tone": "pv",
           "scope": "listed",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-07-20T09:57:57+00:00",
           "latest_title": "Tata Motors to launch Osprey SUV in South Africa in Q3 2026"
         },
@@ -121908,11 +121895,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 96.33,
+        "value": 96.23,
         "unit": "\u20b9",
-        "delta_value": 0.0452,
-        "delta_label": "+0.03% in last week (Yahoo Finance)",
-        "delta_tone": "negative",
+        "delta_value": -0.0498,
+        "delta_label": "-0.07% in last week (Yahoo Finance)",
+        "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -132319,7 +132306,7 @@
           },
           {
             "date": "2026-07-21",
-            "close": 96.33
+            "close": 96.235
           }
         ]
       }
@@ -132334,13 +132321,12 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13366.0,
-        "change_1d_pct": -3.17,
-        "change_1w_pct": -2.4,
-        "change_1m_pct": -0.22,
+        "price": 13597.0,
+        "change_1d_pct": 0.61,
+        "change_1w_pct": 0.8,
+        "change_1m_pct": 1.31,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13120.0,
           13073.0,
           13098.0,
           13366.0,
@@ -132369,7 +132355,8 @@
           13583.0,
           13783.0,
           13803.0,
-          13366.0
+          13514.0,
+          13597.0
         ],
         "daily_closes": [
           {
@@ -142253,17 +142240,21 @@
             "close": 13803.0
           },
           {
+            "date": "2026-07-20",
+            "close": 13514.0
+          },
+          {
             "date": "2026-07-21",
-            "close": 13366.0
+            "close": 13597.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3160.7,
-        "change_1d_pct": -0.15,
-        "change_1w_pct": 2.18,
-        "change_1m_pct": 3.18,
+        "price": 3201.7,
+        "change_1d_pct": 1.14,
+        "change_1w_pct": 3.5,
+        "change_1m_pct": 4.51,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           2952.5,
@@ -142295,7 +142286,7 @@
           3117.8,
           3179.2,
           3165.5,
-          3160.7
+          3201.7
         ],
         "daily_closes": [
           {
@@ -152184,16 +152175,16 @@
           },
           {
             "date": "2026-07-21",
-            "close": 3160.7
+            "close": 3201.7
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 4981.0,
-        "change_1d_pct": 0.07,
-        "change_1w_pct": 2.11,
-        "change_1m_pct": -0.05,
+        "price": 5034.1,
+        "change_1d_pct": 1.13,
+        "change_1w_pct": 3.19,
+        "change_1m_pct": 1.01,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4856.7,
@@ -152225,7 +152216,7 @@
           4898.0,
           4909.9,
           4977.7,
-          4981.0
+          5034.1
         ],
         "daily_closes": [
           {
@@ -162114,19 +162105,18 @@
           },
           {
             "date": "2026-07-21",
-            "close": 4981.0
+            "close": 5034.1
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3584.4,
-        "change_1d_pct": -0.93,
-        "change_1w_pct": -2.52,
-        "change_1m_pct": 4.11,
+        "price": 3792.0,
+        "change_1d_pct": 5.62,
+        "change_1w_pct": 5.09,
+        "change_1m_pct": 8.69,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3358.0,
           3334.9,
           3287.4,
           3312.8,
@@ -162155,7 +162145,8 @@
           3612.3,
           3563.5,
           3618.2,
-          3584.4
+          3590.2,
+          3792.0
         ],
         "daily_closes": [
           {
@@ -172039,17 +172030,21 @@
             "close": 3618.2
           },
           {
+            "date": "2026-07-20",
+            "close": 3590.2
+          },
+          {
             "date": "2026-07-21",
-            "close": 3584.4
+            "close": 3792.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10480.0,
-        "change_1d_pct": -0.4,
-        "change_1w_pct": 3.09,
-        "change_1m_pct": 2.84,
+        "price": 10403.5,
+        "change_1d_pct": -1.13,
+        "change_1w_pct": 2.34,
+        "change_1m_pct": 2.09,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10144.0,
@@ -172081,7 +172076,7 @@
           10331.5,
           10443.0,
           10522.5,
-          10480.0
+          10403.5
         ],
         "daily_closes": [
           {
@@ -181970,16 +181965,16 @@
           },
           {
             "date": "2026-07-21",
-            "close": 10480.0
+            "close": 10403.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1946.8,
-        "change_1d_pct": -1.29,
-        "change_1w_pct": -0.66,
-        "change_1m_pct": -2.12,
+        "price": 1958.6,
+        "change_1d_pct": -0.69,
+        "change_1w_pct": -0.06,
+        "change_1m_pct": -1.52,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1891.0,
@@ -182011,7 +182006,7 @@
           2025.0,
           1993.3,
           1972.3,
-          1946.8
+          1958.6
         ],
         "daily_closes": [
           {
@@ -183752,19 +183747,18 @@
           },
           {
             "date": "2026-07-21",
-            "close": 1946.8
+            "close": 1958.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7597.5,
-        "change_1d_pct": 0.45,
-        "change_1w_pct": 4.13,
-        "change_1m_pct": -0.18,
+        "price": 7689.5,
+        "change_1d_pct": 1.67,
+        "change_1w_pct": 5.63,
+        "change_1m_pct": 0.65,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7203.0,
           7219.5,
           7179.5,
           7312.0,
@@ -183793,7 +183787,8 @@
           7404.5,
           7418.5,
           7563.5,
-          7597.5
+          7563.5,
+          7689.5
         ],
         "daily_closes": [
           {
@@ -193677,17 +193672,21 @@
             "close": 7563.5
           },
           {
+            "date": "2026-07-20",
+            "close": 7563.5
+          },
+          {
             "date": "2026-07-21",
-            "close": 7597.5
+            "close": 7689.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 333.25,
-        "change_1d_pct": -0.95,
-        "change_1w_pct": -0.03,
-        "change_1m_pct": -7.81,
+        "price": 333.8,
+        "change_1d_pct": -0.79,
+        "change_1w_pct": 0.13,
+        "change_1m_pct": -7.66,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193720,7 +193719,7 @@
           331.8,
           335.6,
           336.45,
-          333.25
+          333.8
         ],
         "daily_closes": [
           {
@@ -203609,20 +203608,19 @@
           },
           {
             "date": "2026-07-21",
-            "close": 333.25
+            "close": 333.8
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 412.0,
-        "change_1d_pct": -0.64,
-        "change_1w_pct": -2.08,
-        "change_1m_pct": 2.46,
+        "price": 411.75,
+        "change_1d_pct": 0.59,
+        "change_1w_pct": -1.35,
+        "change_1m_pct": 0.83,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          363.3,
           364.9,
           358.35,
           390.3,
@@ -203651,7 +203649,8 @@
           423.55,
           412.55,
           414.65,
-          412.0
+          409.35,
+          411.75
         ],
         "daily_closes": [
           {
@@ -204339,17 +204338,21 @@
             "close": 414.65
           },
           {
+            "date": "2026-07-20",
+            "close": 409.35
+          },
+          {
             "date": "2026-07-21",
-            "close": 412.0
+            "close": 411.75
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 153.62,
-        "change_1d_pct": -0.76,
-        "change_1w_pct": -1.01,
-        "change_1m_pct": -2.27,
+        "price": 153.94,
+        "change_1d_pct": -0.56,
+        "change_1w_pct": -0.81,
+        "change_1m_pct": -2.07,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           141.54,
@@ -204381,7 +204384,7 @@
           154.87,
           155.23,
           154.8,
-          153.62
+          153.94
         ],
         "daily_closes": [
           {
@@ -214270,19 +214273,18 @@
           },
           {
             "date": "2026-07-21",
-            "close": 153.62
+            "close": 153.94
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2938.8,
-        "change_1d_pct": 0.06,
-        "change_1w_pct": -1.04,
-        "change_1m_pct": 4.17,
+        "price": 2956.2,
+        "change_1d_pct": -0.85,
+        "change_1w_pct": 0.95,
+        "change_1m_pct": 0.2,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2789.9,
           2740.6,
           2724.7,
           2761.4,
@@ -214311,7 +214313,8 @@
           2918.9,
           2944.8,
           2937.0,
-          2938.8
+          2981.4,
+          2956.2
         ],
         "daily_closes": [
           {
@@ -224195,20 +224198,23 @@
             "close": 2937.0
           },
           {
+            "date": "2026-07-20",
+            "close": 2981.4
+          },
+          {
             "date": "2026-07-21",
-            "close": 2938.8
+            "close": 2956.2
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1041.7,
-        "change_1d_pct": 5.5,
-        "change_1w_pct": 5.68,
-        "change_1m_pct": 6.77,
+        "price": 1035.5,
+        "change_1d_pct": 4.43,
+        "change_1w_pct": 7.37,
+        "change_1m_pct": 2.35,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          894.15,
           877.8,
           891.95,
           931.05,
@@ -224237,7 +224243,8 @@
           1004.4,
           1003.7,
           987.4,
-          1041.7
+          991.6,
+          1035.5
         ],
         "daily_closes": [
           {
@@ -234121,20 +234128,23 @@
             "close": 987.4
           },
           {
+            "date": "2026-07-20",
+            "close": 991.6
+          },
+          {
             "date": "2026-07-21",
-            "close": 1041.7
+            "close": 1035.5
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 481.9,
-        "change_1d_pct": -0.32,
-        "change_1w_pct": -1.11,
-        "change_1m_pct": 1.68,
+        "price": 483.8,
+        "change_1d_pct": 0.59,
+        "change_1w_pct": 1.67,
+        "change_1m_pct": 2.01,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          461.35,
           449.6,
           437.65,
           455.7,
@@ -234163,7 +234173,8 @@
           479.4,
           485.45,
           483.45,
-          481.9
+          480.95,
+          483.8
         ],
         "daily_closes": [
           {
@@ -244047,8 +244058,12 @@
             "close": 483.45
           },
           {
+            "date": "2026-07-20",
+            "close": 480.95
+          },
+          {
             "date": "2026-07-21",
-            "close": 481.9
+            "close": 483.8
           }
         ]
       }
@@ -245320,26 +245335,43 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-21T05:52:37.227180+00:00",
+    "generated_at": "2026-07-21T11:09:50.460998+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 30,
+    "item_count": 29,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
           {
-            "title": "Volvo Cars to receive financial support for its Ghent plant",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-secures-119-million-investment-for-ghent-plant-expansion/132421925",
-            "summary": "Volvo Cars has signed an MoU with Belgium's federal and Flanders regional governments to support the long-term competitiveness of its Ghent plant, backed by a potential \u20ac119 million support package.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-15T17:30:33+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 9,
+            "title": "Harman India in Talks with 2W, CV Makers to Supply Infotainment Systems",
+            "url": "https://www.autocarpro.in/NEWS/harman-india-in-talks-with-2w-cv-makers-to-supply-infotainment-systems-133669",
+            "summary": "Harman India is in discussions with multiple two-wheeler and commercial vehicle manufacturers to supply in-vehicle infotainment (IVI) and cockpit domain controller (CDC) systems, according to a senior company executive. This would mark Harman Automotive\u2019s expansion beyond its traditional passenger vehicle business in India.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-20T18:09:15+00:00",
+            "published_display": "20 Jul 2026",
+            "importance_score": 7,
             "segment_tags": [
               "Passenger Vehicles",
-              "Luxury"
+              "Two-Wheelers",
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Volkswagen CEO to face employees amid reports of 100,000 job cuts, plant closures",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-ceo-to-face-employees-amid-reports-of-100000-job-cuts-plant-closures/132474211",
+            "summary": "This overhaul aims to address competition from Chinese electric vehicle makers. The company seeks to improve performance and maintain market competitiveness.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-18T05:10:51+00:00",
+            "published_display": "18 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
             ],
             "signal_tags": [
               "Capacity / Capex"
@@ -245392,21 +245424,6 @@
               "Capacity / Capex",
               "Product / Launch"
             ]
-          },
-          {
-            "title": "Software, In-Cabin Experience to Drive Next Phase of Automotive Tech: Harman",
-            "url": "https://www.autocarpro.in/NEWS/software-in-cabin-experience-to-drive-next-phase-of-automotive-tech-harman-133614",
-            "summary": "Software and the digital experience inside vehicles will become the biggest areas of differentiation for automakers as cars become increasingly connected and software-driven, according to Harman India Managing Director Krishna Kumar. The Samsung-owned automotive technology company, which supplies infotainment systems, connected vehicle technologies and premium audio systems to OEMs such as Tata Motors, Mahindra an...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-15T20:34:18+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -245430,23 +245447,6 @@
             ]
           },
           {
-            "title": "CEAT to Invest \u20b91,205 Crore to Expand Two-Wheeler Tyre Capacity by 66%",
-            "url": "https://www.autocarpro.in/NEWS/ceat-to-invest-\u20b91205-crore-to-expand-two-wheeler-tyre-capacity-by-66-133635",
-            "summary": "CEAT plans to invest around \u20b91,205 crore to expand its two-wheeler tyre manufacturing capacity by about 66% as the existing capacity at its Nagpur plant nears full utilisation. The tyre maker will add around 53,000 tyres a day in phases by the end of FY31.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-16T21:36:24+00:00",
-            "published_display": "16 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Gabriel India to Invest \u20b9180 Crore in New Capacity, Automation in FY27",
             "url": "https://www.autocarpro.in/NEWS/gabriel-india-to-invest-\u20b9180-crore-in-new-capacity-automation-in-fy27-133632",
             "summary": "Gabriel India plans to invest around \u20b9180 crore in its standalone business in FY27, with the proposed spending covering a new plant at Hosur and capacity expansion across some of its existing facilities. The company expects a large part of its two-wheeler growth to come from the new Hosur facility, Atul Jaggi, Group President, ANAND Group, and Managing Director of Gabriel India, told Autocar Professional.",
@@ -245463,21 +245463,6 @@
             ]
           },
           {
-            "title": "Top 10 Two Wheelers June 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache",
-            "url": "https://www.rushlane.com/top-10-two-wheelers-june-2026-splendor-activa-shine-jupiter-12551232.html",
-            "summary": "India\u2019s two-wheeler market registered strong growth in June 2026, with domestic sales rising 18.58% YoY to 18,51,400 units, up from 15,61,283 units sold in June 2025 The post Top 10 Two Wheelers June 2026 \u2013 Splendor, Activa, Shine, Jupiter, Pulsar, Access, Apache appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-20T11:03:41+00:00",
-            "published_display": "20 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
             "title": "RE 350 Bikes Start Getting Gear Position Indicator \u2013 Free Installation At Dealership",
             "url": "https://www.rushlane.com/re-350-bikes-start-getting-gear-position-indicator-free-installation-12551242.html",
             "summary": "Last year in H2, Royal Enfield had started shipping its 350cc motorcycles without the gear indicator due to shortage of rare earth components The post RE 350 Bikes Start Getting Gear Position Indicator \u2013 Free Installation At Dealership appeared first on RushLane .",
@@ -245491,6 +245476,40 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Auto ancillary sector growth outlook positive, but near-term margin pressure likely: Report",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/optimistic-growth-ahead-for-indias-auto-ancillary-sector-despite-margin-pressures-report/132283332",
+            "summary": "India\u2019s auto bearings and ancillary sector is poised for strong medium-term growth, driven by rising bearing content per vehicle, robust demand across PV, CV, and 2W segments, and steady support from railways and industrial sectors like wind, cement, and steel. However, near-term profitability may be impacted by input cost volatility, higher raw material and energy prices, and transition-related expenses.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-09T10:02:25+00:00",
+            "published_display": "09 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Two-Wheelers",
+              "Commercial Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Top 10 Motorcycles June 2026 \u2013 Splendor, Shine, Pulsar, Apache, Deluxe, Classic 350",
+            "url": "https://www.rushlane.com/top-10-motorcycles-june-2026-splendor-shine-pulsar-apache-12551255.html",
+            "summary": "The top ten motorcycles together accounted for 8,66,045 units in June 2026, registering 4.25% YoY growth over 8,30,761 units sold in June 2025. The post Top 10 Motorcycles June 2026 \u2013 Splendor, Shine, Pulsar, Apache, Deluxe, Classic 350 appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-21T05:50:03+00:00",
+            "published_display": "21 Jul 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
             ]
           }
         ]
@@ -245513,25 +245532,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Auto ancillary sector growth outlook positive, but near-term margin pressure likely: Report",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/optimistic-growth-ahead-for-indias-auto-ancillary-sector-despite-margin-pressures-report/132283332",
-            "summary": "India\u2019s auto bearings and ancillary sector is poised for strong medium-term growth, driven by rising bearing content per vehicle, robust demand across PV, CV, and 2W segments, and steady support from railways and industrial sectors like wind, cement, and steel. However, near-term profitability may be impacted by input cost volatility, higher raw material and energy prices, and transition-related expenses.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-09T10:02:25+00:00",
-            "published_display": "09 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Input Costs / Commodities",
               "Supply Chain / Components"
             ]
           },
@@ -245606,6 +245606,23 @@
             ]
           },
           {
+            "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
+            "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
+            "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-13T09:27:05+00:00",
+            "published_display": "13 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0",
             "url": "https://evreporter.com/jbm-electric-vehicles-launches-galaxy-electric-luxury-coach-at-prawaas-5-0",
             "summary": "The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter . JBM Electric Vehicles (JBM EV), part of JBM Group, launched its next-generation GALAXY electric luxury coach at Prawaas 5.0 in The post JBM Electric Vehicles launches \u2018GALAXY\u2019 electric luxury coach at Prawaas 5.0 appeared first at EVreporter on EVreporter .",
@@ -245623,6 +245640,22 @@
             ]
           },
           {
+            "title": "Hyundai gears up for mass-market EV push in India, expands charging network",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-gears-up-for-mass-market-ev-push-in-india-expands-charging-network/132530197",
+            "summary": "Hyundai Motor India Ltd is preparing to enter the affordable EV segment with a locally developed compact SUV while scaling its charging ecosystem.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-21T07:01:46+00:00",
+            "published_display": "21 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "TVS Srichakra arm to acquire 51% stake in EV motor maker Weber Drivetrain for \u20b91.43 crore",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tvs-srichakra-acquires-51-stake-in-ev-company-weber-drivetrain-for-143-crore/132504729",
             "summary": "The acquisition, approved by the subsidiary's board on July 19, will be completed within six months from the execution of the share purchase agreement through a cash transaction.",
@@ -245636,38 +245669,6 @@
             "signal_tags": [
               "Funding / M&A",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "EV transition pushes auto component makers to reinvent business models in Haryana",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/ev-transition-pushes-auto-component-makers-to-reinvent-business-models-in-haryana/132477871",
-            "summary": "Industry leaders urged manufacturers to diversify into EV components, invest in innovation, localisation, quality and advanced manufacturing, while leveraging Haryana's supportive policies to strengthen domestic and global competitiveness.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-18T10:28:48+00:00",
-            "published_display": "18 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Volkswagen CEO to face employees amid reports of 100,000 job cuts, plant closures",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-ceo-to-face-employees-amid-reports-of-100000-job-cuts-plant-closures/132474211",
-            "summary": "This overhaul aims to address competition from Chinese electric vehicle makers. The company seeks to improve performance and maintain market competitiveness.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-18T05:10:51+00:00",
-            "published_display": "18 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           }
         ]
@@ -245729,23 +245730,6 @@
             ]
           },
           {
-            "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
-            "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
-            "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-13T09:27:05+00:00",
-            "published_display": "13 Jul 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Amara Raja powers up \u20b99,500 crore battery manufacturing push with first lithium-ion cell facility",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/amara-raja-powers-up-9500-crore-battery-manufacturing-push-with-first-lithium-ion-cell-facility/132451397",
             "summary": "Commercial production from the first 2 GWh cell manufacturing line is targeted for 2027 as part of the company's commitment to build 16 GWh of capacity under its agreement with the Telangana government.",
@@ -245760,6 +245744,23 @@
               "Capacity / Capex",
               "Supply Chain / Components",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "CEAT to Invest \u20b91,205 Crore to Expand Two-Wheeler Tyre Capacity by 66%",
+            "url": "https://www.autocarpro.in/NEWS/ceat-to-invest-\u20b91205-crore-to-expand-two-wheeler-tyre-capacity-by-66-133635",
+            "summary": "CEAT plans to invest around \u20b91,205 crore to expand its two-wheeler tyre manufacturing capacity by about 66% as the existing capacity at its Nagpur plant nears full utilisation. The tyre maker will add around 53,000 tyres a day in phases by the end of FY31.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-16T21:36:24+00:00",
+            "published_display": "16 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245870,7 +245871,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
+      "unmapped_articles": 58,
       "filtered_low_signal": 1,
       "kept_articles": 87
     }
