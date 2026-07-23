@@ -1,9 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-07-22T11:11:19.687866+00:00",
+  "generated_at": "2026-07-23T11:11:40.807218+00:00",
   "window_days": 30,
-  "item_count": 2,
+  "item_count": 4,
   "items": [
+    {
+      "title": "Kia India launches Syros EV, starting at ₹13.49 lakh",
+      "summary": "The post Kia India launches Syros EV, starting at ₹13.49 lakh appeared first at EVreporter on EVreporter . Kia India has launched the Syros EV, its second electric vehicle manufactured in India. The vehicle is priced at ₹13.49 The post Kia India launches Syros EV, starting at ₹13.49 lakh appeared first at EVreporter on EVreporter .",
+      "url": "https://evreporter.com/kia-india-launches-syros-ev-starting-at-%e2%82%b913-49-lakh",
+      "source": "EVReporter",
+      "published_at": "2026-07-23T11:01:09+00:00",
+      "published_display": "23 Jul 2026",
+      "company": "Kia India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": null
+    },
+    {
+      "title": "Kia launches Syros EV from ₹13.49 lakh with up to 526 km range",
+      "summary": "The second made-in-India mass-market EV from Kia gets up to 80% assured buyback, a BaaS option, a lifetime battery warranty, and 100 kW DC fast charging.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-launches-syros-ev-from-13-49-lakh-with-up-to-526-km-range/132577268",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-07-23T10:09:24+00:00",
+      "published_display": "23 Jul 2026",
+      "company": "Kia India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-575812/132577268.cms"
+    },
     {
       "title": "Tata Motors to launch Osprey SUV in South Africa in Q3 2026",
       "summary": "The compact SUV, sold as the Nexon in India, will enter the South African market under a new name and carry five-star NCAP safety credentials.",
@@ -38,6 +68,14 @@
   ],
   "companies": [
     {
+      "company": "Kia India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 2,
+      "latest_published_at": "2026-07-23T11:01:09+00:00",
+      "latest_title": "Kia India launches Syros EV, starting at ₹13.49 lakh"
+    },
+    {
       "company": "Tata Motors",
       "tone": "pv",
       "scope": "listed",
@@ -56,6 +94,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5
+    "sources_live": 4
   }
 }
