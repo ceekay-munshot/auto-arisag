@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T11:12:02.232753+00:00",
+  "generated_at": "2026-07-23T16:28:28.995507+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-23T11:11:40.807218+00:00",
+      "generated_at": "2026-07-23T16:28:07.259628+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 6,
       "items": [
         {
           "title": "Kia India launches Syros EV, starting at \u20b913.49 lakh",
@@ -121727,6 +121727,34 @@
             "EV"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-575812/132577268.cms"
+        },
+        {
+          "title": "New Kia Syros EV Launch Price Rs 13.49 L to Rs 19.99 L \u2013 7.99 L (BaaS)",
+          "summary": "Syros EV is available with two battery packs \u2013 42 kWh and 51.4 kWh. Claimed ARAI range stands at 443 km and 526 km, respectively The post New Kia Syros EV Launch Price Rs 13.49 L to Rs 19.99 L \u2013 7.99 L (BaaS) appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-kia-syros-ev-launch-price-rs-13-49-l-to-rs-19-99-l-7-99-l-baas-12551436.html",
+          "source": "RushLane",
+          "published_at": "2026-07-23T09:16:47+00:00",
+          "published_display": "23 Jul 2026",
+          "company": "Kia India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/Kia-Syros-EV-bookings.jpeg"
+        },
+        {
+          "title": "New Maruti Brezza Facelift Scores 5 Star Safety In Bharat NCAP Crash Test",
+          "summary": "Ahead of its official launch on 24th July 2026, new Maruti Brezza facelift has secured a 5-star safety rating in Bharat NCAP crash tests The post New Maruti Brezza Facelift Scores 5 Star Safety In Bharat NCAP Crash Test appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-maruti-brezza-facelift-scores-5-star-safety-in-bharat-ncap-crash-test-12551425.html",
+          "source": "RushLane",
+          "published_at": "2026-07-23T08:57:35+00:00",
+          "published_display": "23 Jul 2026",
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/new-maruti-brezza-facelift-bharat-ncap-crash-test-7.jpeg"
         },
         {
           "title": "Tata Motors to launch Osprey SUV in South Africa in Q3 2026",
@@ -121765,9 +121793,17 @@
           "company": "Kia India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
+          "count": 3,
           "latest_published_at": "2026-07-23T11:01:09+00:00",
           "latest_title": "Kia India launches Syros EV, starting at \u20b913.49 lakh"
+        },
+        {
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-07-23T08:57:35+00:00",
+          "latest_title": "New Maruti Brezza Facelift Scores 5 Star Safety In Bharat NCAP Crash Test"
         },
         {
           "company": "Tata Motors",
@@ -121910,10 +121946,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 96.57,
+        "value": 96.56,
         "unit": "\u20b9",
-        "delta_value": 0.2316,
-        "delta_label": "+0.08% in last week (Yahoo Finance)",
+        "delta_value": 0.2221,
+        "delta_label": "+0.07% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132321,7 +132357,7 @@
           },
           {
             "date": "2026-07-23",
-            "close": 96.5725
+            "close": 96.563
           }
         ]
       }
@@ -244212,6 +244248,14 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
       },
       {
+        "company": "Tata Motors CV",
+        "ticker": "TMCV",
+        "date": "2026-08-12",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+      },
+      {
         "company": "Tata Motors",
         "ticker": "TMPV",
         "date": "2026-08-13",
@@ -244263,7 +244307,7 @@
       }
     ],
     "next_14_count": 6,
-    "upcoming_count": 8
+    "upcoming_count": 9
   },
   "market_insights": [
     {
@@ -245374,7 +245418,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-23T11:11:12.584010+00:00",
+    "generated_at": "2026-07-23T16:27:41.530531+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245383,6 +245427,22 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "2026 Audi Q3 White Colour New Gen SUV Spied Undisguised \u2013 Launch Soon",
+            "url": "https://www.rushlane.com/2026-audi-q3-white-colour-new-gen-suv-spied-undisguised-launch-soon-12551363.html",
+            "summary": "With luxury SUV demand continuing to form a significant part of overall premium car sales, the new Q3 could be an important volume contributor for Audi India. The post 2026 Audi Q3 White Colour New Gen SUV Spied Undisguised \u2013 Launch Soon appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-22T13:00:14+00:00",
+            "published_display": "22 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Hyundai gears up for mass-market EV push in India, expands charging network",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-gears-up-for-mass-market-ev-push-in-india-expands-charging-network/132530197",
@@ -245430,22 +245490,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Volvo Cars sees stronger second half despite steep China decline, rising costs",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-sees-stronger-second-half-despite-steep-china-decline-rising-costs/132473435",
-            "summary": "Sales in the world's largest auto market slumped a sharper-than-expected 35 per cent, dragging Volvo's operating margin down to 1.1 per cent from 1.6 per cent.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-18T03:53:45+00:00",
-            "published_display": "18 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
             ]
           },
           {
@@ -245670,23 +245714,6 @@
         "label": "Components",
         "items": [
           {
-            "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
-            "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
-            "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-15T11:58:00+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 10,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
             "summary": "The acquisition strengthens Motherson's capabilities in precision metal components and assemblies for EV/HEV motors, braking, drive and exhaust systems, while deepening its strategic relationship with Honda.",
@@ -245700,6 +245727,23 @@
             ],
             "signal_tags": [
               "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
+            "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
+            "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-15T11:58:00+00:00",
+            "published_display": "15 Jul 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           },
@@ -245832,22 +245876,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 6,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 52,
+      "unmapped_articles": 53,
       "filtered_low_signal": 1,
-      "kept_articles": 79
+      "kept_articles": 87
     }
   },
   "qa": [

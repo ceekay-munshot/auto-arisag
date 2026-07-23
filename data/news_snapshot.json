@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-23T11:11:12.584010+00:00",
+  "generated_at": "2026-07-23T16:27:41.530531+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 25,
@@ -9,6 +9,22 @@
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
+        {
+          "title": "2026 Audi Q3 White Colour New Gen SUV Spied Undisguised \u2013 Launch Soon",
+          "url": "https://www.rushlane.com/2026-audi-q3-white-colour-new-gen-suv-spied-undisguised-launch-soon-12551363.html",
+          "summary": "With luxury SUV demand continuing to form a significant part of overall premium car sales, the new Q3 could be an important volume contributor for Audi India. The post 2026 Audi Q3 White Colour New Gen SUV Spied Undisguised \u2013 Launch Soon appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-07-22T13:00:14+00:00",
+          "published_display": "22 Jul 2026",
+          "importance_score": 8,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Luxury"
+          ],
+          "signal_tags": [
+            "Product / Launch"
+          ]
+        },
         {
           "title": "Hyundai gears up for mass-market EV push in India, expands charging network",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-gears-up-for-mass-market-ev-push-in-india-expands-charging-network/132530197",
@@ -56,22 +72,6 @@
           ],
           "signal_tags": [
             "Capacity / Capex"
-          ]
-        },
-        {
-          "title": "Volvo Cars sees stronger second half despite steep China decline, rising costs",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volvo-cars-sees-stronger-second-half-despite-steep-china-decline-rising-costs/132473435",
-          "summary": "Sales in the world's largest auto market slumped a sharper-than-expected 35 per cent, dragging Volvo's operating margin down to 1.1 per cent from 1.6 per cent.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-18T03:53:45+00:00",
-          "published_display": "18 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "Luxury"
-          ],
-          "signal_tags": [
-            "General"
           ]
         },
         {
@@ -296,23 +296,6 @@
       "label": "Components",
       "items": [
         {
-          "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
-          "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
-          "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-07-15T11:58:00+00:00",
-          "published_display": "15 Jul 2026",
-          "importance_score": 10,
-          "segment_tags": [
-            "EV"
-          ],
-          "signal_tags": [
-            "Capacity / Capex",
-            "Product / Launch",
-            "Supply Chain / Components"
-          ]
-        },
-        {
           "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
           "summary": "The acquisition strengthens Motherson's capabilities in precision metal components and assemblies for EV/HEV motors, braking, drive and exhaust systems, while deepening its strategic relationship with Honda.",
@@ -326,6 +309,23 @@
           ],
           "signal_tags": [
             "Funding / M&A",
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
+          "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
+          "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-15T11:58:00+00:00",
+          "published_display": "15 Jul 2026",
+          "importance_score": 9,
+          "segment_tags": [
+            "EV"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
+            "Product / Launch",
             "Supply Chain / Components"
           ]
         },
@@ -458,21 +458,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
+    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV",
-      "RushLane"
+      "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 52,
+    "unmapped_articles": 53,
     "filtered_low_signal": 1,
-    "kept_articles": 79
+    "kept_articles": 87
   }
 }
