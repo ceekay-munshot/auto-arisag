@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T11:05:00.677420+00:00",
+  "generated_at": "2026-07-24T16:44:25.690459+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,10 +121694,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-24T11:04:39.642163+00:00",
+      "generated_at": "2026-07-24T16:44:03.996171+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 8,
       "items": [
+        {
+          "title": "2026 Maruti Brezza Launch Price Rs 7.40 L \u2013 Two Things We Cannot Tell Now",
+          "summary": "Maruti Suzuki has launched the 2026 Brezza at Rs 7.40 lakh, but there are two things we cannot tell you right now The post 2026 Maruti Brezza Launch Price Rs 7.40 L \u2013 Two Things We Cannot Tell Now appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-maruti-brezza-launch-price-rs-7-40-l-full-prices-not-revealed-12551513.html",
+          "source": "RushLane",
+          "published_at": "2026-07-24T15:32:26+00:00",
+          "published_display": "24 Jul 2026",
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/2026-Maruti-Brezza-launch-price-4.jpeg"
+        },
         {
           "title": "Hyundai i20 Sales Cross 15 Lakh In India \u2013 18 Years Since Launch",
           "summary": "Launched back in 2008, i20 has spent close to two decades in the Indian market and has evolved through three generations The post Hyundai i20 Sales Cross 15 Lakh In India \u2013 18 Years Since Launch appeared first on RushLane .",
@@ -121805,6 +121818,14 @@
         }
       ],
       "companies": [
+        {
+          "company": "Maruti Suzuki",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-07-24T15:32:26+00:00",
+          "latest_title": "2026 Maruti Brezza Launch Price Rs 7.40 L \u2013 Two Things We Cannot Tell Now"
+        },
         {
           "company": "Hyundai Motor India",
           "tone": "pv",
@@ -204488,10 +204509,10 @@
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 151.2,
-        "change_1d_pct": 0.37,
-        "change_1w_pct": -2.6,
-        "change_1m_pct": -5.9,
+        "price": 151.07,
+        "change_1d_pct": 0.28,
+        "change_1w_pct": -2.68,
+        "change_1m_pct": -5.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           157.7,
@@ -204523,7 +204544,7 @@
           153.94,
           152.49,
           150.65,
-          151.2
+          151.07
         ],
         "daily_closes": [
           {
@@ -214416,7 +214437,7 @@
           },
           {
             "date": "2026-07-24",
-            "close": 151.2
+            "close": 151.07
           }
         ]
       },
@@ -245506,15 +245527,31 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-24T11:04:12.286643+00:00",
+    "generated_at": "2026-07-24T16:43:40.019969+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 26,
+    "item_count": 24,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "Maruti bets on performance, premiumisation to reclaim Brezza's lead status as compact SUV battle intensifies",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/marutis-brezza-2026-a-performance-driven-compact-suv-reimagined-for-dominance/132607897",
+            "summary": "The product refresh of Brezza, which debuted in 2016, comes at a time when compact SUV category continues to outperform most other PV segments.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-24T14:13:52+00:00",
+            "published_display": "24 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Input Costs / Commodities"
+            ]
+          },
           {
             "title": "Mercedes-Benz India rolls out E25-compliant cars amid biofuel push",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-rolls-out-e25-compliant-cars-amid-biofuel-push/132594468",
@@ -245549,22 +245586,6 @@
             ]
           },
           {
-            "title": "Hyundai gears up for mass-market EV push in India, expands charging network",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-gears-up-for-mass-market-ev-push-in-india-expands-charging-network/132530197",
-            "summary": "Hyundai Motor India Ltd is preparing to enter the affordable EV segment with a locally developed compact SUV while scaling its charging ecosystem.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-21T07:01:46+00:00",
-            "published_display": "21 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Harman India in Talks with 2W, CV Makers to Supply Infotainment Systems",
             "url": "https://www.autocarpro.in/NEWS/harman-india-in-talks-with-2w-cv-makers-to-supply-infotainment-systems-133669",
             "summary": "Harman India is in discussions with multiple two-wheeler and commercial vehicle manufacturers to supply in-vehicle infotainment (IVI) and cockpit domain controller (CDC) systems, according to a senior company executive. This would mark Harman Automotive\u2019s expansion beyond its traditional passenger vehicle business in India.",
@@ -245583,11 +245604,11 @@
             ]
           },
           {
-            "title": "Mahindra Vision T SUV Patented \u2013 Launch Expected In 2027",
-            "url": "https://www.rushlane.com/mahindra-vision-t-suv-patented-launch-expected-in-2027-12551403.html",
-            "summary": "In terms of exterior design and features, the Vision T concept closely resembles a futuristic member of the Thar family The post Mahindra Vision T SUV Patented \u2013 Launch Expected In 2027 appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-24T05:03:32+00:00",
+            "title": "Hyundai i20 crosses 1.5 million cumulative sales in India",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-i20-crosses-1-5-million-cumulative-sales-in-india/132606130",
+            "summary": "The premium hatchback hit the milestone nearly two decades after its 2008 debut, spanning three generations and multiple variants.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-24T12:43:20+00:00",
             "published_display": "24 Jul 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -245667,21 +245688,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "New Bajaj Pulsar Bikes Incoming \u2013 10 New Models By September",
-            "url": "https://www.rushlane.com/new-bajaj-pulsar-bikes-incoming-10-new-models-by-september-12551446.html",
-            "summary": "In addition to introducing new bikes, Bajaj will also focus on increasing production capacity by around 25% The post New Bajaj Pulsar Bikes Incoming \u2013 10 New Models By September appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-24T02:54:49+00:00",
-            "published_display": "24 Jul 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "General"
             ]
           }
         ]
@@ -245959,22 +245965,6 @@
               "Policy / Regulation",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "No eviction, only show-cause notice to Rajesh Exports in PLI battery scheme",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/no-eviction-only-show-cause-notice-to-rajesh-exports-in-pli-battery-scheme/132431811",
-            "summary": "The MoHI is preparing to issue a show-cause notice to ACC Energy Storage in the next few days. The decision against evicting ACC Energy Storage came after the ministry sought legal opinion on the feasibility of evicting a beneficiary which has bagged its place after a global bidding process.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-16T06:46:45+00:00",
-            "published_display": "16 Jul 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
           }
         ]
       }
@@ -245997,9 +245987,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
-      "filtered_low_signal": 0,
-      "kept_articles": 88
+      "unmapped_articles": 55,
+      "filtered_low_signal": 1,
+      "kept_articles": 87
     }
   },
   "qa": [
