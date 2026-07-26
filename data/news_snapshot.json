@@ -1,9 +1,9 @@
 {
   "available": true,
-  "generated_at": "2026-07-25T10:28:06.381982+00:00",
+  "generated_at": "2026-07-26T10:45:02.748397+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 24,
+  "item_count": 23,
   "groups": [
     {
       "id": "pv",
@@ -97,23 +97,6 @@
       "id": "2w",
       "label": "Two-Wheelers",
       "items": [
-        {
-          "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
-          "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
-          "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-07-13T09:27:05+00:00",
-          "published_display": "13 Jul 2026",
-          "importance_score": 8,
-          "segment_tags": [
-            "Two-Wheelers",
-            "EV"
-          ],
-          "signal_tags": [
-            "Product / Launch",
-            "Supply Chain / Components"
-          ]
-        },
         {
           "title": "CEAT to Invest \u20b91,205 Crore to Expand Two-Wheeler Tyre Capacity by 66%",
           "url": "https://www.autocarpro.in/NEWS/ceat-to-invest-\u20b91205-crore-to-expand-two-wheeler-tyre-capacity-by-66-133635",
@@ -255,24 +238,6 @@
           ]
         },
         {
-          "title": "Mercedes-Benz India brings AMG E 53 Hybrid to India at \u20b91.45 crore",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-brings-amg-e-53-hybrid-to-india-at-1-45-crore/132576932",
-          "summary": "The performance sedan delivers up to 612 hp, over 100 km electric range, as Mercedes-Benz reinforces its powertrain-agnostic strategy in India.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-23T09:56:03+00:00",
-          "published_display": "23 Jul 2026",
-          "importance_score": 8,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV",
-            "Components",
-            "Luxury"
-          ],
-          "signal_tags": [
-            "Supply Chain / Components"
-          ]
-        },
-        {
           "title": "Sona Comstar and DENSO Form Joint Ventures for Electric Powertrains",
           "url": "https://www.autocarpro.in/NEWS/sona-comstar-and-denso-form-joint-ventures-for-electric-powertrains-133705",
           "summary": "Sona Comstar has signed definitive agreements with Japan-based DENSO Corporation to establish two joint ventures in India focused on electric and hybrid powertrain systems. Under the terms of the agreement, the first joint venture will focus on electric and hybrid four-wheelers and larger vehicles.",
@@ -304,6 +269,23 @@
           ],
           "signal_tags": [
             "Capacity / Capex",
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
+          "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
+          "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-13T09:27:05+00:00",
+          "published_display": "13 Jul 2026",
+          "importance_score": 8,
+          "segment_tags": [
+            "Two-Wheelers",
+            "EV"
+          ],
+          "signal_tags": [
+            "Product / Launch",
             "Supply Chain / Components"
           ]
         }
@@ -412,7 +394,7 @@
           "source": "Autocar Professional Components",
           "published_at": "2026-07-17T18:49:36+00:00",
           "published_display": "17 Jul 2026",
-          "importance_score": 7,
+          "importance_score": 6,
           "segment_tags": [
             "General"
           ],
@@ -429,7 +411,7 @@
           "source": "Autocar Professional Components",
           "published_at": "2026-07-17T17:05:00+00:00",
           "published_display": "17 Jul 2026",
-          "importance_score": 6,
+          "importance_score": 5,
           "segment_tags": [
             "EV"
           ],
@@ -446,21 +428,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
-    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 6,
+    "sources_live": 5,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV"
+      "Autocar Professional EV",
+      "RushLane"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 56,
-    "filtered_low_signal": 1,
-    "kept_articles": 87
+    "unmapped_articles": 55,
+    "filtered_low_signal": 0,
+    "kept_articles": 80
   }
 }
