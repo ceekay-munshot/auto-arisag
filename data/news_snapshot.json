@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-27T06:32:04.206657+00:00",
+  "generated_at": "2026-07-27T12:24:39.266296+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 25,
@@ -9,6 +9,21 @@
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
+        {
+          "title": "Audi must work with Volkswagen to realign business, says CFO",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-must-work-with-volkswagen-to-realign-business-says-cfo/132656082",
+          "summary": "Audi plans a major business realignment with parent Volkswagen Group after H1 revenue fell 10% to \u20ac29.2 billion amid global demand pressures.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-07-27T07:59:27+00:00",
+          "published_display": "27 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Luxury"
+          ],
+          "signal_tags": [
+            "General"
+          ]
+        },
         {
           "title": "French auto parts maker Forvia to invest \u20ac70 m more in India",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/french-auto-parts-maker-forvia-to-invest-70-m-more-in-india/132651838",
@@ -71,23 +86,6 @@
           "signal_tags": [
             "Product / Launch",
             "Input Costs / Commodities"
-          ]
-        },
-        {
-          "title": "Mercedes-Benz India rolls out E25-compliant cars amid biofuel push",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-rolls-out-e25-compliant-cars-amid-biofuel-push/132594468",
-          "summary": "Customer demand shows a growing interest in electric mobility and hybrid technologies. Mercedes-Benz India expects stable luxury car sales with single-digit growth this year.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-24T01:40:33+00:00",
-          "published_display": "24 Jul 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV",
-            "Luxury"
-          ],
-          "signal_tags": [
-            "General"
           ]
         }
       ]
@@ -165,18 +163,19 @@
           ]
         },
         {
-          "title": "BorgWarner Wins Supply Contract for Motorcycle Transmissions in China",
-          "url": "https://www.autocarpro.in/NEWS/borgwarner-wins-supply-contract-for-motorcycle-transmissions-in-china-133734",
-          "summary": "BorgWarner has secured a new Dual-Clutch Transmission (DCT) program with an unnamed Chinese motorcycle manufacturer, scheduled to enter production in the third quarter of 2027, the company announced on Friday. What the Supply Package Includes Under the contract, BorgWarner will supply a package consisting of dual clutches, hydraulic control modules, and clutch control software.",
-          "source": "Autocar Professional Components",
-          "published_at": "2026-07-24T18:19:09+00:00",
-          "published_display": "24 Jul 2026",
-          "importance_score": 5,
+          "title": "Royal Enfield Electric Motorcycle Bengaluru Network Widens With 10 New Touchpoints",
+          "url": "https://www.rushlane.com/royal-enfield-electric-motorcycle-bengaluru-network-widens-12551592.html",
+          "summary": "Royal Enfield has announced a major expansion of its Flying Flea EV retail and service network in Bengaluru The post Royal Enfield Electric Motorcycle Bengaluru Network Widens With 10 New Touchpoints appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-07-27T07:10:05+00:00",
+          "published_display": "27 Jul 2026",
+          "importance_score": 6,
           "segment_tags": [
-            "Two-Wheelers"
+            "Two-Wheelers",
+            "EV"
           ],
           "signal_tags": [
-            "Supply Chain / Components"
+            "Capacity / Capex"
           ]
         }
       ]
@@ -473,8 +472,8 @@
       "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 54,
-    "filtered_low_signal": 1,
-    "kept_articles": 87
+    "unmapped_articles": 58,
+    "filtered_low_signal": 0,
+    "kept_articles": 88
   }
 }
