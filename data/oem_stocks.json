@@ -1,18 +1,17 @@
 {
-  "as_of_date": "2026-07-26",
+  "as_of_date": "2026-07-27",
   "currency": "INR",
   "exchange": "NSE",
   "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
   "stocks": {
     "Maruti Suzuki": {
       "ticker": "MARUTI",
-      "price": 13442.0,
-      "change_1d_pct": 0.29,
-      "change_1w_pct": -2.62,
-      "change_1m_pct": -2.2,
+      "price": 13643.0,
+      "change_1d_pct": 1.5,
+      "change_1w_pct": 0.95,
+      "change_1m_pct": -0.74,
       "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
       "closes_30d": [
-        13805.0,
         13691.0,
         13630.0,
         13484.0,
@@ -41,17 +40,10 @@
         13597.0,
         13545.0,
         13403.0,
-        13442.0
+        13442.0,
+        13643.0
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 4550.55
-        },
-        {
-          "date": "2016-07-26",
-          "close": 4471.3
-        },
         {
           "date": "2016-07-27",
           "close": 4558.15
@@ -9935,18 +9927,21 @@
         {
           "date": "2026-07-24",
           "close": 13442.0
+        },
+        {
+          "date": "2026-07-27",
+          "close": 13643.0
         }
       ]
     },
     "Mahindra & Mahindra": {
       "ticker": "M&M",
-      "price": 3161.4,
-      "change_1d_pct": -2.11,
-      "change_1w_pct": -0.56,
-      "change_1m_pct": -0.65,
+      "price": 3225.1,
+      "change_1d_pct": 2.01,
+      "change_1w_pct": 1.88,
+      "change_1m_pct": 1.35,
       "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
       "closes_30d": [
-        3134.3,
         3137.9,
         3132.9,
         3136.5,
@@ -9975,17 +9970,10 @@
         3201.7,
         3175.3,
         3229.7,
-        3161.4
+        3161.4,
+        3225.1
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 731.83
-        },
-        {
-          "date": "2016-07-26",
-          "close": 724.47
-        },
         {
           "date": "2016-07-27",
           "close": 726.9
@@ -19869,18 +19857,21 @@
         {
           "date": "2026-07-24",
           "close": 3161.4
+        },
+        {
+          "date": "2026-07-27",
+          "close": 3225.1
         }
       ]
     },
     "Hero MotoCorp": {
       "ticker": "HEROMOTOCO",
-      "price": 5011.1,
-      "change_1d_pct": -3.14,
-      "change_1w_pct": 2.06,
-      "change_1m_pct": 2.35,
+      "price": 5100.9,
+      "change_1d_pct": 1.79,
+      "change_1w_pct": 2.48,
+      "change_1m_pct": 4.18,
       "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
       "closes_30d": [
-        5024.0,
         5031.0,
         5016.4,
         5021.6,
@@ -19909,17 +19900,10 @@
         5034.1,
         4987.1,
         5173.8,
-        5011.1
+        5011.1,
+        5100.9
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 3280.05
-        },
-        {
-          "date": "2016-07-26",
-          "close": 3210.1
-        },
         {
           "date": "2016-07-27",
           "close": 3204.65
@@ -29803,18 +29787,21 @@
         {
           "date": "2026-07-24",
           "close": 5011.1
+        },
+        {
+          "date": "2026-07-27",
+          "close": 5100.9
         }
       ]
     },
     "TVS Motor": {
       "ticker": "TVSMOTOR",
-      "price": 3870.2,
-      "change_1d_pct": -1.27,
-      "change_1w_pct": 6.96,
-      "change_1m_pct": 8.42,
+      "price": 3876.1,
+      "change_1d_pct": 0.15,
+      "change_1w_pct": 7.96,
+      "change_1m_pct": 8.58,
       "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
       "closes_30d": [
-        3459.5,
         3435.5,
         3448.7,
         3457.6,
@@ -29843,17 +29830,10 @@
         3792.0,
         3907.6,
         3919.8,
-        3870.2
+        3870.2,
+        3876.1
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 300.9
-        },
-        {
-          "date": "2016-07-26",
-          "close": 291.25
-        },
         {
           "date": "2016-07-27",
           "close": 288.15
@@ -39737,18 +39717,21 @@
         {
           "date": "2026-07-24",
           "close": 3870.2
+        },
+        {
+          "date": "2026-07-27",
+          "close": 3876.1
         }
       ]
     },
     "Bajaj Auto": {
       "ticker": "BAJAJ-AUTO",
-      "price": 11130.0,
-      "change_1d_pct": -1.36,
-      "change_1w_pct": 6.58,
-      "change_1m_pct": 13.08,
+      "price": 11234.0,
+      "change_1d_pct": 0.93,
+      "change_1w_pct": 6.76,
+      "change_1m_pct": 14.13,
       "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
       "closes_30d": [
-        9943.0,
         9939.0,
         10042.0,
         10077.0,
@@ -39777,17 +39760,10 @@
         10403.5,
         10998.5,
         11283.5,
-        11130.0
+        11130.0,
+        11234.0
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 2700.85
-        },
-        {
-          "date": "2016-07-26",
-          "close": 2673.95
-        },
         {
           "date": "2016-07-27",
           "close": 2670.15
@@ -49671,18 +49647,21 @@
         {
           "date": "2026-07-24",
           "close": 11130.0
+        },
+        {
+          "date": "2026-07-27",
+          "close": 11234.0
         }
       ]
     },
     "Hyundai Motor India": {
       "ticker": "HYUNDAI",
-      "price": 1952.6,
-      "change_1d_pct": -0.09,
-      "change_1w_pct": -2.04,
-      "change_1m_pct": -0.85,
+      "price": 1983.7,
+      "change_1d_pct": 1.59,
+      "change_1w_pct": 0.58,
+      "change_1m_pct": 0.73,
       "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
       "closes_30d": [
-        2030.1,
         1974.7,
         1976.7,
         1976.6,
@@ -49711,7 +49690,8 @@
         1958.6,
         1945.6,
         1954.4,
-        1952.6
+        1952.6,
+        1983.7
       ],
       "daily_closes": [
         {
@@ -51465,18 +51445,21 @@
         {
           "date": "2026-07-24",
           "close": 1952.6
+        },
+        {
+          "date": "2026-07-27",
+          "close": 1983.7
         }
       ]
     },
     "Eicher Motors": {
       "ticker": "EICHERMOT",
-      "price": 7628.0,
-      "change_1d_pct": -1.21,
-      "change_1w_pct": 0.85,
-      "change_1m_pct": 0.39,
+      "price": 7819.0,
+      "change_1d_pct": 2.5,
+      "change_1w_pct": 3.38,
+      "change_1m_pct": 2.91,
       "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
       "closes_30d": [
-        7624.5,
         7560.5,
         7509.0,
         7601.0,
@@ -51505,17 +51488,10 @@
         7689.5,
         7632.0,
         7721.5,
-        7628.0
+        7628.0,
+        7819.0
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 1997.2
-        },
-        {
-          "date": "2016-07-26",
-          "close": 2011.22
-        },
         {
           "date": "2016-07-27",
           "close": 2033.97
@@ -61399,19 +61375,22 @@
         {
           "date": "2026-07-24",
           "close": 7628.0
+        },
+        {
+          "date": "2026-07-27",
+          "close": 7819.0
         }
       ]
     },
     "Tata Motors": {
       "ticker": "TMPV",
-      "price": 323.8,
-      "change_1d_pct": -0.15,
-      "change_1w_pct": -3.52,
-      "change_1m_pct": -8.32,
+      "price": 327.45,
+      "change_1d_pct": 1.13,
+      "change_1w_pct": -2.67,
+      "change_1m_pct": -7.29,
       "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
       "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
       "closes_30d": [
-        396.4,
         393.6,
         360.95,
         364.65,
@@ -61440,17 +61419,10 @@
         333.8,
         327.7,
         324.3,
-        323.8
+        323.8,
+        327.45
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 509.0
-        },
-        {
-          "date": "2016-07-26",
-          "close": 503.25
-        },
         {
           "date": "2016-07-27",
           "close": 510.1
@@ -71334,19 +71306,22 @@
         {
           "date": "2026-07-24",
           "close": 323.8
+        },
+        {
+          "date": "2026-07-27",
+          "close": 327.45
         }
       ]
     },
     "Tata Motors CV": {
       "ticker": "TMCV",
-      "price": 406.15,
-      "change_1d_pct": -0.43,
-      "change_1w_pct": -2.05,
-      "change_1m_pct": -5.96,
+      "price": 407.35,
+      "change_1d_pct": 0.3,
+      "change_1w_pct": -0.49,
+      "change_1m_pct": -5.68,
       "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
       "note": "Tata Motors Commercial Vehicles — listed Nov 2025 as a separate entity post-demerger.",
       "closes_30d": [
-        406.6,
         406.7,
         402.8,
         407.05,
@@ -71375,7 +71350,8 @@
         411.75,
         405.45,
         407.9,
-        406.15
+        406.15,
+        407.35
       ],
       "daily_closes": [
         {
@@ -72081,18 +72057,21 @@
         {
           "date": "2026-07-24",
           "close": 406.15
+        },
+        {
+          "date": "2026-07-27",
+          "close": 407.35
         }
       ]
     },
     "Ashok Leyland": {
       "ticker": "ASHOKLEY",
-      "price": 151.07,
-      "change_1d_pct": 0.28,
-      "change_1w_pct": -2.68,
-      "change_1m_pct": -5.98,
+      "price": 153.68,
+      "change_1d_pct": 1.73,
+      "change_1w_pct": -0.72,
+      "change_1m_pct": -4.36,
       "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
       "closes_30d": [
-        157.7,
         158.5,
         159.57,
         158.45,
@@ -72121,17 +72100,10 @@
         153.94,
         152.49,
         150.65,
-        151.07
+        151.07,
+        153.68
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 48.08
-        },
-        {
-          "date": "2016-07-26",
-          "close": 47.2
-        },
         {
           "date": "2016-07-27",
           "close": 47.35
@@ -82015,18 +81987,21 @@
         {
           "date": "2026-07-24",
           "close": 151.07
+        },
+        {
+          "date": "2026-07-27",
+          "close": 153.68
         }
       ]
     },
     "Escorts Kubota": {
       "ticker": "ESCORTS",
-      "price": 2905.1,
-      "change_1d_pct": -0.07,
-      "change_1w_pct": -1.09,
-      "change_1m_pct": -1.51,
+      "price": 2926.7,
+      "change_1d_pct": 0.74,
+      "change_1w_pct": -1.83,
+      "change_1m_pct": -0.78,
       "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
       "closes_30d": [
-        2801.1,
         2830.0,
         2831.0,
         2809.7,
@@ -82055,17 +82030,10 @@
         2956.2,
         2948.4,
         2907.1,
-        2905.1
+        2905.1,
+        2926.7
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 255.35
-        },
-        {
-          "date": "2016-07-26",
-          "close": 250.4
-        },
         {
           "date": "2016-07-27",
           "close": 253.25
@@ -91949,18 +91917,21 @@
         {
           "date": "2026-07-24",
           "close": 2905.1
+        },
+        {
+          "date": "2026-07-27",
+          "close": 2926.7
         }
       ]
     },
     "Action Construction Equipment": {
       "ticker": "ACE",
-      "price": 1039.4,
-      "change_1d_pct": 6.17,
-      "change_1w_pct": 5.27,
-      "change_1m_pct": 5.19,
+      "price": 1057.4,
+      "change_1d_pct": 1.73,
+      "change_1w_pct": 6.64,
+      "change_1m_pct": 7.01,
       "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
       "closes_30d": [
-        928.95,
         930.5,
         962.1,
         976.45,
@@ -91989,17 +91960,10 @@
         1035.5,
         1007.6,
         979.0,
-        1039.4
+        1039.4,
+        1057.4
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 48.5
-        },
-        {
-          "date": "2016-07-26",
-          "close": 48.85
-        },
         {
           "date": "2016-07-27",
           "close": 48.6
@@ -101883,18 +101847,21 @@
         {
           "date": "2026-07-24",
           "close": 1039.4
+        },
+        {
+          "date": "2026-07-27",
+          "close": 1057.4
         }
       ]
     },
     "Atul Auto": {
       "ticker": "ATULAUTO",
-      "price": 473.4,
-      "change_1d_pct": -0.06,
-      "change_1w_pct": -2.08,
-      "change_1m_pct": 1.2,
+      "price": 483.0,
+      "change_1d_pct": 2.03,
+      "change_1w_pct": 0.43,
+      "change_1m_pct": 3.25,
       "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
       "closes_30d": [
-        465.1,
         462.2,
         468.0,
         468.9,
@@ -101923,17 +101890,10 @@
         483.8,
         478.95,
         473.7,
-        473.4
+        473.4,
+        483.0
       ],
       "daily_closes": [
-        {
-          "date": "2016-07-25",
-          "close": 477.1
-        },
-        {
-          "date": "2016-07-26",
-          "close": 473.5
-        },
         {
           "date": "2016-07-27",
           "close": 473.8
@@ -111817,6 +111777,10 @@
         {
           "date": "2026-07-24",
           "close": 473.4
+        },
+        {
+          "date": "2026-07-27",
+          "close": 483.0
         }
       ]
     }

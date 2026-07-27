@@ -1,14 +1,47 @@
 {
   "available": true,
-  "generated_at": "2026-07-26T10:45:02.748397+00:00",
+  "generated_at": "2026-07-27T06:32:04.206657+00:00",
   "window_days": 45,
   "group_count": 6,
-  "item_count": 23,
+  "item_count": 25,
   "groups": [
     {
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
+        {
+          "title": "French auto parts maker Forvia to invest \u20ac70 m more in India",
+          "url": "https://auto.economictimes.indiatimes.com/news/auto-components/french-auto-parts-maker-forvia-to-invest-70-m-more-in-india/132651838",
+          "summary": "This investment will create three new manufacturing plants across the country. Forvia also expects to increase its workforce by fifty percent to over nine thousand employees. Rising demand for SUVs and vehicle electronics drives this significant expansion plan.",
+          "source": "ET Auto Components",
+          "published_at": "2026-07-27T04:25:28+00:00",
+          "published_display": "27 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Components"
+          ],
+          "signal_tags": [
+            "Capacity / Capex",
+            "Supply Chain / Components"
+          ]
+        },
+        {
+          "title": "New Suzuki Sky Vision Small Electric Car Testing Starts \u2013 Spied",
+          "url": "https://www.rushlane.com/new-suzuki-sky-vision-small-electric-car-testing-starts-spied-12551401.html",
+          "summary": "When launched in Europe, Suzuki's new A-segment EV will challenge rivals like Renault Twingo, Dacia Spring, FIAT 500 and Leapmotor T03 The post New Suzuki Sky Vision Small Electric Car Testing Starts \u2013 Spied appeared first on RushLane .",
+          "source": "RushLane",
+          "published_at": "2026-07-27T04:07:42+00:00",
+          "published_display": "27 Jul 2026",
+          "importance_score": 7,
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "signal_tags": [
+            "Product / Launch"
+          ]
+        },
         {
           "title": "Volkswagen abandons hopes for 2026 sales growth as restructuring looms",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-abandons-hopes-for-2026-sales-growth-as-restructuring-looms/132618013",
@@ -56,16 +89,23 @@
           "signal_tags": [
             "General"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "2w",
+      "label": "Two-Wheelers",
+      "items": [
         {
-          "title": "Kia launches Syros EV from \u20b913.49 lakh with up to 526 km range",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-launches-syros-ev-from-13-49-lakh-with-up-to-526-km-range/132577268",
-          "summary": "The second made-in-India mass-market EV from Kia gets up to 80% assured buyback, a BaaS option, a lifetime battery warranty, and 100 kW DC fast charging.",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-23T10:09:24+00:00",
-          "published_display": "23 Jul 2026",
-          "importance_score": 7,
+          "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
+          "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
+          "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-13T09:27:05+00:00",
+          "published_display": "13 Jul 2026",
+          "importance_score": 8,
           "segment_tags": [
+            "Two-Wheelers",
             "EV"
           ],
           "signal_tags": [
@@ -90,13 +130,7 @@
             "Capacity / Capex",
             "Supply Chain / Components"
           ]
-        }
-      ]
-    },
-    {
-      "id": "2w",
-      "label": "Two-Wheelers",
-      "items": [
+        },
         {
           "title": "CEAT to Invest \u20b91,205 Crore to Expand Two-Wheeler Tyre Capacity by 66%",
           "url": "https://www.autocarpro.in/NEWS/ceat-to-invest-\u20b91205-crore-to-expand-two-wheeler-tyre-capacity-by-66-133635",
@@ -222,6 +256,24 @@
           ]
         },
         {
+          "title": "MAHLE Explores India Debut for AI Cabin System; Flags Rare-Earth-Free Motor Potential",
+          "url": "https://www.autocarpro.in/NEWS/mahle-explores-india-debut-for-ai-cabin-system-flags-rare-earth-free-motor-potential-133720",
+          "summary": "German automotive supplier MAHLE is positioning India as a lead market for new technologies, with the country emerging as a candidate for the first launch of its AI-based cabin climate system. Management also sees strong potential for its rare-earth-free electric motor, but has not confirmed an India launch for either technology.",
+          "source": "Autocar Professional Components",
+          "published_at": "2026-07-23T18:50:50+00:00",
+          "published_display": "23 Jul 2026",
+          "importance_score": 8,
+          "segment_tags": [
+            "EV",
+            "Components"
+          ],
+          "signal_tags": [
+            "Product / Launch",
+            "Supply Chain / Components",
+            "Input Costs / Commodities"
+          ]
+        },
+        {
           "title": "Kia India launches Syros EV, starting at \u20b913.49 lakh",
           "url": "https://evreporter.com/kia-india-launches-syros-ev-starting-at-%e2%82%b913-49-lakh",
           "summary": "The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter . Kia India has launched the Syros EV, its second electric vehicle manufactured in India. The vehicle is priced at \u20b913.49 The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter .",
@@ -271,23 +323,6 @@
             "Capacity / Capex",
             "Supply Chain / Components"
           ]
-        },
-        {
-          "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
-          "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
-          "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-07-13T09:27:05+00:00",
-          "published_display": "13 Jul 2026",
-          "importance_score": 8,
-          "segment_tags": [
-            "Two-Wheelers",
-            "EV"
-          ],
-          "signal_tags": [
-            "Product / Launch",
-            "Supply Chain / Components"
-          ]
         }
       ]
     },
@@ -295,23 +330,6 @@
       "id": "components",
       "label": "Components",
       "items": [
-        {
-          "title": "Inside Amara Raja\u2019s 60 MWh Customer Qualification Plant for Lithium-ion Cells",
-          "url": "https://evreporter.com/inside-amara-rajas-60-mwh-customer-qualification-plant-for-lithium-ion-cells",
-          "summary": "The post Inside Amara Raja\u2019s 60 MWh Customer Qualification Plant for Lithium-ion Cells appeared first at EVreporter on EVreporter . A Conversation with Vikramadithya Gourineni In July 2026, Amara Raja Advanced Cell Technologies commissioned its Customer Qualification Plant (CQP) at The post Inside Amara Raja\u2019s 60 MWh Customer Qualification Plant for Lithium-ion Cells appeared first at EVreporter on EVreporter .",
-          "source": "EVReporter",
-          "published_at": "2026-07-24T10:14:57+00:00",
-          "published_display": "24 Jul 2026",
-          "importance_score": 10,
-          "segment_tags": [
-            "EV"
-          ],
-          "signal_tags": [
-            "Capacity / Capex",
-            "Supply Chain / Components",
-            "Input Costs / Commodities"
-          ]
-        },
         {
           "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
@@ -347,6 +365,22 @@
           ]
         },
         {
+          "title": "Hero\u2019s VIDA Debuts\u00a0in Nepal with\u00a0VX2 Scooter Range and\u00a0DIRT.E K3",
+          "url": "https://evreporter.com/heros-vida-debuts-in-nepal-with-vx2-scooter-range-and-dirt-e-k3",
+          "summary": "The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter . VIDA, powered by Hero, has entered Nepal, its first international market, through a distributor partnership with CG Motors (Chaudhary Group), The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-26T16:24:01+00:00",
+          "published_display": "26 Jul 2026",
+          "importance_score": 8,
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "signal_tags": [
+            "Product / Launch",
+            "Supply Chain / Components"
+          ]
+        },
+        {
           "title": "Honda launches ZR-V Hybrid SUV in India at \u20b947.99 lakh, begins deliveries",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/honda-zr-v-hybrid-suv-launches-in-india-pricing-and-features-revealed/132620678",
           "summary": "The ZR-V e:HEV is powered by Honda\u2019s 2.0-litre e:HEV Sports Hybrid powertrain, delivering a combined maximum power of 184 PS at 5,000-6,000 rpm and maximum torque of 315 Nm at 0-2,000 rpm.",
@@ -364,21 +398,19 @@
           ]
         },
         {
-          "title": "MAHLE Explores India Debut for AI Cabin System; Flags Rare-Earth-Free Motor Potential",
-          "url": "https://www.autocarpro.in/NEWS/mahle-explores-india-debut-for-ai-cabin-system-flags-rare-earth-free-motor-potential-133720",
-          "summary": "German automotive supplier MAHLE is positioning India as a lead market for new technologies, with the country emerging as a candidate for the first launch of its AI-based cabin climate system. Management also sees strong potential for its rare-earth-free electric motor, but has not confirmed an India launch for either technology.",
-          "source": "Autocar Professional Components",
-          "published_at": "2026-07-23T18:50:50+00:00",
-          "published_display": "23 Jul 2026",
+          "title": "What Does Amara Raja\u2019s 60 MWh Customer Qualification Plant Mean for its Gigafactory Ambition?",
+          "url": "https://evreporter.com/inside-amara-rajas-60-mwh-customer-qualification-plant-for-lithium-ion-cells",
+          "summary": "The post What Does Amara Raja\u2019s 60 MWh Customer Qualification Plant Mean for its Gigafactory Ambition? appeared first at EVreporter on EVreporter .",
+          "source": "EVReporter",
+          "published_at": "2026-07-24T10:14:57+00:00",
+          "published_display": "24 Jul 2026",
           "importance_score": 8,
           "segment_tags": [
-            "EV",
-            "Components"
+            "General"
           ],
           "signal_tags": [
-            "Product / Launch",
-            "Supply Chain / Components",
-            "Input Costs / Commodities"
+            "Capacity / Capex",
+            "Supply Chain / Components"
           ]
         }
       ]
@@ -428,21 +460,21 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
+    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 5,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Two Wheelers",
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV",
-      "RushLane"
+      "Autocar Professional EV"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 55,
-    "filtered_low_signal": 0,
-    "kept_articles": 80
+    "unmapped_articles": 54,
+    "filtered_low_signal": 1,
+    "kept_articles": 87
   }
 }
