@@ -1,15 +1,7 @@
 {
-  "as_of_date": "2026-07-27",
+  "as_of_date": "2026-07-28",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
-    {
-      "company": "Ashok Leyland",
-      "ticker": "ASHOKLEY",
-      "date": "2026-05-28",
-      "period_label": "Financial Results/Dividend/Fund Raising",
-      "event_type": "earnings",
-      "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
-    },
     {
       "company": "Action Construction Equipment",
       "ticker": "ACE",
