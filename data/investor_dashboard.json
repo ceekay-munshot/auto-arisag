@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T05:55:50.041953+00:00",
+  "generated_at": "2026-07-29T11:27:28.281648+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-29T05:55:25.100828+00:00",
+      "generated_at": "2026-07-29T11:27:08.011561+00:00",
       "window_days": 30,
-      "item_count": 8,
+      "item_count": 5,
       "items": [
         {
           "title": "China's BYD launched EV mini-car in Japan",
@@ -121726,45 +121726,6 @@
           "scope": "tracked",
           "segment_tags": [],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-316289/132690464.cms"
-        },
-        {
-          "title": "2026 Toyota Hilux Launch Price Rs 31.99 L \u2013 Major Exterior, Interior Upgrade",
-          "summary": "9th-gen Toyota Hilux gets a completely new design, updated cabin and additional features while retaining its proven 2.8-litre diesel engine The post 2026 Toyota Hilux Launch Price Rs 31.99 L \u2013 Major Exterior, Interior Upgrade appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2026-toyota-hilux-launch-price-rs-31-99-l-major-exterior-interior-upgrade-12551657.html",
-          "source": "RushLane",
-          "published_at": "2026-07-28T14:44:45+00:00",
-          "published_display": "28 Jul 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/new-toyota-hilux-india-launch-9th-gen-model-7.jpg"
-        },
-        {
-          "title": "New Honda CB500 Bookings Open At BigWing Dealers \u2013 Launch Price Soon",
-          "summary": "Honda BigWing Calicut has officially announced that bookings for CB500 are open. Customers have been asked to visit the dealership or contact them The post New Honda CB500 Bookings Open At BigWing Dealers \u2013 Launch Price Soon appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-honda-cb500-bookings-open-at-bigwing-dealers-launch-price-soon-12551679.html",
-          "source": "RushLane",
-          "published_at": "2026-07-28T13:28:26+00:00",
-          "published_display": "28 Jul 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/new-honda-cb500-launch-price-bookings-1.jpeg"
-        },
-        {
-          "title": "2027 Kawasaki Ninja 300 Launch Price Rs 3.34 Lakh \u2013 Details",
-          "summary": "2027 Kawasaki Ninja 300 has been launched in India with just one variant and one colour option and very minimal changes over MY26 version The post 2027 Kawasaki Ninja 300 Launch Price Rs 3.34 Lakh \u2013 Details appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2027-kawasaki-ninja-300-launch-price-rs-3-34-lakh-details-12551649.html",
-          "source": "RushLane",
-          "published_at": "2026-07-28T06:17:48+00:00",
-          "published_display": "28 Jul 2026",
-          "company": "Audi India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/2027-kawasaki-ninja-300-launched-2.jpg"
         },
         {
           "title": "Honda launches ZR-V Hybrid SUV in India at \u20b947.99 lakh, begins deliveries",
@@ -121827,7 +121788,7 @@
           "company": "Toyota Kirloskar",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-07-28T17:04:25+00:00",
           "latest_title": "Toyota launches all-new Hilux in India at \u20b931.99 lakh, adds 4x2 automatic variant"
         },
@@ -121835,17 +121796,9 @@
           "company": "Honda Cars India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-07-28T13:28:26+00:00",
-          "latest_title": "New Honda CB500 Bookings Open At BigWing Dealers \u2013 Launch Price Soon"
-        },
-        {
-          "company": "Audi India",
-          "tone": "pv",
-          "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-07-28T06:17:48+00:00",
-          "latest_title": "2027 Kawasaki Ninja 300 Launch Price Rs 3.34 Lakh \u2013 Details"
+          "latest_published_at": "2026-07-25T06:48:59+00:00",
+          "latest_title": "Honda launches ZR-V Hybrid SUV in India at \u20b947.99 lakh, begins deliveries"
         },
         {
           "company": "Kia India",
@@ -121988,10 +121941,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.72,
+        "value": 95.65,
         "unit": "\u20b9",
-        "delta_value": -0.0541,
-        "delta_label": "-0.64% in last week (Yahoo Finance)",
+        "delta_value": -0.1266,
+        "delta_label": "-0.72% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132399,7 +132352,7 @@
           },
           {
             "date": "2026-07-29",
-            "close": 95.72
+            "close": 95.6475
           }
         ]
       }
@@ -132414,13 +132367,12 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13886.0,
-        "change_1d_pct": 1.14,
-        "change_1w_pct": 2.13,
-        "change_1m_pct": 3.53,
+        "price": 13948.0,
+        "change_1d_pct": 1.06,
+        "change_1w_pct": 2.98,
+        "change_1m_pct": -1.18,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13630.0,
           13484.0,
           13395.0,
           13421.0,
@@ -132449,7 +132401,8 @@
           13403.0,
           13442.0,
           13730.0,
-          13886.0
+          13802.0,
+          13948.0
         ],
         "daily_closes": [
           {
@@ -142333,20 +142286,23 @@
             "close": 13730.0
           },
           {
+            "date": "2026-07-28",
+            "close": 13802.0
+          },
+          {
             "date": "2026-07-29",
-            "close": 13886.0
+            "close": 13948.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3239.7,
-        "change_1d_pct": 0.03,
-        "change_1w_pct": 1.19,
-        "change_1m_pct": 4.74,
+        "price": 3221.8,
+        "change_1d_pct": -1.51,
+        "change_1w_pct": 1.46,
+        "change_1m_pct": 4.99,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3132.9,
           3136.5,
           3074.8,
           3063.4,
@@ -142375,7 +142331,8 @@
           3229.7,
           3161.4,
           3238.6,
-          3239.7
+          3271.2,
+          3221.8
         ],
         "daily_closes": [
           {
@@ -152259,17 +152216,21 @@
             "close": 3238.6
           },
           {
+            "date": "2026-07-28",
+            "close": 3271.2
+          },
+          {
             "date": "2026-07-29",
-            "close": 3239.7
+            "close": 3221.8
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5203.4,
-        "change_1d_pct": 0.95,
-        "change_1w_pct": 4.34,
-        "change_1m_pct": 8.53,
+        "price": 5149.1,
+        "change_1d_pct": -0.1,
+        "change_1w_pct": 3.25,
+        "change_1m_pct": 7.4,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5021.6,
@@ -152301,7 +152262,7 @@
           5011.1,
           5113.8,
           5154.3,
-          5203.4
+          5149.1
         ],
         "daily_closes": [
           {
@@ -162190,16 +162151,16 @@
           },
           {
             "date": "2026-07-29",
-            "close": 5203.4
+            "close": 5149.1
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4031.9,
-        "change_1d_pct": 0.96,
-        "change_1w_pct": 3.18,
-        "change_1m_pct": 16.51,
+        "price": 4075.6,
+        "change_1d_pct": 2.06,
+        "change_1w_pct": 4.3,
+        "change_1m_pct": 17.77,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3457.6,
@@ -162231,7 +162192,7 @@
           3870.2,
           3876.4,
           3993.5,
-          4031.9
+          4075.6
         ],
         "daily_closes": [
           {
@@ -172120,19 +172081,18 @@
           },
           {
             "date": "2026-07-29",
-            "close": 4031.9
+            "close": 4075.6
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11476.5,
-        "change_1d_pct": 2.62,
-        "change_1w_pct": 10.31,
-        "change_1m_pct": 19.17,
+        "price": 11338.0,
+        "change_1d_pct": -0.32,
+        "change_1w_pct": 3.09,
+        "change_1m_pct": 16.69,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10042.0,
           10077.0,
           10066.0,
           10191.0,
@@ -172161,7 +172121,8 @@
           11283.5,
           11130.0,
           11183.5,
-          11476.5
+          11374.0,
+          11338.0
         ],
         "daily_closes": [
           {
@@ -182045,20 +182006,23 @@
             "close": 11183.5
           },
           {
+            "date": "2026-07-28",
+            "close": 11374.0
+          },
+          {
             "date": "2026-07-29",
-            "close": 11476.5
+            "close": 11338.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1985.2,
-        "change_1d_pct": 0.03,
-        "change_1w_pct": 1.36,
-        "change_1m_pct": 4.89,
+        "price": 1992.9,
+        "change_1d_pct": -0.45,
+        "change_1w_pct": 2.43,
+        "change_1m_pct": 4.59,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1976.7,
           1976.6,
           1973.2,
           1988.9,
@@ -182087,7 +182051,8 @@
           1954.4,
           1952.6,
           1984.6,
-          1985.2
+          2001.9,
+          1992.9
         ],
         "daily_closes": [
           {
@@ -183847,20 +183812,23 @@
             "close": 1984.6
           },
           {
+            "date": "2026-07-28",
+            "close": 2001.9
+          },
+          {
             "date": "2026-07-29",
-            "close": 1985.2
+            "close": 1992.9
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7796.5,
-        "change_1d_pct": 0.35,
-        "change_1w_pct": 1.39,
-        "change_1m_pct": 4.99,
+        "price": 7779.0,
+        "change_1d_pct": -0.73,
+        "change_1w_pct": 1.93,
+        "change_1m_pct": 9.97,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7509.0,
           7601.0,
           7611.0,
           7639.5,
@@ -183889,7 +183857,8 @@
           7721.5,
           7628.0,
           7769.5,
-          7796.5
+          7836.0,
+          7779.0
         ],
         "daily_closes": [
           {
@@ -193773,17 +193742,21 @@
             "close": 7769.5
           },
           {
+            "date": "2026-07-28",
+            "close": 7836.0
+          },
+          {
             "date": "2026-07-29",
-            "close": 7796.5
+            "close": 7779.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 328.65,
-        "change_1d_pct": 1.31,
-        "change_1w_pct": 0.29,
-        "change_1m_pct": -6.69,
+        "price": 329.8,
+        "change_1d_pct": 1.66,
+        "change_1w_pct": 0.64,
+        "change_1m_pct": -6.36,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193816,7 +193789,7 @@
           323.8,
           327.65,
           324.4,
-          328.65
+          329.8
         ],
         "daily_closes": [
           {
@@ -203705,16 +203678,16 @@
           },
           {
             "date": "2026-07-29",
-            "close": 328.65
+            "close": 329.8
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 417.4,
-        "change_1d_pct": 0.17,
-        "change_1w_pct": 2.95,
-        "change_1m_pct": -1.31,
+        "price": 411.4,
+        "change_1d_pct": -1.27,
+        "change_1w_pct": 1.47,
+        "change_1m_pct": -2.73,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203747,7 +203720,7 @@
           406.15,
           411.1,
           416.7,
-          417.4
+          411.4
         ],
         "daily_closes": [
           {
@@ -204464,16 +204437,16 @@
           },
           {
             "date": "2026-07-29",
-            "close": 417.4
+            "close": 411.4
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 158.3,
-        "change_1d_pct": 0.51,
-        "change_1w_pct": 3.81,
-        "change_1m_pct": 0.38,
+        "price": 157.96,
+        "change_1d_pct": 0.29,
+        "change_1w_pct": 3.59,
+        "change_1m_pct": 0.16,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           158.45,
@@ -204505,7 +204478,7 @@
           151.07,
           155.06,
           157.5,
-          158.3
+          157.96
         ],
         "daily_closes": [
           {
@@ -214394,19 +214367,18 @@
           },
           {
             "date": "2026-07-29",
-            "close": 158.3
+            "close": 157.96
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3008.6,
-        "change_1d_pct": 1.84,
-        "change_1w_pct": 1.77,
-        "change_1m_pct": 3.85,
+        "price": 3016.8,
+        "change_1d_pct": 0.23,
+        "change_1w_pct": 2.32,
+        "change_1m_pct": 2.76,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2831.0,
           2809.7,
           2821.2,
           2950.4,
@@ -214435,7 +214407,8 @@
           2907.1,
           2905.1,
           2954.1,
-          3008.6
+          3009.9,
+          3016.8
         ],
         "daily_closes": [
           {
@@ -224319,20 +224292,23 @@
             "close": 2954.1
           },
           {
+            "date": "2026-07-28",
+            "close": 3009.9
+          },
+          {
             "date": "2026-07-29",
-            "close": 3008.6
+            "close": 3016.8
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1036.5,
-        "change_1d_pct": -2.38,
-        "change_1w_pct": 0.1,
-        "change_1m_pct": 5.21,
+        "price": 1051.3,
+        "change_1d_pct": -2.44,
+        "change_1w_pct": 4.34,
+        "change_1m_pct": 2.67,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          962.1,
           976.45,
           975.65,
           1011.7,
@@ -224361,7 +224337,8 @@
           979.0,
           1039.4,
           1061.8,
-          1036.5
+          1077.6,
+          1051.3
         ],
         "daily_closes": [
           {
@@ -234245,17 +234222,21 @@
             "close": 1061.8
           },
           {
+            "date": "2026-07-28",
+            "close": 1077.6
+          },
+          {
             "date": "2026-07-29",
-            "close": 1036.5
+            "close": 1051.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 482.65,
-        "change_1d_pct": 1.42,
-        "change_1w_pct": 0.77,
-        "change_1m_pct": 0.18,
+        "price": 495.2,
+        "change_1d_pct": 4.06,
+        "change_1w_pct": 3.39,
+        "change_1m_pct": 2.78,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           468.9,
@@ -234287,7 +234268,7 @@
           473.4,
           482.25,
           475.9,
-          482.65
+          495.2
         ],
         "daily_closes": [
           {
@@ -244176,7 +244157,7 @@
           },
           {
             "date": "2026-07-29",
-            "close": 482.65
+            "close": 495.2
           }
         ]
       }
@@ -245464,10 +245445,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-29T05:54:58.281388+00:00",
+    "generated_at": "2026-07-29T11:26:45.252993+00:00",
     "window_days": 45,
-    "group_count": 6,
-    "item_count": 25,
+    "group_count": 5,
+    "item_count": 24,
     "groups": [
       {
         "id": "pv",
@@ -245577,19 +245558,19 @@
             ]
           },
           {
-            "title": "Avore Electric Motorcycle Launch Price Rs 1.25 Lakh \u2013 260 Km Range, 114 Kmph Top Speed",
-            "url": "https://www.rushlane.com/avore-electric-motorcycle-launch-price-rs-1-25-lakh-12551668.html",
-            "summary": "Developed by Ahmedabad-based Avore Electric from the house of Samarth E-Mobility, the new electric motorcycle is available in three variants The post Avore Electric Motorcycle Launch Price Rs 1.25 Lakh \u2013 260 Km Range, 114 Kmph Top Speed appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-28T12:59:14+00:00",
-            "published_display": "28 Jul 2026",
-            "importance_score": 6,
+            "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
+            "url": "https://evreporter.com/ampere-reo-vyb-review",
+            "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-29T08:58:39+00:00",
+            "published_display": "29 Jul 2026",
+            "importance_score": 7,
             "segment_tags": [
               "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Supply Chain / Components"
             ]
           },
           {
@@ -245610,36 +245591,18 @@
             ]
           },
           {
-            "title": "Harman India in Talks with 2W, CV Makers to Supply Infotainment Systems",
-            "url": "https://www.autocarpro.in/NEWS/harman-india-in-talks-with-2w-cv-makers-to-supply-infotainment-systems-133669",
-            "summary": "Harman India is in discussions with multiple two-wheeler and commercial vehicle manufacturers to supply in-vehicle infotainment (IVI) and cockpit domain controller (CDC) systems, according to a senior company executive. This would mark Harman Automotive\u2019s expansion beyond its traditional passenger vehicle business in India.",
+            "title": "BorgWarner Wins Supply Contract for Motorcycle Transmissions in China",
+            "url": "https://www.autocarpro.in/NEWS/borgwarner-wins-supply-contract-for-motorcycle-transmissions-in-china-133734",
+            "summary": "BorgWarner has secured a new Dual-Clutch Transmission (DCT) program with an unnamed Chinese motorcycle manufacturer, scheduled to enter production in the third quarter of 2027, the company announced on Friday. What the Supply Package Includes Under the contract, BorgWarner will supply a package consisting of dual clutches, hydraulic control modules, and clutch control software.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-07-20T18:09:15+00:00",
-            "published_display": "20 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "150cc to 200cc Motorcycle Sales June 2026 \u2013 Apache, Pulsar, Unicorn, MT15, FZ, R15, KTM, Xpulse",
-            "url": "https://www.rushlane.com/150cc-to-200cc-motorcycle-sales-june-2026-apache-pulsar-unicorn-12551659.html",
-            "summary": "India's 150cc-200cc motorcycle segment continued its strong growth trajectory in June 2026, recording healthy gains on a year-on-year basis The post 150cc to 200cc Motorcycle Sales June 2026 \u2013 Apache, Pulsar, Unicorn, MT15, FZ, R15, KTM, Xpulse appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-07-28T09:01:32+00:00",
-            "published_display": "28 Jul 2026",
+            "published_at": "2026-07-24T18:19:09+00:00",
+            "published_display": "24 Jul 2026",
             "importance_score": 5,
             "segment_tags": [
               "Two-Wheelers"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245691,6 +245654,21 @@
             "segment_tags": [
               "Commercial Vehicles",
               "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "ZF Wins ESC Supply Deals from Three Major OEMs",
+            "url": "https://www.autocarpro.in/NEWS/zf-wins-esc-supply-deals-from-three-major-oems-133767",
+            "summary": "ZF Commercial Vehicle Control Systems India Limited has secured business nominations from three leading Indian commercial vehicle original equipment manufacturers to supply its ESCsmart Electronic Stability Control system. The multi-year supply agreements cover truck platforms across 12V and 24V electrical architectures, with serial production scheduled to begin in the third quarter of 2027.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-28T14:17:13+00:00",
+            "published_display": "28 Jul 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Commercial Vehicles"
             ],
             "signal_tags": [
               "Supply Chain / Components"
@@ -245896,29 +245874,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "policy",
-        "label": "Policy / Regulation",
-        "items": [
-          {
-            "title": "Proposed CAFE-III Norms to Drive Domestic Ethanol Supply and Flex-Fuel Integration: GEMA",
-            "url": "https://www.autocarpro.in/NEWS/proposed-cafe-iii-norms-to-drive-domestic-ethanol-supply-and-flex-fuel-integration-gema-133652",
-            "summary": "The Grain Ethanol Manufacturers Association has stated that the new draft of Corporate Average Fuel Consumption (CAFE) Stage III norms will establish a predictable, long-term operational runway for domestic biofuel production. According to the industry body, the integration of alternative fuel metrics into automotive manufacturing compliance provides the policy visibility necessary to scale capital investments acr...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-17T18:49:36+00:00",
-            "published_display": "17 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
-          }
-        ]
       }
     ],
     "sources_live": [
@@ -245926,22 +245881,22 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 6,
+      "sources_live": 5,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 50,
       "filtered_low_signal": 0,
-      "kept_articles": 88
+      "kept_articles": 80
     }
   },
   "qa": [
