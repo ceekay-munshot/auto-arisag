@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T05:43:06.102152+00:00",
+  "generated_at": "2026-07-30T11:09:34.977490+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121917,10 +121917,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.69,
+        "value": 95.68,
         "unit": "\u20b9",
-        "delta_value": 0.0863,
-        "delta_label": "-0.90% in last week (Yahoo Finance)",
+        "delta_value": 0.0813,
+        "delta_label": "-0.91% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132328,7 +132328,7 @@
           },
           {
             "date": "2026-07-30",
-            "close": 95.685
+            "close": 95.68
           }
         ]
       }
@@ -132343,10 +132343,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13951.0,
-        "change_1d_pct": 0.02,
-        "change_1w_pct": 4.09,
-        "change_1m_pct": -3.08,
+        "price": 14188.0,
+        "change_1d_pct": 1.72,
+        "change_1w_pct": 5.86,
+        "change_1m_pct": -1.44,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13395.0,
@@ -132378,7 +132378,7 @@
           13730.0,
           13802.0,
           13948.0,
-          13951.0
+          14188.0
         ],
         "daily_closes": [
           {
@@ -142267,16 +142267,16 @@
           },
           {
             "date": "2026-07-30",
-            "close": 13951.0
+            "close": 14188.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3258.7,
-        "change_1d_pct": 1.15,
-        "change_1w_pct": 0.9,
-        "change_1m_pct": 4.11,
+        "price": 3283.7,
+        "change_1d_pct": 1.92,
+        "change_1w_pct": 1.67,
+        "change_1m_pct": 4.91,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3074.8,
@@ -142308,7 +142308,7 @@
           3238.6,
           3271.2,
           3221.8,
-          3258.7
+          3283.7
         ],
         "daily_closes": [
           {
@@ -152197,19 +152197,18 @@
           },
           {
             "date": "2026-07-30",
-            "close": 3258.7
+            "close": 3283.7
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5318.4,
-        "change_1d_pct": 3.18,
-        "change_1w_pct": 6.64,
-        "change_1m_pct": 10.93,
+        "price": 5325.0,
+        "change_1d_pct": 3.42,
+        "change_1w_pct": 2.92,
+        "change_1m_pct": 10.14,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5021.6,
           4974.9,
           4983.7,
           4974.6,
@@ -152238,7 +152237,8 @@
           5011.1,
           5113.8,
           5154.3,
-          5318.4
+          5149.1,
+          5325.0
         ],
         "daily_closes": [
           {
@@ -162122,17 +162122,21 @@
             "close": 5154.3
           },
           {
+            "date": "2026-07-29",
+            "close": 5149.1
+          },
+          {
             "date": "2026-07-30",
-            "close": 5318.4
+            "close": 5325.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4170.8,
-        "change_1d_pct": 2.34,
-        "change_1w_pct": 6.4,
-        "change_1m_pct": 19.37,
+        "price": 4208.4,
+        "change_1d_pct": 3.26,
+        "change_1w_pct": 7.36,
+        "change_1m_pct": 20.45,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3442.9,
@@ -162164,7 +162168,7 @@
           3876.4,
           3993.5,
           4075.6,
-          4170.8
+          4208.4
         ],
         "daily_closes": [
           {
@@ -172053,16 +172057,16 @@
           },
           {
             "date": "2026-07-30",
-            "close": 4170.8
+            "close": 4208.4
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11459.5,
-        "change_1d_pct": 1.07,
-        "change_1w_pct": 1.56,
-        "change_1m_pct": 16.43,
+        "price": 11432.0,
+        "change_1d_pct": 0.83,
+        "change_1w_pct": 1.32,
+        "change_1m_pct": 16.16,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10066.0,
@@ -172094,7 +172098,7 @@
           11183.5,
           11374.0,
           11338.0,
-          11459.5
+          11432.0
         ],
         "daily_closes": [
           {
@@ -181983,19 +181987,18 @@
           },
           {
             "date": "2026-07-30",
-            "close": 11459.5
+            "close": 11432.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1986.6,
-        "change_1d_pct": -0.76,
-        "change_1w_pct": 2.11,
-        "change_1m_pct": 4.26,
+        "price": 2018.2,
+        "change_1d_pct": 1.27,
+        "change_1w_pct": 3.26,
+        "change_1m_pct": 5.21,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1976.6,
           1973.2,
           1988.9,
           1968.9,
@@ -182024,7 +182027,8 @@
           1952.6,
           1984.6,
           2001.9,
-          1986.6
+          1992.9,
+          2018.2
         ],
         "daily_closes": [
           {
@@ -183788,20 +183792,23 @@
             "close": 2001.9
           },
           {
+            "date": "2026-07-29",
+            "close": 1992.9
+          },
+          {
             "date": "2026-07-30",
-            "close": 1986.6
+            "close": 2018.2
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7858.5,
-        "change_1d_pct": 0.29,
-        "change_1w_pct": 2.97,
-        "change_1m_pct": 11.1,
+        "price": 7912.5,
+        "change_1d_pct": 1.72,
+        "change_1w_pct": 2.47,
+        "change_1m_pct": 10.83,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7601.0,
           7611.0,
           7639.5,
           7578.0,
@@ -183830,7 +183837,8 @@
           7628.0,
           7769.5,
           7836.0,
-          7858.5
+          7779.0,
+          7912.5
         ],
         "daily_closes": [
           {
@@ -193714,17 +193722,21 @@
             "close": 7836.0
           },
           {
+            "date": "2026-07-29",
+            "close": 7779.0
+          },
+          {
             "date": "2026-07-30",
-            "close": 7858.5
+            "close": 7912.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 331.4,
-        "change_1d_pct": 0.49,
-        "change_1w_pct": 2.19,
-        "change_1m_pct": -4.72,
+        "price": 334.2,
+        "change_1d_pct": 1.33,
+        "change_1w_pct": 3.05,
+        "change_1m_pct": -3.91,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193757,7 +193769,7 @@
           327.65,
           324.4,
           329.8,
-          331.4
+          334.2
         ],
         "daily_closes": [
           {
@@ -203646,16 +203658,16 @@
           },
           {
             "date": "2026-07-30",
-            "close": 331.4
+            "close": 334.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 410.85,
-        "change_1d_pct": -0.13,
-        "change_1w_pct": 0.72,
-        "change_1m_pct": -4.77,
+        "price": 414.95,
+        "change_1d_pct": 0.86,
+        "change_1w_pct": 1.73,
+        "change_1m_pct": -3.82,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203688,7 +203700,7 @@
           411.1,
           416.7,
           411.4,
-          410.85
+          414.95
         ],
         "daily_closes": [
           {
@@ -204409,16 +204421,16 @@
           },
           {
             "date": "2026-07-30",
-            "close": 410.85
+            "close": 414.95
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 157.04,
-        "change_1d_pct": -0.58,
-        "change_1w_pct": 4.24,
-        "change_1m_pct": -3.25,
+        "price": 158.09,
+        "change_1d_pct": 0.08,
+        "change_1w_pct": 4.94,
+        "change_1m_pct": -2.61,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           156.66,
@@ -204450,7 +204462,7 @@
           155.06,
           157.5,
           157.96,
-          157.04
+          158.09
         ],
         "daily_closes": [
           {
@@ -214339,19 +214351,18 @@
           },
           {
             "date": "2026-07-30",
-            "close": 157.04
+            "close": 158.09
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2999.4,
-        "change_1d_pct": -0.35,
-        "change_1w_pct": 1.73,
-        "change_1m_pct": 2.16,
+        "price": 3013.6,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": 3.66,
+        "change_1m_pct": 2.32,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2809.7,
           2821.2,
           2950.4,
           2951.8,
@@ -214380,7 +214391,8 @@
           2905.1,
           2954.1,
           3009.9,
-          2999.4
+          3016.8,
+          3013.6
         ],
         "daily_closes": [
           {
@@ -224264,20 +224276,23 @@
             "close": 3009.9
           },
           {
+            "date": "2026-07-29",
+            "close": 3016.8
+          },
+          {
             "date": "2026-07-30",
-            "close": 2999.4
+            "close": 3013.6
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1040.0,
-        "change_1d_pct": -3.49,
-        "change_1w_pct": 3.22,
-        "change_1m_pct": 1.56,
+        "price": 1057.2,
+        "change_1d_pct": 0.56,
+        "change_1w_pct": 7.99,
+        "change_1m_pct": 5.82,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          976.45,
           975.65,
           1011.7,
           1007.85,
@@ -224306,7 +224321,8 @@
           1039.4,
           1061.8,
           1077.6,
-          1040.0
+          1051.3,
+          1057.2
         ],
         "daily_closes": [
           {
@@ -234190,20 +234206,23 @@
             "close": 1077.6
           },
           {
+            "date": "2026-07-29",
+            "close": 1051.3
+          },
+          {
             "date": "2026-07-30",
-            "close": 1040.0
+            "close": 1057.2
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 516.8,
-        "change_1d_pct": 8.59,
-        "change_1w_pct": 7.9,
-        "change_1m_pct": 7.26,
+        "price": 516.0,
+        "change_1d_pct": 4.2,
+        "change_1w_pct": 8.93,
+        "change_1m_pct": 4.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          468.9,
           473.95,
           474.25,
           467.75,
@@ -234232,7 +234251,8 @@
           473.4,
           482.25,
           475.9,
-          516.8
+          495.2,
+          516.0
         ],
         "daily_closes": [
           {
@@ -244116,8 +244136,12 @@
             "close": 475.9
           },
           {
+            "date": "2026-07-29",
+            "close": 495.2
+          },
+          {
             "date": "2026-07-30",
-            "close": 516.8
+            "close": 516.0
           }
         ]
       }
@@ -245405,10 +245429,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-30T05:42:20.093789+00:00",
+    "generated_at": "2026-07-30T11:08:49.136410+00:00",
     "window_days": 45,
     "group_count": 5,
-    "item_count": 24,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -245447,47 +245471,48 @@
             ]
           },
           {
-            "title": "Porsche ramps up job cuts to 9,000 by 2035",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-ramps-up-job-cuts-to-9000-by-2035/132674318",
-            "summary": "On becoming CEO at the start of the year, Leiters \u200bwas tasked with overhauling the business after sales \u2060in Porsche's \u200conce highly lucrative China market collapsed and its EV \u200bstrategy stalled.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-28T03:56:38+00:00",
-            "published_display": "28 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Porsche to cut 9,000 jobs by 2035 amid weak demand, EV challenges",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/porsche-announces-9000-job-cuts-by-2035-amidst-electric-vehicle-transition-and-economic-challenges/132664710",
-            "summary": "Porsche will eliminate around 9,000 jobs by 2035 through voluntary measures and attrition as it restructures amid weak China demand and a slowing EV transition.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-27T15:01:14+00:00",
+            "title": "French auto parts maker Forvia to invest \u20ac70 m more in India",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/french-auto-parts-maker-forvia-to-invest-70-m-more-in-india/132651838",
+            "summary": "This investment will create three new manufacturing plants across the country. Forvia also expects to increase its workforce by fifty percent to over nine thousand employees. Rising demand for SUVs and vehicle electronics drives this significant expansion plan.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-27T04:25:28+00:00",
             "published_display": "27 Jul 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV",
-              "Luxury"
+              "Passenger Vehicles",
+              "Components"
             ],
             "signal_tags": [
-              "General"
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           },
           {
-            "title": "Audi must work with Volkswagen to realign business, says CFO",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-must-work-with-volkswagen-to-realign-business-says-cfo/132656082",
-            "summary": "Audi plans a major business realignment with parent Volkswagen Group after H1 revenue fell 10% to \u20ac29.2 billion amid global demand pressures.",
+            "title": "Maruti Suzuki starts production at fourth Gujarat plant, lifts annual capacity to 2.9 million units",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-starts-production-at-fourth-gujarat-plant-lifts-annual-capacity-to-2-9-million-units/132734000",
+            "summary": "The new plant, built with an annual capacity of 2.5 lakh units, increases the Hansalpur facility's overall production capacity to 10 lakh units per annum from 7.5 lakh units earlier.",
             "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-27T07:59:27+00:00",
-            "published_display": "27 Jul 2026",
-            "importance_score": 7,
+            "published_at": "2026-07-30T08:59:18+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Luxury"
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex"
+            ]
+          },
+          {
+            "title": "Kia to invest $649 million to bring electric car production to Mexico",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-to-invest-649-million-to-bring-electric-car-production-to-mexico/132731252",
+            "summary": "Kia will begin local production of its EV3 model in Nuevo Le\u00f3n from August, targeting domestic demand and expanding its EV footprint in Latin America.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-30T07:06:48+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
             ],
             "signal_tags": [
               "General"
@@ -245499,22 +245524,6 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
-          {
-            "title": "Hero\u2019s VIDA Debuts\u00a0in Nepal with\u00a0VX2 Scooter Range and\u00a0DIRT.E K3",
-            "url": "https://evreporter.com/heros-vida-debuts-in-nepal-with-vx2-scooter-range-and-dirt-e-k3",
-            "summary": "The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter . VIDA, powered by Hero, has entered Nepal, its first international market, through a distributor partnership with CG Motors (Chaudhary Group), The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-26T16:24:01+00:00",
-            "published_display": "26 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
             "url": "https://evreporter.com/ampere-reo-vyb-review",
@@ -245532,6 +245541,23 @@
             ]
           },
           {
+            "title": "L&T Enters EV Powertrain with a Five Lakh Motor Order",
+            "url": "https://www.autocarpro.in/NEWS/lt-enters-ev-powertrain-with-a-five-lakh-motor-order-133802",
+            "summary": "L&T EPS Mobility, the automotive arm of Larsen & Toubro's Electronic Products and Systems division, has booked its first commercial contract. An order for five lakh electric-vehicle traction motors from a two-wheeler manufacturer it has not named yet, to be delivered over three years.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-30T11:43:03+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Godrej Tooling Achieves 95% Local Production for Automotive Sector",
             "url": "https://www.autocarpro.in/NEWS/godrej-tooling-achieves-95-local-production-for-automotive-sector-133752",
             "summary": "Godrej Enterprises Group's Tooling business has reported that 95% of the tooling supplied to its automotive clients is now manufactured locally, supported by government localization initiatives and supply chain integration efforts. The company generates over 85% of its total tooling revenue from the automotive industry, providing high-precision solutions across passenger vehicles, two-wheelers, commercial vehicles...",
@@ -245543,21 +245569,6 @@
               "Passenger Vehicles",
               "Two-Wheelers",
               "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "BorgWarner Wins Supply Contract for Motorcycle Transmissions in China",
-            "url": "https://www.autocarpro.in/NEWS/borgwarner-wins-supply-contract-for-motorcycle-transmissions-in-china-133734",
-            "summary": "BorgWarner has secured a new Dual-Clutch Transmission (DCT) program with an unnamed Chinese motorcycle manufacturer, scheduled to enter production in the third quarter of 2027, the company announced on Friday. What the Supply Package Includes Under the contract, BorgWarner will supply a package consisting of dual clutches, hydraulic control modules, and clutch control software.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-24T18:19:09+00:00",
-            "published_display": "24 Jul 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Two-Wheelers"
             ],
             "signal_tags": [
               "Supply Chain / Components"
@@ -245608,7 +245619,7 @@
             "source": "EVReporter",
             "published_at": "2026-07-22T07:04:42+00:00",
             "published_display": "22 Jul 2026",
-            "importance_score": 7,
+            "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
               "EV"
@@ -245654,24 +245665,6 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "MAHLE Explores India Debut for AI Cabin System; Flags Rare-Earth-Free Motor Potential",
-            "url": "https://www.autocarpro.in/NEWS/mahle-explores-india-debut-for-ai-cabin-system-flags-rare-earth-free-motor-potential-133720",
-            "summary": "German automotive supplier MAHLE is positioning India as a lead market for new technologies, with the country emerging as a candidate for the first launch of its AI-based cabin climate system. Management also sees strong potential for its rare-earth-free electric motor, but has not confirmed an India launch for either technology.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-23T18:50:50+00:00",
-            "published_display": "23 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
             "title": "Kia India launches Syros EV, starting at \u20b913.49 lakh",
             "url": "https://evreporter.com/kia-india-launches-syros-ev-starting-at-%e2%82%b913-49-lakh",
             "summary": "The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter . Kia India has launched the Syros EV, its second electric vehicle manufactured in India. The vehicle is priced at \u20b913.49 The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter .",
@@ -245684,23 +245677,6 @@
             ],
             "signal_tags": [
               "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Sona Comstar and DENSO Form Joint Ventures for Electric Powertrains",
-            "url": "https://www.autocarpro.in/NEWS/sona-comstar-and-denso-form-joint-ventures-for-electric-powertrains-133705",
-            "summary": "Sona Comstar has signed definitive agreements with Japan-based DENSO Corporation to establish two joint ventures in India focused on electric and hybrid powertrain systems. Under the terms of the agreement, the first joint venture will focus on electric and hybrid four-wheelers and larger vehicles.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-22T18:06:30+00:00",
-            "published_display": "22 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
               "Supply Chain / Components"
             ]
           },
@@ -245723,6 +245699,23 @@
             ]
           },
           {
+            "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
+            "summary": "The acquisition strengthens Motherson's capabilities in precision metal components and assemblies for EV/HEV motors, braking, drive and exhaust systems, while deepening its strategic relationship with Honda.",
+            "source": "ET Auto Components",
+            "published_at": "2026-07-22T09:48:00+00:00",
+            "published_display": "22 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh",
             "url": "https://evreporter.com/hero-motocorps-vida-launches-vx2-plus-4-4-kwh-electric-scooter-at-%e2%82%b91-44-lakh",
             "summary": "The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter . VIDA, Hero MotoCorp\u2019s electric mobility brand, has launched the VIDA EVOOTER VX2 Plus 4.4 kWh, expanding the VX2 lineup to The post Hero MotoCorp\u2019s VIDA launches VX2 Plus 4.4 kWh electric scooter at \u20b91.44 lakh appeared first at EVreporter on EVreporter .",
@@ -245736,6 +245729,22 @@
             ],
             "signal_tags": [
               "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
+            "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
+            "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-30T09:18:09+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -245757,23 +245766,6 @@
               "Commercial Vehicles",
               "EV",
               "Luxury"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
-            "summary": "The acquisition strengthens Motherson's capabilities in precision metal components and assemblies for EV/HEV motors, braking, drive and exhaust systems, while deepening its strategic relationship with Honda.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-22T09:48:00+00:00",
-            "published_display": "22 Jul 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "EV",
-              "Components"
             ],
             "signal_tags": [
               "Funding / M&A",
@@ -245830,6 +245822,22 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Hero\u2019s VIDA Debuts\u00a0in Nepal with\u00a0VX2 Scooter Range and\u00a0DIRT.E K3",
+            "url": "https://evreporter.com/heros-vida-debuts-in-nepal-with-vx2-scooter-range-and-dirt-e-k3",
+            "summary": "The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter . VIDA, powered by Hero, has entered Nepal, its first international market, through a distributor partnership with CG Motors (Chaudhary Group), The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-26T16:24:01+00:00",
+            "published_display": "26 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
           }
         ]
       }
@@ -245852,9 +245860,9 @@
         "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 51,
-      "filtered_low_signal": 0,
-      "kept_articles": 80
+      "unmapped_articles": 55,
+      "filtered_low_signal": 2,
+      "kept_articles": 78
     }
   },
   "qa": [
