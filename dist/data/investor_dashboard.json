@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T06:15:59.518335+00:00",
+  "generated_at": "2026-07-31T11:30:54.303534+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,9 +121694,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-07-31T06:15:37.261620+00:00",
+      "generated_at": "2026-07-31T11:30:35.147980+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 2,
       "items": [
         {
           "title": "New TVS Raider Doctor Doom Variant Launch Price Rs 95,320",
@@ -121710,35 +121710,6 @@
           "scope": "listed",
           "segment_tags": [],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/new-tvs-raider-dr-doom-edition-launch-price-2.jpeg"
-        },
-        {
-          "title": "China's BYD launched EV mini-car in Japan",
-          "summary": "The launch highlights the growing challenge Chinese automakers pose to Japanese rivals, which have been losing ground to BYD and other domestic EV makers in China, the world's largest auto market.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-byd-launched-ev-mini-car-in-japan/132700683",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-29T04:35:27+00:00",
-          "published_display": "29 Jul 2026",
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-79456/132700683.cms"
-        },
-        {
-          "title": "Toyota launches all-new Hilux in India at \u20b931.99 lakh, adds 4x2 automatic variant",
-          "summary": "Ninth-generation pickup gets updated design, larger infotainment system and connected features; bookings open with deliveries from the second week of August.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-launches-all-new-hilux-in-india-at-31-99-lakh-adds-4x2-automatic-variant/132690464",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-07-28T17:04:25+00:00",
-          "published_display": "28 Jul 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-316289/132690464.cms"
         },
         {
           "title": "Kia India launches Syros EV, starting at \u20b913.49 lakh",
@@ -121764,22 +121735,6 @@
           "count": 1,
           "latest_published_at": "2026-07-31T04:22:27+00:00",
           "latest_title": "New TVS Raider Doctor Doom Variant Launch Price Rs 95,320"
-        },
-        {
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-29T04:35:27+00:00",
-          "latest_title": "China's BYD launched EV mini-car in Japan"
-        },
-        {
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-28T17:04:25+00:00",
-          "latest_title": "Toyota launches all-new Hilux in India at \u20b931.99 lakh, adds 4x2 automatic variant"
         },
         {
           "company": "Kia India",
@@ -121914,10 +121869,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.37,
+        "value": 95.38,
         "unit": "\u20b9",
-        "delta_value": -0.3586,
-        "delta_label": "-1.56% in last week (Yahoo Finance)",
+        "delta_value": -0.3486,
+        "delta_label": "-1.55% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132329,7 +132284,7 @@
           },
           {
             "date": "2026-07-31",
-            "close": 95.37
+            "close": 95.38
           }
         ]
       }
@@ -132344,10 +132299,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14183.0,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": 5.51,
-        "change_1m_pct": -1.15,
+        "price": 14234.0,
+        "change_1d_pct": 0.32,
+        "change_1w_pct": 5.89,
+        "change_1m_pct": -0.79,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13421.0,
@@ -132379,7 +132334,7 @@
           13802.0,
           13948.0,
           14188.0,
-          14183.0
+          14234.0
         ],
         "daily_closes": [
           {
@@ -142272,19 +142227,18 @@
           },
           {
             "date": "2026-07-31",
-            "close": 14183.0
+            "close": 14234.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3431.0,
-        "change_1d_pct": 6.49,
-        "change_1w_pct": 6.23,
-        "change_1m_pct": 9.62,
+        "price": 3398.5,
+        "change_1d_pct": 3.5,
+        "change_1w_pct": 7.5,
+        "change_1m_pct": 7.03,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3074.8,
           3063.4,
           3037.3,
           3064.5,
@@ -142313,7 +142267,8 @@
           3238.6,
           3271.2,
           3221.8,
-          3431.0
+          3283.7,
+          3398.5
         ],
         "daily_closes": [
           {
@@ -152201,17 +152156,21 @@
             "close": 3221.8
           },
           {
+            "date": "2026-07-30",
+            "close": 3283.7
+          },
+          {
             "date": "2026-07-31",
-            "close": 3431.0
+            "close": 3398.5
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5368.0,
-        "change_1d_pct": 0.81,
-        "change_1w_pct": 7.12,
-        "change_1m_pct": 10.29,
+        "price": 5386.0,
+        "change_1d_pct": 1.15,
+        "change_1w_pct": 7.48,
+        "change_1m_pct": 10.66,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4983.7,
@@ -152243,7 +152202,7 @@
           5154.3,
           5149.1,
           5325.0,
-          5368.0
+          5386.0
         ],
         "daily_closes": [
           {
@@ -162136,16 +162095,16 @@
           },
           {
             "date": "2026-07-31",
-            "close": 5368.0
+            "close": 5386.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4305.4,
-        "change_1d_pct": 2.3,
-        "change_1w_pct": 11.24,
-        "change_1m_pct": 18.71,
+        "price": 4313.1,
+        "change_1d_pct": 2.49,
+        "change_1w_pct": 11.44,
+        "change_1m_pct": 18.92,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3488.7,
@@ -162177,7 +162136,7 @@
           3993.5,
           4075.6,
           4208.4,
-          4305.4
+          4313.1
         ],
         "daily_closes": [
           {
@@ -172070,19 +172029,18 @@
           },
           {
             "date": "2026-07-31",
-            "close": 4305.4
+            "close": 4313.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11562.5,
-        "change_1d_pct": 1.98,
-        "change_1w_pct": 2.47,
-        "change_1m_pct": 17.48,
+        "price": 11520.5,
+        "change_1d_pct": 0.77,
+        "change_1w_pct": 3.51,
+        "change_1m_pct": 16.88,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10066.0,
           10191.0,
           10025.0,
           9750.0,
@@ -172111,7 +172069,8 @@
           11183.5,
           11374.0,
           11338.0,
-          11562.5
+          11432.0,
+          11520.5
         ],
         "daily_closes": [
           {
@@ -181999,17 +181958,21 @@
             "close": 11338.0
           },
           {
+            "date": "2026-07-30",
+            "close": 11432.0
+          },
+          {
             "date": "2026-07-31",
-            "close": 11562.5
+            "close": 11520.5
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2200.0,
-        "change_1d_pct": 9.01,
-        "change_1w_pct": 12.67,
-        "change_1m_pct": 12.78,
+        "price": 2180.7,
+        "change_1d_pct": 8.05,
+        "change_1w_pct": 11.68,
+        "change_1m_pct": 11.79,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1988.9,
@@ -182041,7 +182004,7 @@
           2001.9,
           1992.9,
           2018.2,
-          2200.0
+          2180.7
         ],
         "daily_closes": [
           {
@@ -183814,19 +183777,18 @@
           },
           {
             "date": "2026-07-31",
-            "close": 2200.0
+            "close": 2180.7
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7890.0,
-        "change_1d_pct": 1.43,
-        "change_1w_pct": 2.18,
-        "change_1m_pct": 10.52,
+        "price": 7833.5,
+        "change_1d_pct": -1.0,
+        "change_1w_pct": 2.69,
+        "change_1m_pct": 8.05,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7611.0,
           7639.5,
           7578.0,
           7572.0,
@@ -183855,7 +183817,8 @@
           7769.5,
           7836.0,
           7779.0,
-          7890.0
+          7912.5,
+          7833.5
         ],
         "daily_closes": [
           {
@@ -193743,17 +193706,21 @@
             "close": 7779.0
           },
           {
+            "date": "2026-07-30",
+            "close": 7912.5
+          },
+          {
             "date": "2026-07-31",
-            "close": 7890.0
+            "close": 7833.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 338.2,
-        "change_1d_pct": 1.2,
-        "change_1w_pct": 4.45,
-        "change_1m_pct": -2.24,
+        "price": 339.75,
+        "change_1d_pct": 1.66,
+        "change_1w_pct": 4.93,
+        "change_1m_pct": -1.79,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193786,7 +193753,7 @@
           324.4,
           329.8,
           334.2,
-          338.2
+          339.75
         ],
         "daily_closes": [
           {
@@ -203679,16 +203646,16 @@
           },
           {
             "date": "2026-07-31",
-            "close": 338.2
+            "close": 339.75
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 432.4,
-        "change_1d_pct": 4.21,
-        "change_1w_pct": 6.46,
-        "change_1m_pct": -1.84,
+        "price": 436.8,
+        "change_1d_pct": 5.27,
+        "change_1w_pct": 7.55,
+        "change_1m_pct": -0.84,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203721,7 +203688,7 @@
           416.7,
           411.4,
           414.95,
-          432.4
+          436.8
         ],
         "daily_closes": [
           {
@@ -204446,16 +204413,16 @@
           },
           {
             "date": "2026-07-31",
-            "close": 432.4
+            "close": 436.8
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 164.99,
-        "change_1d_pct": 4.36,
-        "change_1w_pct": 9.21,
-        "change_1m_pct": 0.16,
+        "price": 166.18,
+        "change_1d_pct": 5.12,
+        "change_1w_pct": 10.0,
+        "change_1m_pct": 0.88,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           157.19,
@@ -204487,7 +204454,7 @@
           157.5,
           157.96,
           158.09,
-          164.99
+          166.18
         ],
         "daily_closes": [
           {
@@ -214380,19 +214347,18 @@
           },
           {
             "date": "2026-07-31",
-            "close": 164.99
+            "close": 166.18
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3065.0,
-        "change_1d_pct": 1.6,
-        "change_1w_pct": 5.43,
-        "change_1m_pct": 4.06,
+        "price": 3086.0,
+        "change_1d_pct": 2.4,
+        "change_1w_pct": 6.23,
+        "change_1m_pct": 4.63,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2821.2,
           2950.4,
           2951.8,
           2930.6,
@@ -214421,7 +214387,8 @@
           2954.1,
           3009.9,
           3016.8,
-          3065.0
+          3013.6,
+          3086.0
         ],
         "daily_closes": [
           {
@@ -224309,20 +224276,23 @@
             "close": 3016.8
           },
           {
+            "date": "2026-07-30",
+            "close": 3013.6
+          },
+          {
             "date": "2026-07-31",
-            "close": 3065.0
+            "close": 3086.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1071.0,
-        "change_1d_pct": 1.87,
-        "change_1w_pct": 9.4,
-        "change_1m_pct": 7.2,
+        "price": 1070.3,
+        "change_1d_pct": 1.24,
+        "change_1w_pct": 2.97,
+        "change_1m_pct": 5.27,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          975.65,
           1011.7,
           1007.85,
           1003.35,
@@ -224351,7 +224321,8 @@
           1061.8,
           1077.6,
           1051.3,
-          1071.0
+          1057.2,
+          1070.3
         ],
         "daily_closes": [
           {
@@ -234239,20 +234210,23 @@
             "close": 1051.3
           },
           {
+            "date": "2026-07-30",
+            "close": 1057.2
+          },
+          {
             "date": "2026-07-31",
-            "close": 1071.0
+            "close": 1070.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 518.7,
-        "change_1d_pct": 4.75,
-        "change_1w_pct": 9.5,
-        "change_1m_pct": 5.53,
+        "price": 515.45,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": 8.88,
+        "change_1m_pct": 4.24,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          473.95,
           474.25,
           467.75,
           469.15,
@@ -234281,7 +234255,8 @@
           482.25,
           475.9,
           495.2,
-          518.7
+          516.0,
+          515.45
         ],
         "daily_closes": [
           {
@@ -244169,8 +244144,12 @@
             "close": 495.2
           },
           {
+            "date": "2026-07-30",
+            "close": 516.0
+          },
+          {
             "date": "2026-07-31",
-            "close": 518.7
+            "close": 515.45
           }
         ]
       }
@@ -245442,31 +245421,15 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-07-31T06:15:12.902492+00:00",
+    "generated_at": "2026-07-31T11:30:11.600005+00:00",
     "window_days": 45,
-    "group_count": 5,
-    "item_count": 25,
+    "group_count": 6,
+    "item_count": 26,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "China's BYD launched EV mini-car in Japan",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-byd-launched-ev-mini-car-in-japan/132700683",
-            "summary": "The launch highlights the growing challenge Chinese automakers pose to Japanese rivals, which have been losing ground to BYD and other domestic EV makers in China, the world's largest auto market.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-29T04:35:27+00:00",
-            "published_display": "29 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
           {
             "title": "French auto parts maker Forvia to invest \u20ac70 m more in India",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/french-auto-parts-maker-forvia-to-invest-70-m-more-in-india/132651838",
@@ -245485,6 +245448,52 @@
             ]
           },
           {
+            "title": "China's Xiaomi launches SkyNomad SUV series offering space and reconfigurable interiors",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-xiaomi-launches-skynomad-suv-series-offering-space-and-reconfigurable-interiors/132762387",
+            "summary": "Xiaomi unveiled its SkyNomad SUV lineup, targeting the large family segment as it looks to accelerate EV sales ahead of a planned Europe entry.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-31T09:01:31+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Mercedes-Benz recalls 3.1 lakh vehicles in US over door detection fault",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-issues-recall-for-310667-vehicles-in-the-us-due-to-door-detection-problem/132761231",
+            "summary": "The recall, flagged by National Highway Traffic Safety Administration, covers multiple models due to a faulty door-lock micro-switch that may fail to detect an open door.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-31T08:08:03+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
+            "title": "BMW to overhaul \u201cuntouchable\u201d processes after 35% profit drop",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-to-overhaul-untouchable-processes-after-35-profit-drop/132760820",
+            "summary": "BMW flagged a sweeping review of long-standing practices as second-quarter pretax profit fell 35%, hit by weak China sales and geopolitical pressures.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-31T07:49:00+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Hyundai Motor India appoints Mukundan MS as Chief Manufacturing Officer",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-motor-india-appoints-mukundan-ms-as-chief-manufacturing-officer/132745054",
             "summary": "The board also approved the appointment of Young Geon Kim as Senior Management Personnel with effect from August 1, 2026.",
@@ -245498,36 +245507,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Management / Governance"
-            ]
-          },
-          {
-            "title": "Hyundai to fast\u2011track Pune plant ramp\u2011up to October 2026, two years ahead of schedule",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-advances-pune-plant-expansion-by-two-years-to-meet-growing-demand/132741350",
-            "summary": "The move comes as Hyundai prepares to export the all-new Venue to around 35 global markets, significantly expanding India's role as a production base.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-30T13:13:55+00:00",
-            "published_display": "30 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
-          },
-          {
-            "title": "Maruti Suzuki starts production at fourth Gujarat plant, lifts annual capacity to 2.9 million units",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzuki-starts-production-at-fourth-gujarat-plant-lifts-annual-capacity-to-2-9-million-units/132734000",
-            "summary": "The new plant, built with an annual capacity of 2.5 lakh units, increases the Hansalpur facility's overall production capacity to 10 lakh units per annum from 7.5 lakh units earlier.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-30T08:59:18+00:00",
-            "published_display": "30 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           }
         ]
@@ -245550,6 +245529,21 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Hero Sales Breakup June 2026, Q2 \u2013 Splendor, Deluxe, Destini, Vida, Passion, Glamour, Xtreme, Xoom",
+            "url": "https://www.rushlane.com/hero-sales-breakup-june-2026-q2-splendor-deluxe-destini-vida-passion-12552008.html",
+            "summary": "Despite the monthly decline, Hero posted a strong performance in the second quarter of CY2026, aided by healthy demand for Splendor, Vida and newer scooter offerings The post Hero Sales Breakup June 2026, Q2 \u2013 Splendor, Deluxe, Destini, Vida, Passion, Glamour, Xtreme, Xoom appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-07-31T10:10:59+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
             ]
           },
           {
@@ -245582,23 +245576,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Godrej Tooling Achieves 95% Local Production for Automotive Sector",
-            "url": "https://www.autocarpro.in/NEWS/godrej-tooling-achieves-95-local-production-for-automotive-sector-133752",
-            "summary": "Godrej Enterprises Group's Tooling business has reported that 95% of the tooling supplied to its automotive clients is now manufactured locally, supported by government localization initiatives and supply chain integration efforts. The company generates over 85% of its total tooling revenue from the automotive industry, providing high-precision solutions across passenger vehicles, two-wheelers, commercial vehicles...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-27T15:21:28+00:00",
-            "published_display": "27 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           },
           {
@@ -245727,39 +245704,6 @@
             ]
           },
           {
-            "title": "Kia India launches Syros EV, starting at \u20b913.49 lakh",
-            "url": "https://evreporter.com/kia-india-launches-syros-ev-starting-at-%e2%82%b913-49-lakh",
-            "summary": "The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter . Kia India has launched the Syros EV, its second electric vehicle manufactured in India. The vehicle is priced at \u20b913.49 The post Kia India launches Syros EV, starting at \u20b913.49 lakh appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-23T11:01:09+00:00",
-            "published_display": "23 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Motherson completes acquisition of 81% stake in Japan's Yutaka Giken",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/motherson-acquires-81-stake-in-japans-yutaka-giken-to-boost-automotive-innovations/132554651",
-            "summary": "The acquisition strengthens Motherson's capabilities in precision metal components and assemblies for EV/HEV motors, braking, drive and exhaust systems, while deepening its strategic relationship with Honda.",
-            "source": "ET Auto Components",
-            "published_at": "2026-07-22T09:48:00+00:00",
-            "published_display": "22 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
             "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
             "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . India\u2019s leading electric mobility company, Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter .",
@@ -245790,6 +245734,38 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Mecpower Solutions Signs MoU with Gujarat Government for Rs 160 Crore Battery Storage Plant",
+            "url": "https://www.autocarpro.in/NEWS/mecpower-solutions-signs-mou-with-gujarat-government-for-rs-160-crore-battery-storage-plant-133793",
+            "summary": "Renewable energy infrastructure firm Mecpower Solutions Limited has signed a Memorandum of Understanding (MoU) with the Government of Gujarat to set up a 5 GWh Battery Energy Storage System (BESS) assembly facility in Karjan. The project entails a proposed capital investment of approximately Rs 160 crore.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-29T18:50:09+00:00",
+            "published_display": "29 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Sona Comstar and Tata STRIVE Set Up Chakan Training Facility to Address EV Skill Gap",
+            "url": "https://www.autocarpro.in/NEWS/sona-comstar-and-tata-strive-set-up-chakan-training-facility-to-address-ev-skill-gap-133786",
+            "summary": "Sona Comstar and Tata STRIVE have established a joint skill development centre in Chakan, targeting the local workforce requirements of Pune\u2019s auto manufacturing cluster. EV, CNC and Electrical Training Courses at Chakan The newly inaugurated centre will offer specialized coursework in EV-specific technical training, CNC operations, electrical maintenance, and financial services.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-29T16:29:01+00:00",
+            "published_display": "29 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -245797,24 +245773,6 @@
         "id": "components",
         "label": "Components",
         "items": [
-          {
-            "title": "Toyota Signs Binding Agreement to Join Cellcentric Fuel Cell JV",
-            "url": "https://www.autocarpro.in/NEWS/toyota-signs-binding-agreement-to-join-cellcentric-fuel-cell-jv-133749",
-            "summary": "Toyota Motor Corporation, Volvo Group, Daimler Truck AG, and cellcentric have executed a binding agreement for Toyota to become an equal shareholder in the fuel cell joint venture. The agreement follows a non-binding preliminary agreement signed in late March 2026.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-27T12:35:34+00:00",
-            "published_display": "27 Jul 2026",
-            "importance_score": 10,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
             "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
@@ -245881,6 +245839,44 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "What Does Amara Raja\u2019s 60 MWh Customer Qualification Plant Mean for its Gigafactory Ambition?",
+            "url": "https://evreporter.com/inside-amara-rajas-60-mwh-customer-qualification-plant-for-lithium-ion-cells",
+            "summary": "The post What Does Amara Raja\u2019s 60 MWh Customer Qualification Plant Mean for its Gigafactory Ambition? appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-24T10:14:57+00:00",
+            "published_display": "24 Jul 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "policy",
+        "label": "Policy / Regulation",
+        "items": [
+          {
+            "title": "Tesla weighs sale of China business to pave way for potential SpaceX merger: Reports",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-weighs-sale-of-china-business-to-pave-way-for-potential-spacex-merger-reports/132759375",
+            "summary": "Tesla executives are reportedly exploring options to separate its China operations to navigate regulatory and geopolitical hurdles tied to a potential merger with SpaceX.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-07-31T07:05:55+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Funding / M&A"
+            ]
           }
         ]
       }
@@ -245903,9 +245899,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
-      "filtered_low_signal": 2,
-      "kept_articles": 86
+      "unmapped_articles": 59,
+      "filtered_low_signal": 3,
+      "kept_articles": 85
     }
   },
   "qa": [
