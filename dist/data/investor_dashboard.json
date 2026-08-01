@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T05:58:04.219042+00:00",
+  "generated_at": "2026-08-01T10:42:26.485138+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -132306,13 +132306,12 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14188.0,
-        "change_1d_pct": 1.72,
-        "change_1w_pct": 5.86,
-        "change_1m_pct": -1.44,
+        "price": 14234.0,
+        "change_1d_pct": 0.32,
+        "change_1w_pct": 5.89,
+        "change_1m_pct": -0.79,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13395.0,
           13421.0,
           13451.0,
           13248.0,
@@ -132341,7 +132340,8 @@
           13730.0,
           13802.0,
           13948.0,
-          14188.0
+          14188.0,
+          14234.0
         ],
         "daily_closes": [
           {
@@ -142231,6 +142231,10 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 14234.0
           }
         ]
       },
@@ -162104,13 +162108,12 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4208.4,
-        "change_1d_pct": 3.26,
-        "change_1w_pct": 7.36,
-        "change_1m_pct": 20.45,
+        "price": 4313.1,
+        "change_1d_pct": 2.49,
+        "change_1w_pct": 11.44,
+        "change_1m_pct": 18.92,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3442.9,
           3488.7,
           3456.2,
           3440.6,
@@ -162139,7 +162142,8 @@
           3876.4,
           3993.5,
           4075.6,
-          4208.4
+          4208.4,
+          4313.1
         ],
         "daily_closes": [
           {
@@ -172029,18 +172033,21 @@
           {
             "date": "2026-07-30",
             "close": 4208.4
+          },
+          {
+            "date": "2026-07-31",
+            "close": 4313.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11432.0,
-        "change_1d_pct": 0.83,
-        "change_1w_pct": 1.32,
-        "change_1m_pct": 16.16,
+        "price": 11520.5,
+        "change_1d_pct": 0.77,
+        "change_1w_pct": 3.51,
+        "change_1m_pct": 16.88,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10066.0,
           10191.0,
           10025.0,
           9750.0,
@@ -172069,7 +172076,8 @@
           11183.5,
           11374.0,
           11338.0,
-          11432.0
+          11432.0,
+          11520.5
         ],
         "daily_closes": [
           {
@@ -181959,6 +181967,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           }
         ]
       },
@@ -224282,13 +224294,12 @@
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1057.2,
-        "change_1d_pct": 0.56,
-        "change_1w_pct": 7.99,
-        "change_1m_pct": 5.82,
+        "price": 1070.3,
+        "change_1d_pct": 1.24,
+        "change_1w_pct": 2.97,
+        "change_1m_pct": 5.27,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          975.65,
           1011.7,
           1007.85,
           1003.35,
@@ -224317,7 +224328,8 @@
           1061.8,
           1077.6,
           1051.3,
-          1057.2
+          1057.2,
+          1070.3
         ],
         "daily_closes": [
           {
@@ -234207,6 +234219,10 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
+          },
+          {
+            "date": "2026-07-31",
+            "close": 1070.3
           }
         ]
       },
@@ -245396,7 +245412,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-01T05:56:01.418665+00:00",
+    "generated_at": "2026-08-01T10:41:40.780531+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 23,
@@ -245491,25 +245507,9 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
-            "url": "https://evreporter.com/ampere-reo-vyb-review",
-            "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-29T08:58:39+00:00",
-            "published_display": "29 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "L&T Enters EV Powertrain with a Five Lakh Motor Order",
             "url": "https://www.autocarpro.in/NEWS/lt-enters-ev-powertrain-with-a-five-lakh-motor-order-133802",
-            "summary": "L&T EPS Mobility, the automotive arm of Larsen & Toubro's Electronic Products and Systems division, has booked its first commercial contract. An order for five lakh electric-vehicle traction motors from a two-wheeler manufacturer it has not named yet, to be delivered over three years.",
+            "summary": "L&T's First EV Motor Order: Five Lakh Units for a Two-Wheeler Maker L&T EPS Mobility, the automotive arm of Larsen & Toubro's Electronic Products and Systems division, has booked its first commercial contract. An order for five lakh electric-vehicle traction motors from a two-wheeler manufacturer it has not named yet, to be delivered over three years.",
             "source": "Autocar Professional Components",
             "published_at": "2026-07-30T11:43:03+00:00",
             "published_display": "30 Jul 2026",
@@ -245568,7 +245568,7 @@
             "source": "EVReporter",
             "published_at": "2026-07-24T09:43:40+00:00",
             "published_display": "24 Jul 2026",
-            "importance_score": 7,
+            "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
               "EV"
@@ -245631,22 +245631,6 @@
             ]
           },
           {
-            "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
-            "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
-            "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
-            "source": "EVReporter",
-            "published_at": "2026-07-30T12:27:08+00:00",
-            "published_display": "30 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
             "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
             "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
@@ -245693,6 +245677,22 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
+            "url": "https://evreporter.com/ampere-reo-vyb-review",
+            "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-29T08:58:39+00:00",
+            "published_display": "29 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -245735,23 +245735,6 @@
             ]
           },
           {
-            "title": "CEAT Raises R&D Spend to Rs 240 Crore in FY26, Opens New Compound Lab at Ambernath",
-            "url": "https://www.autocarpro.in/NEWS/ceat-raises-rd-spend-to-rs-240-crore-in-fy26-opens-new-compound-lab-at-ambernath-133762",
-            "summary": "CEAT's R&D Budget Climbs to Rs 240 Crore in FY26 CEAT Ltd increased its research and development expenditure to Rs 240 crore in FY 2025-26, up from Rs 224.30 crore a year earlier, according to disclosures in the company's Integrated Annual Report 2025-26, as the tyre maker continued to scale what it described as an \"innovation-led growth agenda.\" Per the Board's Report and the accompanying notes to the standalone...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-28T11:25:46+00:00",
-            "published_display": "28 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Filing / Disclosure",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999",
             "url": "https://evreporter.com/avore-electric-launches-its-ex-series-of-electric-motorcycles-starting-at-%e2%82%b9124999",
             "summary": "The post Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999 appeared first at EVreporter on EVreporter . Gujarat-based Avore Electric, the electric mobility brand of Samarth E-Mobility, has launched its first electric motorcycle, the EX, at a The post Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999 appeared first at EVreporter on EVreporter .",
@@ -245783,6 +245766,22 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
+            "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
+            "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
+            "source": "EVReporter",
+            "published_at": "2026-07-30T12:27:08+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -245790,6 +245789,22 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
+          {
+            "title": "Exclusive: India Set To Become A Strategic V2X Tech Market: Qualcomm",
+            "url": "https://www.autocarpro.in/NEWS/exclusive-india-set-to-become-a-strategic-v2x-tech-market-qualcomm-133842",
+            "summary": "India is set to become one of Qualcomm Technologies\u2019 key markets for Vehicle-to-Everything (V2X) technology after the government\u2019s decision to delicense the 5.9 GHz spectrum for connected vehicle communications, according to the company. In an exclusive conversation with Autocar Professional, Hagai Zyss, Vice President of Product Management at Qualcomm Technologies and former CEO of Autotalks, said the regulatory...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-31T19:19:18+00:00",
+            "published_display": "31 Jul 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Tesla weighs sale of China business to pave way for potential SpaceX merger: Reports",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-weighs-sale-of-china-business-to-pave-way-for-potential-spacex-merger-reports/132759375",
@@ -245828,8 +245843,8 @@
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 55,
-      "filtered_low_signal": 2,
-      "kept_articles": 77
+      "filtered_low_signal": 0,
+      "kept_articles": 79
     }
   },
   "qa": [
