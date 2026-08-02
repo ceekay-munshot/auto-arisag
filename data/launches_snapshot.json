@@ -1,9 +1,26 @@
 {
   "available": true,
-  "generated_at": "2026-08-01T16:02:00.247158+00:00",
+  "generated_at": "2026-08-02T10:42:19.650292+00:00",
   "window_days": 30,
-  "item_count": 3,
+  "item_count": 4,
   "items": [
+    {
+      "title": "BMW India opens pre-launch bookings for 7 Series range",
+      "summary": "Customers can choose between internal combustion engine and all-electric variants ahead of the luxury sedan's launch.",
+      "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-india-opens-pre-launch-bookings-for-7-series-range/132801181",
+      "source": "ET Auto Passenger Vehicles",
+      "published_at": "2026-08-02T06:00:15+00:00",
+      "published_display": "02 Aug 2026",
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Passenger Vehicles",
+        "EV",
+        "Luxury"
+      ],
+      "image_url": "https://etimg.etb2bimg.com/thumb/img-size-2418512/132801181.cms"
+    },
     {
       "title": "Nissan India July wholesales more than triple as Tekton rolls out",
       "summary": "Export wholesales stood at 4,821 units, taking total wholesales to 9,339 units in July",
@@ -50,6 +67,14 @@
     }
   ],
   "companies": [
+    {
+      "company": "BMW India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-08-02T06:00:15+00:00",
+      "latest_title": "BMW India opens pre-launch bookings for 7 Series range"
+    },
     {
       "company": "Nissan India",
       "tone": "pv",

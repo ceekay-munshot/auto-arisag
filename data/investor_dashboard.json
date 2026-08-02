@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T06:03:31.906412+00:00",
+  "generated_at": "2026-08-02T10:42:41.007188+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,10 +121694,27 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-01T16:02:00.247158+00:00",
+      "generated_at": "2026-08-02T10:42:19.650292+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 4,
       "items": [
+        {
+          "title": "BMW India opens pre-launch bookings for 7 Series range",
+          "summary": "Customers can choose between internal combustion engine and all-electric variants ahead of the luxury sedan's launch.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-india-opens-pre-launch-bookings-for-7-series-range/132801181",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-08-02T06:00:15+00:00",
+          "published_display": "02 Aug 2026",
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV",
+            "Luxury"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-2418512/132801181.cms"
+        },
         {
           "title": "Nissan India July wholesales more than triple as Tekton rolls out",
           "summary": "Export wholesales stood at 4,821 units, taking total wholesales to 9,339 units in July",
@@ -121745,6 +121762,14 @@
       ],
       "companies": [
         {
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-08-02T06:00:15+00:00",
+          "latest_title": "BMW India opens pre-launch bookings for 7 Series range"
+        },
+        {
           "company": "Nissan India",
           "tone": "pv",
           "scope": "tracked",
@@ -121771,7 +121796,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-01"
+        "latest_release_date": "2026-08-02"
       }
     }
   },
@@ -245433,10 +245458,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-02T06:02:48.609768+00:00",
+    "generated_at": "2026-08-02T10:41:56.075039+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 25,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -245459,6 +245484,21 @@
             ]
           },
           {
+            "title": "Honda Cars Sales July 2026 \u2013 Domestic Sales Jump 48%",
+            "url": "https://www.rushlane.com/honda-cars-sales-july-2026-domestic-sales-jump-48-12552161.html",
+            "summary": "Honda Cars India has reported total sales of 8,284 units in July 2026, comprising 6,014 domestic sales and 2,270 exports The post Honda Cars Sales July 2026 \u2013 Domestic Sales Jump 48% appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-02T08:49:11+00:00",
+            "published_display": "02 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "French auto parts maker Forvia to invest \u20ac70 m more in India",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/french-auto-parts-maker-forvia-to-invest-70-m-more-in-india/132651838",
             "summary": "This investment will create three new manufacturing plants across the country. Forvia also expects to increase its workforce by fifty percent to over nine thousand employees. Rising demand for SUVs and vehicle electronics drives this significant expansion plan.",
@@ -245476,6 +245516,22 @@
             ]
           },
           {
+            "title": "Maruti Suzuki's PV production hits 2.44 lakh units in July, up 33%",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzukis-pv-production-hits-2-44-lakh-units-in-july-up-33/132804441",
+            "summary": "The automaker's total production, including light commercial vehicles, increased 33 per cent year-on-year to 2.49 lakh units.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-02T09:49:17+00:00",
+            "published_display": "02 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Toyota Kirloskar Motor's July sales rise 5% to 30,516 units",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-kirloskar-motors-july-sales-rise-5-to-30516-units/132800752",
             "summary": "The automaker's domestic sales in the first seven months of CY2026 grew 13 per cent to 2,33,854 units, while April-July FY27 dispatches increased 8 per cent.",
@@ -245489,37 +245545,6 @@
             "signal_tags": [
               "Monthly Sales / Demand"
             ]
-          },
-          {
-            "title": "Record July PV sales set strong festive tone; Maruti, Tata, Mahindra retain pecking order",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/record-july-pv-sales-set-strong-festive-tone-maruti-tata-mahindra-retain-pecking-order/132789668",
-            "summary": "Industry volumes are estimated at around 4.7 lakh units in July, as improving affordability, pre-festive buying and sustained SUV demand lifted sales across major automakers.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-01T12:51:46+00:00",
-            "published_display": "01 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "China's Xiaomi launches SkyNomad SUV series offering space and reconfigurable interiors",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/chinas-xiaomi-launches-skynomad-suv-series-offering-space-and-reconfigurable-interiors/132762387",
-            "summary": "Xiaomi unveiled its SkyNomad SUV lineup, targeting the large family segment as it looks to accelerate EV sales ahead of a planned Europe entry.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-31T09:01:31+00:00",
-            "published_display": "31 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
           }
         ]
       },
@@ -245528,18 +245553,19 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Honda 2W Sales July 2026 at 476k \u2013 ADV 160, Rebel 300, CB500 Upcoming Launches",
-            "url": "https://www.rushlane.com/honda-2w-sales-july-2026-at-476k-adv-160-rebel-300-12552117.html",
-            "summary": "Honda Motorcycle & Scooter India (HMSI) has reported total sales of 5,42,934 units in July 2026, registering a 5.35% year-on-year growth over 5,15,378 units sold in July 2025 The post Honda 2W Sales July 2026 at 476k \u2013 ADV 160, Rebel 300, CB500 Upcoming Launches appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-01T08:08:01+00:00",
-            "published_display": "01 Aug 2026",
-            "importance_score": 6,
+            "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
+            "url": "https://evreporter.com/ampere-reo-vyb-review",
+            "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-29T08:58:39+00:00",
+            "published_display": "29 Jul 2026",
+            "importance_score": 7,
             "segment_tags": [
-              "Two-Wheelers"
+              "Two-Wheelers",
+              "EV"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Supply Chain / Components"
             ]
           },
           {
@@ -245630,18 +245656,18 @@
             ]
           },
           {
-            "title": "New Toyota Hilux Review \u2013 Built To Last, Built To Explore",
-            "url": "https://www.rushlane.com/new-toyota-hilux-review-built-to-last-built-to-explore-12552064.html",
-            "summary": "We drove the new Toyota Hilux in Jaipur as part of the national media drive across both on-road and off-road conditions to conclude this truck The post New Toyota Hilux Review \u2013 Built To Last, Built To Explore appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-01T07:42:45+00:00",
-            "published_display": "01 Aug 2026",
+            "title": "ZF Wins ESC Supply Deals from Three Major OEMs",
+            "url": "https://www.autocarpro.in/NEWS/zf-wins-esc-supply-deals-from-three-major-oems-133767",
+            "summary": "ZF Commercial Vehicle Control Systems India Limited has secured business nominations from three leading Indian commercial vehicle original equipment manufacturers to supply its ESCsmart Electronic Stability Control system. The multi-year supply agreements cover truck platforms across 12V and 24V electrical architectures, with serial production scheduled to begin in the third quarter of 2027.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-07-28T14:17:13+00:00",
+            "published_display": "28 Jul 2026",
             "importance_score": 5,
             "segment_tags": [
               "Commercial Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -245650,6 +245676,23 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "BMW India opens pre-launch bookings for 7 Series range",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/bmw-india-opens-pre-launch-bookings-for-7-series-range/132801181",
+            "summary": "Customers can choose between internal combustion engine and all-electric variants ahead of the luxury sedan's launch.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-02T06:00:15+00:00",
+            "published_display": "02 Aug 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Tesla's China operations, the EV maker's global production powerhouse",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-china-operations-the-ev-makers-global-production-powerhouse/132781132",
@@ -245711,22 +245754,6 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
-            "url": "https://evreporter.com/ampere-reo-vyb-review",
-            "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-29T08:58:39+00:00",
-            "published_display": "29 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -245826,21 +245853,6 @@
         "label": "Policy / Regulation",
         "items": [
           {
-            "title": "JSW MG July 2026 Sales Highest Ever At 8,158 Units \u2013 80% EVs",
-            "url": "https://www.rushlane.com/jsw-mg-july-2026-sales-highest-ever-at-8158-units-80-evs-12552077.html",
-            "summary": "MG Comet EV, ZS EV and Windsor EV continue driving growth through July 2026 as higher EV subsidies boost demand< The post JSW MG July 2026 Sales Highest Ever At 8,158 Units \u2013 80% EVs appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-01T07:21:10+00:00",
-            "published_display": "01 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation"
-            ]
-          },
-          {
             "title": "Exclusive: India Set To Become A Strategic V2X Tech Market: Qualcomm",
             "url": "https://www.autocarpro.in/NEWS/exclusive-india-set-to-become-a-strategic-v2x-tech-market-qualcomm-133842",
             "summary": "India is set to become one of Qualcomm Technologies\u2019 key markets for Vehicle-to-Everything (V2X) technology after the government\u2019s decision to delicense the 5.9 GHz spectrum for connected vehicle communications, according to the company. In an exclusive conversation with Autocar Professional, Hagai Zyss, Vice President of Product Management at Qualcomm Technologies and former CEO of Autotalks, said the regulatory...",
@@ -245854,22 +245866,6 @@
             "signal_tags": [
               "Policy / Regulation",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Tesla weighs sale of China business to pave way for potential SpaceX merger: Reports",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tesla-weighs-sale-of-china-business-to-pave-way-for-potential-spacex-merger-reports/132759375",
-            "summary": "Tesla executives are reportedly exploring options to separate its China operations to navigate regulatory and geopolitical hurdles tied to a potential merger with SpaceX.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-31T07:05:55+00:00",
-            "published_display": "31 Jul 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Funding / M&A"
             ]
           }
         ]
@@ -245893,7 +245889,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 55,
+      "unmapped_articles": 54,
       "filtered_low_signal": 0,
       "kept_articles": 87
     }
