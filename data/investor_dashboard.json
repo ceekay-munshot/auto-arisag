@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T16:02:22.461590+00:00",
+  "generated_at": "2026-08-02T06:03:31.906412+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -48780,7 +48780,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-01",
+          "latest_release_date": "2026-08-02",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -121777,7 +121777,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-01",
+    "as_of_date": "2026-08-02",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -132311,7 +132311,7 @@
             "close": 95.6848
           },
           {
-            "date": "2026-08-01",
+            "date": "2026-08-02",
             "close": 95.39
           }
         ]
@@ -132320,20 +132320,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-01",
+    "as_of_date": "2026-08-02",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14188.0,
-        "change_1d_pct": 1.72,
-        "change_1w_pct": 5.86,
-        "change_1m_pct": -1.44,
+        "price": 14234.0,
+        "change_1d_pct": 0.32,
+        "change_1w_pct": 5.89,
+        "change_1m_pct": -0.79,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13395.0,
           13421.0,
           13451.0,
           13248.0,
@@ -132362,7 +132361,8 @@
           13730.0,
           13802.0,
           13948.0,
-          14188.0
+          14188.0,
+          14234.0
         ],
         "daily_closes": [
           {
@@ -142252,6 +142252,10 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 14234.0
           }
         ]
       },
@@ -162125,13 +162129,12 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4208.4,
-        "change_1d_pct": 3.26,
-        "change_1w_pct": 7.36,
-        "change_1m_pct": 20.45,
+        "price": 4313.1,
+        "change_1d_pct": 2.49,
+        "change_1w_pct": 11.44,
+        "change_1m_pct": 18.92,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3442.9,
           3488.7,
           3456.2,
           3440.6,
@@ -162160,7 +162163,8 @@
           3876.4,
           3993.5,
           4075.6,
-          4208.4
+          4208.4,
+          4313.1
         ],
         "daily_closes": [
           {
@@ -172050,18 +172054,21 @@
           {
             "date": "2026-07-30",
             "close": 4208.4
+          },
+          {
+            "date": "2026-07-31",
+            "close": 4313.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11432.0,
-        "change_1d_pct": 0.83,
-        "change_1w_pct": 1.32,
-        "change_1m_pct": 16.16,
+        "price": 11520.5,
+        "change_1d_pct": 0.77,
+        "change_1w_pct": 3.51,
+        "change_1m_pct": 16.88,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10066.0,
           10191.0,
           10025.0,
           9750.0,
@@ -172090,7 +172097,8 @@
           11183.5,
           11374.0,
           11338.0,
-          11432.0
+          11432.0,
+          11520.5
         ],
         "daily_closes": [
           {
@@ -181980,6 +181988,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           }
         ]
       },
@@ -224303,13 +224315,12 @@
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1057.2,
-        "change_1d_pct": 0.56,
-        "change_1w_pct": 7.99,
-        "change_1m_pct": 5.82,
+        "price": 1070.3,
+        "change_1d_pct": 1.24,
+        "change_1w_pct": 2.97,
+        "change_1m_pct": 5.27,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          975.65,
           1011.7,
           1007.85,
           1003.35,
@@ -224338,7 +224349,8 @@
           1061.8,
           1077.6,
           1051.3,
-          1057.2
+          1057.2,
+          1070.3
         ],
         "daily_closes": [
           {
@@ -234228,6 +234240,10 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
+          },
+          {
+            "date": "2026-07-31",
+            "close": 1070.3
           }
         ]
       },
@@ -244169,7 +244185,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-01",
+    "as_of_date": "2026-08-02",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -245417,7 +245433,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-01T16:01:33.443601+00:00",
+    "generated_at": "2026-08-02T06:02:48.609768+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245460,6 +245476,21 @@
             ]
           },
           {
+            "title": "Toyota Kirloskar Motor's July sales rise 5% to 30,516 units",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-kirloskar-motors-july-sales-rise-5-to-30516-units/132800752",
+            "summary": "The automaker's domestic sales in the first seven months of CY2026 grew 13 per cent to 2,33,854 units, while April-July FY27 dispatches increased 8 per cent.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-02T05:10:42+00:00",
+            "published_display": "02 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "Record July PV sales set strong festive tone; Maruti, Tata, Mahindra retain pecking order",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/record-july-pv-sales-set-strong-festive-tone-maruti-tata-mahindra-retain-pecking-order/132789668",
             "summary": "Industry volumes are estimated at around 4.7 lakh units in July, as improving affordability, pre-festive buying and sustained SUV demand lifted sales across major automakers.",
@@ -245488,21 +245519,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Mercedes-Benz recalls 3.1 lakh vehicles in US over door detection fault",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-issues-recall-for-310667-vehicles-in-the-us-due-to-door-detection-problem/132761231",
-            "summary": "The recall, flagged by National Highway Traffic Safety Administration, covers multiple models due to a faulty door-lock micro-switch that may fail to detect an open door.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-07-31T08:08:03+00:00",
-            "published_display": "31 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
             ]
           }
         ]
@@ -245877,7 +245893,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
+      "unmapped_articles": 55,
       "filtered_low_signal": 0,
       "kept_articles": 87
     }
@@ -245929,7 +245945,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-01",
+    "as_of_date": "2026-08-02",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
