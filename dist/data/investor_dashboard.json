@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T06:26:25.180215+00:00",
+  "generated_at": "2026-08-03T12:26:09.778228+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,10 +121694,51 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-02T10:42:19.650292+00:00",
+      "generated_at": "2026-08-03T12:25:48.256868+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 7,
       "items": [
+        {
+          "title": "MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L",
+          "summary": "Only 50 units of each model will be offered, featuring bespoke design elements. Bookings are now open, with deliveries scheduled to commence from August 10, 2026. The post MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L appeared first on RushLane .",
+          "url": "https://www.rushlane.com/mg-m9-and-cyberster-couture-edition-launch-price-12552273.html",
+          "source": "RushLane",
+          "published_at": "2026-08-03T11:08:18+00:00",
+          "published_display": "03 Aug 2026",
+          "company": "JSW MG Motor",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/mg-cyberster-couture-edition-launch-price-2.jpg"
+        },
+        {
+          "title": "MG Select launches couture editions of M9, Cyberster in collaboration with designer Gaurav Gupta",
+          "summary": "Both vehicles feature hand-finished detailing, tonal layering and embroidery inspired by Gupta's Serpent Infinity design language, which the designer associates with continuity, transformation and quiet power.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mg-select-unveils-couture-editions-of-mg-m9-and-cyberster-with-gaurav-gupta/132827186",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-08-03T10:11:53+00:00",
+          "published_display": "03 Aug 2026",
+          "company": "JSW MG Motor",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-14358074/132827186.cms"
+        },
+        {
+          "title": "Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years",
+          "summary": "Porsche India has introduced a new Assured Buy-Back Program, offering customers a guaranteed resale value of up to 70% after three years of ownership The post Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years appeared first on RushLane .",
+          "url": "https://www.rushlane.com/porsche-india-launches-assured-buy-back-program-up-to-70-value-after-3-years-12552244.html",
+          "source": "RushLane",
+          "published_at": "2026-08-03T07:25:59+00:00",
+          "published_display": "03 Aug 2026",
+          "company": "Porsche India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/porsche-india-buyback-program-launched-2.jpg"
+        },
         {
           "title": "BMW India opens pre-launch bookings for 7 Series range",
           "summary": "Customers can choose between internal combustion engine and all-electric variants ahead of the luxury sedan's launch.",
@@ -121762,6 +121803,22 @@
       ],
       "companies": [
         {
+          "company": "JSW MG Motor",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 2,
+          "latest_published_at": "2026-08-03T11:08:18+00:00",
+          "latest_title": "MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L"
+        },
+        {
+          "company": "Porsche India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-08-03T07:25:59+00:00",
+          "latest_title": "Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years"
+        },
+        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -121796,7 +121853,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-02"
+        "latest_release_date": "2026-08-03"
       }
     }
   },
@@ -121918,10 +121975,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.23,
+        "value": 95.39,
         "unit": "\u20b9",
-        "delta_value": -0.4568,
-        "delta_label": "-1.39% in last week (Yahoo Finance)",
+        "delta_value": -0.2948,
+        "delta_label": "-1.22% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132329,7 +132386,7 @@
           },
           {
             "date": "2026-08-03",
-            "close": 95.228
+            "close": 95.39
           }
         ]
       }
@@ -132344,10 +132401,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14161.0,
-        "change_1d_pct": -0.51,
-        "change_1w_pct": 3.14,
-        "change_1m_pct": -1.43,
+        "price": 14150.0,
+        "change_1d_pct": -0.59,
+        "change_1w_pct": 3.06,
+        "change_1m_pct": -1.5,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13451.0,
@@ -132379,7 +132436,7 @@
           13948.0,
           14188.0,
           14234.0,
-          14161.0
+          14150.0
         ],
         "daily_closes": [
           {
@@ -142268,16 +142325,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 14161.0
+            "close": 14150.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3406.2,
-        "change_1d_pct": 0.23,
-        "change_1w_pct": 5.18,
-        "change_1m_pct": 8.58,
+        "price": 3428.6,
+        "change_1d_pct": 0.89,
+        "change_1w_pct": 5.87,
+        "change_1m_pct": 9.3,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3037.3,
@@ -142309,7 +142366,7 @@
           3221.8,
           3283.7,
           3398.5,
-          3406.2
+          3428.6
         ],
         "daily_closes": [
           {
@@ -152198,16 +152255,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 3406.2
+            "close": 3428.6
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5439.5,
-        "change_1d_pct": 0.99,
-        "change_1w_pct": 6.37,
-        "change_1m_pct": 12.09,
+        "price": 5460.0,
+        "change_1d_pct": 1.37,
+        "change_1w_pct": 6.77,
+        "change_1m_pct": 12.52,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4974.6,
@@ -152239,7 +152296,7 @@
           5149.1,
           5325.0,
           5386.0,
-          5439.5
+          5460.0
         ],
         "daily_closes": [
           {
@@ -162128,16 +162185,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 5439.5
+            "close": 5460.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4297.1,
-        "change_1d_pct": -0.37,
-        "change_1w_pct": 10.85,
-        "change_1m_pct": 18.46,
+        "price": 4389.0,
+        "change_1d_pct": 1.76,
+        "change_1w_pct": 13.22,
+        "change_1m_pct": 21.0,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3456.2,
@@ -162169,7 +162226,7 @@
           4075.6,
           4208.4,
           4313.1,
-          4297.1
+          4389.0
         ],
         "daily_closes": [
           {
@@ -172058,16 +172115,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 4297.1
+            "close": 4389.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11501.0,
-        "change_1d_pct": -0.17,
-        "change_1w_pct": 2.84,
-        "change_1m_pct": 17.53,
+        "price": 11856.0,
+        "change_1d_pct": 2.91,
+        "change_1w_pct": 6.01,
+        "change_1m_pct": 21.16,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10025.0,
@@ -172099,7 +172156,7 @@
           11338.0,
           11432.0,
           11520.5,
-          11501.0
+          11856.0
         ],
         "daily_closes": [
           {
@@ -181988,16 +182045,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 11501.0
+            "close": 11856.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2211.5,
-        "change_1d_pct": 1.41,
-        "change_1w_pct": 11.43,
-        "change_1m_pct": 10.94,
+        "price": 2207.0,
+        "change_1d_pct": 1.21,
+        "change_1w_pct": 11.21,
+        "change_1m_pct": 10.72,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1968.9,
@@ -182029,7 +182086,7 @@
           1992.9,
           2018.2,
           2180.7,
-          2211.5
+          2207.0
         ],
         "daily_closes": [
           {
@@ -183806,16 +183863,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 2211.5
+            "close": 2207.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8038.5,
-        "change_1d_pct": 2.62,
-        "change_1w_pct": 3.46,
-        "change_1m_pct": 9.52,
+        "price": 8050.0,
+        "change_1d_pct": 2.76,
+        "change_1w_pct": 3.61,
+        "change_1m_pct": 9.68,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7578.0,
@@ -183847,7 +183904,7 @@
           7779.0,
           7912.5,
           7833.5,
-          8038.5
+          8050.0
         ],
         "daily_closes": [
           {
@@ -193736,16 +193793,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 8038.5
+            "close": 8050.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 348.15,
-        "change_1d_pct": 2.47,
-        "change_1w_pct": 6.26,
-        "change_1m_pct": 1.18,
+        "price": 349.3,
+        "change_1d_pct": 2.81,
+        "change_1w_pct": 6.61,
+        "change_1m_pct": 1.51,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -193778,7 +193835,7 @@
           329.8,
           334.2,
           339.75,
-          348.15
+          349.3
         ],
         "daily_closes": [
           {
@@ -203667,16 +203724,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 348.15
+            "close": 349.3
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 453.7,
-        "change_1d_pct": 3.87,
-        "change_1w_pct": 10.36,
-        "change_1m_pct": 5.02,
+        "price": 452.5,
+        "change_1d_pct": 3.59,
+        "change_1w_pct": 10.07,
+        "change_1m_pct": 4.75,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -203709,7 +203766,7 @@
           411.4,
           414.95,
           436.8,
-          453.7
+          452.5
         ],
         "daily_closes": [
           {
@@ -204438,16 +204495,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 453.7
+            "close": 452.5
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 174.5,
-        "change_1d_pct": 5.01,
-        "change_1w_pct": 12.54,
-        "change_1m_pct": 6.18,
+        "price": 174.55,
+        "change_1d_pct": 5.04,
+        "change_1w_pct": 12.57,
+        "change_1m_pct": 6.21,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           151.46,
@@ -204479,7 +204536,7 @@
           157.96,
           158.09,
           166.18,
-          174.5
+          174.55
         ],
         "daily_closes": [
           {
@@ -214368,16 +214425,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 174.5
+            "close": 174.55
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3131.5,
-        "change_1d_pct": 1.47,
-        "change_1w_pct": 6.01,
-        "change_1m_pct": 5.62,
+        "price": 3135.5,
+        "change_1d_pct": 1.6,
+        "change_1w_pct": 6.14,
+        "change_1m_pct": 5.75,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2951.8,
@@ -214409,7 +214466,7 @@
           3016.8,
           3013.6,
           3086.0,
-          3131.5
+          3135.5
         ],
         "daily_closes": [
           {
@@ -224298,16 +224355,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 3131.5
+            "close": 3135.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1096.9,
-        "change_1d_pct": 2.49,
-        "change_1w_pct": 3.31,
-        "change_1m_pct": 10.81,
+        "price": 1105.4,
+        "change_1d_pct": 3.28,
+        "change_1w_pct": 4.11,
+        "change_1m_pct": 11.67,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1007.85,
@@ -224339,7 +224396,7 @@
           1051.3,
           1057.2,
           1070.3,
-          1096.9
+          1105.4
         ],
         "daily_closes": [
           {
@@ -234228,16 +234285,16 @@
           },
           {
             "date": "2026-08-03",
-            "close": 1096.9
+            "close": 1105.4
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 539.25,
-        "change_1d_pct": 4.62,
-        "change_1w_pct": 11.82,
-        "change_1m_pct": 10.07,
+        "price": 563.35,
+        "change_1d_pct": 9.29,
+        "change_1w_pct": 16.82,
+        "change_1m_pct": 14.99,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           467.75,
@@ -234269,7 +234326,7 @@
           495.2,
           516.0,
           515.45,
-          539.25
+          563.35
         ],
         "daily_closes": [
           {
@@ -244158,7 +244215,7 @@
           },
           {
             "date": "2026-08-03",
-            "close": 539.25
+            "close": 563.35
           }
         ]
       }
@@ -244208,6 +244265,14 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Ashok Leyland",
+        "ticker": "ASHOKLEY",
+        "date": "2026-08-14",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
       }
     ],
     "upcoming_all": [
@@ -244250,6 +244315,14 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Ashok Leyland",
+        "ticker": "ASHOKLEY",
+        "date": "2026-08-14",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
       }
     ],
     "recent_past": [
@@ -244302,8 +244375,8 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TVSMOTOR"
       }
     ],
-    "next_14_count": 5,
-    "upcoming_count": 5
+    "next_14_count": 6,
+    "upcoming_count": 6
   },
   "market_insights": [
     {
@@ -245414,10 +245487,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-03T06:24:34.882089+00:00",
+    "generated_at": "2026-08-03T12:25:22.966730+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 24,
+    "item_count": 22,
     "groups": [
       {
         "id": "pv",
@@ -245437,21 +245510,6 @@
             "signal_tags": [
               "Monthly Sales / Demand",
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Honda Cars Sales July 2026 \u2013 Domestic Sales Jump 48%",
-            "url": "https://www.rushlane.com/honda-cars-sales-july-2026-domestic-sales-jump-48-12552161.html",
-            "summary": "Honda Cars India has reported total sales of 8,284 units in July 2026, comprising 6,014 domestic sales and 2,270 exports The post Honda Cars Sales July 2026 \u2013 Domestic Sales Jump 48% appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-02T08:49:11+00:00",
-            "published_display": "02 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           },
           {
@@ -245501,6 +245559,21 @@
             "signal_tags": [
               "General"
             ]
+          },
+          {
+            "title": "Toyota Kirloskar Motor's July sales rise 5% to 30,516 units",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/toyota-kirloskar-motors-july-sales-rise-5-to-30516-units/132800752",
+            "summary": "The automaker's domestic sales in the first seven months of CY2026 grew 13 per cent to 2,33,854 units, while April-July FY27 dispatches increased 8 per cent.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-02T05:10:42+00:00",
+            "published_display": "02 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
           }
         ]
       },
@@ -245522,21 +245595,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Royal Enfield Sales July 2026 \u2013 1.18 Lakh Bikes Sold, Domestic Sales Up 38%",
-            "url": "https://www.rushlane.com/royal-enfield-sales-july-2026-1-18-lakh-bikes-sold-domestic-sales-up-38-12552164.html",
-            "summary": "Royal Enfield has reported another strong month of sales, registering total dispatches of 1,18,232 motorcycles in July 2026. The post Royal Enfield Sales July 2026 \u2013 1.18 Lakh Bikes Sold, Domestic Sales Up 38% appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-02T14:03:22+00:00",
-            "published_display": "02 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           },
           {
@@ -245563,19 +245621,19 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "Hyundai Motor India rises as investors bet on recovery",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-motor-india-rises-as-investors-bet-on-recovery/132781343",
-            "summary": "Analysts said strong execution, market-share gains, capacity expansion plans and a resilient tractor outlook offset concerns over commodity inflation.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-01T04:41:47+00:00",
-            "published_display": "01 Aug 2026",
-            "importance_score": 8,
+            "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
+            "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
+            "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-30T09:18:09+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 7,
             "segment_tags": [
-              "Commercial Vehicles"
+              "Commercial Vehicles",
+              "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
-              "Input Costs / Commodities"
+              "Supply Chain / Components"
             ]
           },
           {
@@ -245601,22 +245659,6 @@
             "source": "EVReporter",
             "published_at": "2026-07-24T09:43:40+00:00",
             "published_display": "24 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Billion Electric Mobility to deploy 150 electric trucks for JK Cement",
-            "url": "https://evreporter.com/billion-electric-mobility-to-deploy-150-electric-trucks-for-jk-cement",
-            "summary": "The post Billion Electric Mobility to deploy 150 electric trucks for JK Cement appeared first at EVreporter on EVreporter . Billion Electric Mobility has partnered with JK Cement Limited to deploy more than 150 heavy-duty electric trucks during the current The post Billion Electric Mobility to deploy 150 electric trucks for JK Cement appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-22T07:04:42+00:00",
-            "published_display": "22 Jul 2026",
             "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
@@ -245665,6 +245707,38 @@
             ]
           },
           {
+            "title": "Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market",
+            "url": "https://evreporter.com/keto-motors-unveils-urbanova-ke9-enters-indias-commercial-electric-bus-market",
+            "summary": "The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter . Keto Motors has unveiled the Urbanova KE9, its first commercial electric bus, marking the company\u2019s entry into India\u2019s electric bus The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-03T07:25:24+00:00",
+            "published_display": "03 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Greaves Electric Mobility Raises 530 crores through a Rights Issue",
+            "url": "https://evreporter.com/greaves-electric-mobilitys-%e2%82%b9530-crore-rights-issue-fully-subscribed",
+            "summary": "The post Greaves Electric Mobility Raises 530 crores through a Rights Issue appeared first at EVreporter on EVreporter . Greaves Electric Mobility Limited (GEML), the electric mobility business of Greaves Cotton Limited, has completed a rights issue worth \u20b9530 The post Greaves Electric Mobility Raises 530 crores through a Rights Issue appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-03T06:45:56+00:00",
+            "published_display": "03 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Tata Motors extends EV lead as July registrations surge 82%",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-dominates-indian-ev-market-with-82-surge-in-july-registrations-amid-rising-competition/132807894",
             "summary": "Homegrown auto major retained its leadership in India's passenger EV market with registrations crossing 13,500 units in July, even as Mahindra posted triple-digit growth and new entrants such as Maruti Suzuki, VinFast and Kia intensified competition in the rapidly expanding segment.",
@@ -245680,11 +245754,11 @@
             ]
           },
           {
-            "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
-            "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
-            "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
+            "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
+            "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
+            "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
             "source": "EVReporter",
-            "published_at": "2026-07-30T09:18:09+00:00",
+            "published_at": "2026-07-30T12:27:08+00:00",
             "published_display": "30 Jul 2026",
             "importance_score": 7,
             "segment_tags": [
@@ -245692,38 +245766,6 @@
               "EV"
             ],
             "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Mecpower Solutions Signs MoU with Gujarat Government for Rs 160 Crore Battery Storage Plant",
-            "url": "https://www.autocarpro.in/NEWS/mecpower-solutions-signs-mou-with-gujarat-government-for-rs-160-crore-battery-storage-plant-133793",
-            "summary": "Renewable energy infrastructure firm Mecpower Solutions Limited has signed a Memorandum of Understanding (MoU) with the Government of Gujarat to set up a 5 GWh Battery Energy Storage System (BESS) assembly facility in Karjan. The project entails a proposed capital investment of approximately Rs 160 crore.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-29T18:50:09+00:00",
-            "published_display": "29 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Sona Comstar and Tata STRIVE Set Up Chakan Training Facility to Address EV Skill Gap",
-            "url": "https://www.autocarpro.in/NEWS/sona-comstar-and-tata-strive-set-up-chakan-training-facility-to-address-ev-skill-gap-133786",
-            "summary": "Sona Comstar and Tata STRIVE have established a joint skill development centre in Chakan, targeting the local workforce requirements of Pune\u2019s auto manufacturing cluster. EV, CNC and Electrical Training Courses at Chakan The newly inaugurated centre will offer specialized coursework in EV-specific technical training, CNC operations, electrical maintenance, and financial services.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-07-29T16:29:01+00:00",
-            "published_display": "29 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           }
@@ -245746,23 +245788,6 @@
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells",
-            "url": "https://evreporter.com/amara-raja-launches-customer-qualification-plant-for-li-ion-battery-manufacturing",
-            "summary": "The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter . Amara Raja Advanced Cell Technologies announced the commissioning of its Customer Qualification Plant (CQP) at its Giga Corridor in Telangana. The post Amara Raja Launches 60 MWh Customer Qualification Plant for Li-Ion Cells appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-15T11:58:00+00:00",
-            "published_display": "15 Jul 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
               "Product / Launch",
               "Supply Chain / Components"
             ]
@@ -245801,18 +245826,35 @@
             ]
           },
           {
-            "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
-            "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
-            "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
+            "title": "India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026",
+            "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-july-2026",
+            "summary": "The post India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026 appeared first at EVreporter on EVreporter . In July 2026, the overall penetration of EVs in the 2W market was 11.2%. For passenger 3W L5 autos, it The post India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026 appeared first at EVreporter on EVreporter .",
             "source": "EVReporter",
-            "published_at": "2026-07-30T12:27:08+00:00",
-            "published_display": "30 Jul 2026",
+            "published_at": "2026-08-03T12:16:07+00:00",
+            "published_display": "03 Aug 2026",
             "importance_score": 7,
             "segment_tags": [
+              "Two-Wheelers",
               "Commercial Vehicles",
               "EV"
             ],
             "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "RoadGrid Secures \u20b913 Crore from Technology Development Board to Scale Universal EV Charger Manufacturing",
+            "url": "https://evreporter.com/roadgrid-secures-%e2%82%b913-crore-from-technology-development-board-to-scale-universal-ev-charger-manufacturing",
+            "summary": "The post RoadGrid Secures \u20b913 Crore from Technology Development Board to Scale Universal EV Charger Manufacturing appeared first at EVreporter on EVreporter . RoadGrid India Pvt.",
+            "source": "EVReporter",
+            "published_at": "2026-08-03T07:58:46+00:00",
+            "published_display": "03 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           }
