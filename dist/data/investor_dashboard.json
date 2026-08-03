@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T12:26:09.778228+00:00",
+  "generated_at": "2026-08-03T17:10:21.158551+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121694,22 +121694,24 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-03T12:25:48.256868+00:00",
+      "generated_at": "2026-08-03T17:09:59.506172+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 6,
       "items": [
         {
-          "title": "MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L",
-          "summary": "Only 50 units of each model will be offered, featuring bespoke design elements. Bookings are now open, with deliveries scheduled to commence from August 10, 2026. The post MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L appeared first on RushLane .",
-          "url": "https://www.rushlane.com/mg-m9-and-cyberster-couture-edition-launch-price-12552273.html",
-          "source": "RushLane",
-          "published_at": "2026-08-03T11:08:18+00:00",
+          "title": "Kia India opens pre-bookings for hybrid Sorento ahead of India launch",
+          "summary": "The all-new Sorento will become Kia India's first hybrid SUV, with the automaker teasing its flagship global model ahead of its official debut.",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-pre-bookings-for-hybrid-sorento-ahead-of-india-launch/132831568",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-08-03T12:20:10+00:00",
           "published_display": "03 Aug 2026",
-          "company": "JSW MG Motor",
+          "company": "Kia India",
           "tone": "pv",
           "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/mg-cyberster-couture-edition-launch-price-2.jpg"
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1712202/132831568.cms"
         },
         {
           "title": "MG Select launches couture editions of M9, Cyberster in collaboration with designer Gaurav Gupta",
@@ -121723,21 +121725,6 @@
           "scope": "tracked",
           "segment_tags": [],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-14358074/132827186.cms"
-        },
-        {
-          "title": "Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years",
-          "summary": "Porsche India has introduced a new Assured Buy-Back Program, offering customers a guaranteed resale value of up to 70% after three years of ownership The post Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years appeared first on RushLane .",
-          "url": "https://www.rushlane.com/porsche-india-launches-assured-buy-back-program-up-to-70-value-after-3-years-12552244.html",
-          "source": "RushLane",
-          "published_at": "2026-08-03T07:25:59+00:00",
-          "published_display": "03 Aug 2026",
-          "company": "Porsche India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Luxury"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/porsche-india-buyback-program-launched-2.jpg"
         },
         {
           "title": "BMW India opens pre-launch bookings for 7 Series range",
@@ -121803,20 +121790,20 @@
       ],
       "companies": [
         {
-          "company": "JSW MG Motor",
+          "company": "Kia India",
           "tone": "pv",
           "scope": "tracked",
           "count": 2,
-          "latest_published_at": "2026-08-03T11:08:18+00:00",
-          "latest_title": "MG M9 and Cyberster Couture Edition Launch Price Rs 84.94 L and Rs 87.49 L"
+          "latest_published_at": "2026-08-03T12:20:10+00:00",
+          "latest_title": "Kia India opens pre-bookings for hybrid Sorento ahead of India launch"
         },
         {
-          "company": "Porsche India",
+          "company": "JSW MG Motor",
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-08-03T07:25:59+00:00",
-          "latest_title": "Porsche India Launches Assured Buy-Back Program \u2013 Up To 70% Value After 3 Years"
+          "latest_published_at": "2026-08-03T10:11:53+00:00",
+          "latest_title": "MG Select launches couture editions of M9, Cyberster in collaboration with designer Gaurav Gupta"
         },
         {
           "company": "BMW India",
@@ -121841,14 +121828,6 @@
           "count": 1,
           "latest_published_at": "2026-08-01T05:28:04+00:00",
           "latest_title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh"
-        },
-        {
-          "company": "Kia India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-07-23T11:01:09+00:00",
-          "latest_title": "Kia India launches Syros EV, starting at \u20b913.49 lakh"
         }
       ],
       "source_meta": {
@@ -121975,10 +121954,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.39,
+        "value": 95.33,
         "unit": "\u20b9",
-        "delta_value": -0.2948,
-        "delta_label": "-1.22% in last week (Yahoo Finance)",
+        "delta_value": -0.3578,
+        "delta_label": "-1.28% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132386,7 +132365,7 @@
           },
           {
             "date": "2026-08-03",
-            "close": 95.39
+            "close": 95.327
           }
         ]
       }
@@ -245487,7 +245466,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-03T12:25:22.966730+00:00",
+    "generated_at": "2026-08-03T17:09:36.286507+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 22,
@@ -245530,11 +245509,11 @@
             ]
           },
           {
-            "title": "Kia Sorento Hybrid Teased Ahead Of India Launch \u2013 Pre-Bookings Now Open",
-            "url": "https://www.rushlane.com/kia-sorento-hybrid-teased-ahead-of-india-launch-pre-bookings-now-open-12552232.html",
-            "summary": "Kia India has officially teased the all-new Sorento, confirming the premium SUV's arrival in the Indian market The post Kia Sorento Hybrid Teased Ahead Of India Launch \u2013 Pre-Bookings Now Open appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-03T06:05:32+00:00",
+            "title": "Kia India opens pre-bookings for hybrid Sorento ahead of India launch",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-pre-bookings-for-hybrid-sorento-ahead-of-india-launch/132831568",
+            "summary": "The all-new Sorento will become Kia India's first hybrid SUV, with the automaker teasing its flagship global model ahead of its official debut.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-03T12:20:10+00:00",
             "published_display": "03 Aug 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -245598,6 +245577,22 @@
             ]
           },
           {
+            "title": "Hero\u2019s VIDA Debuts\u00a0in Nepal with\u00a0VX2 Scooter Range and\u00a0DIRT.E K3",
+            "url": "https://evreporter.com/heros-vida-debuts-in-nepal-with-vx2-scooter-range-and-dirt-e-k3",
+            "summary": "The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter . VIDA, powered by Hero, has entered Nepal, its first international market, through a distributor partnership with CG Motors (Chaudhary Group), The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-26T16:24:01+00:00",
+            "published_display": "26 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "L&T Enters EV Powertrain with a Five Lakh Motor Order",
             "url": "https://www.autocarpro.in/NEWS/lt-enters-ev-powertrain-with-a-five-lakh-motor-order-133802",
             "summary": "L&T's First EV Motor Order: Five Lakh Units for a Two-Wheeler Maker L&T EPS Mobility, the automotive arm of Larsen & Toubro's Electronic Products and Systems division, has booked its first commercial contract. An order for five lakh electric-vehicle traction motors from a two-wheeler manufacturer it has not named yet, to be delivered over three years.",
@@ -245620,22 +245615,6 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
-          {
-            "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
-            "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
-            "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-30T09:18:09+00:00",
-            "published_display": "30 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins",
             "url": "https://evreporter.com/wonder-cement-deploys-250-montra-electric-rhino-e-trucks-for-long-haul-freight",
@@ -245707,22 +245686,6 @@
             ]
           },
           {
-            "title": "Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market",
-            "url": "https://evreporter.com/keto-motors-unveils-urbanova-ke9-enters-indias-commercial-electric-bus-market",
-            "summary": "The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter . Keto Motors has unveiled the Urbanova KE9, its first commercial electric bus, marking the company\u2019s entry into India\u2019s electric bus The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-03T07:25:24+00:00",
-            "published_display": "03 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Greaves Electric Mobility Raises 530 crores through a Rights Issue",
             "url": "https://evreporter.com/greaves-electric-mobilitys-%e2%82%b9530-crore-rights-issue-fully-subscribed",
             "summary": "The post Greaves Electric Mobility Raises 530 crores through a Rights Issue appeared first at EVreporter on EVreporter . Greaves Electric Mobility Limited (GEML), the electric mobility business of Greaves Cotton Limited, has completed a rights issue worth \u20b9530 The post Greaves Electric Mobility Raises 530 crores through a Rights Issue appeared first at EVreporter on EVreporter .",
@@ -245759,6 +245722,22 @@
             "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
             "source": "EVReporter",
             "published_at": "2026-07-30T12:27:08+00:00",
+            "published_display": "30 Jul 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "SWITCH Mobility bags 650 electric bus order from Sai Green Projects",
+            "url": "https://evreporter.com/switch-mobility-bags-650-electric-bus-order-from-sai-green-projects",
+            "summary": "The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter . SWITCH Mobility, an electric bus manufacturer and part of the Hinduja Group, has received an order for 650 electric buses The post SWITCH Mobility bags 650 electric bus order from Sai Green Projects appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-30T09:18:09+00:00",
             "published_display": "30 Jul 2026",
             "importance_score": 7,
             "segment_tags": [
@@ -245810,22 +245789,6 @@
             ]
           },
           {
-            "title": "Hero\u2019s VIDA Debuts\u00a0in Nepal with\u00a0VX2 Scooter Range and\u00a0DIRT.E K3",
-            "url": "https://evreporter.com/heros-vida-debuts-in-nepal-with-vx2-scooter-range-and-dirt-e-k3",
-            "summary": "The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter . VIDA, powered by Hero, has entered Nepal, its first international market, through a distributor partnership with CG Motors (Chaudhary Group), The post Hero\u2019s VIDA Debuts in Nepal with VX2 Scooter Range and DIRT.E K3 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-26T16:24:01+00:00",
-            "published_display": "26 Jul 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026",
             "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-july-2026",
             "summary": "The post India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026 appeared first at EVreporter on EVreporter . In July 2026, the overall penetration of EVs in the 2W market was 11.2%. For passenger 3W L5 autos, it The post India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026 appeared first at EVreporter on EVreporter .",
@@ -245855,6 +245818,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market",
+            "url": "https://evreporter.com/keto-motors-unveils-urbanova-ke9-enters-indias-commercial-electric-bus-market",
+            "summary": "The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter . Keto Motors has unveiled the Urbanova KE9, its first commercial electric bus, marking the company\u2019s entry into India\u2019s electric bus The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-03T07:25:24+00:00",
+            "published_display": "03 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           }
@@ -245887,23 +245866,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 4,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Commercial Vehicles",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 54,
+      "unmapped_articles": 53,
       "filtered_low_signal": 0,
-      "kept_articles": 87
+      "kept_articles": 79
     }
   },
   "qa": [
