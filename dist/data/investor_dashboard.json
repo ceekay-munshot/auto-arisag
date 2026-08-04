@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T11:24:54.389184+00:00",
+  "generated_at": "2026-08-04T16:53:17.135987+00:00",
   "as_of_date": "2026-07-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -121956,10 +121956,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.38,
+        "value": 95.37,
         "unit": "\u20b9",
-        "delta_value": -0.0247,
-        "delta_label": "-0.41% in last week (Yahoo Finance)",
+        "delta_value": -0.0342,
+        "delta_label": "-0.42% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132367,7 +132367,7 @@
           },
           {
             "date": "2026-08-04",
-            "close": 95.3775
+            "close": 95.368
           }
         ]
       }
@@ -132384,11 +132384,10 @@
         "ticker": "MARUTI",
         "price": 14168.0,
         "change_1d_pct": 0.13,
-        "change_1w_pct": 3.19,
-        "change_1m_pct": -1.38,
+        "change_1w_pct": 2.65,
+        "change_1m_pct": -1.99,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13451.0,
           13248.0,
           13745.0,
           13745.0,
@@ -132416,6 +132415,7 @@
           13802.0,
           13948.0,
           14188.0,
+          14234.0,
           14150.0,
           14168.0
         ],
@@ -142295,6 +142295,10 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 14234.0
           },
           {
             "date": "2026-08-03",
@@ -162169,13 +162173,11 @@
       "TVS Motor": {
         "ticker": "TVSMOTOR",
         "price": 4360.0,
-        "change_1d_pct": 3.6,
-        "change_1w_pct": 12.66,
-        "change_1m_pct": 20.22,
+        "change_1d_pct": -0.66,
+        "change_1w_pct": 9.18,
+        "change_1m_pct": 17.68,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3488.7,
-          3456.2,
           3440.6,
           3569.7,
           3569.7,
@@ -162203,6 +162205,8 @@
           3993.5,
           4075.6,
           4208.4,
+          4313.1,
+          4389.0,
           4360.0
         ],
         "daily_closes": [
@@ -172083,6 +172087,14 @@
             "close": 4208.4
           },
           {
+            "date": "2026-07-31",
+            "close": 4313.1
+          },
+          {
+            "date": "2026-08-03",
+            "close": 4389.0
+          },
+          {
             "date": "2026-08-04",
             "close": 4360.0
           }
@@ -172092,11 +172104,10 @@
         "ticker": "BAJAJ-AUTO",
         "price": 11600.0,
         "change_1d_pct": -2.16,
-        "change_1w_pct": 3.72,
-        "change_1m_pct": 18.54,
+        "change_1w_pct": 1.99,
+        "change_1m_pct": 15.58,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10025.0,
           9750.0,
           9843.0,
           9843.0,
@@ -172124,6 +172135,7 @@
           11374.0,
           11338.0,
           11432.0,
+          11520.5,
           11856.0,
           11600.0
         ],
@@ -182003,6 +182015,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -214405,12 +214421,11 @@
       "Escorts Kubota": {
         "ticker": "ESCORTS",
         "price": 3101.2,
-        "change_1d_pct": 0.49,
-        "change_1w_pct": 4.98,
-        "change_1m_pct": 4.6,
+        "change_1d_pct": -1.09,
+        "change_1w_pct": 3.03,
+        "change_1m_pct": 3.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2951.8,
           2930.6,
           2949.7,
           2949.7,
@@ -214439,6 +214454,7 @@
           3016.8,
           3013.6,
           3086.0,
+          3135.5,
           3101.2
         ],
         "daily_closes": [
@@ -224323,6 +224339,10 @@
             "close": 3086.0
           },
           {
+            "date": "2026-08-03",
+            "close": 3135.5
+          },
+          {
             "date": "2026-08-04",
             "close": 3101.2
           }
@@ -224332,11 +224352,10 @@
         "ticker": "ACE",
         "price": 1098.6,
         "change_1d_pct": -0.62,
-        "change_1w_pct": 3.47,
-        "change_1m_pct": 10.98,
+        "change_1w_pct": 1.95,
+        "change_1m_pct": 9.16,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1007.85,
           1003.35,
           988.1,
           988.1,
@@ -224364,6 +224383,7 @@
           1077.6,
           1051.3,
           1057.2,
+          1070.3,
           1105.4,
           1098.6
         ],
@@ -234245,6 +234265,10 @@
             "close": 1057.2
           },
           {
+            "date": "2026-07-31",
+            "close": 1070.3
+          },
+          {
             "date": "2026-08-03",
             "close": 1105.4
           },
@@ -234257,12 +234281,11 @@
       "Atul Auto": {
         "ticker": "ATULAUTO",
         "price": 557.8,
-        "change_1d_pct": 8.22,
-        "change_1w_pct": 15.67,
-        "change_1m_pct": 13.86,
+        "change_1d_pct": -0.99,
+        "change_1w_pct": 17.21,
+        "change_1m_pct": 10.84,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          467.75,
           469.15,
           467.8,
           467.8,
@@ -234291,6 +234314,7 @@
           495.2,
           516.0,
           515.45,
+          563.35,
           557.8
         ],
         "daily_closes": [
@@ -244175,6 +244199,10 @@
             "close": 515.45
           },
           {
+            "date": "2026-08-03",
+            "close": 563.35
+          },
+          {
             "date": "2026-08-04",
             "close": 557.8
           }
@@ -245432,10 +245460,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-04T11:24:14.433449+00:00",
+    "generated_at": "2026-08-04T16:52:24.785815+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 25,
+    "item_count": 23,
     "groups": [
       {
         "id": "pv",
@@ -245489,30 +245517,31 @@
             ]
           },
           {
-            "title": "Top 10 Cars July 2026 \u2013 Dzire, WagonR, Ertiga, Swift, Punch, Fronx, Creta, Nexon, Scorpio",
-            "url": "https://www.rushlane.com/top-10-cars-july-2026-dzire-wagonr-ertiga-swift-punch-fronx-12552352.html",
-            "summary": "Top 10 models account for more than 2 lakh units, with Maruti claiming six spots in the list - collectively recording sales of 2,00,868 units The post Top 10 Cars July 2026 \u2013 Dzire, WagonR, Ertiga, Swift, Punch, Fronx, Creta, Nexon, Scorpio appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-04T07:41:36+00:00",
-            "published_display": "04 Aug 2026",
+            "title": "Kia India opens pre-bookings for hybrid Sorento ahead of India launch",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/kia-india-opens-pre-bookings-for-hybrid-sorento-ahead-of-india-launch/132831568",
+            "summary": "The all-new Sorento will become Kia India's first hybrid SUV, with the automaker teasing its flagship global model ahead of its official debut.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-03T12:20:10+00:00",
+            "published_display": "03 Aug 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Product / Launch"
             ]
           },
           {
-            "title": "Top 6 Car OEMs July 2026 \u2013 Maruti, Tata, Mahindra, Hyundai, Toyota, Kia",
-            "url": "https://www.rushlane.com/top-6-car-oems-july-2026-maruti-tata-mahindra-hyundai-toyota-kia-12552336.html",
-            "summary": "Maruti Suzuki, Tata Motors, Mahindra, Hyundai, Toyota and Kia together sold 4,31,788 cars during the month, registering healthy year-on-year (YoY) as well as sequential growth The post Top 6 Car OEMs July 2026 \u2013 Maruti, Tata, Mahindra, Hyundai, Toyota, Kia appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-04T06:38:12+00:00",
-            "published_display": "04 Aug 2026",
+            "title": "Maruti Suzuki's PV production hits 2.44 lakh units in July, up 33%",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzukis-pv-production-hits-2-44-lakh-units-in-july-up-33/132804441",
+            "summary": "The automaker's total production, including light commercial vehicles, increased 33 per cent year-on-year to 2.49 lakh units.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-02T09:49:17+00:00",
+            "published_display": "02 Aug 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles"
+              "Passenger Vehicles",
+              "Commercial Vehicles"
             ],
             "signal_tags": [
               "General"
@@ -245628,22 +245657,6 @@
             ]
           },
           {
-            "title": "Maruti Suzuki's PV production hits 2.44 lakh units in July, up 33%",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/maruti-suzukis-pv-production-hits-2-44-lakh-units-in-july-up-33/132804441",
-            "summary": "The automaker's total production, including light commercial vehicles, increased 33 per cent year-on-year to 2.49 lakh units.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-02T09:49:17+00:00",
-            "published_display": "02 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
             "title": "EKA Mobility flags off 15 electric buses in Zanzibar",
             "url": "https://evreporter.com/eka-mobility-flags-off-15-electric-buses-in-zanzibar",
             "summary": "The post EKA Mobility flags off 15 electric buses in Zanzibar appeared first at EVreporter on EVreporter . EKA Mobility has flagged off its 12-metre electric buses in Zanzibar, marking the company\u2019s entry into the island\u2019s public transport The post EKA Mobility flags off 15 electric buses in Zanzibar appeared first at EVreporter on EVreporter .",
@@ -245680,22 +245693,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Top 5 Electric Car OEMs July 2026 \u2013 Tata, MG, Mahindra, VinFast, Maruti",
-            "url": "https://www.rushlane.com/top-5-electric-car-oems-july-2026-tata-mg-mahindra-vinfast-maruti-12552357.html",
-            "summary": "India's electric car sales remained largely stable in July 2026, with the top five EV manufacturers together selling 32,214 units The post Top 5 Electric Car OEMs July 2026 \u2013 Tata, MG, Mahindra, VinFast, Maruti appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-04T08:29:39+00:00",
-            "published_display": "04 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "General"
             ]
           },
           {
@@ -245744,6 +245741,22 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market",
+            "url": "https://evreporter.com/keto-motors-unveils-urbanova-ke9-enters-indias-commercial-electric-bus-market",
+            "summary": "The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter . Keto Motors has unveiled the Urbanova KE9, its first commercial electric bus, marking the company\u2019s entry into India\u2019s electric bus The post Keto Motors Unveils Urbanova KE9, Enters India\u2019s Commercial Electric Bus Market appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-03T07:25:24+00:00",
+            "published_display": "03 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           }
@@ -245845,21 +245858,6 @@
         "label": "Policy / Regulation",
         "items": [
           {
-            "title": "Hyundai Creta Electric Buyback Scheme Offers 60% Value Till 45,000 Kms",
-            "url": "https://www.rushlane.com/hyundai-creta-electric-buyback-scheme-offers-12552349.html",
-            "summary": "Hyundai Motor India has announced a new Assured Buyback Program for Creta Electric, offering customers an assured 60% buyback value after 3 years or up to 45,000 km The post Hyundai Creta Electric Buyback Scheme Offers 60% Value Till 45,000 Kms appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-04T07:20:49+00:00",
-            "published_display": "04 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation"
-            ]
-          },
-          {
             "title": "Exclusive: India Set To Become A Strategic V2X Tech Market: Qualcomm",
             "url": "https://www.autocarpro.in/NEWS/exclusive-india-set-to-become-a-strategic-v2x-tech-market-qualcomm-133842",
             "summary": "India is set to become one of Qualcomm Technologies\u2019 key markets for Vehicle-to-Everything (V2X) technology after the government\u2019s decision to delicense the 5.9 GHz spectrum for connected vehicle communications, according to the company. In an exclusive conversation with Autocar Professional, Hagai Zyss, Vice President of Product Management at Qualcomm Technologies and former CEO of Autotalks, said the regulatory...",
@@ -245882,23 +245880,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 4,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Commercial Vehicles",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 54,
-      "filtered_low_signal": 1,
-      "kept_articles": 86
+      "unmapped_articles": 51,
+      "filtered_low_signal": 0,
+      "kept_articles": 78
     }
   },
   "qa": [
