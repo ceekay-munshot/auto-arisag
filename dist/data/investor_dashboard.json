@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T10:03:01.994049+00:00",
+  "generated_at": "2026-08-07T15:57:53.727208+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -132825,11 +132825,10 @@
         "ticker": "MARUTI",
         "price": 14037.0,
         "change_1d_pct": -0.31,
-        "change_1w_pct": -1.06,
-        "change_1m_pct": 0.62,
+        "change_1w_pct": -1.38,
+        "change_1m_pct": 2.25,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13745.0,
           13412.0,
           14115.0,
           14395.0,
@@ -132854,6 +132853,7 @@
           13802.0,
           13948.0,
           14188.0,
+          14234.0,
           14150.0,
           14168.0,
           14190.0,
@@ -142728,6 +142728,10 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 14234.0
           },
           {
             "date": "2026-08-03",
@@ -162623,11 +162627,10 @@
         "ticker": "TVSMOTOR",
         "price": 4440.9,
         "change_1d_pct": 1.51,
-        "change_1w_pct": 5.52,
-        "change_1m_pct": 22.01,
+        "change_1w_pct": 2.96,
+        "change_1m_pct": 22.47,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3569.7,
           3456.8,
           3460.6,
           3494.0,
@@ -162652,6 +162655,7 @@
           3993.5,
           4075.6,
           4208.4,
+          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172528,6 +172532,10 @@
             "close": 4208.4
           },
           {
+            "date": "2026-07-31",
+            "close": 4313.1
+          },
+          {
             "date": "2026-08-03",
             "close": 4389.0
           },
@@ -172553,11 +172561,10 @@
         "ticker": "BAJAJ-AUTO",
         "price": 11662.0,
         "change_1d_pct": 0.36,
-        "change_1w_pct": 2.01,
-        "change_1m_pct": 14.74,
+        "change_1w_pct": 1.23,
+        "change_1m_pct": 14.84,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          9843.0,
           9630.0,
           9716.0,
           9842.0,
@@ -172582,6 +172589,7 @@
           11374.0,
           11338.0,
           11432.0,
+          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182456,6 +182464,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -224841,11 +224853,10 @@
         "ticker": "ACE",
         "price": 1094.3,
         "change_1d_pct": -1.74,
-        "change_1w_pct": 3.51,
-        "change_1m_pct": 12.97,
+        "change_1w_pct": 2.24,
+        "change_1m_pct": 12.05,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          988.1,
           985.15,
           1024.0,
           999.1,
@@ -224870,6 +224881,7 @@
           1077.6,
           1051.3,
           1057.2,
+          1070.3,
           1105.4,
           1098.6,
           1137.8,
@@ -234744,6 +234756,10 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
+          },
+          {
+            "date": "2026-07-31",
+            "close": 1070.3
           },
           {
             "date": "2026-08-03",
@@ -245937,31 +245953,15 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-07T10:02:16.498825+00:00",
+    "generated_at": "2026-08-07T15:57:02.993682+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 28,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "Car Retail Sales July 2026 \u2013 Maruti, Tata, Mahindra, Hyundai, Toyota, Kia, Skoda VW, BMW, Mercedes",
-            "url": "https://www.rushlane.com/car-retail-sales-july-2026-maruti-tata-mahindra-hyundai-toyota-kia-12552612.html",
-            "summary": "Passenger vehicle retail sales crossed the 4 lakh mark for the first time in a July, while overall auto retail registrations also hit a new July record. The post Car Retail Sales July 2026 \u2013 Maruti, Tata, Mahindra, Hyundai, Toyota, Kia, Skoda VW, BMW, Mercedes appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-06T14:38:38+00:00",
-            "published_display": "06 Aug 2026",
-            "importance_score": 10,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
           {
             "title": "Audi targets doubling India market share to 15-16% in three years; bets on localisation and product offensive",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/audi-targets-doubling-india-market-share-to-15-16-in-three-years-bets-on-localisation-and-product-offensive/132979876",
@@ -246026,13 +246026,7 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          }
-        ]
-      },
-      {
-        "id": "2w",
-        "label": "Two-Wheelers",
-        "items": [
+          },
           {
             "title": "Dhoot Transmission Weighs In on Passenger Vehicle Wiring Harnesses",
             "url": "https://www.autocarpro.in/NEWS/dhoot-transmission-weighs-in-on-passenger-vehicle-wiring-harnesses-133914",
@@ -246050,7 +246044,13 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "id": "2w",
+        "label": "Two-Wheelers",
+        "items": [
           {
             "title": "India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026",
             "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-july-2026",
@@ -246108,6 +246108,22 @@
         "label": "Commercial Vehicles",
         "items": [
           {
+            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
+            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
+            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-05T06:06:14+00:00",
+            "published_display": "05 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Battery Smart eyes IPO filing in Sept\u2013Oct, appoints SBI Capital Markets",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/battery-smart-eyes-ipo-filing-in-septoct-appoints-sbi-capital-markets/132852791",
             "summary": "Battery Smart is preparing to file draft IPO papers with Sebi in the coming months as it targets rapid expansion of its battery-swapping network for electric two- and three-wheelers.",
@@ -246131,7 +246147,7 @@
             "source": "EVReporter",
             "published_at": "2026-07-30T12:27:08+00:00",
             "published_display": "30 Jul 2026",
-            "importance_score": 7,
+            "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
               "EV"
@@ -246178,6 +246194,22 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "2W Retail Sales July 2026 \u2013 Honda, Hero, TVS, Bajaj, Suzuki, RE, Yamaha, Ather, Ola",
+            "url": "https://www.rushlane.com/2w-retail-sales-july-2026-honda-hero-tvs-bajaj-suzuki-re-12552614.html",
+            "summary": "India\u2019s two wheeler industry posted strong performance for July 2026 with strong rural demand and rising demand for EVs The post 2W Retail Sales July 2026 \u2013 Honda, Hero, TVS, Bajaj, Suzuki, RE, Yamaha, Ather, Ola appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-07T11:51:21+00:00",
+            "published_display": "07 Aug 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "HDFC Securities initiates coverage on Sona BLW with 'Add'; sees upside on EV-led growth",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/hdfc-securities-initiates-coverage-on-sona-blw-with-add-sees-upside-on-ev-led-growth/133020176",
@@ -246240,22 +246272,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
-            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
-            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-05T06:06:14+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -246373,6 +246389,22 @@
             ]
           },
           {
+            "title": "Tata Motors introduces Onam offers of up to \u20b92.25 lakh, launches three special editions",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-introduces-onam-offers-of-up-to-2-25-lakh-launches-three-special-editions/133033644",
+            "summary": "The festive campaign includes priority deliveries, finance schemes, and the launch of the Sierra Jubilee Edition, Nexon CAMO Edition, and Punch HBX Pack.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-07T12:11:59+00:00",
+            "published_display": "07 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Policy / Regulation"
+            ]
+          },
+          {
             "title": "Schaeffler expands Germany retirement scheme to cut costs after in-line Q2",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/schaeffler-expands-partial-retirement-scheme-in-germany-to-cut-costs-amid-steady-q2-results/132986889",
             "summary": "The automotive supplier reported second-quarter operating profit aligning with market expectations. Robotics orders reached \u20ac350 million, though earnings contribution is not immediate. Full-year outlook remains confirmed after adjusted earnings rose to \u20ac264 million.",
@@ -246440,9 +246472,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 56,
+      "unmapped_articles": 57,
       "filtered_low_signal": 0,
-      "kept_articles": 86
+      "kept_articles": 87
     }
   },
   "qa": [
