@@ -50,42 +50,62 @@
       "id": "E4W",
       "label": "EV 4W",
       "source_name": "RushLane",
-      "source_url": "https://www.rushlane.com/electric-car-sales-june-2026-tata-mahindra-mg-maruti-vinfast-byd-bmw-12550588.html",
+      "source_url": "https://www.rushlane.com/electric-car-sales-july-2026-tata-mahindra-mg-maruti-vinfast-12552820.html",
       "growth_label": "YoY growth",
       "compare_label": "Same month, prior year",
       "rows": [
         {
           "oem": "Tata Motors",
-          "units": 12187,
+          "units": 13678,
+          "prior_units": null
+        },
+        {
+          "oem": "JSW MG Motor",
+          "units": 5689,
+          "prior_units": null
+        },
+        {
+          "oem": "MG Motor",
+          "units": 5689,
           "prior_units": null
         },
         {
           "oem": "Maruti Suzuki",
-          "units": 1919,
+          "units": 1600,
+          "prior_units": null
+        },
+        {
+          "oem": "VinFast",
+          "units": 3000,
           "prior_units": null
         },
         {
           "oem": "Hyundai",
-          "units": 2026,
+          "units": 3000,
           "prior_units": 93
         },
         {
           "oem": "Kia",
-          "units": 449,
+          "units": 3000,
+          "prior_units": null
+        },
+        {
+          "oem": "BMW",
+          "units": 3000,
+          "prior_units": null
+        },
+        {
+          "oem": "BYD",
+          "units": 749,
           "prior_units": null
         },
         {
           "oem": "Mercedes-Benz",
-          "units": 234,
-          "prior_units": null
-        },
-        {
-          "oem": "Volvo",
-          "units": 107,
+          "units": 165,
           "prior_units": null
         }
       ],
-      "total_units": 16922,
+      "total_units": 39570,
       "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
       "latest_month": "Mar 2026"
     },
