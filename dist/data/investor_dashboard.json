@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T15:57:53.727208+00:00",
+  "generated_at": "2026-08-08T04:21:57.916776+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49200,7 +49200,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-07",
+          "latest_release_date": "2026-08-08",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122114,9 +122114,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-07T10:02:39.353347+00:00",
+      "generated_at": "2026-08-08T04:21:36.362508+00:00",
       "window_days": 30,
-      "item_count": 7,
+      "item_count": 6,
       "items": [
         {
           "title": "New Bajaj Pulsar N160 S, N160 SS Launch Price Rs 1.33 L \u2013 4V, 5 Speed, 18.5 PS, TFT, Ride Modes",
@@ -122190,19 +122190,6 @@
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-1712202/132831568.cms"
         },
         {
-          "title": "MG Select launches couture editions of M9, Cyberster in collaboration with designer Gaurav Gupta",
-          "summary": "Both vehicles feature hand-finished detailing, tonal layering and embroidery inspired by Gupta's Serpent Infinity design language, which the designer associates with continuity, transformation and quiet power.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mg-select-unveils-couture-editions-of-mg-m9-and-cyberster-with-gaurav-gupta/132827186",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-08-03T10:11:53+00:00",
-          "published_display": "03 Aug 2026",
-          "company": "JSW MG Motor",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-14358074/132827186.cms"
-        },
-        {
           "title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh",
           "summary": "The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter . VIDA, the electric mobility brand of Hero, has introduced the VIDA VX2 Go FB (3.1 kWh), a new variant in The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter .",
           "url": "https://evreporter.com/heros-vida-launches-vx2-go-fb-electric-scooter-at-%e2%82%b91-13-lakh",
@@ -122253,14 +122240,6 @@
           "latest_title": "Kia India opens pre-bookings for hybrid Sorento ahead of India launch"
         },
         {
-          "company": "JSW MG Motor",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-08-03T10:11:53+00:00",
-          "latest_title": "MG Select launches couture editions of M9, Cyberster in collaboration with designer Gaurav Gupta"
-        },
-        {
           "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
@@ -122277,7 +122256,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-07",
+    "as_of_date": "2026-08-08",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122395,8 +122374,8 @@
         "label": "USD / INR",
         "value": 95.2,
         "unit": "\u20b9",
-        "delta_value": 0.1207,
-        "delta_label": "-0.51% in last week (Yahoo Finance)",
+        "delta_value": -0.1119,
+        "delta_label": "-0.21% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132807,8 +132786,12 @@
             "close": 95.0773
           },
           {
-            "date": "2026-08-07",
-            "close": 95.198
+            "date": "2026-08-06",
+            "close": 95.3119
+          },
+          {
+            "date": "2026-08-08",
+            "close": 95.2
           }
         ]
       }
@@ -132816,19 +132799,21 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-07",
+    "as_of_date": "2026-08-08",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14037.0,
-        "change_1d_pct": -0.31,
-        "change_1w_pct": -1.38,
-        "change_1m_pct": 2.25,
+        "price": 14080.0,
+        "change_1d_pct": -0.78,
+        "change_1w_pct": 0.95,
+        "change_1m_pct": -3.15,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13745.0,
+          13745.0,
           13412.0,
           14115.0,
           14395.0,
@@ -132853,12 +132838,10 @@
           13802.0,
           13948.0,
           14188.0,
-          14234.0,
           14150.0,
           14168.0,
           14190.0,
-          14080.0,
-          14037.0
+          14080.0
         ],
         "daily_closes": [
           {
@@ -142730,10 +142713,6 @@
             "close": 14188.0
           },
           {
-            "date": "2026-07-31",
-            "close": 14234.0
-          },
-          {
             "date": "2026-08-03",
             "close": 14150.0
           },
@@ -142748,10 +142727,6 @@
           {
             "date": "2026-08-06",
             "close": 14080.0
-          },
-          {
-            "date": "2026-08-07",
-            "close": 14037.0
           }
         ]
       },
@@ -162627,10 +162602,11 @@
         "ticker": "TVSMOTOR",
         "price": 4440.9,
         "change_1d_pct": 1.51,
-        "change_1w_pct": 2.96,
-        "change_1m_pct": 22.47,
+        "change_1w_pct": 5.52,
+        "change_1m_pct": 22.01,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3569.7,
           3456.8,
           3460.6,
           3494.0,
@@ -162655,7 +162631,6 @@
           3993.5,
           4075.6,
           4208.4,
-          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172532,10 +172507,6 @@
             "close": 4208.4
           },
           {
-            "date": "2026-07-31",
-            "close": 4313.1
-          },
-          {
             "date": "2026-08-03",
             "close": 4389.0
           },
@@ -172559,12 +172530,14 @@
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11662.0,
-        "change_1d_pct": 0.36,
-        "change_1w_pct": 1.23,
-        "change_1m_pct": 14.84,
+        "price": 11620.0,
+        "change_1d_pct": -1.53,
+        "change_1w_pct": 2.49,
+        "change_1m_pct": 14.94,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9843.0,
+          9843.0,
           9630.0,
           9716.0,
           9842.0,
@@ -172589,12 +172562,10 @@
           11374.0,
           11338.0,
           11432.0,
-          11520.5,
           11856.0,
           11600.0,
           11800.0,
-          11620.0,
-          11662.0
+          11620.0
         ],
         "daily_closes": [
           {
@@ -182466,10 +182437,6 @@
             "close": 11432.0
           },
           {
-            "date": "2026-07-31",
-            "close": 11520.5
-          },
-          {
             "date": "2026-08-03",
             "close": 11856.0
           },
@@ -182484,10 +182451,6 @@
           {
             "date": "2026-08-06",
             "close": 11620.0
-          },
-          {
-            "date": "2026-08-07",
-            "close": 11662.0
           }
         ]
       },
@@ -224851,12 +224814,14 @@
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1094.3,
-        "change_1d_pct": -1.74,
-        "change_1w_pct": 2.24,
-        "change_1m_pct": 12.05,
+        "price": 1113.7,
+        "change_1d_pct": -2.12,
+        "change_1w_pct": 5.94,
+        "change_1m_pct": 11.57,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          988.1,
+          988.1,
           985.15,
           1024.0,
           999.1,
@@ -224881,12 +224846,10 @@
           1077.6,
           1051.3,
           1057.2,
-          1070.3,
           1105.4,
           1098.6,
           1137.8,
-          1113.7,
-          1094.3
+          1113.7
         ],
         "daily_closes": [
           {
@@ -234758,10 +234721,6 @@
             "close": 1057.2
           },
           {
-            "date": "2026-07-31",
-            "close": 1070.3
-          },
-          {
             "date": "2026-08-03",
             "close": 1105.4
           },
@@ -234776,21 +234735,18 @@
           {
             "date": "2026-08-06",
             "close": 1113.7
-          },
-          {
-            "date": "2026-08-07",
-            "close": 1094.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 576.9,
-        "change_1d_pct": -0.46,
-        "change_1w_pct": 11.92,
-        "change_1m_pct": 17.44,
+        "price": 579.55,
+        "change_1d_pct": -0.24,
+        "change_1w_pct": 12.32,
+        "change_1m_pct": 22.23,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          467.8,
           474.85,
           481.8,
           491.5,
@@ -234819,8 +234775,7 @@
           563.35,
           557.8,
           580.95,
-          579.55,
-          576.9
+          579.55
         ],
         "daily_closes": [
           {
@@ -244710,10 +244665,6 @@
           {
             "date": "2026-08-06",
             "close": 579.55
-          },
-          {
-            "date": "2026-08-07",
-            "close": 576.9
           }
         ]
       }
@@ -244721,7 +244672,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-07",
+    "as_of_date": "2026-08-08",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -245953,7 +245904,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-07T15:57:02.993682+00:00",
+    "generated_at": "2026-08-08T04:11:12.373206+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -245976,6 +245927,21 @@
             ],
             "signal_tags": [
               "Product / Launch"
+            ]
+          },
+          {
+            "title": "Volkswagen owners urge urgent action to cut costs, fend off China rivals",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-owners-urge-urgent-action-to-cut-costs-fend-off-china-rivals/133045750",
+            "summary": "Volkswagen's controlling families are urging management to act now. They emphasize the company's historic crossroads and need for sustainable competitiveness. Excess capacity must be reduced and costs significantly lowered. Decision-making processes need strengthening to address growing problems. This comes as Porsche SE reported a drop in its adjusted half-year earnings.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-08T03:06:50+00:00",
+            "published_display": "08 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Luxury"
+            ],
+            "signal_tags": [
+              "General"
             ]
           },
           {
@@ -246026,7 +245992,13 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "id": "2w",
+        "label": "Two-Wheelers",
+        "items": [
           {
             "title": "Dhoot Transmission Weighs In on Passenger Vehicle Wiring Harnesses",
             "url": "https://www.autocarpro.in/NEWS/dhoot-transmission-weighs-in-on-passenger-vehicle-wiring-harnesses-133914",
@@ -246044,13 +246016,7 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          }
-        ]
-      },
-      {
-        "id": "2w",
-        "label": "Two-Wheelers",
-        "items": [
+          },
           {
             "title": "India ICE vs EV Sales | For Top 2W, 3W, 4W OEMs in July 2026",
             "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-july-2026",
@@ -246435,21 +246401,6 @@
               "Policy / Regulation",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "After E20, Govt Bets Big On Bio-CNG Blending \u2013 Rs 23,731 Cr GOBARdhan Scheme Approved",
-            "url": "https://www.rushlane.com/after-e20-govt-bets-big-on-bio-cng-blending-gobardhan-12552647.html",
-            "summary": "After E20 ethanol blending in petrol, the government is now taking a similar approach for CNG by gradually blending domestically produced Compressed Biogas (CBG) The post After E20, Govt Bets Big On Bio-CNG Blending \u2013 Rs 23,731 Cr GOBARdhan Scheme Approved appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-07T04:01:31+00:00",
-            "published_display": "07 Aug 2026",
-            "importance_score": 4,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Policy / Regulation"
-            ]
           }
         ]
       }
@@ -246524,7 +246475,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-07",
+    "as_of_date": "2026-08-08",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
