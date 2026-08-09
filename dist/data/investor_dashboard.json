@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T09:41:05.897982+00:00",
+  "generated_at": "2026-08-09T15:33:21.690967+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122114,26 +122114,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-09T09:40:48.116484+00:00",
+      "generated_at": "2026-08-09T15:33:03.416029+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
-        {
-          "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
-          "summary": "Unveiled last year at EICMA as concepts, Hero's electric motorcycles will be based on entirely new platforms The post First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch appeared first on RushLane .",
-          "url": "https://www.rushlane.com/first-hero-vida-electric-motorcycle-launch-planned-for-2027-launch-12552864.html",
-          "source": "RushLane",
-          "published_at": "2026-08-09T04:02:39+00:00",
-          "published_display": "09 Aug 2026",
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "segment_tags": [
-            "Two-Wheelers",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/02/hero-vida-ubex-design-patented-in-india-8.jpg"
-        },
         {
           "title": "Volkswagen launches Virtus Anniversary Edition at \u20b919.19 lakh",
           "summary": "The limited-edition model marks fouryears of the premium sedan in India with exclusive styling and featureenhancements.",
@@ -122168,25 +122152,25 @@
       ],
       "companies": [
         {
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "count": 2,
-          "latest_published_at": "2026-08-09T04:02:39+00:00",
-          "latest_title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch"
-        },
-        {
           "company": "Volkswagen India",
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
           "latest_published_at": "2026-08-05T11:39:19+00:00",
           "latest_title": "Volkswagen launches Virtus Anniversary Edition at \u20b919.19 lakh"
+        },
+        {
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-08-01T05:28:04+00:00",
+          "latest_title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-09"
+        "latest_release_date": "2026-08-05"
       }
     }
   },
@@ -122310,7 +122294,7 @@
         "label": "USD / INR",
         "value": 95.2,
         "unit": "\u20b9",
-        "delta_value": -0.1119,
+        "delta_value": -0.1139,
         "delta_label": "-0.21% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
@@ -132727,7 +132711,7 @@
           },
           {
             "date": "2026-08-09",
-            "close": 95.2
+            "close": 95.198
           }
         ]
       }
@@ -132744,10 +132728,11 @@
         "ticker": "MARUTI",
         "price": 14037.0,
         "change_1d_pct": -0.31,
-        "change_1w_pct": -1.38,
-        "change_1m_pct": 2.25,
+        "change_1w_pct": -1.06,
+        "change_1m_pct": 0.62,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13745.0,
           13412.0,
           14115.0,
           14395.0,
@@ -132772,7 +132757,6 @@
           13802.0,
           13948.0,
           14188.0,
-          14234.0,
           14150.0,
           14168.0,
           14190.0,
@@ -142647,10 +142631,6 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 14234.0
           },
           {
             "date": "2026-08-03",
@@ -162546,10 +162526,11 @@
         "ticker": "TVSMOTOR",
         "price": 4440.9,
         "change_1d_pct": 1.51,
-        "change_1w_pct": 2.96,
-        "change_1m_pct": 22.47,
+        "change_1w_pct": 5.52,
+        "change_1m_pct": 22.01,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3569.7,
           3456.8,
           3460.6,
           3494.0,
@@ -162574,7 +162555,6 @@
           3993.5,
           4075.6,
           4208.4,
-          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172451,10 +172431,6 @@
             "close": 4208.4
           },
           {
-            "date": "2026-07-31",
-            "close": 4313.1
-          },
-          {
             "date": "2026-08-03",
             "close": 4389.0
           },
@@ -172480,10 +172456,11 @@
         "ticker": "BAJAJ-AUTO",
         "price": 11662.0,
         "change_1d_pct": 0.36,
-        "change_1w_pct": 1.23,
-        "change_1m_pct": 14.84,
+        "change_1w_pct": 2.01,
+        "change_1m_pct": 14.74,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9843.0,
           9630.0,
           9716.0,
           9842.0,
@@ -172508,7 +172485,6 @@
           11374.0,
           11338.0,
           11432.0,
-          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182383,10 +182359,6 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -224772,10 +224744,11 @@
         "ticker": "ACE",
         "price": 1094.3,
         "change_1d_pct": -1.74,
-        "change_1w_pct": 2.24,
-        "change_1m_pct": 12.05,
+        "change_1w_pct": 3.51,
+        "change_1m_pct": 12.97,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          988.1,
           985.15,
           1024.0,
           999.1,
@@ -224800,7 +224773,6 @@
           1077.6,
           1051.3,
           1057.2,
-          1070.3,
           1105.4,
           1098.6,
           1137.8,
@@ -234675,10 +234647,6 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
-          },
-          {
-            "date": "2026-07-31",
-            "close": 1070.3
           },
           {
             "date": "2026-08-03",
@@ -245856,10 +245824,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-09T09:40:29.098196+00:00",
+    "generated_at": "2026-08-09T15:32:42.094036+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 26,
     "groups": [
       {
         "id": "pv",
@@ -245879,21 +245847,6 @@
             ],
             "signal_tags": [
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "Did Maruti Accidentally Reveal Its Tata Punch Rival SUV In Official Plant Photos?",
-            "url": "https://www.rushlane.com/did-maruti-accidentally-reveal-its-tata-punch-rival-suv-12546739.html",
-            "summary": "Being India's largest carmaker, Maruti Suzuki has a strong presence across almost every high-volume passenger vehicle segment. However, one notable gap in its lineup remains the fast-growing entry SUV space dominated by Tata Punch. The post Did Maruti Accidentally Reveal Its Tata Punch Rival SUV In Official Plant Photos? appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-09T05:43:35+00:00",
-            "published_display": "09 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
             ]
           },
           {
@@ -245940,6 +245893,21 @@
             ],
             "signal_tags": [
               "General"
+            ]
+          },
+          {
+            "title": "JSW, Volkswagen plan new set of wheels to drive tie-up",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jsw-volkswagen-plan-new-set-of-wheels-to-drive-tie-up/132886713",
+            "summary": "As per the agreement, currently under negotiations, Skoda Auto Volkswagen India\u2019s manufacturing plant in Chakan in Maharashtra, employees, vehicle platforms, sales and marketing operations, as well as exports from India and technology will be transferred to this new entity.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-05T03:16:12+00:00",
+            "published_display": "05 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Capacity / Capex"
             ]
           }
         ]
@@ -246005,39 +245973,6 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
-            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
-            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-05T06:06:14+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Battery Smart eyes IPO filing in Sept\u2013Oct, appoints SBI Capital Markets",
-            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/battery-smart-eyes-ipo-filing-in-septoct-appoints-sbi-capital-markets/132852791",
-            "summary": "Battery Smart is preparing to file draft IPO papers with Sebi in the coming months as it targets rapid expansion of its battery-swapping network for electric two- and three-wheelers.",
-            "source": "ET Auto Components",
-            "published_at": "2026-08-04T08:14:51+00:00",
-            "published_display": "04 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "BharatBenz Opens Regional Parts Logistics Centre in Pune",
             "url": "https://www.autocarpro.in/NEWS/bharatbenz-opens-regional-parts-logistics-centre-in-pune-133997",
             "summary": "Daimler India Commercial Vehicles (DICV), which manufactures BharatBenz trucks and buses, has inaugurated a new West Regional Parts Logistics Centre in Pune as part of efforts to strengthen its aftersales and spare-parts distribution network. The facility is intended to bring genuine spare parts closer to customers and dealers in western India, helping reduce delivery lead times and improve parts availability.",
@@ -246084,6 +246019,22 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins",
+            "url": "https://evreporter.com/wonder-cement-deploys-250-montra-electric-rhino-e-trucks-for-long-haul-freight",
+            "summary": "The post Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins appeared first at EVreporter on EVreporter . Wonder Cement has deployed around 250 Montra Electric Rhino 5538 EV 4\u00d72 TT heavy-duty electric trucks for freight operations on The post Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-07-28T06:59:19+00:00",
+            "published_display": "28 Jul 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -246091,72 +246042,6 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
-          {
-            "title": "Electric Car Sales July 2026 \u2013 Tata, Mahindra, MG, Maruti, VinFast, Hyundai, Kia, BMW, Mercedes",
-            "url": "https://www.rushlane.com/electric-car-sales-july-2026-tata-mahindra-mg-maruti-vinfast-12552820.html",
-            "summary": "The strongest July month across all segments, saw total electric passenger vehicle sales at an 83.13% YoY growth The post Electric Car Sales July 2026 \u2013 Tata, Mahindra, MG, Maruti, VinFast, Hyundai, Kia, BMW, Mercedes appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-08T11:37:39+00:00",
-            "published_display": "08 Aug 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Why Mahindra\u2019s Electric Origin SUVs Are Winning Over Premium EV Buyers",
-            "url": "https://www.rushlane.com/why-mahindras-electric-origin-suvs-are-winning-over-premium-ev-buyers-12552843.html",
-            "summary": "In terms of overall technology and feature set, BE 6, XEV 9e and XEV 9S overlap with premium electric SUVs such as BMW iX1, BYD Sealion 7 and Tesla Model Y, despite being priced considerably lower The post Why Mahindra\u2019s Electric Origin SUVs Are Winning Over Premium EV Buyers appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-08T08:36:31+00:00",
-            "published_display": "08 Aug 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Electric 2W Retail Sales July 2026 \u2013 EV Share Crosses 11%",
-            "url": "https://www.rushlane.com/electric-2w-retail-sales-july-2026-ev-share-crosses-11-12552825.html",
-            "summary": "Electric two-wheelers crossed the two lakh unit mark for the first time, while EVs accounted for a record 11.24% share of India's two-wheeler market The post Electric 2W Retail Sales July 2026 \u2013 EV Share Crosses 11% appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-09T09:30:29+00:00",
-            "published_display": "09 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
-            "url": "https://www.rushlane.com/first-hero-vida-electric-motorcycle-launch-planned-for-2027-launch-12552864.html",
-            "summary": "Unveiled last year at EICMA as concepts, Hero's electric motorcycles will be based on entirely new platforms The post First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-08-09T04:02:39+00:00",
-            "published_display": "09 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
           {
             "title": "Switch Mobility Turns Net Profitable in FY26 | Interaction with CEO Ganesh Mani",
             "url": "https://evreporter.com/switch-mobility-turns-net-profitable-in-fy26-interaction-with-ceo-ganesh-mani",
@@ -246170,6 +246055,72 @@
               "EV"
             ],
             "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Ford unveils $28,000 EV pickup \u2018Fathom\u2019",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ford-unveils-28000-ev-pickup-fathom/133007361",
+            "summary": "Ford plans an affordable midsize electric pickup with a new low-cost manufacturing approach to rival Tesla and BYD.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-06T13:42:46+00:00",
+            "published_display": "06 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
+            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
+            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-05T06:06:14+00:00",
+            "published_display": "05 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tesla's July China-made EV sales rise 37.8%",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-july-china-made-ev-sales-rise-37-8/132887293",
+            "summary": "While CEO Elon Musk dismissed as \"fake news\" a report that the company was weighing a spin-off or sale of its China business ahead of a potential \u200cmerger with firm SpaceX, the speculation underscores investor concerns over Tesla's exposure to the country, where \u200babout 95 per cent \u200bof its components \u2060are sourced locally.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-05T04:10:37+00:00",
+            "published_display": "05 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Battery Smart eyes IPO filing in Sept\u2013Oct, appoints SBI Capital Markets",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/battery-smart-eyes-ipo-filing-in-septoct-appoints-sbi-capital-markets/132852791",
+            "summary": "Battery Smart is preparing to file draft IPO papers with Sebi in the coming months as it targets rapid expansion of its battery-swapping network for electric two- and three-wheelers.",
+            "source": "ET Auto Components",
+            "published_at": "2026-08-04T08:14:51+00:00",
+            "published_display": "04 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
               "Supply Chain / Components"
             ]
           }
@@ -246340,23 +246291,23 @@
       "ET Auto Passenger Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
-      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 5,
+      "sources_live": 4,
       "sources_hidden": [
         "ET Auto Two Wheelers",
         "ET Auto Commercial Vehicles",
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV"
+        "Autocar Professional EV",
+        "RushLane"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 58,
+      "unmapped_articles": 57,
       "filtered_low_signal": 0,
-      "kept_articles": 87
+      "kept_articles": 79
     }
   },
   "qa": [
