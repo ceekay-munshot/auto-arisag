@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T04:19:05.526414+00:00",
+  "generated_at": "2026-08-09T09:41:05.897982+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122114,9 +122114,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-09T04:18:42.326793+00:00",
+      "generated_at": "2026-08-09T09:40:48.116484+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 3,
       "items": [
         {
           "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
@@ -122135,19 +122135,6 @@
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/02/hero-vida-ubex-design-patented-in-india-8.jpg"
         },
         {
-          "title": "New Bajaj Pulsar N160 SS Reaches Dealer Showroom \u2013 First Deliveries Start",
-          "summary": "Just a day after its official launch, the new Bajaj Pulsar N160 SS has started reaching dealerships across the country The post New Bajaj Pulsar N160 SS Reaches Dealer Showroom \u2013 First Deliveries Start appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-bajaj-pulsar-n160-ss-reaches-dealer-showroom-first-deliveries-start-12552840.html",
-          "source": "RushLane",
-          "published_at": "2026-08-08T08:11:49+00:00",
-          "published_display": "08 Aug 2026",
-          "company": "Bajaj Auto",
-          "tone": "tw",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/new-bajaj-pulsar-n160ss-delivery-starts-dealer-showroom.jpeg"
-        },
-        {
           "title": "Volkswagen launches Virtus Anniversary Edition at \u20b919.19 lakh",
           "summary": "The limited-edition model marks fouryears of the premium sedan in India with exclusive styling and featureenhancements.",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-launches-virtus-anniversary-edition-at-19-19-lakh/132922589",
@@ -122161,21 +122148,6 @@
             "Passenger Vehicles"
           ],
           "image_url": "https://etimg.etb2bimg.com/thumb/img-size-203692/132922589.cms"
-        },
-        {
-          "title": "Hyundai launches assured buyback programme for Creta Electric",
-          "summary": "Scheme covers ownership of up to three years or 45,000 km, aiming to address resale value concerns and boost EV adoption.",
-          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-launches-assured-buyback-programme-for-creta-electric/132851699",
-          "source": "ET Auto Passenger Vehicles",
-          "published_at": "2026-08-04T07:29:13+00:00",
-          "published_display": "04 Aug 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": "https://etimg.etb2bimg.com/thumb/img-size-51364/132851699.cms"
         },
         {
           "title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh",
@@ -122204,28 +122176,12 @@
           "latest_title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch"
         },
         {
-          "company": "Bajaj Auto",
-          "tone": "tw",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-08-08T08:11:49+00:00",
-          "latest_title": "New Bajaj Pulsar N160 SS Reaches Dealer Showroom \u2013 First Deliveries Start"
-        },
-        {
           "company": "Volkswagen India",
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
           "latest_published_at": "2026-08-05T11:39:19+00:00",
           "latest_title": "Volkswagen launches Virtus Anniversary Edition at \u20b919.19 lakh"
-        },
-        {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-08-04T07:29:13+00:00",
-          "latest_title": "Hyundai launches assured buyback programme for Creta Electric"
         }
       ],
       "source_meta": {
@@ -172524,11 +172480,10 @@
         "ticker": "BAJAJ-AUTO",
         "price": 11662.0,
         "change_1d_pct": 0.36,
-        "change_1w_pct": 2.01,
-        "change_1m_pct": 14.74,
+        "change_1w_pct": 1.23,
+        "change_1m_pct": 14.84,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          9843.0,
           9630.0,
           9716.0,
           9842.0,
@@ -172553,6 +172508,7 @@
           11374.0,
           11338.0,
           11432.0,
+          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182427,6 +182383,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -245896,10 +245856,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-09T04:18:13.892294+00:00",
+    "generated_at": "2026-08-09T09:40:29.098196+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 28,
+    "item_count": 27,
     "groups": [
       {
         "id": "pv",
@@ -245919,6 +245879,21 @@
             ],
             "signal_tags": [
               "Product / Launch"
+            ]
+          },
+          {
+            "title": "Did Maruti Accidentally Reveal Its Tata Punch Rival SUV In Official Plant Photos?",
+            "url": "https://www.rushlane.com/did-maruti-accidentally-reveal-its-tata-punch-rival-suv-12546739.html",
+            "summary": "Being India's largest carmaker, Maruti Suzuki has a strong presence across almost every high-volume passenger vehicle segment. However, one notable gap in its lineup remains the fast-growing entry SUV space dominated by Tata Punch. The post Did Maruti Accidentally Reveal Its Tata Punch Rival SUV In Official Plant Photos? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-09T05:43:35+00:00",
+            "published_display": "09 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Capacity / Capex"
             ]
           },
           {
@@ -245965,23 +245940,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Tesla's July China-made EV sales rise 37.8%",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/teslas-july-china-made-ev-sales-rise-37-8/132887293",
-            "summary": "While CEO Elon Musk dismissed as \"fake news\" a report that the company was weighing a spin-off or sale of its China business ahead of a potential \u200cmerger with firm SpaceX, the speculation underscores investor concerns over Tesla's exposure to the country, where \u200babout 95 per cent \u200bof its components \u2060are sourced locally.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-05T04:10:37+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV",
-              "Components"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -246080,6 +246038,22 @@
             ]
           },
           {
+            "title": "BharatBenz Opens Regional Parts Logistics Centre in Pune",
+            "url": "https://www.autocarpro.in/NEWS/bharatbenz-opens-regional-parts-logistics-centre-in-pune-133997",
+            "summary": "Daimler India Commercial Vehicles (DICV), which manufactures BharatBenz trucks and buses, has inaugurated a new West Regional Parts Logistics Centre in Pune as part of efforts to strengthen its aftersales and spare-parts distribution network. The facility is intended to bring genuine spare parts closer to customers and dealers in western India, helping reduce delivery lead times and improve parts availability.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-08-08T16:52:59+00:00",
+            "published_display": "08 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads",
             "url": "https://evreporter.com/olectra-becomes-indias-first-company-to-deploy-4000-electric-buses-on-indian-roads",
             "summary": "The post Olectra Becomes India\u2019s First Company to Deploy 4,000 Electric Buses on Indian Roads appeared first at EVreporter on EVreporter . Hyderabad-based electric bus manufacturer Olectra Greentech Limited has become the first company in India to deploy 4,000 electric buses.",
@@ -246102,22 +246076,6 @@
             "source": "EVReporter",
             "published_at": "2026-07-30T09:18:09+00:00",
             "published_display": "30 Jul 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins",
-            "url": "https://evreporter.com/wonder-cement-deploys-250-montra-electric-rhino-e-trucks-for-long-haul-freight",
-            "summary": "The post Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins appeared first at EVreporter on EVreporter . Wonder Cement has deployed around 250 Montra Electric Rhino 5538 EV 4\u00d72 TT heavy-duty electric trucks for freight operations on The post Wonder Cement Orders 250 Montra Electric Rhino E-Trucks; Deployment Begins appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-28T06:59:19+00:00",
-            "published_display": "28 Jul 2026",
             "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
@@ -246168,6 +246126,22 @@
             ]
           },
           {
+            "title": "Electric 2W Retail Sales July 2026 \u2013 EV Share Crosses 11%",
+            "url": "https://www.rushlane.com/electric-2w-retail-sales-july-2026-ev-share-crosses-11-12552825.html",
+            "summary": "Electric two-wheelers crossed the two lakh unit mark for the first time, while EVs accounted for a record 11.24% share of India's two-wheeler market The post Electric 2W Retail Sales July 2026 \u2013 EV Share Crosses 11% appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-09T09:30:29+00:00",
+            "published_display": "09 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
             "url": "https://www.rushlane.com/first-hero-vida-electric-motorcycle-launch-planned-for-2027-launch-12552864.html",
             "summary": "Unveiled last year at EICMA as concepts, Hero's electric motorcycles will be based on entirely new platforms The post First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch appeared first on RushLane .",
@@ -246198,22 +246172,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Ford unveils $28,000 EV pickup \u2018Fathom\u2019",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/ford-unveils-28000-ev-pickup-fathom/133007361",
-            "summary": "Ford plans an affordable midsize electric pickup with a new low-cost manufacturing approach to rival Tesla and BYD.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-06T13:42:46+00:00",
-            "published_display": "06 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Product / Launch"
-            ]
           }
         ]
       },
@@ -246221,23 +246179,6 @@
         "id": "components",
         "label": "Components",
         "items": [
-          {
-            "title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh",
-            "url": "https://evreporter.com/heros-vida-launches-vx2-go-fb-electric-scooter-at-%e2%82%b91-13-lakh",
-            "summary": "The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter . VIDA, the electric mobility brand of Hero, has introduced the VIDA VX2 Go FB (3.1 kWh), a new variant in The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-01T05:28:04+00:00",
-            "published_display": "01 Aug 2026",
-            "importance_score": 9,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
           {
             "title": "E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999",
             "url": "https://evreporter.com/e3-electric-ai-launches-e3-trion-electric-scooter-priced-from-%e2%82%b999999",
@@ -246270,6 +246211,23 @@
               "Funding / M&A",
               "Supply Chain / Components",
               "Input Costs / Commodities"
+            ]
+          },
+          {
+            "title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh",
+            "url": "https://evreporter.com/heros-vida-launches-vx2-go-fb-electric-scooter-at-%e2%82%b91-13-lakh",
+            "summary": "The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter . VIDA, the electric mobility brand of Hero, has introduced the VIDA VX2 Go FB (3.1 kWh), a new variant in The post Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-01T05:28:04+00:00",
+            "published_display": "01 Aug 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -246310,22 +246268,6 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
-          {
-            "title": "Hyundai launches assured buyback programme for Creta Electric",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/hyundai-launches-assured-buyback-programme-for-creta-electric/132851699",
-            "summary": "Scheme covers ownership of up to three years or 45,000 km, aiming to address resale value concerns and boost EV adoption.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-04T07:29:13+00:00",
-            "published_display": "04 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Product / Launch"
-            ]
-          },
           {
             "title": "Dhoot Transmission secures \u20b9918 cr from anchor investors; IPO to open on Aug 10",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/dhoot-transmission-secures-918-cr-from-anchor-investors-ipo-to-open-on-aug-10/133047177",

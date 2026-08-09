@@ -39744,11 +39744,10 @@
       "ticker": "BAJAJ-AUTO",
       "price": 11662.0,
       "change_1d_pct": 0.36,
-      "change_1w_pct": 2.01,
-      "change_1m_pct": 14.74,
+      "change_1w_pct": 1.23,
+      "change_1m_pct": 14.84,
       "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
       "closes_30d": [
-        9843.0,
         9630.0,
         9716.0,
         9842.0,
@@ -39773,6 +39772,7 @@
         11374.0,
         11338.0,
         11432.0,
+        11520.5,
         11856.0,
         11600.0,
         11800.0,
@@ -49647,6 +49647,10 @@
         {
           "date": "2026-07-30",
           "close": 11432.0
+        },
+        {
+          "date": "2026-07-31",
+          "close": 11520.5
         },
         {
           "date": "2026-08-03",
