@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T15:31:09.156960+00:00",
+  "generated_at": "2026-08-09T04:19:05.526414+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49200,7 +49200,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-08",
+          "latest_release_date": "2026-08-09",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122114,10 +122114,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-08T15:30:45.261453+00:00",
+      "generated_at": "2026-08-09T04:18:42.326793+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 5,
       "items": [
+        {
+          "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
+          "summary": "Unveiled last year at EICMA as concepts, Hero's electric motorcycles will be based on entirely new platforms The post First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch appeared first on RushLane .",
+          "url": "https://www.rushlane.com/first-hero-vida-electric-motorcycle-launch-planned-for-2027-launch-12552864.html",
+          "source": "RushLane",
+          "published_at": "2026-08-09T04:02:39+00:00",
+          "published_display": "09 Aug 2026",
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [
+            "Two-Wheelers",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/02/hero-vida-ubex-design-patented-in-india-8.jpg"
+        },
         {
           "title": "New Bajaj Pulsar N160 SS Reaches Dealer Showroom \u2013 First Deliveries Start",
           "summary": "Just a day after its official launch, the new Bajaj Pulsar N160 SS has started reaching dealerships across the country The post New Bajaj Pulsar N160 SS Reaches Dealer Showroom \u2013 First Deliveries Start appeared first on RushLane .",
@@ -122180,6 +122196,14 @@
       ],
       "companies": [
         {
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 2,
+          "latest_published_at": "2026-08-09T04:02:39+00:00",
+          "latest_title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch"
+        },
+        {
           "company": "Bajaj Auto",
           "tone": "tw",
           "scope": "listed",
@@ -122202,25 +122226,17 @@
           "count": 1,
           "latest_published_at": "2026-08-04T07:29:13+00:00",
           "latest_title": "Hyundai launches assured buyback programme for Creta Electric"
-        },
-        {
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-08-01T05:28:04+00:00",
-          "latest_title": "Hero\u2019s VIDA Launches VX2 Go FB Electric Scooter at \u20b91.13 Lakh"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-08"
+        "latest_release_date": "2026-08-09"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-08",
+    "as_of_date": "2026-08-09",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -132754,7 +132770,7 @@
             "close": 95.3119
           },
           {
-            "date": "2026-08-08",
+            "date": "2026-08-09",
             "close": 95.2
           }
         ]
@@ -132763,7 +132779,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-08",
+    "as_of_date": "2026-08-09",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -172508,10 +172524,11 @@
         "ticker": "BAJAJ-AUTO",
         "price": 11662.0,
         "change_1d_pct": 0.36,
-        "change_1w_pct": 1.23,
-        "change_1m_pct": 14.84,
+        "change_1w_pct": 2.01,
+        "change_1m_pct": 14.74,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9843.0,
           9630.0,
           9716.0,
           9842.0,
@@ -172536,7 +172553,6 @@
           11374.0,
           11338.0,
           11432.0,
-          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182411,10 +182427,6 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -244668,17 +244680,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-08",
+    "as_of_date": "2026-08-09",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-08-08",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
       {
         "company": "Tata Motors CV",
         "ticker": "TMCV",
@@ -244706,14 +244710,6 @@
     ],
     "upcoming_all": [
       {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-08-08",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
-      {
         "company": "Tata Motors CV",
         "ticker": "TMCV",
         "date": "2026-08-12",
@@ -244739,6 +244735,14 @@
       }
     ],
     "recent_past": [
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-08-08",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
+      },
       {
         "company": "Hero MotoCorp",
         "ticker": "HEROMOTOCO",
@@ -244778,18 +244782,10 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HYUNDAI"
-      },
-      {
-        "company": "Eicher Motors",
-        "ticker": "EICHERMOT",
-        "date": "2026-07-29",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=EICHERMOT"
       }
     ],
-    "next_14_count": 4,
-    "upcoming_count": 4
+    "next_14_count": 3,
+    "upcoming_count": 3
   },
   "market_insights": [
     {
@@ -245900,10 +245896,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-08T15:30:22.143681+00:00",
+    "generated_at": "2026-08-09T04:18:13.892294+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 28,
     "groups": [
       {
         "id": "pv",
@@ -246051,6 +246047,22 @@
         "label": "Commercial Vehicles",
         "items": [
           {
+            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
+            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
+            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-05T06:06:14+00:00",
+            "published_display": "05 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Battery Smart eyes IPO filing in Sept\u2013Oct, appoints SBI Capital Markets",
             "url": "https://auto.economictimes.indiatimes.com/news/auto-components/battery-smart-eyes-ipo-filing-in-septoct-appoints-sbi-capital-markets/132852791",
             "summary": "Battery Smart is preparing to file draft IPO papers with Sebi in the coming months as it targets rapid expansion of its battery-swapping network for electric two- and three-wheelers.",
@@ -246156,6 +246168,22 @@
             ]
           },
           {
+            "title": "First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch",
+            "url": "https://www.rushlane.com/first-hero-vida-electric-motorcycle-launch-planned-for-2027-launch-12552864.html",
+            "summary": "Unveiled last year at EICMA as concepts, Hero's electric motorcycles will be based on entirely new platforms The post First Hero Vida Electric Motorcycle Launch Planned For 2027 Launch appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-09T04:02:39+00:00",
+            "published_display": "09 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Switch Mobility Turns Net Profitable in FY26 | Interaction with CEO Ganesh Mani",
             "url": "https://evreporter.com/switch-mobility-turns-net-profitable-in-fy26-interaction-with-ceo-ganesh-mani",
             "summary": "The post Switch Mobility Turns Net Profitable in FY26 | Interaction with CEO Ganesh Mani appeared first at EVreporter on EVreporter . Switch delivered 1,530 electric buses and 1,600 e-LCVs during FY25-26. Ganesh Mani, CEO of Switch Mobility, discusses the levers behind The post Switch Mobility Turns Net Profitable in FY26 | Interaction with CEO Ganesh Mani appeared first at EVreporter on EVreporter .",
@@ -246185,22 +246213,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Product / Launch"
-            ]
-          },
-          {
-            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
-            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
-            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-05T06:06:14+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -246400,9 +246412,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 57,
+      "unmapped_articles": 58,
       "filtered_low_signal": 0,
-      "kept_articles": 86
+      "kept_articles": 87
     }
   },
   "qa": [
@@ -246452,7 +246464,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-08",
+    "as_of_date": "2026-08-09",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
