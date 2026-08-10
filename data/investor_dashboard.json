@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T10:17:51.120493+00:00",
+  "generated_at": "2026-08-10T16:01:01.388206+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -132745,9 +132745,10 @@
         "price": 14097.0,
         "change_1d_pct": 0.43,
         "change_1w_pct": -0.37,
-        "change_1m_pct": 1.75,
+        "change_1m_pct": 2.69,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          13412.0,
           14115.0,
           14395.0,
           14348.0,
@@ -132771,7 +132772,6 @@
           13802.0,
           13948.0,
           14188.0,
-          14234.0,
           14150.0,
           14168.0,
           14190.0,
@@ -142639,10 +142639,6 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 14234.0
           },
           {
             "date": "2026-08-03",
@@ -162535,9 +162531,10 @@
         "price": 4466.2,
         "change_1d_pct": 0.57,
         "change_1w_pct": 1.76,
-        "change_1m_pct": 23.27,
+        "change_1m_pct": 23.17,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3456.8,
           3460.6,
           3494.0,
           3626.8,
@@ -162561,7 +162558,6 @@
           3993.5,
           4075.6,
           4208.4,
-          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172431,10 +172427,6 @@
             "close": 4208.4
           },
           {
-            "date": "2026-07-31",
-            "close": 4313.1
-          },
-          {
             "date": "2026-08-03",
             "close": 4389.0
           },
@@ -172465,9 +172457,10 @@
         "price": 11677.0,
         "change_1d_pct": 0.13,
         "change_1w_pct": -1.51,
-        "change_1m_pct": 14.98,
+        "change_1m_pct": 14.99,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9630.0,
           9716.0,
           9842.0,
           9857.0,
@@ -172491,7 +172484,6 @@
           11374.0,
           11338.0,
           11432.0,
-          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182359,10 +182351,6 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -224745,9 +224733,10 @@
         "price": 1113.6,
         "change_1d_pct": 1.76,
         "change_1w_pct": 0.74,
-        "change_1m_pct": 12.6,
+        "change_1m_pct": 14.03,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          985.15,
           1024.0,
           999.1,
           1016.7,
@@ -224771,7 +224760,6 @@
           1077.6,
           1051.3,
           1057.2,
-          1070.3,
           1105.4,
           1098.6,
           1137.8,
@@ -234639,10 +234627,6 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
-          },
-          {
-            "date": "2026-07-31",
-            "close": 1070.3
           },
           {
             "date": "2026-08-03",
@@ -245820,7 +245804,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-10T10:17:07.104336+00:00",
+    "generated_at": "2026-08-10T16:00:15.032841+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 25,
@@ -245839,6 +245823,21 @@
             "importance_score": 8,
             "segment_tags": [
               "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Mercedes-Benz India launches \u2018Dream Days\u2019 festive campaign with finance offers",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-launches-dream-days-festive-campaign-with-finance-offers/133110189",
+            "summary": "Three-month EMI holiday for GLA and GLC, 6.99 per cent interest on select models and zero-down-payment upgrade option for GLE and GLS.",
+            "source": "ET Auto Passenger Vehicles",
+            "published_at": "2026-08-10T14:07:13+00:00",
+            "published_display": "10 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
               "Luxury"
             ],
             "signal_tags": [
@@ -245890,21 +245889,6 @@
             "signal_tags": [
               "General"
             ]
-          },
-          {
-            "title": "JSW, Volkswagen plan new set of wheels to drive tie-up",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/jsw-volkswagen-plan-new-set-of-wheels-to-drive-tie-up/132886713",
-            "summary": "As per the agreement, currently under negotiations, Skoda Auto Volkswagen India\u2019s manufacturing plant in Chakan in Maharashtra, employees, vehicle platforms, sales and marketing operations, as well as exports from India and technology will be transferred to this new entity.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-05T03:16:12+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
           }
         ]
       },
@@ -245930,23 +245914,6 @@
             ]
           },
           {
-            "title": "Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999",
-            "url": "https://evreporter.com/avore-electric-launches-its-ex-series-of-electric-motorcycles-starting-at-%e2%82%b9124999",
-            "summary": "The post Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999 appeared first at EVreporter on EVreporter . Gujarat-based Avore Electric, the electric mobility brand of Samarth E-Mobility, has launched its first electric motorcycle, the EX, at a The post Avore Electric launches its EX series of electric motorcycles, starting at \u20b91,24,999 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-07-28T11:17:58+00:00",
-            "published_display": "28 Jul 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Ampere Reo VYB Review: Everything You Need to Know Before You Buy",
             "url": "https://evreporter.com/ampere-reo-vyb-review",
             "summary": "The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter . Ampere is the sixth-largest electric 2W seller in India; its sales has crossed at least 10,000 e-2Ws per month (as The post Ampere Reo VYB Review: Everything You Need to Know Before You Buy appeared first at EVreporter on EVreporter .",
@@ -245960,6 +245927,21 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Yezdi Scrambler 350 Review \u2013 Your Next Motorcycle At Rs 2 Lakh?",
+            "url": "https://www.rushlane.com/yezdi-scrambler-350-review-your-next-motorcycle-at-rs-2-lakh-12552745.html",
+            "summary": "We experienced new Yezdi Scrambler 350 in and around Pune across multiple conditions and compiled our thoughts on this Rs 2 lakh scrambler The post Yezdi Scrambler 350 Review \u2013 Your Next Motorcycle At Rs 2 Lakh? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-10T14:11:06+00:00",
+            "published_display": "10 Aug 2026",
+            "importance_score": 4,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "General"
             ]
           }
         ]
@@ -246284,7 +246266,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 60,
+      "unmapped_articles": 62,
       "filtered_low_signal": 0,
       "kept_articles": 87
     }
