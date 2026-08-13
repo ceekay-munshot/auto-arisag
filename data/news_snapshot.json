@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-12T15:59:38.437584+00:00",
+  "generated_at": "2026-08-13T04:51:18.496513+00:00",
   "window_days": 45,
   "group_count": 6,
   "item_count": 30,
@@ -9,21 +9,6 @@
       "id": "pv",
       "label": "Passenger Vehicles",
       "items": [
-        {
-          "title": "Skoda VW Sales Breakup July 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun",
-          "url": "https://www.rushlane.com/skoda-vw-sales-breakup-july-2026-kylaq-slavia-kushaq-virtus-taigun-12553096.html",
-          "summary": "While Skoda registered year-on-year growth led by the Kylaq SUV, Volkswagen witnessed a decline compared to the same month last year despite posting a healthy month-on-month improvement. The post Skoda VW Sales Breakup July 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun appeared first on RushLane .",
-          "source": "RushLane",
-          "published_at": "2026-08-12T13:05:26+00:00",
-          "published_display": "12 Aug 2026",
-          "importance_score": 7,
-          "segment_tags": [
-            "Passenger Vehicles"
-          ],
-          "signal_tags": [
-            "Monthly Sales / Demand"
-          ]
-        },
         {
           "title": "Mercedes-Benz India launches \u2018Dream Days\u2019 festive campaign with finance offers",
           "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-launches-dream-days-festive-campaign-with-finance-offers/133110189",
@@ -80,6 +65,21 @@
           "importance_score": 7,
           "segment_tags": [
             "Passenger Vehicles",
+            "Luxury"
+          ],
+          "signal_tags": [
+            "General"
+          ]
+        },
+        {
+          "title": "Volkswagen owners urge urgent action to cut costs, fend off China rivals",
+          "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-owners-urge-urgent-action-to-cut-costs-fend-off-china-rivals/133045750",
+          "summary": "Volkswagen's controlling families are urging management to act now. They emphasize the company's historic crossroads and need for sustainable competitiveness. Excess capacity must be reduced and costs significantly lowered. Decision-making processes need strengthening to address growing problems. This comes as Porsche SE reported a drop in its adjusted half-year earnings.",
+          "source": "ET Auto Passenger Vehicles",
+          "published_at": "2026-08-08T03:06:50+00:00",
+          "published_display": "08 Aug 2026",
+          "importance_score": 7,
+          "segment_tags": [
             "Luxury"
           ],
           "signal_tags": [
@@ -531,20 +531,20 @@
     "ET Auto Commercial Vehicles",
     "ET Auto Components",
     "Autocar Professional Components",
-    "RushLane",
     "EVReporter"
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 7,
+    "sources_live": 6,
     "sources_hidden": [
       "ET Auto Policy",
       "Autocar Professional Sales",
-      "Autocar Professional EV"
+      "Autocar Professional EV",
+      "RushLane"
     ],
     "duplicates_removed": 0,
-    "unmapped_articles": 78,
+    "unmapped_articles": 77,
     "filtered_low_signal": 8,
-    "kept_articles": 119
+    "kept_articles": 111
   }
 }
