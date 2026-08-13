@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T04:52:04.560927+00:00",
+  "generated_at": "2026-08-13T10:08:04.847739+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122114,10 +122114,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-13T04:51:43.175742+00:00",
+      "generated_at": "2026-08-13T10:07:41.166410+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 2,
       "items": [
+        {
+          "title": "2026 Hero Xtreme 125R With TFT Screen, TPMS Launched",
+          "summary": "2026 Hero Xtreme 125R has been launched in the country with TFT instrument cluster and a TPMS, which ups the game in the 125cc segment The post 2026 Hero Xtreme 125R With TFT Screen, TPMS Launched appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-hero-xtreme-125r-with-tft-screen-tpms-launched-12553112.html",
+          "source": "RushLane",
+          "published_at": "2026-08-13T04:09:29+00:00",
+          "published_display": "13 Aug 2026",
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/2026-hero-xtreme-160r-tft-tpms-launched-cover.jpg"
+        },
         {
           "title": "Bajaj Auto expands Pulsar N range with N160 S, N160 SS launches",
           "summary": "While the N160 S model has been priced at \u20b91,33,511, the N160 SS has been launched at \u20b91,42,585 (ex-showroom Delhi).",
@@ -122134,6 +122147,14 @@
       ],
       "companies": [
         {
+          "company": "Hero MotoCorp",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-08-13T04:09:29+00:00",
+          "latest_title": "2026 Hero Xtreme 125R With TFT Screen, TPMS Launched"
+        },
+        {
           "company": "Bajaj Auto",
           "tone": "tw",
           "scope": "listed",
@@ -122144,7 +122165,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-07"
+        "latest_release_date": "2026-08-13"
       }
     }
   },
@@ -122266,10 +122287,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.36,
+        "value": 95.43,
         "unit": "\u20b9",
-        "delta_value": -0.0199,
-        "delta_label": "+0.30% in last week (Yahoo Finance)",
+        "delta_value": 0.0501,
+        "delta_label": "+0.37% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132677,7 +132698,7 @@
           },
           {
             "date": "2026-08-13",
-            "close": 95.36
+            "close": 95.43
           }
         ]
       }
@@ -132692,10 +132713,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13863.0,
-        "change_1d_pct": -0.09,
-        "change_1w_pct": -1.54,
-        "change_1m_pct": 2.77,
+        "price": 13905.0,
+        "change_1d_pct": 0.22,
+        "change_1w_pct": -1.24,
+        "change_1m_pct": 3.08,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           14348.0,
@@ -132727,7 +132748,7 @@
           14097.0,
           13990.0,
           13875.0,
-          13863.0
+          13905.0
         ],
         "daily_closes": [
           {
@@ -142612,16 +142633,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 13863.0
+            "close": 13905.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3413.9,
-        "change_1d_pct": 0.3,
-        "change_1w_pct": 0.23,
-        "change_1m_pct": 10.74,
+        "price": 3428.2,
+        "change_1d_pct": 0.72,
+        "change_1w_pct": 0.65,
+        "change_1m_pct": 11.2,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3136.9,
@@ -142653,7 +142674,7 @@
           3517.0,
           3460.1,
           3403.6,
-          3413.9
+          3428.2
         ],
         "daily_closes": [
           {
@@ -152542,16 +152563,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 3413.9
+            "close": 3428.2
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5879.0,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": 5.92,
-        "change_1m_pct": 20.57,
+        "price": 5850.0,
+        "change_1d_pct": -0.76,
+        "change_1w_pct": 5.4,
+        "change_1m_pct": 19.97,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4852.6,
@@ -152583,7 +152604,7 @@
           5860.0,
           5865.5,
           5895.0,
-          5879.0
+          5850.0
         ],
         "daily_closes": [
           {
@@ -162472,16 +162493,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 5879.0
+            "close": 5850.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4335.9,
-        "change_1d_pct": -0.89,
-        "change_1w_pct": -0.89,
-        "change_1m_pct": 20.16,
+        "price": 4342.2,
+        "change_1d_pct": -0.75,
+        "change_1w_pct": -0.75,
+        "change_1m_pct": 20.34,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3626.8,
@@ -162513,7 +162534,7 @@
           4466.2,
           4400.0,
           4375.0,
-          4335.9
+          4342.2
         ],
         "daily_closes": [
           {
@@ -172398,16 +172419,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 4335.9
+            "close": 4342.2
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11637.0,
-        "change_1d_pct": -0.54,
-        "change_1w_pct": 0.15,
-        "change_1m_pct": 14.47,
+        "price": 11661.0,
+        "change_1d_pct": -0.33,
+        "change_1w_pct": 0.35,
+        "change_1m_pct": 14.71,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           9857.0,
@@ -172439,7 +172460,7 @@
           11677.0,
           11717.0,
           11700.0,
-          11637.0
+          11661.0
         ],
         "daily_closes": [
           {
@@ -182324,16 +182345,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 11637.0
+            "close": 11661.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2252.5,
-        "change_1d_pct": 0.56,
-        "change_1w_pct": 1.83,
-        "change_1m_pct": 12.46,
+        "price": 2237.1,
+        "change_1d_pct": -0.13,
+        "change_1w_pct": 1.13,
+        "change_1m_pct": 11.69,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           1993.4,
@@ -182365,7 +182386,7 @@
           2223.0,
           2200.0,
           2240.0,
-          2252.5
+          2237.1
         ],
         "daily_closes": [
           {
@@ -184174,16 +184195,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 2252.5
+            "close": 2237.1
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8027.5,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": 0.75,
-        "change_1m_pct": 8.41,
+        "price": 8100.0,
+        "change_1d_pct": 0.63,
+        "change_1w_pct": 1.66,
+        "change_1m_pct": 9.39,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7339.5,
@@ -184215,7 +184236,7 @@
           7975.0,
           8000.0,
           8049.0,
-          8027.5
+          8100.0
         ],
         "daily_closes": [
           {
@@ -194104,16 +194125,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 8027.5
+            "close": 8100.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 348.45,
-        "change_1d_pct": 1.59,
-        "change_1w_pct": 0.9,
-        "change_1m_pct": 4.64,
+        "price": 349.6,
+        "change_1d_pct": 1.92,
+        "change_1w_pct": 1.23,
+        "change_1m_pct": 4.98,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -194146,7 +194167,7 @@
           347.1,
           347.6,
           343.0,
-          348.45
+          349.6
         ],
         "daily_closes": [
           {
@@ -204035,16 +204056,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 348.45
+            "close": 349.6
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 476.3,
-        "change_1d_pct": 4.21,
-        "change_1w_pct": 3.62,
-        "change_1m_pct": 12.45,
+        "price": 474.8,
+        "change_1d_pct": 3.88,
+        "change_1w_pct": 3.3,
+        "change_1m_pct": 12.1,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -204077,7 +204098,7 @@
           450.2,
           450.05,
           457.05,
-          476.3
+          474.8
         ],
         "daily_closes": [
           {
@@ -204838,16 +204859,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 476.3
+            "close": 474.8
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 180.84,
-        "change_1d_pct": 2.34,
-        "change_1w_pct": 1.88,
-        "change_1m_pct": 15.54,
+        "price": 176.23,
+        "change_1d_pct": -0.27,
+        "change_1w_pct": -0.72,
+        "change_1m_pct": 12.59,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           164.35,
@@ -204879,7 +204900,7 @@
           174.0,
           174.83,
           176.7,
-          180.84
+          176.23
         ],
         "daily_closes": [
           {
@@ -214768,16 +214789,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 180.84
+            "close": 176.23
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3105.0,
-        "change_1d_pct": -0.67,
-        "change_1w_pct": 0.78,
-        "change_1m_pct": 6.38,
+        "price": 3093.4,
+        "change_1d_pct": -1.04,
+        "change_1w_pct": 0.4,
+        "change_1m_pct": 5.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2964.9,
@@ -214809,7 +214830,7 @@
           3082.1,
           3107.0,
           3126.0,
-          3105.0
+          3093.4
         ],
         "daily_closes": [
           {
@@ -224698,16 +224719,16 @@
           },
           {
             "date": "2026-08-13",
-            "close": 3105.0
+            "close": 3093.4
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1073.0,
-        "change_1d_pct": -2.11,
-        "change_1w_pct": -3.65,
-        "change_1m_pct": 11.26,
+        "price": 1078.3,
+        "change_1d_pct": -1.62,
+        "change_1w_pct": -3.18,
+        "change_1m_pct": 11.81,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1016.7,
@@ -224739,7 +224760,7 @@
           1113.6,
           1073.3,
           1096.1,
-          1073.0
+          1078.3
         ],
         "daily_closes": [
           {
@@ -234624,19 +234645,18 @@
           },
           {
             "date": "2026-08-13",
-            "close": 1073.0
+            "close": 1078.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 509.75,
-        "change_1d_pct": 3.17,
-        "change_1w_pct": -12.26,
-        "change_1m_pct": 7.12,
+        "price": 500.15,
+        "change_1d_pct": -0.76,
+        "change_1w_pct": -13.7,
+        "change_1m_pct": 4.33,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          494.5,
           489.9,
           503.25,
           493.1,
@@ -234665,7 +234685,8 @@
           576.9,
           509.15,
           494.1,
-          509.75
+          504.0,
+          500.15
         ],
         "daily_closes": [
           {
@@ -244549,8 +244570,12 @@
             "close": 494.1
           },
           {
+            "date": "2026-08-12",
+            "close": 504.0
+          },
+          {
             "date": "2026-08-13",
-            "close": 509.75
+            "close": 500.15
           }
         ]
       }
@@ -245758,7 +245783,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-08-13T04:51:18.496513+00:00",
+    "generated_at": "2026-08-13T10:07:15.690879+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 30,
@@ -245767,6 +245792,21 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "Skoda VW Sales Breakup July 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun",
+            "url": "https://www.rushlane.com/skoda-vw-sales-breakup-july-2026-kylaq-slavia-kushaq-virtus-taigun-12553096.html",
+            "summary": "While Skoda registered year-on-year growth led by the Kylaq SUV, Volkswagen witnessed a decline compared to the same month last year despite posting a healthy month-on-month improvement. The post Skoda VW Sales Breakup July 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-12T13:05:26+00:00",
+            "published_display": "12 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "Mercedes-Benz India launches \u2018Dream Days\u2019 festive campaign with finance offers",
             "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/mercedes-benz-india-launches-dream-days-festive-campaign-with-finance-offers/133110189",
@@ -245828,21 +245868,6 @@
             "signal_tags": [
               "General"
             ]
-          },
-          {
-            "title": "Volkswagen owners urge urgent action to cut costs, fend off China rivals",
-            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/volkswagen-owners-urge-urgent-action-to-cut-costs-fend-off-china-rivals/133045750",
-            "summary": "Volkswagen's controlling families are urging management to act now. They emphasize the company's historic crossroads and need for sustainable competitiveness. Excess capacity must be reduced and costs significantly lowered. Decision-making processes need strengthening to address growing problems. This comes as Porsche SE reported a drop in its adjusted half-year earnings.",
-            "source": "ET Auto Passenger Vehicles",
-            "published_at": "2026-08-08T03:06:50+00:00",
-            "published_display": "08 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Luxury"
-            ],
-            "signal_tags": [
-              "General"
-            ]
           }
         ]
       },
@@ -245850,6 +245875,39 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Ather Konarc Spied Altitude Testing In Himalayas \u2013 Launch 29th Aug",
+            "url": "https://www.rushlane.com/ather-konarc-spied-altitude-testing-in-himalayas-launch-29th-aug-12553104.html",
+            "summary": "Similar to the Rizta, the new Konarc electric scooter will help Ather boost volumes by targeting mainstream buyers The post Ather Konarc Spied Altitude Testing In Himalayas \u2013 Launch 29th Aug appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-08-13T03:57:50+00:00",
+            "published_display": "13 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "BGauss launches Oowah electric scooter with 145 km range at 3.0 kWh battery",
+            "url": "https://auto.economictimes.indiatimes.com/news/two-wheelers/bgauss-launches-oowah-electric-scooter-with-145-km-range-at-3-0-kwh-battery/133179564",
+            "summary": "The new EV-pop scooter gets a removable LFP battery, everyday-focused features and four colour options, targeting Gen Z and first-time electric two-wheeler buyers.",
+            "source": "ET Auto Two Wheelers",
+            "published_at": "2026-08-12T10:39:18+00:00",
+            "published_display": "12 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Inside TRION: E3 Electric.ai\u2019s Sanjeev P on Modularity, AI, and Solving EV Ownership Concerns",
             "url": "https://evreporter.com/inside-trion-e3-electric-ais-sanjeev-p-on-modularity-ai-and-solving-ev-ownership-concerns",
@@ -245898,36 +245956,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Hero slashes price, Bajaj flags flattish growth in entry-level bikes as inflation pinches rural incomes",
-            "url": "https://auto.economictimes.indiatimes.com/news/two-wheelers/hero-slashes-price-bajaj-flags-flattish-growth-in-entry-level-bikes-as-inflation-pinches-rural-incomes/133090089",
-            "summary": "As farm incomes stagnate due to patchy rainfall and consequent lag in crop sowing, raising prices of essentials, sales of entry-level motorcycles are already causing some concern.",
-            "source": "ET Auto Two Wheelers",
-            "published_at": "2026-08-10T07:47:24+00:00",
-            "published_display": "10 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
-            "title": "Hero MotoCorp shares gain over 5% in two sessions post-Q1 show; brokerages see strong demand momentum",
-            "url": "https://auto.economictimes.indiatimes.com/news/two-wheelers/hero-motocorp-shares-gain-over-5-in-two-sessions-post-q1-show-brokerages-see-strong-demand-momentum/133087513",
-            "summary": "The stock has been up in seven of the last eight trading sessions, with brokerages citing sustained demand momentum, backed by premiumisation and capacity expansion.",
-            "source": "ET Auto Two Wheelers",
-            "published_at": "2026-08-10T06:17:17+00:00",
-            "published_display": "10 Aug 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Capacity / Capex"
-            ]
           }
         ]
       },
@@ -245949,22 +245977,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Delhi govt to start inter-state buses to Bihar before Chhath this year: Pankaj Singh",
-            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/delhi-govt-to-start-inter-state-buses-to-bihar-before-chhath-this-year-pankaj-singh/133046607",
-            "summary": "Delhi government is set to launch special AC luxury inter-state buses to seven locations in Bihar before the Chhath festival.",
-            "source": "ET Auto Commercial Vehicles",
-            "published_at": "2026-08-08T04:44:14+00:00",
-            "published_display": "08 Aug 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Product / Launch"
             ]
           },
           {
@@ -246000,19 +246012,35 @@
             ]
           },
           {
-            "title": "BlackBuck EV and Chalo to Deploy 300 Electric Buses",
-            "url": "https://evreporter.com/blackbuck-ev-and-chalo-to-deploy-300-electric-buses",
-            "summary": "The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter . Hyderabad-based BlackBuck Electric Vehicles India Pvt. Ltd. (BlackBuck EV) and Chalo Mobility Private Limited (Chalo) have signed a Memorandum of The post BlackBuck EV and Chalo to Deploy 300 Electric Buses appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-05T06:06:14+00:00",
-            "published_display": "05 Aug 2026",
-            "importance_score": 7,
+            "title": "Bolt.Earth Secures ARAI Certification for Universal Fast Charger",
+            "url": "https://www.autocarpro.in/NEWS/boltearth-secures-arai-certification-for-universal-fast-charger-134030",
+            "summary": "Bolt.Earth announced on Tuesday that it has received certification from the Automotive Research Association of India (ARAI) for its Blaze DC 3kW Dual Gun Charger, validating the unit for two- and three-wheeler electric vehicles across India. The certification marks the Blaze DC 3kW Dual Gun as the world's first universal fast charger for two- and three-wheelers to meet ARAI safety and performance standards.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-08-11T12:03:25+00:00",
+            "published_display": "11 Aug 2026",
+            "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles",
               "EV"
             ],
             "signal_tags": [
               "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Ashok Leyland partners with Drivn to offer financing for EV customers",
+            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/ashok-leyland-partners-with-drivn-to-offer-financing-for-ev-customers/133102300",
+            "summary": "The partnership will provide customised financing, leasing and fleet ownership solutions to make electric commercial vehicles more accessible.",
+            "source": "ET Auto Commercial Vehicles",
+            "published_at": "2026-08-10T11:52:54+00:00",
+            "published_display": "10 Aug 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "General"
             ]
           }
         ]
@@ -246071,36 +246099,36 @@
             ]
           },
           {
-            "title": "Deeptech Startup Adiabatic Technologies Raises \u20b98.3 Crore in Seed Funding",
-            "url": "https://evreporter.com/deeptech-startup-adiabatic-technologies-raises-%e2%82%b98-3-crore-in-seed-funding",
-            "summary": "The post Deeptech Startup Adiabatic Technologies Raises \u20b98.3 Crore in Seed Funding appeared first at EVreporter on EVreporter . Adiabatic Technologies, a company developing lithium-ion battery systems for industrial applications, has raised \u20b98.3 crore in a Seed funding round The post Deeptech Startup Adiabatic Technologies Raises \u20b98.3 Crore in Seed Funding appeared first at EVreporter on EVreporter .",
+            "title": "E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999",
+            "url": "https://evreporter.com/e3-electric-ai-launches-e3-trion-electric-scooter-priced-from-%e2%82%b999999",
+            "summary": "The post E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999 appeared first at EVreporter on EVreporter . Bengaluru-based electric mobility startup E3 Electric.AI has launched the E3 TRION electric scooter. The scooter is available in three variants\u2014C1, The post E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999 appeared first at EVreporter on EVreporter .",
             "source": "EVReporter",
-            "published_at": "2026-08-05T05:12:55+00:00",
-            "published_display": "05 Aug 2026",
+            "published_at": "2026-08-06T11:04:45+00:00",
+            "published_display": "06 Aug 2026",
             "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components",
-              "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "BGauss launches Oowah electric scooter with 145 km range at 3.0 kWh battery",
-            "url": "https://auto.economictimes.indiatimes.com/news/two-wheelers/bgauss-launches-oowah-electric-scooter-with-145-km-range-at-3-0-kwh-battery/133179564",
-            "summary": "The new EV-pop scooter gets a removable LFP battery, everyday-focused features and four colour options, targeting Gen Z and first-time electric two-wheeler buyers.",
-            "source": "ET Auto Two Wheelers",
-            "published_at": "2026-08-12T10:39:18+00:00",
-            "published_display": "12 Aug 2026",
-            "importance_score": 7,
             "segment_tags": [
               "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
               "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tata Motors expects EV supply chain bottlenecks to ease by end-Q2",
+            "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/tata-motors-expects-ev-supply-chain-bottlenecks-to-ease-by-end-q2/133202442",
+            "summary": "The commercial vehicle major is working with suppliers to address battery cell shortages as stronger demand for electric commercial vehicles stretches its EV supply chain.",
+            "source": "ET Auto Commercial Vehicles",
+            "published_at": "2026-08-13T06:39:15+00:00",
+            "published_display": "13 Aug 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -246110,6 +246138,56 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "GM\u2013LG Ohio battery plant to restart next week as EV demand stabilises",
+            "url": "https://auto.economictimes.indiatimes.com/news/auto-components/gmlg-ohio-battery-plant-to-restart-next-week-as-ev-demand-stabilises/133206268",
+            "summary": "A joint venture between General Motors and LG Energy Solution will resume battery cell production in Ohio next week, bringing back most of its 1,400 workers after a seven-month halt due to weak EV demand.",
+            "source": "ET Auto Components",
+            "published_at": "2026-08-13T09:02:43+00:00",
+            "published_display": "13 Aug 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Government Revises ACC PLI Timeline for Ola Electric",
+            "url": "https://evreporter.com/government-revises-acc-pli-timeline-for-ola-electric-unlocking-up-to-%e2%82%b97240-crore-through-cy2031",
+            "summary": "The post Government Revises ACC PLI Timeline for Ola Electric appeared first at EVreporter on EVreporter . The Ministry of Heavy Industries (MHI), Government of India, has approved revised timelines under the Advanced Chemistry Cell (ACC) Production The post Government Revises ACC PLI Timeline for Ola Electric appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-08-13T04:55:45+00:00",
+            "published_display": "13 Aug 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Amaron Launches True 4Ah Battery For Commuter Motorcycles",
+            "url": "https://www.autocarpro.in/NEWS/amaron-launches-true-4ah-battery-for-commuter-motorcycles-134055",
+            "summary": "Amaron, the automotive battery brand of Amara Raja Energy & Mobility, has launched its True 4Ah Battery for India\u2019s 100cc\u2013125cc commuter motorcycle segment. The company says the battery delivers a true 4Ah output when tested under JIS D5302.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-08-12T13:33:57+00:00",
+            "published_display": "12 Aug 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Amara Raja To Participate In Cell Manufacturing PLI Tender For Grid-Scale Storage",
             "url": "https://www.autocarpro.in/NEWS/amara-raja-to-participate-in-cell-manufacturing-pli-tender-for-grid-scale-storage-134037",
@@ -246134,56 +246212,6 @@
             "source": "EVReporter",
             "published_at": "2026-08-11T09:21:21+00:00",
             "published_display": "11 Aug 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Bharat Forge Plans Up to \u20b92,500-Crore Fund Raise to Back Capacity Expansion",
-            "url": "https://www.autocarpro.in/NEWS/bharat-forge-plans-up-to-\u20b92500-crore-fund-raise-to-back-capacity-expansion-134026",
-            "summary": "Bharat Forge plans to raise up to \u20b92,500 crore to support a fresh round of capacity expansion across its core manufacturing operations and newer businesses such as aerospace, semiconductors and power generation, as the engineering major prepares for its next phase of growth. The Pune-based company is planning capital expenditure of around \u20b91,800 crore over the next 12-18 months, covering automotive and non-automot...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-08-10T21:29:54+00:00",
-            "published_display": "10 Aug 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Lumax Auto Tech to Invest Rs 156 Crore in New Manufacturing Plant at Chakan",
-            "url": "https://www.autocarpro.in/NEWS/lumax-auto-tech-to-invest-rs-156-crore-in-new-manufacturing-plant-at-chakan-134022",
-            "summary": "Lumax Auto Technologies Limited has approved plans to establish a new manufacturing plant in Chakan, Maharashtra, with a capital expenditure outlay of approximately Rs 156.23 crore. The new facility will operate under the company's Intelligent Ambient Comfort (IAC) division to fulfill new component supply orders secured from Mahindra & Mahindra.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-08-10T18:42:48+00:00",
-            "published_display": "10 Aug 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Components"
-            ],
-            "signal_tags": [
-              "Capacity / Capex",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999",
-            "url": "https://evreporter.com/e3-electric-ai-launches-e3-trion-electric-scooter-priced-from-%e2%82%b999999",
-            "summary": "The post E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999 appeared first at EVreporter on EVreporter . Bengaluru-based electric mobility startup E3 Electric.AI has launched the E3 TRION electric scooter. The scooter is available in three variants\u2014C1, The post E3 Electric.AI Launches E3 TRION Electric Scooter, Priced from \u20b999,999 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-08-06T11:04:45+00:00",
-            "published_display": "06 Aug 2026",
             "importance_score": 8,
             "segment_tags": [
               "Two-Wheelers",
@@ -246289,21 +246317,21 @@
       "ET Auto Commercial Vehicles",
       "ET Auto Components",
       "Autocar Professional Components",
+      "RushLane",
       "EVReporter"
     ],
     "audit": {
       "sources_attempted": 10,
-      "sources_live": 6,
+      "sources_live": 7,
       "sources_hidden": [
         "ET Auto Policy",
         "Autocar Professional Sales",
-        "Autocar Professional EV",
-        "RushLane"
+        "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 77,
-      "filtered_low_signal": 8,
-      "kept_articles": 111
+      "filtered_low_signal": 9,
+      "kept_articles": 118
     }
   },
   "qa": [
