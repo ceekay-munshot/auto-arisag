@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T03:50:17.819155+00:00",
+  "generated_at": "2026-08-16T09:28:36.947446+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -132724,9 +132724,10 @@
         "price": 13834.0,
         "change_1d_pct": -0.51,
         "change_1w_pct": -1.45,
-        "change_1m_pct": 0.37,
+        "change_1m_pct": 1.85,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          14366.0,
           14456.0,
           14538.0,
           13951.0,
@@ -132746,7 +132747,6 @@
           13802.0,
           13948.0,
           14188.0,
-          14234.0,
           14150.0,
           14168.0,
           14190.0,
@@ -142606,10 +142606,6 @@
           {
             "date": "2026-07-30",
             "close": 14188.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 14234.0
           },
           {
             "date": "2026-08-03",
@@ -152589,14 +152585,12 @@
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5850.0,
-        "change_1d_pct": -0.76,
-        "change_1w_pct": 5.4,
-        "change_1m_pct": 19.92,
+        "price": 5790.0,
+        "change_1d_pct": -1.03,
+        "change_1w_pct": 1.14,
+        "change_1m_pct": 18.21,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          4867.1,
-          4852.6,
           4944.4,
           4995.4,
           4892.8,
@@ -152609,6 +152603,7 @@
           4909.9,
           4977.7,
           5034.1,
+          4987.1,
           5173.8,
           5011.1,
           5113.8,
@@ -152624,7 +152619,8 @@
           5860.0,
           5865.5,
           5895.0,
-          5850.0
+          5850.0,
+          5790.0
         ],
         "daily_closes": [
           {
@@ -162448,6 +162444,10 @@
             "close": 5034.1
           },
           {
+            "date": "2026-07-22",
+            "close": 4987.1
+          },
+          {
             "date": "2026-07-23",
             "close": 5173.8
           },
@@ -162510,6 +162510,10 @@
           {
             "date": "2026-08-13",
             "close": 5850.0
+          },
+          {
+            "date": "2026-08-14",
+            "close": 5790.0
           }
         ]
       },
@@ -162518,9 +162522,10 @@
         "price": 4307.0,
         "change_1d_pct": -0.81,
         "change_1w_pct": -3.02,
-        "change_1m_pct": 20.86,
+        "change_1m_pct": 19.23,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3627.4,
           3705.0,
           3712.7,
           3639.7,
@@ -162540,7 +162545,6 @@
           3993.5,
           4075.6,
           4208.4,
-          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172402,10 +172406,6 @@
             "close": 4208.4
           },
           {
-            "date": "2026-07-31",
-            "close": 4313.1
-          },
-          {
             "date": "2026-08-03",
             "close": 4389.0
           },
@@ -172452,9 +172452,10 @@
         "price": 11700.0,
         "change_1d_pct": 0.33,
         "change_1w_pct": 0.33,
-        "change_1m_pct": 13.25,
+        "change_1m_pct": 13.34,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          9785.5,
           10036.5,
           10109.5,
           10164.0,
@@ -172474,7 +172475,6 @@
           11374.0,
           11338.0,
           11432.0,
-          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182334,10 +182334,6 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -194174,11 +194170,10 @@
         "price": 334.5,
         "change_1d_pct": -4.32,
         "change_1w_pct": -3.6,
-        "change_1m_pct": 0.45,
+        "change_1m_pct": 0.81,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          344.1,
           347.05,
           342.3,
           332.05,
@@ -194191,6 +194186,7 @@
           335.6,
           336.45,
           333.8,
+          327.7,
           324.3,
           323.8,
           327.65,
@@ -204029,6 +204025,10 @@
           {
             "date": "2026-07-21",
             "close": 333.8
+          },
+          {
+            "date": "2026-07-22",
+            "close": 327.7
           },
           {
             "date": "2026-07-23",
@@ -224780,9 +224780,10 @@
         "price": 1085.6,
         "change_1d_pct": 0.68,
         "change_1w_pct": -0.8,
-        "change_1m_pct": 8.16,
+        "change_1m_pct": 8.08,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          989.9,
           1006.4,
           998.2,
           968.7,
@@ -224802,7 +224803,6 @@
           1077.6,
           1051.3,
           1057.2,
-          1070.3,
           1105.4,
           1098.6,
           1137.8,
@@ -234662,10 +234662,6 @@
           {
             "date": "2026-07-30",
             "close": 1057.2
-          },
-          {
-            "date": "2026-07-31",
-            "close": 1070.3
           },
           {
             "date": "2026-08-03",
