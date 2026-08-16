@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T15:21:33.242061+00:00",
+  "generated_at": "2026-08-16T03:50:17.819155+00:00",
   "as_of_date": "2026-08-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49200,7 +49200,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-15",
+          "latest_release_date": "2026-08-16",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122171,7 +122171,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-15",
+    "as_of_date": "2026-08-16",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -132705,7 +132705,7 @@
             "close": 95.4012
           },
           {
-            "date": "2026-08-15",
+            "date": "2026-08-16",
             "close": 95.43
           }
         ]
@@ -132714,7 +132714,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-15",
+    "as_of_date": "2026-08-16",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -162518,12 +162518,9 @@
         "price": 4307.0,
         "change_1d_pct": -0.81,
         "change_1w_pct": -3.02,
-        "change_1m_pct": 17.14,
+        "change_1m_pct": 20.86,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          3494.0,
-          3626.8,
-          3627.4,
           3705.0,
           3712.7,
           3639.7,
@@ -162534,13 +162531,16 @@
           3612.3,
           3563.5,
           3618.2,
+          3590.2,
           3792.0,
+          3907.6,
           3919.8,
           3870.2,
           3876.4,
           3993.5,
           4075.6,
           4208.4,
+          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -172366,8 +172366,16 @@
             "close": 3618.2
           },
           {
+            "date": "2026-07-20",
+            "close": 3590.2
+          },
+          {
             "date": "2026-07-21",
             "close": 3792.0
+          },
+          {
+            "date": "2026-07-22",
+            "close": 3907.6
           },
           {
             "date": "2026-07-23",
@@ -172392,6 +172400,10 @@
           {
             "date": "2026-07-30",
             "close": 4208.4
+          },
+          {
+            "date": "2026-07-31",
+            "close": 4313.1
           },
           {
             "date": "2026-08-03",
@@ -172440,11 +172452,9 @@
         "price": 11700.0,
         "change_1d_pct": 0.33,
         "change_1w_pct": 0.33,
-        "change_1m_pct": 15.09,
+        "change_1m_pct": 13.25,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          9857.0,
-          9785.5,
           10036.5,
           10109.5,
           10164.0,
@@ -172457,12 +172467,14 @@
           10443.0,
           10522.5,
           10403.5,
+          10998.5,
           11283.5,
           11130.0,
           11183.5,
           11374.0,
           11338.0,
           11432.0,
+          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -182296,6 +182308,10 @@
             "close": 10403.5
           },
           {
+            "date": "2026-07-22",
+            "close": 10998.5
+          },
+          {
             "date": "2026-07-23",
             "close": 11283.5
           },
@@ -182318,6 +182334,10 @@
           {
             "date": "2026-07-30",
             "close": 11432.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 11520.5
           },
           {
             "date": "2026-08-03",
@@ -184220,10 +184240,9 @@
         "price": 8066.5,
         "change_1d_pct": -0.41,
         "change_1w_pct": 0.58,
-        "change_1m_pct": 8.94,
+        "change_1m_pct": 8.73,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7339.5,
           7471.5,
           7536.0,
           7418.5,
@@ -184233,6 +184252,7 @@
           7279.5,
           7404.5,
           7418.5,
+          7563.5,
           7563.5,
           7689.5,
           7632.0,
@@ -194065,6 +194085,10 @@
           },
           {
             "date": "2026-07-17",
+            "close": 7563.5
+          },
+          {
+            "date": "2026-07-20",
             "close": 7563.5
           },
           {
@@ -214822,11 +214846,9 @@
         "price": 3113.7,
         "change_1d_pct": 0.66,
         "change_1w_pct": 1.09,
-        "change_1m_pct": 6.33,
+        "change_1m_pct": 5.74,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2949.4,
-          2964.9,
           2982.6,
           2978.9,
           2919.8,
@@ -214837,7 +214859,9 @@
           2918.9,
           2944.8,
           2937.0,
+          2981.4,
           2956.2,
+          2948.4,
           2907.1,
           2905.1,
           2954.1,
@@ -224670,8 +224694,16 @@
             "close": 2937.0
           },
           {
+            "date": "2026-07-20",
+            "close": 2981.4
+          },
+          {
             "date": "2026-07-21",
             "close": 2956.2
+          },
+          {
+            "date": "2026-07-22",
+            "close": 2948.4
           },
           {
             "date": "2026-07-23",
@@ -244615,7 +244647,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-15",
+    "as_of_date": "2026-08-16",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -246379,7 +246411,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-15",
+    "as_of_date": "2026-08-16",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
