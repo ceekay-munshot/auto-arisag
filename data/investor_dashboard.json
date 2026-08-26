@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T09:46:10.765427+00:00",
+  "generated_at": "2026-08-26T16:19:01.095728+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122101,10 +122101,41 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-26T09:45:48.967618+00:00",
+      "generated_at": "2026-08-26T16:18:38.988733+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 4,
       "items": [
+        {
+          "title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV",
+          "summary": "The post JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV appeared first at EVreporter on EVreporter . JSW MG Motor India launches EV and Plug-in Hybrid Electric Vehicle (PHEV) versions of MG Hector Tomahawk, which is engineered The post JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV appeared first at EVreporter on EVreporter .",
+          "url": "https://evreporter.com/jsw-mg-motor-india-launches-the-mg-hector-tomahawk-in-ev-and-phev",
+          "source": "EVReporter",
+          "published_at": "2026-08-26T12:23:48+00:00",
+          "published_display": "26 Aug 2026",
+          "company": "JSW MG Motor",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": null
+        },
+        {
+          "title": "Hyundai To Launch 26 Cars In India By 2030 \u2013 2026 CEO Investor Day",
+          "summary": "Hyundai plans to introduce 26 new models and updates by 2030, including an all-new A-segment electric SUV and a new ICE-powered midsize SUV The post Hyundai To Launch 26 Cars In India By 2030 \u2013 2026 CEO Investor Day appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hyundai-to-launch-26-cars-in-india-by-2030-2026-ceo-investor-day-12554269.html",
+          "source": "RushLane",
+          "published_at": "2026-08-26T12:13:10+00:00",
+          "published_display": "26 Aug 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/hyundai-india-launch-plans-2026-ceo-investor-day-2.jpg"
+        },
         {
           "title": "MG Hector Tomahawk Hybrid PHEV Launch Price Rs 25.70 Lakh \u2013 1,100 Km Range",
           "summary": "Hector Tomahawk PHEV Exclusive 7S is priced at Rs 25.70 lakh, while the Essence 7S costs Rs 27.80 lakh. MG is also offering BaaS pricing for a limited number of bookings The post MG Hector Tomahawk Hybrid PHEV Launch Price Rs 25.70 Lakh \u2013 1,100 Km Range appeared first on RushLane .",
@@ -122132,19 +122163,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/MG-Hector-Tomahawk-EV-launch-price-1.jpg"
-        },
-        {
-          "title": "2027 Hyundai Palisade Debuts \u2013 High Roof, Rolls-Royce-Like Star Lights",
-          "summary": "For the first time, Hyundai Palisade has received a High Roof variant adding 240 mm more headroom than standard model The post 2027 Hyundai Palisade Debuts \u2013 High Roof, Rolls-Royce-Like Star Lights appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2027-hyundai-palisade-debuts-high-roof-rolls-royce-like-star-lights-12554162.html",
-          "source": "RushLane",
-          "published_at": "2026-08-25T12:48:30+00:00",
-          "published_display": "25 Aug 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/2027-hyundai-palisade-updated-3.jpg"
         }
       ],
       "companies": [
@@ -122152,17 +122170,17 @@
           "company": "JSW MG Motor",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-08-26T08:11:11+00:00",
-          "latest_title": "MG Hector Tomahawk Hybrid PHEV Launch Price Rs 25.70 Lakh \u2013 1,100 Km Range"
+          "count": 3,
+          "latest_published_at": "2026-08-26T12:23:48+00:00",
+          "latest_title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV"
         },
         {
           "company": "Hyundai Motor India",
           "tone": "pv",
           "scope": "listed",
           "count": 1,
-          "latest_published_at": "2026-08-25T12:48:30+00:00",
-          "latest_title": "2027 Hyundai Palisade Debuts \u2013 High Roof, Rolls-Royce-Like Star Lights"
+          "latest_published_at": "2026-08-26T12:13:10+00:00",
+          "latest_title": "Hyundai To Launch 26 Cars In India By 2030 \u2013 2026 CEO Investor Day"
         }
       ],
       "source_meta": {
@@ -122289,10 +122307,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.4,
+        "value": 95.41,
         "unit": "\u20b9",
-        "delta_value": -0.3211,
-        "delta_label": "-0.43% in last week (Yahoo Finance)",
+        "delta_value": -0.3131,
+        "delta_label": "-0.42% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132700,7 +132718,7 @@
           },
           {
             "date": "2026-08-26",
-            "close": 95.402
+            "close": 95.41
           }
         ]
       }
@@ -132715,10 +132733,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13560.0,
-        "change_1d_pct": -0.86,
-        "change_1w_pct": -0.95,
-        "change_1m_pct": -1.75,
+        "price": 13520.0,
+        "change_1d_pct": -1.16,
+        "change_1w_pct": -1.24,
+        "change_1m_pct": -2.04,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13783.0,
@@ -132750,7 +132768,7 @@
           13565.0,
           13620.0,
           13678.0,
-          13560.0
+          13520.0
         ],
         "daily_closes": [
           {
@@ -142643,16 +142661,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 13560.0
+            "close": 13520.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3411.7,
-        "change_1d_pct": -0.91,
-        "change_1w_pct": -0.1,
-        "change_1m_pct": 4.3,
+        "price": 3398.2,
+        "change_1d_pct": -1.3,
+        "change_1w_pct": -0.49,
+        "change_1m_pct": 3.88,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3117.8,
@@ -142684,7 +142702,7 @@
           3412.2,
           3414.1,
           3443.0,
-          3411.7
+          3398.2
         ],
         "daily_closes": [
           {
@@ -152577,16 +152595,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 3411.7
+            "close": 3398.2
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5647.0,
-        "change_1d_pct": 0.4,
-        "change_1w_pct": -1.09,
-        "change_1m_pct": 9.56,
+        "price": 5595.0,
+        "change_1d_pct": -0.52,
+        "change_1w_pct": -2.01,
+        "change_1m_pct": 8.55,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           4898.0,
@@ -152618,7 +152636,7 @@
           5735.0,
           5685.0,
           5624.5,
-          5647.0
+          5595.0
         ],
         "daily_closes": [
           {
@@ -162511,16 +162529,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 5647.0
+            "close": 5595.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4444.7,
-        "change_1d_pct": 0.56,
-        "change_1w_pct": 1.92,
-        "change_1m_pct": 11.3,
+        "price": 4464.0,
+        "change_1d_pct": 1.0,
+        "change_1w_pct": 2.36,
+        "change_1m_pct": 11.78,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           3563.5,
@@ -162552,7 +162570,7 @@
           4390.0,
           4363.5,
           4420.0,
-          4444.7
+          4464.0
         ],
         "daily_closes": [
           {
@@ -172445,16 +172463,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 4444.7
+            "close": 4464.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11750.0,
-        "change_1d_pct": -1.48,
-        "change_1w_pct": 0.9,
-        "change_1m_pct": 3.31,
+        "price": 11724.0,
+        "change_1d_pct": -1.7,
+        "change_1w_pct": 0.68,
+        "change_1m_pct": 3.08,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           10331.5,
@@ -172486,7 +172504,7 @@
           11700.0,
           11800.0,
           11927.0,
-          11750.0
+          11724.0
         ],
         "daily_closes": [
           {
@@ -182379,7 +182397,7 @@
           },
           {
             "date": "2026-08-26",
-            "close": 11750.0
+            "close": 11724.0
           }
         ]
       },
@@ -184271,10 +184289,10 @@
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8057.0,
-        "change_1d_pct": 0.02,
-        "change_1w_pct": 0.83,
-        "change_1m_pct": 2.82,
+        "price": 8035.0,
+        "change_1d_pct": -0.25,
+        "change_1w_pct": 0.56,
+        "change_1m_pct": 2.54,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7418.5,
@@ -184306,7 +184324,7 @@
           8010.0,
           8047.0,
           8055.0,
-          8057.0
+          8035.0
         ],
         "daily_closes": [
           {
@@ -194199,16 +194217,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 8057.0
+            "close": 8035.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 314.9,
-        "change_1d_pct": 0.21,
-        "change_1w_pct": -1.99,
-        "change_1m_pct": -2.93,
+        "price": 313.1,
+        "change_1d_pct": -0.37,
+        "change_1w_pct": -2.55,
+        "change_1m_pct": -3.48,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -194241,7 +194259,7 @@
           317.9,
           314.4,
           314.25,
-          314.9
+          313.1
         ],
         "daily_closes": [
           {
@@ -204134,7 +204152,7 @@
           },
           {
             "date": "2026-08-26",
-            "close": 314.9
+            "close": 313.1
           }
         ]
       },
@@ -204979,10 +204997,10 @@
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 179.3,
-        "change_1d_pct": 2.64,
-        "change_1w_pct": 3.58,
-        "change_1m_pct": 13.84,
+        "price": 179.05,
+        "change_1d_pct": 2.5,
+        "change_1w_pct": 3.44,
+        "change_1m_pct": 13.68,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           154.87,
@@ -205014,7 +205032,7 @@
           173.0,
           173.29,
           174.69,
-          179.3
+          179.05
         ],
         "daily_closes": [
           {
@@ -214907,16 +214925,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 179.3
+            "close": 179.05
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 3066.5,
-        "change_1d_pct": 0.06,
-        "change_1w_pct": 0.38,
-        "change_1m_pct": 1.88,
+        "price": 3067.0,
+        "change_1d_pct": 0.07,
+        "change_1w_pct": 0.4,
+        "change_1m_pct": 1.9,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2944.8,
@@ -214948,7 +214966,7 @@
           3086.6,
           3097.3,
           3064.8,
-          3066.5
+          3067.0
         ],
         "daily_closes": [
           {
@@ -224841,16 +224859,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 3066.5
+            "close": 3067.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1155.0,
-        "change_1d_pct": 0.02,
-        "change_1w_pct": -2.22,
-        "change_1m_pct": 7.18,
+        "price": 1159.0,
+        "change_1d_pct": 0.36,
+        "change_1w_pct": -1.88,
+        "change_1m_pct": 7.55,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1003.7,
@@ -224882,7 +224900,7 @@
           1182.2,
           1167.2,
           1154.8,
-          1155.0
+          1159.0
         ],
         "daily_closes": [
           {
@@ -234775,16 +234793,16 @@
           },
           {
             "date": "2026-08-26",
-            "close": 1155.0
+            "close": 1159.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 487.95,
-        "change_1d_pct": 0.41,
-        "change_1w_pct": -0.24,
-        "change_1m_pct": 2.53,
+        "price": 487.5,
+        "change_1d_pct": 0.32,
+        "change_1w_pct": -0.33,
+        "change_1m_pct": 2.44,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           485.45,
@@ -234816,7 +234834,7 @@
           483.05,
           485.4,
           485.95,
-          487.95
+          487.5
         ],
         "daily_closes": [
           {
@@ -244709,7 +244727,7 @@
           },
           {
             "date": "2026-08-26",
-            "close": 487.95
+            "close": 487.5
           }
         ]
       }
