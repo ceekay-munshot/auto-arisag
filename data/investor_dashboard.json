@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T13:53:30.156391+00:00",
+  "generated_at": "2026-08-28T00:17:36.908710+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49187,7 +49187,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-27",
+          "latest_release_date": "2026-08-28",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122101,10 +122101,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-27T13:53:08.367772+00:00",
+      "generated_at": "2026-08-28T00:17:12.626942+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 5,
       "items": [
+        {
+          "title": "Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover",
+          "summary": "TATA.CARS will become the new consumer-facing identity for Tata\u2019s passenger vehicle business, covering cars, SUVs and EVs under a unified brand experience The post Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover appeared first on RushLane .",
+          "url": "https://www.rushlane.com/tata-motors-unveils-new-tata-cars-brand-identity-dealerships-makeover-12554401.html",
+          "source": "RushLane",
+          "published_at": "2026-08-27T15:18:50+00:00",
+          "published_display": "27 Aug 2026",
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/tata-cars-nothing-too-far-brand.jpg"
+        },
         {
           "title": "2027 Renault Kwid Facelift Launch Price Brazil BRL 71k (Rs 13 Lakh) \u2013 New Interior, Dual Screens",
           "summary": "Renault is offering three variants \u2013 Evolution, Techno and Outsider. Evolution variant starts at BRL 71,090 (Rs 13.19 lakh) The post 2027 Renault Kwid Facelift Launch Price Brazil BRL 71k (Rs 13 Lakh) \u2013 New Interior, Dual Screens appeared first on RushLane .",
@@ -122167,6 +122183,14 @@
       ],
       "companies": [
         {
+          "company": "Tata Motors",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-08-27T15:18:50+00:00",
+          "latest_title": "Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover"
+        },
+        {
           "company": "Renault India",
           "tone": "pv",
           "scope": "tracked",
@@ -122207,7 +122231,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-27",
+    "as_of_date": "2026-08-28",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122323,11 +122347,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.52,
+        "value": 95.53,
         "unit": "\u20b9",
-        "delta_value": 1.9739,
-        "delta_label": "+0.03% in last week (Yahoo Finance)",
-        "delta_tone": "negative",
+        "delta_value": 0.0997,
+        "delta_label": "-0.25% in last week (Yahoo Finance)",
+        "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -132733,8 +132757,12 @@
             "close": 93.5461
           },
           {
+            "date": "2026-08-26",
+            "close": 95.4303
+          },
+          {
             "date": "2026-08-27",
-            "close": 95.52
+            "close": 95.53
           }
         ]
       }
@@ -132742,7 +132770,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-27",
+    "as_of_date": "2026-08-28",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -152617,12 +152645,13 @@
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5550.0,
-        "change_1d_pct": -0.8,
-        "change_1w_pct": -3.32,
-        "change_1m_pct": 7.79,
+        "price": 5595.0,
+        "change_1d_pct": -0.52,
+        "change_1w_pct": -2.01,
+        "change_1m_pct": 8.55,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          4898.0,
           4909.9,
           4977.7,
           5034.1,
@@ -152651,8 +152680,7 @@
           5735.0,
           5685.0,
           5624.5,
-          5595.0,
-          5550.0
+          5595.0
         ],
         "daily_closes": [
           {
@@ -162542,21 +162570,18 @@
           {
             "date": "2026-08-26",
             "close": 5595.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 5550.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4409.8,
-        "change_1d_pct": -1.21,
-        "change_1w_pct": 0.45,
-        "change_1m_pct": 8.2,
+        "price": 4464.0,
+        "change_1d_pct": 1.0,
+        "change_1w_pct": 2.36,
+        "change_1m_pct": 11.78,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3563.5,
           3618.2,
           3590.2,
           3792.0,
@@ -162585,8 +162610,7 @@
           4390.0,
           4363.5,
           4420.0,
-          4464.0,
-          4409.8
+          4464.0
         ],
         "daily_closes": [
           {
@@ -172476,21 +172500,18 @@
           {
             "date": "2026-08-26",
             "close": 4464.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 4409.8
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11720.0,
-        "change_1d_pct": -0.03,
-        "change_1w_pct": -0.62,
-        "change_1m_pct": 3.37,
+        "price": 11724.0,
+        "change_1d_pct": -1.7,
+        "change_1w_pct": 0.68,
+        "change_1m_pct": 3.08,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          10331.5,
           10443.0,
           10522.5,
           10403.5,
@@ -172519,8 +172540,7 @@
           11700.0,
           11800.0,
           11927.0,
-          11724.0,
-          11720.0
+          11724.0
         ],
         "daily_closes": [
           {
@@ -182410,10 +182430,6 @@
           {
             "date": "2026-08-26",
             "close": 11724.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 11720.0
           }
         ]
       },
@@ -184309,12 +184325,13 @@
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8100.0,
-        "change_1d_pct": 0.81,
-        "change_1w_pct": 0.72,
-        "change_1m_pct": 4.13,
+        "price": 8035.0,
+        "change_1d_pct": -0.25,
+        "change_1w_pct": 0.56,
+        "change_1m_pct": 2.54,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7418.5,
           7563.5,
           7563.5,
           7689.5,
@@ -184343,8 +184360,7 @@
           8010.0,
           8047.0,
           8055.0,
-          8035.0,
-          8100.0
+          8035.0
         ],
         "daily_closes": [
           {
@@ -194234,10 +194250,6 @@
           {
             "date": "2026-08-26",
             "close": 8035.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 8100.0
           }
         ]
       },
@@ -224889,12 +224901,13 @@
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1136.0,
-        "change_1d_pct": -1.98,
-        "change_1w_pct": -2.44,
-        "change_1m_pct": 8.06,
+        "price": 1159.0,
+        "change_1d_pct": 0.36,
+        "change_1w_pct": -1.88,
+        "change_1m_pct": 7.55,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          1003.7,
           987.4,
           991.6,
           1035.5,
@@ -224923,8 +224936,7 @@
           1182.2,
           1167.2,
           1154.8,
-          1159.0,
-          1136.0
+          1159.0
         ],
         "daily_closes": [
           {
@@ -234814,10 +234826,6 @@
           {
             "date": "2026-08-26",
             "close": 1159.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 1136.0
           }
         ]
       },
@@ -244759,7 +244767,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-27",
+    "as_of_date": "2026-08-28",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -246523,7 +246531,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-27",
+    "as_of_date": "2026-08-28",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
