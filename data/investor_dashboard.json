@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T00:00:41.095103+00:00",
+  "generated_at": "2026-08-29T09:48:46.150409+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122101,10 +122101,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-28T14:59:23.299129+00:00",
+      "generated_at": "2026-08-29T09:48:16.000834+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 4,
       "items": [
+        {
+          "title": "New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range",
+          "summary": "Ather has revealed detailed specifications for the currently announced 100 km, 125 km and 161 km Konarc S versions. Battery capacities are 2.1 kWh, 2.7 kWh and 3.5 kWh, respectively The post New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-ather-konarc-launch-price-rs-99999-up-to-200-km-range-12554471.html",
+          "source": "RushLane",
+          "published_at": "2026-08-29T07:22:41+00:00",
+          "published_display": "29 Aug 2026",
+          "company": "Ather Energy",
+          "tone": "ev",
+          "scope": "tracked",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/new-ather-konarc-electric-scooter-launch-price-40.jpg"
+        },
         {
           "title": "Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L",
           "summary": "BaaS is now available with XEV 9S and XEV 9e as well. With BaaS, prices start from Rs 11.45 lakh, while battery EMI starts at Rs 6,975 per month The post Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L appeared first on RushLane .",
@@ -122134,35 +122149,6 @@
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/2027-Toyota-Innova-Hycross-Facelift-Grille-Design-Leaks-1.jpg"
         },
         {
-          "title": "Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover",
-          "summary": "TATA.CARS will become the new consumer-facing identity for Tata\u2019s passenger vehicle business, covering cars, SUVs and EVs under a unified brand experience The post Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover appeared first on RushLane .",
-          "url": "https://www.rushlane.com/tata-motors-unveils-new-tata-cars-brand-identity-dealerships-makeover-12554401.html",
-          "source": "RushLane",
-          "published_at": "2026-08-27T15:18:50+00:00",
-          "published_display": "27 Aug 2026",
-          "company": "Tata Motors",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/tata-cars-nothing-too-far-brand.jpg"
-        },
-        {
-          "title": "2027 Renault Kwid Facelift Launch Price Brazil BRL 71k (Rs 13 Lakh) \u2013 New Interior, Dual Screens",
-          "summary": "Renault is offering three variants \u2013 Evolution, Techno and Outsider. Evolution variant starts at BRL 71,090 (Rs 13.19 lakh) The post 2027 Renault Kwid Facelift Launch Price Brazil BRL 71k (Rs 13 Lakh) \u2013 New Interior, Dual Screens appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2027-renault-kwid-facelift-launch-price-brazil-brl-71k-rs-13-lakh-12554378.html",
-          "source": "RushLane",
-          "published_at": "2026-08-27T12:30:54+00:00",
-          "published_display": "27 Aug 2026",
-          "company": "Renault India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/2027-renault-kwid-facelift-launch-price-12.jpg"
-        },
-        {
           "title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV",
           "summary": "The post JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV appeared first at EVreporter on EVreporter . JSW MG Motor India launches EV and Plug-in Hybrid Electric Vehicle (PHEV) versions of MG Hector Tomahawk, which is engineered The post JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV appeared first at EVreporter on EVreporter .",
           "url": "https://evreporter.com/jsw-mg-motor-india-launches-the-mg-hector-tomahawk-in-ev-and-phev",
@@ -122180,6 +122166,14 @@
       ],
       "companies": [
         {
+          "company": "Ather Energy",
+          "tone": "ev",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-08-29T07:22:41+00:00",
+          "latest_title": "New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range"
+        },
+        {
           "company": "Mahindra & Mahindra",
           "tone": "pv",
           "scope": "listed",
@@ -122196,22 +122190,6 @@
           "latest_title": "2027 Toyota Innova Hycross Facelift Front Leaks \u2013 New Sportier Presence"
         },
         {
-          "company": "Tata Motors",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-08-27T15:18:50+00:00",
-          "latest_title": "Tata Motors Unveils New TATA.CARS Brand Identity \u2013 Dealerships To Get Premium Makeover"
-        },
-        {
-          "company": "Renault India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-08-27T12:30:54+00:00",
-          "latest_title": "2027 Renault Kwid Facelift Launch Price Brazil BRL 71k (Rs 13 Lakh) \u2013 New Interior, Dual Screens"
-        },
-        {
           "company": "JSW MG Motor",
           "tone": "pv",
           "scope": "tracked",
@@ -122222,7 +122200,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-08-28"
+        "latest_release_date": "2026-08-29"
       }
     }
   },
@@ -122344,10 +122322,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.36,
+        "value": 95.38,
         "unit": "\u20b9",
-        "delta_value": -0.1104,
-        "delta_label": "-0.36% in last week (Yahoo Finance)",
+        "delta_value": -0.0904,
+        "delta_label": "-0.33% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132762,8 +132740,8 @@
             "close": 95.4704
           },
           {
-            "date": "2026-08-28",
-            "close": 95.36
+            "date": "2026-08-29",
+            "close": 95.38
           }
         ]
       }
