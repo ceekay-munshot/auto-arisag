@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T08:59:51.155591+00:00",
+  "generated_at": "2026-08-30T14:23:59.942310+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122101,9 +122101,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-30T08:59:26.827801+00:00",
+      "generated_at": "2026-08-30T14:23:41.647995+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 2,
       "items": [
         {
           "title": "New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range",
@@ -122119,21 +122119,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/new-ather-konarc-electric-scooter-launch-price-40.jpg"
-        },
-        {
-          "title": "Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L",
-          "summary": "BaaS is now available with XEV 9S and XEV 9e as well. With BaaS, prices start from Rs 11.45 lakh, while battery EMI starts at Rs 6,975 per month The post Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L appeared first on RushLane .",
-          "url": "https://www.rushlane.com/mahindra-xev-9s-baas-launch-price-rs-12-65-l-xev-9e-rs-13-90-l-12554431.html",
-          "source": "RushLane",
-          "published_at": "2026-08-28T12:48:31+00:00",
-          "published_display": "28 Aug 2026",
-          "company": "Mahindra & Mahindra",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/mahindra-xev-9s-baas-launch-price.jpg"
         },
         {
           "title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV",
@@ -122159,14 +122144,6 @@
           "count": 1,
           "latest_published_at": "2026-08-29T07:22:41+00:00",
           "latest_title": "New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range"
-        },
-        {
-          "company": "Mahindra & Mahindra",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-08-28T12:48:31+00:00",
-          "latest_title": "Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L"
         },
         {
           "company": "JSW MG Motor",
@@ -122301,10 +122278,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.38,
+        "value": 95.36,
         "unit": "\u20b9",
-        "delta_value": -0.0904,
-        "delta_label": "-0.33% in last week (Yahoo Finance)",
+        "delta_value": -0.1104,
+        "delta_label": "-0.36% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132720,7 +132697,7 @@
           },
           {
             "date": "2026-08-30",
-            "close": 95.38
+            "close": 95.36
           }
         ]
       }
