@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-08-29",
+  "as_of_date": "2026-08-30",
   "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
   "datasets": [
     {

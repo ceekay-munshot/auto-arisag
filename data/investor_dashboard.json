@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T18:13:29.109595+00:00",
+  "generated_at": "2026-08-30T08:59:51.155591+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49187,7 +49187,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-08-29",
+          "latest_release_date": "2026-08-30",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122101,9 +122101,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-08-29T09:48:16.000834+00:00",
+      "generated_at": "2026-08-30T08:59:26.827801+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
         {
           "title": "New Ather Konarc Launch Price Rs 99,999 \u2013 Up To 200 Km Range",
@@ -122134,19 +122134,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/mahindra-xev-9s-baas-launch-price.jpg"
-        },
-        {
-          "title": "2027 Toyota Innova Hycross Facelift Front Leaks \u2013 New Sportier Presence",
-          "summary": "While getting comprehensive updates across its exterior and interior, Innova Hycross facelift will continue with the existing engine options The post 2027 Toyota Innova Hycross Facelift Front Leaks \u2013 New Sportier Presence appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2027-toyota-innova-hycross-facelift-front-leaks-new-sportier-presence-12554412.html",
-          "source": "RushLane",
-          "published_at": "2026-08-28T07:16:14+00:00",
-          "published_display": "28 Aug 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/08/2027-Toyota-Innova-Hycross-Facelift-Grille-Design-Leaks-1.jpg"
         },
         {
           "title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV",
@@ -122182,14 +122169,6 @@
           "latest_title": "Mahindra XEV 9S BaaS Launch Price Rs 12.65 L \u2013 XEV 9e Rs 13.90 L"
         },
         {
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-08-28T07:16:14+00:00",
-          "latest_title": "2027 Toyota Innova Hycross Facelift Front Leaks \u2013 New Sportier Presence"
-        },
-        {
           "company": "JSW MG Motor",
           "tone": "pv",
           "scope": "tracked",
@@ -122206,7 +122185,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-08-29",
+    "as_of_date": "2026-08-30",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -132740,7 +132719,7 @@
             "close": 95.4704
           },
           {
-            "date": "2026-08-29",
+            "date": "2026-08-30",
             "close": 95.38
           }
         ]
@@ -132749,7 +132728,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-08-29",
+    "as_of_date": "2026-08-30",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -244806,7 +244785,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-08-29",
+    "as_of_date": "2026-08-30",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -246570,7 +246549,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-08-29",
+    "as_of_date": "2026-08-30",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
