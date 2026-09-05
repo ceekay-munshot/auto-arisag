@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-04",
+  "as_of_date": "2026-09-05",
   "currency": "INR",
   "exchange": "NSE",
   "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -9944,12 +9944,13 @@
     },
     "Mahindra & Mahindra": {
       "ticker": "M&M",
-      "price": 3170.0,
-      "change_1d_pct": 0.63,
-      "change_1w_pct": -4.92,
-      "change_1m_pct": -6.93,
+      "price": 3150.0,
+      "change_1d_pct": -1.25,
+      "change_1w_pct": -5.41,
+      "change_1m_pct": -8.84,
       "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
       "closes_30d": [
+        3161.4,
         3238.6,
         3271.2,
         3221.8,
@@ -9978,8 +9979,7 @@
         3282.0,
         3259.0,
         3190.0,
-        3150.0,
-        3170.0
+        3150.0
       ],
       "daily_closes": [
         {
@@ -19873,10 +19873,6 @@
         {
           "date": "2026-09-03",
           "close": 3150.0
-        },
-        {
-          "date": "2026-09-04",
-          "close": 3170.0
         }
       ]
     },
@@ -82292,12 +82288,13 @@
     },
     "Escorts Kubota": {
       "ticker": "ESCORTS",
-      "price": 2968.8,
-      "change_1d_pct": -0.32,
-      "change_1w_pct": -1.55,
-      "change_1m_pct": -3.64,
+      "price": 2978.2,
+      "change_1d_pct": -1.36,
+      "change_1w_pct": 0.14,
+      "change_1m_pct": -3.59,
       "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
       "closes_30d": [
+        2905.1,
         2954.1,
         3009.9,
         3016.8,
@@ -82326,8 +82323,7 @@
         2995.0,
         3016.1,
         3019.4,
-        2978.2,
-        2968.8
+        2978.2
       ],
       "daily_closes": [
         {
@@ -92221,10 +92217,6 @@
         {
           "date": "2026-09-03",
           "close": 2978.2
-        },
-        {
-          "date": "2026-09-04",
-          "close": 2968.8
         }
       ]
     },

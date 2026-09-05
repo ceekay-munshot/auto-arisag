@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T13:13:44.920678+00:00",
+  "generated_at": "2026-09-05T07:29:08.445686+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49187,7 +49187,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-09-04",
+          "latest_release_date": "2026-09-05",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122188,7 +122188,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-09-04",
+    "as_of_date": "2026-09-05",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122304,10 +122304,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.47,
+        "value": 94.49,
         "unit": "\u20b9",
-        "delta_value": -0.0127,
-        "delta_label": "-1.04% in last week (Yahoo Finance)",
+        "delta_value": -0.0049,
+        "delta_label": "-0.93% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -132718,8 +132718,12 @@
             "close": 94.4877
           },
           {
-            "date": "2026-09-04",
-            "close": 94.475
+            "date": "2026-09-03",
+            "close": 94.4949
+          },
+          {
+            "date": "2026-09-05",
+            "close": 94.49
           }
         ]
       }
@@ -132727,7 +132731,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-09-04",
+    "as_of_date": "2026-09-05",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -142672,12 +142676,13 @@
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3170.0,
-        "change_1d_pct": 0.63,
-        "change_1w_pct": -4.92,
-        "change_1m_pct": -6.93,
+        "price": 3150.0,
+        "change_1d_pct": -1.25,
+        "change_1w_pct": -5.41,
+        "change_1m_pct": -8.84,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          3161.4,
           3238.6,
           3271.2,
           3221.8,
@@ -142706,8 +142711,7 @@
           3282.0,
           3259.0,
           3190.0,
-          3150.0,
-          3170.0
+          3150.0
         ],
         "daily_closes": [
           {
@@ -152601,10 +152605,6 @@
           {
             "date": "2026-09-03",
             "close": 3150.0
-          },
-          {
-            "date": "2026-09-04",
-            "close": 3170.0
           }
         ]
       },
@@ -215020,12 +215020,13 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2968.8,
-        "change_1d_pct": -0.32,
-        "change_1w_pct": -1.55,
-        "change_1m_pct": -3.64,
+        "price": 2978.2,
+        "change_1d_pct": -1.36,
+        "change_1w_pct": 0.14,
+        "change_1m_pct": -3.59,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2905.1,
           2954.1,
           3009.9,
           3016.8,
@@ -215054,8 +215055,7 @@
           2995.0,
           3016.1,
           3019.4,
-          2978.2,
-          2968.8
+          2978.2
         ],
         "daily_closes": [
           {
@@ -224949,10 +224949,6 @@
           {
             "date": "2026-09-03",
             "close": 2978.2
-          },
-          {
-            "date": "2026-09-04",
-            "close": 2968.8
           }
         ]
       },
@@ -244836,7 +244832,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-09-04",
+    "as_of_date": "2026-09-05",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -246600,7 +246596,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-09-04",
+    "as_of_date": "2026-09-05",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
