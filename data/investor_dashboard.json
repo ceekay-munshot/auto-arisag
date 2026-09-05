@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T07:29:08.445686+00:00",
+  "generated_at": "2026-09-05T12:28:21.736305+00:00",
   "as_of_date": "2026-08-23",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122101,9 +122101,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-04T13:13:27.633314+00:00",
+      "generated_at": "2026-09-05T12:27:59.333095+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 2,
       "items": [
         {
           "title": "Kia Carnival Hybrid Debuts In India \u2013 More Powerful Motor Than Sorento",
@@ -122119,32 +122119,6 @@
             "Components"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/kia-carnival-hybrid-india-launch-price-8.jpg"
-        },
-        {
-          "title": "New Kia Sorento India Launch Price Rs 27.99 Lakh \u2013 Diesel, Hybrid, AWD",
-          "summary": "Kia Sorento has been launched at an introductory starting price of Rs 27.99 lakh, with the range extending up to Rs 40.39 lakh The post New Kia Sorento India Launch Price Rs 27.99 Lakh \u2013 Diesel, Hybrid, AWD appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-kia-sorento-india-launch-price-rs-27-99-lakh-diesel-hybrid-awd-12555001.html",
-          "source": "RushLane",
-          "published_at": "2026-09-04T07:35:16+00:00",
-          "published_display": "04 Sep 2026",
-          "company": "Kia India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-kia-sorento-prices-india-launch-hybrid.jpg"
-        },
-        {
-          "title": "New Kia Sorento Reaches Dealer Showroom Ahead Of India Launch Today",
-          "summary": "New Kia Sorento has started arriving at dealer showrooms in India ahead of its official launch event scheduled for today The post New Kia Sorento Reaches Dealer Showroom Ahead Of India Launch Today appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-kia-sorento-reaches-dealer-showroom-ahead-of-india-launch-today-12554975.html",
-          "source": "RushLane",
-          "published_at": "2026-09-04T05:33:54+00:00",
-          "published_display": "04 Sep 2026",
-          "company": "Kia India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-kia-sorento-dealer-launch-price-1.jpg"
         },
         {
           "title": "JSW MG Motor India Launches the MG Hector Tomahawk in EV and PHEV",
@@ -122167,7 +122141,7 @@
           "company": "Kia India",
           "tone": "pv",
           "scope": "tracked",
-          "count": 3,
+          "count": 1,
           "latest_published_at": "2026-09-04T11:56:31+00:00",
           "latest_title": "Kia Carnival Hybrid Debuts In India \u2013 More Powerful Motor Than Sorento"
         },
@@ -142676,13 +142650,12 @@
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3150.0,
-        "change_1d_pct": -1.25,
-        "change_1w_pct": -5.41,
-        "change_1m_pct": -8.84,
+        "price": 3170.0,
+        "change_1d_pct": 0.63,
+        "change_1w_pct": -4.92,
+        "change_1m_pct": -6.93,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3161.4,
           3238.6,
           3271.2,
           3221.8,
@@ -142711,7 +142684,8 @@
           3282.0,
           3259.0,
           3190.0,
-          3150.0
+          3150.0,
+          3170.0
         ],
         "daily_closes": [
           {
@@ -152605,6 +152579,10 @@
           {
             "date": "2026-09-03",
             "close": 3150.0
+          },
+          {
+            "date": "2026-09-04",
+            "close": 3170.0
           }
         ]
       },
@@ -215020,13 +214998,12 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2978.2,
-        "change_1d_pct": -1.36,
-        "change_1w_pct": 0.14,
-        "change_1m_pct": -3.59,
+        "price": 2968.8,
+        "change_1d_pct": -0.32,
+        "change_1w_pct": -1.55,
+        "change_1m_pct": -3.64,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2905.1,
           2954.1,
           3009.9,
           3016.8,
@@ -215055,7 +215032,8 @@
           2995.0,
           3016.1,
           3019.4,
-          2978.2
+          2978.2,
+          2968.8
         ],
         "daily_closes": [
           {
@@ -224949,6 +224927,10 @@
           {
             "date": "2026-09-03",
             "close": 2978.2
+          },
+          {
+            "date": "2026-09-04",
+            "close": 2968.8
           }
         ]
       },
