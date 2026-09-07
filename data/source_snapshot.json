@@ -1,11 +1,11 @@
 {
-  "as_of_date": "2026-08-23",
+  "as_of_date": "2026-09-07",
   "fada": {
     "source_name": "FADA",
-    "latest_month": "2026-07",
-    "latest_release_date": "2026-08-06",
-    "source_url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-    "coverage_note": "Vehicle Retail Data has been collated as on 0 5.08.26 in collaboration with Ministry of Road Transport & Highways, Government of India and has been gathered from 1,465 out of 1,468 RTOs.",
+    "latest_month": "2026-08",
+    "latest_release_date": "2026-09-07",
+    "source_url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+    "coverage_note": "Vehicle Retail Data has been collated as on 0 4.09.26 in collaboration with Ministry of Road Transport & Highways, Government of India and has been gathered from 1,467 out of 1,469 RTOs.",
     "monthly_series": [
       {
         "month": "2018-12",
@@ -3744,6 +3744,48 @@
             "yoy_pct": 25.89
           }
         }
+      },
+      {
+        "month": "2026-08",
+        "release_date": "2026-09-07",
+        "source_url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+        "categories": {
+          "2W": {
+            "units": 1714610,
+            "mom_pct": -5.7,
+            "yoy_pct": 19.69
+          },
+          "3W": {
+            "units": 122281,
+            "mom_pct": -8.59,
+            "yoy_pct": 8.64
+          },
+          "PV": {
+            "units": 402398,
+            "mom_pct": -3.4,
+            "yoy_pct": 16.14
+          },
+          "TRACTOR": {
+            "units": 87977,
+            "mom_pct": -25.03,
+            "yoy_pct": 0.84
+          },
+          "CE": {
+            "units": 5166,
+            "mom_pct": -6.09,
+            "yoy_pct": 31.45
+          },
+          "CV": {
+            "units": 90769,
+            "mom_pct": -8.93,
+            "yoy_pct": 14.45
+          },
+          "TOTAL": {
+            "units": 2423201,
+            "mom_pct": -6.48,
+            "yoy_pct": 17.51
+          }
+        }
       }
     ],
     "inventory_days_pv": [
@@ -4126,6 +4168,11 @@
         "month": "2026-07",
         "days_low": 34,
         "days_high": 34
+      },
+      {
+        "month": "2026-08",
+        "days_low": 39,
+        "days_high": 39
       }
     ],
     "dealer_growth_expectation": [
@@ -4308,115 +4355,120 @@
         "month": "2026-07",
         "next_month_growth_pct": 74.3,
         "next_three_months_growth_pct": 87.85
+      },
+      {
+        "month": "2026-08",
+        "next_month_growth_pct": 67.09,
+        "next_three_months_growth_pct": 81.62
       }
     ],
     "latest_commentary": {
-      "inventory_days_pv": "34",
-      "growth_expectation_next_month_pct": 74.3,
-      "growth_expectation_next_three_months_pct": 87.85,
-      "liquidity_good_pct": 47.66,
-      "sentiment_good_pct": 45.33,
+      "inventory_days_pv": "39",
+      "growth_expectation_next_month_pct": 67.09,
+      "growth_expectation_next_three_months_pct": 81.62,
+      "liquidity_good_pct": 41.03,
+      "sentiment_good_pct": 40.6,
       "bullets": [
-        "Jul 2026 retail closed at 2,591,138 units with +25.89% YoY growth and -0.16% MoM momentum.",
-        "Two-wheelers led volumes at 1,818,289 units (+28.25% YoY), while passenger vehicles hit 416,555 units (+19.13% YoY).",
-        "PV inventory stayed healthy at about 34 days, keeping wholesale-retail alignment much tighter than a year ago.",
+        "Aug 2026 retail closed at 2,423,201 units with +17.51% YoY growth and -6.48% MoM momentum.",
+        "Two-wheelers led volumes at 1,714,610 units (+19.69% YoY), while passenger vehicles hit 402,398 units (+16.14% YoY).",
+        "PV inventory stayed healthy at about 39 days, keeping wholesale-retail alignment much tighter than a year ago.",
         "Dealer outlook stayed constructive but measured, with positive demand expectations for both the next month and the next three months."
       ]
     },
     "latest_urban_rural_growth": [
       {
         "category": "2W",
-        "urban_mom_pct": 5.04,
-        "urban_yoy_pct": 27.86,
-        "rural_mom_pct": -6.16,
-        "rural_yoy_pct": 28.59
+        "urban_mom_pct": -4.38,
+        "urban_yoy_pct": 19.07,
+        "rural_mom_pct": -6.85,
+        "rural_yoy_pct": 20.25
       },
       {
         "category": "CV",
-        "urban_mom_pct": 2.7,
-        "urban_yoy_pct": 19.36,
-        "rural_mom_pct": 7.41,
-        "rural_yoy_pct": 29.37
+        "urban_mom_pct": -7.01,
+        "urban_yoy_pct": 12.79,
+        "rural_mom_pct": -10.94,
+        "rural_yoy_pct": 16.33
       },
       {
         "category": "PV",
-        "urban_mom_pct": -1.5,
-        "urban_yoy_pct": 15.76,
-        "rural_mom_pct": -1.95,
-        "rural_yoy_pct": 24.72
+        "urban_mom_pct": -4.33,
+        "urban_yoy_pct": 10.93,
+        "rural_mom_pct": -1.96,
+        "rural_yoy_pct": 24.99
       },
       {
         "category": "TRACTOR",
-        "urban_mom_pct": 5.87,
-        "urban_yoy_pct": 25.03,
-        "rural_mom_pct": 13.62,
-        "rural_yoy_pct": 28.83
+        "urban_mom_pct": -27.64,
+        "urban_yoy_pct": -8.32,
+        "rural_mom_pct": -24.43,
+        "rural_yoy_pct": 3.09
       },
       {
         "category": "TOTAL",
-        "urban_mom_pct": 3.55,
-        "urban_yoy_pct": 23.76,
-        "rural_mom_pct": -3.29,
-        "rural_yoy_pct": 27.87
+        "urban_mom_pct": -5.12,
+        "urban_yoy_pct": 15.17,
+        "rural_mom_pct": -7.71,
+        "rural_yoy_pct": 19.79
       }
     ],
     "latest_subsegments": {
       "3W": [
         {
           "label": "E-rickshaw passenger",
-          "units": 34722,
-          "mom_pct": 8.06,
-          "yoy_pct": -12.71
+          "units": 28816,
+          "mom_pct": -17.01,
+          "yoy_pct": -22.03
         },
         {
           "label": "E-rickshaw goods",
-          "units": 7280,
-          "mom_pct": -0.31,
-          "yoy_pct": 5.69
+          "units": 6029,
+          "mom_pct": -17.18,
+          "yoy_pct": -2.98
         },
         {
           "label": "3W goods",
-          "units": 15366,
-          "mom_pct": 3.2,
-          "yoy_pct": 47.0
+          "units": 14614,
+          "mom_pct": -4.89,
+          "yoy_pct": 42.76
         },
         {
           "label": "3W passenger",
-          "units": 76236,
-          "mom_pct": 7.81,
-          "yoy_pct": 31.55
+          "units": 72657,
+          "mom_pct": -4.69,
+          "yoy_pct": 23.11
         },
         {
           "label": "3W personal",
-          "units": 174,
-          "mom_pct": 40.32,
-          "yoy_pct": 81.25
+          "units": 165,
+          "mom_pct": -5.17,
+          "yoy_pct": 28.91
         }
       ],
       "CV": [
         {
           "label": "LCV",
-          "units": 61634,
-          "mom_pct": 3.5,
-          "yoy_pct": 27.65
+          "units": 55972,
+          "mom_pct": -9.19,
+          "yoy_pct": 15.32
         },
         {
           "label": "MCV",
-          "units": 9925,
-          "mom_pct": -5.76,
-          "yoy_pct": 25.0
+          "units": 8092,
+          "mom_pct": -18.47,
+          "yoy_pct": 10.38
         },
         {
           "label": "HCV",
-          "units": 28070,
-          "mom_pct": 13.0,
-          "yoy_pct": 16.72
+          "units": 26640,
+          "mom_pct": -5.09,
+          "yoy_pct": 13.98
         },
         {
           "label": "Others",
-          "units": 37,
-          "mom_pct": -27.45,
-          "yoy_pct": -51.32
+          "units": 65,
+          "mom_pct": 75.68,
+          "yoy_pct": -2.99
         }
       ]
     },
@@ -4687,109 +4739,109 @@
         "label": "Two-Wheelers",
         "rows": [
           {
-            "oem": "Ltd",
-            "units": 469687,
-            "share_pct": 25.83,
-            "prior_units": 365395,
-            "prior_share_pct": 25.77
+            "oem": "Honda Motorcycle & Scooter India",
+            "units": 447342,
+            "share_pct": 26.09,
+            "prior_units": 372867,
+            "prior_share_pct": 26.03
           },
           {
             "oem": "Hero MotoCorp",
-            "units": 440662,
-            "share_pct": 24.23,
-            "prior_units": 347398,
-            "prior_share_pct": 24.5
+            "units": 413996,
+            "share_pct": 24.15,
+            "prior_units": 349039,
+            "prior_share_pct": 24.37
           },
           {
             "oem": "TVS Motor",
-            "units": 374113,
-            "share_pct": 20.58,
-            "prior_units": 280337,
-            "prior_share_pct": 19.77
+            "units": 353746,
+            "share_pct": 20.63,
+            "prior_units": 282347,
+            "prior_share_pct": 19.71
           },
           {
             "oem": "Suzuki Motorcycle India",
-            "units": 102668,
-            "share_pct": 5.65,
-            "prior_units": 93984,
-            "prior_share_pct": 6.63
+            "units": 104217,
+            "share_pct": 6.08,
+            "prior_units": 96184,
+            "prior_share_pct": 6.71
           },
           {
             "oem": "Royal Enfield",
-            "units": 95080,
-            "share_pct": 5.23,
-            "prior_units": 72207,
-            "prior_share_pct": 5.09
+            "units": 94448,
+            "share_pct": 5.51,
+            "prior_units": 76505,
+            "prior_share_pct": 5.34
           },
           {
             "oem": "India Yamaha Motor",
-            "units": 67781,
-            "share_pct": 3.73,
-            "prior_units": 52486,
-            "prior_share_pct": 3.7
+            "units": 62375,
+            "share_pct": 3.64,
+            "prior_units": 55172,
+            "prior_share_pct": 3.85
           },
           {
             "oem": "Ather Energy",
-            "units": 30357,
-            "share_pct": 1.67,
-            "prior_units": 17834,
-            "prior_share_pct": 1.26
+            "units": 28757,
+            "share_pct": 1.68,
+            "prior_units": 19210,
+            "prior_share_pct": 1.34
           },
           {
             "oem": "Ola Electric",
-            "units": 14106,
-            "share_pct": 0.78,
-            "prior_units": 18450,
-            "prior_share_pct": 1.3
+            "units": 13852,
+            "share_pct": 0.81,
+            "prior_units": 19464,
+            "prior_share_pct": 1.36
           },
           {
             "oem": "Greaves Electric Mobility Ltd",
-            "units": 10125,
-            "share_pct": 0.56,
-            "prior_units": 4266,
-            "prior_share_pct": 0.3
+            "units": 8613,
+            "share_pct": 0.5,
+            "prior_units": 4567,
+            "prior_share_pct": 0.32
           },
           {
             "oem": "River Mobility",
-            "units": 5954,
-            "share_pct": 0.33,
-            "prior_units": 1680,
-            "prior_share_pct": 0.12
+            "units": 5141,
+            "share_pct": 0.3,
+            "prior_units": 1903,
+            "prior_share_pct": 0.13
           },
           {
             "oem": "BGauss Auto",
-            "units": 5518,
-            "share_pct": 0.3,
-            "prior_units": 1763,
+            "units": 4845,
+            "share_pct": 0.28,
+            "prior_units": 1729,
             "prior_share_pct": 0.12
           },
           {
             "oem": "Classic Legends",
-            "units": 4541,
+            "units": 4256,
             "share_pct": 0.25,
-            "prior_units": 2465,
-            "prior_share_pct": 0.17
+            "prior_units": 2649,
+            "prior_share_pct": 0.18
           },
           {
             "oem": "Piaggio Vehicles",
-            "units": 3684,
-            "share_pct": 0.2,
-            "prior_units": 2754,
-            "prior_share_pct": 0.19
+            "units": 3595,
+            "share_pct": 0.21,
+            "prior_units": 2900,
+            "prior_share_pct": 0.2
           },
           {
             "oem": "Others",
-            "units": 13830,
-            "share_pct": 0.76,
-            "prior_units": 10081,
-            "prior_share_pct": 0.71
+            "units": 12278,
+            "share_pct": 0.72,
+            "prior_units": 11666,
+            "prior_share_pct": 0.81
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       },
@@ -4799,80 +4851,87 @@
         "rows": [
           {
             "oem": "Bajaj Auto",
-            "units": 44908,
-            "share_pct": 33.57,
-            "prior_units": 41767,
-            "prior_share_pct": 36.27
+            "units": 42605,
+            "share_pct": 34.84,
+            "prior_units": 43744,
+            "prior_share_pct": 38.87
           },
           {
             "oem": "Mahindra & Mahindra",
-            "units": 14823,
-            "share_pct": 11.08,
-            "prior_units": 10527,
-            "prior_share_pct": 9.14
+            "units": 13381,
+            "share_pct": 10.94,
+            "prior_units": 9414,
+            "prior_share_pct": 8.36
           },
           {
             "oem": "Piaggio Vehicles",
-            "units": 9598,
-            "share_pct": 7.17,
-            "prior_units": 7271,
-            "prior_share_pct": 6.31
+            "units": 8426,
+            "share_pct": 6.89,
+            "prior_units": 7109,
+            "prior_share_pct": 6.32
           },
           {
             "oem": "TVS Motor",
-            "units": 7294,
-            "share_pct": 5.45,
-            "prior_units": 4415,
-            "prior_share_pct": 3.83
+            "units": 7139,
+            "share_pct": 5.84,
+            "prior_units": 4779,
+            "prior_share_pct": 4.25
           },
           {
             "oem": "Atul Auto",
-            "units": 3066,
-            "share_pct": 2.29,
-            "prior_units": 2378,
-            "prior_share_pct": 2.06
+            "units": 2810,
+            "share_pct": 2.3,
+            "prior_units": 2113,
+            "prior_share_pct": 1.88
           },
           {
             "oem": "YC Electric Vehicle",
-            "units": 2388,
-            "share_pct": 1.79,
-            "prior_units": 3631,
-            "prior_share_pct": 3.15
+            "units": 2208,
+            "share_pct": 1.81,
+            "prior_units": 3421,
+            "prior_share_pct": 3.04
           },
           {
             "oem": "Dilli Electric Auto",
-            "units": 1843,
-            "share_pct": 1.38,
-            "prior_units": 1919,
-            "prior_share_pct": 1.67
+            "units": 1781,
+            "share_pct": 1.46,
+            "prior_units": 1816,
+            "prior_share_pct": 1.61
           },
           {
             "oem": "Saera Electric Auto",
-            "units": 1815,
-            "share_pct": 1.36,
-            "prior_units": 2205,
-            "prior_share_pct": 1.91
+            "units": 1702,
+            "share_pct": 1.39,
+            "prior_units": 2172,
+            "prior_share_pct": 1.93
           },
           {
             "oem": "Mini Metro Ev L.L.P",
-            "units": 1581,
-            "share_pct": 1.18,
-            "prior_units": 1087,
-            "prior_share_pct": 0.94
+            "units": 1330,
+            "share_pct": 1.09,
+            "prior_units": 1144,
+            "prior_share_pct": 1.02
+          },
+          {
+            "oem": "J. S. Auto",
+            "units": 1315,
+            "share_pct": 1.08,
+            "prior_units": 945,
+            "prior_share_pct": 0.84
           },
           {
             "oem": "Others",
-            "units": 46462,
-            "share_pct": 34.73,
-            "prior_units": 39966,
-            "prior_share_pct": 34.7
+            "units": 39584,
+            "share_pct": 32.37,
+            "prior_units": 35896,
+            "prior_share_pct": 31.89
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       },
@@ -4882,73 +4941,73 @@
         "rows": [
           {
             "oem": "Tata Motors",
-            "units": 34733,
-            "share_pct": 34.85,
-            "prior_units": 26162,
-            "prior_share_pct": 32.56
+            "units": 30338,
+            "share_pct": 33.42,
+            "prior_units": 25128,
+            "prior_share_pct": 31.68
           },
           {
             "oem": "Mahindra Group",
-            "units": 26055,
-            "share_pct": 26.14,
-            "prior_units": 21296,
-            "prior_share_pct": 26.5
+            "units": 23998,
+            "share_pct": 26.44,
+            "prior_units": 22319,
+            "prior_share_pct": 28.14
           },
           {
             "oem": "Ashok Leyland Group",
-            "units": 17691,
-            "share_pct": 17.75,
-            "prior_units": 15226,
-            "prior_share_pct": 18.95
+            "units": 16649,
+            "share_pct": 18.34,
+            "prior_units": 15344,
+            "prior_share_pct": 19.35
           },
           {
             "oem": "VE Commercial Vehicles",
-            "units": 8724,
-            "share_pct": 8.75,
-            "prior_units": 7572,
-            "prior_share_pct": 9.42
+            "units": 7186,
+            "share_pct": 7.92,
+            "prior_units": 6951,
+            "prior_share_pct": 8.76
           },
           {
             "oem": "Maruti Suzuki",
-            "units": 4460,
-            "share_pct": 4.47,
-            "prior_units": 3634,
-            "prior_share_pct": 4.52
+            "units": 4435,
+            "share_pct": 4.89,
+            "prior_units": 3861,
+            "prior_share_pct": 4.87
           },
           {
             "oem": "Force Motors",
-            "units": 2610,
-            "share_pct": 2.62,
-            "prior_units": 2201,
-            "prior_share_pct": 2.74
-          },
-          {
-            "oem": "Sml Mahindra Ltd",
-            "units": 1845,
-            "share_pct": 1.85,
-            "prior_units": 1793,
-            "prior_share_pct": 2.23
+            "units": 2273,
+            "share_pct": 2.5,
+            "prior_units": 1947,
+            "prior_share_pct": 2.46
           },
           {
             "oem": "Daimler India Commercial Vehicles",
-            "units": 1667,
-            "share_pct": 1.67,
-            "prior_units": 1460,
-            "prior_share_pct": 1.82
+            "units": 1763,
+            "share_pct": 1.94,
+            "prior_units": 1523,
+            "prior_share_pct": 1.92
+          },
+          {
+            "oem": "Sml Mahindra Ltd",
+            "units": 1336,
+            "share_pct": 1.47,
+            "prior_units": 1277,
+            "prior_share_pct": 1.61
           },
           {
             "oem": "Others",
-            "units": 1881,
-            "share_pct": 1.89,
-            "prior_units": 1004,
-            "prior_share_pct": 1.25
+            "units": 2791,
+            "share_pct": 3.07,
+            "prior_units": 956,
+            "prior_share_pct": 1.21
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       },
@@ -4958,108 +5017,94 @@
         "rows": [
           {
             "oem": "JCB India",
-            "units": 2561,
-            "share_pct": 46.56,
-            "prior_units": 1839,
-            "prior_share_pct": 48.83
+            "units": 2605,
+            "share_pct": 50.43,
+            "prior_units": 2126,
+            "prior_share_pct": 54.1
           },
           {
             "oem": "Action Construction Equipment",
-            "units": 652,
-            "share_pct": 11.85,
-            "prior_units": 415,
-            "prior_share_pct": 11.02
+            "units": 556,
+            "share_pct": 10.76,
+            "prior_units": 395,
+            "prior_share_pct": 10.05
           },
           {
-            "oem": "Escorts Kubota CE",
-            "units": 462,
-            "share_pct": 8.4,
-            "prior_units": 213,
-            "prior_share_pct": 5.66
+            "oem": "Equipment)",
+            "units": 412,
+            "share_pct": 7.98,
+            "prior_units": 246,
+            "prior_share_pct": 6.26
           },
           {
             "oem": "Ajax Engineering",
-            "units": 363,
-            "share_pct": 6.6,
-            "prior_units": 199,
-            "prior_share_pct": 5.28
+            "units": 282,
+            "share_pct": 5.46,
+            "prior_units": 218,
+            "prior_share_pct": 5.55
           },
           {
             "oem": "Bull Machines",
-            "units": 182,
-            "share_pct": 3.31,
-            "prior_units": 112,
-            "prior_share_pct": 2.97
-          },
-          {
-            "oem": "Tata Hitachi",
-            "units": 134,
-            "share_pct": 2.44,
-            "prior_units": 62,
-            "prior_share_pct": 1.65
+            "units": 173,
+            "share_pct": 3.35,
+            "prior_units": 88,
+            "prior_share_pct": 2.24
           },
           {
             "oem": "Caterpillar India",
-            "units": 109,
-            "share_pct": 1.98,
-            "prior_units": 88,
-            "prior_share_pct": 2.34
+            "units": 121,
+            "share_pct": 2.34,
+            "prior_units": 109,
+            "prior_share_pct": 2.77
           },
           {
-            "oem": "CNH Construction Equipment",
-            "units": 98,
+            "oem": "Pvt Ltd",
+            "units": 117,
+            "share_pct": 2.26,
+            "prior_units": 97,
+            "prior_share_pct": 2.47
+          },
+          {
+            "oem": "Schwing Stetter",
+            "units": 92,
             "share_pct": 1.78,
-            "prior_units": 41,
-            "prior_share_pct": 1.09
-          },
-          {
-            "oem": "All Terrain Crane",
-            "units": 74,
-            "share_pct": 1.35,
-            "prior_units": 179,
-            "prior_share_pct": 4.75
+            "prior_units": 74,
+            "prior_share_pct": 1.88
           },
           {
             "oem": "Indo Farm Equipment",
             "units": 73,
-            "share_pct": 1.33,
-            "prior_units": 54,
-            "prior_share_pct": 1.43
-          },
-          {
-            "oem": "Schwing Stetter",
-            "units": 70,
-            "share_pct": 1.27,
-            "prior_units": 45,
-            "prior_share_pct": 1.19
-          },
-          {
-            "oem": "Doosan Bobcat India",
-            "units": 65,
-            "share_pct": 1.18,
-            "prior_units": 28,
-            "prior_share_pct": 0.74
+            "share_pct": 1.41,
+            "prior_units": 19,
+            "prior_share_pct": 0.48
           },
           {
             "oem": "Liugong India Pvt. Ltd",
-            "units": 60,
-            "share_pct": 1.09,
-            "prior_units": 9,
-            "prior_share_pct": 0.24
+            "units": 62,
+            "share_pct": 1.2,
+            "prior_units": 7,
+            "prior_share_pct": 0.18
+          },
+          {
+            "oem": "Doosan Bobcat India",
+            "units": 49,
+            "share_pct": 0.95,
+            "prior_units": 33,
+            "prior_share_pct": 0.84
           },
           {
             "oem": "Others",
-            "units": 598,
-            "share_pct": 10.87,
-            "prior_units": 482,
-            "prior_share_pct": 12.8
+            "units": 518,
+            "share_pct": 10.03,
+            "prior_units": 464,
+            "prior_share_pct": 11.81
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       },
@@ -5069,143 +5114,143 @@
         "rows": [
           {
             "oem": "Maruti Suzuki",
-            "units": 161873,
-            "share_pct": 38.86,
-            "prior_units": 135232,
-            "prior_share_pct": 38.67
+            "units": 165200,
+            "share_pct": 41.05,
+            "prior_units": 134494,
+            "prior_share_pct": 38.82
           },
           {
             "oem": "Tata Motors",
-            "units": 58774,
-            "share_pct": 14.11,
-            "prior_units": 42950,
-            "prior_share_pct": 12.28
+            "units": 57841,
+            "share_pct": 14.37,
+            "prior_units": 41170,
+            "prior_share_pct": 11.88
           },
           {
             "oem": "Mahindra & Mahindra",
-            "units": 56219,
-            "share_pct": 13.5,
-            "prior_units": 45451,
-            "prior_share_pct": 13.0
+            "units": 50245,
+            "share_pct": 12.49,
+            "prior_units": 47220,
+            "prior_share_pct": 13.63
           },
           {
             "oem": "Hyundai Motor India",
-            "units": 47853,
-            "share_pct": 11.49,
-            "prior_units": 45278,
-            "prior_share_pct": 12.95
+            "units": 46987,
+            "share_pct": 11.68,
+            "prior_units": 44818,
+            "prior_share_pct": 12.94
           },
           {
             "oem": "Toyota Kirloskar Motor",
-            "units": 29443,
-            "share_pct": 7.07,
-            "prior_units": 27733,
-            "prior_share_pct": 7.93
+            "units": 24856,
+            "share_pct": 6.18,
+            "prior_units": 27600,
+            "prior_share_pct": 7.97
           },
           {
             "oem": "Kia India",
-            "units": 25551,
-            "share_pct": 6.13,
-            "prior_units": 20971,
-            "prior_share_pct": 6.0
+            "units": 23371,
+            "share_pct": 5.81,
+            "prior_units": 19873,
+            "prior_share_pct": 5.74
           },
           {
             "oem": "Skoda Auto Volkswagen Group",
-            "units": 8221,
-            "share_pct": 1.97,
-            "prior_units": 8902,
-            "prior_share_pct": 2.55
+            "units": 7469,
+            "share_pct": 1.86,
+            "prior_units": 9069,
+            "prior_share_pct": 2.62
           },
           {
             "oem": "JSW MG Motor India",
-            "units": 7030,
-            "share_pct": 1.69,
-            "prior_units": 6927,
-            "prior_share_pct": 1.98
+            "units": 5784,
+            "share_pct": 1.44,
+            "prior_units": 6649,
+            "prior_share_pct": 1.92
           },
           {
             "oem": "Honda Cars India",
-            "units": 5822,
-            "share_pct": 1.4,
-            "prior_units": 4827,
-            "prior_share_pct": 1.38
+            "units": 4968,
+            "share_pct": 1.23,
+            "prior_units": 4421,
+            "prior_share_pct": 1.28
           },
           {
             "oem": "Renault India",
-            "units": 3505,
-            "share_pct": 0.84,
-            "prior_units": 2313,
-            "prior_share_pct": 0.66
+            "units": 3275,
+            "share_pct": 0.81,
+            "prior_units": 2618,
+            "prior_share_pct": 0.76
           },
           {
             "oem": "Nissan Motor India",
-            "units": 2698,
-            "share_pct": 0.65,
-            "prior_units": 1555,
-            "prior_share_pct": 0.44
-          },
-          {
-            "oem": "BMW India",
-            "units": 1702,
-            "share_pct": 0.41,
-            "prior_units": 1427,
-            "prior_share_pct": 0.41
-          },
-          {
-            "oem": "Mercedes-Benz Group",
-            "units": 1527,
-            "share_pct": 0.37,
-            "prior_units": 1466,
-            "prior_share_pct": 0.42
+            "units": 2758,
+            "share_pct": 0.69,
+            "prior_units": 1502,
+            "prior_share_pct": 0.43
           },
           {
             "oem": "VinFast Auto India",
-            "units": 1482,
-            "share_pct": 0.36,
+            "units": 2199,
+            "share_pct": 0.55,
             "prior_units": 0,
             "prior_share_pct": 0.0
           },
           {
+            "oem": "BMW India",
+            "units": 1402,
+            "share_pct": 0.35,
+            "prior_units": 1448,
+            "prior_share_pct": 0.42
+          },
+          {
+            "oem": "Mercedes-Benz Group",
+            "units": 1353,
+            "share_pct": 0.34,
+            "prior_units": 1469,
+            "prior_share_pct": 0.42
+          },
+          {
             "oem": "Force Motors",
-            "units": 1193,
-            "share_pct": 0.29,
-            "prior_units": 581,
+            "units": 1111,
+            "share_pct": 0.28,
+            "prior_units": 585,
             "prior_share_pct": 0.17
           },
           {
             "oem": "Stellantis Group",
-            "units": 1168,
-            "share_pct": 0.28,
-            "prior_units": 874,
-            "prior_share_pct": 0.25
-          },
-          {
-            "oem": "BYD India",
-            "units": 749,
-            "share_pct": 0.18,
-            "prior_units": 613,
-            "prior_share_pct": 0.18
+            "units": 998,
+            "share_pct": 0.25,
+            "prior_units": 719,
+            "prior_share_pct": 0.21
           },
           {
             "oem": "Jaguar Land Rover India",
-            "units": 603,
+            "units": 563,
             "share_pct": 0.14,
-            "prior_units": 526,
+            "prior_units": 503,
             "prior_share_pct": 0.15
           },
           {
+            "oem": "BYD India",
+            "units": 543,
+            "share_pct": 0.13,
+            "prior_units": 581,
+            "prior_share_pct": 0.17
+          },
+          {
             "oem": "Others",
-            "units": 1142,
-            "share_pct": 0.27,
-            "prior_units": 2048,
-            "prior_share_pct": 0.59
+            "units": 1475,
+            "share_pct": 0.37,
+            "prior_units": 1729,
+            "prior_share_pct": 0.5
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       },
@@ -5215,80 +5260,80 @@
         "rows": [
           {
             "oem": "Mahindra Tractors",
-            "units": 26863,
-            "share_pct": 22.89,
-            "prior_units": 20617,
-            "prior_share_pct": 22.51
+            "units": 20703,
+            "share_pct": 23.53,
+            "prior_units": 20159,
+            "prior_share_pct": 23.11
           },
           {
-            "oem": "Division)",
-            "units": 22334,
-            "share_pct": 19.03,
-            "prior_units": 16733,
-            "prior_share_pct": 18.27
+            "oem": "Swaraj",
+            "units": 15914,
+            "share_pct": 18.09,
+            "prior_units": 15428,
+            "prior_share_pct": 17.68
           },
           {
             "oem": "International Tractors",
-            "units": 15991,
-            "share_pct": 13.63,
-            "prior_units": 12824,
-            "prior_share_pct": 14.0
+            "units": 11818,
+            "share_pct": 13.43,
+            "prior_units": 10586,
+            "prior_share_pct": 12.13
           },
           {
             "oem": "TAFE",
-            "units": 14178,
-            "share_pct": 12.08,
-            "prior_units": 9655,
-            "prior_share_pct": 10.54
+            "units": 10780,
+            "share_pct": 12.25,
+            "prior_units": 11030,
+            "prior_share_pct": 12.64
           },
           {
-            "oem": "Group)",
-            "units": 12782,
-            "share_pct": 10.89,
-            "prior_units": 9202,
-            "prior_share_pct": 10.05
+            "oem": "Escorts Kubota",
+            "units": 9756,
+            "share_pct": 11.09,
+            "prior_units": 8666,
+            "prior_share_pct": 9.93
           },
           {
             "oem": "John Deere India",
-            "units": 8087,
-            "share_pct": 6.89,
-            "prior_units": 6986,
-            "prior_share_pct": 7.63
+            "units": 6294,
+            "share_pct": 7.15,
+            "prior_units": 5956,
+            "prior_share_pct": 6.83
           },
           {
             "oem": "Eicher Tractors",
-            "units": 7910,
-            "share_pct": 6.74,
-            "prior_units": 6321,
-            "prior_share_pct": 6.9
+            "units": 5590,
+            "share_pct": 6.35,
+            "prior_units": 6059,
+            "prior_share_pct": 6.94
           },
           {
             "oem": "CNH Industrial",
-            "units": 5417,
-            "share_pct": 4.62,
-            "prior_units": 3932,
-            "prior_share_pct": 4.29
+            "units": 4170,
+            "share_pct": 4.74,
+            "prior_units": 3934,
+            "prior_share_pct": 4.51
           },
           {
             "oem": "Others",
-            "units": 3787,
-            "share_pct": 3.23,
-            "prior_units": 5334,
-            "prior_share_pct": 5.82
+            "units": 2952,
+            "share_pct": 3.36,
+            "prior_units": 5426,
+            "prior_share_pct": 6.22
           }
         ],
         "source_meta": {
           "name": "FADA",
-          "url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf",
-          "latest_month": "2026-07",
-          "latest_label": "Jul 2026",
+          "url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf",
+          "latest_month": "2026-08",
+          "latest_label": "Aug 2026",
           "note": "Official FADA OEM annexure from the latest monthly retail PDF."
         }
       }
     },
-    "oem_latest_month": "2026-07",
-    "oem_latest_release_date": "2026-08-06",
-    "oem_source_url": "https://www.fada.in/images/press-release/16a7445b80cd73FADA%20Releases%20July%202026%20Vehicle%20Retail%20Data.pdf"
+    "oem_latest_month": "2026-08",
+    "oem_latest_release_date": "2026-09-07",
+    "oem_source_url": "https://www.fada.in/images/press-release/16a9e2ff1d6502FADA%20Releases%20August%202026%20Vehicle%20Retail%20Data.pdf"
   },
   "siam": {
     "source_name": "SIAM",
