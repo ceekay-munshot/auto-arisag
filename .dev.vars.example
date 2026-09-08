@@ -1,0 +1,16 @@
+# Local secrets for `wrangler pages dev` (the /api/chat Pages Function).
+# Copy this file to `.dev.vars` and fill in real values. `.dev.vars` is
+# gitignored — never commit real keys. In production these same names are set
+# once in the Cloudflare Pages project (Settings → Environment variables).
+
+# Required for real chat answers. Without it the chat degrades to a friendly
+# "try again" message and the rest of the dashboard works normally.
+ANTHROPIC_API_KEY=sk-ant-...
+
+# Optional. Defaults to "claude-opus-5". Set to e.g. "claude-sonnet-5" or
+# "claude-haiku-4-5" for a cheaper / faster model.
+# CHAT_MODEL=claude-opus-5
+
+# Optional. Enables the "Search the web" toggle (Firecrawl search). Without it
+# the toggle simply has no effect and answers come from the dashboard only.
+# FIRECRAWL_API_KEY=fc-...

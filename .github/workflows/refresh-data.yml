@@ -182,8 +182,9 @@ jobs:
           set -e
           cp static/app.js dist/app.js
           cp static/styles.css dist/styles.css
+          cp static/chat_widget.js dist/chat_widget.js
           # Strip the "static/" prefix so dist/index.html resolves locally.
-          sed 's|static/styles.css|styles.css|g; s|static/app.js|app.js|g' index.html > dist/index.html
+          sed 's|static/styles.css|styles.css|g; s|static/app.js|app.js|g; s|static/chat_widget.js|chat_widget.js|g' index.html > dist/index.html
 
       - name: Decide whether to commit
         id: commit_check
@@ -210,14 +211,14 @@ jobs:
             echo "commit=false" >> "$GITHUB_OUTPUT"
             # Roll back the rebuilt JSONs / synced assets so we don't leave
             # noise behind on the runner working tree.
-            git checkout -- data/investor_dashboard.json dist/data/investor_dashboard.json dist/app.js dist/styles.css dist/index.html 2>/dev/null || true
+            git checkout -- data/investor_dashboard.json dist/data/investor_dashboard.json dist/app.js dist/styles.css dist/chat_widget.js dist/index.html 2>/dev/null || true
           else
             echo "Source-data changes detected; will commit."
             echo "commit=true" >> "$GITHUB_OUTPUT"
             git add data/investor_dashboard.json dist/data/investor_dashboard.json
             # Pick up any drift in dist/ static assets too so the deployed
             # JS / CSS / HTML stays in lockstep with static/ + index.html.
-            git add dist/app.js dist/styles.css dist/index.html
+            git add dist/app.js dist/styles.css dist/chat_widget.js dist/index.html
           fi
 
       - name: Commit and push

@@ -302,6 +302,7 @@ async function triggerRefresh() {
     }
 
     dashboardData = normalizePayload(refreshedPayload);
+    window.dashboardData = dashboardData; // keep the chat widget in sync after a live refresh
     refreshState.tone = "positive";
   } catch (error) {
     refreshState.message = error.message || "Refresh failed.";
@@ -9565,6 +9566,11 @@ function main() {
   loadDashboard()
     .then((data) => {
       dashboardData = data;
+      // Expose the loaded payload (and this dashboard's slug) for the floating
+      // chat widget in chat_widget.js — it uses them for the welcome text and
+      // the data-derived starter questions.
+      window.dashboardData = data;
+      window.__DASHBOARD_SLUG__ = "investor_dashboard";
       restoreStateFromUrl();
       render();
     })

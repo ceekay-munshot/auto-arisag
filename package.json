@@ -1,0 +1,10 @@
+{
+  "name": "auto-arisag",
+  "version": "1.0.0",
+  "private": true,
+  "description": "India Auto Demand Monitor dashboard + 'Chat with this dashboard' feature.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test 'test/**/*.test.mjs'"
+  }
+}
