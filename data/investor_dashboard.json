@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T13:22:54.614913+00:00",
+  "generated_at": "2026-09-08T18:23:11.997190+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122678,10 +122678,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.81,
+        "value": 94.82,
         "unit": "\u20b9",
-        "delta_value": 0.3777,
-        "delta_label": "-0.32% in last week (Yahoo Finance)",
+        "delta_value": 0.3897,
+        "delta_label": "-0.31% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133089,7 +133089,7 @@
           },
           {
             "date": "2026-09-08",
-            "close": 94.808
+            "close": 94.82
           }
         ]
       }
@@ -247020,28 +247020,23 @@
         "id": "E4W",
         "label": "EV 4W",
         "source_name": "RushLane",
-        "source_url": "https://www.rushlane.com/electric-car-sales-july-2026-tata-mahindra-mg-maruti-vinfast-12552820.html",
+        "source_url": "https://www.rushlane.com/electric-car-sales-aug-2026-tata-mahindra-mg-vinfast-12555404.html",
         "growth_label": "YoY growth",
         "compare_label": "Same month, prior year",
         "rows": [
           {
             "oem": "Tata Motors",
-            "units": 13678,
+            "units": 13158,
             "prior_units": null
           },
           {
             "oem": "JSW MG Motor",
-            "units": 5689,
+            "units": 4622,
             "prior_units": null
           },
           {
             "oem": "MG Motor",
-            "units": 5689,
-            "prior_units": null
-          },
-          {
-            "oem": "Maruti Suzuki",
-            "units": 1600,
+            "units": 4622,
             "prior_units": null
           },
           {
@@ -247066,16 +247061,16 @@
           },
           {
             "oem": "BYD",
-            "units": 749,
+            "units": 3000,
             "prior_units": null
           },
           {
             "oem": "Mercedes-Benz",
-            "units": 165,
+            "units": 114,
             "prior_units": null
           }
         ],
-        "total_units": 39570,
+        "total_units": 37516,
         "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
         "latest_month": "Mar 2026"
       },
