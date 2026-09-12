@@ -1,17 +1,18 @@
 {
-  "as_of_date": "2026-09-11",
+  "as_of_date": "2026-09-12",
   "currency": "INR",
   "exchange": "NSE",
   "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
   "stocks": {
     "Maruti Suzuki": {
       "ticker": "MARUTI",
-      "price": 12400.0,
-      "change_1d_pct": -1.51,
-      "change_1w_pct": -2.32,
-      "change_1m_pct": -10.82,
+      "price": 12590.0,
+      "change_1d_pct": -0.22,
+      "change_1w_pct": -2.08,
+      "change_1m_pct": -9.26,
       "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
       "closes_30d": [
+        14234.0,
         14150.0,
         14168.0,
         14190.0,
@@ -40,8 +41,7 @@
         12760.0,
         12641.0,
         12618.0,
-        12590.0,
-        12400.0
+        12590.0
       ],
       "daily_closes": [
         {
@@ -9939,10 +9939,6 @@
         {
           "date": "2026-09-10",
           "close": 12590.0
-        },
-        {
-          "date": "2026-09-11",
-          "close": 12400.0
         }
       ]
     },
@@ -29832,12 +29828,13 @@
     },
     "TVS Motor": {
       "ticker": "TVSMOTOR",
-      "price": 4125.0,
-      "change_1d_pct": 0.08,
-      "change_1w_pct": -0.2,
-      "change_1m_pct": -5.0,
+      "price": 4121.5,
+      "change_1d_pct": -0.71,
+      "change_1w_pct": -1.87,
+      "change_1m_pct": -5.79,
       "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
       "closes_30d": [
+        4313.1,
         4389.0,
         4360.0,
         4455.2,
@@ -29866,8 +29863,7 @@
         4132.0,
         4133.2,
         4151.1,
-        4121.5,
-        4125.0
+        4121.5
       ],
       "daily_closes": [
         {
@@ -39765,21 +39761,18 @@
         {
           "date": "2026-09-10",
           "close": 4121.5
-        },
-        {
-          "date": "2026-09-11",
-          "close": 4125.0
         }
       ]
     },
     "Bajaj Auto": {
       "ticker": "BAJAJ-AUTO",
-      "price": 11678.0,
-      "change_1d_pct": -0.76,
-      "change_1w_pct": -2.02,
-      "change_1m_pct": 0.15,
+      "price": 11768.0,
+      "change_1d_pct": -0.19,
+      "change_1w_pct": -1.28,
+      "change_1m_pct": 0.58,
       "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
       "closes_30d": [
+        11520.5,
         11856.0,
         11600.0,
         11800.0,
@@ -39808,8 +39801,7 @@
         11800.0,
         11880.0,
         11790.0,
-        11768.0,
-        11678.0
+        11768.0
       ],
       "daily_closes": [
         {
@@ -49707,21 +49699,18 @@
         {
           "date": "2026-09-10",
           "close": 11768.0
-        },
-        {
-          "date": "2026-09-11",
-          "close": 11678.0
         }
       ]
     },
     "Hyundai Motor India": {
       "ticker": "HYUNDAI",
-      "price": 2174.0,
-      "change_1d_pct": -1.41,
-      "change_1w_pct": -1.41,
-      "change_1m_pct": -2.82,
+      "price": 2205.0,
+      "change_1d_pct": 1.04,
+      "change_1w_pct": 2.46,
+      "change_1m_pct": -1.56,
       "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
       "closes_30d": [
+        2180.7,
         2207.0,
         2220.0,
         2218.5,
@@ -49750,8 +49739,7 @@
         2210.0,
         2220.0,
         2182.4,
-        2205.0,
-        2174.0
+        2205.0
       ],
       "daily_closes": [
         {
@@ -51641,10 +51629,6 @@
         {
           "date": "2026-09-10",
           "close": 2205.0
-        },
-        {
-          "date": "2026-09-11",
-          "close": 2174.0
         }
       ]
     },

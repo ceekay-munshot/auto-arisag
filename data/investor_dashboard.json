@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T18:13:27.960490+00:00",
+  "generated_at": "2026-09-12T07:47:34.304173+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49562,7 +49562,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-09-11",
+          "latest_release_date": "2026-09-12",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122476,9 +122476,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-11T18:13:06.403210+00:00",
+      "generated_at": "2026-09-12T07:47:18.059364+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 4,
       "items": [
         {
           "title": "New Hero Glamour X 125 ABS Launch Price Rs 1.01 Lakh \u2013 First 125cc To Get ABS With IBS",
@@ -122508,21 +122508,6 @@
             "Luxury"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/2026-bmw-7-series-i7-india-launch-price-5.jpg"
-        },
-        {
-          "title": "TVS Apache RTX 300 Italy Launch Price EUR 4890 (Rs 5.43 L)",
-          "summary": "After a successful launch in India, TVS Motor has launched Apache RTX 300 premium ADV bike in Italy starting from EUR 4,890 (Rs 5.43 Lakh) The post TVS Apache RTX 300 Italy Launch Price EUR 4890 (Rs 5.43 L) appeared first on RushLane .",
-          "url": "https://www.rushlane.com/tvs-apache-rtx-300-italy-launch-price-eur-4890-rs-5-43-l-12555648.html",
-          "source": "RushLane",
-          "published_at": "2026-09-11T08:44:37+00:00",
-          "published_display": "11 Sep 2026",
-          "company": "TVS Motor",
-          "tone": "tw",
-          "scope": "listed",
-          "segment_tags": [
-            "Two-Wheelers"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/tvs-apache-rtx300-italy-launch-cover.jpg"
         },
         {
           "title": "BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh",
@@ -122575,14 +122560,6 @@
           "latest_title": "New BMW 7 Series, i7 India Launch Price Rs 1.95 Crore"
         },
         {
-          "company": "TVS Motor",
-          "tone": "tw",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-09-11T08:44:37+00:00",
-          "latest_title": "TVS Apache RTX 300 Italy Launch Price EUR 4890 (Rs 5.43 L)"
-        },
-        {
           "company": "JSW MG Motor",
           "tone": "pv",
           "scope": "tracked",
@@ -122599,7 +122576,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-09-11",
+    "as_of_date": "2026-09-12",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122717,8 +122694,8 @@
         "label": "USD / INR",
         "value": 95.54,
         "unit": "\u20b9",
-        "delta_value": 0.4282,
-        "delta_label": "+1.11% in last week (Yahoo Finance)",
+        "delta_value": -0.1545,
+        "delta_label": "+1.18% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133129,7 +133106,11 @@
             "close": 95.1118
           },
           {
-            "date": "2026-09-11",
+            "date": "2026-09-10",
+            "close": 95.6945
+          },
+          {
+            "date": "2026-09-12",
             "close": 95.54
           }
         ]
@@ -133138,19 +133119,20 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-09-11",
+    "as_of_date": "2026-09-12",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 12400.0,
-        "change_1d_pct": -1.51,
-        "change_1w_pct": -2.32,
-        "change_1m_pct": -10.82,
+        "price": 12590.0,
+        "change_1d_pct": -0.22,
+        "change_1w_pct": -2.08,
+        "change_1m_pct": -9.26,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          14234.0,
           14150.0,
           14168.0,
           14190.0,
@@ -133179,8 +133161,7 @@
           12760.0,
           12641.0,
           12618.0,
-          12590.0,
-          12400.0
+          12590.0
         ],
         "daily_closes": [
           {
@@ -143078,10 +143059,6 @@
           {
             "date": "2026-09-10",
             "close": 12590.0
-          },
-          {
-            "date": "2026-09-11",
-            "close": 12400.0
           }
         ]
       },
@@ -162971,12 +162948,13 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4125.0,
-        "change_1d_pct": 0.08,
-        "change_1w_pct": -0.2,
-        "change_1m_pct": -5.0,
+        "price": 4121.5,
+        "change_1d_pct": -0.71,
+        "change_1w_pct": -1.87,
+        "change_1m_pct": -5.79,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4313.1,
           4389.0,
           4360.0,
           4455.2,
@@ -163005,8 +162983,7 @@
           4132.0,
           4133.2,
           4151.1,
-          4121.5,
-          4125.0
+          4121.5
         ],
         "daily_closes": [
           {
@@ -172904,21 +172881,18 @@
           {
             "date": "2026-09-10",
             "close": 4121.5
-          },
-          {
-            "date": "2026-09-11",
-            "close": 4125.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11678.0,
-        "change_1d_pct": -0.76,
-        "change_1w_pct": -2.02,
-        "change_1m_pct": 0.15,
+        "price": 11768.0,
+        "change_1d_pct": -0.19,
+        "change_1w_pct": -1.28,
+        "change_1m_pct": 0.58,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          11520.5,
           11856.0,
           11600.0,
           11800.0,
@@ -172947,8 +172921,7 @@
           11800.0,
           11880.0,
           11790.0,
-          11768.0,
-          11678.0
+          11768.0
         ],
         "daily_closes": [
           {
@@ -182846,21 +182819,18 @@
           {
             "date": "2026-09-10",
             "close": 11768.0
-          },
-          {
-            "date": "2026-09-11",
-            "close": 11678.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2174.0,
-        "change_1d_pct": -1.41,
-        "change_1w_pct": -1.41,
-        "change_1m_pct": -2.82,
+        "price": 2205.0,
+        "change_1d_pct": 1.04,
+        "change_1w_pct": 2.46,
+        "change_1m_pct": -1.56,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          2180.7,
           2207.0,
           2220.0,
           2218.5,
@@ -182889,8 +182859,7 @@
           2210.0,
           2220.0,
           2182.4,
-          2205.0,
-          2174.0
+          2205.0
         ],
         "daily_closes": [
           {
@@ -184780,10 +184749,6 @@
           {
             "date": "2026-09-10",
             "close": 2205.0
-          },
-          {
-            "date": "2026-09-11",
-            "close": 2174.0
           }
         ]
       },
@@ -245315,7 +245280,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-09-11",
+    "as_of_date": "2026-09-12",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -247079,7 +247044,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-09-11",
+    "as_of_date": "2026-09-12",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
