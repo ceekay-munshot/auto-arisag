@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T08:07:51.241395+00:00",
+  "generated_at": "2026-09-13T13:45:48.505608+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122476,10 +122476,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-12T17:45:23.392238+00:00",
+      "generated_at": "2026-09-13T13:45:26.212680+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "Next Gen Hyundai Creta Sheds Boxy Camo \u2013 Reveals New Design Details",
+          "summary": "Hyundai is gearing up to introduce a host of updates with the new Creta to ensure its continued dominance in the midsize SUV segment The post Next Gen Hyundai Creta Sheds Boxy Camo \u2013 Reveals New Design Details appeared first on RushLane .",
+          "url": "https://www.rushlane.com/next-gen-hyundai-creta-sheds-boxy-camo-reveals-new-design-details-12555770.html",
+          "source": "RushLane",
+          "published_at": "2026-09-13T05:28:32+00:00",
+          "published_display": "13 Sep 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-hyundai-creta-sheds-camo.jpeg"
+        },
         {
           "title": "BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh",
           "summary": "The post BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh appeared first at EVreporter on EVreporter . BMW India has launched the BMW i5 Long Wheelbase (LWB) at \u20b979.60 lakh (ex-showroom), its first locally produced electric sedan The post BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh appeared first at EVreporter on EVreporter .",
@@ -122515,6 +122530,14 @@
       ],
       "companies": [
         {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-09-13T05:28:32+00:00",
+          "latest_title": "Next Gen Hyundai Creta Sheds Boxy Camo \u2013 Reveals New Design Details"
+        },
+        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -122533,7 +122556,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-09-07"
+        "latest_release_date": "2026-09-13"
       }
     }
   },
