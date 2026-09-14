@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-13",
+  "as_of_date": "2026-09-14",
   "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
   "indicators": [
     {
@@ -124,14 +124,6 @@
       "source_name": "Yahoo Finance — USDINR=X",
       "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
       "daily_closes": [
-        {
-          "date": "2016-09-11",
-          "close": 66.778
-        },
-        {
-          "date": "2016-09-12",
-          "close": 66.723
-        },
         {
           "date": "2016-09-13",
           "close": 66.995
@@ -10533,7 +10525,7 @@
           "close": 95.6945
         },
         {
-          "date": "2026-09-13",
+          "date": "2026-09-14",
           "close": 95.54
         }
       ]
