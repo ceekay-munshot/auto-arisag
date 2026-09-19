@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T07:54:14.411513+00:00",
+  "generated_at": "2026-09-19T13:00:40.889811+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -162967,13 +162967,12 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4101.7,
+        "price": 4171.3,
         "change_1d_pct": 1.7,
-        "change_1w_pct": -0.48,
-        "change_1m_pct": -5.95,
+        "change_1w_pct": 1.12,
+        "change_1m_pct": -4.98,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4440.9,
           4466.2,
           4400.0,
           4375.0,
@@ -163002,7 +163001,8 @@
           4125.0,
           4050.0,
           4033.0,
-          4101.7
+          4101.7,
+          4171.3
         ],
         "daily_closes": [
           {
@@ -172904,6 +172904,10 @@
           {
             "date": "2026-09-17",
             "close": 4101.7
+          },
+          {
+            "date": "2026-09-18",
+            "close": 4171.3
           }
         ]
       },
@@ -182851,13 +182855,12 @@
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2160.0,
-        "change_1d_pct": 0.23,
-        "change_1w_pct": -2.04,
-        "change_1m_pct": -0.67,
+        "price": 2208.8,
+        "change_1d_pct": 2.26,
+        "change_1w_pct": 1.6,
+        "change_1m_pct": -0.82,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2200.5,
           2223.0,
           2200.0,
           2240.0,
@@ -182886,7 +182889,8 @@
           2174.0,
           2140.0,
           2155.0,
-          2160.0
+          2160.0,
+          2208.8
         ],
         "daily_closes": [
           {
@@ -184796,6 +184800,10 @@
           {
             "date": "2026-09-17",
             "close": 2160.0
+          },
+          {
+            "date": "2026-09-18",
+            "close": 2208.8
           }
         ]
       },
@@ -235435,13 +235443,12 @@
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 441.4,
-        "change_1d_pct": 1.15,
-        "change_1w_pct": -1.83,
-        "change_1m_pct": -9.75,
+        "price": 446.45,
+        "change_1d_pct": 1.14,
+        "change_1w_pct": 0.19,
+        "change_1m_pct": -8.39,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          576.9,
           509.15,
           494.1,
           504.0,
@@ -235470,7 +235477,8 @@
           445.6,
           438.45,
           436.4,
-          441.4
+          441.4,
+          446.45
         ],
         "daily_closes": [
           {
@@ -245372,6 +245380,10 @@
           {
             "date": "2026-09-17",
             "close": 441.4
+          },
+          {
+            "date": "2026-09-18",
+            "close": 446.45
           }
         ]
       }
