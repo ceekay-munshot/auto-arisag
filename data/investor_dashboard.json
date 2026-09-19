@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T18:10:35.606100+00:00",
+  "generated_at": "2026-09-19T07:54:14.411513+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49562,7 +49562,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-09-18",
+          "latest_release_date": "2026-09-19",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122476,9 +122476,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-18T18:10:13.351030+00:00",
+      "generated_at": "2026-09-19T07:53:52.686984+00:00",
       "window_days": 30,
-      "item_count": 5,
+      "item_count": 4,
       "items": [
         {
           "title": "New Maruti CNG-AMT Swift, Dzire, Baleno Launch Price Rs 7.92 L \u2013 36.47 km/kg Mileage",
@@ -122518,19 +122518,6 @@
           "scope": "listed",
           "segment_tags": [],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/Mahindra-XUV-3XO-REVX-EDGE-launch-price-2.jpg"
-        },
-        {
-          "title": "2027 Toyota Land Cruiser 300 Launch Price JPY 6.3 Mil (Rs 39 L) \u2013 New Hybrid Engine",
-          "summary": "While the non-electrified petrol engine has been phased out, updated Land Cruiser 300 retains the 303 hp 3.3-litre biturbo diesel engine The post 2027 Toyota Land Cruiser 300 Launch Price JPY 6.3 Mil (Rs 39 L) \u2013 New Hybrid Engine appeared first on RushLane .",
-          "url": "https://www.rushlane.com/2027-toyota-land-cruiser-300-launch-price-jpy-6-3-mil-rs-39-l-new-hybrid-engine-12556114.html",
-          "source": "RushLane",
-          "published_at": "2026-09-18T05:39:07+00:00",
-          "published_display": "18 Sep 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/2027-toyota-land-cruiser-launched-new.jpg"
         },
         {
           "title": "BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh",
@@ -122576,14 +122563,6 @@
           "latest_title": "Mahindra XUV 3XO REVX EDGE Launch Price Rs 9.39 L \u2013 Pano Sunroof Under Rs 10 L"
         },
         {
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-09-18T05:39:07+00:00",
-          "latest_title": "2027 Toyota Land Cruiser 300 Launch Price JPY 6.3 Mil (Rs 39 L) \u2013 New Hybrid Engine"
-        },
-        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -122600,7 +122579,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-09-18",
+    "as_of_date": "2026-09-19",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122716,10 +122695,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.86,
+        "value": 95.88,
         "unit": "\u20b9",
-        "delta_value": -0.2693,
-        "delta_label": "+0.18% in last week (Yahoo Finance)",
+        "delta_value": 0.0808,
+        "delta_label": "+0.89% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133130,8 +133109,12 @@
             "close": 96.1323
           },
           {
-            "date": "2026-09-18",
-            "close": 95.863
+            "date": "2026-09-17",
+            "close": 95.7992
+          },
+          {
+            "date": "2026-09-19",
+            "close": 95.88
           }
         ]
       }
@@ -133139,7 +133122,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-09-18",
+    "as_of_date": "2026-09-19",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -162984,12 +162967,13 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4171.3,
+        "price": 4101.7,
         "change_1d_pct": 1.7,
-        "change_1w_pct": 1.12,
-        "change_1m_pct": -4.98,
+        "change_1w_pct": -0.48,
+        "change_1m_pct": -5.95,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4440.9,
           4466.2,
           4400.0,
           4375.0,
@@ -163018,8 +163002,7 @@
           4125.0,
           4050.0,
           4033.0,
-          4101.7,
-          4171.3
+          4101.7
         ],
         "daily_closes": [
           {
@@ -172921,10 +172904,6 @@
           {
             "date": "2026-09-17",
             "close": 4101.7
-          },
-          {
-            "date": "2026-09-18",
-            "close": 4171.3
           }
         ]
       },
@@ -182872,12 +182851,13 @@
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2208.8,
-        "change_1d_pct": 2.26,
-        "change_1w_pct": 1.6,
-        "change_1m_pct": -0.82,
+        "price": 2160.0,
+        "change_1d_pct": 0.23,
+        "change_1w_pct": -2.04,
+        "change_1m_pct": -0.67,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          2200.5,
           2223.0,
           2200.0,
           2240.0,
@@ -182906,8 +182886,7 @@
           2174.0,
           2140.0,
           2155.0,
-          2160.0,
-          2208.8
+          2160.0
         ],
         "daily_closes": [
           {
@@ -184817,10 +184796,6 @@
           {
             "date": "2026-09-17",
             "close": 2160.0
-          },
-          {
-            "date": "2026-09-18",
-            "close": 2208.8
           }
         ]
       },
@@ -215574,11 +215549,10 @@
         "ticker": "ESCORTS",
         "price": 2798.2,
         "change_1d_pct": -0.62,
-        "change_1w_pct": -6.39,
-        "change_1m_pct": -8.62,
+        "change_1w_pct": -5.42,
+        "change_1m_pct": -8.4,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3081.0,
           3080.0,
           3082.1,
           3107.0,
@@ -215604,6 +215578,7 @@
           3013.2,
           2989.2,
           2958.4,
+          2899.7,
           2899.7,
           2835.8,
           2815.6,
@@ -225492,6 +225467,10 @@
           },
           {
             "date": "2026-09-11",
+            "close": 2899.7
+          },
+          {
+            "date": "2026-09-14",
             "close": 2899.7
           },
           {
@@ -235456,12 +235435,13 @@
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 446.45,
-        "change_1d_pct": 1.14,
-        "change_1w_pct": 0.19,
-        "change_1m_pct": -8.39,
+        "price": 441.4,
+        "change_1d_pct": 1.15,
+        "change_1w_pct": -1.83,
+        "change_1m_pct": -9.75,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          576.9,
           509.15,
           494.1,
           504.0,
@@ -235490,8 +235470,7 @@
           445.6,
           438.45,
           436.4,
-          441.4,
-          446.45
+          441.4
         ],
         "daily_closes": [
           {
@@ -245393,10 +245372,6 @@
           {
             "date": "2026-09-17",
             "close": 441.4
-          },
-          {
-            "date": "2026-09-18",
-            "close": 446.45
           }
         ]
       }
@@ -245404,7 +245379,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-09-18",
+    "as_of_date": "2026-09-19",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -247168,7 +247143,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-09-18",
+    "as_of_date": "2026-09-19",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
