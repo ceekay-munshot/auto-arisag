@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T17:52:42.852967+00:00",
+  "generated_at": "2026-09-20T08:25:03.463308+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49562,7 +49562,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-09-19",
+          "latest_release_date": "2026-09-20",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122476,36 +122476,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-19T17:52:20.354479+00:00",
+      "generated_at": "2026-09-20T08:24:41.293902+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 1,
       "items": [
-        {
-          "title": "New Maruti CNG-AMT Swift, Dzire, Baleno Launch Price Rs 7.92 L \u2013 36.47 km/kg Mileage",
-          "summary": "Maruti Suzuki combines factory-fitted CNG with AMT across three popular models, with claimed mileage reaching 36.47 km/kg The post New Maruti CNG-AMT Swift, Dzire, Baleno Launch Price Rs 7.92 L \u2013 36.47 km/kg Mileage appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-maruti-cng-amt-swift-dzire-baleno-launch-price-mileage-12556212.html",
-          "source": "RushLane",
-          "published_at": "2026-09-18T15:30:25+00:00",
-          "published_display": "18 Sep 2026",
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-maruti-baleno-facelift-specs-details-launch-price-35.jpg"
-        },
-        {
-          "title": "Kia Carens CNG, Clavis CNG (Factory Fitted) Launch Price Rs 12.12 L",
-          "summary": "Kia introduces three factory-fitted CNG variants with a 1.5-litre engine, six-speed manual gearbox and 60-litre cylinder. The post Kia Carens CNG, Clavis CNG (Factory Fitted) Launch Price Rs 12.12 L appeared first on RushLane .",
-          "url": "https://www.rushlane.com/kia-carens-cng-clavis-cng-factory-fitted-launch-price-rs-12-12-l-12556209.html",
-          "source": "RushLane",
-          "published_at": "2026-09-18T14:08:57+00:00",
-          "published_display": "18 Sep 2026",
-          "company": "Kia India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/New-Kia-Carens-Clavis-CNG-launch-price-18.jpg"
-        },
         {
           "title": "BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh",
           "summary": "The post BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh appeared first at EVreporter on EVreporter . BMW India has launched the BMW i5 Long Wheelbase (LWB) at \u20b979.60 lakh (ex-showroom), its first locally produced electric sedan The post BMW India Launches i5 Long Wheelbase at \u20b979.6 Lakh appeared first at EVreporter on EVreporter .",
@@ -122526,22 +122500,6 @@
       ],
       "companies": [
         {
-          "company": "Maruti Suzuki",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-09-18T15:30:25+00:00",
-          "latest_title": "New Maruti CNG-AMT Swift, Dzire, Baleno Launch Price Rs 7.92 L \u2013 36.47 km/kg Mileage"
-        },
-        {
-          "company": "Kia India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-09-18T14:08:57+00:00",
-          "latest_title": "Kia Carens CNG, Clavis CNG (Factory Fitted) Launch Price Rs 12.12 L"
-        },
-        {
           "company": "BMW India",
           "tone": "pv",
           "scope": "tracked",
@@ -122552,13 +122510,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-09-18"
+        "latest_release_date": "2026-09-07"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-09-19",
+    "as_of_date": "2026-09-20",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -133092,7 +133050,7 @@
             "close": 95.7992
           },
           {
-            "date": "2026-09-19",
+            "date": "2026-09-20",
             "close": 95.88
           }
         ]
@@ -133101,7 +133059,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-09-19",
+    "as_of_date": "2026-09-20",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -245370,7 +245328,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-09-19",
+    "as_of_date": "2026-09-20",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -247134,7 +247092,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-09-19",
+    "as_of_date": "2026-09-20",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
