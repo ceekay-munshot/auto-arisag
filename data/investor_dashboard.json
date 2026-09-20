@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T08:25:03.463308+00:00",
+  "generated_at": "2026-09-20T13:33:01.349628+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -162904,12 +162904,13 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4171.3,
+        "price": 4101.7,
         "change_1d_pct": 1.7,
-        "change_1w_pct": 1.12,
-        "change_1m_pct": -4.98,
+        "change_1w_pct": -0.48,
+        "change_1m_pct": -5.95,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4440.9,
           4466.2,
           4400.0,
           4375.0,
@@ -162938,8 +162939,7 @@
           4125.0,
           4050.0,
           4033.0,
-          4101.7,
-          4171.3
+          4101.7
         ],
         "daily_closes": [
           {
@@ -172841,10 +172841,6 @@
           {
             "date": "2026-09-17",
             "close": 4101.7
-          },
-          {
-            "date": "2026-09-18",
-            "close": 4171.3
           }
         ]
       },
