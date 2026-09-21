@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T08:41:56.130378+00:00",
+  "generated_at": "2026-09-21T15:46:54.847124+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122476,10 +122476,38 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-21T08:41:33.597668+00:00",
+      "generated_at": "2026-09-21T15:46:32.897596+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 4,
       "items": [
+        {
+          "title": "2026 Honda CB350, CB350RS, CB350C Launch Price Rs 1.95 L to Rs 2.05 L",
+          "summary": "Honda has launched its updated CB350 range, offering eight variants across three motorcycles, with prices ranging from Rs 1,95,200 to Rs 2,04,700, ex-showroom The post 2026 Honda CB350, CB350RS, CB350C Launch Price Rs 1.95 L to Rs 2.05 L appeared first on RushLane .",
+          "url": "https://www.rushlane.com/2026-honda-cb350-cb350rs-cb350c-launch-price-rs-1-95-l-12556418.html",
+          "source": "RushLane",
+          "published_at": "2026-09-21T15:03:56+00:00",
+          "published_display": "21 Sep 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-honda-cb350c-launch-price-5.jpg"
+        },
+        {
+          "title": "Honda CB500 India Launch Price Rs 2.75 L \u2013 Cross Spoke Tubeless At Rs 3 L",
+          "summary": "The made-in-India Honda CB500 brings a large-capacity, air-cooled single-cylinder engine to the retro roadster segment, with alloy and tubeless spoke-wheel options The post Honda CB500 India Launch Price Rs 2.75 L \u2013 Cross Spoke Tubeless At Rs 3 L appeared first on RushLane .",
+          "url": "https://www.rushlane.com/honda-cb500-india-launch-price-rs-2-75-l-cross-spoke-tubeless-at-rs-3-l-12556413.html",
+          "source": "RushLane",
+          "published_at": "2026-09-21T14:23:13+00:00",
+          "published_display": "21 Sep 2026",
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/07/new-honda-cb500-launch-price-bookings-2.jpeg"
+        },
         {
           "title": "Tata Sierra Dark Launch Price Rs 13.99 Lakh \u2013 Full Lineup Now Has 65 Variants",
           "summary": "Sierra Dark introduces a Friesian Black exterior, Violet Eclipse cabin theme and purple chrome detailing across 23 trim and powertrain combinations The post Tata Sierra Dark Launch Price Rs 13.99 Lakh \u2013 Full Lineup Now Has 65 Variants appeared first on RushLane .",
@@ -122514,6 +122542,14 @@
         }
       ],
       "companies": [
+        {
+          "company": "Honda Cars India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 2,
+          "latest_published_at": "2026-09-21T15:03:56+00:00",
+          "latest_title": "2026 Honda CB350, CB350RS, CB350C Launch Price Rs 1.95 L to Rs 2.05 L"
+        },
         {
           "company": "Tata Motors",
           "tone": "pv",
@@ -122657,8 +122693,8 @@
         "label": "USD / INR",
         "value": 95.81,
         "unit": "\u20b9",
-        "delta_value": 0.0133,
-        "delta_label": "+0.82% in last week (Yahoo Finance)",
+        "delta_value": 0.0058,
+        "delta_label": "+0.81% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133066,7 +133102,7 @@
           },
           {
             "date": "2026-09-21",
-            "close": 95.8125
+            "close": 95.805
           }
         ]
       }
@@ -133081,10 +133117,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 12190.0,
-        "change_1d_pct": 0.72,
-        "change_1w_pct": -1.69,
-        "change_1m_pct": -10.14,
+        "price": 12153.0,
+        "change_1d_pct": 0.41,
+        "change_1w_pct": -1.99,
+        "change_1m_pct": -10.41,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13990.0,
@@ -133116,7 +133152,7 @@
           12166.0,
           12338.0,
           12103.0,
-          12190.0
+          12153.0
         ],
         "daily_closes": [
           {
@@ -143017,16 +143053,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 12190.0
+            "close": 12153.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3066.9,
-        "change_1d_pct": 0.49,
-        "change_1w_pct": -1.29,
-        "change_1m_pct": -10.12,
+        "price": 3055.3,
+        "change_1d_pct": 0.11,
+        "change_1w_pct": -1.66,
+        "change_1m_pct": -10.46,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3460.1,
@@ -143058,7 +143094,7 @@
           3070.0,
           3076.5,
           3052.0,
-          3066.9
+          3055.3
         ],
         "daily_closes": [
           {
@@ -152959,16 +152995,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 3066.9
+            "close": 3055.3
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5414.0,
-        "change_1d_pct": 2.43,
-        "change_1w_pct": 3.69,
-        "change_1m_pct": -5.6,
+        "price": 5419.0,
+        "change_1d_pct": 2.53,
+        "change_1w_pct": 3.78,
+        "change_1m_pct": -5.51,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5865.5,
@@ -153000,7 +153036,7 @@
           5235.0,
           5325.0,
           5285.5,
-          5414.0
+          5419.0
         ],
         "daily_closes": [
           {
@@ -162901,16 +162937,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 5414.0
+            "close": 5419.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4179.3,
-        "change_1d_pct": 0.19,
-        "change_1w_pct": 1.32,
-        "change_1m_pct": -4.8,
+        "price": 4155.0,
+        "change_1d_pct": -0.39,
+        "change_1w_pct": 0.73,
+        "change_1m_pct": -5.35,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4400.0,
@@ -162942,7 +162978,7 @@
           4033.0,
           4101.7,
           4171.3,
-          4179.3
+          4155.0
         ],
         "daily_closes": [
           {
@@ -172843,19 +172879,18 @@
           },
           {
             "date": "2026-09-21",
-            "close": 4179.3
+            "close": 4155.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11514.0,
-        "change_1d_pct": 0.88,
-        "change_1w_pct": -1.4,
-        "change_1m_pct": -2.37,
+        "price": 11460.0,
+        "change_1d_pct": 0.4,
+        "change_1w_pct": -1.87,
+        "change_1m_pct": -2.05,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11677.0,
           11717.0,
           11700.0,
           11661.0,
@@ -172883,8 +172918,9 @@
           11678.0,
           11424.0,
           11593.0,
+          11500.0,
           11414.0,
-          11514.0
+          11460.0
         ],
         "daily_closes": [
           {
@@ -182776,21 +182812,25 @@
             "close": 11593.0
           },
           {
+            "date": "2026-09-17",
+            "close": 11500.0
+          },
+          {
             "date": "2026-09-18",
             "close": 11414.0
           },
           {
             "date": "2026-09-21",
-            "close": 11514.0
+            "close": 11460.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2148.2,
-        "change_1d_pct": -2.74,
-        "change_1w_pct": -1.19,
-        "change_1m_pct": -3.18,
+        "price": 2144.0,
+        "change_1d_pct": -2.93,
+        "change_1w_pct": -1.38,
+        "change_1m_pct": -3.37,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           2200.0,
@@ -182822,7 +182862,7 @@
           2155.0,
           2160.0,
           2208.8,
-          2148.2
+          2144.0
         ],
         "daily_closes": [
           {
@@ -184739,16 +184779,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 2148.2
+            "close": 2144.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7512.0,
+        "price": 7512.5,
         "change_1d_pct": -0.05,
-        "change_1w_pct": -0.24,
-        "change_1m_pct": -6.22,
+        "change_1w_pct": -0.23,
+        "change_1m_pct": -6.21,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           8000.0,
@@ -184780,7 +184820,7 @@
           7500.0,
           7493.5,
           7516.0,
-          7512.0
+          7512.5
         ],
         "daily_closes": [
           {
@@ -194681,16 +194721,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 7512.0
+            "close": 7512.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 302.3,
-        "change_1d_pct": -0.49,
-        "change_1w_pct": 0.4,
-        "change_1m_pct": -4.91,
+        "price": 301.65,
+        "change_1d_pct": -0.71,
+        "change_1w_pct": 0.18,
+        "change_1m_pct": -5.11,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -194723,7 +194763,7 @@
           301.0,
           314.5,
           303.8,
-          302.3
+          301.65
         ],
         "daily_closes": [
           {
@@ -204624,16 +204664,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 302.3
+            "close": 301.65
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 441.35,
-        "change_1d_pct": -0.35,
-        "change_1w_pct": 1.56,
-        "change_1m_pct": -6.6,
+        "price": 444.5,
+        "change_1d_pct": 0.36,
+        "change_1w_pct": 2.29,
+        "change_1m_pct": -5.94,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -204666,7 +204706,7 @@
           424.25,
           436.1,
           442.9,
-          441.35
+          444.5
         ],
         "daily_closes": [
           {
@@ -205535,16 +205575,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 441.35
+            "close": 444.5
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 162.18,
-        "change_1d_pct": -0.5,
-        "change_1w_pct": -0.96,
-        "change_1m_pct": -6.25,
+        "price": 161.75,
+        "change_1d_pct": -0.77,
+        "change_1w_pct": -1.22,
+        "change_1m_pct": -6.5,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           174.83,
@@ -205576,7 +205616,7 @@
           156.5,
           158.62,
           163.0,
-          162.18
+          161.75
         ],
         "daily_closes": [
           {
@@ -215477,19 +215517,18 @@
           },
           {
             "date": "2026-09-21",
-            "close": 162.18
+            "close": 161.75
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2833.5,
-        "change_1d_pct": 1.26,
-        "change_1w_pct": -2.28,
-        "change_1m_pct": -8.36,
+        "price": 2819.8,
+        "change_1d_pct": 0.77,
+        "change_1w_pct": -2.76,
+        "change_1m_pct": -8.64,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3082.1,
           3107.0,
           3126.0,
           3093.4,
@@ -215517,8 +215556,9 @@
           2899.7,
           2835.8,
           2815.6,
+          2830.0,
           2798.2,
-          2833.5
+          2819.8
         ],
         "daily_closes": [
           {
@@ -225410,21 +225450,25 @@
             "close": 2815.6
           },
           {
+            "date": "2026-09-17",
+            "close": 2830.0
+          },
+          {
             "date": "2026-09-18",
             "close": 2798.2
           },
           {
             "date": "2026-09-21",
-            "close": 2833.5
+            "close": 2819.8
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1241.4,
-        "change_1d_pct": 0.99,
-        "change_1w_pct": 9.96,
-        "change_1m_pct": 5.01,
+        "price": 1230.4,
+        "change_1d_pct": 0.1,
+        "change_1w_pct": 8.98,
+        "change_1m_pct": 4.08,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1073.3,
@@ -225456,7 +225500,7 @@
           1149.7,
           1205.6,
           1229.2,
-          1241.4
+          1230.4
         ],
         "daily_closes": [
           {
@@ -235357,16 +235401,16 @@
           },
           {
             "date": "2026-09-21",
-            "close": 1241.4
+            "close": 1230.4
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 449.1,
-        "change_1d_pct": 0.59,
-        "change_1w_pct": 0.79,
-        "change_1m_pct": -7.03,
+        "price": 449.0,
+        "change_1d_pct": 0.57,
+        "change_1w_pct": 0.76,
+        "change_1m_pct": -7.05,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           494.1,
@@ -235398,7 +235442,7 @@
           436.4,
           441.4,
           446.45,
-          449.1
+          449.0
         ],
         "daily_closes": [
           {
@@ -245299,7 +245343,7 @@
           },
           {
             "date": "2026-09-21",
-            "close": 449.1
+            "close": 449.0
           }
         ]
       }
@@ -245310,7 +245354,16 @@
     "as_of_date": "2026-09-21",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
-    "upcoming_all": [],
+    "upcoming_all": [
+      {
+        "company": "Tata Motors CV",
+        "ticker": "TMCV",
+        "date": "2026-10-23",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+      }
+    ],
     "recent_past": [
       {
         "company": "Ashok Leyland",
@@ -245362,7 +245415,7 @@
       }
     ],
     "next_14_count": 0,
-    "upcoming_count": 0
+    "upcoming_count": 1
   },
   "market_insights": [
     {
