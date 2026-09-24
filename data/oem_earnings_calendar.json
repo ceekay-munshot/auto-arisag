@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-23",
+  "as_of_date": "2026-09-24",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
     {
@@ -89,6 +89,14 @@
       "period_label": "Financial Results",
       "event_type": "earnings",
       "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+    },
+    {
+      "company": "Mahindra & Mahindra",
+      "ticker": "M&M",
+      "date": "2026-11-05",
+      "period_label": "Financial Results/Other business matters",
+      "event_type": "earnings",
+      "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=M&M"
     }
   ]
 }
