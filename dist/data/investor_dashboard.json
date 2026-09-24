@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T08:14:53.786669+00:00",
+  "generated_at": "2026-09-24T14:08:34.928064+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122476,39 +122476,60 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-23T14:10:17.631373+00:00",
+      "generated_at": "2026-09-24T14:08:11.148618+00:00",
       "window_days": 30,
-      "item_count": 1,
+      "item_count": 2,
       "items": [
         {
-          "title": "New Hyundai Bayon Global Debut On 12th Oct \u2013 Euro Spec At Paris Motor Show",
-          "summary": "Hyundai Europe has announced the new Bayon\u2019s debut at the Paris Motor Show, while the India-spec SUV\u2019s reveal date remains under wraps The post New Hyundai Bayon Global Debut On 12th Oct \u2013 Euro Spec At Paris Motor Show appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-hyundai-bayon-global-debut-on-12th-oct-12556571.html",
+          "title": "Renault Rafale Hypnotic Debuts \u2013 300 PS Hybrid 4X4, EUR 63,550 (Rs 69 Lakh)",
+          "summary": "Order books for Renault Rafale Hypnotic will open on 1st October across 14 European markets, with deliveries planned for late 2026 The post Renault Rafale Hypnotic Debuts \u2013 300 PS Hybrid 4X4, EUR 63,550 (Rs 69 Lakh) appeared first on RushLane .",
+          "url": "https://www.rushlane.com/renault-rafale-hypnotic-debuts-300-ps-hybrid-4x4-eur-63550-rs-69-lakh-12556621.html",
           "source": "RushLane",
-          "published_at": "2026-09-23T03:18:06+00:00",
-          "published_display": "23 Sep 2026",
-          "company": "Hyundai Motor India",
+          "published_at": "2026-09-24T12:34:53+00:00",
+          "published_display": "24 Sep 2026",
+          "company": "Renault India",
           "tone": "pv",
-          "scope": "listed",
+          "scope": "tracked",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/renault-rafale-hypnotic-edition-debuts.jpg"
+        },
+        {
+          "title": "Mercedes-AMG G 63 Offroad PRO Launch Price Rs 3.80 Crore \u2013 Limited Units",
+          "summary": "New Offroad PRO variant adds specialised suspension controls, off-road traction modes and expedition equipment to the AMG G 63 The post Mercedes-AMG G 63 Offroad PRO Launch Price Rs 3.80 Crore \u2013 Limited Units appeared first on RushLane .",
+          "url": "https://www.rushlane.com/mercedes-amg-g-63-offroad-pro-launch-price-rs-3-80-crore-limited-units-12556684.html",
+          "source": "RushLane",
+          "published_at": "2026-09-24T10:01:16+00:00",
+          "published_display": "24 Sep 2026",
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
           "segment_tags": [
-            "Passenger Vehicles"
+            "Luxury"
           ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-hyundai-debut-12th-october.jpg"
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/Mercedes-AMG-G-63-Offroad-PRO-Launch-Price-5.jpg"
         }
       ],
       "companies": [
         {
-          "company": "Hyundai Motor India",
+          "company": "Renault India",
           "tone": "pv",
-          "scope": "listed",
+          "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-09-23T03:18:06+00:00",
-          "latest_title": "New Hyundai Bayon Global Debut On 12th Oct \u2013 Euro Spec At Paris Motor Show"
+          "latest_published_at": "2026-09-24T12:34:53+00:00",
+          "latest_title": "Renault Rafale Hypnotic Debuts \u2013 300 PS Hybrid 4X4, EUR 63,550 (Rs 69 Lakh)"
+        },
+        {
+          "company": "Mercedes-Benz India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-09-24T10:01:16+00:00",
+          "latest_title": "Mercedes-AMG G 63 Offroad PRO Launch Price Rs 3.80 Crore \u2013 Limited Units"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-09-23"
+        "latest_release_date": "2026-09-24"
       }
     }
   },
@@ -122630,10 +122651,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.92,
+        "value": 95.94,
         "unit": "\u20b9",
-        "delta_value": 0.2327,
-        "delta_label": "-0.22% in last week (Yahoo Finance)",
+        "delta_value": 0.2552,
+        "delta_label": "-0.19% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133041,7 +133062,7 @@
           },
           {
             "date": "2026-09-24",
-            "close": 95.9225
+            "close": 95.945
           }
         ]
       }
@@ -133056,10 +133077,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 12053.0,
-        "change_1d_pct": -1.45,
-        "change_1w_pct": -2.31,
-        "change_1m_pct": -10.85,
+        "price": 11990.0,
+        "change_1d_pct": -1.96,
+        "change_1w_pct": -2.82,
+        "change_1m_pct": -11.32,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           13834.0,
@@ -133091,7 +133112,7 @@
           12153.0,
           12190.0,
           12230.0,
-          12053.0
+          11990.0
         ],
         "daily_closes": [
           {
@@ -142992,16 +143013,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 12053.0
+            "close": 11990.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2998.2,
-        "change_1d_pct": -1.21,
-        "change_1w_pct": -2.55,
-        "change_1m_pct": -11.77,
+        "price": 2982.7,
+        "change_1d_pct": -1.72,
+        "change_1w_pct": -3.05,
+        "change_1m_pct": -12.23,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3428.3,
@@ -143033,7 +143054,7 @@
           3055.3,
           3044.5,
           3035.0,
-          2998.2
+          2982.7
         ],
         "daily_closes": [
           {
@@ -152934,19 +152955,18 @@
           },
           {
             "date": "2026-09-24",
-            "close": 2998.2
+            "close": 2982.7
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5306.0,
-        "change_1d_pct": -1.25,
-        "change_1w_pct": 1.36,
-        "change_1m_pct": -5.66,
+        "price": 5296.0,
+        "change_1d_pct": -1.82,
+        "change_1w_pct": -0.54,
+        "change_1m_pct": -5.34,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5850.0,
           5790.0,
           5745.0,
           5745.5,
@@ -152975,7 +152995,8 @@
           5285.5,
           5419.0,
           5373.0,
-          5306.0
+          5394.0,
+          5296.0
         ],
         "daily_closes": [
           {
@@ -162871,17 +162892,21 @@
             "close": 5373.0
           },
           {
+            "date": "2026-09-23",
+            "close": 5394.0
+          },
+          {
             "date": "2026-09-24",
-            "close": 5306.0
+            "close": 5296.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4066.5,
-        "change_1d_pct": -1.66,
-        "change_1w_pct": -0.86,
-        "change_1m_pct": -8.9,
+        "price": 4091.0,
+        "change_1d_pct": -1.06,
+        "change_1w_pct": -0.26,
+        "change_1m_pct": -8.36,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4307.0,
@@ -162913,7 +162938,7 @@
           4155.0,
           4140.0,
           4135.0,
-          4066.5
+          4091.0
         ],
         "daily_closes": [
           {
@@ -172814,19 +172839,18 @@
           },
           {
             "date": "2026-09-24",
-            "close": 4066.5
+            "close": 4091.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11248.0,
-        "change_1d_pct": -1.01,
-        "change_1w_pct": -2.98,
-        "change_1m_pct": -5.69,
+        "price": 11208.0,
+        "change_1d_pct": -1.68,
+        "change_1w_pct": -2.54,
+        "change_1m_pct": -4.4,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11661.0,
           11700.0,
           11663.0,
           11607.0,
@@ -172855,7 +172879,8 @@
           11414.0,
           11460.0,
           11363.0,
-          11248.0
+          11400.0,
+          11208.0
         ],
         "daily_closes": [
           {
@@ -182751,17 +182776,21 @@
             "close": 11363.0
           },
           {
+            "date": "2026-09-23",
+            "close": 11400.0
+          },
+          {
             "date": "2026-09-24",
-            "close": 11248.0
+            "close": 11208.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2071.0,
-        "change_1d_pct": -1.15,
-        "change_1w_pct": -4.12,
-        "change_1m_pct": -7.96,
+        "price": 2060.6,
+        "change_1d_pct": -1.64,
+        "change_1w_pct": -4.6,
+        "change_1m_pct": -8.42,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           2199.0,
@@ -182793,7 +182822,7 @@
           2144.0,
           2101.0,
           2095.0,
-          2071.0
+          2060.6
         ],
         "daily_closes": [
           {
@@ -184722,19 +184751,18 @@
           },
           {
             "date": "2026-09-24",
-            "close": 2071.0
+            "close": 2060.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7362.0,
-        "change_1d_pct": -0.88,
-        "change_1w_pct": -1.84,
-        "change_1m_pct": -8.6,
+        "price": 7338.5,
+        "change_1d_pct": -1.76,
+        "change_1w_pct": -2.07,
+        "change_1m_pct": -8.67,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          8100.0,
           8066.5,
           8050.0,
           8018.5,
@@ -184763,7 +184791,8 @@
           7516.0,
           7512.5,
           7427.0,
-          7362.0
+          7470.0,
+          7338.5
         ],
         "daily_closes": [
           {
@@ -194659,17 +194688,21 @@
             "close": 7427.0
           },
           {
+            "date": "2026-09-23",
+            "close": 7470.0
+          },
+          {
             "date": "2026-09-24",
-            "close": 7362.0
+            "close": 7338.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 296.85,
-        "change_1d_pct": -1.21,
-        "change_1w_pct": -5.61,
-        "change_1m_pct": -5.19,
+        "price": 295.0,
+        "change_1d_pct": -1.83,
+        "change_1w_pct": -6.2,
+        "change_1m_pct": -5.78,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -194702,7 +194735,7 @@
           301.65,
           300.05,
           300.5,
-          296.85
+          295.0
         ],
         "daily_closes": [
           {
@@ -204603,16 +204636,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 296.85
+            "close": 295.0
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 441.9,
-        "change_1d_pct": -1.84,
-        "change_1w_pct": 1.33,
-        "change_1m_pct": -8.65,
+        "price": 437.15,
+        "change_1d_pct": -2.9,
+        "change_1w_pct": 0.24,
+        "change_1m_pct": -9.63,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -204645,7 +204678,7 @@
           444.5,
           440.1,
           450.2,
-          441.9
+          437.15
         ],
         "daily_closes": [
           {
@@ -205526,16 +205559,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 441.9
+            "close": 437.15
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 158.58,
-        "change_1d_pct": -2.65,
-        "change_1w_pct": -0.03,
-        "change_1m_pct": -11.43,
+        "price": 157.3,
+        "change_1d_pct": -3.43,
+        "change_1w_pct": -0.83,
+        "change_1m_pct": -12.15,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           171.64,
@@ -205567,7 +205600,7 @@
           161.75,
           160.75,
           162.89,
-          158.58
+          157.3
         ],
         "daily_closes": [
           {
@@ -215468,16 +215501,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 158.58
+            "close": 157.3
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2821.9,
-        "change_1d_pct": 0.89,
-        "change_1w_pct": -0.29,
-        "change_1m_pct": -7.99,
+        "price": 2822.9,
+        "change_1d_pct": 0.93,
+        "change_1w_pct": -0.25,
+        "change_1m_pct": -7.96,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3113.7,
@@ -215509,7 +215542,7 @@
           2819.8,
           2793.6,
           2796.9,
-          2821.9
+          2822.9
         ],
         "daily_closes": [
           {
@@ -225410,16 +225443,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 2821.9
+            "close": 2822.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1243.6,
-        "change_1d_pct": -0.82,
-        "change_1w_pct": 3.15,
-        "change_1m_pct": 7.3,
+        "price": 1241.0,
+        "change_1d_pct": -1.03,
+        "change_1w_pct": 2.94,
+        "change_1m_pct": 7.08,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1085.6,
@@ -225451,7 +225484,7 @@
           1230.4,
           1241.9,
           1253.9,
-          1243.6
+          1241.0
         ],
         "daily_closes": [
           {
@@ -235352,16 +235385,16 @@
           },
           {
             "date": "2026-09-24",
-            "close": 1243.6
+            "close": 1241.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 449.0,
-        "change_1d_pct": -1.91,
-        "change_1w_pct": 1.72,
-        "change_1m_pct": -7.9,
+        "price": 447.55,
+        "change_1d_pct": -2.23,
+        "change_1w_pct": 1.39,
+        "change_1m_pct": -8.19,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           494.6,
@@ -235393,7 +235426,7 @@
           449.0,
           446.6,
           457.75,
-          449.0
+          447.55
         ],
         "daily_closes": [
           {
@@ -245294,7 +245327,7 @@
           },
           {
             "date": "2026-09-24",
-            "close": 449.0
+            "close": 447.55
           }
         ]
       }
