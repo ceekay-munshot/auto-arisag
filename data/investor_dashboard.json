@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T08:24:59.222445+00:00",
+  "generated_at": "2026-09-26T13:42:48.151373+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -172846,13 +172846,12 @@
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 11208.0,
-        "change_1d_pct": -1.68,
-        "change_1w_pct": -2.54,
-        "change_1m_pct": -4.4,
+        "price": 11281.0,
+        "change_1d_pct": 0.65,
+        "change_1w_pct": -1.17,
+        "change_1m_pct": -3.75,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11700.0,
           11663.0,
           11607.0,
           11645.0,
@@ -172881,7 +172880,8 @@
           11460.0,
           11363.0,
           11400.0,
-          11208.0
+          11208.0,
+          11281.0
         ],
         "daily_closes": [
           {
@@ -182783,6 +182783,10 @@
           {
             "date": "2026-09-24",
             "close": 11208.0
+          },
+          {
+            "date": "2026-09-25",
+            "close": 11281.0
           }
         ]
       },
@@ -215528,13 +215532,12 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2822.9,
-        "change_1d_pct": 0.93,
-        "change_1w_pct": -0.25,
-        "change_1m_pct": -7.96,
+        "price": 2855.7,
+        "change_1d_pct": 1.16,
+        "change_1w_pct": 2.05,
+        "change_1m_pct": -3.98,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3113.7,
           3133.6,
           3062.1,
           3054.9,
@@ -215563,7 +215566,8 @@
           2819.8,
           2793.6,
           2796.9,
-          2822.9
+          2822.9,
+          2855.7
         ],
         "daily_closes": [
           {
@@ -225465,6 +225469,10 @@
           {
             "date": "2026-09-24",
             "close": 2822.9
+          },
+          {
+            "date": "2026-09-25",
+            "close": 2855.7
           }
         ]
       },
