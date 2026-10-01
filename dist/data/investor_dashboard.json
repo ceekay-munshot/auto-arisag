@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T19:56:19.081020+00:00",
+  "generated_at": "2026-10-01T09:54:21.682984+00:00",
   "as_of_date": "2026-09-07",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49562,7 +49562,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-09-30",
+          "latest_release_date": "2026-10-01",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -49625,7 +49625,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 1592.36,
-                "value_inr": 106395.6
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -50328,8 +50328,8 @@
             "latest_value_inr": 350295.49,
             "latest_period": "May 2026",
             "change_since_base_pct": 147.53,
-            "change_since_base_pct_inr": 229.24,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 215.18,
+            "inr_base_period": "2016-10"
           },
           {
             "id": "copper",
@@ -50389,7 +50389,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 4722.2,
-                "value_inr": 315519.93
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -51092,8 +51092,8 @@
             "latest_value_inr": 1294050.45,
             "latest_period": "May 2026",
             "change_since_base_pct": 202.86,
-            "change_since_base_pct_inr": 310.13,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 309.97,
+            "inr_base_period": "2016-10"
           },
           {
             "id": "nickel",
@@ -51153,7 +51153,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 10191.78,
-                "value_inr": 680977.03
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -51856,8 +51856,8 @@
             "latest_value_inr": 1796889.44,
             "latest_period": "May 2026",
             "change_since_base_pct": 121.05,
-            "change_since_base_pct_inr": 163.87,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 162.52,
+            "inr_base_period": "2016-10"
           },
           {
             "id": "lead",
@@ -51917,7 +51917,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 1947.64,
-                "value_inr": 130134.1
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -52620,8 +52620,8 @@
             "latest_value_inr": 190285.71,
             "latest_period": "May 2026",
             "change_since_base_pct": 20.97,
-            "change_since_base_pct_inr": 46.22,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 40.89,
+            "inr_base_period": "2016-10"
           },
           {
             "id": "iron_ore",
@@ -52681,7 +52681,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 57.79,
-                "value_inr": 3861.31
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -53384,8 +53384,8 @@
             "latest_value_inr": 10380.54,
             "latest_period": "May 2026",
             "change_since_base_pct": 159.41,
-            "change_since_base_pct_inr": 168.83,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 163.32,
+            "inr_base_period": "2016-10"
           },
           {
             "id": "natural_rubber",
@@ -53445,7 +53445,7 @@
                 "period": "2016-09",
                 "label": "Sep 2016",
                 "value": 1.36,
-                "value_inr": 90.87
+                "value_inr": null
               },
               {
                 "period": "2016-10",
@@ -54148,8 +54148,8 @@
             "latest_value_inr": 211.17,
             "latest_period": "May 2026",
             "change_since_base_pct": 104.63,
-            "change_since_base_pct_inr": 132.39,
-            "inr_base_period": "2016-09"
+            "change_since_base_pct_inr": 113.86,
+            "inr_base_period": "2016-10"
           }
         ],
         "companies": [
@@ -54220,7 +54220,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -54923,8 +54923,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -54984,7 +54984,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -55687,8 +55687,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -55748,7 +55748,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -56451,8 +56451,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -56528,7 +56528,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -57231,8 +57231,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -57292,7 +57292,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -57995,8 +57995,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -58056,7 +58056,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -58759,8 +58759,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -58820,7 +58820,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -59523,8 +59523,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -59600,7 +59600,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -60303,8 +60303,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -60364,7 +60364,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -61067,8 +61067,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -61128,7 +61128,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -61831,8 +61831,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -61892,7 +61892,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -62595,8 +62595,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -62672,7 +62672,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -63375,8 +63375,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -63436,7 +63436,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -64139,8 +64139,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -64200,7 +64200,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -64903,8 +64903,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "lead",
@@ -64964,7 +64964,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -65667,8 +65667,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -65744,7 +65744,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -66447,8 +66447,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -66508,7 +66508,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -67211,8 +67211,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -67272,7 +67272,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -67975,8 +67975,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "lead",
@@ -68036,7 +68036,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -68739,8 +68739,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -68817,7 +68817,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -69520,8 +69520,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -69581,7 +69581,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -70284,8 +70284,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -70345,7 +70345,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -71048,8 +71048,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -71109,7 +71109,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -71812,8 +71812,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -71890,7 +71890,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -72593,8 +72593,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -72654,7 +72654,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -73357,8 +73357,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -73418,7 +73418,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -74121,8 +74121,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -74182,7 +74182,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -74885,8 +74885,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -74964,7 +74964,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -75667,8 +75667,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -75728,7 +75728,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -76431,8 +76431,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -76492,7 +76492,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -77195,8 +77195,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -77256,7 +77256,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -77959,8 +77959,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -78037,7 +78037,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -78740,8 +78740,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -78801,7 +78801,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -79504,8 +79504,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -79565,7 +79565,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -80268,8 +80268,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -80329,7 +80329,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -81032,8 +81032,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -81109,7 +81109,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -81812,8 +81812,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -81873,7 +81873,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -82576,8 +82576,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -82637,7 +82637,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -83340,8 +83340,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -83401,7 +83401,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -84104,8 +84104,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -84183,7 +84183,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -84886,8 +84886,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -84947,7 +84947,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -85650,8 +85650,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -85711,7 +85711,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -86414,8 +86414,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -86475,7 +86475,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -87178,8 +87178,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -87255,7 +87255,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -87958,8 +87958,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -88019,7 +88019,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -88722,8 +88722,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -88783,7 +88783,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -89486,8 +89486,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -89547,7 +89547,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -90250,8 +90250,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -90327,7 +90327,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -91030,8 +91030,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -91091,7 +91091,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -91794,8 +91794,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -91855,7 +91855,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -92558,8 +92558,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "iron_ore",
@@ -92619,7 +92619,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -93322,8 +93322,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -93400,7 +93400,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -94103,8 +94103,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -94164,7 +94164,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -94867,8 +94867,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -94928,7 +94928,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -95631,8 +95631,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "lead",
@@ -95692,7 +95692,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -96395,8 +96395,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -96475,7 +96475,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -97178,8 +97178,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -97239,7 +97239,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -97942,8 +97942,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -98003,7 +98003,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -98706,8 +98706,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -98767,7 +98767,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -99470,8 +99470,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -99548,7 +99548,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -100251,8 +100251,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -100312,7 +100312,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -101015,8 +101015,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -101076,7 +101076,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -101779,8 +101779,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "iron_ore",
@@ -101840,7 +101840,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -102543,8 +102543,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -102621,7 +102621,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -103324,8 +103324,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -103385,7 +103385,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -104088,8 +104088,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -104149,7 +104149,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -104852,8 +104852,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -104913,7 +104913,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -105616,8 +105616,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -105695,7 +105695,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -106398,8 +106398,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -106459,7 +106459,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -107162,8 +107162,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -107223,7 +107223,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -107926,8 +107926,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "iron_ore",
@@ -107987,7 +107987,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -108690,8 +108690,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -108767,7 +108767,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -109470,8 +109470,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -109531,7 +109531,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -110234,8 +110234,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -110295,7 +110295,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -110998,8 +110998,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "lead",
@@ -111059,7 +111059,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -111762,8 +111762,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -111840,7 +111840,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -112543,8 +112543,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "nickel",
@@ -112604,7 +112604,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 10191.78,
-                    "value_inr": 680977.03
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -113307,8 +113307,8 @@
                 "latest_value_inr": 1796889.44,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 121.05,
-                "change_since_base_pct_inr": 163.87,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 162.52,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -113368,7 +113368,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -114071,8 +114071,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "lead",
@@ -114132,7 +114132,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1947.64,
-                    "value_inr": 130134.1
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -114835,8 +114835,8 @@
                 "latest_value_inr": 190285.71,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 20.97,
-                "change_since_base_pct_inr": 46.22,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 40.89,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -114913,7 +114913,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 57.79,
-                    "value_inr": 3861.31
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -115616,8 +115616,8 @@
                 "latest_value_inr": 10380.54,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 159.41,
-                "change_since_base_pct_inr": 168.83,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 163.32,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "aluminum",
@@ -115677,7 +115677,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1592.36,
-                    "value_inr": 106395.6
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -116380,8 +116380,8 @@
                 "latest_value_inr": 350295.49,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 147.53,
-                "change_since_base_pct_inr": 229.24,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 215.18,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "copper",
@@ -116441,7 +116441,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 4722.2,
-                    "value_inr": 315519.93
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -117144,8 +117144,8 @@
                 "latest_value_inr": 1294050.45,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 202.86,
-                "change_since_base_pct_inr": 310.13,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 309.97,
+                "inr_base_period": "2016-10"
               },
               {
                 "id": "natural_rubber",
@@ -117205,7 +117205,7 @@
                     "period": "2016-09",
                     "label": "Sep 2016",
                     "value": 1.36,
-                    "value_inr": 90.87
+                    "value_inr": null
                   },
                   {
                     "period": "2016-10",
@@ -117908,8 +117908,8 @@
                 "latest_value_inr": 211.17,
                 "latest_period": "May 2026",
                 "change_since_base_pct": 104.63,
-                "change_since_base_pct_inr": 132.39,
-                "inr_base_period": "2016-09"
+                "change_since_base_pct_inr": 113.86,
+                "inr_base_period": "2016-10"
               }
             ],
             "category_labels": [
@@ -122476,68 +122476,43 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-09-30T19:55:56.824111+00:00",
+      "generated_at": "2026-10-01T09:53:59.461243+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 1,
       "items": [
         {
-          "title": "Skoda India Price Hike From Oct 1 \u2013 Slavia Facelift Launch On Oct 6",
-          "summary": "The company cites increase in input and operational costs as reasons for this price increase The post Skoda India Price Hike From Oct 1 \u2013 Slavia Facelift Launch On Oct 6 appeared first on RushLane .",
-          "url": "https://www.rushlane.com/skoda-india-price-hike-from-oct-1-slavia-facelift-launch-on-oct-6-12557087.html",
+          "title": "Honda Elevate Facelift Bookings Open At Rs 21k \u2013 Launch On 6th Oct",
+          "summary": "India will be the first market to receive the updated Honda Elevate, with the company promising more features, bolder styling and a more premium cabin The post Honda Elevate Facelift Bookings Open At Rs 21k \u2013 Launch On 6th Oct appeared first on RushLane .",
+          "url": "https://www.rushlane.com/honda-elevate-facelift-bookings-open-at-rs-21k-12557195.html",
           "source": "RushLane",
-          "published_at": "2026-09-30T13:03:10+00:00",
-          "published_display": "30 Sep 2026",
-          "company": "Skoda Auto India",
+          "published_at": "2026-10-01T06:55:57+00:00",
+          "published_display": "01 Oct 2026",
+          "company": "Honda Cars India",
           "tone": "pv",
           "scope": "tracked",
           "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-skoda-slavia-facelift-india-launch-6th-oct-2.jpg"
-        },
-        {
-          "title": "New BMW 3 Series Debuts \u2013 437 Hp M350, Electric i3 912 Km Range, Hybrid In 2027",
-          "summary": "BMW\u2019s new-generation sedan combines Neue Klasse styling with electric and petrol powertrains, while a plug-in hybrid will follow in 2027 The post New BMW 3 Series Debuts \u2013 437 Hp M350, Electric i3 912 Km Range, Hybrid In 2027 appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-bmw-3-series-debuts-437-hp-m350-electric-i3-hybrid-12557091.html",
-          "source": "RushLane",
-          "published_at": "2026-09-30T06:06:30+00:00",
-          "published_display": "30 Sep 2026",
-          "company": "BMW India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV",
-            "Luxury"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-gen-bmw-3-series-i3-launch-price-specs-30.jpg"
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/honda-elevate-facelift-launch-october-2026-2.jpg"
         }
       ],
       "companies": [
         {
-          "company": "Skoda Auto India",
+          "company": "Honda Cars India",
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
-          "latest_published_at": "2026-09-30T13:03:10+00:00",
-          "latest_title": "Skoda India Price Hike From Oct 1 \u2013 Slavia Facelift Launch On Oct 6"
-        },
-        {
-          "company": "BMW India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-09-30T06:06:30+00:00",
-          "latest_title": "New BMW 3 Series Debuts \u2013 437 Hp M350, Electric i3 912 Km Range, Hybrid In 2027"
+          "latest_published_at": "2026-10-01T06:55:57+00:00",
+          "latest_title": "Honda Elevate Facelift Bookings Open At Rs 21k \u2013 Launch On 6th Oct"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-09-30"
+        "latest_release_date": "2026-10-01"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-09-30",
+    "as_of_date": "2026-10-01",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -122653,19 +122628,15 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.82,
+        "value": 96.26,
         "unit": "\u20b9",
-        "delta_value": -0.2307,
-        "delta_label": "+0.08% in last week (Yahoo Finance)",
+        "delta_value": 0.2118,
+        "delta_label": "+0.54% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
         "daily_closes": [
-          {
-            "date": "2016-09-29",
-            "close": 66.8163
-          },
           {
             "date": "2016-10-02",
             "close": 66.5465
@@ -133067,8 +133038,8 @@
             "close": 96.0507
           },
           {
-            "date": "2026-09-30",
-            "close": 95.82
+            "date": "2026-10-01",
+            "close": 96.2625
           }
         ]
       }
@@ -133076,21 +133047,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-09-30",
+    "as_of_date": "2026-10-01",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11877.0,
-        "change_1d_pct": -1.09,
-        "change_1w_pct": -2.57,
-        "change_1m_pct": -12.33,
+        "price": 11350.0,
+        "change_1d_pct": -5.16,
+        "change_1w_pct": -5.34,
+        "change_1m_pct": -11.67,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          13690.0,
-          13809.0,
           13565.0,
           13620.0,
           13678.0,
@@ -133118,13 +133087,11 @@
           11990.0,
           12065.0,
           12008.0,
-          11877.0
+          11877.0,
+          11967.0,
+          11350.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 5477.3
-          },
           {
             "date": "2016-10-03",
             "close": 5681.0
@@ -143016,19 +142983,25 @@
           {
             "date": "2026-09-29",
             "close": 11877.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 11967.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 11350.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2947.8,
-        "change_1d_pct": -1.58,
-        "change_1w_pct": -3.18,
-        "change_1m_pct": -10.18,
+        "price": 2856.3,
+        "change_1d_pct": -3.18,
+        "change_1w_pct": -4.24,
+        "change_1m_pct": -10.46,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3415.0,
-          3424.8,
           3412.2,
           3414.1,
           3443.0,
@@ -143056,13 +143029,11 @@
           2982.7,
           3035.0,
           2995.0,
-          2947.8
+          2947.8,
+          2950.0,
+          2856.3
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 702.85
-          },
           {
             "date": "2016-10-03",
             "close": 721.92
@@ -152954,19 +152925,25 @@
           {
             "date": "2026-09-29",
             "close": 2947.8
+          },
+          {
+            "date": "2026-09-30",
+            "close": 2950.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 2856.3
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5208.0,
-        "change_1d_pct": -3.38,
-        "change_1w_pct": -3.07,
-        "change_1m_pct": -4.44,
+        "price": 5188.0,
+        "change_1d_pct": -1.01,
+        "change_1w_pct": -2.04,
+        "change_1m_pct": -2.11,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5709.5,
-          5740.5,
           5735.0,
           5685.0,
           5624.5,
@@ -152994,13 +152971,11 @@
           5296.0,
           5360.0,
           5390.0,
-          5208.0
+          5208.0,
+          5241.0,
+          5188.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 3413.7
-          },
           {
             "date": "2016-10-03",
             "close": 3521.15
@@ -162892,19 +162867,25 @@
           {
             "date": "2026-09-29",
             "close": 5208.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 5241.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 5188.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4091.1,
-        "change_1d_pct": -0.1,
-        "change_1w_pct": -1.18,
-        "change_1m_pct": -5.76,
+        "price": 3998.1,
+        "change_1d_pct": -2.63,
+        "change_1w_pct": -2.27,
+        "change_1m_pct": -4.81,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4361.1,
-          4390.0,
           4390.0,
           4363.5,
           4420.0,
@@ -162932,13 +162913,11 @@
           4091.0,
           4157.3,
           4095.0,
-          4091.1
+          4091.1,
+          4106.0,
+          3998.1
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 365.85
-          },
           {
             "date": "2016-10-03",
             "close": 377.6
@@ -172830,19 +172809,25 @@
           {
             "date": "2026-09-29",
             "close": 4091.1
+          },
+          {
+            "date": "2026-09-30",
+            "close": 4106.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 3998.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10811.0,
-        "change_1d_pct": -1.93,
-        "change_1w_pct": -4.86,
-        "change_1m_pct": -10.87,
+        "price": 10045.0,
+        "change_1d_pct": -7.62,
+        "change_1w_pct": -10.38,
+        "change_1m_pct": -17.19,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11645.0,
-          11793.0,
           11700.0,
           11800.0,
           11927.0,
@@ -172870,13 +172855,11 @@
           11208.0,
           11281.0,
           11024.0,
-          10811.0
+          10811.0,
+          10874.0,
+          10045.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 2827.6
-          },
           {
             "date": "2016-10-03",
             "close": 2880.9
@@ -182768,19 +182751,25 @@
           {
             "date": "2026-09-29",
             "close": 10811.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 10874.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 10045.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2100.0,
-        "change_1d_pct": 2.4,
-        "change_1w_pct": -0.05,
-        "change_1m_pct": -4.76,
+        "price": 2025.0,
+        "change_1d_pct": -0.3,
+        "change_1w_pct": -1.73,
+        "change_1m_pct": -6.01,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2174.5,
-          2227.0,
           2218.8,
           2207.0,
           2232.5,
@@ -182808,7 +182797,9 @@
           2060.6,
           2115.0,
           2050.7,
-          2100.0
+          2100.0,
+          2031.0,
+          2025.0
         ],
         "daily_closes": [
           {
@@ -184750,19 +184741,25 @@
           {
             "date": "2026-09-29",
             "close": 2100.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 2031.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 2025.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7179.0,
-        "change_1d_pct": -0.48,
-        "change_1w_pct": -3.34,
-        "change_1m_pct": -9.74,
+        "price": 6975.0,
+        "change_1d_pct": -2.45,
+        "change_1w_pct": -4.95,
+        "change_1m_pct": -9.55,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7990.5,
-          8042.0,
           8010.0,
           8047.0,
           8055.0,
@@ -184790,13 +184787,11 @@
           7338.5,
           7360.0,
           7213.5,
-          7179.0
+          7179.0,
+          7150.0,
+          6975.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 2482.78
-          },
           {
             "date": "2016-10-03",
             "close": 2579.62
@@ -194688,20 +194683,26 @@
           {
             "date": "2026-09-29",
             "close": 7179.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 7150.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 6975.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 280.95,
-        "change_1d_pct": -0.28,
-        "change_1w_pct": -6.37,
-        "change_1m_pct": -9.03,
+        "price": 279.0,
+        "change_1d_pct": -1.59,
+        "change_1w_pct": -5.42,
+        "change_1m_pct": -10.79,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          321.3,
-          320.25,
           317.9,
           314.4,
           314.25,
@@ -194729,13 +194730,11 @@
           295.0,
           290.45,
           281.75,
-          280.95
+          280.95,
+          283.5,
+          279.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 534.85
-          },
           {
             "date": "2016-10-03",
             "close": 540.8
@@ -204627,20 +204626,26 @@
           {
             "date": "2026-09-29",
             "close": 280.95
+          },
+          {
+            "date": "2026-09-30",
+            "close": 283.5
+          },
+          {
+            "date": "2026-10-01",
+            "close": 279.0
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 430.15,
-        "change_1d_pct": -0.65,
-        "change_1w_pct": -2.26,
-        "change_1m_pct": -8.69,
+        "price": 417.35,
+        "change_1d_pct": -1.02,
+        "change_1w_pct": -4.53,
+        "change_1m_pct": -6.73,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          478.3,
-          477.6,
           472.55,
           475.05,
           474.9,
@@ -204668,7 +204673,9 @@
           437.15,
           441.5,
           432.95,
-          430.15
+          430.15,
+          421.65,
+          417.35
         ],
         "daily_closes": [
           {
@@ -205562,19 +205569,25 @@
           {
             "date": "2026-09-29",
             "close": 430.15
+          },
+          {
+            "date": "2026-09-30",
+            "close": 421.65
+          },
+          {
+            "date": "2026-10-01",
+            "close": 417.35
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 153.44,
-        "change_1d_pct": -1.15,
-        "change_1w_pct": -4.55,
-        "change_1m_pct": -12.64,
+        "price": 151.07,
+        "change_1d_pct": -2.02,
+        "change_1w_pct": -3.96,
+        "change_1m_pct": -10.02,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          173.1,
-          173.8,
           173.0,
           173.29,
           174.69,
@@ -205602,13 +205615,11 @@
           157.3,
           159.08,
           155.22,
-          153.44
+          153.44,
+          154.19,
+          151.07
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 39.8
-          },
           {
             "date": "2016-10-03",
             "close": 41.55
@@ -215500,19 +215511,25 @@
           {
             "date": "2026-09-29",
             "close": 153.44
+          },
+          {
+            "date": "2026-09-30",
+            "close": 154.19
+          },
+          {
+            "date": "2026-10-01",
+            "close": 151.07
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2706.2,
-        "change_1d_pct": -1.26,
-        "change_1w_pct": -3.13,
-        "change_1m_pct": -9.64,
+        "price": 2675.9,
+        "change_1d_pct": -1.45,
+        "change_1w_pct": -5.21,
+        "change_1m_pct": -11.38,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3054.9,
-          3092.1,
           3086.6,
           3097.3,
           3064.8,
@@ -215540,13 +215557,11 @@
           2822.9,
           2855.7,
           2740.7,
-          2706.2
+          2706.2,
+          2715.2,
+          2675.9
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 375.6
-          },
           {
             "date": "2016-10-03",
             "close": 406.9
@@ -225438,19 +225453,25 @@
           {
             "date": "2026-09-29",
             "close": 2706.2
+          },
+          {
+            "date": "2026-09-30",
+            "close": 2715.2
+          },
+          {
+            "date": "2026-10-01",
+            "close": 2675.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1205.8,
-        "change_1d_pct": -0.59,
-        "change_1w_pct": -2.91,
-        "change_1m_pct": 8.58,
+        "price": 1211.0,
+        "change_1d_pct": -1.7,
+        "change_1w_pct": -2.42,
+        "change_1m_pct": 11.01,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1181.2,
-          1164.4,
           1182.2,
           1167.2,
           1154.8,
@@ -225478,13 +225499,11 @@
           1241.0,
           1226.6,
           1212.9,
-          1205.8
+          1205.8,
+          1232.0,
+          1211.0
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 43.55
-          },
           {
             "date": "2016-10-03",
             "close": 45.25
@@ -235376,19 +235395,25 @@
           {
             "date": "2026-09-29",
             "close": 1205.8
+          },
+          {
+            "date": "2026-09-30",
+            "close": 1232.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 1211.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 438.75,
-        "change_1d_pct": -0.41,
-        "change_1w_pct": -1.76,
-        "change_1m_pct": -9.85,
+        "price": 423.5,
+        "change_1d_pct": -5.5,
+        "change_1w_pct": -5.37,
+        "change_1m_pct": -9.2,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          489.1,
-          487.35,
           483.05,
           485.4,
           485.95,
@@ -235416,13 +235441,11 @@
           447.55,
           448.25,
           440.55,
-          438.75
+          438.75,
+          448.15,
+          423.5
         ],
         "daily_closes": [
-          {
-            "date": "2016-09-30",
-            "close": 478.3
-          },
           {
             "date": "2016-10-03",
             "close": 499.65
@@ -245314,6 +245337,14 @@
           {
             "date": "2026-09-29",
             "close": 438.75
+          },
+          {
+            "date": "2026-09-30",
+            "close": 448.15
+          },
+          {
+            "date": "2026-10-01",
+            "close": 423.5
           }
         ]
       }
@@ -245321,7 +245352,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-09-30",
+    "as_of_date": "2026-10-01",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [
@@ -247102,7 +247133,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-09-30",
+    "as_of_date": "2026-10-01",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
