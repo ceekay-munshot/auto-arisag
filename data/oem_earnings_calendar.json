@@ -1,15 +1,7 @@
 {
-  "as_of_date": "2026-10-05",
+  "as_of_date": "2026-10-06",
   "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
   "events": [
-    {
-      "company": "Hero MotoCorp",
-      "ticker": "HEROMOTOCO",
-      "date": "2026-08-06",
-      "period_label": "Financial Results",
-      "event_type": "earnings",
-      "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=HEROMOTOCO"
-    },
     {
       "company": "Atul Auto",
       "ticker": "ATULAUTO",
@@ -49,6 +41,14 @@
       "period_label": "Financial Results",
       "event_type": "earnings",
       "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+    },
+    {
+      "company": "Bajaj Auto",
+      "ticker": "BAJAJ-AUTO",
+      "date": "2026-10-27",
+      "period_label": "Financial Results",
+      "event_type": "earnings",
+      "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=BAJAJ-AUTO"
     },
     {
       "company": "Mahindra & Mahindra",
