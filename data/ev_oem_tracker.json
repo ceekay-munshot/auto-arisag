@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-10-07",
+  "as_of_date": "2026-10-08",
   "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
   "datasets": [
     {
@@ -50,23 +50,28 @@
       "id": "E4W",
       "label": "EV 4W",
       "source_name": "RushLane",
-      "source_url": "https://www.rushlane.com/electric-car-sales-aug-2026-tata-mahindra-mg-vinfast-12555404.html",
+      "source_url": "https://www.rushlane.com/electric-car-sales-sep-2026-tata-mahindra-mg-vinfast-kia-12557807.html",
       "growth_label": "YoY growth",
       "compare_label": "Same month, prior year",
       "rows": [
         {
           "oem": "Tata Motors",
-          "units": 13158,
+          "units": 8217,
           "prior_units": null
         },
         {
           "oem": "JSW MG Motor",
-          "units": 4622,
+          "units": 5254,
           "prior_units": null
         },
         {
           "oem": "MG Motor",
-          "units": 4622,
+          "units": 5254,
+          "prior_units": null
+        },
+        {
+          "oem": "Maruti Suzuki",
+          "units": 8217,
           "prior_units": null
         },
         {
@@ -93,14 +98,9 @@
           "oem": "BYD",
           "units": 3000,
           "prior_units": null
-        },
-        {
-          "oem": "Mercedes-Benz",
-          "units": 114,
-          "prior_units": null
         }
       ],
-      "total_units": 37516,
+      "total_units": 41942,
       "note": "Auto-extracted from RushLane's monthly leaderboard. Numbers may be revised when the next article is posted.",
       "latest_month": "Mar 2026"
     },
