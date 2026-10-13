@@ -1,35 +1,58 @@
 {
   "available": true,
-  "generated_at": "2026-10-12T22:28:11.372171+00:00",
+  "generated_at": "2026-10-13T10:15:51.887263+00:00",
   "window_days": 30,
-  "item_count": 1,
+  "item_count": 2,
   "items": [
     {
-      "title": "BYD Sealion 7 Limited Edition Launch Price Rs 50.6 L – Gets Tan & Black Interior",
-      "summary": "Based on the standard mid-spec Premium trim level, new BYD Sealion 7 Limited Edition is priced Rs 70,000 more and only 150 units are offered The post BYD Sealion 7 Limited Edition Launch Price Rs 50.6 L – Gets Tan & Black Interior appeared first on RushLane .",
-      "url": "https://www.rushlane.com/byd-sealion-7-limited-edition-launch-price-rs-50-6-l-gets-tan-black-interior-12558191.html",
+      "title": "2027 Kia Seltos Hybrid Debuts At Paris Motor Show – eAWD, V2L",
+      "summary": "2027 Kia Seltos Hybrid with e-AWD technology has debuted for the European market with electric motor driving rear wheels The post 2027 Kia Seltos Hybrid Debuts At Paris Motor Show – eAWD, V2L appeared first on RushLane .",
+      "url": "https://www.rushlane.com/2027-kia-seltos-hybrid-debuts-at-paris-motor-show-eawd-v2l-12558323.html",
       "source": "RushLane",
-      "published_at": "2026-10-12T08:58:06+00:00",
-      "published_display": "12 Oct 2026",
-      "company": "BYD India",
-      "tone": "ev",
+      "published_at": "2026-10-13T08:12:39+00:00",
+      "published_display": "13 Oct 2026",
+      "company": "Kia India",
+      "tone": "pv",
       "scope": "tracked",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-kia-seltos-hybrid-e-awd-debuts-for-europe-10.jpg"
+    },
+    {
+      "title": "Hyundai Bayon Euro Spec Debuts – 1.6L Hybrid 136 PS, 1.5L NA 115 PS, 1.0L Turbo 90 PS",
+      "summary": "Based on Hyundai's 'Art of Steel' design philosophy, the new-gen Bayon has transformed significantly, with angular lines and a boxier profile The post Hyundai Bayon Euro Spec Debuts – 1.6L Hybrid 136 PS, 1.5L NA 115 PS, 1.0L Turbo 90 PS appeared first on RushLane .",
+      "url": "https://www.rushlane.com/hyundai-bayon-euro-spec-debuts-1-6l-hybrid-136-ps-12558247.html",
+      "source": "RushLane",
+      "published_at": "2026-10-13T05:20:43+00:00",
+      "published_display": "13 Oct 2026",
+      "company": "Hyundai Motor India",
+      "tone": "pv",
+      "scope": "listed",
       "segment_tags": [],
-      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-byd-sealion-7-limited-edition-launch-5.jpg"
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/2026-hyundai-bayon-euro-spec-n-line-16-2.jpg"
     }
   ],
   "companies": [
     {
-      "company": "BYD India",
-      "tone": "ev",
+      "company": "Kia India",
+      "tone": "pv",
       "scope": "tracked",
       "count": 1,
-      "latest_published_at": "2026-10-12T08:58:06+00:00",
-      "latest_title": "BYD Sealion 7 Limited Edition Launch Price Rs 50.6 L – Gets Tan & Black Interior"
+      "latest_published_at": "2026-10-13T08:12:39+00:00",
+      "latest_title": "2027 Kia Seltos Hybrid Debuts At Paris Motor Show – eAWD, V2L"
+    },
+    {
+      "company": "Hyundai Motor India",
+      "tone": "pv",
+      "scope": "listed",
+      "count": 1,
+      "latest_published_at": "2026-10-13T05:20:43+00:00",
+      "latest_title": "Hyundai Bayon Euro Spec Debuts – 1.6L Hybrid 136 PS, 1.5L NA 115 PS, 1.0L Turbo 90 PS"
     }
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 3
+    "sources_live": 4
   }
 }
