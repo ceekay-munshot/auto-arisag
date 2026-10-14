@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T08:30:44.106848+00:00",
+  "generated_at": "2026-10-14T14:26:31.668434+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,9 +122882,9 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-14T08:30:21.782239+00:00",
+      "generated_at": "2026-10-14T14:26:08.802252+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
         {
           "title": "Exclusive: Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
@@ -122930,22 +122930,6 @@
             "Luxury"
           ],
           "image_url": null
-        },
-        {
-          "title": "New Honda Electric SUV India Debut On 2nd December",
-          "summary": "Following the launch of City facelift, ZR-V hybrid and Elevate facelift in 2026, Honda will unveil its India-made 0 Alpha electric SUV on December 2 The post New Honda Electric SUV India Debut On 2nd December appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-honda-electric-suv-india-debut-on-2nd-december-12558369.html",
-          "source": "RushLane",
-          "published_at": "2026-10-13T12:21:35+00:00",
-          "published_display": "13 Oct 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Passenger Vehicles",
-            "EV"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/03/honda-0-alpha-electric-suv-spied-testing-india-1.jpeg"
         }
       ],
       "companies": [
@@ -122972,14 +122956,6 @@
           "count": 1,
           "latest_published_at": "2026-10-14T07:02:52+00:00",
           "latest_title": "Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore"
-        },
-        {
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-10-13T12:21:35+00:00",
-          "latest_title": "New Honda Electric SUV India Debut On 2nd December"
         }
       ],
       "source_meta": {
@@ -123106,10 +123082,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.09,
+        "value": 95.14,
         "unit": "\u20b9",
-        "delta_value": -0.6884,
-        "delta_label": "-1.33% in last week (Yahoo Finance)",
+        "delta_value": -0.6359,
+        "delta_label": "-1.28% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133517,7 +133493,7 @@
           },
           {
             "date": "2026-10-14",
-            "close": 95.0875
+            "close": 95.14
           }
         ]
       }
@@ -133532,10 +133508,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11278.0,
-        "change_1d_pct": 0.29,
-        "change_1w_pct": -1.5,
-        "change_1m_pct": -9.05,
+        "price": 11178.0,
+        "change_1d_pct": -0.6,
+        "change_1w_pct": -2.38,
+        "change_1m_pct": -9.85,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12950.0,
@@ -133567,7 +133543,7 @@
           11420.0,
           11315.0,
           11245.0,
-          11278.0
+          11178.0
         ],
         "daily_closes": [
           {
@@ -143456,16 +143432,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 11278.0
+            "close": 11178.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2818.9,
-        "change_1d_pct": -1.59,
-        "change_1w_pct": 0.68,
-        "change_1m_pct": -9.27,
+        "price": 2793.7,
+        "change_1d_pct": -2.47,
+        "change_1w_pct": -0.23,
+        "change_1m_pct": -10.08,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3259.0,
@@ -143497,7 +143473,7 @@
           2796.2,
           2813.0,
           2864.4,
-          2818.9
+          2793.7
         ],
         "daily_closes": [
           {
@@ -153386,16 +153362,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 2818.9
+            "close": 2793.7
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5010.5,
-        "change_1d_pct": 0.26,
-        "change_1w_pct": 0.13,
-        "change_1m_pct": -4.04,
+        "price": 5019.5,
+        "change_1d_pct": 0.44,
+        "change_1w_pct": 0.31,
+        "change_1m_pct": -3.87,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5555.0,
@@ -153427,7 +153403,7 @@
           4895.5,
           4937.0,
           4997.5,
-          5010.5
+          5019.5
         ],
         "daily_closes": [
           {
@@ -163316,16 +163292,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 5010.5
+            "close": 5019.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3958.9,
-        "change_1d_pct": -1.31,
-        "change_1w_pct": 0.84,
-        "change_1m_pct": -4.03,
+        "price": 3969.7,
+        "change_1d_pct": -1.04,
+        "change_1w_pct": 1.11,
+        "change_1m_pct": -3.76,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4203.0,
@@ -163357,7 +163333,7 @@
           3866.8,
           3940.3,
           4011.5,
-          3958.9
+          3969.7
         ],
         "daily_closes": [
           {
@@ -173246,16 +173222,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 3958.9
+            "close": 3969.7
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10281.0,
-        "change_1d_pct": -0.36,
-        "change_1w_pct": 4.02,
-        "change_1m_pct": -11.96,
+        "price": 10250.0,
+        "change_1d_pct": -0.66,
+        "change_1w_pct": 3.7,
+        "change_1m_pct": -12.23,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           12361.0,
@@ -173287,7 +173263,7 @@
           9778.0,
           10034.0,
           10318.0,
-          10281.0
+          10250.0
         ],
         "daily_closes": [
           {
@@ -183176,19 +183152,18 @@
           },
           {
             "date": "2026-10-14",
-            "close": 10281.0
+            "close": 10250.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1976.0,
-        "change_1d_pct": 1.8,
-        "change_1w_pct": -0.65,
-        "change_1m_pct": -10.39,
+        "price": 1965.6,
+        "change_1d_pct": 0.04,
+        "change_1w_pct": 1.06,
+        "change_1m_pct": -9.59,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2205.0,
           2179.8,
           2154.4,
           2152.0,
@@ -183217,7 +183192,8 @@
           1915.0,
           1940.0,
           1941.1,
-          1976.0
+          1964.9,
+          1965.6
         ],
         "daily_closes": [
           {
@@ -185177,17 +185153,21 @@
             "close": 1941.1
           },
           {
+            "date": "2026-10-13",
+            "close": 1964.9
+          },
+          {
             "date": "2026-10-14",
-            "close": 1976.0
+            "close": 1965.6
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7090.5,
-        "change_1d_pct": -1.01,
-        "change_1w_pct": 1.88,
-        "change_1m_pct": -5.84,
+        "price": 7082.5,
+        "change_1d_pct": -1.12,
+        "change_1w_pct": 1.76,
+        "change_1m_pct": -5.94,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7970.0,
@@ -185219,7 +185199,7 @@
           7050.0,
           7119.0,
           7163.0,
-          7090.5
+          7082.5
         ],
         "daily_closes": [
           {
@@ -195108,16 +195088,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 7090.5
+            "close": 7082.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 283.85,
-        "change_1d_pct": -0.7,
-        "change_1w_pct": 0.3,
-        "change_1m_pct": -5.73,
+        "price": 283.8,
+        "change_1d_pct": -0.72,
+        "change_1w_pct": 0.28,
+        "change_1m_pct": -5.75,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -195150,7 +195130,7 @@
           279.9,
           284.45,
           285.85,
-          283.85
+          283.8
         ],
         "daily_closes": [
           {
@@ -205039,16 +205019,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 283.85
+            "close": 283.8
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 415.1,
-        "change_1d_pct": -0.44,
-        "change_1w_pct": -2.99,
-        "change_1m_pct": -4.48,
+        "price": 415.25,
+        "change_1d_pct": -0.41,
+        "change_1w_pct": -2.96,
+        "change_1m_pct": -4.44,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -205081,7 +205061,7 @@
           410.3,
           404.5,
           416.95,
-          415.1
+          415.25
         ],
         "daily_closes": [
           {
@@ -205998,16 +205978,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 415.1
+            "close": 415.25
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 145.02,
-        "change_1d_pct": -1.59,
-        "change_1w_pct": -2.8,
-        "change_1m_pct": -11.44,
+        "price": 145.0,
+        "change_1d_pct": -1.61,
+        "change_1w_pct": -2.82,
+        "change_1m_pct": -11.45,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           170.53,
@@ -206039,7 +206019,7 @@
           145.06,
           144.25,
           147.37,
-          145.02
+          145.0
         ],
         "daily_closes": [
           {
@@ -215928,16 +215908,16 @@
           },
           {
             "date": "2026-10-14",
-            "close": 145.02
+            "close": 145.0
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2694.1,
-        "change_1d_pct": 0.82,
-        "change_1w_pct": -3.28,
-        "change_1m_pct": -7.09,
+        "price": 2689.1,
+        "change_1d_pct": 0.63,
+        "change_1w_pct": -3.46,
+        "change_1m_pct": -7.26,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           3016.1,
@@ -215969,7 +215949,7 @@
           2730.5,
           2673.0,
           2672.2,
-          2694.1
+          2689.1
         ],
         "daily_closes": [
           {
@@ -225858,19 +225838,18 @@
           },
           {
             "date": "2026-10-14",
-            "close": 2694.1
+            "close": 2689.1
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1197.8,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": -4.34,
-        "change_1m_pct": 6.83,
+        "price": 1197.0,
+        "change_1d_pct": 0.34,
+        "change_1w_pct": -4.23,
+        "change_1m_pct": 6.02,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1110.5,
           1093.8,
           1090.9,
           1145.5,
@@ -225899,7 +225878,8 @@
           1179.8,
           1176.9,
           1201.1,
-          1197.8
+          1192.9,
+          1197.0
         ],
         "daily_closes": [
           {
@@ -235783,20 +235763,23 @@
             "close": 1201.1
           },
           {
+            "date": "2026-10-13",
+            "close": 1192.9
+          },
+          {
             "date": "2026-10-14",
-            "close": 1197.8
+            "close": 1197.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 428.35,
-        "change_1d_pct": 2.94,
-        "change_1w_pct": 0.2,
-        "change_1m_pct": -4.74,
+        "price": 429.35,
+        "change_1d_pct": 2.69,
+        "change_1w_pct": 0.73,
+        "change_1m_pct": -3.65,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          486.7,
           476.05,
           466.4,
           461.3,
@@ -235825,7 +235808,8 @@
           410.35,
           416.6,
           416.1,
-          428.35
+          418.1,
+          429.35
         ],
         "daily_closes": [
           {
@@ -245709,8 +245693,12 @@
             "close": 416.1
           },
           {
+            "date": "2026-10-13",
+            "close": 418.1
+          },
+          {
             "date": "2026-10-14",
-            "close": 428.35
+            "close": 429.35
           }
         ]
       }
@@ -246909,7 +246897,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-14T08:29:03.923254+00:00",
+    "generated_at": "2026-10-14T14:25:42.517049+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -246984,18 +246972,19 @@
             ]
           },
           {
-            "title": "Top 10 SUVs Sep 2026 \u2013 Nexon, Punch, Fronx, Creta, Scorpio, Brezza, Victoris, Seltos, Venue",
-            "url": "https://www.rushlane.com/top-10-suvs-sep-2026-nexon-punch-fronx-creta-scorpio-12558416.html",
-            "summary": "Nexon led September SUV sales by just 123 units over Punch, while Victoris and Seltos posted triple-digit year-on-year growth The post Top 10 SUVs Sep 2026 \u2013 Nexon, Punch, Fronx, Creta, Scorpio, Brezza, Victoris, Seltos, Venue appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-14T06:06:09+00:00",
+            "title": "Michelin Opens Two New Tyre Stores in Delhi",
+            "url": "https://www.autocarpro.in/news/michelin-opens-two-new-tyre-stores-in-delhi-135215",
+            "summary": "Michelin India has opened two Michelin Tyres & Services (MTS) stores in Delhi, expanding its retail presence in Dwarka and Karol Bagh. The outlets will offer the company's passenger car tyre range, including the Made-in-India Primacy 5, along with tyre fitment and maintenance services.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-10-14T12:12:25+00:00",
             "published_display": "14 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles"
+              "Passenger Vehicles",
+              "Components"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -247229,22 +247218,6 @@
             ]
           },
           {
-            "title": "New Honda Electric SUV India Debut On 2nd December",
-            "url": "https://www.rushlane.com/new-honda-electric-suv-india-debut-on-2nd-december-12558369.html",
-            "summary": "Following the launch of City facelift, ZR-V hybrid and Elevate facelift in 2026, Honda will unveil its India-made 0 Alpha electric SUV on December 2 The post New Honda Electric SUV India Debut On 2nd December appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-13T12:21:35+00:00",
-            "published_display": "13 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
-          {
             "title": "Q2 surge powers electric car, SUV sales past 192,000 units in first-half FY2027",
             "url": "https://www.autocarpro.in/analysis-sales/q2-surge-powers-electric-car-suv-sales-past-192000-units-in-first-half-fy2027-135192",
             "summary": "India\u2019s electric vehicle growth story is really charged up this year. After the first six months of FY2027, total retail sales of 18,10,163 million EVs across the e-2W, e-3W, e-passenger and e-commercial vehicle segments have risen 60% YoY (H1 FY2025: 11,34,054 units) and are already 71% of FY2026\u2019s record 2.54 million EVs.",
@@ -247260,6 +247233,22 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Vimag Labs Begins Manufacturing in Jhajjar, Haryana; Plans \u20b950 Crore Investment",
+            "url": "https://evreporter.com/vimag-labs-begins-manufacturing-in-jhajjar-haryana-plans-%e2%82%b950-crore-investment",
+            "summary": "The post Vimag Labs Begins Manufacturing in Jhajjar, Haryana; Plans \u20b950 Crore Investment appeared first at EVreporter on EVreporter . Vimag Labs, a Bengaluru-based electric motor technology company, has commenced manufacturing operations at its first facility in Met City, Jhajjar, The post Vimag Labs Begins Manufacturing in Jhajjar, Haryana; Plans \u20b950 Crore Investment appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-13T07:05:23+00:00",
+            "published_display": "13 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -247414,7 +247403,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 38,
+      "unmapped_articles": 40,
       "filtered_low_signal": 0,
       "kept_articles": 67
     }
