@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T18:43:36.819869+00:00",
+  "generated_at": "2026-10-17T07:37:17.059333+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-10-16",
+          "latest_release_date": "2026-10-17",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122882,10 +122882,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-16T18:43:16.066953+00:00",
+      "generated_at": "2026-10-17T07:36:52.448210+00:00",
       "window_days": 30,
       "item_count": 4,
       "items": [
+        {
+          "title": "Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage",
+          "summary": "Renault Duster gets a strong-hybrid option, combining a 1.8-litre petrol engine with two electric motors and a claimed fuel efficiency of 29 km/l The post Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage appeared first on RushLane .",
+          "url": "https://www.rushlane.com/renault-duster-hybrid-launch-price-rs-16-99-l-29-kmpl-mileage-12558822.html",
+          "source": "RushLane",
+          "published_at": "2026-10-17T07:13:24+00:00",
+          "published_display": "17 Oct 2026",
+          "company": "Renault India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/renault-duster-hybrid-launch-price-5.jpg"
+        },
         {
           "title": "2026 Hero Xtreme 160R 4V Launch Price Rs 1.27 L \u2013 New TFT Display, Features",
           "summary": "The updated Xtreme 160R 4V gets Carbon and Pro variants, with 17.1 PS, three riding modes and a claimed 0\u201360 km/h time of 4.4 seconds. Hero MotoCorp has launched the updated 2026 Xtreme 160R at Rs 1.27 lakh, ex-showroom.",
@@ -122898,19 +122913,6 @@
           "scope": "listed",
           "segment_tags": [],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/2026-Hero-Xtreme-160R-new-launch-price-41.jpg"
-        },
-        {
-          "title": "Royal Enfield Classic 650 Anniversary Edition Launch Price Rs 4.26 L \u2013 New Hypershift Paint",
-          "summary": "Celebrating Royal Enfield\u2019s 125th anniversary, the limited-edition Classic 650 features colour-shifting paint, commemorative detailing and a quilted brown leather seat. The post Royal Enfield Classic 650 Anniversary Edition Launch Price Rs 4.26 L \u2013 New Hypershift Paint appeared first on RushLane .",
-          "url": "https://www.rushlane.com/royal-enfield-classic-650-anniversary-edition-launch-12558660.html",
-          "source": "RushLane",
-          "published_at": "2026-10-16T07:22:27+00:00",
-          "published_display": "16 Oct 2026",
-          "company": "Eicher Motors",
-          "tone": "cv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/royal-enfield-classic-650-anniversary-edition-8.jpg"
         },
         {
           "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
@@ -122947,20 +122949,20 @@
       ],
       "companies": [
         {
+          "company": "Renault India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-10-17T07:13:24+00:00",
+          "latest_title": "Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage"
+        },
+        {
           "company": "Hero MotoCorp",
           "tone": "tw",
           "scope": "listed",
           "count": 1,
           "latest_published_at": "2026-10-16T14:28:50+00:00",
           "latest_title": "2026 Hero Xtreme 160R 4V Launch Price Rs 1.27 L \u2013 New TFT Display, Features"
-        },
-        {
-          "company": "Eicher Motors",
-          "tone": "cv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-10-16T07:22:27+00:00",
-          "latest_title": "Royal Enfield Classic 650 Anniversary Edition Launch Price Rs 4.26 L \u2013 New Hypershift Paint"
         },
         {
           "company": "Mahindra & Mahindra",
@@ -122981,13 +122983,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-16"
+        "latest_release_date": "2026-10-17"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-10-16",
+    "as_of_date": "2026-10-17",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -123103,10 +123105,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.95,
+        "value": 94.96,
         "unit": "\u20b9",
-        "delta_value": -0.2013,
-        "delta_label": "-1.93% in last week (Yahoo Finance)",
+        "delta_value": 0.4352,
+        "delta_label": "-1.88% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133517,8 +133519,12 @@
             "close": 95.1513
           },
           {
-            "date": "2026-10-16",
-            "close": 94.95
+            "date": "2026-10-15",
+            "close": 94.5248
+          },
+          {
+            "date": "2026-10-17",
+            "close": 94.96
           }
         ]
       }
@@ -133526,7 +133532,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-10-16",
+    "as_of_date": "2026-10-17",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -143463,13 +143469,12 @@
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2861.7,
-        "change_1d_pct": 2.43,
-        "change_1w_pct": 4.02,
-        "change_1m_pct": -5.54,
+        "price": 2920.9,
+        "change_1d_pct": 2.07,
+        "change_1w_pct": 4.46,
+        "change_1m_pct": -4.86,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3190.0,
           3150.0,
           3170.0,
           3160.0,
@@ -143498,7 +143503,8 @@
           2813.0,
           2864.4,
           2793.7,
-          2861.7
+          2861.7,
+          2920.9
         ],
         "daily_closes": [
           {
@@ -153388,6 +153394,10 @@
           {
             "date": "2026-10-15",
             "close": 2861.7
+          },
+          {
+            "date": "2026-10-16",
+            "close": 2920.9
           }
         ]
       },
@@ -163323,13 +163333,12 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4020.0,
-        "change_1d_pct": 1.27,
-        "change_1w_pct": 4.7,
-        "change_1m_pct": -0.74,
+        "price": 4095.1,
+        "change_1d_pct": 1.87,
+        "change_1w_pct": 5.9,
+        "change_1m_pct": 1.54,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4200.0,
           4200.0,
           4133.1,
           4132.0,
@@ -163358,7 +163367,8 @@
           3940.3,
           4011.5,
           3969.7,
-          4020.0
+          4020.0,
+          4095.1
         ],
         "daily_closes": [
           {
@@ -173248,18 +173258,21 @@
           {
             "date": "2026-10-15",
             "close": 4020.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 4095.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10385.0,
-        "change_1d_pct": 1.32,
-        "change_1w_pct": 7.76,
-        "change_1m_pct": -9.09,
+        "price": 10405.0,
+        "change_1d_pct": 0.19,
+        "change_1w_pct": 6.41,
+        "change_1m_pct": -10.25,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          12130.0,
           11920.0,
           11919.0,
           11800.0,
@@ -173288,7 +173301,8 @@
           10034.0,
           10318.0,
           10250.0,
-          10385.0
+          10385.0,
+          10405.0
         ],
         "daily_closes": [
           {
@@ -183178,18 +183192,21 @@
           {
             "date": "2026-10-15",
             "close": 10385.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 10405.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1985.0,
-        "change_1d_pct": 0.99,
-        "change_1w_pct": 3.66,
-        "change_1m_pct": -7.24,
+        "price": 1987.0,
+        "change_1d_pct": 0.1,
+        "change_1w_pct": 2.42,
+        "change_1m_pct": -7.8,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2154.4,
           2152.0,
           2205.0,
           2210.0,
@@ -183218,7 +183235,8 @@
           1941.1,
           1964.9,
           1965.6,
-          1985.0
+          1985.0,
+          1987.0
         ],
         "daily_closes": [
           {
@@ -185188,6 +185206,10 @@
           {
             "date": "2026-10-15",
             "close": 1985.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 1987.0
           }
         ]
       },
@@ -195123,14 +195145,13 @@
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 287.05,
-        "change_1d_pct": 1.15,
-        "change_1w_pct": 5.15,
-        "change_1m_pct": -5.45,
+        "price": 286.85,
+        "change_1d_pct": -0.07,
+        "change_1w_pct": 2.48,
+        "change_1m_pct": -4.7,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          312.75,
           312.0,
           311.5,
           307.0,
@@ -195159,7 +195180,8 @@
           284.45,
           285.85,
           283.8,
-          287.05
+          287.05,
+          286.85
         ],
         "daily_closes": [
           {
@@ -205049,19 +205071,22 @@
           {
             "date": "2026-10-15",
             "close": 287.05
+          },
+          {
+            "date": "2026-10-16",
+            "close": 286.85
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 422.8,
-        "change_1d_pct": 1.82,
-        "change_1w_pct": 2.32,
-        "change_1m_pct": -1.02,
+        "price": 421.05,
+        "change_1d_pct": -0.41,
+        "change_1w_pct": 2.62,
+        "change_1m_pct": -0.75,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          447.45,
           460.35,
           458.2,
           459.65,
@@ -205090,7 +205115,8 @@
           404.5,
           416.95,
           415.25,
-          422.8
+          422.8,
+          421.05
         ],
         "daily_closes": [
           {
@@ -206012,18 +206038,21 @@
           {
             "date": "2026-10-15",
             "close": 422.8
+          },
+          {
+            "date": "2026-10-16",
+            "close": 421.05
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 148.18,
-        "change_1d_pct": 2.19,
-        "change_1w_pct": 2.18,
-        "change_1m_pct": -5.41,
+        "price": 148.91,
+        "change_1d_pct": 0.49,
+        "change_1w_pct": 2.65,
+        "change_1m_pct": -4.85,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          167.9,
           169.35,
           169.0,
           170.0,
@@ -206052,7 +206081,8 @@
           144.25,
           147.37,
           145.0,
-          148.18
+          148.18,
+          148.91
         ],
         "daily_closes": [
           {
@@ -215942,6 +215972,10 @@
           {
             "date": "2026-10-15",
             "close": 148.18
+          },
+          {
+            "date": "2026-10-16",
+            "close": 148.91
           }
         ]
       },
@@ -245739,7 +245773,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-10-16",
+    "as_of_date": "2026-10-17",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -245781,6 +245815,14 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TVSMOTOR"
+      },
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-10-31",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
       }
     ],
     "upcoming_all": [
@@ -245850,7 +245892,7 @@
       }
     ],
     "recent_past": [],
-    "next_14_count": 5,
+    "next_14_count": 6,
     "upcoming_count": 8
   },
   "market_insights": [
@@ -246962,7 +247004,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-16T18:42:49.748121+00:00",
+    "generated_at": "2026-10-17T07:36:28.741633+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -247021,6 +247063,21 @@
             ]
           },
           {
+            "title": "Sub 4m SUV Sales Sep 2026, Q3 \u2013 Nexon, Punch, Fronx, Brezza, Venue, 3XO, Sonet, Kylaq, Thar OG",
+            "url": "https://www.rushlane.com/sub-4m-suv-sales-sep-2026-q3-nexon-punch-fronx-brezza-venue-12558789.html",
+            "summary": "Sub-4-metre SUV sales grew 22.94% YoY to 1.40 lakh units in September, while July\u2013September volumes crossed 4 lakh units, up 31.96%. The post Sub 4m SUV Sales Sep 2026, Q3 \u2013 Nexon, Punch, Fronx, Brezza, Venue, 3XO, Sonet, Kylaq, Thar OG appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-17T04:39:04+00:00",
+            "published_display": "17 Oct 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Michelin Opens Two New Tyre Stores in Delhi",
             "url": "https://www.autocarpro.in/news/michelin-opens-two-new-tyre-stores-in-delhi-135215",
             "summary": "Michelin India has opened two Michelin Tyres & Services (MTS) stores in Delhi, expanding its retail presence in Dwarka and Karol Bagh. The outlets will offer the company's passenger car tyre range, including the Made-in-India Primacy 5, along with tyre fitment and maintenance services.",
@@ -247034,22 +247091,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Mahindra SUV Sales Rise 21% in CY2026 to 541,942 Units, Intense Battle With Tata Continues",
-            "url": "https://www.autocarpro.in/analysis-sales/mahindra-suv-sales-rise-21-percent-in-cy2026-to-541942-units-intense-battle-with-tata-continues-135046",
-            "summary": "Mahindra & Mahindra has crossed half-a-million wholesales in the first nine months of CY2026. Between January and September 2026, the Mumbai-based SUV manufacturer dispatched 541,942 SUVs including 50,835 Electric Origin SUVS (BE 6, XEV 9e and XEV 9S) to register 21% YoY growth (January-September 2025: 446,697 units).",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-05T12:36:30+00:00",
-            "published_display": "05 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247484,9 +247525,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
-      "filtered_low_signal": 0,
-      "kept_articles": 67
+      "unmapped_articles": 38,
+      "filtered_low_signal": 1,
+      "kept_articles": 66
     }
   },
   "qa": [
@@ -247536,7 +247577,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-10-16",
+    "as_of_date": "2026-10-17",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
