@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T07:37:17.059333+00:00",
+  "generated_at": "2026-10-17T12:47:56.125420+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,10 +122882,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-17T07:36:52.448210+00:00",
+      "generated_at": "2026-10-17T12:47:39.892894+00:00",
       "window_days": 30,
       "item_count": 4,
       "items": [
+        {
+          "title": "New Audi Q3 India Launch Price Rs 51.99 L \u2013 204 bhp, 320 Nm, AWD, No 360 Cam",
+          "summary": "3rd-gen Audi Q3 has a thoroughly redesigned exterior and a comprehensive range of equipment upgrades The post New Audi Q3 India Launch Price Rs 51.99 L \u2013 204 bhp, 320 Nm, AWD, No 360 Cam appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-audi-q3-launch-price-rs-51-99-l-204-bhp-320-nm-awd-no-360-cam-12558782.html",
+          "source": "RushLane",
+          "published_at": "2026-10-17T11:04:49+00:00",
+          "published_display": "17 Oct 2026",
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-audi-q3-india-launch-price-3.jpg"
+        },
         {
           "title": "Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage",
           "summary": "Renault Duster gets a strong-hybrid option, combining a 1.8-litre petrol engine with two electric motors and a claimed fuel efficiency of 29 km/l The post Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage appeared first on RushLane .",
@@ -122900,19 +122915,6 @@
             "EV"
           ],
           "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/renault-duster-hybrid-launch-price-5.jpg"
-        },
-        {
-          "title": "2026 Hero Xtreme 160R 4V Launch Price Rs 1.27 L \u2013 New TFT Display, Features",
-          "summary": "The updated Xtreme 160R 4V gets Carbon and Pro variants, with 17.1 PS, three riding modes and a claimed 0\u201360 km/h time of 4.4 seconds. Hero MotoCorp has launched the updated 2026 Xtreme 160R at Rs 1.27 lakh, ex-showroom.",
-          "url": "https://www.rushlane.com/2026-hero-xtreme-160r-4v-launch-price-rs-1-27-l-new-tft-display-features-12558687.html",
-          "source": "RushLane",
-          "published_at": "2026-10-16T14:28:50+00:00",
-          "published_display": "16 Oct 2026",
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/2026-Hero-Xtreme-160R-new-launch-price-41.jpg"
         },
         {
           "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
@@ -122949,20 +122951,20 @@
       ],
       "companies": [
         {
+          "company": "Audi India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-10-17T11:04:49+00:00",
+          "latest_title": "New Audi Q3 India Launch Price Rs 51.99 L \u2013 204 bhp, 320 Nm, AWD, No 360 Cam"
+        },
+        {
           "company": "Renault India",
           "tone": "pv",
           "scope": "tracked",
           "count": 1,
           "latest_published_at": "2026-10-17T07:13:24+00:00",
           "latest_title": "Renault Duster Hybrid Launch Price Rs 16.99 L \u2013 29 kmpl Mileage"
-        },
-        {
-          "company": "Hero MotoCorp",
-          "tone": "tw",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-10-16T14:28:50+00:00",
-          "latest_title": "2026 Hero Xtreme 160R 4V Launch Price Rs 1.27 L \u2013 New TFT Display, Features"
         },
         {
           "company": "Mahindra & Mahindra",
@@ -133539,13 +133541,12 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11445.0,
-        "change_1d_pct": 2.39,
-        "change_1w_pct": 1.93,
-        "change_1m_pct": -6.43,
+        "price": 11489.0,
+        "change_1d_pct": 0.38,
+        "change_1w_pct": 0.6,
+        "change_1m_pct": -5.56,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          12849.0,
           12857.0,
           12694.0,
           12760.0,
@@ -133574,7 +133575,8 @@
           11315.0,
           11245.0,
           11178.0,
-          11445.0
+          11445.0,
+          11489.0
         ],
         "daily_closes": [
           {
@@ -143464,6 +143466,10 @@
           {
             "date": "2026-10-15",
             "close": 11445.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 11489.0
           }
         ]
       },
@@ -153403,13 +153409,12 @@
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5210.0,
-        "change_1d_pct": 3.8,
-        "change_1w_pct": 7.28,
-        "change_1m_pct": 0.85,
+        "price": 5225.0,
+        "change_1d_pct": 0.29,
+        "change_1w_pct": 6.73,
+        "change_1m_pct": -0.19,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5300.0,
           5308.5,
           5300.0,
           5270.0,
@@ -153438,7 +153443,8 @@
           4937.0,
           4997.5,
           5019.5,
-          5210.0
+          5210.0,
+          5225.0
         ],
         "daily_closes": [
           {
@@ -163328,6 +163334,10 @@
           {
             "date": "2026-10-15",
             "close": 5210.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 5225.0
           }
         ]
       },
@@ -185215,13 +185225,12 @@
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7225.0,
-        "change_1d_pct": 2.01,
-        "change_1w_pct": 6.76,
-        "change_1m_pct": -3.05,
+        "price": 7284.5,
+        "change_1d_pct": 0.82,
+        "change_1w_pct": 3.33,
+        "change_1m_pct": -2.87,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7711.5,
           7690.0,
           7630.5,
           7672.0,
@@ -185250,7 +185259,8 @@
           7119.0,
           7163.0,
           7082.5,
-          7225.0
+          7225.0,
+          7284.5
         ],
         "daily_closes": [
           {
@@ -195140,6 +195150,10 @@
           {
             "date": "2026-10-15",
             "close": 7225.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 7284.5
           }
         ]
       },
@@ -215981,13 +215995,12 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2726.6,
-        "change_1d_pct": 1.39,
-        "change_1w_pct": -1.69,
-        "change_1m_pct": -3.85,
+        "price": 2751.0,
+        "change_1d_pct": 0.89,
+        "change_1w_pct": 0.75,
+        "change_1m_pct": -2.29,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3019.4,
           2978.2,
           2968.8,
           2957.4,
@@ -216016,7 +216029,8 @@
           2673.0,
           2672.2,
           2689.1,
-          2726.6
+          2726.6,
+          2751.0
         ],
         "daily_closes": [
           {
@@ -225906,18 +225920,21 @@
           {
             "date": "2026-10-15",
             "close": 2726.6
+          },
+          {
+            "date": "2026-10-16",
+            "close": 2751.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1155.7,
-        "change_1d_pct": -3.45,
-        "change_1w_pct": -2.04,
-        "change_1m_pct": 2.08,
+        "price": 1136.3,
+        "change_1d_pct": -1.68,
+        "change_1w_pct": -3.45,
+        "change_1m_pct": -1.17,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1090.9,
           1145.5,
           1125.4,
           1113.2,
@@ -225946,7 +225963,8 @@
           1201.1,
           1192.9,
           1197.0,
-          1155.7
+          1155.7,
+          1136.3
         ],
         "daily_closes": [
           {
@@ -235836,18 +235854,21 @@
           {
             "date": "2026-10-15",
             "close": 1155.7
+          },
+          {
+            "date": "2026-10-16",
+            "close": 1136.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 421.65,
-        "change_1d_pct": -1.79,
-        "change_1w_pct": 2.75,
-        "change_1m_pct": -3.83,
+        "price": 423.05,
+        "change_1d_pct": 0.33,
+        "change_1w_pct": 1.55,
+        "change_1m_pct": -3.06,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          466.4,
           461.3,
           465.15,
           459.1,
@@ -235876,7 +235897,8 @@
           416.1,
           418.1,
           429.35,
-          421.65
+          421.65,
+          423.05
         ],
         "daily_closes": [
           {
@@ -245766,6 +245788,10 @@
           {
             "date": "2026-10-15",
             "close": 421.65
+          },
+          {
+            "date": "2026-10-16",
+            "close": 423.05
           }
         ]
       }
@@ -247004,7 +247030,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-17T07:36:28.741633+00:00",
+    "generated_at": "2026-10-17T12:47:19.235951+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -247027,6 +247053,22 @@
             "signal_tags": [
               "Capacity / Capex",
               "Product / Launch",
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Tata Motors EV sales exceed 100,000 units in first 9 months of the year",
+            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-ev-sales-exceed-100000-units-in-first-9-months-of-the-year-135171",
+            "summary": "In what has already turned out to be a record-breaking calendar year on many counts for the Indian electric passenger vehicle industry, market leader Tata Motors is leading the charge and how. Between January and September 2026, a record 255,326 e-PVs have been delivered by 19 EV manufacturers to customers across the country.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-12T08:34:26+00:00",
+            "published_display": "12 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
               "Monthly Sales / Demand"
             ]
           },
@@ -247075,22 +247117,6 @@
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Michelin Opens Two New Tyre Stores in Delhi",
-            "url": "https://www.autocarpro.in/news/michelin-opens-two-new-tyre-stores-in-delhi-135215",
-            "summary": "Michelin India has opened two Michelin Tyres & Services (MTS) stores in Delhi, expanding its retail presence in Dwarka and Karol Bagh. The outlets will offer the company's passenger car tyre range, including the Made-in-India Primacy 5, along with tyre fitment and maintenance services.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-10-14T12:12:25+00:00",
-            "published_display": "14 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Components"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
@@ -247276,6 +247302,22 @@
         "label": "EV / Transition",
         "items": [
           {
+            "title": "2027 Tata Nexon EV Spied \u2013 Underbody Battery Pack, Orange Cables",
+            "url": "https://www.rushlane.com/2027-tata-nexon-ev-spied-battery-pack-orange-cables-visible-12558880.html",
+            "summary": "Next-generation Nexon EV has been spotted on a flatbed truck, following earlier sightings of its ICE counterpart The post 2027 Tata Nexon EV Spied \u2013 Underbody Battery Pack, Orange Cables appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-17T12:22:12+00:00",
+            "published_display": "17 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Vinfast India sells 14,600 EVs since market entry 14 months ago",
             "url": "https://www.autocarpro.in/analysis-sales/vinfast-india-sells-14600-evs-since-market-entry-14-months-ago-135278",
             "summary": "Vinfast Auto India, the local arm of the Vietnamese electric vehicle major VinFast, has delivered 14,637 zero-emission passenger vehicles to customers since its market launch on September 6, 2025 through to October 14, 2026. As per Vahan, this gives the company a 4% share of the 343,876 e-PVs bought in the past 13-and-a-half months.",
@@ -247340,22 +247382,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Tata Motors EV sales exceed 100,000 units in first 9 months of the year",
-            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-ev-sales-exceed-100000-units-in-first-9-months-of-the-year-135171",
-            "summary": "In what has already turned out to be a record-breaking calendar year on many counts for the Indian electric passenger vehicle industry, market leader Tata Motors is leading the charge and how. Between January and September 2026, a record 255,326 e-PVs have been delivered by 19 EV manufacturers to customers across the country.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-12T08:34:26+00:00",
-            "published_display": "12 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
