@@ -1,9 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-10-18T07:53:22.338636+00:00",
+  "generated_at": "2026-10-18T13:05:13.836256+00:00",
   "window_days": 30,
-  "item_count": 2,
+  "item_count": 4,
   "items": [
+    {
+      "title": "New Audi Q3 India Launch Price Rs 51.99 L – 204 bhp, 320 Nm, AWD, No 360 Cam",
+      "summary": "3rd-gen Audi Q3 has a thoroughly redesigned exterior and a comprehensive range of equipment upgrades The post New Audi Q3 India Launch Price Rs 51.99 L – 204 bhp, 320 Nm, AWD, No 360 Cam appeared first on RushLane .",
+      "url": "https://www.rushlane.com/new-audi-q3-launch-price-rs-51-99-l-204-bhp-320-nm-awd-no-360-cam-12558782.html",
+      "source": "RushLane",
+      "published_at": "2026-10-17T11:04:49+00:00",
+      "published_display": "17 Oct 2026",
+      "company": "Audi India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "Luxury"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-audi-q3-india-launch-price-3.jpg"
+    },
+    {
+      "title": "Renault Duster Hybrid Launch Price Rs 16.99 L – 29 kmpl Mileage",
+      "summary": "Renault Duster gets a strong-hybrid option, combining a 1.8-litre petrol engine with two electric motors and a claimed fuel efficiency of 29 km/l The post Renault Duster Hybrid Launch Price Rs 16.99 L – 29 kmpl Mileage appeared first on RushLane .",
+      "url": "https://www.rushlane.com/renault-duster-hybrid-launch-price-rs-16-99-l-29-kmpl-mileage-12558822.html",
+      "source": "RushLane",
+      "published_at": "2026-10-17T07:13:24+00:00",
+      "published_display": "17 Oct 2026",
+      "company": "Renault India",
+      "tone": "pv",
+      "scope": "tracked",
+      "segment_tags": [
+        "EV"
+      ],
+      "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/renault-duster-hybrid-launch-price-5.jpg"
+    },
     {
       "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
       "summary": "The XUV 3XO is the latest model from the Mumbai-based Mahindra & Mahindra to achieve the 500,000 domestic market wholesales milestone. This total comprises sales of the XUV300 launched in April 2024 , the rebranded model XUV 3XO introduced in April 2024, and the XUV 3XO EV unveiled in January 2026.",
@@ -39,6 +69,22 @@
   ],
   "companies": [
     {
+      "company": "Audi India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-10-17T11:04:49+00:00",
+      "latest_title": "New Audi Q3 India Launch Price Rs 51.99 L – 204 bhp, 320 Nm, AWD, No 360 Cam"
+    },
+    {
+      "company": "Renault India",
+      "tone": "pv",
+      "scope": "tracked",
+      "count": 1,
+      "latest_published_at": "2026-10-17T07:13:24+00:00",
+      "latest_title": "Renault Duster Hybrid Launch Price Rs 16.99 L – 29 kmpl Mileage"
+    },
+    {
       "company": "Mahindra & Mahindra",
       "tone": "pv",
       "scope": "listed",
@@ -57,6 +103,6 @@
   ],
   "audit": {
     "sources_attempted": 10,
-    "sources_live": 3
+    "sources_live": 4
   }
 }
