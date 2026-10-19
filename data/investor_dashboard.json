@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T08:37:28.084934+00:00",
+  "generated_at": "2026-10-19T16:19:27.593893+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,10 +122882,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-19T08:37:13.289387+00:00",
+      "generated_at": "2026-10-19T16:19:09.472133+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "New TVS 450cc Single Cylinder Debut At EICMA \u2013 Under Norton",
+          "summary": "Under the Norton brand, TVS Motor is set to debut a new Roadster bike based on an all-new 450cc single-cylinder engine at EICMA 2026 in Milan The post New TVS 450cc Single Cylinder Debut At EICMA \u2013 Under Norton appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-tvs-450cc-single-cylinder-debut-at-eicma-under-norton-12558972.html",
+          "source": "RushLane",
+          "published_at": "2026-10-19T12:18:58+00:00",
+          "published_display": "19 Oct 2026",
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [
+            "Two-Wheelers"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/norton-commando-961.jpg"
+        },
         {
           "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
           "summary": "The XUV 3XO is the latest model from the Mumbai-based Mahindra & Mahindra to achieve the 500,000 domestic market wholesales milestone. This total comprises sales of the XUV300 launched in April 2024 , the rebranded model XUV 3XO introduced in April 2024, and the XUV 3XO EV unveiled in January 2026.",
@@ -122921,6 +122936,14 @@
       ],
       "companies": [
         {
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-10-19T12:18:58+00:00",
+          "latest_title": "New TVS 450cc Single Cylinder Debut At EICMA \u2013 Under Norton"
+        },
+        {
           "company": "Mahindra & Mahindra",
           "tone": "pv",
           "scope": "listed",
@@ -122939,7 +122962,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-14"
+        "latest_release_date": "2026-10-19"
       }
     }
   },
@@ -123061,10 +123084,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.94,
+        "value": 94.92,
         "unit": "\u20b9",
-        "delta_value": 0.4127,
-        "delta_label": "-1.90% in last week (Yahoo Finance)",
+        "delta_value": 0.3902,
+        "delta_label": "-1.92% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133472,7 +133495,7 @@
           },
           {
             "date": "2026-10-19",
-            "close": 94.9375
+            "close": 94.915
           }
         ]
       }
@@ -133487,10 +133510,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11530.0,
-        "change_1d_pct": 0.36,
-        "change_1w_pct": 1.9,
-        "change_1m_pct": -6.55,
+        "price": 11475.0,
+        "change_1d_pct": -0.12,
+        "change_1w_pct": 1.41,
+        "change_1m_pct": -6.99,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12694.0,
@@ -133522,7 +133545,7 @@
           11178.0,
           11445.0,
           11489.0,
-          11530.0
+          11475.0
         ],
         "daily_closes": [
           {
@@ -143411,16 +143434,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 11530.0
+            "close": 11475.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2904.0,
-        "change_1d_pct": -0.58,
-        "change_1w_pct": 3.23,
-        "change_1m_pct": -5.61,
+        "price": 2907.0,
+        "change_1d_pct": -0.48,
+        "change_1w_pct": 3.34,
+        "change_1m_pct": -5.51,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3170.0,
@@ -143452,7 +143475,7 @@
           2793.7,
           2861.7,
           2920.9,
-          2904.0
+          2907.0
         ],
         "daily_closes": [
           {
@@ -153341,16 +153364,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 2904.0
+            "close": 2907.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5232.0,
-        "change_1d_pct": 0.13,
-        "change_1w_pct": 5.98,
-        "change_1m_pct": -1.75,
+        "price": 5230.0,
+        "change_1d_pct": 0.1,
+        "change_1w_pct": 5.93,
+        "change_1m_pct": -1.78,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5300.0,
@@ -153382,7 +153405,7 @@
           5019.5,
           5210.0,
           5225.0,
-          5232.0
+          5230.0
         ],
         "daily_closes": [
           {
@@ -163271,16 +163294,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 5232.0
+            "close": 5230.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4073.4,
-        "change_1d_pct": -0.53,
-        "change_1w_pct": 3.38,
-        "change_1m_pct": -0.69,
+        "price": 4074.0,
+        "change_1d_pct": -0.52,
+        "change_1w_pct": 3.39,
+        "change_1m_pct": -0.68,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4133.1,
@@ -163312,7 +163335,7 @@
           3969.7,
           4020.0,
           4095.1,
-          4073.4
+          4074.0
         ],
         "daily_closes": [
           {
@@ -173201,16 +173224,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 4073.4
+            "close": 4074.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10357.0,
-        "change_1d_pct": -0.46,
-        "change_1w_pct": 3.22,
-        "change_1m_pct": -9.94,
+        "price": 10287.0,
+        "change_1d_pct": -1.13,
+        "change_1w_pct": 2.52,
+        "change_1m_pct": -10.55,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           11919.0,
@@ -173242,7 +173265,7 @@
           10250.0,
           10385.0,
           10405.0,
-          10357.0
+          10287.0
         ],
         "daily_closes": [
           {
@@ -183131,16 +183154,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 10357.0
+            "close": 10287.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1971.8,
-        "change_1d_pct": -0.76,
-        "change_1w_pct": 1.58,
-        "change_1m_pct": -8.71,
+        "price": 1955.0,
+        "change_1d_pct": -1.61,
+        "change_1w_pct": 0.72,
+        "change_1m_pct": -9.49,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           2205.0,
@@ -183172,7 +183195,7 @@
           1965.6,
           1985.0,
           1987.0,
-          1971.8
+          1955.0
         ],
         "daily_closes": [
           {
@@ -185149,16 +185172,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 1971.8
+            "close": 1955.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7366.5,
-        "change_1d_pct": 1.13,
-        "change_1w_pct": 3.48,
-        "change_1m_pct": -1.69,
+        "price": 7349.0,
+        "change_1d_pct": 0.89,
+        "change_1w_pct": 3.23,
+        "change_1m_pct": -1.93,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7630.5,
@@ -185190,7 +185213,7 @@
           7082.5,
           7225.0,
           7284.5,
-          7366.5
+          7349.0
         ],
         "daily_closes": [
           {
@@ -195079,16 +195102,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 7366.5
+            "close": 7349.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 279.65,
-        "change_1d_pct": -2.51,
-        "change_1w_pct": -1.69,
-        "change_1m_pct": -11.08,
+        "price": 278.0,
+        "change_1d_pct": -3.09,
+        "change_1w_pct": -2.27,
+        "change_1m_pct": -11.61,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -195121,7 +195144,7 @@
           283.8,
           287.05,
           286.85,
-          279.65
+          278.0
         ],
         "daily_closes": [
           {
@@ -205010,16 +205033,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 279.65
+            "close": 278.0
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 417.15,
-        "change_1d_pct": -0.93,
-        "change_1w_pct": 3.13,
-        "change_1m_pct": -4.35,
+        "price": 418.75,
+        "change_1d_pct": -0.55,
+        "change_1w_pct": 3.52,
+        "change_1m_pct": -3.98,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -205052,7 +205075,7 @@
           415.25,
           422.8,
           421.05,
-          417.15
+          418.75
         ],
         "daily_closes": [
           {
@@ -205981,16 +206004,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 417.15
+            "close": 418.75
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 148.42,
-        "change_1d_pct": -0.33,
-        "change_1w_pct": 2.89,
-        "change_1m_pct": -6.43,
+        "price": 147.72,
+        "change_1d_pct": -0.8,
+        "change_1w_pct": 2.41,
+        "change_1m_pct": -6.87,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           169.0,
@@ -206022,7 +206045,7 @@
           145.0,
           148.18,
           148.91,
-          148.42
+          147.72
         ],
         "daily_closes": [
           {
@@ -215911,16 +215934,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 148.42
+            "close": 147.72
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2715.7,
-        "change_1d_pct": -1.28,
-        "change_1w_pct": 1.6,
-        "change_1m_pct": -4.04,
+        "price": 2706.8,
+        "change_1d_pct": -1.61,
+        "change_1w_pct": 1.26,
+        "change_1m_pct": -4.35,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2968.8,
@@ -215952,7 +215975,7 @@
           2689.1,
           2726.6,
           2751.0,
-          2715.7
+          2706.8
         ],
         "daily_closes": [
           {
@@ -225841,16 +225864,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 2715.7
+            "close": 2706.8
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1115.6,
-        "change_1d_pct": -1.82,
-        "change_1w_pct": -7.12,
-        "change_1m_pct": -7.47,
+        "price": 1108.1,
+        "change_1d_pct": -2.48,
+        "change_1w_pct": -7.74,
+        "change_1m_pct": -8.09,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1125.4,
@@ -225882,7 +225905,7 @@
           1197.0,
           1155.7,
           1136.3,
-          1115.6
+          1108.1
         ],
         "daily_closes": [
           {
@@ -235771,16 +235794,16 @@
           },
           {
             "date": "2026-10-19",
-            "close": 1115.6
+            "close": 1108.1
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 417.05,
-        "change_1d_pct": -1.42,
-        "change_1w_pct": 0.23,
-        "change_1m_pct": -5.52,
+        "price": 414.3,
+        "change_1d_pct": -2.07,
+        "change_1w_pct": -0.43,
+        "change_1m_pct": -6.14,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           465.15,
@@ -235812,7 +235835,7 @@
           429.35,
           421.65,
           423.05,
-          417.05
+          414.3
         ],
         "daily_closes": [
           {
@@ -245701,7 +245724,7 @@
           },
           {
             "date": "2026-10-19",
-            "close": 417.05
+            "close": 414.3
           }
         ]
       }
@@ -246948,7 +246971,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-19T08:36:57.017596+00:00",
+    "generated_at": "2026-10-19T16:18:51.047921+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -246992,6 +247015,22 @@
             ]
           },
           {
+            "title": "Tata Motors EV sales exceed 100,000 units in first 9 months of the year",
+            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-ev-sales-exceed-100000-units-in-first-9-months-of-the-year-135171",
+            "summary": "In what has already turned out to be a record-breaking calendar year on many counts for the Indian electric passenger vehicle industry, market leader Tata Motors is leading the charge and how. Between January and September 2026, a record 255,326 e-PVs have been delivered by 19 EV manufacturers to customers across the country.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-12T08:34:26+00:00",
+            "published_display": "12 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "Software-Defined Vehicles: Can India Turn Its Software Strength into Automotive Advantage?",
             "url": "https://evreporter.com/software-defined-vehicles-can-india-turn-its-software-strength-into-automotive-advantage",
             "summary": "The post Software-Defined Vehicles: Can India Turn Its Software Strength into Automotive Advantage? appeared first at EVreporter on EVreporter . Tesla and BYD have already changed what a car can become after it leaves the factory. For India, the Software-Defined The post Software-Defined Vehicles: Can India Turn Its Software Strength into Automotive Advantage? appeared first at EVreporter on EVreporter .",
@@ -247022,21 +247061,6 @@
               "Product / Launch",
               "Monthly Sales / Demand"
             ]
-          },
-          {
-            "title": "Mahindra XUV 3XO ZNG vs Rivals \u2013 Brezza S-CNG, Nexon iCNG",
-            "url": "https://www.rushlane.com/mahindra-xuv-3xo-zng-vs-rivals-brezza-s-cng-nexon-icng-12558630.html",
-            "summary": "Even with conservative estimates, CNG variants are likely contributing around 25% to overall sales in the sub-4-meter SUV segment The post Mahindra XUV 3XO ZNG vs Rivals \u2013 Brezza S-CNG, Nexon iCNG appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-19T07:43:37+00:00",
-            "published_display": "19 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "General"
-            ]
           }
         ]
       },
@@ -247062,19 +247086,18 @@
             ]
           },
           {
-            "title": "Bgauss Auto sells 10,000 e-scooters in two months, will new C12 MaxR spur demand?",
-            "url": "https://www.autocarpro.in/analysis-sales/bgauss-auto-sells-10000-e-scooters-in-two-months-will-new-c12-maxr-spur-demand-134780",
-            "summary": "India\u2019s electric 2-wheeler growth story, which continues to scale a new high in CY2026, is being written by a clutch of legacy OEMs and a few startups. The monthly Top 10 e-2W OEM list typically has four legacy OEMs like TVS Motor, Bajaj Auto, Hero MotoCorp (Vida) and Greaves Electric Mobility with the other six comprising startups which include Ather Energy, Ola Electric, River Mobility, Bgauss Auto and Simple One.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-09-18T09:12:29+00:00",
-            "published_display": "18 Sep 2026",
-            "importance_score": 7,
+            "title": "New TVS 450cc Single Cylinder Debut At EICMA \u2013 Under Norton",
+            "url": "https://www.rushlane.com/new-tvs-450cc-single-cylinder-debut-at-eicma-under-norton-12558972.html",
+            "summary": "Under the Norton brand, TVS Motor is set to debut a new Roadster bike based on an all-new 450cc single-cylinder engine at EICMA 2026 in Milan The post New TVS 450cc Single Cylinder Debut At EICMA \u2013 Under Norton appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-19T12:18:58+00:00",
+            "published_display": "19 Oct 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "Two-Wheelers"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
+              "Product / Launch"
             ]
           },
           {
@@ -247094,21 +247117,6 @@
             ]
           },
           {
-            "title": "Top 10 Scooters Sep 2026 \u2013 Activa, Jupiter, Access, iQube, Chetak, Destini, Ntorq, Dio, Vida",
-            "url": "https://www.rushlane.com/top-10-scooters-sep-2026-activa-jupiter-access-iqube-chetak-12558914.html",
-            "summary": "Activa crossed 3.52 lakh units, while Destini 125 and Vida posted the fastest growth among the top 10 scooter nameplates The post Top 10 Scooters Sep 2026 \u2013 Activa, Jupiter, Access, iQube, Chetak, Destini, Ntorq, Dio, Vida appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-18T13:52:20+00:00",
-            "published_display": "18 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
             "title": "Record 207,850 e-2W sales in September power H1 FY027\u2019s 1.12 million units",
             "url": "https://www.autocarpro.in/analysis-sales/record-207850-e-2w-sales-in-september-power-h1-fy027s-112-million-units-135143",
             "summary": "With the sixth month of the current fiscal and a record one at that, it\u2019s amply clear that India\u2019s electric 2-wheeler industry is on a roll and how. While January-September 2026 retail sales have already crossed 1.61 million units, e-2W customer deliveries in the April-September period jumped 76% to 1.12 million units (H1 FY2026: 640,149 units).",
@@ -247123,6 +247131,22 @@
             "signal_tags": [
               "Monthly Sales / Demand"
             ]
+          },
+          {
+            "title": "TVS NTorq Surpasses 2.5 Million Sales, Last 500,000 Units Sold in 15 Months",
+            "url": "https://www.autocarpro.in/analysis-sales/tvs-ntorq-surpasses-25-million-sales-last-500000-units-sold-in-15-months-135097",
+            "summary": "TVS Motor Co, which continues to ride a surging wave of demand for its scooters, both ICE and electrc, is benefiting from the sustained growth delivered by its second best-selling model, the NTorq. Launched on February 5, 2018, the NTorq 125 had sold 2.08 million units till end-August 2025.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-07T14:07:25+00:00",
+            "published_display": "07 Oct 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Monthly Sales / Demand"
+            ]
           }
         ]
       },
@@ -247130,6 +247154,21 @@
         "id": "cv",
         "label": "Commercial Vehicles",
         "items": [
+          {
+            "title": "Mahindra Scorpio Lifestyler Pickup Spied Testing In South Africa",
+            "url": "https://www.rushlane.com/mahindra-scorpio-lifestyler-pickup-spied-testing-in-south-africa-12558959.html",
+            "summary": "In global markets, Mahindra's upcoming Scorpio N based pickup truck will just be called Lifestyler, taking on Toyota Hilux and others The post Mahindra Scorpio Lifestyler Pickup Spied Testing In South Africa appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-19T10:07:09+00:00",
+            "published_display": "19 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "BEML Unveils 60-Ton Electric Dump Truck BH60-EV",
             "url": "https://evreporter.com/beml-unveils-60-ton-electric-dump-truck-bh60-ev",
@@ -247195,22 +247234,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet",
-            "url": "https://evreporter.com/more-retail-deploys-110-montra-electric-eviators-in-mid-mile-fleet",
-            "summary": "The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter . More Retail has deployed 110 Montra Electric EVIATOR electric small commercial vehicles (e-SCVs) across its distribution network, including 25 vehicles The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-01T12:41:15+00:00",
-            "published_display": "01 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247218,6 +247241,22 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "Electric Scooter Sales Sep 2026 \u2013 iQube, Chetak, Vida, Rizta, Orbiter, Magnus, Indie, Konarc",
+            "url": "https://www.rushlane.com/electric-scooter-sales-sep-2026-iqube-chetak-vida-rizta-orbiter-12558954.html",
+            "summary": "TVS iQube took the lead ahead of Bajaj Chetak, while electric scooters grew 67.49% year-on-year but slipped marginally compared with August The post Electric Scooter Sales Sep 2026 \u2013 iQube, Chetak, Vida, Rizta, Orbiter, Magnus, Indie, Konarc appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-19T08:40:23+00:00",
+            "published_display": "19 Oct 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Input Costs / Commodities"
+            ]
+          },
           {
             "title": "Vinfast India sells 14,600 EVs since market entry 14 months ago",
             "url": "https://www.autocarpro.in/analysis-sales/vinfast-india-sells-14600-evs-since-market-entry-14-months-ago-135278",
@@ -247283,22 +247322,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Tata Motors EV sales exceed 100,000 units in first 9 months of the year",
-            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-ev-sales-exceed-100000-units-in-first-9-months-of-the-year-135171",
-            "summary": "In what has already turned out to be a record-breaking calendar year on many counts for the Indian electric passenger vehicle industry, market leader Tata Motors is leading the charge and how. Between January and September 2026, a record 255,326 e-PVs have been delivered by 19 EV manufacturers to customers across the country.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-12T08:34:26+00:00",
-            "published_display": "12 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
