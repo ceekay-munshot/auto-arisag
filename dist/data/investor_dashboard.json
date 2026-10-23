@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T19:08:04.192464+00:00",
+  "generated_at": "2026-10-23T08:20:55.675662+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-10-22",
+          "latest_release_date": "2026-10-23",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122882,51 +122882,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-22T14:27:01.217710+00:00",
+      "generated_at": "2026-10-23T08:20:32.509898+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 2,
       "items": [
-        {
-          "title": "New Hyundai Tucson Launched In S Korea \u2013 Price Starts KRW 31.4 m (Rs 22.34 L)",
-          "summary": "While receiving comprehensive updates, the new Tucson has seen only a modest ~10% price hike for the base variant The post New Hyundai Tucson Launched In S Korea \u2013 Price Starts KRW 31.4 m (Rs 22.34 L) appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-hyundai-tucson-launched-in-s-korea-price-starts-krw-31-4-m-rs-22-34-l-12559178.html",
-          "source": "RushLane",
-          "published_at": "2026-10-22T06:38:43+00:00",
-          "published_display": "22 Oct 2026",
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/09/new-hyundai-tucson-details-xrt-4.jpg"
-        },
-        {
-          "title": "New Honda CBR500R Four Debuts \u2013 71 bhp, E-Clutch Standard",
-          "summary": "Powered by a brand-new 502cc inline four-cylinder engine, the new Honda CBR500R Four will compete with rivals like Kawasaki ZX-4RR, Kove 450RR and ZXMoto 500RR The post New Honda CBR500R Four Debuts \u2013 71 bhp, E-Clutch Standard appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-honda-cbr500r-four-debuts-71-bhp-e-clutch-standard-12559176.html",
-          "source": "RushLane",
-          "published_at": "2026-10-22T03:37:01+00:00",
-          "published_display": "22 Oct 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-honda-cbr500r-four-debuts.jpg"
-        },
-        {
-          "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
-          "summary": "The XUV 3XO is the latest model from the Mumbai-based Mahindra & Mahindra to achieve the 500,000 domestic market wholesales milestone. This total comprises sales of the XUV300 launched in April 2024 , the rebranded model XUV 3XO introduced in April 2024, and the XUV 3XO EV unveiled in January 2026.",
-          "url": "https://www.autocarpro.in/analysis-sales/exclusive-mahindra-xuv-3xo-crosses-500000-sales-ahead-of-new-cng-model-launch-135212",
-          "source": "Autocar Professional Sales",
-          "published_at": "2026-10-14T08:38:04+00:00",
-          "published_display": "14 Oct 2026",
-          "company": "Mahindra & Mahindra",
-          "tone": "pv",
-          "scope": "listed",
-          "segment_tags": [
-            "EV"
-          ],
-          "image_url": null
-        },
         {
           "title": "Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore",
           "summary": "The post Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore appeared first at EVreporter on EVreporter . Volvo Cars India has introduced the EX90 electric SUV in India at an introductory price of \u20b91.26 crore (ex-showroom) for The post Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore appeared first at EVreporter on EVreporter .",
@@ -122943,33 +122902,24 @@
             "Luxury"
           ],
           "image_url": null
-        }
-      ],
-      "companies": [
-        {
-          "company": "Hyundai Motor India",
-          "tone": "pv",
-          "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-10-22T06:38:43+00:00",
-          "latest_title": "New Hyundai Tucson Launched In S Korea \u2013 Price Starts KRW 31.4 m (Rs 22.34 L)"
         },
         {
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-10-22T03:37:01+00:00",
-          "latest_title": "New Honda CBR500R Four Debuts \u2013 71 bhp, E-Clutch Standard"
-        },
-        {
+          "title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch",
+          "summary": "The XUV 3XO is the latest model from the Mumbai-based Mahindra & Mahindra to achieve the 500,000 domestic market wholesales milestone. This total comprises sales of the XUV300 launched in April 2024 , the rebranded model XUV 3XO introduced in April 2024, and the XUV 3XO EV unveiled in January 2026.",
+          "url": "https://www.autocarpro.in/analysis-sales/exclusive-mahindra-xuv-3xo-crosses-500000-sales-ahead-of-new-cng-model-launch-135212",
+          "source": "Autocar Professional Sales",
+          "published_at": "2026-10-14T03:08:04+00:00",
+          "published_display": "14 Oct 2026",
           "company": "Mahindra & Mahindra",
           "tone": "pv",
           "scope": "listed",
-          "count": 1,
-          "latest_published_at": "2026-10-14T08:38:04+00:00",
-          "latest_title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch"
-        },
+          "segment_tags": [
+            "EV"
+          ],
+          "image_url": null
+        }
+      ],
+      "companies": [
         {
           "company": "Volvo India",
           "tone": "pv",
@@ -122977,17 +122927,25 @@
           "count": 1,
           "latest_published_at": "2026-10-14T07:02:52+00:00",
           "latest_title": "Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore"
+        },
+        {
+          "company": "Mahindra & Mahindra",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-10-14T03:08:04+00:00",
+          "latest_title": "Mahindra XUV 3XO crosses 500,000 sales ahead of new CNG model launch"
         }
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-22"
+        "latest_release_date": "2026-10-14"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-10-22",
+    "as_of_date": "2026-10-23",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -123103,11 +123061,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.81,
+        "value": 94.94,
         "unit": "\u20b9",
-        "delta_value": 0.0916,
-        "delta_label": "-0.36% in last week (Yahoo Finance)",
-        "delta_tone": "positive",
+        "delta_value": 0.6327,
+        "delta_label": "+0.44% in last week (Yahoo Finance)",
+        "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -133513,8 +133471,12 @@
             "close": 94.7164
           },
           {
-            "date": "2026-10-22",
-            "close": 94.808
+            "date": "2026-10-21",
+            "close": 94.3123
+          },
+          {
+            "date": "2026-10-23",
+            "close": 94.945
           }
         ]
       }
@@ -133522,20 +133484,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-10-22",
+    "as_of_date": "2026-10-23",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11200.0,
-        "change_1d_pct": -2.4,
-        "change_1w_pct": -0.4,
-        "change_1m_pct": -7.46,
+        "price": 11157.0,
+        "change_1d_pct": -0.38,
+        "change_1w_pct": -0.19,
+        "change_1m_pct": -8.2,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          12760.0,
           12641.0,
           12618.0,
           12590.0,
@@ -133564,7 +133525,8 @@
           11445.0,
           11489.0,
           11475.0,
-          11200.0
+          11200.0,
+          11157.0
         ],
         "daily_closes": [
           {
@@ -143446,19 +143408,21 @@
           {
             "date": "2026-10-21",
             "close": 11200.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 11157.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2889.0,
-        "change_1d_pct": -0.62,
-        "change_1w_pct": 0.86,
-        "change_1m_pct": -5.34,
+        "price": 2835.0,
+        "change_1d_pct": -1.02,
+        "change_1w_pct": -0.93,
+        "change_1m_pct": -6.88,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3160.0,
-          3160.0,
           3150.0,
           3123.8,
           3107.0,
@@ -143486,7 +143450,9 @@
           2861.7,
           2920.9,
           2907.0,
-          2889.0
+          2889.0,
+          2864.1,
+          2835.0
         ],
         "daily_closes": [
           {
@@ -153368,19 +153334,25 @@
           {
             "date": "2026-10-21",
             "close": 2889.0
+          },
+          {
+            "date": "2026-10-22",
+            "close": 2864.1
+          },
+          {
+            "date": "2026-10-23",
+            "close": 2835.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5153.5,
-        "change_1d_pct": -1.46,
-        "change_1w_pct": 3.12,
-        "change_1m_pct": -2.5,
+        "price": 5042.5,
+        "change_1d_pct": -1.67,
+        "change_1w_pct": -3.21,
+        "change_1m_pct": -6.15,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5270.0,
-          5333.5,
           5218.0,
           5280.0,
           5221.5,
@@ -153408,7 +153380,9 @@
           5210.0,
           5225.0,
           5230.0,
-          5153.5
+          5153.5,
+          5128.0,
+          5042.5
         ],
         "daily_closes": [
           {
@@ -163290,19 +163264,25 @@
           {
             "date": "2026-10-21",
             "close": 5153.5
+          },
+          {
+            "date": "2026-10-22",
+            "close": 5128.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 5042.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3992.6,
-        "change_1d_pct": -2.0,
-        "change_1w_pct": -0.47,
-        "change_1m_pct": -4.28,
+        "price": 3959.8,
+        "change_1d_pct": -0.36,
+        "change_1w_pct": -1.5,
+        "change_1m_pct": -4.35,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4132.0,
-          4133.2,
           4151.1,
           4121.5,
           4125.0,
@@ -163330,7 +163310,9 @@
           4020.0,
           4095.1,
           4074.0,
-          3992.6
+          3992.6,
+          3974.0,
+          3959.8
         ],
         "daily_closes": [
           {
@@ -173212,19 +173194,25 @@
           {
             "date": "2026-10-21",
             "close": 3992.6
+          },
+          {
+            "date": "2026-10-22",
+            "close": 3974.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 3959.8
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10072.0,
-        "change_1d_pct": -2.09,
-        "change_1w_pct": -2.38,
-        "change_1m_pct": -11.76,
+        "price": 10059.0,
+        "change_1d_pct": -0.95,
+        "change_1w_pct": -3.14,
+        "change_1m_pct": -11.48,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11800.0,
-          11880.0,
           11790.0,
           11768.0,
           11678.0,
@@ -173252,7 +173240,9 @@
           10385.0,
           10405.0,
           10287.0,
-          10072.0
+          10072.0,
+          10155.0,
+          10059.0
         ],
         "daily_closes": [
           {
@@ -183134,19 +183124,25 @@
           {
             "date": "2026-10-21",
             "close": 10072.0
+          },
+          {
+            "date": "2026-10-22",
+            "close": 10155.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 10059.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1943.9,
-        "change_1d_pct": -0.57,
-        "change_1w_pct": -1.07,
-        "change_1m_pct": -11.99,
+        "price": 1874.0,
+        "change_1d_pct": -1.13,
+        "change_1w_pct": -5.59,
+        "change_1m_pct": -10.8,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2210.0,
-          2220.0,
           2182.4,
           2205.0,
           2174.0,
@@ -183174,7 +183170,9 @@
           1985.0,
           1987.0,
           1955.0,
-          1943.9
+          1943.9,
+          1895.5,
+          1874.0
         ],
         "daily_closes": [
           {
@@ -185156,19 +185154,25 @@
           {
             "date": "2026-10-21",
             "close": 1943.9
+          },
+          {
+            "date": "2026-10-22",
+            "close": 1895.5
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1874.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7170.5,
-        "change_1d_pct": -2.43,
-        "change_1w_pct": 0.1,
-        "change_1m_pct": -4.6,
+        "price": 7012.0,
+        "change_1d_pct": -1.02,
+        "change_1w_pct": -2.95,
+        "change_1m_pct": -5.59,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7672.0,
-          7747.5,
           7734.5,
           7697.0,
           7530.0,
@@ -185196,7 +185200,9 @@
           7225.0,
           7284.5,
           7349.0,
-          7170.5
+          7170.5,
+          7084.5,
+          7012.0
         ],
         "daily_closes": [
           {
@@ -195078,20 +195084,26 @@
           {
             "date": "2026-10-21",
             "close": 7170.5
+          },
+          {
+            "date": "2026-10-22",
+            "close": 7084.5
+          },
+          {
+            "date": "2026-10-23",
+            "close": 7012.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 275.7,
-        "change_1d_pct": -0.83,
-        "change_1w_pct": -3.55,
-        "change_1m_pct": -9.25,
+        "price": 262.25,
+        "change_1d_pct": -2.87,
+        "change_1w_pct": -8.64,
+        "change_1m_pct": -12.6,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          307.0,
-          306.45,
           303.0,
           300.5,
           301.1,
@@ -195119,7 +195131,9 @@
           287.05,
           286.85,
           278.0,
-          275.7
+          275.7,
+          270.0,
+          262.25
         ],
         "daily_closes": [
           {
@@ -205001,20 +205015,26 @@
           {
             "date": "2026-10-21",
             "close": 275.7
+          },
+          {
+            "date": "2026-10-22",
+            "close": 270.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 262.25
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 417.5,
-        "change_1d_pct": -0.3,
-        "change_1w_pct": 0.13,
-        "change_1m_pct": -5.73,
+        "price": 395.45,
+        "change_1d_pct": -4.54,
+        "change_1w_pct": -6.47,
+        "change_1m_pct": -10.15,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          459.65,
-          456.05,
           444.95,
           439.25,
           434.55,
@@ -205042,7 +205062,9 @@
           422.8,
           421.05,
           418.75,
-          417.5
+          417.5,
+          414.25,
+          395.45
         ],
         "daily_closes": [
           {
@@ -205976,19 +205998,25 @@
           {
             "date": "2026-10-21",
             "close": 417.5
+          },
+          {
+            "date": "2026-10-22",
+            "close": 414.25
+          },
+          {
+            "date": "2026-10-23",
+            "close": 395.45
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 146.74,
+        "price": 145.06,
         "change_1d_pct": -0.66,
-        "change_1w_pct": -0.43,
-        "change_1m_pct": -9.98,
+        "change_1w_pct": -2.11,
+        "change_1m_pct": -9.76,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          170.0,
-          169.0,
           167.0,
           166.12,
           163.75,
@@ -206016,7 +206044,9 @@
           148.18,
           148.91,
           147.72,
-          146.74
+          146.74,
+          146.03,
+          145.06
         ],
         "daily_closes": [
           {
@@ -215898,19 +215928,25 @@
           {
             "date": "2026-10-21",
             "close": 146.74
+          },
+          {
+            "date": "2026-10-22",
+            "close": 146.03
+          },
+          {
+            "date": "2026-10-23",
+            "close": 145.06
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2720.4,
-        "change_1d_pct": 0.5,
-        "change_1w_pct": 1.8,
-        "change_1m_pct": -2.78,
+        "price": 2637.5,
+        "change_1d_pct": 0.02,
+        "change_1w_pct": -3.27,
+        "change_1m_pct": -5.59,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2957.4,
-          3013.2,
           2989.2,
           2958.4,
           2899.7,
@@ -215938,7 +215974,9 @@
           2726.6,
           2751.0,
           2706.8,
-          2720.4
+          2720.4,
+          2636.9,
+          2637.5
         ],
         "daily_closes": [
           {
@@ -225820,19 +225858,25 @@
           {
             "date": "2026-10-21",
             "close": 2720.4
+          },
+          {
+            "date": "2026-10-22",
+            "close": 2636.9
+          },
+          {
+            "date": "2026-10-23",
+            "close": 2637.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1074.6,
-        "change_1d_pct": -3.02,
-        "change_1w_pct": -9.92,
-        "change_1m_pct": -12.58,
+        "price": 1010.9,
+        "change_1d_pct": -4.03,
+        "change_1w_pct": -12.53,
+        "change_1m_pct": -18.6,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1113.2,
-          1121.2,
           1127.0,
           1121.2,
           1129.0,
@@ -225860,7 +225904,9 @@
           1155.7,
           1136.3,
           1108.1,
-          1074.6
+          1074.6,
+          1053.4,
+          1010.9
         ],
         "daily_closes": [
           {
@@ -235742,19 +235788,25 @@
           {
             "date": "2026-10-21",
             "close": 1074.6
+          },
+          {
+            "date": "2026-10-22",
+            "close": 1053.4
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1010.9
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 402.85,
-        "change_1d_pct": -2.76,
-        "change_1w_pct": -3.65,
-        "change_1m_pct": -9.77,
+        "price": 387.7,
+        "change_1d_pct": -3.22,
+        "change_1w_pct": -8.05,
+        "change_1m_pct": -13.19,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          459.1,
-          458.9,
           456.1,
           449.65,
           445.6,
@@ -235782,7 +235834,9 @@
           421.65,
           423.05,
           414.3,
-          402.85
+          402.85,
+          400.6,
+          387.7
         ],
         "daily_closes": [
           {
@@ -245664,6 +245718,14 @@
           {
             "date": "2026-10-21",
             "close": 402.85
+          },
+          {
+            "date": "2026-10-22",
+            "close": 400.6
+          },
+          {
+            "date": "2026-10-23",
+            "close": 387.7
           }
         ]
       }
@@ -245671,7 +245733,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-10-22",
+    "as_of_date": "2026-10-23",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
       {
@@ -246934,23 +246996,23 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-22T14:26:37.869987+00:00",
+    "generated_at": "2026-10-23T08:20:05.948969+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 29,
+    "item_count": 30,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
           {
-            "title": "Hyundai Creta Sales Surpass 1.5 Million Units, Exports Nearing 300,000 Units",
-            "url": "https://www.autocarpro.in/analysis-sales/exclusive-hyundai-creta-sales-surpass-15-million-units-exports-nearing-300000-units-135254",
-            "summary": "Even as Hyundai Motor India celebrates its 28th year of Make in India and the inauguration of its new manufacturing plant in Talegaon, Pune , Maharashtra yesterday (October 14), the popular Hyundai Creta has achieved yet another sales milestone: 1.5 million units. Launched on July 21, 2015 , the Creta, Hyundai Motor India\u2019s best-selling SUV and India\u2019s No.",
+            "title": "New Sorento Midsize SUV Sells 1,739 Units in First Month, Kia India Sales Grow 29% in H1 FY2027",
+            "url": "https://www.autocarpro.in/analysis-sales/new-sorento-midsize-suv-sells-1739-units-in-first-month-kia-india-sales-grow-29-percent-in-h1-fy2027-135309",
+            "summary": "The new Kia Sorento midsize SUV, launched on September 4, has sold 1,739 units in its first full month of wholesales (factory dispatches) in the domestic market. Kia India\u2019s new ICE-powered flagship SUV, which was the fifth highest-selling model for the company last month, contributed 5% to Kia India\u2019s record monthly sales in September.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-15T10:33:50+00:00",
-            "published_display": "15 Oct 2026",
-            "importance_score": 9,
+            "published_at": "2026-10-17T12:16:28+00:00",
+            "published_display": "17 Oct 2026",
+            "importance_score": 8,
             "segment_tags": [
               "Passenger Vehicles"
             ],
@@ -246961,12 +247023,12 @@
             ]
           },
           {
-            "title": "New Sorento Midsize SUV Sells 1,739 Units in First Month, Kia India Sales Grow 29% in H1 FY2027",
-            "url": "https://www.autocarpro.in/analysis-sales/new-sorento-midsize-suv-sells-1739-units-in-first-month-kia-india-sales-grow-29-percent-in-h1-fy2027-135309",
-            "summary": "The new Kia Sorento midsize SUV, launched on September 4, has sold 1,739 units in its first full month of wholesales (factory dispatches) in the domestic market. Kia India\u2019s new ICE-powered flagship SUV, which was the fifth highest-selling model for the company last month, contributed 5% to Kia India\u2019s record monthly sales in September.",
+            "title": "Hyundai Creta Sales Surpass 1.5 Million Units, Exports Nearing 300,000 Units",
+            "url": "https://www.autocarpro.in/analysis-sales/exclusive-hyundai-creta-sales-surpass-15-million-units-exports-nearing-300000-units-135254",
+            "summary": "Even as Hyundai Motor India celebrates its 28th year of Make in India and the inauguration of its new manufacturing plant in Talegaon, Pune , Maharashtra yesterday (October 14), the popular Hyundai Creta has achieved yet another sales milestone: 1.5 million units. Launched on July 21, 2015 , the Creta, Hyundai Motor India\u2019s best-selling SUV and India\u2019s No.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-17T17:46:28+00:00",
-            "published_display": "17 Oct 2026",
+            "published_at": "2026-10-15T05:03:50+00:00",
+            "published_display": "15 Oct 2026",
             "importance_score": 8,
             "segment_tags": [
               "Passenger Vehicles"
@@ -246982,7 +247044,7 @@
             "url": "https://www.autocarpro.in/news/pirelli-partnership-to-accelerate-bkts-passenger-tyre-ambitions-rajiv-poddar-135391",
             "summary": "Balkrishna Industries (BKT) expects its partnership with Italian tyre manufacturer Pirelli to accelerate its expansion into the passenger car tyre segment, a business the Indian company had already identified as part of its growth plans. Speaking at a press interaction on Thursday, Rajiv Poddar of Balkrishna Industries said the partnership would help accelerate the company\u2019s existing plans to enter new tyre catego...",
             "source": "Autocar Professional Components",
-            "published_at": "2026-10-22T11:59:27+00:00",
+            "published_at": "2026-10-22T06:29:27+00:00",
             "published_display": "22 Oct 2026",
             "importance_score": 7,
             "segment_tags": [
@@ -246995,37 +247057,33 @@
             ]
           },
           {
-            "title": "Q2 surge powers electric car, SUV sales past 192,000 units in first-half FY2027",
-            "url": "https://www.autocarpro.in/analysis-sales/q2-surge-powers-electric-car-suv-sales-past-192000-units-in-first-half-fy2027-135192",
-            "summary": "India\u2019s electric vehicle growth story is really charged up this year. After the first six months of FY2027, total retail sales of 18,10,163 million EVs across the e-2W, e-3W, e-passenger and e-commercial vehicle segments have risen 60% YoY (H1 FY2025: 11,34,054 units) and are already 71% of FY2026\u2019s record 2.54 million EVs.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-13T08:37:29+00:00",
-            "published_display": "13 Oct 2026",
+            "title": "Car Sales H1 FY 2027 \u2013 Maruti and Tata Grow Market Share",
+            "url": "https://www.rushlane.com/car-sales-h1-fy-2027-maruti-and-tata-grow-market-share-12559326.html",
+            "summary": "Maruti and Tata recorded the largest market-share gains during April\u2013September 2026, while Nissan posted the fastest percentage growth. The post Car Sales H1 FY 2027 \u2013 Maruti and Tata Grow Market Share appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-23T07:23:23+00:00",
+            "published_display": "23 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles",
-              "EV"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
+              "General"
             ]
           },
           {
-            "title": "Tata Motors EV sales exceed 100,000 units in first 9 months of the year",
-            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-ev-sales-exceed-100000-units-in-first-9-months-of-the-year-135171",
-            "summary": "In what has already turned out to be a record-breaking calendar year on many counts for the Indian electric passenger vehicle industry, market leader Tata Motors is leading the charge and how. Between January and September 2026, a record 255,326 e-PVs have been delivered by 19 EV manufacturers to customers across the country.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-12T08:34:26+00:00",
-            "published_display": "12 Oct 2026",
+            "title": "4.5m to 5m SUV Sales Sep 2026, Q3 \u2013 Scorpio, XUV7XO, XEV 9S, Fortuner, Harrier, Safari, Sorento, Majestor",
+            "url": "https://www.rushlane.com/4-5m-to-5m-suv-sales-sep-2026-q3-scorpio-xuv7xo-xev-9s-fortuner-12559310.html",
+            "summary": "Scorpio, XUV7XO and XEV 9S occupied the top three positions in both September and Q3 2026. Fortuner ranked fourth in September. The post 4.5m to 5m SUV Sales Sep 2026, Q3 \u2013 Scorpio, XUV7XO, XEV 9S, Fortuner, Harrier, Safari, Sorento, Majestor appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-23T05:15:26+00:00",
+            "published_display": "23 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
+              "General"
             ]
           }
         ]
@@ -247035,13 +247093,13 @@
         "label": "Two-Wheelers",
         "items": [
           {
-            "title": "Two Wheeler Sales Sep 2026, Q3 \u2013 Hero, Honda, TVS, Bajaj, Royal Enfield, Suzuki",
-            "url": "https://www.rushlane.com/two-wheeler-sales-sep-2026-q3-hero-honda-tvs-bajaj-royal-enfield-suzuki-12559214.html",
-            "summary": "Hero led domestic sales in September, while Bajaj topped exports. TVS moved ahead of Honda in combined domestic and export volumes during July\u2013September 2026, finishing close behind Hero. The post Two Wheeler Sales Sep 2026, Q3 \u2013 Hero, Honda, TVS, Bajaj, Royal Enfield, Suzuki appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-22T08:57:29+00:00",
-            "published_display": "22 Oct 2026",
-            "importance_score": 8,
+            "title": "Motorcycle OEMs clock second-highest H1 sales of 6.92 million, Hero and Honda up 12%, Bajaj down 7%",
+            "url": "https://www.autocarpro.in/analysis-sales/motorcycle-oems-clock-second-highest-h1-sales-of-692-million-hero-and-honda-up-12-percent-bajaj-down-7-percent-135410",
+            "summary": "The motorcycle segment, the largest two-wheeler sub-segment in India, has registered its second highest first-half wholesales in April-September 2026. The 6.92 million units, up 10% YoY (H1 FY2026: 6.27 million units) are now the next best after the record 7.37 million motorcycles sold in H1 FY2019.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-23T03:10:59+00:00",
+            "published_display": "23 Oct 2026",
+            "importance_score": 7,
             "segment_tags": [
               "Two-Wheelers"
             ],
@@ -247071,7 +247129,7 @@
             "url": "https://www.autocarpro.in/news/axor-introduces-agera-full-face-helmet-135335",
             "summary": "Axor, owned by Vega Auto, has launched a new full-face motorcycle helmet named Agera. The helmet is designed with an integrated rear spoiler that functions as an exhaust vent to assist airflow and reduce drag.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-10-19T16:00:06+00:00",
+            "published_at": "2026-10-19T10:30:06+00:00",
             "published_display": "19 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -247087,7 +247145,7 @@
             "url": "https://www.autocarpro.in/analysis-sales/scooter-sales-jump-29-percent-to-486-million-units-in-h1-fy2027-ev-share-grows-to-20-percent-135326",
             "summary": "The high-performing scooter industry has clocked two new milestones in the closing month of first-half FY2027. While the 995,576 units sold in September 2026 were the highest monthly wholesales yet for this two-wheeler category, cumulative six-month sales (April-September 2026) at 48,65,192 units or 4.86 million scooters sets a new high for the first-half of a fiscal year.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-19T09:53:07+00:00",
+            "published_at": "2026-10-19T04:23:07+00:00",
             "published_display": "19 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -247099,15 +247157,17 @@
             ]
           },
           {
-            "title": "Record 207,850 e-2W sales in September power H1 FY027\u2019s 1.12 million units",
-            "url": "https://www.autocarpro.in/analysis-sales/record-207850-e-2w-sales-in-september-power-h1-fy027s-112-million-units-135143",
-            "summary": "With the sixth month of the current fiscal and a record one at that, it\u2019s amply clear that India\u2019s electric 2-wheeler industry is on a roll and how. While January-September 2026 retail sales have already crossed 1.61 million units, e-2W customer deliveries in the April-September period jumped 76% to 1.12 million units (H1 FY2026: 640,149 units).",
+            "title": "Q2 surge powers electric car, SUV sales past 192,000 units in first-half FY2027",
+            "url": "https://www.autocarpro.in/analysis-sales/q2-surge-powers-electric-car-suv-sales-past-192000-units-in-first-half-fy2027-135192",
+            "summary": "India\u2019s electric vehicle growth story is really charged up this year. After the first six months of FY2027, total retail sales of 18,10,163 million EVs across the e-2W, e-3W, e-passenger and e-commercial vehicle segments have risen 60% YoY (H1 FY2025: 11,34,054 units) and are already 71% of FY2026\u2019s record 2.54 million EVs.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-09T13:14:44+00:00",
-            "published_display": "09 Oct 2026",
+            "published_at": "2026-10-13T03:07:29+00:00",
+            "published_display": "13 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
+              "Passenger Vehicles",
               "Two-Wheelers",
+              "Commercial Vehicles",
               "EV"
             ],
             "signal_tags": [
@@ -247142,7 +247202,7 @@
             "url": "https://www.autocarpro.in/analysis-sales/electric-cv-sales-jump-155-percent-to-23540-units-tata-motors-tops-but-euler-motors-shines-134690",
             "summary": "In sync with the strong growth of the EV industry in India , the electric commercial vehicle (e-CV) segment is also hitting new highs this year. Not only did it register highest monthly sales in August (4,746 units, up 191% YoY) but its cumulative January-August retail sales of 23,540 units are already 6,895 units more than entire CY2025 sales (16,695 units).",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-09-14T12:01:14+00:00",
+            "published_at": "2026-09-14T06:31:14+00:00",
             "published_display": "14 Sep 2026",
             "importance_score": 7,
             "segment_tags": [
@@ -247158,7 +247218,7 @@
             "url": "https://www.autocarpro.in/analysis-sales/tractor-dispatches-fall-18-percent-as-retail-rises-14-percent-with-monsoon-risk-ahead-135313",
             "summary": "Tractor makers are entering the festive season after a monsoon that ended about 13 percent below normal, according to India Meteorological Department (IMD) data. Concerns about a strong El Ni\u00f1o raise the risk of further pressure on rural demand.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-17T20:46:28+00:00",
+            "published_at": "2026-10-17T15:16:28+00:00",
             "published_display": "17 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -247209,20 +247269,19 @@
         "label": "EV / Transition",
         "items": [
           {
-            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
-            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
-            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-13T09:21:29+00:00",
-            "published_display": "13 Oct 2026",
-            "importance_score": 8,
+            "title": "New Maruti YMC Electric MPV Spied \u2013 7 Seater EV Launch In 2027?",
+            "url": "https://www.rushlane.com/new-maruti-ymc-electric-mpv-spied-7-seater-ev-launch-in-2027-12559318.html",
+            "summary": "Test mules of what is speculated to be upcoming Maruti YMC electric MPV (7 Seater) is making rounds again, suggesting a launch in 2027 The post New Maruti YMC Electric MPV Spied \u2013 7 Seater EV Launch In 2027? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-23T06:01:39+00:00",
+            "published_display": "23 Oct 2026",
+            "importance_score": 7,
             "segment_tags": [
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Product / Launch",
-              "Funding / M&A",
-              "Supply Chain / Components"
+              "Product / Launch"
             ]
           },
           {
@@ -247246,7 +247305,7 @@
             "url": "https://www.autocarpro.in/analysis-sales/vinfast-india-sells-14600-evs-since-market-entry-14-months-ago-135278",
             "summary": "Vinfast Auto India, the local arm of the Vietnamese electric vehicle major VinFast, has delivered 14,637 zero-emission passenger vehicles to customers since its market launch on September 6, 2025 through to October 14, 2026. As per Vahan, this gives the company a 4% share of the 343,876 e-PVs bought in the past 13-and-a-half months.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-16T09:16:47+00:00",
+            "published_at": "2026-10-16T03:46:47+00:00",
             "published_display": "16 Oct 2026",
             "importance_score": 7,
             "segment_tags": [
@@ -247303,7 +247362,7 @@
             "url": "https://www.autocarpro.in/news/bkt-pirelli-plan-5050-joint-venture-for-passenger-car-tyres-in-india-135388",
             "summary": "Balkrishna Industries (BKT) and Pirelli Tyre have signed agreements to establish a 50:50 joint venture (JV) for manufacturing passenger car radial (PCR) tyres in India. Under the proposed arrangement, the two companies will manufacture tyres under their respective brands, with a new manufacturing plant planned in India.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-10-22T11:08:31+00:00",
+            "published_at": "2026-10-22T05:38:31+00:00",
             "published_display": "22 Oct 2026",
             "importance_score": 9,
             "segment_tags": [
@@ -247369,18 +247428,19 @@
             ]
           },
           {
-            "title": "Nexon Geochem to Invest \u20b91,250 Crore in Andhra Rare-Earth Magnet Plant",
-            "url": "https://www.autocarpro.in/news/nexon-geochem-to-invest-rs-1250-crore-in-andhra-rare-earth-magnet-plant-135243",
-            "summary": "Hyderabad-based advanced materials company Nexon Geochem has announced plans to invest \u20b91,250 crore in setting up an integrated rare-earth permanent magnet manufacturing facility in Andhra Pradesh, as India steps up efforts to reduce its dependence on imported critical materials used in electric vehicles and other industries. The company on Wednesday signed a memorandum of understanding (MoU) with the Andhra Prade...",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-10-14T19:59:49+00:00",
-            "published_display": "14 Oct 2026",
+            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
+            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
+            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-13T09:21:29+00:00",
+            "published_display": "13 Oct 2026",
             "importance_score": 8,
             "segment_tags": [
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
+              "Product / Launch",
+              "Funding / M&A",
               "Supply Chain / Components"
             ]
           }
@@ -247395,7 +247455,7 @@
             "url": "https://www.autocarpro.in/analysis-sales/maruti-suzukis-suv-mpv-share-of-pv-sales-at-42-percent-in-h1-fy2027-with-455692-units-135363",
             "summary": "Passenger vehicle market leader Maruti Suzuki India has crossed the 1-million wholesales mark for the first time in the first-half of a fiscal in April-September 2026. The 10,80,240 units are a handsome 36% YoY increase and the result of a revival in demand for its cars and sedans following GST 2.0 price reductions and, importantly, the big jump in sales of its utility vehicles comprising SUVs and MPVs.",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-21T09:30:47+00:00",
+            "published_at": "2026-10-21T04:00:47+00:00",
             "published_display": "21 Oct 2026",
             "importance_score": 8,
             "segment_tags": [
@@ -247428,7 +247488,7 @@
             "url": "https://www.autocarpro.in/news/schaeffler-india-ceo-harsha-kadam-taken-into-police-custody-over-fatal-june-factory-accident-135360",
             "summary": "Schaeffler India Limited Managing Director and Chief Executive Officer Harsha Gopal Kadam was taken into police custody, in connection with an investigation into a fatal industrial accident at the company's Talegaon manufacturing facility, according to a regulatory disclosure filed Tuesday. An email and message seeking a response have been sent to Schaeffler.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-10-20T19:38:31+00:00",
+            "published_at": "2026-10-20T14:08:31+00:00",
             "published_display": "20 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -247442,11 +247502,27 @@
             ]
           },
           {
+            "title": "CIE Automotive India Q32026 Net Profit Rises 14 Percent to Rs 243.6 Crore",
+            "url": "https://www.autocarpro.in/news/cie-automotive-india-q32026-net-profit-rises-14-percent-to-rs-2436-crore-135404",
+            "summary": "CIE Automotive India reported a 13.9 percent year-on-year increase in consolidated net profit to Rs 243.68 crore for the third quarter ended September 30, 2026, according to a regulatory filing submitted to the stock exchanges on Thursday. The company, which follows a January-to-December financial year, recorded consolidated revenue from operations of Rs 2,633.18 crore for the quarter, marking an 11 percent increa...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-10-22T12:21:28+00:00",
+            "published_display": "22 Oct 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "General"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Subros Opens Advanced Thermal R&D Innovation Center in Noida",
             "url": "https://www.autocarpro.in/news/subros-opens-advanced-thermal-rd-innovation-center-in-noida-135272",
             "summary": "Subros Limited announced that it has established a new R&D facility in Noida, Sector 136, according to a stock exchange notification filed on Thursday. Named the Subros Advanced Technologies and Innovation Centre (SATIC), the facility functions as an extension of the company's existing research and development operations.",
             "source": "Autocar Professional Components",
-            "published_at": "2026-10-15T18:23:00+00:00",
+            "published_at": "2026-10-15T12:53:00+00:00",
             "published_display": "15 Oct 2026",
             "importance_score": 5,
             "segment_tags": [
@@ -247478,7 +247554,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
+      "unmapped_articles": 42,
       "filtered_low_signal": 0,
       "kept_articles": 67
     }
@@ -247530,7 +247606,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-10-22",
+    "as_of_date": "2026-10-23",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
