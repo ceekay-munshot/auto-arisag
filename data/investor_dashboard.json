@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T18:58:05.768063+00:00",
+  "generated_at": "2026-10-24T07:59:27.355819+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-10-23",
+          "latest_release_date": "2026-10-24",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122966,7 +122966,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-10-23",
+    "as_of_date": "2026-10-24",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -123082,11 +123082,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.93,
+        "value": 94.94,
         "unit": "\u20b9",
-        "delta_value": 0.6177,
-        "delta_label": "+0.43% in last week (Yahoo Finance)",
-        "delta_tone": "negative",
+        "delta_value": 0.2287,
+        "delta_label": "-0.04% in last week (Yahoo Finance)",
+        "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -133496,8 +133496,12 @@
             "close": 94.3123
           },
           {
-            "date": "2026-10-23",
-            "close": 94.93
+            "date": "2026-10-22",
+            "close": 94.7113
+          },
+          {
+            "date": "2026-10-24",
+            "close": 94.94
           }
         ]
       }
@@ -133505,20 +133509,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-10-23",
+    "as_of_date": "2026-10-24",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11170.0,
-        "change_1d_pct": -0.27,
-        "change_1w_pct": -0.07,
-        "change_1m_pct": -8.09,
+        "price": 11230.0,
+        "change_1d_pct": 0.54,
+        "change_1w_pct": -1.88,
+        "change_1m_pct": -7.88,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          12641.0,
           12618.0,
           12590.0,
           12400.0,
@@ -133547,7 +133550,8 @@
           11489.0,
           11475.0,
           11200.0,
-          11170.0
+          11170.0,
+          11230.0
         ],
         "daily_closes": [
           {
@@ -143433,18 +143437,21 @@
           {
             "date": "2026-10-22",
             "close": 11170.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 11230.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2864.1,
-        "change_1d_pct": -0.86,
-        "change_1w_pct": 2.52,
-        "change_1m_pct": -6.26,
+        "price": 2861.2,
+        "change_1d_pct": -0.1,
+        "change_1w_pct": -0.02,
+        "change_1m_pct": -6.02,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          3160.0,
           3150.0,
           3123.8,
           3107.0,
@@ -143473,7 +143480,8 @@
           2920.9,
           2907.0,
           2889.0,
-          2864.1
+          2864.1,
+          2861.2
         ],
         "daily_closes": [
           {
@@ -153359,6 +153367,10 @@
           {
             "date": "2026-10-22",
             "close": 2864.1
+          },
+          {
+            "date": "2026-10-23",
+            "close": 2861.2
           }
         ]
       },
@@ -163290,13 +163302,12 @@
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3974.0,
-        "change_1d_pct": -0.47,
-        "change_1w_pct": 0.11,
-        "change_1m_pct": -4.36,
+        "price": 3980.2,
+        "change_1d_pct": 0.16,
+        "change_1w_pct": -0.99,
+        "change_1m_pct": -3.86,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4133.2,
           4151.1,
           4121.5,
           4125.0,
@@ -163325,7 +163336,8 @@
           4095.1,
           4074.0,
           3992.6,
-          3974.0
+          3974.0,
+          3980.2
         ],
         "daily_closes": [
           {
@@ -173211,18 +173223,21 @@
           {
             "date": "2026-10-22",
             "close": 3974.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 3980.2
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10155.0,
-        "change_1d_pct": 0.82,
-        "change_1w_pct": -0.93,
-        "change_1m_pct": -11.39,
+        "price": 10072.0,
+        "change_1d_pct": -0.82,
+        "change_1w_pct": -3.01,
+        "change_1m_pct": -11.36,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11880.0,
           11790.0,
           11768.0,
           11678.0,
@@ -173251,7 +173266,8 @@
           10405.0,
           10287.0,
           10072.0,
-          10155.0
+          10155.0,
+          10072.0
         ],
         "daily_closes": [
           {
@@ -183137,18 +183153,21 @@
           {
             "date": "2026-10-22",
             "close": 10155.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 10072.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1895.5,
-        "change_1d_pct": -2.49,
-        "change_1w_pct": -3.57,
-        "change_1m_pct": -11.59,
+        "price": 1850.0,
+        "change_1d_pct": -2.4,
+        "change_1w_pct": -6.8,
+        "change_1m_pct": -11.95,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          2220.0,
           2182.4,
           2205.0,
           2174.0,
@@ -183177,7 +183196,8 @@
           1987.0,
           1955.0,
           1943.9,
-          1895.5
+          1895.5,
+          1850.0
         ],
         "daily_closes": [
           {
@@ -185163,6 +185183,10 @@
           {
             "date": "2026-10-22",
             "close": 1895.5
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1850.0
           }
         ]
       },
@@ -195094,14 +195118,13 @@
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 270.0,
-        "change_1d_pct": -2.07,
-        "change_1w_pct": -4.86,
-        "change_1m_pct": -10.49,
+        "price": 264.6,
+        "change_1d_pct": -2.0,
+        "change_1w_pct": -7.82,
+        "change_1m_pct": -11.81,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          306.45,
           303.0,
           300.5,
           301.1,
@@ -195130,7 +195153,8 @@
           286.85,
           278.0,
           275.7,
-          270.0
+          270.0,
+          264.6
         ],
         "daily_closes": [
           {
@@ -205016,19 +205040,22 @@
           {
             "date": "2026-10-22",
             "close": 270.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 264.6
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 414.25,
-        "change_1d_pct": -0.78,
-        "change_1w_pct": -0.24,
-        "change_1m_pct": -6.81,
+        "price": 396.0,
+        "change_1d_pct": -4.41,
+        "change_1w_pct": -6.34,
+        "change_1m_pct": -10.02,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          456.05,
           444.95,
           439.25,
           434.55,
@@ -205057,7 +205084,8 @@
           421.05,
           418.75,
           417.5,
-          414.25
+          414.25,
+          396.0
         ],
         "daily_closes": [
           {
@@ -205995,18 +206023,21 @@
           {
             "date": "2026-10-22",
             "close": 414.25
+          },
+          {
+            "date": "2026-10-23",
+            "close": 396.0
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 146.03,
-        "change_1d_pct": -0.48,
-        "change_1w_pct": 0.71,
-        "change_1m_pct": -9.72,
+        "price": 144.95,
+        "change_1d_pct": -0.74,
+        "change_1w_pct": -2.18,
+        "change_1m_pct": -9.83,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          169.0,
           167.0,
           166.12,
           163.75,
@@ -206035,7 +206066,8 @@
           148.91,
           147.72,
           146.74,
-          146.03
+          146.03,
+          144.95
         ],
         "daily_closes": [
           {
@@ -215921,6 +215953,10 @@
           {
             "date": "2026-10-22",
             "close": 146.03
+          },
+          {
+            "date": "2026-10-23",
+            "close": 144.95
           }
         ]
       },
@@ -235778,13 +235814,12 @@
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 400.6,
-        "change_1d_pct": -0.56,
-        "change_1w_pct": -6.7,
-        "change_1m_pct": -10.78,
+        "price": 387.7,
+        "change_1d_pct": -3.22,
+        "change_1w_pct": -8.05,
+        "change_1m_pct": -13.19,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          458.9,
           456.1,
           449.65,
           445.6,
@@ -235813,7 +235848,8 @@
           423.05,
           414.3,
           402.85,
-          400.6
+          400.6,
+          387.7
         ],
         "daily_closes": [
           {
@@ -245699,6 +245735,10 @@
           {
             "date": "2026-10-22",
             "close": 400.6
+          },
+          {
+            "date": "2026-10-23",
+            "close": 387.7
           }
         ]
       }
@@ -245706,17 +245746,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-10-23",
+    "as_of_date": "2026-10-24",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Tata Motors CV",
-        "ticker": "TMCV",
-        "date": "2026-10-23",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
-      },
       {
         "company": "Bajaj Auto",
         "ticker": "BAJAJ-AUTO",
@@ -245783,14 +245815,6 @@
       }
     ],
     "upcoming_all": [
-      {
-        "company": "Tata Motors CV",
-        "ticker": "TMCV",
-        "date": "2026-10-23",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
-      },
       {
         "company": "Bajaj Auto",
         "ticker": "BAJAJ-AUTO",
@@ -245864,9 +245888,18 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
       }
     ],
-    "recent_past": [],
-    "next_14_count": 9,
-    "upcoming_count": 10
+    "recent_past": [
+      {
+        "company": "Tata Motors CV",
+        "ticker": "TMCV",
+        "date": "2026-10-23",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
+      }
+    ],
+    "next_14_count": 8,
+    "upcoming_count": 9
   },
   "market_insights": [
     {
@@ -246977,10 +247010,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-23T14:09:26.459368+00:00",
+    "generated_at": "2026-10-24T07:57:46.602239+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 30,
+    "item_count": 28,
     "groups": [
       {
         "id": "pv",
@@ -247053,18 +247086,18 @@
             ]
           },
           {
-            "title": "4.5m to 5m SUV Sales Sep 2026, Q3 \u2013 Scorpio, XUV7XO, XEV 9S, Fortuner, Harrier, Safari, Sorento, Majestor",
-            "url": "https://www.rushlane.com/4-5m-to-5m-suv-sales-sep-2026-q3-scorpio-xuv7xo-xev-9s-fortuner-12559310.html",
-            "summary": "Scorpio, XUV7XO and XEV 9S occupied the top three positions in both September and Q3 2026. Fortuner ranked fourth in September. The post 4.5m to 5m SUV Sales Sep 2026, Q3 \u2013 Scorpio, XUV7XO, XEV 9S, Fortuner, Harrier, Safari, Sorento, Majestor appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-23T05:15:26+00:00",
-            "published_display": "23 Oct 2026",
+            "title": "Skoda Auto Offers Free 3D-Printable Accessories for Its Cars",
+            "url": "https://www.autocarpro.in/news/skoda-auto-offers-free-3d-printable-accessories-for-its-cars-135395",
+            "summary": "\u0160koda Auto has introduced a range of free 3D-printable accessories on Printables.com, allowing owners to download designs and manufacture practical vehicle add-ons using their own 3D printers. The accessories cover current and discontinued models and include cupholders, storage boxes, cable management tools and other interior organisers.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-10-22T07:26:32+00:00",
+            "published_display": "22 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -247160,23 +247193,6 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "BEML Unveils 60-Ton Electric Dump Truck BH60-EV",
-            "url": "https://evreporter.com/beml-unveils-60-ton-electric-dump-truck-bh60-ev",
-            "summary": "The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter . Bangalore-based BEML Limited unveiled 60-ton electric dump truck, BH60-EV, at its Mysuru Complex on September 30, 2026. According to the The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-01T08:26:15+00:00",
-            "published_display": "01 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Electric CV Sales Jump 155% to 23,540 Units, Tata Motors Tops but Euler Motors Shines",
             "url": "https://www.autocarpro.in/analysis-sales/electric-cv-sales-jump-155-percent-to-23540-units-tata-motors-tops-but-euler-motors-shines-134690",
             "summary": "In sync with the strong growth of the EV industry in India , the electric commercial vehicle (e-CV) segment is also hitting new highs this year. Not only did it register highest monthly sales in August (4,746 units, up 191% YoY) but its cumulative January-August retail sales of 23,540 units are already 6,895 units more than entire CY2025 sales (16,695 units).",
@@ -247242,6 +247258,22 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet",
+            "url": "https://evreporter.com/more-retail-deploys-110-montra-electric-eviators-in-mid-mile-fleet",
+            "summary": "The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter . More Retail has deployed 110 Montra Electric EVIATOR electric small commercial vehicles (e-SCVs) across its distribution network, including 25 vehicles The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-01T12:41:15+00:00",
+            "published_display": "01 Oct 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -247249,22 +247281,6 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
-          {
-            "title": "New Maruti YMC Electric MPV Spied \u2013 7 Seater EV Launch In 2027?",
-            "url": "https://www.rushlane.com/new-maruti-ymc-electric-mpv-spied-7-seater-ev-launch-in-2027-12559318.html",
-            "summary": "Test mules of what is speculated to be upcoming Maruti YMC electric MPV (7 Seater) is making rounds again, suggesting a launch in 2027 The post New Maruti YMC Electric MPV Spied \u2013 7 Seater EV Launch In 2027? appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-23T06:01:39+00:00",
-            "published_display": "23 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
           {
             "title": "Shakti Pumps Invests \u20b912 Crore in Shakti EV Mobility, Taking Total Investment to \u20b992 Crore",
             "url": "https://evreporter.com/shakti-pumps-invests-%e2%82%b912-crore-in-shakti-ev-mobility-taking-total-investment-to-%e2%82%b992-crore",
@@ -247279,23 +247295,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Vinfast India sells 14,600 EVs since market entry 14 months ago",
-            "url": "https://www.autocarpro.in/analysis-sales/vinfast-india-sells-14600-evs-since-market-entry-14-months-ago-135278",
-            "summary": "Vinfast Auto India, the local arm of the Vietnamese electric vehicle major VinFast, has delivered 14,637 zero-emission passenger vehicles to customers since its market launch on September 6, 2025 through to October 14, 2026. As per Vahan, this gives the company a 4% share of the 343,876 e-PVs bought in the past 13-and-a-half months.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-16T03:46:47+00:00",
-            "published_display": "16 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Monthly Sales / Demand"
             ]
           },
           {
@@ -247329,6 +247328,39 @@
             ],
             "signal_tags": [
               "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
+            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
+            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-03T07:03:41+00:00",
+            "published_display": "03 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "BEML Unveils 60-Ton Electric Dump Truck BH60-EV",
+            "url": "https://evreporter.com/beml-unveils-60-ton-electric-dump-truck-bh60-ev",
+            "summary": "The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter . Bangalore-based BEML Limited unveiled 60-ton electric dump truck, BH60-EV, at its Mysuru Complex on September 30, 2026. According to the The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-01T08:26:15+00:00",
+            "published_display": "01 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
               "Supply Chain / Components"
             ]
           }
@@ -247449,22 +247481,6 @@
             ]
           },
           {
-            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
-            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
-            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-03T07:03:41+00:00",
-            "published_display": "03 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Schaeffler India CEO Harsha Kadam Taken Into Police Custody Over Fatal June Factory Accident",
             "url": "https://www.autocarpro.in/news/schaeffler-india-ceo-harsha-kadam-taken-into-police-custody-over-fatal-june-factory-accident-135360",
             "summary": "Schaeffler India Limited Managing Director and Chief Executive Officer Harsha Gopal Kadam was taken into police custody, in connection with an investigation into a fatal industrial accident at the company's Talegaon manufacturing facility, according to a regulatory disclosure filed Tuesday. An email and message seeking a response have been sent to Schaeffler.",
@@ -247490,22 +247506,6 @@
             "published_at": "2026-10-22T12:21:28+00:00",
             "published_display": "22 Oct 2026",
             "importance_score": 5,
-            "segment_tags": [
-              "General"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Subros Opens Advanced Thermal R&D Innovation Center in Noida",
-            "url": "https://www.autocarpro.in/news/subros-opens-advanced-thermal-rd-innovation-center-in-noida-135272",
-            "summary": "Subros Limited announced that it has established a new R&D facility in Noida, Sector 136, according to a stock exchange notification filed on Thursday. Named the Subros Advanced Technologies and Innovation Centre (SATIC), the facility functions as an extension of the company's existing research and development operations.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-10-15T12:53:00+00:00",
-            "published_display": "15 Oct 2026",
-            "importance_score": 4,
             "segment_tags": [
               "General"
             ],
@@ -247587,7 +247587,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-10-23",
+    "as_of_date": "2026-10-24",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
