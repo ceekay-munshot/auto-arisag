@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T07:59:27.355819+00:00",
+  "generated_at": "2026-10-24T13:12:41.856664+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,10 +122882,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-23T14:09:50.826162+00:00",
+      "generated_at": "2026-10-24T13:12:19.880956+00:00",
       "window_days": 30,
-      "item_count": 3,
+      "item_count": 4,
       "items": [
+        {
+          "title": "BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026",
+          "summary": "It is expected that Denza will first introduce the D9 luxury MPV in India, followed by the Z9 GT high-performance shooting brake The post BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/byd-denza-luxury-brand-india-debut-confirmed-for-13th-nov-2026-12559377.html",
+          "source": "RushLane",
+          "published_at": "2026-10-24T12:06:35+00:00",
+          "published_display": "24 Oct 2026",
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/byd-denza-teased-for-india-cover.jpg"
+        },
         {
           "title": "2026 Bajaj Pulsar NS200 Launch Price Rs 1.6 Lakh \u2013 TFT, ETB, Maps",
           "summary": "Bajaj Pulsar NS200 has just been upgraded with a lot of new and improved equipment and technology to make it more appealing than before The post 2026 Bajaj Pulsar NS200 Launch Price Rs 1.6 Lakh \u2013 TFT, ETB, Maps appeared first on RushLane .",
@@ -122934,6 +122950,14 @@
       ],
       "companies": [
         {
+          "company": "BYD India",
+          "tone": "ev",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-10-24T12:06:35+00:00",
+          "latest_title": "BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026"
+        },
+        {
           "company": "Bajaj Auto",
           "tone": "tw",
           "scope": "listed",
@@ -122960,7 +122984,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-23"
+        "latest_release_date": "2026-10-24"
       }
     }
   },
@@ -153376,13 +153400,12 @@
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5128.0,
-        "change_1d_pct": -0.49,
-        "change_1w_pct": 2.16,
-        "change_1m_pct": -5.37,
+        "price": 5047.0,
+        "change_1d_pct": -1.58,
+        "change_1w_pct": -3.13,
+        "change_1m_pct": -6.07,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5333.5,
           5218.0,
           5280.0,
           5221.5,
@@ -153411,7 +153434,8 @@
           5225.0,
           5230.0,
           5153.5,
-          5128.0
+          5128.0,
+          5047.0
         ],
         "daily_closes": [
           {
@@ -163297,6 +163321,10 @@
           {
             "date": "2026-10-22",
             "close": 5128.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 5047.0
           }
         ]
       },
@@ -185192,13 +185220,12 @@
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7084.5,
-        "change_1d_pct": -1.2,
-        "change_1w_pct": 0.03,
-        "change_1m_pct": -5.7,
+        "price": 7066.0,
+        "change_1d_pct": -0.26,
+        "change_1w_pct": -2.2,
+        "change_1m_pct": -4.86,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7747.5,
           7734.5,
           7697.0,
           7530.0,
@@ -185227,7 +185254,8 @@
           7284.5,
           7349.0,
           7170.5,
-          7084.5
+          7084.5,
+          7066.0
         ],
         "daily_closes": [
           {
@@ -195113,6 +195141,10 @@
           {
             "date": "2026-10-22",
             "close": 7084.5
+          },
+          {
+            "date": "2026-10-23",
+            "close": 7066.0
           }
         ]
       },
@@ -215962,13 +215994,12 @@
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2636.9,
-        "change_1d_pct": -3.07,
-        "change_1w_pct": -1.94,
-        "change_1m_pct": -6.49,
+        "price": 2627.0,
+        "change_1d_pct": -0.38,
+        "change_1w_pct": -3.65,
+        "change_1m_pct": -5.96,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          3013.2,
           2989.2,
           2958.4,
           2899.7,
@@ -215997,7 +216028,8 @@
           2751.0,
           2706.8,
           2720.4,
-          2636.9
+          2636.9,
+          2627.0
         ],
         "daily_closes": [
           {
@@ -225883,18 +225915,21 @@
           {
             "date": "2026-10-22",
             "close": 2636.9
+          },
+          {
+            "date": "2026-10-23",
+            "close": 2627.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1053.4,
-        "change_1d_pct": -1.97,
-        "change_1w_pct": -12.0,
-        "change_1m_pct": -14.39,
+        "price": 1000.1,
+        "change_1d_pct": -5.06,
+        "change_1w_pct": -13.46,
+        "change_1m_pct": -19.47,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1121.2,
           1127.0,
           1121.2,
           1129.0,
@@ -225923,7 +225958,8 @@
           1136.3,
           1108.1,
           1074.6,
-          1053.4
+          1053.4,
+          1000.1
         ],
         "daily_closes": [
           {
@@ -235809,6 +235845,10 @@
           {
             "date": "2026-10-22",
             "close": 1053.4
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1000.1
           }
         ]
       },
@@ -247010,7 +247050,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-24T07:57:46.602239+00:00",
+    "generated_at": "2026-10-24T13:11:55.681292+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -247019,6 +247059,22 @@
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
+          {
+            "title": "BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026",
+            "url": "https://www.rushlane.com/byd-denza-luxury-brand-india-debut-confirmed-for-13th-nov-2026-12559377.html",
+            "summary": "It is expected that Denza will first introduce the D9 luxury MPV in India, followed by the Z9 GT high-performance shooting brake The post BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026 appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-24T12:06:35+00:00",
+            "published_display": "24 Oct 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "New Sorento Midsize SUV Sells 1,739 Units in First Month, Kia India Sales Grow 29% in H1 FY2027",
             "url": "https://www.autocarpro.in/analysis-sales/new-sorento-midsize-suv-sells-1739-units-in-first-month-kia-india-sales-grow-29-percent-in-h1-fy2027-135309",
@@ -247071,33 +247127,19 @@
             ]
           },
           {
-            "title": "Car Sales H1 FY 2027 \u2013 Maruti and Tata Grow Market Share",
-            "url": "https://www.rushlane.com/car-sales-h1-fy-2027-maruti-and-tata-grow-market-share-12559326.html",
-            "summary": "Maruti and Tata recorded the largest market-share gains during April\u2013September 2026, while Nissan posted the fastest percentage growth. The post Car Sales H1 FY 2027 \u2013 Maruti and Tata Grow Market Share appeared first on RushLane .",
+            "title": "2027 Maruti Nexa Electric MPV Spied \u2013 Front, Rear, Interior New Details",
+            "url": "https://www.rushlane.com/2027-maruti-nexa-electric-mpv-spied-front-rear-interior-new-details-12559404.html",
+            "summary": "The latest spy shots offer a clearer look at the upcoming Maruti electric seven-seater\u2019s front styling, side profile and cabin, following the recent rear-view images. The post 2027 Maruti Nexa Electric MPV Spied \u2013 Front, Rear, Interior New Details appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-10-23T07:23:23+00:00",
-            "published_display": "23 Oct 2026",
+            "published_at": "2026-10-24T10:00:55+00:00",
+            "published_display": "24 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles"
+              "Passenger Vehicles",
+              "EV"
             ],
             "signal_tags": [
               "General"
-            ]
-          },
-          {
-            "title": "Skoda Auto Offers Free 3D-Printable Accessories for Its Cars",
-            "url": "https://www.autocarpro.in/news/skoda-auto-offers-free-3d-printable-accessories-for-its-cars-135395",
-            "summary": "\u0160koda Auto has introduced a range of free 3D-printable accessories on Printables.com, allowing owners to download designs and manufacture practical vehicle add-ons using their own 3D printers. The accessories cover current and discontinued models and include cupholders, storage boxes, cable management tools and other interior organisers.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-10-22T07:26:32+00:00",
-            "published_display": "22 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
             ]
           }
         ]
