@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T13:39:43.684178+00:00",
+  "generated_at": "2026-10-25T18:16:05.373150+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -123085,10 +123085,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.94,
+        "value": 94.93,
         "unit": "\u20b9",
-        "delta_value": 0.2287,
-        "delta_label": "-0.04% in last week (Yahoo Finance)",
+        "delta_value": 0.2187,
+        "delta_label": "-0.05% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133504,7 +133504,7 @@
           },
           {
             "date": "2026-10-25",
-            "close": 94.94
+            "close": 94.93
           }
         ]
       }
