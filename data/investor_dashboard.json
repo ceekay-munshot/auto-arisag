@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T08:38:28.069508+00:00",
+  "generated_at": "2026-10-26T15:59:03.892150+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,10 +122882,23 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-26T08:38:06.841114+00:00",
+      "generated_at": "2026-10-26T15:58:41.337156+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "Hyundai Bayon Petrol Launch Price Rs 10 Lakh \u2013 CNG Coming Jan 2027",
+          "summary": "Hyundai Bayon arrives with manual and iVT gearbox options, a 505-litre boot and available features including dual 12.3-inch displays, ventilated seats and a panoramic sunroof. The post Hyundai Bayon Petrol Launch Price Rs 10 Lakh \u2013 CNG Coming Jan 2027 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hyundai-bayon-launch-price-rs-10-lakh-1-5-na-petrol-cng-12559486.html",
+          "source": "RushLane",
+          "published_at": "2026-10-26T07:36:45+00:00",
+          "published_display": "26 Oct 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-hyundai-bayon-front-side.jpg"
+        },
         {
           "title": "Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore",
           "summary": "The post Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore appeared first at EVreporter on EVreporter . Volvo Cars India has introduced the EX90 electric SUV in India at an introductory price of \u20b91.26 crore (ex-showroom) for The post Volvo EX90 Electric SUV Launched in India, Priced from \u20b91.26 Crore appeared first at EVreporter on EVreporter .",
@@ -122921,6 +122934,14 @@
       ],
       "companies": [
         {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-10-26T07:36:45+00:00",
+          "latest_title": "Hyundai Bayon Petrol Launch Price Rs 10 Lakh \u2013 CNG Coming Jan 2027"
+        },
+        {
           "company": "Volvo India",
           "tone": "pv",
           "scope": "tracked",
@@ -122939,7 +122960,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-14"
+        "latest_release_date": "2026-10-26"
       }
     }
   },
@@ -123061,10 +123082,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.23,
+        "value": 95.17,
         "unit": "\u20b9",
-        "delta_value": 0.5237,
-        "delta_label": "+0.27% in last week (Yahoo Finance)",
+        "delta_value": 0.4637,
+        "delta_label": "+0.21% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133472,7 +133493,7 @@
           },
           {
             "date": "2026-10-26",
-            "close": 95.235
+            "close": 95.175
           }
         ]
       }
@@ -133487,10 +133508,10 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11266.0,
-        "change_1d_pct": 0.32,
-        "change_1w_pct": -1.94,
-        "change_1m_pct": -7.88,
+        "price": 11220.0,
+        "change_1d_pct": -0.09,
+        "change_1w_pct": -2.34,
+        "change_1m_pct": -8.26,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
           12590.0,
@@ -133522,7 +133543,7 @@
           11200.0,
           11170.0,
           11230.0,
-          11266.0
+          11220.0
         ],
         "daily_closes": [
           {
@@ -143407,16 +143428,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 11266.0
+            "close": 11220.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2855.2,
-        "change_1d_pct": -0.21,
-        "change_1w_pct": -2.25,
-        "change_1m_pct": -5.92,
+        "price": 2853.1,
+        "change_1d_pct": -0.28,
+        "change_1w_pct": -2.32,
+        "change_1m_pct": -5.99,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3123.8,
@@ -143448,7 +143469,7 @@
           2889.0,
           2864.1,
           2861.2,
-          2855.2
+          2853.1
         ],
         "daily_closes": [
           {
@@ -153333,16 +153354,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 2855.2
+            "close": 2853.1
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5075.0,
-        "change_1d_pct": 0.55,
-        "change_1w_pct": -2.87,
-        "change_1m_pct": -5.91,
+        "price": 5199.0,
+        "change_1d_pct": 3.01,
+        "change_1w_pct": -0.5,
+        "change_1m_pct": -3.62,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
           5280.0,
@@ -153374,7 +153395,7 @@
           5153.5,
           5128.0,
           5047.0,
-          5075.0
+          5199.0
         ],
         "daily_closes": [
           {
@@ -163259,16 +163280,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 5075.0
+            "close": 5199.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 3970.0,
-        "change_1d_pct": -0.26,
-        "change_1w_pct": -3.05,
-        "change_1m_pct": -3.99,
+        "price": 3996.0,
+        "change_1d_pct": 0.4,
+        "change_1w_pct": -2.42,
+        "change_1m_pct": -3.36,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4121.5,
@@ -163300,7 +163321,7 @@
           3992.6,
           3974.0,
           3980.2,
-          3970.0
+          3996.0
         ],
         "daily_closes": [
           {
@@ -173185,16 +173206,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 3970.0
+            "close": 3996.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10053.0,
-        "change_1d_pct": -0.19,
-        "change_1w_pct": -3.38,
-        "change_1m_pct": -11.82,
+        "price": 10071.0,
+        "change_1d_pct": -0.01,
+        "change_1w_pct": -3.21,
+        "change_1m_pct": -11.66,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
           11768.0,
@@ -173226,7 +173247,7 @@
           10072.0,
           10155.0,
           10072.0,
-          10053.0
+          10071.0
         ],
         "daily_closes": [
           {
@@ -183111,16 +183132,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 10053.0
+            "close": 10071.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1866.0,
-        "change_1d_pct": 0.86,
-        "change_1w_pct": -6.09,
-        "change_1m_pct": -10.93,
+        "price": 1868.0,
+        "change_1d_pct": 0.97,
+        "change_1w_pct": -5.99,
+        "change_1m_pct": -10.84,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           2205.0,
@@ -183152,7 +183173,7 @@
           1943.9,
           1895.5,
           1850.0,
-          1866.0
+          1868.0
         ],
         "daily_closes": [
           {
@@ -185145,16 +185166,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 1866.0
+            "close": 1868.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7070.0,
-        "change_1d_pct": 0.06,
-        "change_1w_pct": -2.94,
-        "change_1m_pct": -5.35,
+        "price": 7099.5,
+        "change_1d_pct": 0.47,
+        "change_1w_pct": -2.54,
+        "change_1m_pct": -4.96,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
           7697.0,
@@ -185186,7 +185207,7 @@
           7170.5,
           7084.5,
           7066.0,
-          7070.0
+          7099.5
         ],
         "daily_closes": [
           {
@@ -195071,16 +195092,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 7070.0
+            "close": 7099.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 263.55,
-        "change_1d_pct": -0.4,
-        "change_1w_pct": -8.12,
-        "change_1m_pct": -12.3,
+        "price": 263.7,
+        "change_1d_pct": -0.34,
+        "change_1w_pct": -8.07,
+        "change_1m_pct": -12.25,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -195113,7 +195134,7 @@
           275.7,
           270.0,
           264.6,
-          263.55
+          263.7
         ],
         "daily_closes": [
           {
@@ -204998,16 +205019,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 263.55
+            "close": 263.7
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 388.4,
-        "change_1d_pct": -1.92,
-        "change_1w_pct": -7.75,
-        "change_1m_pct": -13.73,
+        "price": 384.05,
+        "change_1d_pct": -3.02,
+        "change_1w_pct": -8.79,
+        "change_1m_pct": -14.69,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -205040,7 +205061,7 @@
           417.5,
           414.25,
           396.0,
-          388.4
+          384.05
         ],
         "daily_closes": [
           {
@@ -205985,16 +206006,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 388.4
+            "close": 384.05
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 141.2,
-        "change_1d_pct": -2.59,
-        "change_1w_pct": -5.18,
-        "change_1m_pct": -13.32,
+        "price": 141.9,
+        "change_1d_pct": -2.1,
+        "change_1w_pct": -4.71,
+        "change_1m_pct": -12.89,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           166.12,
@@ -206026,7 +206047,7 @@
           146.74,
           146.03,
           144.95,
-          141.2
+          141.9
         ],
         "daily_closes": [
           {
@@ -215911,16 +215932,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 141.2
+            "close": 141.9
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2594.5,
-        "change_1d_pct": -1.24,
-        "change_1w_pct": -5.69,
-        "change_1m_pct": -7.24,
+        "price": 2575.9,
+        "change_1d_pct": -1.95,
+        "change_1w_pct": -6.36,
+        "change_1m_pct": -7.9,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2958.4,
@@ -215952,7 +215973,7 @@
           2720.4,
           2636.9,
           2627.0,
-          2594.5
+          2575.9
         ],
         "daily_closes": [
           {
@@ -225837,16 +225858,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 2594.5
+            "close": 2575.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1011.1,
-        "change_1d_pct": 1.1,
-        "change_1w_pct": -11.02,
-        "change_1m_pct": -19.36,
+        "price": 1011.3,
+        "change_1d_pct": 1.12,
+        "change_1w_pct": -11.0,
+        "change_1m_pct": -19.35,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
           1121.2,
@@ -225878,7 +225899,7 @@
           1074.6,
           1053.4,
           1000.1,
-          1011.1
+          1011.3
         ],
         "daily_closes": [
           {
@@ -235763,16 +235784,16 @@
           },
           {
             "date": "2026-10-26",
-            "close": 1011.1
+            "close": 1011.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 393.5,
-        "change_1d_pct": 1.5,
-        "change_1w_pct": -6.98,
-        "change_1m_pct": -14.04,
+        "price": 391.55,
+        "change_1d_pct": 0.99,
+        "change_1w_pct": -7.45,
+        "change_1m_pct": -14.46,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           449.65,
@@ -235804,7 +235825,7 @@
           402.85,
           400.6,
           387.7,
-          393.5
+          391.55
         ],
         "daily_closes": [
           {
@@ -245689,7 +245710,7 @@
           },
           {
             "date": "2026-10-26",
-            "close": 393.5
+            "close": 391.55
           }
         ]
       }
@@ -246961,31 +246982,15 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-25T13:38:56.068939+00:00",
+    "generated_at": "2026-10-26T15:57:57.252071+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 28,
+    "item_count": 29,
     "groups": [
       {
         "id": "pv",
         "label": "Passenger Vehicles",
         "items": [
-          {
-            "title": "BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026",
-            "url": "https://www.rushlane.com/byd-denza-luxury-brand-india-debut-confirmed-for-13th-nov-2026-12559377.html",
-            "summary": "It is expected that Denza will first introduce the D9 luxury MPV in India, followed by the Z9 GT high-performance shooting brake The post BYD Denza Luxury Brand India Debut Confirmed For 13th Nov 2026 appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-24T12:06:35+00:00",
-            "published_display": "24 Oct 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Luxury"
-            ],
-            "signal_tags": [
-              "Product / Launch"
-            ]
-          },
           {
             "title": "Hyundai Creta Sales Surpass 1.5 Million Units, Exports Nearing 300,000 Units",
             "url": "https://www.autocarpro.in/analysis-sales/exclusive-hyundai-creta-sales-surpass-15-million-units-exports-nearing-300000-units-135254",
@@ -247001,6 +247006,24 @@
               "Capacity / Capex",
               "Product / Launch",
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Yokohama India To Add Five Sizes To GEOLANDAR X-CV Tyre Range",
+            "url": "https://www.autocarpro.in/news/yokohama-india-to-add-five-sizes-to-geolandar-x-cv-tyre-range-135453",
+            "summary": "Yokohama India plans to add five sizes to its GEOLANDAR X-CV tyre range, increasing the locally manufactured portfolio from 32 to 37 sizes. The expansion covers 16-inch to 20-inch applications for crossover SUVs and other SUV segments.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-10-26T06:00:35+00:00",
+            "published_display": "26 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Commercial Vehicles",
+              "Components"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -247075,20 +247098,18 @@
             ]
           },
           {
-            "title": "Simple Energy Raises \u20b91,750 Crore in Series C Funding Round",
-            "url": "https://evreporter.com/simple-energy-raises-%e2%82%b91750-crore-in-series-c-funding-round",
-            "summary": "The post Simple Energy Raises \u20b91,750 Crore in Series C Funding Round appeared first at EVreporter on EVreporter . Bengaluru-based electric two-wheeler manufacturer Simple Energy has raised \u20b91,750 crore (~USD 180 million) in an all-equity Series C funding round. The post Simple Energy Raises \u20b91,750 Crore in Series C Funding Round appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-01T05:19:36+00:00",
-            "published_display": "01 Oct 2026",
-            "importance_score": 7,
+            "title": "350cc To 500cc Motorcycle Sales Sep 2026 \u2013 RE, Honda, Triumph, Bajaj, KTM, Aprilia, Kawasaki",
+            "url": "https://www.rushlane.com/350cc-to-500cc-motorcycle-sales-sep-2026-re-honda-triumph-bajaj-12559470.html",
+            "summary": "Sales in the listed 350\u2013500cc motorcycle segment grew 10.77% year-on-year to 1.39 lakh units in September 2026, with Royal Enfield occupying the top four positions. The post 350cc To 500cc Motorcycle Sales Sep 2026 \u2013 RE, Honda, Triumph, Bajaj, KTM, Aprilia, Kawasaki appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-26T01:32:51+00:00",
+            "published_display": "26 Oct 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Two-Wheelers",
-              "EV"
+              "Two-Wheelers"
             ],
             "signal_tags": [
-              "Funding / M&A",
-              "Supply Chain / Components"
+              "General"
             ]
           },
           {
@@ -247144,18 +247165,34 @@
         "label": "Commercial Vehicles",
         "items": [
           {
-            "title": "Tractor Industry Faces H2 Reality Check as Wholesale Dispatches Fall 18%",
-            "url": "https://www.autocarpro.in/analysis-sales/tractor-dispatches-fall-18-percent-as-retail-rises-14-percent-with-monsoon-risk-ahead-135313",
-            "summary": "Tractor makers are entering the festive season after a monsoon that ended about 13 percent below normal, according to India Meteorological Department (IMD) data. Concerns about a strong El Ni\u00f1o raise the risk of further pressure on rural demand.",
+            "title": "BEML Unveils 60-Ton Electric Dump Truck BH60-EV",
+            "url": "https://evreporter.com/beml-unveils-60-ton-electric-dump-truck-bh60-ev",
+            "summary": "The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter . Bangalore-based BEML Limited unveiled 60-ton electric dump truck, BH60-EV, at its Mysuru Complex on September 30, 2026. According to the The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-01T08:26:15+00:00",
+            "published_display": "01 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "Tata Motors CV sales cross 200,000 units in H1 FY2027, industry sales grow 24% on strong demand",
+            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-cv-sales-cross-200000-units-in-h1-fy2027-industry-sales-grow-24-percent-on-strong-demand-135450",
+            "summary": "The Indian commercial vehicle industry is in good nick this fiscal. With wholesales of 574,255 units in April-September 2026, the 17 OEMs have registered strong 24% YoY growth (H1 FY2026: 464,023 units).",
             "source": "Autocar Professional Sales",
-            "published_at": "2026-10-17T15:16:28+00:00",
-            "published_display": "17 Oct 2026",
+            "published_at": "2026-10-26T03:29:36+00:00",
+            "published_display": "26 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
               "Commercial Vehicles"
             ],
             "signal_tags": [
-              "Funding / M&A",
               "Monthly Sales / Demand"
             ]
           },
@@ -247209,23 +247246,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Bajaj Auto 2W, 3W and Qute exports jump 50% in April-August to 1.26 million units",
-            "url": "https://www.autocarpro.in/analysis-sales/bajaj-auto-2w-3w-and-qute-exports-jump-50-percent-in-april-august-to-126-million-units-134753",
-            "summary": "Despite the turbulent geopolitical scenario, demand for made-in-India vehicles continues to be on the upswing. As per the latest export sales numbers released by SIAM, automobile exports across the passenger vehicle, 2-wheeler, 3-wheeler and quadricycle segments increased by 29.6% to 3.28 million units in April-August 2026.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-09-17T03:44:04+00:00",
-            "published_display": "17 Sep 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
           }
         ]
       },
@@ -247233,6 +247253,39 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
+            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
+            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-13T09:21:29+00:00",
+            "published_display": "13 Oct 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
+          {
+            "title": "New Hyundai EV SUV Spied In Chennai With New Camo \u2013 Bayon Like Teaser Camo?",
+            "url": "https://www.rushlane.com/new-hyundai-ev-suv-spied-in-chennai-with-new-camo-12559476.html",
+            "summary": "Fresh spy shots reveal lettering beneath the upcoming Hyundai EV\u2019s camouflage, hinting at a possible teaser wrap ahead of its expected February 2027 launch. The post New Hyundai EV SUV Spied In Chennai With New Camo \u2013 Bayon Like Teaser Camo? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-10-26T05:14:47+00:00",
+            "published_display": "26 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
           {
             "title": "Shakti Pumps Invests \u20b912 Crore in Shakti EV Mobility, Taking Total Investment to \u20b992 Crore",
             "url": "https://evreporter.com/shakti-pumps-invests-%e2%82%b912-crore-in-shakti-ev-mobility-taking-total-investment-to-%e2%82%b992-crore",
@@ -247282,39 +247335,6 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
-            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
-            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-03T07:03:41+00:00",
-            "published_display": "03 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "BEML Unveils 60-Ton Electric Dump Truck BH60-EV",
-            "url": "https://evreporter.com/beml-unveils-60-ton-electric-dump-truck-bh60-ev",
-            "summary": "The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter . Bangalore-based BEML Limited unveiled 60-ton electric dump truck, BH60-EV, at its Mysuru Complex on September 30, 2026. According to the The post BEML Unveils 60-Ton Electric Dump Truck BH60-EV appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-01T08:26:15+00:00",
-            "published_display": "01 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247322,6 +247342,23 @@
         "id": "components",
         "label": "Components",
         "items": [
+          {
+            "title": "Ather Energy Approves \u20b9122 Crore Manufacturing Capacity Expansion",
+            "url": "https://evreporter.com/ather-energy-approves-%e2%82%b9122-crore-manufacturing-capacity-expansion",
+            "summary": "The post Ather Energy Approves \u20b9122 Crore Manufacturing Capacity Expansion appeared first at EVreporter on EVreporter . Ather Energy Limited, an electric two-wheeler OEM, has approved a capital expenditure (CAPEX) of approximately \u20b9122 crore, including taxes, to The post Ather Energy Approves \u20b9122 Crore Manufacturing Capacity Expansion appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-26T11:14:11+00:00",
+            "published_display": "26 Oct 2026",
+            "importance_score": 11,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "BKT, Pirelli Plan 50:50 Joint Venture For Passenger Car Tyres In India",
             "url": "https://www.autocarpro.in/news/bkt-pirelli-plan-5050-joint-venture-for-passenger-car-tyres-in-india-135388",
@@ -247391,23 +247428,6 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
-            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
-            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-13T09:21:29+00:00",
-            "published_display": "13 Oct 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247430,6 +247450,22 @@
               "Policy / Regulation",
               "Filing / Disclosure",
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
+            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
+            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-03T07:03:41+00:00",
+            "published_display": "03 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
             ]
           },
           {
