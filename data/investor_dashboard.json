@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T08:45:24.762084+00:00",
+  "generated_at": "2026-10-27T15:14:29.799973+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -123061,10 +123061,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 95.19,
+        "value": 95.11,
         "unit": "\u20b9",
-        "delta_value": 0.247,
-        "delta_label": "+0.20% in last week (Yahoo Finance)",
+        "delta_value": 0.167,
+        "delta_label": "+0.12% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133472,7 +133472,7 @@
           },
           {
             "date": "2026-10-27",
-            "close": 95.185
+            "close": 95.105
           }
         ]
       }
@@ -133487,13 +133487,12 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11296.0,
-        "change_1d_pct": 0.59,
-        "change_1w_pct": -1.68,
-        "change_1m_pct": -7.64,
+        "price": 11450.0,
+        "change_1d_pct": 2.05,
+        "change_1w_pct": -0.22,
+        "change_1m_pct": -4.5,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          12590.0,
           12400.0,
           12231.0,
           12166.0,
@@ -133522,7 +133521,8 @@
           11200.0,
           11170.0,
           11230.0,
-          11296.0
+          11220.0,
+          11450.0
         ],
         "daily_closes": [
           {
@@ -143402,17 +143402,21 @@
             "close": 11230.0
           },
           {
+            "date": "2026-10-26",
+            "close": 11220.0
+          },
+          {
             "date": "2026-10-27",
-            "close": 11296.0
+            "close": 11450.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2844.6,
-        "change_1d_pct": -0.3,
-        "change_1w_pct": -2.15,
-        "change_1m_pct": -4.63,
+        "price": 2858.4,
+        "change_1d_pct": 0.19,
+        "change_1w_pct": -1.67,
+        "change_1m_pct": -4.17,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
           3107.0,
@@ -143444,7 +143448,7 @@
           2864.1,
           2861.2,
           2853.1,
-          2844.6
+          2858.4
         ],
         "daily_closes": [
           {
@@ -153329,19 +153333,18 @@
           },
           {
             "date": "2026-10-27",
-            "close": 2844.6
+            "close": 2858.4
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5221.0,
-        "change_1d_pct": 3.45,
-        "change_1w_pct": -0.08,
-        "change_1m_pct": -3.21,
+        "price": 5218.5,
+        "change_1d_pct": 0.38,
+        "change_1w_pct": -0.22,
+        "change_1m_pct": -1.46,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          5280.0,
           5221.5,
           5166.0,
           5235.0,
@@ -153370,7 +153373,8 @@
           5153.5,
           5128.0,
           5047.0,
-          5221.0
+          5199.0,
+          5218.5
         ],
         "daily_closes": [
           {
@@ -163250,17 +163254,21 @@
             "close": 5047.0
           },
           {
+            "date": "2026-10-26",
+            "close": 5199.0
+          },
+          {
             "date": "2026-10-27",
-            "close": 5221.0
+            "close": 5218.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4061.3,
-        "change_1d_pct": 1.63,
-        "change_1w_pct": -0.31,
-        "change_1m_pct": -0.73,
+        "price": 4087.0,
+        "change_1d_pct": 2.28,
+        "change_1w_pct": 0.32,
+        "change_1m_pct": -0.1,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
           4125.0,
@@ -163292,7 +163300,7 @@
           3974.0,
           3980.2,
           3996.0,
-          4061.3
+          4087.0
         ],
         "daily_closes": [
           {
@@ -173177,19 +173185,18 @@
           },
           {
             "date": "2026-10-27",
-            "close": 4061.3
+            "close": 4087.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10217.0,
-        "change_1d_pct": 1.44,
-        "change_1w_pct": -1.81,
-        "change_1m_pct": -10.38,
+        "price": 10390.0,
+        "change_1d_pct": 3.17,
+        "change_1w_pct": 1.0,
+        "change_1m_pct": -7.3,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          11768.0,
           11678.0,
           11424.0,
           11593.0,
@@ -173218,7 +173225,8 @@
           10072.0,
           10155.0,
           10072.0,
-          10217.0
+          10071.0,
+          10390.0
         ],
         "daily_closes": [
           {
@@ -183098,17 +183106,21 @@
             "close": 10072.0
           },
           {
+            "date": "2026-10-26",
+            "close": 10071.0
+          },
+          {
             "date": "2026-10-27",
-            "close": 10217.0
+            "close": 10390.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 1866.9,
-        "change_1d_pct": -0.06,
-        "change_1w_pct": -4.51,
-        "change_1m_pct": -9.4,
+        "price": 1861.3,
+        "change_1d_pct": -0.36,
+        "change_1w_pct": -4.79,
+        "change_1m_pct": -9.67,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
           2174.0,
@@ -183140,7 +183152,7 @@
           1895.5,
           1850.0,
           1868.0,
-          1866.9
+          1861.3
         ],
         "daily_closes": [
           {
@@ -185137,19 +185149,18 @@
           },
           {
             "date": "2026-10-27",
-            "close": 1866.9
+            "close": 1861.3
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7104.0,
-        "change_1d_pct": 0.54,
-        "change_1w_pct": -2.48,
-        "change_1m_pct": -4.9,
+        "price": 7165.0,
+        "change_1d_pct": 0.92,
+        "change_1w_pct": -2.5,
+        "change_1m_pct": -2.36,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7697.0,
           7530.0,
           7452.5,
           7500.0,
@@ -185178,7 +185189,8 @@
           7170.5,
           7084.5,
           7066.0,
-          7104.0
+          7099.5,
+          7165.0
         ],
         "daily_closes": [
           {
@@ -195058,17 +195070,21 @@
             "close": 7066.0
           },
           {
+            "date": "2026-10-26",
+            "close": 7099.5
+          },
+          {
             "date": "2026-10-27",
-            "close": 7104.0
+            "close": 7165.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 261.25,
-        "change_1d_pct": -0.93,
-        "change_1w_pct": -6.03,
-        "change_1m_pct": -11.44,
+        "price": 261.2,
+        "change_1d_pct": -0.95,
+        "change_1w_pct": -6.04,
+        "change_1m_pct": -11.46,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
@@ -195101,7 +195117,7 @@
           270.0,
           264.6,
           263.7,
-          261.25
+          261.2
         ],
         "daily_closes": [
           {
@@ -204986,16 +205002,16 @@
           },
           {
             "date": "2026-10-27",
-            "close": 261.25
+            "close": 261.2
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 395.15,
-        "change_1d_pct": 2.89,
-        "change_1w_pct": -5.64,
-        "change_1m_pct": -9.61,
+        "price": 399.2,
+        "change_1d_pct": 3.94,
+        "change_1w_pct": -4.67,
+        "change_1m_pct": -8.68,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
@@ -205028,7 +205044,7 @@
           414.25,
           396.0,
           384.05,
-          395.15
+          399.2
         ],
         "daily_closes": [
           {
@@ -205977,16 +205993,16 @@
           },
           {
             "date": "2026-10-27",
-            "close": 395.15
+            "close": 399.2
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 141.87,
-        "change_1d_pct": -0.02,
-        "change_1w_pct": -3.96,
-        "change_1m_pct": -9.81,
+        "price": 142.0,
+        "change_1d_pct": 0.07,
+        "change_1w_pct": -3.87,
+        "change_1m_pct": -9.73,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
           163.75,
@@ -206018,7 +206034,7 @@
           146.03,
           144.95,
           141.9,
-          141.87
+          142.0
         ],
         "daily_closes": [
           {
@@ -215903,16 +215919,16 @@
           },
           {
             "date": "2026-10-27",
-            "close": 141.87
+            "close": 142.0
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2567.7,
-        "change_1d_pct": -0.32,
-        "change_1w_pct": -5.14,
-        "change_1m_pct": -9.04,
+        "price": 2654.5,
+        "change_1d_pct": 3.05,
+        "change_1w_pct": -1.93,
+        "change_1m_pct": -5.97,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
           2899.7,
@@ -215944,7 +215960,7 @@
           2636.9,
           2627.0,
           2575.9,
-          2567.7
+          2654.5
         ],
         "daily_closes": [
           {
@@ -225829,19 +225845,18 @@
           },
           {
             "date": "2026-10-27",
-            "close": 2567.7
+            "close": 2654.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1031.1,
-        "change_1d_pct": 3.1,
-        "change_1w_pct": -9.26,
-        "change_1m_pct": -17.77,
+        "price": 1036.5,
+        "change_1d_pct": 2.49,
+        "change_1w_pct": -6.46,
+        "change_1m_pct": -16.48,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1121.2,
           1129.0,
           1132.1,
           1149.7,
@@ -225870,7 +225885,8 @@
           1074.6,
           1053.4,
           1000.1,
-          1031.1
+          1011.3,
+          1036.5
         ],
         "daily_closes": [
           {
@@ -235750,17 +235766,21 @@
             "close": 1000.1
           },
           {
+            "date": "2026-10-26",
+            "close": 1011.3
+          },
+          {
             "date": "2026-10-27",
-            "close": 1031.1
+            "close": 1036.5
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 401.85,
-        "change_1d_pct": 2.63,
-        "change_1w_pct": -3.01,
-        "change_1m_pct": -10.21,
+        "price": 406.65,
+        "change_1d_pct": 3.86,
+        "change_1w_pct": -1.85,
+        "change_1m_pct": -9.14,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
           445.6,
@@ -235792,7 +235812,7 @@
           400.6,
           387.7,
           391.55,
-          401.85
+          406.65
         ],
         "daily_closes": [
           {
@@ -245677,7 +245697,7 @@
           },
           {
             "date": "2026-10-27",
-            "close": 401.85
+            "close": 406.65
           }
         ]
       }
@@ -246949,7 +246969,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-27T08:44:35.658381+00:00",
+    "generated_at": "2026-10-27T15:13:46.141872+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -247169,22 +247189,6 @@
             ]
           },
           {
-            "title": "More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet",
-            "url": "https://evreporter.com/more-retail-deploys-110-montra-electric-eviators-in-mid-mile-fleet",
-            "summary": "The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter . More Retail has deployed 110 Montra Electric EVIATOR electric small commercial vehicles (e-SCVs) across its distribution network, including 25 vehicles The post More Retail Deploys 110 Montra Electric EVIATORs in Mid-Mile Fleet appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-01T12:41:15+00:00",
-            "published_display": "01 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Tractor Industry Faces H2 Reality Check as Wholesale Dispatches Fall 18%",
             "url": "https://www.autocarpro.in/analysis-sales/tractor-dispatches-fall-18-percent-as-retail-rises-14-percent-with-monsoon-risk-ahead-135313",
             "summary": "Tractor makers are entering the festive season after a monsoon that ended about 13 percent below normal, according to India Meteorological Department (IMD) data. Concerns about a strong El Ni\u00f1o raise the risk of further pressure on rural demand.",
@@ -247223,6 +247227,23 @@
         "id": "ev",
         "label": "EV / Transition",
         "items": [
+          {
+            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
+            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
+            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-13T09:21:29+00:00",
+            "published_display": "13 Oct 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch",
+              "Funding / M&A",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "Blue Energy Motors and HPCL Open Electric Truck Battery-Swapping Station in Bhiwandi, Maharashtra",
             "url": "https://evreporter.com/blue-energy-motors-and-hpcl-open-electric-truck-battery-swapping-station-in-bhiwandi-maharashtra",
@@ -247288,22 +247309,6 @@
               "Capacity / Capex",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
-            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
-            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-03T07:03:41+00:00",
-            "published_display": "03 Oct 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247347,6 +247352,22 @@
             ]
           },
           {
+            "title": "Amazon and Tata Motors to Deploy 3,000 Electric Trucks, Starting with Tata Ultra E.7",
+            "url": "https://evreporter.com/amazon-and-tata-motors-to-deploy-3000-electric-trucks-starting-with-tata-ultra-e-7",
+            "summary": "The post Amazon and Tata Motors to Deploy 3,000 Electric Trucks, Starting with Tata Ultra E.7 appeared first at EVreporter on EVreporter . Amazon and Tata Motors have announced a collaboration to deploy 3,000 electric trucks across Amazon\u2019s transportation network in India. The The post Amazon and Tata Motors to Deploy 3,000 Electric Trucks, Starting with Tata Ultra E.7 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-27T09:53:54+00:00",
+            "published_display": "27 Oct 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Ultraviolette Launches X-47 Venom E-Motorcycle at \u20b92.65 Lakh, Introduces New VX-100 Platform",
             "url": "https://evreporter.com/ultraviolette-launches-x-47-venom-e-motorcycle-at-%e2%82%b92-65-lakh-introduces-new-vx-100-platform",
             "summary": "The post Ultraviolette Launches X-47 Venom E-Motorcycle at \u20b92.65 Lakh, Introduces New VX-100 Platform appeared first at EVreporter on EVreporter . Bengaluru-based electric motorcycle manufacturer Ultraviolette has introduced VX-100, its new 100V platform and launched the X-47 Venom, the next-generation version The post Ultraviolette Launches X-47 Venom E-Motorcycle at \u20b92.65 Lakh, Introduces New VX-100 Platform app...",
@@ -247379,23 +247400,6 @@
               "Product / Launch",
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800",
-            "url": "https://evreporter.com/jsw-mg-motor-india-launches-mg-windsor-indulge-electric-cuv-at-%e2%82%b91788900",
-            "summary": "The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter . JSW MG Motor India, a joint venture between JSW Group and SAIC Motor, has launched the MG Windsor INDULGE Edition The post JSW MG Motor India Launches MG Windsor INDULGE Electric CUV at \u20b917,99,800 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-10-13T09:21:29+00:00",
-            "published_display": "13 Oct 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Funding / M&A",
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247418,6 +247422,22 @@
               "Policy / Regulation",
               "Filing / Disclosure",
               "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032",
+            "url": "https://evreporter.com/jk-notifies-ev-policy-2026-targets-1-4-lakh-evs-by-2032",
+            "summary": "The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter . The Jammu and Kashmir Government has notified the J&K Electric Vehicle Policy 2026, following approval by the Council of Ministers The post J&K Notifies EV Policy 2026, Targets 1.4 Lakh EVs by 2032 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-10-03T07:03:41+00:00",
+            "published_display": "03 Oct 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
             ]
           },
           {
@@ -247458,9 +247478,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
-      "filtered_low_signal": 0,
-      "kept_articles": 67
+      "unmapped_articles": 40,
+      "filtered_low_signal": 1,
+      "kept_articles": 66
     }
   },
   "qa": [
