@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T19:11:44.677573+00:00",
+  "generated_at": "2026-11-01T10:14:39.999113+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-10-31",
+          "latest_release_date": "2026-11-01",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122882,23 +122882,10 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-10-31T19:11:22.339790+00:00",
+      "generated_at": "2026-11-01T10:14:14.120386+00:00",
       "window_days": 30,
-      "item_count": 4,
+      "item_count": 3,
       "items": [
-        {
-          "title": "Updated Toyota Innova Hycross Launched In Indonesia \u2013 Dual 12.3\u2033 Screens, DVR, Wifi",
-          "summary": "Ahead of the facelift, Toyota has updated the Innova Hycross in Indonesia (Kijang Innova Zenix) adding features, while cutting some The post Updated Toyota Innova Hycross Launched In Indonesia \u2013 Dual 12.3\u2033 Screens, DVR, Wifi appeared first on RushLane .",
-          "url": "https://www.rushlane.com/updated-toyota-innova-hycross-launched-in-indonesia-dual-12-3-screens-dvr-wifi-12559877.html",
-          "source": "RushLane",
-          "published_at": "2026-10-31T04:07:30+00:00",
-          "published_display": "31 Oct 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/10/new-updated-toyota-innova-hycross-launched-in-indonesia.jpg"
-        },
         {
           "title": "Volkswagen Taigun sells 100,000 units in India and 52,751 overseas since launch",
           "summary": "The Volkswagen Taigun, which turned five years old last month after its launch in September 2021 , has surpassed the 100,000-units domestic market sales milestone. As per SIAM wholesales numbers, the midsize SUV has sold 99,095 units till end-September 2026.",
@@ -122949,14 +122936,6 @@
       ],
       "companies": [
         {
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 1,
-          "latest_published_at": "2026-10-31T04:07:30+00:00",
-          "latest_title": "Updated Toyota Innova Hycross Launched In Indonesia \u2013 Dual 12.3\u2033 Screens, DVR, Wifi"
-        },
-        {
           "company": "Volkswagen India",
           "tone": "pv",
           "scope": "tracked",
@@ -122983,13 +122962,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-10-31"
+        "latest_release_date": "2026-10-28"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-10-31",
+    "as_of_date": "2026-11-01",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -133523,7 +133502,7 @@
             "close": 95.1524
           },
           {
-            "date": "2026-10-31",
+            "date": "2026-11-01",
             "close": 94.95
           }
         ]
@@ -133532,7 +133511,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-10-31",
+    "as_of_date": "2026-11-01",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -245825,17 +245804,9 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-10-31",
+    "as_of_date": "2026-11-01",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [
-      {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-10-31",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
       {
         "company": "Escorts Kubota",
         "ticker": "ESCORTS",
@@ -245871,14 +245842,6 @@
     ],
     "upcoming_all": [
       {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-10-31",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
-      },
-      {
         "company": "Escorts Kubota",
         "ticker": "ESCORTS",
         "date": "2026-11-02",
@@ -245912,6 +245875,14 @@
       }
     ],
     "recent_past": [
+      {
+        "company": "Atul Auto",
+        "ticker": "ATULAUTO",
+        "date": "2026-10-31",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
+      },
       {
         "company": "Hero MotoCorp",
         "ticker": "HEROMOTOCO",
@@ -245951,18 +245922,10 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=MARUTI"
-      },
-      {
-        "company": "Tata Motors CV",
-        "ticker": "TMCV",
-        "date": "2026-10-23",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMCV"
       }
     ],
-    "next_14_count": 5,
-    "upcoming_count": 5
+    "next_14_count": 4,
+    "upcoming_count": 4
   },
   "market_insights": [
     {
@@ -247073,7 +247036,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-10-31T19:10:58.439178+00:00",
+    "generated_at": "2026-11-01T10:13:03.317681+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -247201,21 +247164,6 @@
             ]
           },
           {
-            "title": "Scooter Exports H1 FY2027 \u2013 Dio, Navi, Ntorq, RayZR, Xoom, Burgman, Access, Jupiter, Activa, iQube, Chetak",
-            "url": "https://www.rushlane.com/scooter-exports-h1-fy2027-dio-navi-ntorq-rayzr-xoom-burgman-12559865.html",
-            "summary": "India\u2019s scooter exports grew 34.95% during April\u2013September 2026, with Honda Dio and Navi together accounting for more than half of overseas shipments. The post Scooter Exports H1 FY2027 \u2013 Dio, Navi, Ntorq, RayZR, Xoom, Burgman, Access, Jupiter, Activa, iQube, Chetak appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-10-30T15:33:06+00:00",
-            "published_display": "30 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "General"
-            ]
-          },
-          {
             "title": "Motorcycle OEMs clock second-highest H1 sales of 6.92 million, Hero and Honda up 12%, Bajaj down 7%",
             "url": "https://www.autocarpro.in/analysis-sales/motorcycle-oems-clock-second-highest-h1-sales-of-692-million-hero-and-honda-up-12-percent-bajaj-down-7-percent-135410",
             "summary": "The motorcycle segment, the largest two-wheeler sub-segment in India, has registered its second highest first-half wholesales in April-September 2026. The 6.92 million units, up 10% YoY (H1 FY2026: 6.27 million units) are now the next best after the record 7.37 million motorcycles sold in H1 FY2019.",
@@ -247242,6 +247190,22 @@
               "Passenger Vehicles",
               "Two-Wheelers",
               "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Record 207,850 e-2W sales in September power H1 FY027\u2019s 1.12 million units",
+            "url": "https://www.autocarpro.in/analysis-sales/record-207850-e-2w-sales-in-september-power-h1-fy027s-112-million-units-135143",
+            "summary": "With the sixth month of the current fiscal and a record one at that, it\u2019s amply clear that India\u2019s electric 2-wheeler industry is on a roll and how. While January-September 2026 retail sales have already crossed 1.61 million units, e-2W customer deliveries in the April-September period jumped 76% to 1.12 million units (H1 FY2026: 640,149 units).",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-09T07:44:44+00:00",
+            "published_display": "09 Oct 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
@@ -247289,6 +247253,22 @@
             ]
           },
           {
+            "title": "Mahindra Sales Oct 2026 \u2013 All Time High 73,338 SUV Sales, CVs Grow",
+            "url": "https://www.rushlane.com/mahindra-sales-oct-2026-record-73338-suvs-cvs-grow-12559931.html",
+            "summary": "Mahindra posted its highest-ever monthly auto volumes of 1,31,109 units, while its separate trucks and buses business grew 40%. The post Mahindra Sales Oct 2026 \u2013 All Time High 73,338 SUV Sales, CVs Grow appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-01T06:49:09+00:00",
+            "published_display": "01 Nov 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "General"
+            ]
+          },
+          {
             "title": "Tata Motors CV sales cross 200,000 units in H1 FY2027, industry sales grow 24% on strong demand",
             "url": "https://www.autocarpro.in/analysis-sales/tata-motors-cv-sales-cross-200000-units-in-h1-fy2027-industry-sales-grow-24-percent-on-strong-demand-135450",
             "summary": "The Indian commercial vehicle industry is in good nick this fiscal. With wholesales of 574,255 units in April-September 2026, the 17 OEMs have registered strong 24% YoY growth (H1 FY2026: 464,023 units).",
@@ -247318,22 +247298,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Tractor Industry Faces H2 Reality Check as Wholesale Dispatches Fall 18%",
-            "url": "https://www.autocarpro.in/analysis-sales/tractor-dispatches-fall-18-percent-as-retail-rises-14-percent-with-monsoon-risk-ahead-135313",
-            "summary": "Tractor makers are entering the festive season after a monsoon that ended about 13 percent below normal, according to India Meteorological Department (IMD) data. Concerns about a strong El Ni\u00f1o raise the risk of further pressure on rural demand.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-17T15:16:28+00:00",
-            "published_display": "17 Oct 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Funding / M&A",
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247575,7 +247539,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 41,
+      "unmapped_articles": 42,
       "filtered_low_signal": 0,
       "kept_articles": 67
     }
@@ -247627,7 +247591,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-10-31",
+    "as_of_date": "2026-11-01",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
