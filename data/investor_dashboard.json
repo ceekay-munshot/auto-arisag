@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T10:34:12.911680+00:00",
+  "generated_at": "2026-11-03T20:52:30.224848+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122882,39 +122882,35 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-11-03T10:33:50.962333+00:00",
+      "generated_at": "2026-11-03T20:52:08.614791+00:00",
       "window_days": 30,
       "item_count": 5,
       "items": [
         {
-          "title": "New Honda Africa Twin CRF1150L Family Debuts \u2013 Gets Enduro Variant",
-          "summary": "With extensive updates, Honda CRF1150L Africa Twin Series bikes are better equipped to meet the needs of a wide range of users The post New Honda Africa Twin CRF1150L Family Debuts \u2013 Gets Enduro Variant appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-honda-africa-twin-crf1150l-family-debuts-gets-enduro-variant-12560046.html",
+          "title": "New Royal Enfield Continental GT 750 Debuts \u2013 Two Versions, 743cc Twin",
+          "summary": "Ahead of its launch, Royal Enfield Continental GT 750 has just debuted, featuring two versions - One with fairing, one without The post New Royal Enfield Continental GT 750 Debuts \u2013 Two Versions, 743cc Twin appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-royal-enfield-continental-gt-750-debuts-two-versions-12560208.html",
           "source": "RushLane",
-          "published_at": "2026-11-03T03:57:27+00:00",
+          "published_at": "2026-11-03T11:55:47+00:00",
           "published_display": "03 Nov 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Two-Wheelers"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/new-honda-africa-twin-crf1150l-family-debuts-5.jpg"
+          "company": "Eicher Motors",
+          "tone": "cv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/Royal-Enfield-Continental-GT-750-25.jpg"
         },
         {
-          "title": "New Honda ADV125 Scooter Debuts \u2013 12.5 PS, 5-Inch TFT, RoadSync",
-          "summary": "Honda's youngest ADV scooter, the ADV125, suits both urban explorations and destinations beyond city limits The post New Honda ADV125 Scooter Debuts \u2013 12.5 PS, 5-Inch TFT, RoadSync appeared first on RushLane .",
-          "url": "https://www.rushlane.com/new-honda-adv125-scooter-debuts-12-5-ps-5-inch-tft-roadsync-12560048.html",
+          "title": "New TVS Apache 125 Debuts \u2013 14.9 PS, Liquid Cooling, 6 Speed Gearbox",
+          "summary": "The production-ready 125cc streetfighter targets European A1 licence holders with liquid cooling, KYB suspension, ByBre brakes and a connected 5-inch TFT The post New TVS Apache 125 Debuts \u2013 14.9 PS, Liquid Cooling, 6 Speed Gearbox appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-tvs-apache-125-debuts-14-9-ps-liquid-cooling-6-gear-12560172.html",
           "source": "RushLane",
-          "published_at": "2026-11-03T03:39:19+00:00",
+          "published_at": "2026-11-03T11:21:22+00:00",
           "published_display": "03 Nov 2026",
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [
-            "Two-Wheelers"
-          ],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/new-honda-adv-125-scooter-launch-price-12.jpg"
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/New-TVS-Apache-125-launch-price-specs-6.jpg"
         },
         {
           "title": "Volkswagen Taigun sells 100,000 units in India and 52,751 overseas since launch",
@@ -122966,12 +122962,20 @@
       ],
       "companies": [
         {
-          "company": "Honda Cars India",
-          "tone": "pv",
-          "scope": "tracked",
-          "count": 2,
-          "latest_published_at": "2026-11-03T03:57:27+00:00",
-          "latest_title": "New Honda Africa Twin CRF1150L Family Debuts \u2013 Gets Enduro Variant"
+          "company": "Eicher Motors",
+          "tone": "cv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-03T11:55:47+00:00",
+          "latest_title": "New Royal Enfield Continental GT 750 Debuts \u2013 Two Versions, 743cc Twin"
+        },
+        {
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-03T11:21:22+00:00",
+          "latest_title": "New TVS Apache 125 Debuts \u2013 14.9 PS, Liquid Cooling, 6 Speed Gearbox"
         },
         {
           "company": "Volkswagen India",
@@ -123122,10 +123126,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.74,
+        "value": 94.73,
         "unit": "\u20b9",
-        "delta_value": -0.165,
-        "delta_label": "-0.47% in last week (Yahoo Finance)",
+        "delta_value": -0.175,
+        "delta_label": "-0.48% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133533,7 +133537,7 @@
           },
           {
             "date": "2026-11-03",
-            "close": 94.74
+            "close": 94.73
           }
         ]
       }
@@ -133548,12 +133552,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 11869.0,
-        "change_1d_pct": 1.69,
-        "change_1w_pct": 3.66,
-        "change_1m_pct": 4.24,
+        "price": 11672.0,
+        "change_1d_pct": 2.41,
+        "change_1w_pct": 4.03,
+        "change_1m_pct": -2.47,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          12103.0,
           12153.0,
           12190.0,
           12230.0,
@@ -133582,8 +133587,7 @@
           11579.0,
           11426.0,
           11397.0,
-          11672.0,
-          11869.0
+          11672.0
         ],
         "daily_closes": [
           {
@@ -143469,21 +143473,18 @@
           {
             "date": "2026-11-02",
             "close": 11672.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 11869.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 2908.0,
-        "change_1d_pct": 1.37,
-        "change_1w_pct": 1.74,
-        "change_1m_pct": 1.68,
+        "price": 2868.8,
+        "change_1d_pct": 1.0,
+        "change_1w_pct": 0.55,
+        "change_1m_pct": -2.75,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          3052.0,
           3055.3,
           3044.5,
           3035.0,
@@ -143512,8 +143513,7 @@
           2869.9,
           2890.0,
           2840.3,
-          2868.8,
-          2908.0
+          2868.8
         ],
         "daily_closes": [
           {
@@ -153399,21 +153399,18 @@
           {
             "date": "2026-11-02",
             "close": 2868.8
-          },
-          {
-            "date": "2026-11-03",
-            "close": 2908.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5300.0,
-        "change_1d_pct": 2.06,
-        "change_1w_pct": 1.56,
-        "change_1m_pct": 2.55,
+        "price": 5193.0,
+        "change_1d_pct": 0.5,
+        "change_1w_pct": -0.12,
+        "change_1m_pct": -0.92,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          5285.5,
           5419.0,
           5373.0,
           5394.0,
@@ -153442,8 +153439,7 @@
           5322.5,
           5105.0,
           5167.0,
-          5193.0,
-          5300.0
+          5193.0
         ],
         "daily_closes": [
           {
@@ -163329,21 +163325,18 @@
           {
             "date": "2026-11-02",
             "close": 5193.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 5300.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4303.2,
-        "change_1d_pct": 2.14,
-        "change_1w_pct": 5.29,
-        "change_1m_pct": 7.02,
+        "price": 4213.0,
+        "change_1d_pct": 0.42,
+        "change_1w_pct": 5.43,
+        "change_1m_pct": 2.61,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4171.3,
           4155.0,
           4140.0,
           4135.0,
@@ -163372,8 +163365,7 @@
           4239.9,
           4280.0,
           4195.2,
-          4213.0,
-          4303.2
+          4213.0
         ],
         "daily_closes": [
           {
@@ -173259,21 +173251,18 @@
           {
             "date": "2026-11-02",
             "close": 4213.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 4303.2
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10540.0,
-        "change_1d_pct": 1.94,
-        "change_1w_pct": 1.44,
-        "change_1m_pct": 4.93,
+        "price": 10339.0,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": 2.66,
+        "change_1m_pct": -4.92,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          11414.0,
           11460.0,
           11363.0,
           11400.0,
@@ -173302,8 +173291,7 @@
           10485.0,
           10383.0,
           10350.0,
-          10339.0,
-          10540.0
+          10339.0
         ],
         "daily_closes": [
           {
@@ -183189,21 +183177,18 @@
           {
             "date": "2026-11-02",
             "close": 10339.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 10540.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2030.0,
-        "change_1d_pct": 2.27,
-        "change_1w_pct": 9.06,
-        "change_1m_pct": 0.3,
+        "price": 1985.0,
+        "change_1d_pct": 3.87,
+        "change_1w_pct": 6.26,
+        "change_1m_pct": -2.26,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          2208.8,
           2144.0,
           2101.0,
           2095.0,
@@ -183232,8 +183217,7 @@
           1866.9,
           1922.0,
           1911.0,
-          1985.0,
-          2030.0
+          1985.0
         ],
         "daily_closes": [
           {
@@ -185247,21 +185231,18 @@
           {
             "date": "2026-11-02",
             "close": 1985.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 2030.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7440.0,
-        "change_1d_pct": 3.15,
-        "change_1w_pct": 3.84,
-        "change_1m_pct": 7.51,
+        "price": 7213.0,
+        "change_1d_pct": -0.1,
+        "change_1w_pct": 1.6,
+        "change_1m_pct": 0.88,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7516.0,
           7512.5,
           7427.0,
           7470.0,
@@ -185290,8 +185271,7 @@
           7300.0,
           7238.0,
           7220.0,
-          7213.0,
-          7440.0
+          7213.0
         ],
         "daily_closes": [
           {
@@ -195177,22 +195157,19 @@
           {
             "date": "2026-11-02",
             "close": 7213.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 7440.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 276.7,
-        "change_1d_pct": 1.58,
-        "change_1w_pct": 5.93,
-        "change_1m_pct": -0.97,
+        "price": 272.4,
+        "change_1d_pct": 2.64,
+        "change_1w_pct": 3.3,
+        "change_1m_pct": -3.92,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          303.8,
           301.65,
           300.05,
           300.5,
@@ -195221,8 +195198,7 @@
           263.6,
           266.0,
           265.4,
-          272.4,
-          276.7
+          272.4
         ],
         "daily_closes": [
           {
@@ -205108,22 +205084,19 @@
           {
             "date": "2026-11-02",
             "close": 272.4
-          },
-          {
-            "date": "2026-11-03",
-            "close": 276.7
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 404.2,
-        "change_1d_pct": 0.7,
-        "change_1w_pct": 1.25,
-        "change_1m_pct": -2.72,
+        "price": 401.4,
+        "change_1d_pct": 1.27,
+        "change_1w_pct": 4.52,
+        "change_1m_pct": -4.8,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          442.9,
           444.5,
           440.1,
           450.2,
@@ -205152,8 +205125,7 @@
           399.7,
           400.3,
           396.35,
-          401.4,
-          404.2
+          401.4
         ],
         "daily_closes": [
           {
@@ -206119,21 +206091,18 @@
           {
             "date": "2026-11-02",
             "close": 401.4
-          },
-          {
-            "date": "2026-11-03",
-            "close": 404.2
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 152.74,
-        "change_1d_pct": 2.37,
-        "change_1w_pct": 7.56,
-        "change_1m_pct": 1.5,
+        "price": 149.2,
+        "change_1d_pct": 3.02,
+        "change_1w_pct": 5.14,
+        "change_1m_pct": -3.24,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          163.0,
           161.75,
           160.75,
           162.89,
@@ -206162,8 +206131,7 @@
           144.85,
           145.0,
           144.82,
-          149.2,
-          152.74
+          149.2
         ],
         "daily_closes": [
           {
@@ -216049,21 +216017,18 @@
           {
             "date": "2026-11-02",
             "close": 149.2
-          },
-          {
-            "date": "2026-11-03",
-            "close": 152.74
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2439.7,
-        "change_1d_pct": 0.68,
-        "change_1w_pct": -8.09,
-        "change_1m_pct": -8.53,
+        "price": 2423.2,
+        "change_1d_pct": -5.95,
+        "change_1w_pct": -5.93,
+        "change_1m_pct": -10.75,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2798.2,
           2819.8,
           2793.6,
           2796.9,
@@ -216092,8 +216057,7 @@
           2706.3,
           2620.9,
           2576.4,
-          2423.2,
-          2439.7
+          2423.2
         ],
         "daily_closes": [
           {
@@ -225979,21 +225943,18 @@
           {
             "date": "2026-11-02",
             "close": 2423.2
-          },
-          {
-            "date": "2026-11-03",
-            "close": 2439.7
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1050.55,
-        "change_1d_pct": 2.84,
-        "change_1w_pct": 1.36,
-        "change_1m_pct": -13.34,
+        "price": 1021.5,
+        "change_1d_pct": 2.69,
+        "change_1w_pct": 1.01,
+        "change_1m_pct": -17.09,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          1229.2,
           1230.4,
           1241.9,
           1253.9,
@@ -226022,8 +225983,7 @@
           1022.8,
           1027.0,
           994.7,
-          1021.5,
-          1050.55
+          1021.5
         ],
         "daily_closes": [
           {
@@ -235909,21 +235869,18 @@
           {
             "date": "2026-11-02",
             "close": 1021.5
-          },
-          {
-            "date": "2026-11-03",
-            "close": 1050.55
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 386.5,
-        "change_1d_pct": 0.09,
-        "change_1w_pct": -4.96,
-        "change_1m_pct": -9.02,
+        "price": 386.15,
+        "change_1d_pct": -4.97,
+        "change_1w_pct": -1.38,
+        "change_1m_pct": -13.83,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          446.45,
           449.0,
           446.6,
           457.75,
@@ -235952,8 +235909,7 @@
           412.25,
           419.7,
           406.35,
-          386.15,
-          386.5
+          386.15
         ],
         "daily_closes": [
           {
@@ -245839,10 +245795,6 @@
           {
             "date": "2026-11-02",
             "close": 386.15
-          },
-          {
-            "date": "2026-11-03",
-            "close": 386.5
           }
         ]
       }
@@ -245876,6 +245828,14 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Ashok Leyland",
+        "ticker": "ASHOKLEY",
+        "date": "2026-11-14",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
       }
     ],
     "upcoming_all": [
@@ -245902,6 +245862,14 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=TMPV"
+      },
+      {
+        "company": "Ashok Leyland",
+        "ticker": "ASHOKLEY",
+        "date": "2026-11-14",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
       }
     ],
     "recent_past": [
@@ -245954,8 +245922,8 @@
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=BAJAJ-AUTO"
       }
     ],
-    "next_14_count": 3,
-    "upcoming_count": 3
+    "next_14_count": 4,
+    "upcoming_count": 4
   },
   "market_insights": [
     {
@@ -247066,10 +247034,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-03T10:32:35.862839+00:00",
+    "generated_at": "2026-11-03T20:51:44.984501+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 26,
     "groups": [
       {
         "id": "pv",
@@ -247141,19 +247109,19 @@
             ]
           },
           {
-            "title": "Honda Alpha Electric SUV For India Name Announced \u2013 First Official Teaser",
-            "url": "https://www.rushlane.com/honda-alpha-electric-suv-for-india-name-announced-first-official-teaser-12560110.html",
-            "summary": "Based on the 0 Alpha concept, Honda\u2019s first made-in-India electric SUV will also become its first model in the country to wear the new H mark The post Honda Alpha Electric SUV For India Name Announced \u2013 First Official Teaser appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-03T07:33:28+00:00",
-            "published_display": "03 Nov 2026",
+            "title": "Tata Altroz Drives Past 350,000 Sales, Contributes 34% to Tata Car Sales Since Launch",
+            "url": "https://www.autocarpro.in/analysis-sales/tata-altroz-drives-past-350000-sales-contributes-34-percent-to-tata-car-sales-since-launch-135447",
+            "summary": "The Tata Altroz has surpassed the 350,000-unit wholesales milestone in the Indian market. As per SIAM wholesales data, Tata Motors\u2019 premium hatchback had clocked total sales of 349,185 units till the end of September 2026.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-25T12:41:01+00:00",
+            "published_display": "25 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
+              "Passenger Vehicles"
             ],
             "signal_tags": [
-              "General"
+              "Product / Launch",
+              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247162,22 +247130,6 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
-          {
-            "title": "Bajaj Sales Oct 2026 \u2013 5.92 Lakh Total, 2W Sales Cross 5 Lakh",
-            "url": "https://www.rushlane.com/bajaj-sales-oct-2026-5-92-lakh-total-2w-sales-cross-5-lakh-12560103.html",
-            "summary": "Bajaj Auto registered 14% year-on-year growth in October, supported by higher domestic sales and exports across two-wheelers and commercial vehicles. The post Bajaj Sales Oct 2026 \u2013 5.92 Lakh Total, 2W Sales Cross 5 Lakh appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-03T06:55:48+00:00",
-            "published_display": "03 Nov 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Two-Wheelers",
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
           {
             "title": "Hero Vida e-scooter sales soar to new high in October, cross 200,000 for the first time in CY2026",
             "url": "https://www.autocarpro.in/analysis-sales/hero-vida-e-scooter-sales-soar-to-new-high-in-october-cross-200000-for-the-first-time-in-cy2026-135566",
@@ -247211,11 +247163,11 @@
             ]
           },
           {
-            "title": "New Honda Africa Twin CRF1150L Family Debuts \u2013 Gets Enduro Variant",
-            "url": "https://www.rushlane.com/new-honda-africa-twin-crf1150l-family-debuts-gets-enduro-variant-12560046.html",
-            "summary": "With extensive updates, Honda CRF1150L Africa Twin Series bikes are better equipped to meet the needs of a wide range of users The post New Honda Africa Twin CRF1150L Family Debuts \u2013 Gets Enduro Variant appeared first on RushLane .",
+            "title": "New Hero Classic Concept Debuts \u2013 Upcoming Royal Enfield Classic 350 Rival?",
+            "url": "https://www.rushlane.com/new-hero-classic-concept-debuts-upcoming-royal-enfield-classic-350-rival-12560327.html",
+            "summary": "Hero\u2019s new retro motorcycle concept previews a potential move into the classic roadster segment, although engine specifications and production plans remain unannounced The post New Hero Classic Concept Debuts \u2013 Upcoming Royal Enfield Classic 350 Rival? appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-11-03T03:57:27+00:00",
+            "published_at": "2026-11-03T14:42:06+00:00",
             "published_display": "03 Nov 2026",
             "importance_score": 6,
             "segment_tags": [
@@ -247226,18 +247178,36 @@
             ]
           },
           {
-            "title": "New Honda ADV125 Scooter Debuts \u2013 12.5 PS, 5-Inch TFT, RoadSync",
-            "url": "https://www.rushlane.com/new-honda-adv125-scooter-debuts-12-5-ps-5-inch-tft-roadsync-12560048.html",
-            "summary": "Honda's youngest ADV scooter, the ADV125, suits both urban explorations and destinations beyond city limits The post New Honda ADV125 Scooter Debuts \u2013 12.5 PS, 5-Inch TFT, RoadSync appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-03T03:39:19+00:00",
-            "published_display": "03 Nov 2026",
+            "title": "Motorcycle OEMs clock second-highest H1 sales of 6.92 million, Hero and Honda up 12%, Bajaj down 7%",
+            "url": "https://www.autocarpro.in/analysis-sales/motorcycle-oems-clock-second-highest-h1-sales-of-692-million-hero-and-honda-up-12-percent-bajaj-down-7-percent-135410",
+            "summary": "The motorcycle segment, the largest two-wheeler sub-segment in India, has registered its second highest first-half wholesales in April-September 2026. The 6.92 million units, up 10% YoY (H1 FY2026: 6.27 million units) are now the next best after the record 7.37 million motorcycles sold in H1 FY2019.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-23T03:10:59+00:00",
+            "published_display": "23 Oct 2026",
             "importance_score": 6,
             "segment_tags": [
               "Two-Wheelers"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Q2 surge powers electric car, SUV sales past 192,000 units in first-half FY2027",
+            "url": "https://www.autocarpro.in/analysis-sales/q2-surge-powers-electric-car-suv-sales-past-192000-units-in-first-half-fy2027-135192",
+            "summary": "India\u2019s electric vehicle growth story is really charged up this year. After the first six months of FY2027, total retail sales of 18,10,163 million EVs across the e-2W, e-3W, e-passenger and e-commercial vehicle segments have risen 60% YoY (H1 FY2025: 11,34,054 units) and are already 71% of FY2026\u2019s record 2.54 million EVs.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-10-13T03:07:29+00:00",
+            "published_display": "13 Oct 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "Two-Wheelers",
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247278,24 +247248,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Q2 surge powers electric car, SUV sales past 192,000 units in first-half FY2027",
-            "url": "https://www.autocarpro.in/analysis-sales/q2-surge-powers-electric-car-suv-sales-past-192000-units-in-first-half-fy2027-135192",
-            "summary": "India\u2019s electric vehicle growth story is really charged up this year. After the first six months of FY2027, total retail sales of 18,10,163 million EVs across the e-2W, e-3W, e-passenger and e-commercial vehicle segments have risen 60% YoY (H1 FY2025: 11,34,054 units) and are already 71% of FY2026\u2019s record 2.54 million EVs.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-13T03:07:29+00:00",
-            "published_display": "13 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "Two-Wheelers",
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           },
           {
@@ -247430,7 +247382,7 @@
             "source": "EVReporter",
             "published_at": "2026-10-26T11:14:11+00:00",
             "published_display": "26 Oct 2026",
-            "importance_score": 11,
+            "importance_score": 10,
             "segment_tags": [
               "Two-Wheelers",
               "EV"
@@ -247569,8 +247521,8 @@
       ],
       "duplicates_removed": 0,
       "unmapped_articles": 37,
-      "filtered_low_signal": 1,
-      "kept_articles": 65
+      "filtered_low_signal": 0,
+      "kept_articles": 66
     }
   },
   "qa": [
