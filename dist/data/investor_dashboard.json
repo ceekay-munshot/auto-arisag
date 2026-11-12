@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T10:46:51.053943+00:00",
+  "generated_at": "2026-11-12T21:49:31.546239+00:00",
   "as_of_date": "2026-10-06",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122877,22 +122877,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-11-12T10:46:28.013275+00:00",
+      "generated_at": "2026-11-12T21:49:12.501728+00:00",
       "window_days": 30,
       "item_count": 3,
       "items": [
         {
-          "title": "BYD Denza D9 Facelift LWB Patented \u2013 Gets New Fascia, LEDs",
-          "summary": "While the equipment list has not been announced, the long-wheelbase Denza D9 could get some additional features The post BYD Denza D9 Facelift LWB Patented \u2013 Gets New Fascia, LEDs appeared first on RushLane .",
-          "url": "https://www.rushlane.com/byd-denza-d9-facelift-lwb-patented-gets-new-fascia-leds-12560932.html",
+          "title": "Mahindra Electric SUVs UK Launch 2027 Planned \u2013 Export From India",
+          "summary": "Mahindra is set to expand their global presence by launching the BE 6 and XEV 9e in UK some time in 2027 or 2028, followed by BE 7 The post Mahindra Electric SUVs UK Launch 2027 Planned \u2013 Export From India appeared first on RushLane .",
+          "url": "https://www.rushlane.com/mahindra-electric-suvs-uk-launch-2027-planned-export-from-india-12560991.html",
           "source": "RushLane",
-          "published_at": "2026-11-12T03:47:13+00:00",
+          "published_at": "2026-11-12T12:57:34+00:00",
           "published_display": "12 Nov 2026",
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/byd-denza-d9-facelift-with-long-wheelbase-patented.jpg"
+          "company": "Mahindra & Mahindra",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2025/06/mahindra-xev-9e-and-be-6-hybrid-variants.jpg"
         },
         {
           "title": "Mercedes-Benz Launches GLC 400 4MATIC Electric SUV in India at Rs 78.5 Lakh",
@@ -122929,12 +122932,12 @@
       ],
       "companies": [
         {
-          "company": "BYD India",
-          "tone": "ev",
-          "scope": "tracked",
+          "company": "Mahindra & Mahindra",
+          "tone": "pv",
+          "scope": "listed",
           "count": 1,
-          "latest_published_at": "2026-11-12T03:47:13+00:00",
-          "latest_title": "BYD Denza D9 Facelift LWB Patented \u2013 Gets New Fascia, LEDs"
+          "latest_published_at": "2026-11-12T12:57:34+00:00",
+          "latest_title": "Mahindra Electric SUVs UK Launch 2027 Planned \u2013 Export From India"
         },
         {
           "company": "Mercedes-Benz India",
@@ -123077,10 +123080,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 94.04,
+        "value": 94.03,
         "unit": "\u20b9",
-        "delta_value": 0.115,
-        "delta_label": "-0.50% in last week (Yahoo Finance)",
+        "delta_value": 0.108,
+        "delta_label": "-0.51% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133488,7 +133491,7 @@
           },
           {
             "date": "2026-11-12",
-            "close": 94.04
+            "close": 94.033
           }
         ]
       }
@@ -133503,12 +133506,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 13024.0,
-        "change_1d_pct": -1.22,
-        "change_1w_pct": 8.58,
-        "change_1m_pct": 15.1,
+        "price": 13185.0,
+        "change_1d_pct": 1.99,
+        "change_1w_pct": 11.09,
+        "change_1m_pct": 15.46,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          12008.0,
           11877.0,
           11967.0,
           11386.0,
@@ -133537,8 +133541,7 @@
           12652.0,
           12750.0,
           12928.0,
-          13185.0,
-          13024.0
+          13185.0
         ],
         "daily_closes": [
           {
@@ -143420,21 +143423,18 @@
           {
             "date": "2026-11-11",
             "close": 13185.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 13024.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3399.0,
-        "change_1d_pct": -1.9,
-        "change_1w_pct": 14.76,
-        "change_1m_pct": 20.83,
+        "price": 3465.0,
+        "change_1d_pct": 5.3,
+        "change_1w_pct": 19.15,
+        "change_1m_pct": 23.92,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          2995.0,
           2947.8,
           2950.0,
           2860.0,
@@ -143463,8 +143463,7 @@
           3127.5,
           3287.2,
           3290.6,
-          3465.0,
-          3399.0
+          3465.0
         ],
         "daily_closes": [
           {
@@ -153346,21 +153345,18 @@
           {
             "date": "2026-11-11",
             "close": 3465.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 3399.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5342.0,
-        "change_1d_pct": -0.06,
-        "change_1w_pct": -1.06,
-        "change_1m_pct": 8.2,
+        "price": 5345.0,
+        "change_1d_pct": -1.21,
+        "change_1w_pct": 0.85,
+        "change_1m_pct": 9.18,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          5390.0,
           5208.0,
           5241.0,
           5168.0,
@@ -153389,8 +153385,7 @@
           5514.0,
           5513.0,
           5410.5,
-          5345.0,
-          5342.0
+          5345.0
         ],
         "daily_closes": [
           {
@@ -163272,21 +163267,18 @@
           {
             "date": "2026-11-11",
             "close": 5345.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 5342.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4500.0,
-        "change_1d_pct": -1.32,
-        "change_1w_pct": 3.9,
-        "change_1m_pct": 14.2,
+        "price": 4560.0,
+        "change_1d_pct": 1.2,
+        "change_1w_pct": 5.97,
+        "change_1m_pct": 17.93,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4095.0,
           4091.1,
           4106.0,
           4021.0,
@@ -163315,8 +163307,7 @@
           4450.0,
           4491.7,
           4505.9,
-          4560.0,
-          4500.0
+          4560.0
         ],
         "daily_closes": [
           {
@@ -173198,21 +173189,18 @@
           {
             "date": "2026-11-11",
             "close": 4560.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 4500.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10945.0,
-        "change_1d_pct": -0.86,
-        "change_1w_pct": 3.18,
-        "change_1m_pct": 9.08,
+        "price": 11040.0,
+        "change_1d_pct": 0.56,
+        "change_1w_pct": 4.74,
+        "change_1m_pct": 12.91,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          11024.0,
           10811.0,
           10874.0,
           10045.0,
@@ -173241,8 +173229,7 @@
           10758.0,
           10900.0,
           10979.0,
-          11040.0,
-          10945.0
+          11040.0
         ],
         "daily_closes": [
           {
@@ -183124,21 +183111,18 @@
           {
             "date": "2026-11-11",
             "close": 11040.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 10945.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2103.0,
-        "change_1d_pct": -2.49,
-        "change_1w_pct": 1.94,
-        "change_1m_pct": 8.34,
+        "price": 2156.7,
+        "change_1d_pct": 2.21,
+        "change_1w_pct": 6.24,
+        "change_1m_pct": 11.17,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          2050.7,
           2100.0,
           2031.0,
           2024.0,
@@ -183167,8 +183151,7 @@
           2121.0,
           2130.0,
           2110.0,
-          2156.7,
-          2103.0
+          2156.7
         ],
         "daily_closes": [
           {
@@ -185206,21 +185189,18 @@
           {
             "date": "2026-11-11",
             "close": 2156.7
-          },
-          {
-            "date": "2026-11-12",
-            "close": 2103.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7549.0,
-        "change_1d_pct": -0.57,
-        "change_1w_pct": 1.74,
-        "change_1m_pct": 6.04,
+        "price": 7592.0,
+        "change_1d_pct": -0.48,
+        "change_1w_pct": 2.04,
+        "change_1m_pct": 7.69,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7213.5,
           7179.0,
           7150.0,
           6920.0,
@@ -185249,8 +185229,7 @@
           7713.0,
           7669.5,
           7629.0,
-          7592.0,
-          7549.0
+          7592.0
         ],
         "daily_closes": [
           {
@@ -195132,22 +195111,19 @@
           {
             "date": "2026-11-11",
             "close": 7592.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 7549.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 297.25,
-        "change_1d_pct": -0.67,
-        "change_1w_pct": 6.73,
-        "change_1m_pct": 4.5,
+        "price": 299.25,
+        "change_1d_pct": 1.44,
+        "change_1w_pct": 8.15,
+        "change_1m_pct": 6.91,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          281.75,
           280.95,
           283.5,
           279.4,
@@ -195176,8 +195152,7 @@
           293.7,
           292.0,
           295.0,
-          299.25,
-          297.25
+          299.25
         ],
         "daily_closes": [
           {
@@ -205059,22 +205034,19 @@
           {
             "date": "2026-11-11",
             "close": 299.25
-          },
-          {
-            "date": "2026-11-12",
-            "close": 297.25
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 453.4,
-        "change_1d_pct": 1.65,
-        "change_1w_pct": 12.56,
-        "change_1m_pct": 12.09,
+        "price": 446.05,
+        "change_1d_pct": 2.15,
+        "change_1w_pct": 10.35,
+        "change_1m_pct": 8.71,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          432.95,
           430.15,
           421.65,
           415.5,
@@ -205103,8 +205075,7 @@
           429.05,
           425.5,
           436.65,
-          446.05,
-          453.4
+          446.05
         ],
         "daily_closes": [
           {
@@ -206094,21 +206065,18 @@
           {
             "date": "2026-11-11",
             "close": 446.05
-          },
-          {
-            "date": "2026-11-12",
-            "close": 453.4
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 173.95,
-        "change_1d_pct": 0.03,
-        "change_1w_pct": 12.93,
-        "change_1m_pct": 20.59,
+        "price": 173.9,
+        "change_1d_pct": -0.55,
+        "change_1w_pct": 13.85,
+        "change_1m_pct": 19.88,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          155.22,
           153.44,
           154.19,
           150.48,
@@ -206137,8 +206105,7 @@
           170.21,
           172.09,
           174.86,
-          173.9,
-          173.95
+          173.9
         ],
         "daily_closes": [
           {
@@ -216020,21 +215987,18 @@
           {
             "date": "2026-11-11",
             "close": 173.9
-          },
-          {
-            "date": "2026-11-12",
-            "close": 173.95
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2429.5,
-        "change_1d_pct": 0.32,
-        "change_1w_pct": -1.58,
-        "change_1m_pct": -9.11,
+        "price": 2421.7,
+        "change_1d_pct": -0.48,
+        "change_1w_pct": -0.74,
+        "change_1m_pct": -11.31,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2740.7,
           2706.2,
           2715.2,
           2667.3,
@@ -216063,8 +216027,7 @@
           2459.9,
           2443.4,
           2433.3,
-          2421.7,
-          2429.5
+          2421.7
         ],
         "daily_closes": [
           {
@@ -225946,21 +225909,18 @@
           {
             "date": "2026-11-11",
             "close": 2421.7
-          },
-          {
-            "date": "2026-11-12",
-            "close": 2429.5
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1179.65,
-        "change_1d_pct": 1.22,
-        "change_1w_pct": 6.78,
-        "change_1m_pct": -1.79,
+        "price": 1165.45,
+        "change_1d_pct": -0.1,
+        "change_1w_pct": 10.94,
+        "change_1m_pct": -0.97,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          1212.9,
           1205.8,
           1232.0,
           1212.3,
@@ -225989,8 +225949,7 @@
           1127.65,
           1167.7,
           1166.65,
-          1165.45,
-          1179.65
+          1165.45
         ],
         "daily_closes": [
           {
@@ -235872,21 +235831,18 @@
           {
             "date": "2026-11-11",
             "close": 1165.45
-          },
-          {
-            "date": "2026-11-12",
-            "close": 1179.65
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 407.55,
-        "change_1d_pct": 0.36,
-        "change_1w_pct": 4.37,
-        "change_1m_pct": -2.05,
+        "price": 406.1,
+        "change_1d_pct": 1.54,
+        "change_1w_pct": 5.07,
+        "change_1m_pct": -2.52,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          440.55,
           438.75,
           448.15,
           424.8,
@@ -235915,8 +235871,7 @@
           400.9,
           399.4,
           399.95,
-          406.1,
-          407.55
+          406.1
         ],
         "daily_closes": [
           {
@@ -245798,10 +245753,6 @@
           {
             "date": "2026-11-11",
             "close": 406.1
-          },
-          {
-            "date": "2026-11-12",
-            "close": 407.55
           }
         ]
       }
@@ -247041,7 +246992,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-12T10:45:13.704106+00:00",
+    "generated_at": "2026-11-12T21:48:49.258777+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 27,
@@ -247051,9 +247002,25 @@
         "label": "Passenger Vehicles",
         "items": [
           {
-            "title": "Upcoming New Cars By March 2027 \u2013 Toyota, Mahindra, Tata, JSW, Hyundai, VW, Honda, etc",
+            "title": "Mahindra Electric SUVs UK Launch 2027 Planned \u2013 Export From India",
+            "url": "https://www.rushlane.com/mahindra-electric-suvs-uk-launch-2027-planned-export-from-india-12560991.html",
+            "summary": "Mahindra is set to expand their global presence by launching the BE 6 and XEV 9e in UK some time in 2027 or 2028, followed by BE 7 The post Mahindra Electric SUVs UK Launch 2027 Planned \u2013 Export From India appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-12T12:57:34+00:00",
+            "published_display": "12 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Upcoming New Cars By March 2027 \u2013 Toyota, Mahindra, Tata, JSW, Hyundai, VW, Honda, Maruti",
             "url": "https://www.rushlane.com/upcoming-new-cars-by-march-2027-toyota-mahindra-tata-jsw-hyundai-vw-honda-etc-12560983.html",
-            "summary": "While calendar year 2026 witnessed a lot of new car launches, there are quite a few of cars expected to launch by Q4 of 2026 The post Upcoming New Cars By March 2027 \u2013 Toyota, Mahindra, Tata, JSW, Hyundai, VW, Honda, etc appeared first on RushLane .",
+            "summary": "While calendar year 2026 witnessed a lot of new car launches, there are quite a few of cars expected to launch by Q4 of 2026 The post Upcoming New Cars By March 2027 \u2013 Toyota, Mahindra, Tata, JSW, Hyundai, VW, Honda, Maruti appeared first on RushLane .",
             "source": "RushLane",
             "published_at": "2026-11-12T10:33:29+00:00",
             "published_display": "12 Nov 2026",
@@ -247063,6 +247030,22 @@
             ],
             "signal_tags": [
               "Product / Launch"
+            ]
+          },
+          {
+            "title": "Annual electric car and SUV sales cross 300,000 units for the first time in India",
+            "url": "https://www.autocarpro.in/analysis-sales/annual-electric-car-and-suv-sales-cross-300000-units-for-the-first-time-in-india-135863",
+            "summary": "Proof that the once-nascent electric passenger vehicle industry in India has come into its own is the fact that retail sales have surpassed 300,000 units for the first time in a calendar year. Between January 1 and November 9, as per Vahan, 304,701 zero-emission cars, SUVs and MPVs have been delivered to customers, making for 66% YoY growth.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-11-12T03:18:32+00:00",
+            "published_display": "12 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
             ]
           },
           {
@@ -247095,37 +247078,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Mahindra clocks its highest electric SUV sales in October",
-            "url": "https://www.autocarpro.in/analysis-sales/mahindra-clocks-its-highest-electric-suv-sales-in-october-135699",
-            "summary": "Customer demand for zero-emission electric cars, SUVs and MPVs continued their high double-digit growth in October and surpassed the 30,000 monthly retail sales for the fifth month in a row. At 36,911 units, deliveries of electric passenger vehicles rose 76% YoY (October 2025: 20,954 units) and marked the second highest monthly total for this EV segment, down 4% on the record 38,355 units sold in super September (...",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-04T03:20:21+00:00",
-            "published_display": "04 Nov 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "Passenger Vehicle Retail Sales Fall 14.23% To 5.08 Lakh In October: FADA",
-            "url": "https://www.autocarpro.in/analysis-sales/passenger-vehicle-retail-sales-fall-1423-percent-to-508-lakh-in-october-fada-135776",
-            "summary": "Passenger vehicle retail sales in India fell 14.23 percent year on year to 5,07,768 units in October 2026, according to FADA. Volumes rose 18.86 percent from 4,27,213 units in September.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-06T04:20:41+00:00",
-            "published_display": "06 Nov 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Passenger Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247322,6 +247274,22 @@
             ]
           },
           {
+            "title": "3W Retail Sales Oct 2026 \u2013 Bajaj, Mahindra, Piaggio, TVS, Atul, YC, Saera, Dilli",
+            "url": "https://www.rushlane.com/3w-retail-sales-oct-2026-bajaj-mahindra-piaggio-tvs-12560958.html",
+            "summary": "Electric 3Ws commanded a 62.63% market share in October 2026, over its petrol/ethanol, diesel and CNG/LPG counterparts The post 3W Retail Sales Oct 2026 \u2013 Bajaj, Mahindra, Piaggio, TVS, Atul, YC, Saera, Dilli appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-12T12:21:32+00:00",
+            "published_display": "12 Nov 2026",
+            "importance_score": 9,
+            "segment_tags": [
+              "Commercial Vehicles",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
             "title": "Electric CV Retails Surge 162 Percent in October 2026 Led by Tata and Euler",
             "url": "https://www.autocarpro.in/analysis-sales/electric-cv-retails-surge-162-percent-in-october-2026-led-by-tata-and-euler-135805",
             "summary": "India\u2019s electric commercial vehicle sector recorded substantial expansion in October 2026, with total retail sales surging by 162.3 percent year-on-year to reach 4,942 units compared to 1,884 units in the corresponding period of the previous year, according to data released by the Federation of Automobile Dealers Associations (FADA). This volume growth propelled overall electric commercial vehicle penetration to 4...",
@@ -247370,22 +247338,6 @@
               "Policy / Regulation",
               "Supply Chain / Components",
               "Input Costs / Commodities"
-            ]
-          },
-          {
-            "title": "Annual electric car and SUV sales cross 300,000 units for the first time in India",
-            "url": "https://www.autocarpro.in/analysis-sales/annual-electric-car-and-suv-sales-cross-300000-units-for-the-first-time-in-india-135863",
-            "summary": "Proof that the once-nascent electric passenger vehicle industry in India has come into its own is the fact that retail sales have surpassed 300,000 units for the first time in a calendar year. Between January 1 and November 9, as per Vahan, 304,701 zero-emission cars, SUVs and MPVs have been delivered to customers, making for 66% YoY growth.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-12T03:18:32+00:00",
-            "published_display": "12 Nov 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247539,9 +247491,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 45,
-      "filtered_low_signal": 0,
-      "kept_articles": 67
+      "unmapped_articles": 43,
+      "filtered_low_signal": 1,
+      "kept_articles": 66
     }
   },
   "qa": [
