@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:50:03.757461+00:00",
+  "generated_at": "2026-11-15T10:32:32.919470+00:00",
   "as_of_date": "2026-11-13",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-11-14",
+          "latest_release_date": "2026-11-15",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122963,7 +122963,7 @@
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-11-14",
+    "as_of_date": "2026-11-15",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -133497,7 +133497,7 @@
             "close": 94.0338
           },
           {
-            "date": "2026-11-14",
+            "date": "2026-11-15",
             "close": 94.24
           }
         ]
@@ -133506,7 +133506,7 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-11-14",
+    "as_of_date": "2026-11-15",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
@@ -245871,29 +245871,19 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-11-14",
+    "as_of_date": "2026-11-15",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
-    "next_14_days": [
-      {
-        "company": "Ashok Leyland",
-        "ticker": "ASHOKLEY",
-        "date": "2026-11-14",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
-      }
-    ],
-    "upcoming_all": [
-      {
-        "company": "Ashok Leyland",
-        "ticker": "ASHOKLEY",
-        "date": "2026-11-14",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
-      }
-    ],
+    "next_14_days": [],
+    "upcoming_all": [],
     "recent_past": [
+      {
+        "company": "Ashok Leyland",
+        "ticker": "ASHOKLEY",
+        "date": "2026-11-14",
+        "period_label": "Financial Results",
+        "event_type": "earnings",
+        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ASHOKLEY"
+      },
       {
         "company": "Tata Motors",
         "ticker": "TMPV",
@@ -245933,18 +245923,10 @@
         "period_label": "Financial Results",
         "event_type": "earnings",
         "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ESCORTS"
-      },
-      {
-        "company": "Atul Auto",
-        "ticker": "ATULAUTO",
-        "date": "2026-10-31",
-        "period_label": "Financial Results",
-        "event_type": "earnings",
-        "source_url": "https://www.nseindia.com/get-quotes/equity?symbol=ATULAUTO"
       }
     ],
-    "next_14_count": 1,
-    "upcoming_count": 1
+    "next_14_count": 0,
+    "upcoming_count": 0
   },
   "market_insights": [
     {
@@ -247055,10 +247037,10 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-14T19:49:32.821037+00:00",
+    "generated_at": "2026-11-15T10:31:55.805406+00:00",
     "window_days": 45,
     "group_count": 6,
-    "item_count": 27,
+    "item_count": 28,
     "groups": [
       {
         "id": "pv",
@@ -247183,6 +247165,22 @@
             ]
           },
           {
+            "title": "New VinFast Electric Scooter, Motorcycle Patented \u2013 Launch At Bharat Auto Expo?",
+            "url": "https://www.rushlane.com/new-vinfast-electric-scooter-motorcycle-patented-launch-at-bharat-auto-expo-12561245.html",
+            "summary": "While Vinfast already has a wide electric two-wheeler portfolio across overseas markets, the brand appears to be developing some entirely new models for India The post New VinFast Electric Scooter, Motorcycle Patented \u2013 Launch At Bharat Auto Expo? appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-15T09:51:20+00:00",
+            "published_display": "15 Nov 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "TVS Norton Atlas GT, Manx R Patented In India \u2013 Launch 2027?",
             "url": "https://www.rushlane.com/tvs-norton-atlas-gt-manx-r-patented-in-india-launch-2027-12561225.html",
             "summary": "Ahead of the Norton brand launch in India, the company has patented Atlas GT Tourer bike and the flagship Manx R Supersport in the country The post TVS Norton Atlas GT, Manx R Patented In India \u2013 Launch 2027? appeared first on RushLane .",
@@ -247212,21 +247210,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Hero Vida e-scooter sales soar to new high in October, cross 200,000 for the first time in CY2026",
-            "url": "https://www.autocarpro.in/analysis-sales/hero-vida-e-scooter-sales-soar-to-new-high-in-october-cross-200000-for-the-first-time-in-cy2026-135566",
-            "summary": "Even as October draws to a close in two days, Hero MotoCorp has already registered its highest monthly retail sales and has also crossed cumulative year-to-date sales of 200,000 units for the first time in a calendar year. In the first 29 days of this month, 27,435 Vida e-scooters have been delivered to customers, marking strong 66% YoY growth (October 2025: 16,499 units).",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-30T03:14:51+00:00",
-            "published_display": "30 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247502,6 +247485,22 @@
         "label": "Policy / Regulation",
         "items": [
           {
+            "title": "Battery Recycling Key to Securing India\u2019s EV Future",
+            "url": "https://www.autocarpro.in/opinion-column/battery-recycling-key-to-securing-indias-ev-future-135920",
+            "summary": "India\u2019s electric mobility transition is burgeoning, propelled by well directed government initiatives such as FAME-II, PM E-DRIVE and state-level EV policies. The national target is 30% electric vehicle (EV) penetration across vehicle segments by 2030.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-11-14T13:24:47+00:00",
+            "published_display": "14 Nov 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Tata Power Appoints Sanjay Banga as CEO and Managing Director",
             "url": "https://www.autocarpro.in/news/tata-power-appoints-sanjay-banga-as-ceo-and-managing-director-135859",
             "summary": "Tata Power announced that its Board of Directors has approved the appointment of Sanjay Banga as an Additional Director and designated him as CEO Designate, according to a regulatory filing to the stock exchanges. Banga will subsequently assume the role of Chief Executive Officer, Managing Director, and Key Managerial Personnel for a five-year term running from May 1, 2027, to April 30, 2032, subject to shareholde...",
@@ -247607,7 +247606,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-11-14",
+    "as_of_date": "2026-11-15",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
