@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T10:46:22.109551+00:00",
+  "generated_at": "2026-11-16T23:43:26.147379+00:00",
   "as_of_date": "2026-11-13",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122877,10 +122877,25 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-11-16T10:46:02.051242+00:00",
+      "generated_at": "2026-11-16T23:43:05.457746+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 3,
       "items": [
+        {
+          "title": "Mahindra Racing Unveils 804 bhp M13Electro For 2027 Formula E Season \u2013 Gen 4 Era",
+          "summary": "Formula E\u2019s GEN4 cars are capable of a claimed top speed of 335 km/h. The new regulations also allow up to 700 kW of regenerative braking The post Mahindra Racing Unveils 804 bhp M13Electro For 2027 Formula E Season \u2013 Gen 4 Era appeared first on RushLane .",
+          "url": "https://www.rushlane.com/mahindra-racing-unveils-804-bhp-m13electro-for-2027-formula-e-12561314.html",
+          "source": "RushLane",
+          "published_at": "2026-11-16T17:10:39+00:00",
+          "published_display": "16 Nov 2026",
+          "company": "Mahindra & Mahindra",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/mahindra-racing-formula-e-new-2027-car-1.jpg"
+        },
         {
           "title": "Mercedes-Benz Launches GLC 400 4MATIC Electric SUV in India at Rs 78.5 Lakh",
           "summary": "The post Mercedes-Benz Launches GLC 400 4MATIC Electric SUV in India at Rs 78.5 Lakh appeared first at EVreporter on EVreporter . Mercedes-Benz India has launched the all-electric GLC SUV at an introductory price of Rs 78.5 lakh (ex-showroom). The GLC 400 The post Mercedes-Benz Launches GLC 400 4MATIC Electric SUV in India at Rs 78.5 Lakh appeared first at EVreporter on EVreporter .",
@@ -122916,6 +122931,14 @@
       ],
       "companies": [
         {
+          "company": "Mahindra & Mahindra",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-16T17:10:39+00:00",
+          "latest_title": "Mahindra Racing Unveils 804 bhp M13Electro For 2027 Formula E Season \u2013 Gen 4 Era"
+        },
+        {
           "company": "Mercedes-Benz India",
           "tone": "pv",
           "scope": "tracked",
@@ -122934,7 +122957,7 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-11-05"
+        "latest_release_date": "2026-11-16"
       }
     }
   },
@@ -123056,10 +123079,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 93.92,
+        "value": 93.91,
         "unit": "\u20b9",
-        "delta_value": -0.1113,
-        "delta_label": "+0.02% in last week (Yahoo Finance)",
+        "delta_value": -0.1218,
+        "delta_label": "+0.01% in last week (Yahoo Finance)",
         "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133467,7 +133490,7 @@
           },
           {
             "date": "2026-11-16",
-            "close": 93.9225
+            "close": 93.912
           }
         ]
       }
@@ -133482,12 +133505,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 12571.0,
-        "change_1d_pct": -2.2,
-        "change_1w_pct": -1.4,
-        "change_1m_pct": 12.46,
+        "price": 12854.0,
+        "change_1d_pct": -1.31,
+        "change_1w_pct": 1.6,
+        "change_1m_pct": 14.31,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          11967.0,
           11386.0,
           11532.0,
           11625.0,
@@ -133516,8 +133540,7 @@
           12928.0,
           13185.0,
           13024.0,
-          12854.0,
-          12571.0
+          12854.0
         ],
         "daily_closes": [
           {
@@ -143403,21 +143426,18 @@
           {
             "date": "2026-11-13",
             "close": 12854.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 12571.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3339.0,
-        "change_1d_pct": 0.18,
-        "change_1w_pct": 1.58,
-        "change_1m_pct": 19.52,
+        "price": 3333.0,
+        "change_1d_pct": -1.94,
+        "change_1w_pct": 6.57,
+        "change_1m_pct": 16.36,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          2950.0,
           2860.0,
           2857.6,
           2855.0,
@@ -143446,8 +143466,7 @@
           3290.6,
           3465.0,
           3399.0,
-          3333.0,
-          3339.0
+          3333.0
         ],
         "daily_closes": [
           {
@@ -153333,21 +153352,18 @@
           {
             "date": "2026-11-13",
             "close": 3333.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 3339.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5359.5,
-        "change_1d_pct": -0.47,
-        "change_1w_pct": -2.78,
-        "change_1m_pct": 6.77,
+        "price": 5385.0,
+        "change_1d_pct": 0.8,
+        "change_1w_pct": -2.34,
+        "change_1m_pct": 7.75,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          5241.0,
           5168.0,
           5089.5,
           5075.0,
@@ -153376,8 +153392,7 @@
           5410.5,
           5345.0,
           5342.0,
-          5385.0,
-          5359.5
+          5385.0
         ],
         "daily_closes": [
           {
@@ -163263,21 +163278,18 @@
           {
             "date": "2026-11-13",
             "close": 5385.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 5359.5
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4453.0,
-        "change_1d_pct": -0.93,
-        "change_1w_pct": -0.86,
-        "change_1m_pct": 12.17,
+        "price": 4495.0,
+        "change_1d_pct": -0.11,
+        "change_1w_pct": 1.01,
+        "change_1m_pct": 12.05,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          4106.0,
           4021.0,
           4031.0,
           3981.0,
@@ -163306,8 +163318,7 @@
           4505.9,
           4560.0,
           4500.0,
-          4495.0,
-          4453.0
+          4495.0
         ],
         "daily_closes": [
           {
@@ -173193,21 +173204,18 @@
           {
             "date": "2026-11-13",
             "close": 4495.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 4453.0
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10734.0,
-        "change_1d_pct": -1.07,
-        "change_1w_pct": -1.52,
-        "change_1m_pct": 4.72,
+        "price": 10850.0,
+        "change_1d_pct": -0.87,
+        "change_1w_pct": 0.86,
+        "change_1m_pct": 5.16,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          10874.0,
           10045.0,
           10024.0,
           10017.0,
@@ -173236,8 +173244,7 @@
           10979.0,
           11040.0,
           10945.0,
-          10850.0,
-          10734.0
+          10850.0
         ],
         "daily_closes": [
           {
@@ -183123,21 +183130,18 @@
           {
             "date": "2026-11-13",
             "close": 10850.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 10734.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2084.0,
-        "change_1d_pct": 0.39,
-        "change_1w_pct": -2.16,
-        "change_1m_pct": 6.02,
+        "price": 2076.0,
+        "change_1d_pct": -1.28,
+        "change_1w_pct": -2.12,
+        "change_1m_pct": 5.65,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          2031.0,
           2024.0,
           2000.0,
           1989.0,
@@ -183166,8 +183170,7 @@
           2110.0,
           2156.7,
           2103.0,
-          2076.0,
-          2084.0
+          2076.0
         ],
         "daily_closes": [
           {
@@ -185213,21 +185216,18 @@
           {
             "date": "2026-11-13",
             "close": 2076.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 2084.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 7599.0,
-        "change_1d_pct": -0.67,
-        "change_1w_pct": -0.92,
-        "change_1m_pct": 7.29,
+        "price": 7650.0,
+        "change_1d_pct": 1.34,
+        "change_1w_pct": -0.82,
+        "change_1m_pct": 6.8,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7150.0,
           6920.0,
           7021.5,
           7051.0,
@@ -185256,8 +185256,7 @@
           7629.0,
           7592.0,
           7549.0,
-          7650.0,
-          7599.0
+          7650.0
         ],
         "daily_closes": [
           {
@@ -195143,22 +195142,19 @@
           {
             "date": "2026-11-13",
             "close": 7650.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 7599.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 262.4,
-        "change_1d_pct": -8.7,
-        "change_1w_pct": -10.14,
-        "change_1m_pct": -7.54,
+        "price": 287.4,
+        "change_1d_pct": -3.31,
+        "change_1w_pct": -2.15,
+        "change_1m_pct": 0.54,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          283.5,
           279.4,
           288.65,
           285.8,
@@ -195187,8 +195183,7 @@
           295.0,
           299.25,
           297.25,
-          287.4,
-          262.4
+          287.4
         ],
         "daily_closes": [
           {
@@ -205074,22 +205069,19 @@
           {
             "date": "2026-11-13",
             "close": 287.4
-          },
-          {
-            "date": "2026-11-16",
-            "close": 262.4
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 428.25,
-        "change_1d_pct": -1.22,
-        "change_1w_pct": 0.65,
-        "change_1m_pct": 3.13,
+        "price": 433.55,
+        "change_1d_pct": -4.38,
+        "change_1w_pct": 1.05,
+        "change_1m_pct": 3.98,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          421.65,
           415.5,
           426.8,
           433.8,
@@ -205118,8 +205110,7 @@
           436.65,
           446.05,
           453.4,
-          433.55,
-          428.25
+          433.55
         ],
         "daily_closes": [
           {
@@ -206117,21 +206108,18 @@
           {
             "date": "2026-11-13",
             "close": 433.55
-          },
-          {
-            "date": "2026-11-16",
-            "close": 428.25
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 167.49,
-        "change_1d_pct": -1.01,
-        "change_1w_pct": -2.67,
-        "change_1m_pct": 15.51,
+        "price": 169.2,
+        "change_1d_pct": -2.73,
+        "change_1w_pct": -0.59,
+        "change_1m_pct": 14.81,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          154.19,
           150.48,
           152.6,
           153.7,
@@ -206160,8 +206148,7 @@
           174.86,
           173.9,
           173.95,
-          169.2,
-          167.49
+          169.2
         ],
         "daily_closes": [
           {
@@ -216047,21 +216034,18 @@
           {
             "date": "2026-11-13",
             "close": 169.2
-          },
-          {
-            "date": "2026-11-16",
-            "close": 167.49
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2404.0,
-        "change_1d_pct": 0.09,
-        "change_1w_pct": -1.61,
-        "change_1m_pct": -10.6,
+        "price": 2401.8,
+        "change_1d_pct": -1.14,
+        "change_1w_pct": -2.36,
+        "change_1m_pct": -10.12,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2715.2,
           2667.3,
           2820.9,
           2811.7,
@@ -216090,8 +216074,7 @@
           2433.3,
           2421.7,
           2429.5,
-          2401.8,
-          2404.0
+          2401.8
         ],
         "daily_closes": [
           {
@@ -225977,21 +225960,18 @@
           {
             "date": "2026-11-13",
             "close": 2401.8
-          },
-          {
-            "date": "2026-11-16",
-            "close": 2404.0
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1176.3,
-        "change_1d_pct": -0.31,
-        "change_1w_pct": 0.74,
-        "change_1m_pct": -1.73,
+        "price": 1180.0,
+        "change_1d_pct": 0.03,
+        "change_1w_pct": 4.64,
+        "change_1m_pct": -1.08,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          1232.0,
           1212.3,
           1227.5,
           1252.2,
@@ -226020,8 +226000,7 @@
           1166.65,
           1165.45,
           1179.65,
-          1180.0,
-          1176.3
+          1180.0
         ],
         "daily_closes": [
           {
@@ -235907,21 +235886,18 @@
           {
             "date": "2026-11-13",
             "close": 1180.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 1176.3
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 393.8,
-        "change_1d_pct": -1.23,
-        "change_1w_pct": -1.4,
-        "change_1m_pct": -8.28,
+        "price": 398.7,
+        "change_1d_pct": -2.17,
+        "change_1w_pct": -0.55,
+        "change_1m_pct": -4.64,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          448.15,
           424.8,
           424.5,
           427.5,
@@ -235950,8 +235926,7 @@
           399.95,
           406.1,
           407.55,
-          398.7,
-          393.8
+          398.7
         ],
         "daily_closes": [
           {
@@ -245837,10 +245812,6 @@
           {
             "date": "2026-11-13",
             "close": 398.7
-          },
-          {
-            "date": "2026-11-16",
-            "close": 393.8
           }
         ]
       }
@@ -247014,7 +246985,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-16T10:45:39.490814+00:00",
+    "generated_at": "2026-11-16T23:42:40.755149+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 28,
@@ -247037,6 +247008,21 @@
             ],
             "signal_tags": [
               "Product / Launch"
+            ]
+          },
+          {
+            "title": "Skoda VW Sales Breakup Oct 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun",
+            "url": "https://www.rushlane.com/skoda-vw-sales-breakup-oct-2026-kylaq-slavia-kushaq-virtus-taigun-12561298.html",
+            "summary": "Skoda and Volkswagen sold a combined 10,718 cars in October 2026, up 28.82% from 8,320 units in September. Both brands gained month on month The post Skoda VW Sales Breakup Oct 2026 \u2013 Kylaq, Slavia, Kushaq, Virtus, Taigun appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-16T17:28:32+00:00",
+            "published_display": "16 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Passenger Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
             ]
           },
           {
@@ -247085,22 +247071,6 @@
               "Capacity / Capex",
               "Monthly Sales / Demand"
             ]
-          },
-          {
-            "title": "Economics and Practical Realities of Operating an Electric Car Fleet in India",
-            "url": "https://evreporter.com/the-economics-and-practical-realities-of-operating-an-electric-car-fleet-in-india",
-            "summary": "The post Economics and Practical Realities of Operating an Electric Car Fleet in India appeared first at EVreporter on EVreporter . Anirudh Arun, CEO of Refex Mobility, explains why EVs are best suited to planned routes and captive charging today, commercial The post Economics and Practical Realities of Operating an Electric Car Fleet in India appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-11-10T07:43:31+00:00",
-            "published_display": "10 Nov 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247108,6 +247078,22 @@
         "id": "2w",
         "label": "Two-Wheelers",
         "items": [
+          {
+            "title": "Bgauss e-scooters cross 100,000 cumulative sales, 42% of them in CY2026",
+            "url": "https://www.autocarpro.in/analysis-sales/bgauss-e-scooters-cross-100000-cumulative-sales-42-percent-of-them-in-cy2026-135862",
+            "summary": "Bgauss Auto has surpassed cumulative retail sales of 100,000 units. From market entry in August 2022 till November 9, 2026, the Mumbai-based electric 2-wheeler startup has delivered 100,595 units.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-11-12T03:10:18+00:00",
+            "published_display": "12 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
           {
             "title": "Which OEMs are selling the most electric motorcycles in India?",
             "url": "https://evreporter.com/which-oems-are-selling-the-most-electric-motorcycles-in-india",
@@ -247173,21 +247159,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "Hero Vida e-scooter sales soar to new high in October, cross 200,000 for the first time in CY2026",
-            "url": "https://www.autocarpro.in/analysis-sales/hero-vida-e-scooter-sales-soar-to-new-high-in-october-cross-200000-for-the-first-time-in-cy2026-135566",
-            "summary": "Even as October draws to a close in two days, Hero MotoCorp has already registered its highest monthly retail sales and has also crossed cumulative year-to-date sales of 200,000 units for the first time in a calendar year. In the first 29 days of this month, 27,435 Vida e-scooters have been delivered to customers, marking strong 66% YoY growth (October 2025: 16,499 units).",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-30T03:14:51+00:00",
-            "published_display": "30 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
           }
         ]
       },
@@ -247244,27 +247215,26 @@
             ]
           },
           {
-            "title": "Blue Energy Motors and HPCL Open Electric Truck Battery-Swapping Station in Bhiwandi, Maharashtra",
-            "url": "https://evreporter.com/blue-energy-motors-and-hpcl-open-electric-truck-battery-swapping-station-in-bhiwandi-maharashtra",
-            "summary": "The post Blue Energy Motors and HPCL Open Electric Truck Battery-Swapping Station in Bhiwandi, Maharashtra appeared first at EVreporter on EVreporter . Blue Energy Motors (BEM), in partnership with Hindustan Petroleum Corporation Limited (HPCL), has commissioned a battery-swapping station for electric heavy-duty The post Blue Energy Motors and HPCL Open Electric Truck Battery-Swapping Station in Bhiwandi, Maharash...",
-            "source": "EVReporter",
-            "published_at": "2026-10-27T05:13:52+00:00",
-            "published_display": "27 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
-          },
-          {
             "title": "Tata Motors Leads CV Retails with Over 39,000 Units and 35% Market Share",
             "url": "https://www.autocarpro.in/analysis-sales/tata-motors-leads-cv-retails-with-over-39000-units-and-35-percent-market-share-135783",
             "summary": "Tata Motors secured the leading position in India's commercial vehicle retail market for October 2026, registering 39,914 units and capturing a 34.67 percent market share. The company's retail performance was an improvement on its 31.89 percent market share from 35,901 units recorded in October 2025.",
             "source": "Autocar Professional Sales",
             "published_at": "2026-11-06T05:40:13+00:00",
+            "published_display": "06 Nov 2026",
+            "importance_score": 5,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Monthly Sales / Demand"
+            ]
+          },
+          {
+            "title": "Tractor Retail Sales Rise 3.10% To 79,285 Units In October: FADA",
+            "url": "https://www.autocarpro.in/analysis-sales/tractor-retail-sales-rise-310-percent-to-79285-units-in-october-fada-135779",
+            "summary": "Tractor retail sales in India rose 3.10% year on year to 79,285 units in October 2026, according to FADA. Retails were up 3.09% from 76,906 units in September.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-11-06T04:46:15+00:00",
             "published_display": "06 Nov 2026",
             "importance_score": 5,
             "segment_tags": [
@@ -247332,6 +247302,22 @@
             ]
           },
           {
+            "title": "TACC Signs MoU With Global Automotive OEM For Fast-Charging Anode Material Supply",
+            "url": "https://www.autocarpro.in/news/tacc-signs-mou-with-global-automotive-oem-for-fast-charging-anode-material-supply-135937",
+            "summary": "TACC Limited, a subsidiary of HEG Advanced Materials Limited, has signed a non-binding Memorandum of Understanding (MoU) with a global automotive original equipment manufacturer (OEM) to explore the supply of fast-charging anode materials for electric vehicles (EVs). A potential supply agreement could cover up to 30% of the planned annual capacity of its Phase 1 anode manufacturing plant in Dewas, Madhya Pradesh.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-11-16T06:00:25+00:00",
+            "published_display": "16 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Supply Chain / Components"
+            ]
+          },
+          {
             "title": "Annual electric car and SUV sales cross 300,000 units for the first time in India",
             "url": "https://www.autocarpro.in/analysis-sales/annual-electric-car-and-suv-sales-cross-300000-units-for-the-first-time-in-india-135863",
             "summary": "Proof that the once-nascent electric passenger vehicle industry in India has come into its own is the fact that retail sales have surpassed 300,000 units for the first time in a calendar year. Between January 1 and November 9, as per Vahan, 304,701 zero-emission cars, SUVs and MPVs have been delivered to customers, making for 66% YoY growth.",
@@ -247341,22 +247327,6 @@
             "importance_score": 7,
             "segment_tags": [
               "Passenger Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "Bgauss e-scooters cross 100,000 cumulative sales, 42% of them in CY2026",
-            "url": "https://www.autocarpro.in/analysis-sales/bgauss-e-scooters-cross-100000-cumulative-sales-42-percent-of-them-in-cy2026-135862",
-            "summary": "Bgauss Auto has surpassed cumulative retail sales of 100,000 units. From market entry in August 2022 till November 9, 2026, the Mumbai-based electric 2-wheeler startup has delivered 100,595 units.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-12T03:10:18+00:00",
-            "published_display": "12 Nov 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "Two-Wheelers",
               "EV"
             ],
             "signal_tags": [
@@ -247439,15 +247409,15 @@
             ]
           },
           {
-            "title": "TACC Signs MoU With Global Automotive OEM For Fast-Charging Anode Material Supply",
-            "url": "https://www.autocarpro.in/news/tacc-signs-mou-with-global-automotive-oem-for-fast-charging-anode-material-supply-135937",
-            "summary": "TACC Limited, a subsidiary of HEG Advanced Materials Limited, has signed a non-binding Memorandum of Understanding (MoU) with a global automotive original equipment manufacturer (OEM) to explore the supply of fast-charging anode materials for electric vehicles (EVs). A potential supply agreement could cover up to 30% of the planned annual capacity of its Phase 1 anode manufacturing plant in Dewas, Madhya Pradesh.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-11-16T06:00:25+00:00",
+            "title": "Toyota Kirloskar Auto Parts Invests \u20b9460 Crore in New E-Drive Manufacturing Line",
+            "url": "https://evreporter.com/toyota-kirloskar-auto-parts-invests-%e2%82%b9460-crore-in-new-e-drive-manufacturing-line",
+            "summary": "The post Toyota Kirloskar Auto Parts Invests \u20b9460 Crore in New E-Drive Manufacturing Line appeared first at EVreporter on EVreporter . Toyota Kirloskar Auto Parts Pvt. Ltd. (TKAP) has inaugurated a new E-Drive manufacturing line at its Bidadi facility in Bengaluru, The post Toyota Kirloskar Auto Parts Invests \u20b9460 Crore in New E-Drive Manufacturing Line appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-11-16T10:47:31+00:00",
             "published_display": "16 Nov 2026",
             "importance_score": 7,
             "segment_tags": [
-              "EV"
+              "General"
             ],
             "signal_tags": [
               "Capacity / Capex",
@@ -247530,7 +247500,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 45,
+      "unmapped_articles": 44,
       "filtered_low_signal": 0,
       "kept_articles": 67
     }
