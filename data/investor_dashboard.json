@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:59:16.852259+00:00",
+  "generated_at": "2026-11-26T23:32:26.307322+00:00",
   "as_of_date": "2026-11-13",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -122877,10 +122877,26 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-11-26T11:58:55.380315+00:00",
+      "generated_at": "2026-11-26T23:32:12.027324+00:00",
       "window_days": 30,
       "item_count": 5,
       "items": [
+        {
+          "title": "BMW M 1000 RR India Launch Price Rs 59.90 Lakh \u2013 218 Hp, 300 kmph",
+          "summary": "The India-spec motorcycle comes with the M Competition Package as standard and is offered in Blackstorm metallic with graphics in BMW\u2019s M colours The post BMW M 1000 RR India Launch Price Rs 59.90 Lakh \u2013 218 Hp, 300 kmph appeared first on RushLane .",
+          "url": "https://www.rushlane.com/bmw-m-1000-rr-india-launch-price-rs-59-90-lakh-218-hp-300-kmph-12562122.html",
+          "source": "RushLane",
+          "published_at": "2026-11-26T15:18:24+00:00",
+          "published_display": "26 Nov 2026",
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "segment_tags": [
+            "Two-Wheelers",
+            "Luxury"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/BMW-M-1000-RR-india-launch-price-4.jpg"
+        },
         {
           "title": "Bajaj Pulsar 125 Old Model Updated For 2027 \u2013 Neon Edition Launched",
           "summary": "Not only is Bajaj keeping older Pulsar 125 alive after New Gen launch, the company has just updated it with the launch of Neon Edition The post Bajaj Pulsar 125 Old Model Updated For 2027 \u2013 Neon Edition Launched appeared first on RushLane .",
@@ -122908,19 +122924,6 @@
             "EV"
           ],
           "image_url": null
-        },
-        {
-          "title": "Toyota Innova Hycross Facelift Brochure, Variants Wise Features \u2013 G, GX, VX And ZX",
-          "summary": "The detailed brochure reveals an 80 km/h speed limit for the entry-level G hybrid, while VX and ZX get larger displays. Toyota Safety Sense and powered ottoman seats are exclusive to ZX. The post Toyota Innova Hycross Facelift Brochure, Variants Wise Features \u2013 G, GX, VX And ZX appeared first on RushLane .",
-          "url": "https://www.rushlane.com/toyota-innova-hycross-facelift-brochure-variants-features-12562026.html",
-          "source": "RushLane",
-          "published_at": "2026-11-25T15:47:59+00:00",
-          "published_display": "25 Nov 2026",
-          "company": "Toyota Kirloskar",
-          "tone": "pv",
-          "scope": "tracked",
-          "segment_tags": [],
-          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/toyota-innova-hycross-facelift-brochure.jpg"
         },
         {
           "title": "Mercedes-Benz Launches GLC 400 4MATIC Electric SUV in India at Rs 78.5 Lakh",
@@ -122957,6 +122960,14 @@
       ],
       "companies": [
         {
+          "company": "BMW India",
+          "tone": "pv",
+          "scope": "tracked",
+          "count": 1,
+          "latest_published_at": "2026-11-26T15:18:24+00:00",
+          "latest_title": "BMW M 1000 RR India Launch Price Rs 59.90 Lakh \u2013 218 Hp, 300 kmph"
+        },
+        {
           "company": "Bajaj Auto",
           "tone": "tw",
           "scope": "listed",
@@ -122968,7 +122979,7 @@
           "company": "Toyota Kirloskar",
           "tone": "pv",
           "scope": "tracked",
-          "count": 2,
+          "count": 1,
           "latest_published_at": "2026-11-26T05:21:22+00:00",
           "latest_title": "Toyota Launches Innova HyCross Flex Hybrid EV in India, Prices Start at \u20b919.99 Lakh"
         },
@@ -123113,10 +123124,10 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 92.54,
+        "value": 92.44,
         "unit": "\u20b9",
-        "delta_value": -0.2666,
-        "delta_label": "-0.99% in last week (Yahoo Finance)",
+        "delta_value": -0.3716,
+        "delta_label": "-1.10% in last week (Yahoo Finance)",
         "delta_tone": "positive",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
@@ -133524,7 +133535,7 @@
           },
           {
             "date": "2026-11-26",
-            "close": 92.54
+            "close": 92.435
           }
         ]
       }
@@ -133539,12 +133550,13 @@
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14015.0,
-        "change_1d_pct": -1.3,
-        "change_1w_pct": 10.95,
-        "change_1m_pct": 24.91,
+        "price": 14200.0,
+        "change_1d_pct": 1.36,
+        "change_1w_pct": 12.48,
+        "change_1m_pct": 26.45,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
+          11315.0,
           11245.0,
           11178.0,
           11445.0,
@@ -133573,8 +133585,7 @@
           13589.0,
           14011.0,
           14010.0,
-          14200.0,
-          14015.0
+          14200.0
         ],
         "daily_closes": [
           {
@@ -143456,21 +143467,18 @@
           {
             "date": "2026-11-25",
             "close": 14200.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 14015.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3487.5,
-        "change_1d_pct": -0.63,
-        "change_1w_pct": 3.82,
-        "change_1m_pct": 22.24,
+        "price": 3509.5,
+        "change_1d_pct": 0.63,
+        "change_1w_pct": 3.25,
+        "change_1m_pct": 22.66,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
+          2813.0,
           2864.4,
           2793.7,
           2861.7,
@@ -143499,8 +143507,7 @@
           3509.0,
           3545.0,
           3487.4,
-          3509.5,
-          3487.5
+          3509.5
         ],
         "daily_closes": [
           {
@@ -153382,21 +153389,18 @@
           {
             "date": "2026-11-25",
             "close": 3509.5
-          },
-          {
-            "date": "2026-11-26",
-            "close": 3487.5
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5789.0,
-        "change_1d_pct": 0.65,
-        "change_1w_pct": 10.2,
-        "change_1m_pct": 11.35,
+        "price": 5751.5,
+        "change_1d_pct": 3.91,
+        "change_1w_pct": 7.93,
+        "change_1m_pct": 13.96,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
+          4937.0,
           4997.5,
           5019.5,
           5210.0,
@@ -153425,8 +153429,7 @@
           5556.0,
           5536.0,
           5535.0,
-          5751.5,
-          5789.0
+          5751.5
         ],
         "daily_closes": [
           {
@@ -163308,21 +163311,18 @@
           {
             "date": "2026-11-25",
             "close": 5751.5
-          },
-          {
-            "date": "2026-11-26",
-            "close": 5789.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4550.1,
-        "change_1d_pct": -1.3,
-        "change_1w_pct": 4.15,
-        "change_1m_pct": 13.87,
+        "price": 4610.0,
+        "change_1d_pct": 1.81,
+        "change_1w_pct": 3.22,
+        "change_1m_pct": 15.82,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
+          3940.3,
           4011.5,
           3969.7,
           4020.0,
@@ -163351,8 +163351,7 @@
           4601.4,
           4590.0,
           4528.2,
-          4610.0,
-          4550.1
+          4610.0
         ],
         "daily_closes": [
           {
@@ -173234,21 +173233,18 @@
           {
             "date": "2026-11-25",
             "close": 4610.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 4550.1
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10850.0,
-        "change_1d_pct": -0.17,
-        "change_1w_pct": 2.65,
-        "change_1m_pct": 7.74,
+        "price": 10868.0,
+        "change_1d_pct": 2.11,
+        "change_1w_pct": 0.91,
+        "change_1m_pct": 7.9,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
+          10034.0,
           10318.0,
           10250.0,
           10385.0,
@@ -173277,8 +173273,7 @@
           10817.0,
           10765.0,
           10643.0,
-          10868.0,
-          10850.0
+          10868.0
         ],
         "daily_closes": [
           {
@@ -183160,21 +183155,18 @@
           {
             "date": "2026-11-25",
             "close": 10868.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 10850.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2104.2,
-        "change_1d_pct": -0.37,
-        "change_1w_pct": 0.32,
-        "change_1m_pct": 12.64,
+        "price": 2112.0,
+        "change_1d_pct": -2.0,
+        "change_1w_pct": -0.44,
+        "change_1m_pct": 14.16,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
+          1941.1,
           1964.9,
           1965.6,
           1985.0,
@@ -183203,8 +183195,7 @@
           2219.2,
           2215.0,
           2155.0,
-          2112.0,
-          2104.2
+          2112.0
         ],
         "daily_closes": [
           {
@@ -185278,21 +185269,18 @@
           {
             "date": "2026-11-25",
             "close": 2112.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 2104.2
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8180.0,
-        "change_1d_pct": -1.87,
-        "change_1w_pct": 6.23,
-        "change_1m_pct": 15.22,
+        "price": 8336.0,
+        "change_1d_pct": 2.0,
+        "change_1w_pct": 6.49,
+        "change_1m_pct": 17.97,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
+          7119.0,
           7163.0,
           7082.5,
           7225.0,
@@ -185321,8 +185309,7 @@
           8058.5,
           8113.0,
           8172.5,
-          8336.0,
-          8180.0
+          8336.0
         ],
         "daily_closes": [
           {
@@ -195204,22 +195191,19 @@
           {
             "date": "2026-11-25",
             "close": 8336.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 8180.0
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 262.0,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": 3.74,
-        "change_1m_pct": -0.64,
+        "price": 262.1,
+        "change_1d_pct": 1.2,
+        "change_1w_pct": 1.12,
+        "change_1m_pct": -0.94,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
+          284.45,
           285.85,
           283.8,
           287.05,
@@ -195248,8 +195232,7 @@
           263.5,
           266.35,
           259.0,
-          262.1,
-          262.0
+          262.1
         ],
         "daily_closes": [
           {
@@ -205131,22 +205114,19 @@
           {
             "date": "2026-11-25",
             "close": 262.1
-          },
-          {
-            "date": "2026-11-26",
-            "close": 262.0
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 431.0,
-        "change_1d_pct": -2.49,
-        "change_1w_pct": -2.88,
-        "change_1m_pct": 12.22,
+        "price": 442.0,
+        "change_1d_pct": -2.6,
+        "change_1w_pct": -0.82,
+        "change_1m_pct": 11.62,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
+          404.5,
           416.95,
           415.25,
           422.8,
@@ -205175,8 +205155,7 @@
           445.85,
           456.75,
           453.8,
-          442.0,
-          431.0
+          442.0
         ],
         "daily_closes": [
           {
@@ -206202,21 +206181,18 @@
           {
             "date": "2026-11-25",
             "close": 442.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 431.0
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 156.15,
-        "change_1d_pct": -1.17,
-        "change_1w_pct": -3.88,
-        "change_1m_pct": 10.04,
+        "price": 158.0,
+        "change_1d_pct": -0.44,
+        "change_1w_pct": -1.56,
+        "change_1m_pct": 9.0,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
+          144.25,
           147.37,
           145.0,
           148.18,
@@ -206245,8 +206221,7 @@
           166.15,
           163.35,
           158.7,
-          158.0,
-          156.15
+          158.0
         ],
         "daily_closes": [
           {
@@ -216128,21 +216103,18 @@
           {
             "date": "2026-11-25",
             "close": 158.0
-          },
-          {
-            "date": "2026-11-26",
-            "close": 156.15
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2458.9,
-        "change_1d_pct": 0.89,
-        "change_1w_pct": 2.42,
-        "change_1m_pct": -4.54,
+        "price": 2437.2,
+        "change_1d_pct": -0.52,
+        "change_1w_pct": 1.49,
+        "change_1m_pct": -7.22,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
+          2673.0,
           2672.2,
           2689.1,
           2726.6,
@@ -216171,8 +216143,7 @@
           2450.1,
           2471.4,
           2450.0,
-          2437.2,
-          2458.9
+          2437.2
         ],
         "daily_closes": [
           {
@@ -226054,21 +226025,18 @@
           {
             "date": "2026-11-25",
             "close": 2437.2
-          },
-          {
-            "date": "2026-11-26",
-            "close": 2458.9
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1295.0,
-        "change_1d_pct": 8.79,
-        "change_1w_pct": 8.9,
-        "change_1m_pct": 28.05,
+        "price": 1190.35,
+        "change_1d_pct": 0.24,
+        "change_1w_pct": 1.41,
+        "change_1m_pct": 19.02,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
+          1201.1,
           1192.9,
           1197.0,
           1155.7,
@@ -226097,8 +226065,7 @@
           1185.9,
           1170.35,
           1187.45,
-          1190.35,
-          1295.0
+          1190.35
         ],
         "daily_closes": [
           {
@@ -235980,21 +235947,18 @@
           {
             "date": "2026-11-25",
             "close": 1190.35
-          },
-          {
-            "date": "2026-11-26",
-            "close": 1295.0
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 398.15,
-        "change_1d_pct": 2.14,
-        "change_1w_pct": 1.67,
-        "change_1m_pct": 1.69,
+        "price": 389.8,
+        "change_1d_pct": -0.46,
+        "change_1w_pct": -1.39,
+        "change_1m_pct": 0.54,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
+          416.1,
           418.1,
           429.35,
           421.65,
@@ -236023,8 +235987,7 @@
           400.2,
           395.45,
           391.6,
-          389.8,
-          398.15
+          389.8
         ],
         "daily_closes": [
           {
@@ -245906,10 +245869,6 @@
           {
             "date": "2026-11-25",
             "close": 389.8
-          },
-          {
-            "date": "2026-11-26",
-            "close": 398.15
           }
         ]
       }
@@ -247083,7 +247042,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-26T11:58:31.832168+00:00",
+    "generated_at": "2026-11-26T23:31:53.547300+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 30,
@@ -247180,6 +247139,22 @@
         "label": "Two-Wheelers",
         "items": [
           {
+            "title": "BMW M 1000 RR India Launch Price Rs 59.90 Lakh \u2013 218 Hp, 300 kmph",
+            "url": "https://www.rushlane.com/bmw-m-1000-rr-india-launch-price-rs-59-90-lakh-218-hp-300-kmph-12562122.html",
+            "summary": "The India-spec motorcycle comes with the M Competition Package as standard and is offered in Blackstorm metallic with graphics in BMW\u2019s M colours The post BMW M 1000 RR India Launch Price Rs 59.90 Lakh \u2013 218 Hp, 300 kmph appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-26T15:18:24+00:00",
+            "published_display": "26 Nov 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "Two-Wheelers",
+              "Luxury"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "Altigreen Launches MINSARA Electric Multi-Utility Two-Wheeler, Priced at \u20b91.24 Lakh",
             "url": "https://evreporter.com/altigreen-launches-minsara-electric-multi-utility-two-wheeler-priced-at-%e2%82%b91-24-lakh",
             "summary": "The post Altigreen Launches MINSARA Electric Multi-Utility Two-Wheeler, Priced at \u20b91.24 Lakh appeared first at EVreporter on EVreporter . Altigreen, an electric commercial mobility company and part of JAKSON Group, has launched MINSARA, an electric multi-utility two-wheeler designed for The post Altigreen Launches MINSARA Electric Multi-Utility Two-Wheeler, Priced at \u20b91.24 Lakh appeared first at EVreporter on EVre...",
@@ -247243,21 +247218,6 @@
             ],
             "signal_tags": [
               "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Hero Vida e-scooter sales soar to new high in October, cross 200,000 for the first time in CY2026",
-            "url": "https://www.autocarpro.in/analysis-sales/hero-vida-e-scooter-sales-soar-to-new-high-in-october-cross-200000-for-the-first-time-in-cy2026-135566",
-            "summary": "Even as October draws to a close in two days, Hero MotoCorp has already registered its highest monthly retail sales and has also crossed cumulative year-to-date sales of 200,000 units for the first time in a calendar year. In the first 29 days of this month, 27,435 Vida e-scooters have been delivered to customers, marking strong 66% YoY growth (October 2025: 16,499 units).",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-10-30T03:14:51+00:00",
-            "published_display": "30 Oct 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247637,7 +247597,7 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 44,
+      "unmapped_articles": 46,
       "filtered_low_signal": 0,
       "kept_articles": 67
     }
