@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T23:16:16.045429+00:00",
+  "generated_at": "2026-11-28T11:27:10.357966+00:00",
   "as_of_date": "2026-11-13",
   "title": "India Auto Demand Monitor",
   "subtitle": "Official-first dashboard for listed Indian auto and auto-component investors.",
@@ -49988,7 +49988,7 @@
         "default_company": "Tata Motors",
         "source_meta": {
           "name": "World Bank Commodity Markets \u2014 Pink Sheet (Monthly Prices)",
-          "latest_release_date": "2026-11-27",
+          "latest_release_date": "2026-11-28",
           "url": "https://www.worldbank.org/en/research/commodity-markets",
           "note": "Monthly nominal USD commodity prices ingested from the local data/raw_material_pink_sheet.xlsx (World Bank CMO-Historical-Data-Monthly). Aluminum / Copper / Nickel / Lead are LME spot. Iron Ore is the 62% Fe CFR China benchmark. Natural Rubber is TSR20 USD/kg."
         },
@@ -122877,10 +122877,54 @@
     "recent_launches": {
       "available": true,
       "title": "Recent Launches",
-      "generated_at": "2026-11-27T11:51:38.413791+00:00",
+      "generated_at": "2026-11-28T11:26:51.987219+00:00",
       "window_days": 30,
-      "item_count": 2,
+      "item_count": 5,
       "items": [
+        {
+          "title": "Hyundai Ioniq P Sub 4m Electric SUV Will Debut On Jan 16",
+          "summary": "With its appealing design, premium features and lower operating costs, the Hyundai Ioniq P could emerge as a preferred choice for urban commuting The post Hyundai Ioniq P Sub 4m Electric SUV Will Debut On Jan 16 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/hyundai-ioniq-p-sub-4m-electric-suv-will-debut-on-jan-16-12562273.html",
+          "source": "RushLane",
+          "published_at": "2026-11-28T03:35:03+00:00",
+          "published_display": "28 Nov 2026",
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "segment_tags": [
+            "Passenger Vehicles",
+            "EV"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/04/new-hyundai-electric-suv-india-render-6.jpeg"
+        },
+        {
+          "title": "Royal Enfield Himalayan 750 India Launch Price Rs 4.89 Lakh \u2013 Bookings Open Dec 1",
+          "summary": "Bookings open across India on December 1, 2026, with early access for Motoverse attendees in Goa on November 28 and 29 The post Royal Enfield Himalayan 750 India Launch Price Rs 4.89 Lakh \u2013 Bookings Open Dec 1 appeared first on RushLane .",
+          "url": "https://www.rushlane.com/royal-enfield-himalayan-750-india-launch-price-rs-4-89-lakh-bookings-open-dec-1-12562270.html",
+          "source": "RushLane",
+          "published_at": "2026-11-27T15:17:59+00:00",
+          "published_display": "27 Nov 2026",
+          "company": "Eicher Motors",
+          "tone": "cv",
+          "scope": "listed",
+          "segment_tags": [],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/new-royal-enfield-himalayan-750-launch-price-22.jpg"
+        },
+        {
+          "title": "New TVS Armado Debuts \u2013 Cargo 3W, 200cc Engine, 1 Tonne Payload",
+          "summary": "TVS has announced the global debut of the Armado, a cargo tricycle with a claimed payload capacity of up to one tonne The post New TVS Armado Debuts \u2013 Cargo 3W, 200cc Engine, 1 Tonne Payload appeared first on RushLane .",
+          "url": "https://www.rushlane.com/new-tvs-armado-debuts-cargo-3w-200cc-engine-1-tonne-payload-12562255.html",
+          "source": "RushLane",
+          "published_at": "2026-11-27T14:36:36+00:00",
+          "published_display": "27 Nov 2026",
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "segment_tags": [
+            "Commercial Vehicles"
+          ],
+          "image_url": "https://www.rushlane.com/wp-content/uploads/2026/11/new-tvs-armado-launch-price-5.jpg"
+        },
         {
           "title": "Toyota Launches Innova HyCross Flex Hybrid EV in India, Prices Start at \u20b919.99 Lakh",
           "summary": "The post Toyota Launches Innova HyCross Flex Hybrid EV in India, Prices Start at \u20b919.99 Lakh appeared first at EVreporter on EVreporter . Toyota Kirloskar Motor (TKM) has launched the All-New Innova HyCross Flex Hybrid Electric Vehicle in India, with prices starting at The post Toyota Launches Innova HyCross Flex Hybrid EV in India, Prices Start at \u20b919.99 Lakh appeared first at EVreporter on EVreporter .",
@@ -122916,6 +122960,30 @@
       ],
       "companies": [
         {
+          "company": "Hyundai Motor India",
+          "tone": "pv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-28T03:35:03+00:00",
+          "latest_title": "Hyundai Ioniq P Sub 4m Electric SUV Will Debut On Jan 16"
+        },
+        {
+          "company": "Eicher Motors",
+          "tone": "cv",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-27T15:17:59+00:00",
+          "latest_title": "Royal Enfield Himalayan 750 India Launch Price Rs 4.89 Lakh \u2013 Bookings Open Dec 1"
+        },
+        {
+          "company": "TVS Motor",
+          "tone": "tw",
+          "scope": "listed",
+          "count": 1,
+          "latest_published_at": "2026-11-27T14:36:36+00:00",
+          "latest_title": "New TVS Armado Debuts \u2013 Cargo 3W, 200cc Engine, 1 Tonne Payload"
+        },
+        {
           "company": "Toyota Kirloskar",
           "tone": "pv",
           "scope": "tracked",
@@ -122934,13 +123002,13 @@
       ],
       "source_meta": {
         "name": "RushLane / ET Auto / Autocar Pro / EVReporter",
-        "latest_release_date": "2026-11-26"
+        "latest_release_date": "2026-11-28"
       }
     }
   },
   "macro_indicators": {
     "available": true,
-    "as_of_date": "2026-11-27",
+    "as_of_date": "2026-11-28",
     "source_note": "Live updates: USD/INR via Yahoo Finance, fuel prices via Goodreturns. Repo rate manually updated on RBI MPC announcements.",
     "indicators": [
       {
@@ -123056,11 +123124,11 @@
       {
         "id": "usd_inr",
         "label": "USD / INR",
-        "value": 92.98,
+        "value": 92.99,
         "unit": "\u20b9",
-        "delta_value": 0.7424,
-        "delta_label": "-0.34% in last week (Yahoo Finance)",
-        "delta_tone": "positive",
+        "delta_value": 0.5401,
+        "delta_label": "+0.34% in last week (Yahoo Finance)",
+        "delta_tone": "negative",
         "context": "INR weakening = imported components (lithium cells, semiconductors, ECUs) get more expensive. Pressure on EV BOM and premium-PV margins.",
         "source_name": "Yahoo Finance \u2014 USDINR=X",
         "source_url": "https://finance.yahoo.com/quote/USDINR%3DX/",
@@ -133471,7 +133539,11 @@
           },
           {
             "date": "2026-11-27",
-            "close": 92.98
+            "close": 92.4499
+          },
+          {
+            "date": "2026-11-28",
+            "close": 92.99
           }
         ]
       }
@@ -133479,20 +133551,19 @@
   },
   "oem_stocks": {
     "available": true,
-    "as_of_date": "2026-11-27",
+    "as_of_date": "2026-11-28",
     "currency": "INR",
     "exchange": "NSE",
     "source_note": "Live closing prices from Yahoo Finance NSE feeds. 1D / 1W / 1M deltas computed from the daily candles (5 / 21 trading-day lookback).",
     "stocks": {
       "Maruti Suzuki": {
         "ticker": "MARUTI",
-        "price": 14015.0,
-        "change_1d_pct": -1.3,
-        "change_1w_pct": 10.95,
-        "change_1m_pct": 24.91,
+        "price": 13765.0,
+        "change_1d_pct": -1.78,
+        "change_1w_pct": 1.3,
+        "change_1m_pct": 20.22,
         "yahoo_url": "https://finance.yahoo.com/quote/MARUTI.NS/",
         "closes_30d": [
-          11245.0,
           11178.0,
           11445.0,
           11489.0,
@@ -133521,7 +133592,8 @@
           14011.0,
           14010.0,
           14200.0,
-          14015.0
+          14015.0,
+          13765.0
         ],
         "daily_closes": [
           {
@@ -143407,18 +143479,21 @@
           {
             "date": "2026-11-26",
             "close": 14015.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 13765.0
           }
         ]
       },
       "Mahindra & Mahindra": {
         "ticker": "M&M",
-        "price": 3487.5,
-        "change_1d_pct": -0.63,
-        "change_1w_pct": 3.82,
-        "change_1m_pct": 22.24,
+        "price": 3450.0,
+        "change_1d_pct": -1.08,
+        "change_1w_pct": -1.68,
+        "change_1m_pct": 20.7,
         "yahoo_url": "https://finance.yahoo.com/quote/M&M.NS/",
         "closes_30d": [
-          2864.4,
           2793.7,
           2861.7,
           2920.9,
@@ -143447,7 +143522,8 @@
           3545.0,
           3487.4,
           3509.5,
-          3487.5
+          3487.5,
+          3450.0
         ],
         "daily_closes": [
           {
@@ -153333,18 +153409,21 @@
           {
             "date": "2026-11-26",
             "close": 3487.5
+          },
+          {
+            "date": "2026-11-27",
+            "close": 3450.0
           }
         ]
       },
       "Hero MotoCorp": {
         "ticker": "HEROMOTOCO",
-        "price": 5789.0,
-        "change_1d_pct": 0.65,
-        "change_1w_pct": 10.2,
-        "change_1m_pct": 11.35,
+        "price": 5701.0,
+        "change_1d_pct": -1.52,
+        "change_1w_pct": 2.61,
+        "change_1m_pct": 9.25,
         "yahoo_url": "https://finance.yahoo.com/quote/HEROMOTOCO.NS/",
         "closes_30d": [
-          4997.5,
           5019.5,
           5210.0,
           5225.0,
@@ -153373,7 +153452,8 @@
           5536.0,
           5535.0,
           5751.5,
-          5789.0
+          5789.0,
+          5701.0
         ],
         "daily_closes": [
           {
@@ -163259,18 +163339,21 @@
           {
             "date": "2026-11-26",
             "close": 5789.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 5701.0
           }
         ]
       },
       "TVS Motor": {
         "ticker": "TVSMOTOR",
-        "price": 4550.1,
-        "change_1d_pct": -1.3,
-        "change_1w_pct": 4.15,
-        "change_1m_pct": 13.87,
+        "price": 4526.5,
+        "change_1d_pct": -0.52,
+        "change_1w_pct": -1.63,
+        "change_1m_pct": 10.75,
         "yahoo_url": "https://finance.yahoo.com/quote/TVSMOTOR.NS/",
         "closes_30d": [
-          4011.5,
           3969.7,
           4020.0,
           4095.1,
@@ -163299,7 +163382,8 @@
           4590.0,
           4528.2,
           4610.0,
-          4550.1
+          4550.1,
+          4526.5
         ],
         "daily_closes": [
           {
@@ -173185,18 +173269,21 @@
           {
             "date": "2026-11-26",
             "close": 4550.1
+          },
+          {
+            "date": "2026-11-27",
+            "close": 4526.5
           }
         ]
       },
       "Bajaj Auto": {
         "ticker": "BAJAJ-AUTO",
-        "price": 10850.0,
-        "change_1d_pct": -0.17,
-        "change_1w_pct": 2.65,
-        "change_1m_pct": 7.74,
+        "price": 10485.0,
+        "change_1d_pct": -3.36,
+        "change_1w_pct": -3.07,
+        "change_1m_pct": 0.91,
         "yahoo_url": "https://finance.yahoo.com/quote/BAJAJ-AUTO.NS/",
         "closes_30d": [
-          10318.0,
           10250.0,
           10385.0,
           10405.0,
@@ -173225,7 +173312,8 @@
           10765.0,
           10643.0,
           10868.0,
-          10850.0
+          10850.0,
+          10485.0
         ],
         "daily_closes": [
           {
@@ -183111,18 +183199,21 @@
           {
             "date": "2026-11-26",
             "close": 10850.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 10485.0
           }
         ]
       },
       "Hyundai Motor India": {
         "ticker": "HYUNDAI",
-        "price": 2104.2,
-        "change_1d_pct": -0.37,
-        "change_1w_pct": 0.32,
-        "change_1m_pct": 12.64,
+        "price": 2006.0,
+        "change_1d_pct": -4.67,
+        "change_1w_pct": -9.61,
+        "change_1m_pct": 7.77,
         "yahoo_url": "https://finance.yahoo.com/quote/HYUNDAI.NS/",
         "closes_30d": [
-          1964.9,
           1965.6,
           1985.0,
           1987.0,
@@ -183151,7 +183242,8 @@
           2215.0,
           2155.0,
           2112.0,
-          2104.2
+          2104.2,
+          2006.0
         ],
         "daily_closes": [
           {
@@ -185229,18 +185321,21 @@
           {
             "date": "2026-11-26",
             "close": 2104.2
+          },
+          {
+            "date": "2026-11-27",
+            "close": 2006.0
           }
         ]
       },
       "Eicher Motors": {
         "ticker": "EICHERMOT",
-        "price": 8180.0,
-        "change_1d_pct": -1.87,
-        "change_1w_pct": 6.23,
-        "change_1m_pct": 15.22,
+        "price": 8003.5,
+        "change_1d_pct": -2.16,
+        "change_1w_pct": -0.68,
+        "change_1m_pct": 11.7,
         "yahoo_url": "https://finance.yahoo.com/quote/EICHERMOT.NS/",
         "closes_30d": [
-          7163.0,
           7082.5,
           7225.0,
           7284.5,
@@ -185269,7 +185364,8 @@
           8113.0,
           8172.5,
           8336.0,
-          8180.0
+          8180.0,
+          8003.5
         ],
         "daily_closes": [
           {
@@ -195155,19 +195251,22 @@
           {
             "date": "2026-11-26",
             "close": 8180.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 8003.5
           }
         ]
       },
       "Tata Motors": {
         "ticker": "TMPV",
-        "price": 262.0,
-        "change_1d_pct": -0.04,
-        "change_1w_pct": 3.74,
-        "change_1m_pct": -0.64,
+        "price": 258.0,
+        "change_1d_pct": -1.53,
+        "change_1w_pct": -2.09,
+        "change_1m_pct": -1.23,
         "yahoo_url": "https://finance.yahoo.com/quote/TMPV.NS/",
         "note": "Renamed from TATAMOTORS to TMPV after the Oct 2025 demerger (passenger vehicles + JLR + EV).",
         "closes_30d": [
-          285.85,
           283.8,
           287.05,
           286.85,
@@ -195196,7 +195295,8 @@
           266.35,
           259.0,
           262.1,
-          262.0
+          262.0,
+          258.0
         ],
         "daily_closes": [
           {
@@ -205082,19 +205182,22 @@
           {
             "date": "2026-11-26",
             "close": 262.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 258.0
           }
         ]
       },
       "Tata Motors CV": {
         "ticker": "TMCV",
-        "price": 431.0,
-        "change_1d_pct": -2.49,
-        "change_1w_pct": -2.88,
-        "change_1m_pct": 12.22,
+        "price": 424.95,
+        "change_1d_pct": -1.4,
+        "change_1w_pct": -4.69,
+        "change_1m_pct": 6.45,
         "yahoo_url": "https://finance.yahoo.com/quote/TMCV.NS/",
         "note": "Tata Motors Commercial Vehicles \u2014 listed Nov 2025 as a separate entity post-demerger.",
         "closes_30d": [
-          416.95,
           415.25,
           422.8,
           421.05,
@@ -205123,7 +205226,8 @@
           456.75,
           453.8,
           442.0,
-          431.0
+          431.0,
+          424.95
         ],
         "daily_closes": [
           {
@@ -206153,18 +206257,21 @@
           {
             "date": "2026-11-26",
             "close": 431.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 424.95
           }
         ]
       },
       "Ashok Leyland": {
         "ticker": "ASHOKLEY",
-        "price": 156.15,
-        "change_1d_pct": -1.17,
-        "change_1w_pct": -3.88,
-        "change_1m_pct": 10.04,
+        "price": 151.42,
+        "change_1d_pct": -3.03,
+        "change_1w_pct": -8.87,
+        "change_1m_pct": 6.63,
         "yahoo_url": "https://finance.yahoo.com/quote/ASHOKLEY.NS/",
         "closes_30d": [
-          147.37,
           145.0,
           148.18,
           148.91,
@@ -206193,7 +206300,8 @@
           163.35,
           158.7,
           158.0,
-          156.15
+          156.15,
+          151.42
         ],
         "daily_closes": [
           {
@@ -216079,18 +216187,21 @@
           {
             "date": "2026-11-26",
             "close": 156.15
+          },
+          {
+            "date": "2026-11-27",
+            "close": 151.42
           }
         ]
       },
       "Escorts Kubota": {
         "ticker": "ESCORTS",
-        "price": 2458.9,
-        "change_1d_pct": 0.89,
-        "change_1w_pct": 2.42,
-        "change_1m_pct": -4.54,
+        "price": 2576.3,
+        "change_1d_pct": 4.77,
+        "change_1w_pct": 5.15,
+        "change_1m_pct": -2.95,
         "yahoo_url": "https://finance.yahoo.com/quote/ESCORTS.NS/",
         "closes_30d": [
-          2672.2,
           2689.1,
           2726.6,
           2751.0,
@@ -216119,7 +216230,8 @@
           2471.4,
           2450.0,
           2437.2,
-          2458.9
+          2458.9,
+          2576.3
         ],
         "daily_closes": [
           {
@@ -226005,18 +226117,21 @@
           {
             "date": "2026-11-26",
             "close": 2458.9
+          },
+          {
+            "date": "2026-11-27",
+            "close": 2576.3
           }
         ]
       },
       "Action Construction Equipment": {
         "ticker": "ACE",
-        "price": 1295.0,
-        "change_1d_pct": 8.79,
-        "change_1w_pct": 8.9,
-        "change_1m_pct": 28.05,
+        "price": 1325.7,
+        "change_1d_pct": 2.37,
+        "change_1w_pct": 11.79,
+        "change_1m_pct": 27.9,
         "yahoo_url": "https://finance.yahoo.com/quote/ACE.NS/",
         "closes_30d": [
-          1192.9,
           1197.0,
           1155.7,
           1136.3,
@@ -226045,7 +226160,8 @@
           1170.35,
           1187.45,
           1190.35,
-          1295.0
+          1295.0,
+          1325.7
         ],
         "daily_closes": [
           {
@@ -235931,18 +236047,21 @@
           {
             "date": "2026-11-26",
             "close": 1295.0
+          },
+          {
+            "date": "2026-11-27",
+            "close": 1325.7
           }
         ]
       },
       "Atul Auto": {
         "ticker": "ATULAUTO",
-        "price": 398.15,
-        "change_1d_pct": 2.14,
-        "change_1w_pct": 1.67,
-        "change_1m_pct": 1.69,
+        "price": 398.85,
+        "change_1d_pct": 0.18,
+        "change_1w_pct": -0.34,
+        "change_1m_pct": -1.92,
         "yahoo_url": "https://finance.yahoo.com/quote/ATULAUTO.NS/",
         "closes_30d": [
-          418.1,
           429.35,
           421.65,
           423.05,
@@ -235971,7 +236090,8 @@
           395.45,
           391.6,
           389.8,
-          398.15
+          398.15,
+          398.85
         ],
         "daily_closes": [
           {
@@ -245857,6 +245977,10 @@
           {
             "date": "2026-11-26",
             "close": 398.15
+          },
+          {
+            "date": "2026-11-27",
+            "close": 398.85
           }
         ]
       }
@@ -245864,7 +245988,7 @@
   },
   "earnings_calendar": {
     "available": true,
-    "as_of_date": "2026-11-27",
+    "as_of_date": "2026-11-28",
     "source_note": "Auto-extended by the NSE corporate-filings scraper (scripts/refresh_earnings_calendar.py). Hand-seeded fallbacks remain when NSE is unreachable.",
     "next_14_days": [],
     "upcoming_all": [],
@@ -247030,7 +247154,7 @@
   ],
   "news": {
     "available": true,
-    "generated_at": "2026-11-27T11:51:14.404386+00:00",
+    "generated_at": "2026-11-28T11:26:32.298823+00:00",
     "window_days": 45,
     "group_count": 6,
     "item_count": 30,
@@ -247107,18 +247231,19 @@
             ]
           },
           {
-            "title": "Upcoming Nissan Terrano SUV First Photos Leak Before Launch",
-            "url": "https://www.rushlane.com/upcoming-nissan-terrano-suv-first-photos-leak-before-launch-12562146.html",
-            "summary": "While the Terrano concept was unveiled as a PHEV, new details reveal that conventional petrol and diesel engine options will also be available The post Upcoming Nissan Terrano SUV First Photos Leak Before Launch appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-27T03:37:01+00:00",
-            "published_display": "27 Nov 2026",
+            "title": "Seltos is Kia's First Made-in-India SUV to Surpass 700,000 Sales",
+            "url": "https://www.autocarpro.in/analysis-sales/exclusive-seltos-is-first-made-in-india-suv-to-surpass-700000-sales-milestone-135890",
+            "summary": "The Seltos, Kia\u2019s first made-in-India vehicle, has driven past 700,000 cumulative sales in the domestic market. Launched on August 22, 2019 , Kia India\u2019s first locally manufactured vehicle continues to spearhead the Korean car and SUV manufacturer\u2019s growth story in India.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-11-13T03:33:39+00:00",
+            "published_display": "13 Nov 2026",
             "importance_score": 6,
             "segment_tags": [
               "Passenger Vehicles"
             ],
             "signal_tags": [
-              "Product / Launch"
+              "Product / Launch",
+              "Monthly Sales / Demand"
             ]
           }
         ]
@@ -247145,18 +247270,33 @@
             ]
           },
           {
-            "title": "350cc To 500cc Motorcycle Sales Oct 2026 \u2013 RE, Honda, Triumph, KTM, Bajaj, Aprilia, Hero, Kawasaki",
-            "url": "https://www.rushlane.com/350cc-to-500cc-motorcycle-sales-oct-2026-re-honda-triumph-ktm-12562167.html",
-            "summary": "India\u2019s 350\u2013500cc motorcycle segment recorded sales of 1,42,177 units in October 2026, up 10.32% from 1,28,878 units in October last year The post 350cc To 500cc Motorcycle Sales Oct 2026 \u2013 RE, Honda, Triumph, KTM, Bajaj, Aprilia, Hero, Kawasaki appeared first on RushLane .",
+            "title": "150cc to 200cc Motorcycle Sales Oct 2026 \u2013 Pulsar, Apache, Unicorn, FZ, MT15, R15, XSR, Xpulse, KTM, Xtreme",
+            "url": "https://www.rushlane.com/150cc-to-200cc-motorcycle-sales-oct-2026-pulsar-apache-unicorn-12562293.html",
+            "summary": "Sales in the 150-200cc motorcycle segment grew 10.92% YoY to 2,40,506 units in October 2026, up from 2,16,831 units a year ago. Bajaj Pulsar overtook TVS Apache The post 150cc to 200cc Motorcycle Sales Oct 2026 \u2013 Pulsar, Apache, Unicorn, FZ, MT15, R15, XSR, Xpulse, KTM, Xtreme appeared first on RushLane .",
             "source": "RushLane",
-            "published_at": "2026-11-27T05:31:16+00:00",
-            "published_display": "27 Nov 2026",
+            "published_at": "2026-11-28T07:45:11+00:00",
+            "published_display": "28 Nov 2026",
             "importance_score": 6,
             "segment_tags": [
               "Two-Wheelers"
             ],
             "signal_tags": [
               "General"
+            ]
+          },
+          {
+            "title": "New Bajaj Dominar 400 TFT Variant Spied Testing For The First Time",
+            "url": "https://www.rushlane.com/new-bajaj-dominar-400-tft-variant-spied-testing-for-the-first-time-12562287.html",
+            "summary": "Ahead of its launch, Bajaj Dominar 400 TFT version has been spied testing and it is expected to be Bajaj's first bike to get TPMS too The post New Bajaj Dominar 400 TFT Variant Spied Testing For The First Time appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-28T06:35:36+00:00",
+            "published_display": "28 Nov 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Two-Wheelers"
+            ],
+            "signal_tags": [
+              "Product / Launch"
             ]
           },
           {
@@ -247190,23 +247330,6 @@
             "signal_tags": [
               "Supply Chain / Components"
             ]
-          },
-          {
-            "title": "India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026",
-            "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-october-2026",
-            "summary": "The post India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026 appeared first at EVreporter on EVreporter . In October 2026, EV penetration in the Indian two-wheeler market stood at 9.7%, while electric three-wheelers accounted for 54.5% of The post India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026 appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-11-03T10:27:20+00:00",
-            "published_display": "03 Nov 2026",
-            "importance_score": 6,
-            "segment_tags": [
-              "Two-Wheelers",
-              "Commercial Vehicles",
-              "EV"
-            ],
-            "signal_tags": [
-              "Supply Chain / Components"
-            ]
           }
         ]
       },
@@ -247232,6 +247355,21 @@
             ]
           },
           {
+            "title": "New TVS Armado Debuts \u2013 Cargo 3W, 200cc Engine, 1 Tonne Payload",
+            "url": "https://www.rushlane.com/new-tvs-armado-debuts-cargo-3w-200cc-engine-1-tonne-payload-12562255.html",
+            "summary": "TVS has announced the global debut of the Armado, a cargo tricycle with a claimed payload capacity of up to one tonne The post New TVS Armado Debuts \u2013 Cargo 3W, 200cc Engine, 1 Tonne Payload appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-27T14:36:36+00:00",
+            "published_display": "27 Nov 2026",
+            "importance_score": 6,
+            "segment_tags": [
+              "Commercial Vehicles"
+            ],
+            "signal_tags": [
+              "Product / Launch"
+            ]
+          },
+          {
             "title": "E-Rickshaws Lose Ground as L5 Electric Auto Sales Surge in India",
             "url": "https://evreporter.com/e-rickshaws-lose-ground-as-l5-electric-auto-sales-surge-in-india",
             "summary": "The post E-Rickshaws Lose Ground as L5 Electric Auto Sales Surge in India appeared first at EVreporter on EVreporter . Market Shift in Electric 3W Passenger and Cargo Segments L5 Overtakes the OG L3 e-Rickshaw: 1.28 Lakh Units vs 93,000 The post E-Rickshaws Lose Ground as L5 Electric Auto Sales Surge in India appeared first at EVreporter on EVreporter .",
@@ -247248,48 +247386,35 @@
             ]
           },
           {
-            "title": "Tata Motors Leads CV Retails with Over 39,000 Units and 35% Market Share",
-            "url": "https://www.autocarpro.in/analysis-sales/tata-motors-leads-cv-retails-with-over-39000-units-and-35-percent-market-share-135783",
-            "summary": "Tata Motors secured the leading position in India's commercial vehicle retail market for October 2026, registering 39,914 units and capturing a 34.67 percent market share. The company's retail performance was an improvement on its 31.89 percent market share from 35,901 units recorded in October 2025.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-06T05:40:13+00:00",
-            "published_display": "06 Nov 2026",
-            "importance_score": 5,
+            "title": "India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026",
+            "url": "https://evreporter.com/india-ice-vs-ev-sales-for-top-2w-3w-4w-oems-in-october-2026",
+            "summary": "The post India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026 appeared first at EVreporter on EVreporter . In October 2026, EV penetration in the Indian two-wheeler market stood at 9.7%, while electric three-wheelers accounted for 54.5% of The post India ICE vs EV sales | For top 2W, 3W, 4W OEMs in October 2026 appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-11-03T10:27:20+00:00",
+            "published_display": "03 Nov 2026",
+            "importance_score": 6,
             "segment_tags": [
-              "Commercial Vehicles"
+              "Two-Wheelers",
+              "Commercial Vehicles",
+              "EV"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
+              "Supply Chain / Components"
             ]
           },
           {
-            "title": "Tractor Retail Sales Rise 3.10% To 79,285 Units In October: FADA",
-            "url": "https://www.autocarpro.in/analysis-sales/tractor-retail-sales-rise-310-percent-to-79285-units-in-october-fada-135779",
-            "summary": "Tractor retail sales in India rose 3.10% year on year to 79,285 units in October 2026, according to FADA. Retails were up 3.09% from 76,906 units in September.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-06T04:46:15+00:00",
-            "published_display": "06 Nov 2026",
+            "title": "ZF Commercial Vehicle Systems Wins Rs 51.6 Lakh Excise Credit Dispute",
+            "url": "https://www.autocarpro.in/news/zf-commercial-vehicle-systems-wins-rs-516-lakh-excise-credit-dispute-136194",
+            "summary": "ZF Commercial Vehicle Control Systems India has received a favourable order from the Customs, Excise and Service Tax Appellate Tribunal (CESTAT), Chennai, in a legacy Central Excise dispute involving a disputed CENVAT credit demand of Rs 51.6 lakh. The order, dated November 13, 2026, was received by the company on November 26.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-11-27T06:47:31+00:00",
+            "published_display": "27 Nov 2026",
             "importance_score": 5,
             "segment_tags": [
               "Commercial Vehicles"
             ],
             "signal_tags": [
-              "Monthly Sales / Demand"
-            ]
-          },
-          {
-            "title": "Three-Wheeler Retail Sales Rise 3.97% To 1.41 Lakh In October; Best-Ever October: FADA",
-            "url": "https://www.autocarpro.in/analysis-sales/three-wheeler-retail-sales-rise-397-percent-to-141-lakh-in-october-best-ever-october-fada-135778",
-            "summary": "Three-wheeler retail sales in India rose 3.97% YoY to 1,41,420 units in October 2026, according to FADA. Retails were up 6.68% from 1,32,570 units in September.",
-            "source": "Autocar Professional Sales",
-            "published_at": "2026-11-06T04:40:53+00:00",
-            "published_display": "06 Nov 2026",
-            "importance_score": 5,
-            "segment_tags": [
-              "Commercial Vehicles"
-            ],
-            "signal_tags": [
-              "Monthly Sales / Demand"
+              "Supply Chain / Components"
             ]
           }
         ]
@@ -247312,22 +247437,6 @@
             ],
             "signal_tags": [
               "Monthly Sales / Demand",
-              "Product / Launch"
-            ]
-          },
-          {
-            "title": "Mini Cooper SE Launch Price Rs 53.90 L \u2013 Paul Smith Editions ICE and EV Range",
-            "url": "https://www.rushlane.com/mini-cooper-se-launch-price-rs-53-90-l-paul-smith-editions-12562214.html",
-            "summary": "Actor Kareena Kapoor Khan attended the unveiling of the new Mini Cooper SE and the Paul Smith editions, joining the event as Mini introduced its latest electric and petrol offerings in India. The post Mini Cooper SE Launch Price Rs 53.90 L \u2013 Paul Smith Editions ICE and EV Range appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-27T10:13:19+00:00",
-            "published_display": "27 Nov 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "EV",
-              "Luxury"
-            ],
-            "signal_tags": [
               "Product / Launch"
             ]
           },
@@ -247366,20 +247475,35 @@
             ]
           },
           {
-            "title": "Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing",
-            "url": "https://evreporter.com/cabinet-approves-%e2%82%b92814-crore-capex-support-scheme-for-lithium-and-nickel-processing",
-            "summary": "The post Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing appeared first at EVreporter on EVreporter . The Union Cabinet, chaired by Prime Minister Narendra Modi, has approved the Capex Support Scheme to Promote Critical Mineral Processing, The post Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing appeared first at EVreporter on EVreporter .",
-            "source": "EVReporter",
-            "published_at": "2026-11-05T05:11:42+00:00",
-            "published_display": "05 Nov 2026",
-            "importance_score": 8,
+            "title": "Hyundai Ioniq P Sub 4m Electric SUV Will Debut On Jan 16",
+            "url": "https://www.rushlane.com/hyundai-ioniq-p-sub-4m-electric-suv-will-debut-on-jan-16-12562273.html",
+            "summary": "With its appealing design, premium features and lower operating costs, the Hyundai Ioniq P could emerge as a preferred choice for urban commuting The post Hyundai Ioniq P Sub 4m Electric SUV Will Debut On Jan 16 appeared first on RushLane .",
+            "source": "RushLane",
+            "published_at": "2026-11-28T03:35:03+00:00",
+            "published_display": "28 Nov 2026",
+            "importance_score": 7,
             "segment_tags": [
+              "Passenger Vehicles",
               "EV"
             ],
             "signal_tags": [
-              "Capacity / Capex",
-              "Policy / Regulation",
-              "Input Costs / Commodities",
+              "Product / Launch"
+            ]
+          },
+          {
+            "title": "Indian Component Suppliers Have Often Outperformed Chinese Counterparts: Ather's Tarun Mehta",
+            "url": "https://www.autocarpro.in/news/indian-component-suppliers-have-often-outperformed-chinese-counterparts-athers-tarun-mehta-136196",
+            "summary": "Indian component suppliers have often emerged as a more competitive option than their Chinese counterparts in Ather Energy's sourcing experience, according to Tarun Mehta, Co-founder and CEO of the electric two-wheeler manufacturer. When Ather began developing its products, the company assumed that importing components from China would be cheaper and that sourcing domestically would involve a cost sacrifice.",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-11-27T07:01:12+00:00",
+            "published_display": "27 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Two-Wheelers",
+              "EV",
+              "Components"
+            ],
+            "signal_tags": [
               "Supply Chain / Components"
             ]
           }
@@ -247401,23 +247525,6 @@
               "Passenger Vehicles",
               "EV",
               "Luxury"
-            ],
-            "signal_tags": [
-              "Product / Launch",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Hyundai Mercury Electric SUV Debuts \u2013 Previews Ioniq M With Battery Swapping",
-            "url": "https://www.rushlane.com/hyundai-mercury-electric-suv-debuts-ioniq-m-battery-swapping-12562177.html",
-            "summary": "Hyundai has unveiled the Mercury Concept at the 2026 Guangzhou International Auto Show, previewing a compact electric SUV The post Hyundai Mercury Electric SUV Debuts \u2013 Previews Ioniq M With Battery Swapping appeared first on RushLane .",
-            "source": "RushLane",
-            "published_at": "2026-11-27T06:49:32+00:00",
-            "published_display": "27 Nov 2026",
-            "importance_score": 8,
-            "segment_tags": [
-              "Passenger Vehicles",
-              "EV"
             ],
             "signal_tags": [
               "Product / Launch",
@@ -247474,6 +247581,24 @@
               "Funding / M&A",
               "Supply Chain / Components"
             ]
+          },
+          {
+            "title": "Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing",
+            "url": "https://evreporter.com/cabinet-approves-%e2%82%b92814-crore-capex-support-scheme-for-lithium-and-nickel-processing",
+            "summary": "The post Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing appeared first at EVreporter on EVreporter . The Union Cabinet, chaired by Prime Minister Narendra Modi, has approved the Capex Support Scheme to Promote Critical Mineral Processing, The post Cabinet Approves \u20b92,814 Crore Capex Support Scheme for Lithium and Nickel Processing appeared first at EVreporter on EVreporter .",
+            "source": "EVReporter",
+            "published_at": "2026-11-05T05:11:42+00:00",
+            "published_display": "05 Nov 2026",
+            "importance_score": 8,
+            "segment_tags": [
+              "EV"
+            ],
+            "signal_tags": [
+              "Capacity / Capex",
+              "Policy / Regulation",
+              "Input Costs / Commodities",
+              "Supply Chain / Components"
+            ]
           }
         ]
       },
@@ -247481,6 +247606,23 @@
         "id": "policy",
         "label": "Policy / Regulation",
         "items": [
+          {
+            "title": "OBSC Perfection Bags \u20b924.5 Crore Export Nomination from US Auto Components Maker",
+            "url": "https://www.autocarpro.in/news/obsc-perfection-bags-rs-245-crore-export-nomination-from-us-auto-components-maker-136197",
+            "summary": "Engineering company OBSC Perfection Limited, said on Friday it has received a nomination letter from a US-based auto components manufacturer for the supply of machined parts, with a total value of \u20b924.5 crore over five years. In a regulatory disclosure to the National Stock Exchange under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, the company said the order is fo...",
+            "source": "Autocar Professional Components",
+            "published_at": "2026-11-27T07:18:12+00:00",
+            "published_display": "27 Nov 2026",
+            "importance_score": 7,
+            "segment_tags": [
+              "Components"
+            ],
+            "signal_tags": [
+              "Policy / Regulation",
+              "Filing / Disclosure",
+              "Supply Chain / Components"
+            ]
+          },
           {
             "title": "ICEMA Welcomes Government's CIE Manufacturing Scheme",
             "url": "https://www.autocarpro.in/news/icema-welcomes-governments-cie-manufacturing-scheme-136151",
@@ -247495,23 +247637,6 @@
             "signal_tags": [
               "Capacity / Capex",
               "Policy / Regulation",
-              "Supply Chain / Components"
-            ]
-          },
-          {
-            "title": "Pavna Industries Completes 52.38% Stake Acquisition In Pavna Electric Systems",
-            "url": "https://www.autocarpro.in/news/pavna-industries-completes-5238-percent-stake-acquisition-in-pavna-electric-systems-136117",
-            "summary": "Pavna Industries announced that it has completed the acquisition of a 52.38 percent equity stake in Pavna Electric Systems following the allotment of 11,000 equity shares. Disclosed through a regulatory filing to the stock exchanges, the transaction makes Pavna Electric Systems a direct subsidiary of Pavna Industries with effect from Tuesday.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-11-24T12:28:30+00:00",
-            "published_display": "24 Nov 2026",
-            "importance_score": 7,
-            "segment_tags": [
-              "EV"
-            ],
-            "signal_tags": [
-              "Policy / Regulation",
-              "Funding / M&A",
               "Supply Chain / Components"
             ]
           },
@@ -247550,19 +247675,19 @@
             ]
           },
           {
-            "title": "Skyways Air Services Subsidiary Enters Automotive Logistics",
-            "url": "https://www.autocarpro.in/news/skyways-air-services-subsidiary-enters-automotive-logistics-136139",
-            "summary": "Odyssey Logistics, a material subsidiary of Skyways Air Services, is expanding into the automotive and defence logistics segments. Disclosed in a regulatory filing on Wednesday, the move adds automotive original equipment manufacturers (OEMs) and component suppliers to the subsidiary's existing air and sea freight forwarding and pharmaceutical supply chain operations.",
-            "source": "Autocar Professional Components",
-            "published_at": "2026-11-25T10:29:55+00:00",
-            "published_display": "25 Nov 2026",
-            "importance_score": 6,
+            "title": "Navratri Sales Dip 5% on High Base Effect",
+            "url": "https://www.autocarpro.in/analysis-sales/navratri-sales-dip-5-percent-on-high-base-effect-135781",
+            "summary": "Vehicle retail sales during this year\u2019s Navratri window slipped about 5% from last year, when the festival began on the same day that revised GST rates took effect, according to data released by the Federation of Automobile Dealers Associations (FADA). Retailers sold 11,40,658 vehicles between 11 and 20 October 2026, against 12,01,480 in the 2025 window, a fall of 5.06%.",
+            "source": "Autocar Professional Sales",
+            "published_at": "2026-11-06T04:57:48+00:00",
+            "published_display": "06 Nov 2026",
+            "importance_score": 5,
             "segment_tags": [
-              "Components"
+              "General"
             ],
             "signal_tags": [
-              "Policy / Regulation",
-              "Supply Chain / Components"
+              "Monthly Sales / Demand",
+              "Policy / Regulation"
             ]
           }
         ]
@@ -247586,9 +247711,9 @@
         "Autocar Professional EV"
       ],
       "duplicates_removed": 0,
-      "unmapped_articles": 43,
-      "filtered_low_signal": 0,
-      "kept_articles": 67
+      "unmapped_articles": 40,
+      "filtered_low_signal": 1,
+      "kept_articles": 66
     }
   },
   "qa": [
@@ -247638,7 +247763,7 @@
   },
   "ev_oem_tracker": {
     "schema_version": 1,
-    "as_of_date": "2026-11-27",
+    "as_of_date": "2026-11-28",
     "source_note": "Per-segment monthly EV OEM leaderboards scraped from named trade-press articles. Refreshed by scripts/refresh_ev_oem_tracker.py on each CI tick; segments that fail to parse fall back to the last successful scrape so the dashboard never renders empty.",
     "datasets": [
       {
